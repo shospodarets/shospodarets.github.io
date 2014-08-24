@@ -9,6 +9,7 @@ layout: default
         <span class="date">
             Written on {{ page.date | date: "%B %e, %Y" }}
         </span>
+        <!-- SHARE BUTTONS START -->
         <span class="share">
             <span class='st_twitter_large' displayText='Tweet' st_via="malyw" st_username='malyw'></span>
             <span class='st_facebook_large' displayText='Facebook'></span>
@@ -24,10 +25,13 @@ layout: default
                 });
             </script>
         </span>
+        <!-- SHARE BUTTONS END -->
     </div>
 
     <div class="entry">
         {{ content }}
+        <!-- EMBED CODEPEN EXAMPLES -->
+        <script async src="http://codepen.io/assets/embed/ei.js"></script>
     </div>
 
     {% include disqus.html disqus_identifier=page.disqus_identifier %}

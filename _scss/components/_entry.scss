@@ -1,17 +1,26 @@
-.entry{
+.entry {
   @include clearfix;
+  $marginVertical: 15px;
+  $lightBorderColor: #eee;
 
-  .highlight{
-    border-bottom: 1px solid #eee;
-    border-top: 1px solid #eee;
+  .highlight {
+    border-bottom: 1px solid $lightBorderColor;
+    border-top: 1px solid $lightBorderColor;
     padding: 10px 0;
-    margin: 15px 0;
-    overflow: auto;// ToDo check on mobile etc.
+    margin: $marginVertical 0;
+    overflow: auto;
   }
 
-  mark{// e.g. inline code
+  mark {
+    // e.g. inline code
     background: #f0f0f0;
     border-radius: 3px;
     padding: 0 5px;
+  }
+
+  .cp_embed_iframe {
+    // e.g. codepen example
+    margin: $marginVertical 0;
+    max-width: 100%;
   }
 }
