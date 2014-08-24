@@ -1,9 +1,9 @@
 //
 // IMPORTS
 //
-
 @import "_reset";
 @import "_variables";
+
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -15,7 +15,7 @@ html {
 }
 
 body {
-	background: $white;
+  background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
   font-weight: 600;
-  
+
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
@@ -40,8 +40,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 }
-  
-h1 {  
+
+h1 {
   font-weight: 500;
   font-size: 32px;
   a {
@@ -49,16 +49,16 @@ h1 {
   }
 }
 
-h2 {  
+h2 {
   font-weight: 400;
   font-size: 24px;
 }
 
-h3 {  
+h3 {
   font-size: 18px;
 }
 
-h4 {  
+h4 {
   font-size: 18px;
   color: $gray;
 }
@@ -70,7 +70,7 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
   &:hover, &:active {
     color: $blue;
   }
@@ -119,6 +119,7 @@ img {
   color: $black;
   background: $lightGray;
 }
+
 ::selection {
   color: $black;
   background: $lightGray;
@@ -128,12 +129,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
@@ -188,7 +189,7 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue; 
+  font-family: $helveticaNeue;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -198,7 +199,7 @@ img {
   margin: -5px 0 0 0;
   color: $gray;
   font-size: 16px;
-  
+
   @include mobile {
     margin: 3px 0;
   }
@@ -207,9 +208,9 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue; 
+  font-family: $helveticaNeue;
   font-size: 18px;
-  
+
   @include mobile {
     float: none;
     margin-top: 9px;
@@ -245,7 +246,7 @@ nav {
   border-bottom: none;
 }
 
-.post { 
+.post {
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;

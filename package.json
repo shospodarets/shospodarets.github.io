@@ -10,7 +10,6 @@
 
         "grunt-contrib-uglify": "",
         "grunt-contrib-watch": "",
-        "grunt-jekyll": "",
-        "grunt-svgstore": ""
+        "grunt-jekyll": ""
     }
 }

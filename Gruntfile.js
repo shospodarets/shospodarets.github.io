@@ -62,25 +62,6 @@ module.exports = function (grunt) {
             css: {
                 files: ["scss/**/*.scss"],
                 tasks: ["compass", "autoprefixer", "shell:jekyllBuild"]
-            },
-            svgIcons: {
-                files: ["svg/*.svg"],
-                tasks: ["svgstore", "shell:jekyllBuild"]
-            }
-        },
-
-        svgstore: {
-            options: {
-                prefix: "shape-",
-                cleanup: false,
-                svg: {
-                    style: "display: none;"
-                }
-            },
-            default: {
-                files: {
-                    "_includes/svg-defs.svg": ["svg/*.svg"]
-                }
             }
         }
 
@@ -93,7 +74,6 @@ module.exports = function (grunt) {
         "uglify",
         "compass",
         "autoprefixer",
-        "svgstore",
         "shell:jekyllBuild",
         "watch"
     ]);
