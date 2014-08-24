@@ -56,11 +56,11 @@ module.exports = function (grunt) {
                 tasks: ["shell:jekyllBuild"]
             },
             js: {
-                files: ["js/*.js"],
+                files: ["_js/*.js"],
                 tasks: ["uglify", "shell:jekyllBuild"]
             },
             css: {
-                files: ["scss/**/*.scss"],
+                files: ["_scss/**/*.scss"],
                 tasks: ["compass", "autoprefixer", "shell:jekyllBuild"]
             }
         }

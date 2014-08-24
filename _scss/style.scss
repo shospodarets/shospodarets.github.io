@@ -256,6 +256,16 @@ nav {
     font-style: italic;
   }
 
+  .meta {
+    span {
+      display: inline-block;
+    }
+
+    .date {
+      padding-right: 15px;
+    }
+  }
+
   .comments {
     margin-top: 10px;
   }
