@@ -3,12 +3,7 @@
 /***********************/
 
 .highlight {
-  border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
-  padding: 10px 0;
-  margin: 15px 0;
   background: #f8f8f8;
-  overflow: auto;// ToDo check on mobile etc.
 
   .highlight pre {
     word-break: break-all;

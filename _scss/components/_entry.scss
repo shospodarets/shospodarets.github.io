@@ -1,0 +1,17 @@
+.entry{
+  @include clearfix;
+
+  .highlight{
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+    margin: 15px 0;
+    overflow: auto;// ToDo check on mobile etc.
+  }
+
+  mark{// e.g. inline code
+    background: #f0f0f0;
+    border-radius: 3px;
+    padding: 0 5px;
+  }
+}
