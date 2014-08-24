@@ -1,0 +1,28 @@
+{
+    "name": "malyw.github.io",
+    "version": "0.0.0",
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "",
+        "grunt-contrib-copy": "",
+        "grunt-contrib-uglify": "",
+        "grunt-contrib-compass": "",
+        "grunt-contrib-jshint": "",
+        "grunt-contrib-cssmin": "",
+        "grunt-contrib-connect": "",
+        "grunt-contrib-clean": "",
+        "grunt-contrib-htmlmin": "",
+        "grunt-contrib-imagemin": "",
+        "grunt-contrib-watch": "",
+        "grunt-rev": "",
+        "grunt-autoprefixer": "",
+        "grunt-usemin": "",
+        "grunt-newer": "",
+        "grunt-svgmin": "",
+        "grunt-concurrent": "",
+        "load-grunt-tasks": "",
+        "time-grunt": "",
+        "jshint-stylish": "",
+        "grunt-shell": ""
+    }
+}
