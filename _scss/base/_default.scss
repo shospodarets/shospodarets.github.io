@@ -17,7 +17,7 @@ a {
   text-decoration: underline;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     color: lighten($blue, 10%);
   }
 }
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@mixin hoveredTitle{
+@mixin hoveredTitle {
   color: $blue;
 }
 
@@ -54,7 +54,7 @@ h1 {
     text-decoration: none;
     color: $darkGray;
 
-    &:hover{
+    &:hover {
       @include hoveredTitle;
     }
   }
