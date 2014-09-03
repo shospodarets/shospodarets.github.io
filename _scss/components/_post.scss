@@ -1,18 +1,28 @@
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+.post-short {
+  cursor: pointer;
+  padding-bottom: $marginVertical;
+  border-bottom: 3px solid $lightGray;
+
+  &:hover {
+    h1 {
+      a {
+        @include hoveredTitle;
+      }
+    }
+  }
 }
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
+.posts .post-short:last-child {
   border-bottom: none;
 }
 
 .post {
+  @include clearfix;
+
   blockquote {
-    margin: 1.8em .8em;
+    margin: $marginVertical .8em;
     border-left: 2px solid $gray;
-    padding: 0.1em 1em;
+    padding: $marginVertical 1em;
     color: $gray;
     font-size: 22px;
     font-style: italic;
@@ -30,10 +40,5 @@
 
   .comments {
     margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
   }
 }

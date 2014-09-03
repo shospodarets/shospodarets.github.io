@@ -12,6 +12,16 @@ body {
   color: $darkGray;
 }
 
+a {
+  color: $blue;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover{
+    color: lighten($blue, 10%);
+  }
+}
+
 .container {
   margin: 0 auto;
   max-width: 740px;
@@ -25,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 
   line-height: 1.7;
-  margin: 1em 0 15px;
+  margin: $marginVertical 0;
   padding: 0;
 
   @include mobile {
@@ -33,11 +43,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@mixin hoveredTitle{
+  color: $blue;
+}
+
 h1 {
   font-weight: 500;
   font-size: 32px;
   a {
-    color: inherit;
+    text-decoration: none;
+    color: $darkGray;
+
+    &:hover{
+      @include hoveredTitle;
+    }
   }
 }
 
@@ -56,20 +75,11 @@ h4 {
 }
 
 p {
-  margin: 15px 0;
-}
-
-a {
-  color: $blue;
-  text-decoration: none;
-  cursor: pointer;
-  &:hover, &:active {
-    color: $blue;
-  }
+  margin: $marginVertical 0;
 }
 
 ul, ol {
-  margin: 15px 0;
+  margin: $marginVertical 0;
   padding-left: 30px;
 }
 
@@ -87,14 +97,6 @@ ol ul, ul ol, ul ul, ol ol {
 
 ul ul, ol ul {
   list-style-type: circle;
-}
-
-em, i {
-  font-style: italic;
-}
-
-strong, b {
-  font-weight: 600;
 }
 
 img {

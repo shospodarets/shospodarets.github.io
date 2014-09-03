@@ -1,0 +1,23 @@
+.unloading{// added onbeforeunload page
+  #main{
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.date {
+  font-style: italic;
+  color: $gray;
+}
+
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
