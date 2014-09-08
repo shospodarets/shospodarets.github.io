@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native JavaScript promises API
-published: true
+tags: [Javascript]
 ---
 
 

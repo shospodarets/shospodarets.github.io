@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Awesome Demos 10
-published: true
+tags: [Awesome Demos]
 ---
 
 <p>

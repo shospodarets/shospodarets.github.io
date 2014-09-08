@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  “onload” event for CSS file in Android browser
-published: true
+tags: [Javascript, CSS, Android]
 ---
 
 <p>

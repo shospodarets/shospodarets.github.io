@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Awesome Demos 1
-published: true
+tags: [Awesome Demos]
 ---
 
 <div>
