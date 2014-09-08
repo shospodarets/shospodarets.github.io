@@ -1,6 +1,6 @@
 # [malyw.github.io](http://malyw.github.io/)
 
-1. $ gem install jekyll
+1. $ bundler install (install Jekyll and gem dependencies )
 1. $ npm install
 1. $ grunt serve
 1. $ grunt (N.B.: Don't stop previous command)

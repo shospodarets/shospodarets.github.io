@@ -2,7 +2,9 @@
 
 (function () {
     // Open post content on post-short click
-    $(document).on('click', '.post-short', function () {
+    $(document).on('click', '.post-short', function (e) {
+        if (e.target.tagName.toLowerCase() === 'a')  return;// leave links click
+
         var href = $(this).find('.post-title a').attr('href');
         if (href) {
             window.location = href;

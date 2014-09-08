@@ -24,6 +24,9 @@ footer-links:
   rss: malyw.github.io # make sure the "url" above is set!
   twitter: malyw
 
+# http://jekyllrb.com/docs/pagination/
+paginate: 7
+
 # This will enable commenting on posts
 disqus: malyw-github-io
 
@@ -47,11 +50,6 @@ baseurl: ""
 markdown: redcarpet
 highlighter: pygments
 permalink: /:title
-
-# plug-ins
-gems:
-  - jemoji # Emoji please!
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
 
 # Exclude these files from production _site
 exclude:
