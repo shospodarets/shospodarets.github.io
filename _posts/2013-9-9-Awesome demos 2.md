@@ -34,6 +34,7 @@ tags: [Awesome Demos]
     Real eye with CSS Sfumato
   </a>
 </div>
+<!-- more -->
 <div>
   &nbsp;
   <br />

@@ -10,7 +10,12 @@ layout: default
         </h1>
 
         <div class="entry">
-            {{ post.content | truncatewords:40}}
+            {% if post.content contains "<!-- more -->" %}
+                {{ post.content | split:"<!-- more -->" | first % }}
+                ...
+            {% else %}
+                {{ post.content | truncatewords:40}}
+            {% endif %}
         </div>
     </article>
     {% endfor %}

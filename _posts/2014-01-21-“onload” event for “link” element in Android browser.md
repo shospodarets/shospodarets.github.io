@@ -4,8 +4,6 @@ title:  “onload” event for CSS file in Android browser
 tags: [Javascript, CSS, Android]
 ---
 
-<p>
-</p>
 <p><span>Android browser doesn't support "onload" / "onreadystatechange" events for &lt;link&gt; element: http://pieisgood.org/test/script-link-events/</span></p>
 <p>But it returns:</p>
 <pre><code class="javascript">
