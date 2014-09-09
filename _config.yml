@@ -51,15 +51,6 @@ markdown: redcarpet
 highlighter: pygments
 permalink: /:title
 
-# plug-ins
-gems:
-  - 'jemoji' # Emoji please!
-  - 'jekyll-sitemap' # Create a sitemap using the official Jekyll sitemap gem
-  - 'nokogiri' # For truncatehtml
-  - 'iconv' # For truncatehtml
-  - 'jekyll-gist' # For Github Gists
-  - 'jekyll-tagging' # for tagging
-
 # Exclude these files from production _site
 exclude:
     - Gemfile

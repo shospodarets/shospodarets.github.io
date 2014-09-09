@@ -10,7 +10,7 @@ layout: default
         </h1>
 
         <div class="entry">
-            {{ post.content | truncatehtml: 250}}
+            {{ post.content | truncatewords:40}}
         </div>
     </article>
     {% endfor %}
