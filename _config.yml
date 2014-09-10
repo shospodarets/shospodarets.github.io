@@ -25,7 +25,7 @@ footer-links:
   twitter: malyw
 
 # http://jekyllrb.com/docs/pagination/
-paginate: 7
+paginate: 5
 
 # This will enable commenting on posts
 disqus: malyw-github-io

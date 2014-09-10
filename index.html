@@ -3,18 +3,18 @@ layout: default
 ---
 
 <div class="posts">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     <article class="post post-short">
         <h1 class="post-title">
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         </h1>
 
         <div class="entry">
-            {% if post.content contains "<!-- more -->" %}
-                {{ post.content | split:"<!-- more -->" | first % }}
-                ...
+            {% if post.content contains "<div class="more"></div>" %}
+            {{ post.content | split:"<div class="more"></div>" | first % }}
+            ...
             {% else %}
-                {{ post.content | truncatewords:40}}
+            {{ post.content | truncatewords:40}}
             {% endif %}
         </div>
     </article>

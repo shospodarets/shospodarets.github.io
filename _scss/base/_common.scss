@@ -1,5 +1,6 @@
-.unloading{// added onbeforeunload page
-  #main{
+.unloading {
+  // added onbeforeunload page
+  #main {
     opacity: 0.5;
     pointer-events: none;
   }
@@ -20,4 +21,9 @@
 
 .clearfix:after {
   clear: both;
+}
+
+.more {
+  // provide post-short boundary
+  display: none;
 }
