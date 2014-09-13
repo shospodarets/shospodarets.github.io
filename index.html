@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="posts">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     <article class="post post-short">
         <h1 class="post-title">
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
@@ -20,3 +20,5 @@ layout: default
     </article>
     {% endfor %}
 </div>
+
+{% include pagination/pagination.html %}

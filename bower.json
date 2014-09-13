@@ -1,0 +1,10 @@
+{
+    "name": "malyw.github.io",
+    "version": "0.0.0",
+    "dependencies": {
+        "jquery": ""
+    },
+    "devDependencies": {
+        "susy": ""
+    }
+}

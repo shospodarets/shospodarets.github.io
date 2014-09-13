@@ -1,0 +1,13 @@
+{% if page == paginator.page %}
+<div class="pagination-link">
+    <em class="current">{{ page }}</em>
+</div>
+{% elsif page == 1 %}
+<div class="pagination-link">
+    <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+</div>
+{% else %}
+<div class="pagination-link">
+    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+</div>
+{% endif %}

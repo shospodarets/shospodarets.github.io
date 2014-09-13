@@ -1,0 +1,57 @@
+.pagination {
+  @include clearfix;
+  @include remove-edge-gutters;
+  text-align: center;
+
+  a, em {
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.5s all;
+    text-decoration: none;
+  }
+
+  .prev-btn,
+  .next-btn {
+     a, em{
+       color: #fff;
+       background-color: #e85c33;
+
+       &:hover{
+         background-color: #333;
+       }
+
+       &.empty{
+         visibility: hidden;
+       }
+     }
+  }
+
+  .prev-btn {
+    @include span(1 of 7);
+  }
+
+  .pagination-links-wrapper {
+    @include span(5 of 7);
+    @include remove-edge-gutters;
+
+    .pagination-link {
+      @include span(1 of 5);
+      min-height: 1px; // fix for 0 height if there is no content (because of float:left;)
+
+      a, em {
+        max-width: 50px;
+
+        &:hover,
+        &.current {
+          color: #fff;
+          background-color: #41b7d8;
+        }
+      }
+    }
+  }
+
+  .next-btn {
+    @include span(1 of 7);
+  }
+}

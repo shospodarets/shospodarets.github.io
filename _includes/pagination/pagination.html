@@ -1,0 +1,60 @@
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <div class="prev-btn">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; prev</a>
+    </div>
+    {% else %}
+    <div class="prev-btn">
+        <em class="empty">&laquo; prev</em>
+    </div>
+    {% endif %}
+
+    <div class="pagination-links-wrapper">
+
+        {% if paginator.page > 2 %}
+        {% assign page = paginator.page | minus:2 %}
+        {% include pagination/pagination-pages.html %}
+        {% else %}
+        <div class="pagination-link empty"></div>
+        {% endif %}
+
+        {% if paginator.page > 1 %}
+        {% assign page = paginator.page | minus:1 %}
+        {% include pagination/pagination-pages.html %}
+        {% else %}
+        <div class="pagination-link empty"></div>
+        {% endif %}
+
+        {% assign page = paginator.page %}
+        {% include pagination/pagination-pages.html %}
+
+        {% assign pagePlusOne = paginator.page | plus:1 %}
+        {% if paginator.page < paginator.total_pages %}
+        {% assign page = pagePlusOne %}
+        {% include pagination/pagination-pages.html %}
+        {% else %}
+        <div class="pagination-link empty"></div>
+        {% endif %}
+
+        {% assign pagePlusTwo = paginator.page | plus:2 %}
+        {% if pagePlusOne < paginator.total_pages %}
+        {% assign page = pagePlusTwo %}
+        {% include pagination/pagination-pages.html %}
+        {% else %}
+        <div class="pagination-link empty"></div>
+        {% endif %}
+
+    </div>
+
+    {% if paginator.next_page %}
+    <div class="next-btn">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">next &raquo;</a>
+    </div>
+    {% else %}
+    <div class="next-btn">
+        <em class="empty">next &raquo;</em>
+    </div>
+    {% endif %}
+</div>
+{% endif %}

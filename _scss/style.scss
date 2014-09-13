@@ -1,3 +1,6 @@
+// libraries
+@import "libs/susy";
+//
 @import "mixins";
 @import "highlights";
 @import "_reset";
@@ -12,3 +15,4 @@
 @import "components/entry";
 @import "components/comments";
 @import "components/tags";
+@import "components/pagination";
