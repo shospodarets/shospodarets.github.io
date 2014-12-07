@@ -1,5 +1,6 @@
 // libraries
 @import "libs/susy";
+@import "libs/caniuse";
 //
 @import "mixins";
 @import "highlights";
@@ -8,6 +9,8 @@
 // common layout and defaults classes
 @import "base/default";
 @import "base/common";
+// atoms
+@import "atoms/buttons";
 // layout
 @import "components/header";
 @import "components/post";
