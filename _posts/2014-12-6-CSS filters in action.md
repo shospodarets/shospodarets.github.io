@@ -178,7 +178,7 @@ html{
 
 Other example- applying inverted theme to BBC.com:
 <iframe
-        src="http://malyw.github.io/css-filters/?src=http://bbc.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D#iframe-wrapper"
+        src="http://malyw.github.io/css-filters/?src=http://bbc.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&scrollTo=.iframe-wrapper"
         frameborder="0"
         allowtransparency="true" allowfullscreen="true"
         style="width: 100%; overflow: hidden;"
@@ -225,7 +225,8 @@ Also CSS filters will be good to provide some effects like instagram- filters.
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
-                height="280"
+                scrolling="no"
+                height="265"
                 >
         </iframe>
     </li>
@@ -236,7 +237,8 @@ Also CSS filters will be good to provide some effects like instagram- filters.
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
-                height="280"
+                scrolling="no"
+                height="265"
                 >
         </iframe>
     </li>
@@ -247,7 +249,8 @@ Also CSS filters will be good to provide some effects like instagram- filters.
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
-                height="280"
+                scrolling="no"
+                height="265"
                 >
         </iframe>
     </li>
@@ -258,7 +261,8 @@ Also CSS filters will be good to provide some effects like instagram- filters.
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
-                height="280"
+                scrolling="no"
+                height="265"
                 >
         </iframe>
     </li>
