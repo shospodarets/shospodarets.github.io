@@ -219,48 +219,48 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Vintage:
         <iframe
-                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22grayscale%22:0.1,%22saturate%22:1,%22sepia%22:0.6%7D&overflowHeight=265"
+                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22grayscale%22:0.1,%22saturate%22:1,%22sepia%22:0.6%7D&overflowHeight=270"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
                 scrolling="no"
-                height="265"
+                height="270"
                 >
         </iframe>
     </li>
     <li>
         Acid:
         <iframe
-                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22hue-rotate%22:72,%22saturate%22:3,%22sepia%22:0.2%7D&overflowHeight=265"
+                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22hue-rotate%22:72,%22saturate%22:3,%22sepia%22:0.2%7D&overflowHeight=270"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
                 scrolling="no"
-                height="265"
+                height="270"
                 >
         </iframe>
     </li>
     <li>
         Grayscale:
         <iframe
-                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22grayscale%22:1%7D&overflowHeight=265"
+                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22grayscale%22:1%7D&overflowHeight=270"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
                 scrolling="no"
-                height="265"
+                height="270"
                 >
         </iframe>
     </li>
     <li>
         Inverted colors:
         <iframe
-                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&overflowHeight=265"
+                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&overflowHeight=270"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
                 scrolling="no"
-                height="265"
+                height="270"
                 >
         </iframe>
     </li>
