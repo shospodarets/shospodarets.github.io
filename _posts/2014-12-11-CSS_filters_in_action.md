@@ -173,9 +173,9 @@ html{
     </li>
 </ol>
 
-Other example- applying inverted theme to BBC.com:
+Other example- applying inverted theme to my site <a href="http://gospodarets.com" target="_blank">gospodarets.com</a>:
 <iframe
-        src="http://malyw.github.io/css-filters/?src=http://bbc.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&hideContentExcept=.iframe-wrapper&overflowHeight=350"
+        src="http://malyw.github.io/css-filters/?src=http://gospodarets.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&hideContentExcept=.iframe-wrapper&overflowHeight=350"
         frameborder="0"
         allowtransparency="true" allowfullscreen="true"
         style="width: 100%; overflow: hidden;"
