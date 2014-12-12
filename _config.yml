@@ -21,7 +21,7 @@ footer-links:
   instagram:
   linkedin: gospodarets
   pinterest:
-  rss: malyw.github.io # make sure the "url" above is set!
+  rss: blog.gospodarets.com # make sure the "url" above is set!
   twitter: malyw
 
 # http://jekyllrb.com/docs/pagination/
@@ -35,7 +35,7 @@ google_analytics: UA-53471595-1
 
 # Website URL
 # Used for Sitemap.xml and your RSS feed
-url: http://malyw.github.io
+url: http://blog.gospodarets.com
 
 # If hosting site at a Project repository on GitHub pages
 # (http://username.github.io/repository-name)

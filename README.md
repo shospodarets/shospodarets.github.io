@@ -1,4 +1,4 @@
-# [malyw.github.io](http://malyw.github.io/)
+# [blog.gospodarets.com](http://blog.gospodarets.com/)
 
 1. $ gem install jekyll
 1. $ npm install
