@@ -6,6 +6,11 @@
 
     .highlight {
       display: inline-block;
+      overflow: visible;
+
+      code{
+        white-space: normal;
+      }
     }
   }
 }
