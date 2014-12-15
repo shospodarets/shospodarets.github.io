@@ -61,6 +61,7 @@ exclude:
     - Gruntfile.js
     - package.json
     - node_modules
+    - other
 
 # Gems
 gems:

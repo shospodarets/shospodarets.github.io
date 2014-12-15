@@ -24,6 +24,8 @@ The ways they appear is usual:
         etc.
 </ul>
 
+<div class="more"></div>
+
 <h2>Solution</h2>
 So was decided just to create simple shell script to find SCSS-syntax variables which appear in the code only one time.
 Here it is:
