@@ -1,8 +1,10 @@
+author: Sergey Gospodarets
+keywords: javascript,js,html,html5,css,css3,git,shell,node.js,frontend
 # Name of site (displayed in the header)
 name: Sergey Gospodarets Blog
 
 # Short bio or description (displayed in the header)
-description: JavaScript/HTML/CSS stuff
+description: A front end web development blog
 
 # URL of your avatar or profile pic
 avatar: /images/avatar.png
