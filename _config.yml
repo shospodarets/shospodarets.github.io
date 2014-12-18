@@ -1,6 +1,7 @@
 author: Sergey Gospodarets
 keywords: javascript,js,html,html5,css,css3,git,shell,node.js,frontend
 personal-site-url: http://gospodarets.com
+google-plus-posts: https://plus.google.com/u/0/+SergeyGospodarets/posts
 # Name of site (displayed in the header)
 name: Sergey Gospodarets Blog
 
@@ -69,6 +70,7 @@ exclude:
 # Gems
 gems:
   - jemoji # Emoji please!
+  - jekyll-sitemap
 
 # Tagging
 tag_page_layout: tag_page
