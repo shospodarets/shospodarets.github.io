@@ -2,9 +2,17 @@
 <meta name="twitter:site" content="@malyw" />
 <meta name="twitter:title" content="
         {% if page.title %}
-        {{ page.title }}
+                {{ page.title }}
         {% else %}
-        {{ site.name }}
+                {{ site.name }}
         {% endif %}
 " />
 <meta name="twitter:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}" />
+
+<meta name="twitter:description" content="
+        {% if page.path contains '_posts' %}
+                {{ page.content | strip_html | xml_escape | truncate: 200 }}
+        {% else %}
+                {{ site.description }}
+        {% endif %}
+">
