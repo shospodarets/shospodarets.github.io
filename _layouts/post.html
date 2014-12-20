@@ -2,12 +2,39 @@
 layout: default
 ---
 
-<article class="post">
-    <h1 class="post-title">{{ page.title }}</h1>
+<article
+        itemscope itemtype="http://schema.org/Article"
+        class="post">
+    <h1
+            itemprop="name"
+            class="post-title">
+        {{ page.title }}
+    </h1>
 
     <div class="meta">
+        <!-- META FOR ARTICLE START -->
+        <span class="absolute-hidden">
+            <meta itemprop="articleSection" content="CSS">
+            <meta itemprop="url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <meta itemprop="name" content="{{ site.author }}">
+            </span>
+            // HIDE
+            <img class="article-image" itemprop="image" src="{{ site.avatar }}"/>
+            <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                <span itemprop="name">
+                    {{ site.name }}
+                </span>
+            </span>
+        </span>
+        <!-- META FOR ARTICLE END -->
         <span class="date">
-            Written on {{ page.date | date: "%B %e, %Y" }}
+            Written on
+            <span
+                    itemprop="datePublished"
+                    content='{{ page.date | date: "%Y-%m-%d" }}'>
+                {{ page.date | date: "%B %e, %Y" }}
+            </span>
         </span>
         <!-- SHARE BUTTONS START -->
         <span class="share">
@@ -29,7 +56,11 @@ layout: default
     </div>
 
     <div class="entry">
-        {{ content }}
+        <div
+                itemprop="articleBody"
+                >
+            {{ content }}
+        </div>
         <!-- EMBED CODEPEN EXAMPLES -->
         <script async src="http://codepen.io/assets/embed/ei.js"></script>
         <!-- EMBED CAN I USE INFO -->

@@ -27,3 +27,9 @@
   // provide post-short boundary
   display: none;
 }
+
+.absolute-hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}

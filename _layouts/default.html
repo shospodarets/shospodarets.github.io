@@ -4,7 +4,6 @@
     <meta charset="utf-8"/>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    {% include head/mobile-devices.html %}
 
     <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml">
 
@@ -24,14 +23,15 @@
 
     <meta itemprop="image" content="{{ site.url }}/images/logo.png">
     <link rel="image_src" href="{{ site.url }}/images/logo.png">
+    {% include head/favicons.html %}
 
     {% include head/social-networks/google-plus.html %}
     {% include head/social-networks/twitter.html %}
+    {% include head/social-networks/open-graph.html %}
 
-    {% include head/favicons.html %}
-    {% include head/open-graph.html %}
-    {% include head/app-capables.html %}
-    {% include head/msapplication.html %}
+    {% include head/mobile/app-capables.html %}
+    {% include head/mobile/msapplication.html %}
+    {% include head/mobile/mobile-devices.html %}
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
