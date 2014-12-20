@@ -14,7 +14,9 @@ layout: default
     <div class="meta">
         <!-- META FOR ARTICLE START -->
         <span class="absolute-hidden">
-            <meta itemprop="articleSection" content="CSS">
+            {% for tag in page.tags %}
+            <meta itemprop="articleSection" content="{{ tag }}">
+            {% endfor %}
             <meta itemprop="url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}">
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <meta itemprop="name" content="{{ site.author }}">
