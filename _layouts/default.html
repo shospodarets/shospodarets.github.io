@@ -19,6 +19,7 @@
     <meta name="description" content="{{ site.description }}">
     <meta name="keywords" content="{{ site.keywords }}">
     <meta name="robots" content="index,follow">
+    <meta name="author" content="{{ site.author }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
 
     <meta itemprop="image" content="{{ site.url }}/images/logo.png">
@@ -53,6 +54,10 @@
                 <p class="site-description">{{ site.description }}</p>
             </div>
 
+            <div class="social-links small-social-links">
+                {% include svg-icons.html %}
+            </div>
+
             <nav>
                 <a href="{{ site.personal-site-url }}">Site</a>
                 <a href="{{ site.baseurl }}/tags">Tags</a>
@@ -69,7 +74,9 @@
 <div class="wrapper-footer">
     <div class="container">
         <footer class="footer">
-            {% include svg-icons.html %}
+            <div class="big-social-links">
+                {% include svg-icons.html %}
+            </div>
         </footer>
     </div>
 </div>

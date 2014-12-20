@@ -19,8 +19,8 @@ $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
 // Mobile breakpoints
-@mixin mobile {
-  @media screen and (max-width: 640px) {
+@mixin mobile-breakpoint {
+  @media screen and (max-width: 660px) {
     @content;
   }
 }

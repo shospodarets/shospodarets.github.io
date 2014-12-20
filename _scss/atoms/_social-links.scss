@@ -1,0 +1,15 @@
+.small-social-links {
+  $size: 20px;
+  svg {
+    width: $size;
+    height: $size;
+  }
+}
+
+.big-social-links {
+  $size: 40px;
+  svg {
+    width: $size;
+    height: $size;
+  }
+}
