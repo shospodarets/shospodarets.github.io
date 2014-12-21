@@ -4,7 +4,7 @@
 }
 
 .masthead {
-  padding: 20px 0;
+  padding: 15px 0;
 
   @include mobile-breakpoint {
     text-align: center;
@@ -58,25 +58,29 @@
   }
 }
 
-.social-links {
-  float: right;
-  margin-bottom: 19px;
+.header-options {
+  overflow: hidden;
+  padding-left: 20px;
+
+  & > * {
+    float: right;
+  }
 
   @include mobile-breakpoint {
-    float: none;
-    margin-bottom: 0;
+    padding-left: 0;
+
+    & > * {
+      float: none;
+    }
   }
 }
 
 nav {
-  float: right;
   font-family: $helveticaNeue;
-  font-size: 18px;
+  font-size: 16px;
 
   @include mobile-breakpoint {
-    float: none;
     display: block;
-    font-size: 16px;
   }
 
   a {

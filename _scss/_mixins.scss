@@ -1,8 +1,17 @@
-@mixin clearfix{
+@mixin clearfix {
   &:before,
-  &:after{
+  &:after {
     display: table;
-    content:'';
+    content: '';
     clear: both;
   }
+}
+
+@mixin absolute-hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

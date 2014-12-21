@@ -1,0 +1,44 @@
+<header class="masthead clearfix">
+    <a href="{{ site.baseurl }}/" class="site-avatar">
+        <img src="{{ site.avatar }}" alt=""/>
+    </a>
+
+    <div class="site-info">
+        <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+
+        <p class="site-description">{{ site.description }}</p>
+    </div>
+
+    <div class="header-options">
+        <div class="social-links small-social-links">
+            {% include svg-icons.html %}
+        </div>
+
+        <div class="google-custom-search">
+            <form class="google-custom-search-placeholder">
+                <input class="google-custom-search-input" type="search" placeholder="Search">
+            </form>
+            <div class="google-custom-search-original">
+                <script>
+                    (function () {
+                        var cx = '012363491708652379866:741arfehybe';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                        '//www.google.com/cse/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <gcse:search></gcse:search>
+            </div>
+        </div>
+
+        <nav>
+            <a href="{{ site.personal-site-url }}">Site</a>
+            <a href="{{ site.baseurl }}/tags">Tags</a>
+            <a href="{{ site.baseurl }}/about">About</a>
+        </nav>
+    </div>
+</header>

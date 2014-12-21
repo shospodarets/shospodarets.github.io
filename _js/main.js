@@ -23,4 +23,27 @@
                 $body.removeClass(unloadingClass);
             }, 5000);
         });
+
+    // GOOGLE CUSTOM SEARCH- apply placeholder actions to original
+    var $googlePlaceholderForm = $('.google-custom-search-placeholder');
+    var $googlePlaceholderInput = $googlePlaceholderForm.find('input');
+    var $googleOriginalInput;
+    var $googleOriginalSubmit;
+
+    function defineGoogleOriginalElements() {
+        if (!$googleOriginalInput) {
+            $googleOriginalInput = $('.gsc-input');
+        }
+        if (!$googleOriginalSubmit) {
+            $googleOriginalSubmit = $('.gsc-search-button');
+        }
+    }
+
+    $googlePlaceholderForm.on('submit', function (e) {
+        e.preventDefault();
+
+        defineGoogleOriginalElements();
+        $googleOriginalInput.val($googlePlaceholderInput.val());
+        $googleOriginalSubmit.trigger('click');
+    });
 }());
