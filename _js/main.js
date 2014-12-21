@@ -1,6 +1,10 @@
 'use strict';
 
 (function () {
+    window.console.log = function () {
+        // to keep console clear
+    };
+
     // Open post content on post-short click
     $(document).on('click', '.post-short', function (e) {
         if (e.target.tagName.toLowerCase() === 'a')  return;// leave links click
