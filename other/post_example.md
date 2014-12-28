@@ -40,4 +40,6 @@ Paragraph <mark>inline code</mark>
 
 {% gist malyw/fade28c8d398a3a86334 %}
 
+<span data-height="270" data-theme-id="178" data-slug-hash="MYKmNE" data-user="malyw" data-default-tab="result" class="codepen"></span>
+
 <div class="caniuse" data-feature="css-filters"></div>

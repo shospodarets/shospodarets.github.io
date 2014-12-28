@@ -19,7 +19,7 @@ avatar: /images/avatar.jpg
 # Includes an icon in the footer for each username
 footer-links:
   dribbble:
-  email: sgospodarets@gmail.com
+#  email: sgospodarets@gmail.com
   facebook: sergeygospodaretsblog
   flickr:
   github: malyw
