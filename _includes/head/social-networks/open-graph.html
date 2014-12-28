@@ -1,18 +1,6 @@
 <meta property="og:image" content="{{ site.url }}/images/code.jpg">
-<meta property="og:title" content="
-        {% if page.title %}
-                {{ page.title }}
-        {% else %}
-                {{ site.name }}
-        {% endif %}
-">
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
 <meta property="og:site_name" content="{{ site.name }}">
-<meta property="og:description" content="
-        {% if page.path contains '_posts' %}
-                {{ page.content | strip_html | xml_escape | truncate: 200 }}
-        {% else %}
-                {{ site.description }}
-        {% endif %}
-">
+<meta property="og:description" content="{% if page.path contains '_posts' %}{{ page.content | strip_html | xml_escape | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
 <meta property="og:type" content="blog">
 <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}">
