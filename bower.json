@@ -2,9 +2,9 @@
     "name": "blog.gospodarets.com",
     "version": "0.0.0",
     "dependencies": {
-        "jquery": ""
+        "html5shiv": "~3.7.2"
     },
     "devDependencies": {
-        "susy": ""
+        "susy": "~2.1.3"
     }
 }

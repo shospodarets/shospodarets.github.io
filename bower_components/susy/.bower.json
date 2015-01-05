@@ -35,6 +35,6 @@
     "commit": "89e8303d23a604cdc83093952d3aa62e3010076b"
   },
   "_source": "git://github.com/ericam/susy.git",
-  "_target": "*",
+  "_target": "~2.1.3",
   "_originalSource": "susy"
 }

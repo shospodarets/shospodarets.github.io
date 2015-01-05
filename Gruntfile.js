@@ -1,14 +1,22 @@
-/* globals module, require */
+'use strict';
 
 module.exports = function (grunt) {
 
     "use strict";
 
     grunt.initConfig({
-        uglify: {
+        browserify: {
             global: {
                 files: {
                     "js/main.min.js": ["_js/main.js"]
+                }
+            }
+        },
+
+        uglify: {
+            global: {
+                files: {
+                    "js/main.min.js": ["js/main.min.js"]
                 }
             }
         },
@@ -56,7 +64,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ["_js/*.js"],
-                tasks: ["uglify", "shell:jekyllBuild"]
+                tasks: ["browserify", "uglify", "shell:jekyllBuild"]
             },
             css: {
                 files: ["_scss/**/*.scss"],
@@ -70,6 +78,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask("serve", ["shell:jekyllServe"]);
     grunt.registerTask("default", [
+        'browserify',
         "uglify",
         "compass",
         "autoprefixer",
