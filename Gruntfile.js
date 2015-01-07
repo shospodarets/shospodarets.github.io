@@ -59,11 +59,11 @@ module.exports = function (grunt) {
                 livereload: true
             },
             site: {
-                files: ["*.html", "_layouts/*.html", "_posts/*.md", "_includes/*.html"],
+                files: ["*.html", "_layouts/**/*.html", "_posts/*.md", "_includes/**/*.html"],
                 tasks: ["shell:jekyllBuild"]
             },
             js: {
-                files: ["_js/*.js"],
+                files: ["_js/**/*.js"],
                 tasks: ["browserify", "uglify", "shell:jekyllBuild"]
             },
             css: {

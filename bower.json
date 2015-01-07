@@ -2,7 +2,8 @@
     "name": "blog.gospodarets.com",
     "version": "0.0.0",
     "dependencies": {
-        "html5shiv": "~3.7.2"
+        "html5shiv": "~3.7.2",
+        "es6-promise": "~2.0.1"
     },
     "devDependencies": {
         "susy": "~2.1.3"
