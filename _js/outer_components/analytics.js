@@ -28,15 +28,24 @@ Analytics.prototype.load = function () {
 };
 
 Analytics.prototype.addJsErrorsTracking = function () {
-    window['onerror'] = function (msg, url, line) {
-        window._gaq.push([
+    window.addEventListener('error', function(e) {
+        _gaq.push([
             '_trackEvent',
             'JavaScript Errors',
-            msg,
-            url + " : " + line,
-            new Date().toUTCString() + ' | ' + navigator.userAgent,
-            true]);
-    };
+            e.message,
+            e.filename + ':  ' + e.lineno,
+            true
+        ]);
+    });
+    //window['onerror'] = function (msg, url, line) {
+    //    window._gaq.push([
+    //        '_trackEvent',
+    //        'JavaScript Errors',
+    //        msg,
+    //        url + " : " + line,
+    //        new Date().toUTCString() + ' | ' + navigator.userAgent,
+    //        true]);
+    //};
     setTimeout(function(){
         // TEST JAVASCRIPT ERRORS TRACKING
         ert();
