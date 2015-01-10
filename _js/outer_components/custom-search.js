@@ -1,7 +1,6 @@
 'use strict';
 
-var UTILS = require('../utils/utils'),
-    triggerEvent = UTILS.triggerEvent;
+var UTILS = require('../utils/utils');
 
 /**
  * Applies placeholder actions to original google custom search form
@@ -39,14 +38,13 @@ CustomSearch.prototype.runSearch = function (value) {
 
     window.console.log = function () {
     };// to keep console clear from google suggestions
-    triggerEvent(this.googleOriginalSubmit, 'click');
+    UTILS.triggerEvent(this.googleOriginalSubmit, 'click');
     delete console.log;// get console back
 };
 
 CustomSearch.prototype.loadSearch = function () {
-    return this.options
-        .conditionalLoader.loadScript(
-        this.options.conditionalLoader.protocol + '//www.google.com/cse/cse.js?cx=' + this.options.google_cx
+    return UTILS.loadScript(
+        UTILS.httpProtocol + '//www.google.com/cse/cse.js?cx=' + this.options.GOOGLE_SEARCH_ID
     );
 };
 

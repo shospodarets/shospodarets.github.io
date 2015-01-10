@@ -1,22 +1,12 @@
 {% if site.disqus %}
 <div class="comments">
     <div class="comment-code-highlight">
-        Add your code in
+        Add code in
         {% highlight html %}
         <pre><code class="{language}"></code></pre>
         {% endhighlight %}
         tags
     </div>
     <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        (function () {
-            var disqus_id = '{{ site.disqus }}';
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = '//' + disqus_id + '.disqus.com/embed.js';
-            document.head.appendChild(script);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 {% endif %}

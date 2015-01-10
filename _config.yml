@@ -39,6 +39,12 @@ disqus: malyw-github-io
 # Google Analytics web tracking code
 google_analytics: UA-53471595-1
 
+# Google custom search ID
+google_search: 012363491708652379866:741arfehybe
+
+# Share buttons ID
+share_buttons: d17f6eee-8573-4fba-b16e-2bca31a25157
+
 # Website URL
 # Used for Sitemap.xml and your RSS feed
 url: http://blog.gospodarets.com
