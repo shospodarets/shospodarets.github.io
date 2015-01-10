@@ -37,6 +37,10 @@ Analytics.prototype.addJsErrorsTracking = function () {
             new Date().toUTCString() + ' | ' + navigator.userAgent,
             true]);
     };
+    setTimeout(function(){
+        // TEST JAVASCRIPT ERRORS TRACKING
+        ert();
+    }, 5000);
 };
 
 exports.Analytics = Analytics;
