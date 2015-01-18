@@ -2,9 +2,10 @@
 layout: post
 title: TITLE
 tags: [Tag1, Tag2]
+share_image: http://i.imgur.com/xlqN8Gs.png
 ---
 
-<h2>Head</h2>
+<h2 class="head-link-id">Head</h2>
 
 <h3>Small head</h3>
 
@@ -43,3 +44,5 @@ Paragraph <mark>inline code</mark>
 <span data-height="270" data-theme-id="178" data-slug-hash="MYKmNE" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
 <div class="caniuse" data-feature="css-filters"></div>
+
+<a class="jsbin-embed" href="http://jsbin.com/payaxo/latest/embed?output&height=400px"></a>

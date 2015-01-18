@@ -22,6 +22,10 @@ ConditionalLoader.prototype.loadScripts = function () {
     if (document.querySelectorAll('.codepen').length) {
         UTILS.loadScript(UTILS.httpProtocol + '//codepen.io/assets/embed/ei.js');
     }
+    /* JSBIN EXAMPLES */
+    if (document.querySelectorAll('.jsbin-embed').length) {
+        UTILS.loadScript(UTILS.httpProtocol + '//static.jsbin.com/js/embed.js');
+    }
     /* DISCUSS */
     if (document.querySelectorAll('#disqus_thread').length) {
         UTILS.loadScript(
