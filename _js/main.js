@@ -11,7 +11,7 @@
     var es6Promise = require('../bower_components/es6-promise/promise');
 
     /* POLYFILLS */
-    if (!window.Promise) window.Promise = es6Promise;
+    if (!window.Promise) window.Promise = es6Promise.Promise;
 
     // APP
     var APP = window.jekyllVariables;
