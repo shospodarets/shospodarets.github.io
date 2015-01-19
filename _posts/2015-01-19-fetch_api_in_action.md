@@ -2,7 +2,7 @@
 layout: post
 title: Fetch API in action
 tags: [Javascript, Javascript API]
-share_image: http://i.imgur.com/xlqN8Gs.png
+share_image: http://i.imgur.com/ghk4Ptj.png
 ---
 
 <blockquote>
@@ -503,7 +503,7 @@ function uploadImageToImgur(blob) {
 }
 
 // --- ACTION ---
-var sourceImageUrl = 'https://lh4.googleusercontent.com/-oVnrPjt32SY/VLvLI1WrGDI/AAAAAAAAFas/518sOko9Q8s/w980-h576-no/make-fetch-happen.png';
+var sourceImageUrl = 'https://lh4.googleusercontent.com/-d_O-phk2MoA/VLxXocjkT4I/AAAAAAAAFbE/lsSk997pBVQ/w600-h700-no/make-fetch-happen-small.png';
 console.log('Started downloading image from <a href="' + sourceImageUrl + '">google picasa url</a>');
 
 downloadFile(sourceImageUrl)// download file from one resource
