@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Highlight an element with page fading on pure CSS
-tags: [Javascript, Javascript API]
+tags: [CSS]
 ---
 
 Sometimes to highlight something we need to fade entire page except element/part which we want to focus.
