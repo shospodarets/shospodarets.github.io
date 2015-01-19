@@ -2,6 +2,7 @@
 layout: post
 title: Highlight an element with page fading on pure CSS
 tags: [CSS]
+share_image: http://i.imgur.com/ghk4Ptj.png
 ---
 
 Sometimes to highlight something we need to fade entire page except element/part which we want to focus.
