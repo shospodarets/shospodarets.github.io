@@ -6,7 +6,7 @@ share_image: http://i.imgur.com/ghk4Ptj.png
 ---
 
 <blockquote>
-    In short, Fetch API- it's a new Promise-based standard for doing AJAX requests.
+    In short, Fetch API- it's a new Promise- based standard for doing AJAX requests.
 </blockquote>
 
 Syntax for XHR was provided more then 10 years ago (XMLHttpRequest2 - about 4 years ago).<br>
@@ -575,7 +575,7 @@ Fetching HTML from one JS Bin to another:<br>
 
 <a class="jsbin-embed" href="http://jsbin.com/payaxo/latest/embed?output&height=400px"></a>
 
-<h2 id="problem-and-solutions">Common problems and solutions</h2>
+<h2 id="limitations">Limitations</h2>
 
 <ul>
     <li>
@@ -583,6 +583,9 @@ Fetching HTML from one JS Bin to another:<br>
     </li>
     <li>
         There is neither <a href="https://github.com/github/fetch/issues/33">abort</a> method nor a <a href="https://github.com/whatwg/fetch/issues/20">timeout</a> property for fetch()
+    </li>
+    <li>
+        <mark>fetch()</mark> (as <a href="https://promisesaplus.com/">Promise</a>- based standard) doesn't have ability to provide <mark>onProgress()</mark> callback- so you cannot process a response by chunks
     </li>
     <li>
         Haven't found clear info about doing <mark>synchronous</mark> fetching<br>
