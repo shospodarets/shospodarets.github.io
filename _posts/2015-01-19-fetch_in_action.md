@@ -125,31 +125,6 @@ If there is response with status "200" or "0"- will be returned resolved promise
 which means, we can use <mark>.then().then()</mark> promise syntax.<br>
 In other case <mark>.catch()</mark> will be invoked.
 
-<h3>Adding waiting timeout</h3>
-
-Usually you should care also about response with REALLY huge answer time.<br>
-E.g. when server answers more then some period of time (10-30 seconds)-<br>
-it's good idea to define that fetch was unsuccessful (depends on circumstances):
-
-{% highlight javascript %}
-var MAX_WAITING_TIME = 5000;// in ms
-var isExceeded = false;
-setTimeout(function () {
-    isExceeded = true;
-}, MAX_WAITING_TIME);
-
-var checkTimer = function (response) {
-    if (isExceeded) {
-        return Promise.reject(new Error(response.statusText));
-    } else {
-        return Promise.resolve(response);
-    }
-};
-
-fetch(url)
-    .then(checkTimer);
-{% endhighlight %}
-
 <h3>Parse JSON</h3>
 
 Also there is a method <mark>json()</mark> to proceed the response.<br>
@@ -161,14 +136,14 @@ var parseJson = function (response) {
 };
 
 fetch(url)
-then(parseJson);
+    .then(parseJson);
 {% endhighlight %}
 
 This code gives promise in which (in case of success) will be returned parsed JSON data.
 
 <h3>Setting options</h3>
 
-Nice, going further. We need to set <mark>get</mark> as method for doing our request and proper "Accept" header.<br>
+Nice, going further. We need to set "get" as <mark>method</mark> for doing our request and proper "Accept" <mark>header</mark>.<br>
 There is a <mark>cache</mark> option but so far let's use manual cache busting.<br>
 It can be done passing them in second argument (options) to <mark>fetch()</mark>:
 
@@ -181,30 +156,61 @@ fetch(url, {
 });
 {% endhighlight %}
 
+<h3>Adding waiting timeout</h3>
+
+When <mark>fetch()</mark> takes more then some period of time (10-30 seconds)-<br>
+it's good idea to define that it was unsuccessful (depends on circumstances).<br>
+And here the problems start- there is NOT <a href="https://github.com/whatwg/fetch/issues/20">timeout</a> option.
+So we need to wrap <mark>fetch()</mark> promise to be able to reject it when timeout is reached.
+It adds complexity to our code but provides more flexibility.
+So let's imagine so far (code will be provided below) that we have some <mark>wrappedFetch</mark> Promise-like object with ability to trigger <mark>.reject()</mark> on it:
+
+{% highlight javascript %}
+var MAX_WAITING_TIME = 5000;// in ms
+
+var timeoutId = setTimeout(function () {
+    wrappedFetch.reject(new Error('Load timeout for resource: ' + params.url));// reject on timeout
+}, MAX_WAITING_TIME);
+
+return wrappedFetch.promise// getting clear promise from wrapped
+    .then(function (response) {
+        clearTimeout(timeoutId);
+        return response;
+    });
+{% endhighlight %}
+
 <h3>ALL TOGETHER</h3>
 
 {% highlight javascript %}
-var processStatus = function (response) {
-    if (response.status === 200 || response.status === 0) {
-        return Promise.resolve(response)
-    } else {
-        return Promise.reject(new Error(response.statusText))
-    }
+/* @returns {wrapped Promise} with .resolve/.reject/.catch methods */
+// It goes against Promise concept to not have external access to .resolve/.reject methods, but provides more flexibility
+var getWrappedPromise = function () {
+    var wrappedPromise = {},
+            promise = new Promise(function (resolve, reject) {
+                wrappedPromise.resolve = resolve;
+                wrappedPromise.reject = reject;
+            });
+    wrappedPromise.then = promise.then.bind(promise);
+    wrappedPromise.catch = promise.catch.bind(promise);
+    wrappedPromise.promise = promise;// e.g. if you want to provide somewhere only promise, without .resolve/.reject/.catch methods
+    return wrappedPromise;
 };
 
-var MAX_WAITING_TIME = 5000;// in ms
+/* @returns {wrapped Promise} with .resolve/.reject/.catch methods */
+var getWrappedFetch = function () {
+    var wrappedPromise = getWrappedPromise();
+    var args = Array.prototype.slice.call(arguments);// arguments to Array
 
-var checkTimer = function (response, isExceeded, timeoutId) {
-    clearTimeout(timeoutId);// remove timeout (cleaning)
-    if (isExceeded) {
-        return Promise.reject(new Error(response.statusText));
-    } else {
-        return Promise.resolve(response);
-    }
-};
-
-var parseJson = function (response) {
-    return response.json();
+    fetch.apply(null, args)// calling original fetch() method
+        .then(function (response) {
+            wrappedPromise.resolve(response);
+        }, function (error) {
+            wrappedPromise.reject(error);
+        })
+        .catch(function (error) {
+            wrappedPromise.catch(error);
+        });
+    return wrappedPromise;
 };
 
 /**
@@ -216,50 +222,44 @@ var parseJson = function (response) {
  * @returns {Promise}
  */
 var getJSON = function (params) {
-    var isExceeded = false;
-    var timeoutId = setTimeout(function () {
-        isExceeded = true;
-    }, MAX_WAITING_TIME);
-
-    return fetch(
+    var wrappedFetch = getWrappedFetch(
         params.cacheBusting ? params.url + '?' + new Date().getTime() : params.url,
         {
             method: 'get',// optional, "GET" is default value
             headers: {
                 'Accept': 'application/json'
             }
+        });
+
+    var timeoutId = setTimeout(function () {
+        wrappedFetch.reject(new Error('Load timeout for resource: ' + params.url));// reject on timeout
+    }, MAX_WAITING_TIME);
+
+    return wrappedFetch.promise// getting clear promise from wrapped
+        .then(function (response) {
+            clearTimeout(timeoutId);
+            return response;
         })
         .then(processStatus)
-        .then(function (response) {
-            return checkTimer(response, isExceeded, timeoutId);
-        })
         .then(parseJson);
 };
 
 /*--- TEST  --*/
 var url = 'https://api.github.com/users/malyw';
-
-var onSuccess = function (data) {
-    console.log('JSON parsed successfully!');
-    console.log(data);
-};
-var onError = function (error) {
-    console.error('An error occured!');
-    console.error(error.message);
-};
 var onComplete = function () {
     console.log('I\'m invoked in any case after success/error');
-}
+};
+
 getJSON({
     url: url,
     cacheBusting: true
-}).then(function (data) {
-    // success
-    onSuccess(data);
+}).then(function (data) {// on success
+    console.log('JSON parsed successfully!');
+    console.log(data);
     onComplete(data);
-}, function (error) {
-    // reject
-    onError(error);
+}, function (error) {// on reject
+    console.error('An error occured!');
+    console.error(error.message ? error.message : error);
     onComplete(error);
 });
 {% endhighlight %}
