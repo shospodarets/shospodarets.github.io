@@ -16,6 +16,12 @@ avatar: /images/avatar.jpg
 # Flags below are optional
 #
 
+# Web masters verification
+web-master-verifications:
+  google: 7cCa3PUlThC4fbmii_QaCaQclo2nB5_d4b4vbhZrL4I
+  bing: 464A77B6880D4837BA420DEDB2D9CFF7
+  yandex: 66d8056d3b1e88fd
+
 # Includes an icon in the footer for each username
 footer-links:
   dribbble:
