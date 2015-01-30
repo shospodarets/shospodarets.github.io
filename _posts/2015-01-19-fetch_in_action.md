@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fetch API in action
+title: JavaScript Fetch API in action
 tags: [Javascript, Javascript API]
 share_image: http://i.imgur.com/ghk4Ptj.png
 ---
