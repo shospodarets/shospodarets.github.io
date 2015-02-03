@@ -8,6 +8,7 @@ name: Sergey Gospodarets Blog
 
 # Short bio or description (displayed in the header)
 description: A front end web development blog with tutorials and ideas about JavaScript, AngularJS, jQuery, CSS, CSS3 and HTML, HTML5
+description_short: A front end web development blog
 
 # URL of your avatar or profile pic
 avatar: /images/avatar.jpg
