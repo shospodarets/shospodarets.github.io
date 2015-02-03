@@ -3,6 +3,7 @@ layout: post
 title: TITLE
 tags: [Tag1, Tag2]
 share_image: http://i.imgur.com/xlqN8Gs.png
+share_description: Description how to use something
 ---
 
 <h2 class="head-link-id">Head</h2>
