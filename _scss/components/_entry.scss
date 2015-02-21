@@ -9,8 +9,8 @@
     margin: $marginVertical 0;
   }
 
-  mark {
-    // e.g. inline code
+  // inline code
+  mark, code:not([class]) {
     background: #f0f0f0;
     border-radius: 3px;
     padding: 0 5px;

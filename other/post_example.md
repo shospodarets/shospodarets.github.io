@@ -8,9 +8,9 @@ share_description: Description how to use something
 
 <h2 class="head-link-id">Head</h2>
 
-<h3>Small head</h3>
+###Small head
 
-Paragraph <mark>inline code</mark>
+Paragraph `inline code`
 
 <a href="http://malyw.github.io/css-filters/"
    target="_blank"
@@ -23,12 +23,12 @@ Paragraph <mark>inline code</mark>
 
 <div class="more"></div>
 
-{% highlight css %}
+```css
 /* SYNTAX */
 .apply-filters {
     [vendor-prefix]filter: <filter-function> [<filter-function>]* | none
 }
-{% endhighlight %}
+```
 
 <iframe
         src="http://malyw.github.io/css-filters/?src=http://gospodarets.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&hideContentExcept=.iframe-wrapper&overflowHeight=350"
