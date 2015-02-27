@@ -47,7 +47,7 @@ The following code sends to GA data about all thrown JS errors (error message an
 ```javascript
 // Pure JavaScript errors handler
 window.addEventListener('error', function (err) {
-    var lineAndColumnInfo = err.colno ? ' line:' + err.lineno +', column:'+ err.colno : ' line:' + e.lineno;
+    var lineAndColumnInfo = err.colno ? ' line:' + err.lineno +', column:'+ err.colno : ' line:' + err.lineno;
     _gaq.push([
         '_trackEvent',
         'JavaScript Error',
@@ -150,7 +150,7 @@ about updating Event Tracking to Universal Analytics (analytics.js)
 ```javascript
 // Pure JavaScript errors handler
 window.addEventListener('error', function (err) {
-    var lineAndColumnInfo = err.colno ? ' line:' + err.lineno +', column:'+ err.colno : ' line:' + e.lineno;
+    var lineAndColumnInfo = err.colno ? ' line:' + err.lineno +', column:'+ err.colno : ' line:' + err.lineno;
     ga(
         'send',
         'event',
