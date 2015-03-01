@@ -1,6 +1,18 @@
+.social-links {
+  @include clearfix;
+}
+
 .small-social-links {
-  $size: 20px;
+  $size: 35px;
+
   svg {
+    float: left;
+
+    @include mobile-breakpoint {
+      float: none;
+    }
+
+    margin-right: 8px;
     width: $size;
     height: $size;
   }

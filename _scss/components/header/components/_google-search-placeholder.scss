@@ -1,7 +1,7 @@
 // from http://codepen.io/912lab/pen/LsplC
 .google-custom-search {
   width: 100%;
-  margin-bottom: 2px;
+  margin: 5px 0;
 }
 
 .google-custom-search-original {
@@ -19,7 +19,7 @@
 
   input[type=search] {
     font-family: inherit;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   // styles
@@ -33,8 +33,8 @@
     background: #fff url(/images/icons/search.svg) no-repeat 5px center;
     background-size: auto 75%;
     border: solid 1px #ccc;
-    padding: 2px 5px 2px 20px;
-    width: 100px;
+    padding: 2px 5px 2px 23px;
+    width: 110px;
     max-width: 250px;
     border-radius: 10em;
     transition: all .5s;

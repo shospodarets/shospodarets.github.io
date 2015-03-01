@@ -39,7 +39,8 @@
 }
 
 .site-name {
-  margin: 0;
+  line-height: 1;
+  margin: 0 0 7px;
   color: $darkGray;
   cursor: pointer;
   font-family: $helveticaNeue;
@@ -49,13 +50,7 @@
 }
 
 .site-description {
-  margin: -5px 0 0 0;
-  color: $gray;
-  font-size: 16px;
-
-  @include mobile-breakpoint {
-    margin: 3px 0;
-  }
+  @include absolute-hidden;
 }
 
 .header-options {
@@ -77,14 +72,14 @@
 
 nav {
   font-family: $helveticaNeue;
-  font-size: 16px;
+  font-size: 20px;
 
   @include mobile-breakpoint {
     display: block;
   }
 
   a {
-    margin-left: 20px;
+    margin-left: 15px;
     color: $darkGray;
     text-align: right;
     font-weight: 300;
