@@ -3,7 +3,21 @@ layout: page
 title: About
 ---
 
-Hi, I'm Sergey Gospodarets, a Web Applications developer writing about JavaScript/CSS/HTML features.
+<div class="about-image-wrapper">
+    <img src="{{ site.baseurl }}/images/about.png" alt="about image"/>
+</div>
+
+Hi, my name is Sergey Gospodarets.
+
+I'm Web Developer and software engineer with vast experience in Front-End related stuff.
+
+Author of [Sergey Gospodarets Blog](http://blog.gospodarets.com/) and guest poster on other sites.
+
+Have successful experience creating Mobile Web Applications from scratch to more than 50k. downloads (as Manager, Developer, Tester and Publisher).
+
+JS, HTML and CSS enthusiast.
+
+Enjoying life.
 
 ### Contact me
 
