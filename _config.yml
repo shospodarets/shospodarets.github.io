@@ -34,6 +34,7 @@ footer-links:
   linkedin: gospodarets
   pinterest:
   rss: blog.gospodarets.com # make sure the "url" above is set!
+  feedburner: http://feeds.feedburner.com/sergey_gospodarets_blog # RSS alternative subscription
   twitter: malyw
   googleplus: SergeyGospodarets
 
