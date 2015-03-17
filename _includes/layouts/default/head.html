@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+
+    <meta name="author" content="{{ site.author }}"/>
+    <meta name="description" content="{% if page.share_description %}{{ page.share_description }}{% elsif page.path contains '_posts' %}{{ page.content | strip_html | xml_escape | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="{{ site.author }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+
+    <meta itemprop="image" content="{{ site.url }}/avatar.jpg">
+    <link rel="image_src" href="{{ site.url }}/images/avatar.jpg">
+    {% include head/favicons.html %}
+
+    {% include head/social-networks/google-plus.html %}
+    {% include head/social-networks/twitter.html %}
+    {% include head/social-networks/open-graph.html %}
+
+    {% include head/mobile/app-capables.html %}
+    {% include head/mobile/msapplication.html %}
+    {% include head/mobile/mobile-devices.html %}
+
+    {% include head/webmasters-verifications.html %}
+
+    <!--[if lt IE 9]>
+    <script src="{{ site.baseurl }}/bower_components/html5shiv/dist/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css"/>
+
+</head>
+
+<body>
