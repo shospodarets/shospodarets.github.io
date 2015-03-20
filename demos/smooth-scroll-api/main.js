@@ -4,6 +4,9 @@
     var scrollToForm = document.querySelector('.scroll-to-form');
     var scrollCssCheckbox = document.querySelector('[name="scroll-css"]');
     var isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
+    if (!isSmoothScrollSupported) {
+        document.body.className += ' not-supported';
+    }
 
     // METHODS
     function getScrollOptions(formData) {

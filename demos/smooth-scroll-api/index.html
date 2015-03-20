@@ -7,85 +7,93 @@ share_description: Description how to use something
 ---
 
 <h2>Smooth Scroll Api demo</h2>
-<h1>Show alert/info when smooth scroll isnt supported</h1>
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="./wtf-forms.css"/>
 <link rel="stylesheet" href="./main.css"/>
 
 <div class="demo">
+    <div class="supported alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        Smooth scroll is not supported in the current browser
+    </div>
     <form class="scroll-form scroll-by-form">
-        <dl>
-            <dt>
-                Scroll behavior:
-            </dt>
-            <dd>
-                <label>
+        <div>
+            Scroll behavior:
+            <div>
+                <label class="wtf-control wtf-radio">
                     <input type="radio" value="smooth" checked name="behavior"/>
-                    smooth
+                    <span class="wtf-control-indicator"></span>
+                    <span class="label-text">
+                        Smooth
+                    </span>
                 </label>
-                <label>
+                <label class="wtf-control wtf-radio">
                     <input type="radio" value="auto" name="behavior"/>
-                    auto
+                    <span class="wtf-control-indicator"></span>
+                    <span class="label-text">
+                        Auto
+                    </span>
                 </label>
-            </dd>
-        </dl>
-        <dl>
-            <dt>
-                Scroll By:
-            </dt>
-            <dd>
-                <label>
-                    <input type="number" value="0" step="1" name="scroll-x"/>
-                    by X-axis (plus number- to right, minus- to left)
-                </label>
-                <label>
-                    <input type="number" value="500" step="1" name="scroll-y"/>
-                    by Y-axis (plus number- to bottom, minus- to top)
-                </label>
-            </dd>
-        </dl>
-        <input type="submit" value="Scroll By"/>
+            </div>
+        </div>
+        <div>
+            <label class="block-label">
+                X-axis:
+                <input type="number" value="0" step="1" name="scroll-x"/>
+            </label>
+            <label class="block-label">
+                Y-axis:
+                <input type="number" value="500" step="1" name="scroll-y"/>
+            </label>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Scroll By"/>
     </form>
     <form class="scroll-form scroll-css-form">
-        <label>
+        <label class="wtf-control wtf-checkbox">
             <input type="checkbox" name="scroll-css"/>
-            Enable smooth scroll in CSS
-            <br>
-            When is checked- even on scroll `behavior:"auto"` page will be scrolled smoothly
+            <span class="wtf-control-indicator"></span>
+            <span class="label-text">
+                Enable smooth scroll in CSS
+            </span>
         </label>
+
+        <p>
+            When is checked- even on scroll `behavior:"auto"` page will be scrolled smoothly
+        </p>
     </form>
     <form class="scroll-form scroll-to-form">
-        <dl>
-            <dt>
-                Scroll behavior:
-            </dt>
-            <dd>
-                <label>
+        <div>
+            Scroll behavior:
+            <div>
+                <label class="wtf-control wtf-radio">
                     <input type="radio" value="smooth" checked name="behavior"/>
-                    smooth
+                    <span class="wtf-control-indicator"></span>
+                    <span class="label-text">
+                        Smooth
+                    </span>
                 </label>
-                <label>
+                <label class="wtf-control wtf-radio">
                     <input type="radio" value="auto" name="behavior"/>
-                    auto
+                    <span class="wtf-control-indicator"></span>
+                    <span class="label-text">
+                        Auto
+                    </span>
                 </label>
-            </dd>
-        </dl>
-        <dl>
-            <dt>
-                Scroll To:
-            </dt>
-            <dd>
-                <label>
-                    <input type="number" value="0" step="1" name="scroll-x"/>
-                    by X-axis (plus number- to right, minus- to left)
-                </label>
-                <label>
-                    <input type="number" value="500" step="1" name="scroll-y"/>
-                    by Y-axis (plus number- to bottom, minus- to top)
-                </label>
-            </dd>
-        </dl>
-        <input type="submit" value="Scroll To"/>
+            </div>
+        </div>
+        <div>
+            <label class="block-label">
+                X-axis:
+                <input type="number" value="0" step="1" name="scroll-x"/>
+            </label>
+            <label class="block-label">
+                Y-axis:
+                <input type="number" value="500" step="1" name="scroll-y"/>
+            </label>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Scroll To"/>
     </form>
     <div class="box">
         <p>
