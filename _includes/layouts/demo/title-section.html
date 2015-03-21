@@ -1,0 +1,15 @@
+<div class="container demo-title-section">
+    <h1
+            itemprop="name"
+            class="demo-title">
+        {{ page.title }}
+    </h1>
+    {% include share-buttons.html %}
+    {% if page.article_link %}
+    <blockquote>
+        <h2 class="article-link">
+            <a href="{{ site.baseurl }}/{{ page.article_link }}">Read the article</a>
+        </h2>
+    </blockquote>
+    {% endif %}
+</div>
