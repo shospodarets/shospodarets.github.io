@@ -17,19 +17,45 @@
         };
     }
 
+    function notify(msg, lang) {
+        lang = lang || 'JavaScript';
+        var separator = '------------ ' + lang + ' ------------';
+        $.notify(
+            msg +
+            '\n' +
+            separator +
+            '\n' +
+            'has been executed',
+
+            "success"
+        );
+    }
+
     function _scrollBy(options) {
         if (isSmoothScrollSupported) {
             window.scrollBy(options);
+            notify(
+                'window.scrollBy(' + JSON.stringify(options) + ')'
+            );
         } else {
             window.scrollBy(options.left, options.top);
+            notify(
+                'window.scrollBy(' + options.left + ' , ' + options.top + ')'
+            );
         }
     }
 
     function _scrollTo(options) {
         if (isSmoothScrollSupported) {
             window.scrollTo(options);
+            notify(
+                'window.scrollTo(' + JSON.stringify(options) + ')'
+            );
         } else {
             window.scrollTo(options.left, options.top);
+            notify(
+                'window.scrollTo(' + options.left + ' , ' + options.top + ')'
+            );
         }
     }
 
@@ -53,8 +79,14 @@
     scrollCssCheckbox.addEventListener('change', function () {
         if (scrollCssCheckbox.checked) {
             document.body.style.scrollBehavior = 'smooth';
+            notify(
+                'document.body.style.scrollBehavior = \'smooth\''
+            );
         } else {
             document.body.style.scrollBehavior = 'auto';
+            notify(
+                'document.body.style.scrollBehavior = \'auto\''
+            );
         }
     });
 

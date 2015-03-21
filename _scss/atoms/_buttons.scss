@@ -1,19 +1,22 @@
-$height: 2.8em;
-$width: 100px;
-$btn-pulse-color: rgba(#2a65a0, 0.8);
-$btn-pulse-hover-color: #fff;
-$btn-pulse-bg: #f1f1f1;
-$btn-pulse-hover-bg: #3884cd;
+// ----
+// PULSE BUTTON (CIRCLE FROM CENTER ON HOVER)
+// ----
 @mixin pulse-center {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  margin: auto;
 }
 
 .btn-pulse {
+  $height: 2.8em;
+  $width: 100px;
+  $btn-pulse-color: rgba(#2a65a0, 0.8);
+  $btn-pulse-hover-color: #fff;
+  $btn-pulse-bg: #f1f1f1;
+  $btn-pulse-hover-bg: #3884cd;
+
   width: $width;
   text-decoration: none;
   display: inline-block;
@@ -40,8 +43,11 @@ $btn-pulse-hover-bg: #3884cd;
       border-radius: 50%;
       width: $width*2;
       height: $width*2;
-      left: -$width/2;
+      // align center horizontally and vertically
+      top: 50%;
+      left: 50%;
       transition: box-shadow 0.5s ease-out;
+      transform: translateX(-50%) translateY(-50%);
     }
   }
 
@@ -57,7 +63,8 @@ $btn-pulse-hover-bg: #3884cd;
     top: 1px;
   }
 
-  .text {// to move text front
+  .text {
+    // to move text front
     position: relative;
   }
 }

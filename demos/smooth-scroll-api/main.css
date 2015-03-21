@@ -55,4 +55,16 @@ html {
 .not-supported .supported {
   display: block; }
 
+.notifyjs-corner {
+  font-size: 14px;
+  max-width: 100%; }
+  .notifyjs-corner [data-notify-text] {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto; }
+
 /*# sourceMappingURL=main.css.map */
