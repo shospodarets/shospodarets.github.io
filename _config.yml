@@ -56,6 +56,7 @@ share_buttons: d17f6eee-8573-4fba-b16e-2bca31a25157
 # Website URL
 # Used for Sitemap.xml and your RSS feed
 url: http://blog.gospodarets.com
+demos_code_base_url: https://github.com/malyw/malyw.github.io/tree/master/demos
 
 # If hosting site at a Project repository on GitHub pages
 # (http://username.github.io/repository-name)

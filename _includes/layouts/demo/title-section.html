@@ -6,10 +6,17 @@
     </h1>
     {% include share-buttons.html %}
     {% if page.article_link %}
-    <blockquote>
-        <h2 class="article-link">
+    <ul>
+        {% if page.article_link %}
+        <li>
             <a href="{{ site.baseurl }}/{{ page.article_link }}">Read the article</a>
-        </h2>
-    </blockquote>
+        </li>
+        {% endif %}
+        {% if page.demo_code_url %}
+        <li>
+            <a href="{{ site.demos_code_base_url }}/{{ page.demo_code_url }}">Check the code on Github</a>
+        </li>
+        {% endif %}
+    </ul>
     {% endif %}
 </div>
