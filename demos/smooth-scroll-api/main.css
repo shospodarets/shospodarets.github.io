@@ -4,8 +4,7 @@ html {
   html body {
     font-size: 24px;
     background-color: #e74c3c;
-    font-family: 'Lato', Arial, sans-serif;
-    scroll-behavior: smooth; }
+    font-family: 'Lato', Arial, sans-serif; }
 
 .demo .scroll-form {
   position: fixed;
