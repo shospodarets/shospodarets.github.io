@@ -28,6 +28,10 @@
   display: none;
 }
 
+.text-center{
+  text-align: center;
+}
+
 .absolute-hidden {
   @include absolute-hidden;
 }
