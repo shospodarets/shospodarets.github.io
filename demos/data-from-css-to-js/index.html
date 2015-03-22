@@ -1,0 +1,39 @@
+---
+layout: demo
+title: Passing data from CSS to JS demo
+tags: [Demo]
+share_image:
+share_description: How to pass the data from Sass / CSS to JavaScript demo
+article_link: passing_data_from_css_to_js
+---
+
+{% raw %}
+<link rel="stylesheet" href="./main.css"/>
+
+<div class="demo">
+    <div class="image-zoom-blocks">
+        <!-- IMAGE ZOOM BLOCKS -->
+    </div>
+</div>
+
+<script id="image-zoom-block-template" type="text/x-handlebars-template">
+    <div class="image-zoom-block text-center">
+        <div class="image-zoom-block-inner">
+            <div class="image-wrapper">
+                <img class="image" src="http://i.imgur.com/USGmFOO.jpg" alt=""/>
+            </div>
+            <div class="zoom">
+                <div class="zoomChange minusBtn"></div>
+                <div class="indicator indicator-steps-{{zoomSteps}}">
+                    <div data-zoom></div>
+                </div>
+                <div class="zoomChange plusBtn"></div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script src="./handlebars.min.js"></script>
+<script src="./polyfills.js"></script>
+<script src="./main.js"></script>
+{% endraw %}

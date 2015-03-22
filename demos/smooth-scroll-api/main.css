@@ -20,9 +20,7 @@ html {
     left: 0; }
   .demo .scroll-form.scroll-css-form {
     left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
+    transform: translateX(-50%); }
   .demo .scroll-form.scroll-to-form {
     right: 0; }
   .demo .scroll-form .wtf-control {
@@ -63,7 +61,6 @@ html {
     word-break: break-all;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
-    -ms-hyphens: auto;
-        hyphens: auto; }
+    hyphens: auto; }
 
 /*# sourceMappingURL=main.css.map */

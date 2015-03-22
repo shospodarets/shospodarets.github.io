@@ -1,0 +1,248 @@
+$vertical-indent: 10px;
+$minZoomStep: 2;
+$maxZoomStep: 6;
+$radius: 3px;
+$spacing: 5px;
+$zoomControlsSize: 30px;
+
+/*---------------------------*/
+// IMAGE
+/*---------------------------*/
+
+// COMMON MIXINS
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin no-highlight {
+  // prevents highlighting
+  // e.g. when user clicks multiple times some button
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+}
+
+@mixin absolute-hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+// ZOOM MIXINS
+@function addShadow($count: 1, $x: 0, $y: 0, $blur: 0, $color: white) {
+  $shadow: 0;
+  @for $i from 1 through $count {
+    $shadow: $shadow + $x*$i #{$y*$i} $blur $color;
+    @if $i < $count {
+      $shadow: $shadow + ', '
+    }
+  }
+  @return $shadow;
+}
+
+@mixin zoomLines($chunkSize: 5px, $chunkSpaceBetween: 2px, $maxHeight: 15px, $columnsCount: 4) {
+  $stepsCount: $columnsCount - 1;
+  $shadowsCount: $stepsCount - 1;
+  $offsetX: $chunkSize + $chunkSpaceBetween;
+  $offsetY: -$maxHeight/$stepsCount;
+  $width: $offsetX * $stepsCount;
+
+  width: $width;
+  position: relative;
+  height: $maxHeight;
+  margin-right: -$chunkSpaceBetween;
+  overflow: hidden;
+
+  $underlayColor: #808080;
+  &:after, &:before {
+    width: $chunkSize;
+    background: $underlayColor;
+    content: "";
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: $offsetY;
+    box-shadow: addShadow($shadowsCount, $offsetX, $offsetY, 0, $underlayColor);
+  }
+
+  @for $i from 1 through $stepsCount {
+    &.zoom#{$i}:after {
+      $zoomColor: #fff;
+      background: $zoomColor;
+      box-shadow: addShadow($i - 1, $offsetX, $offsetY, 0, $zoomColor);
+    }
+  }
+}
+
+@mixin dash($size, $color, $hoverColor, $thickness, $elPath, $type: 'horizontal') {
+  &#{$elPath} {
+    content: "";
+    position: absolute;
+    background: $color;
+  }
+  @if $type == horizontal {
+    &#{$elPath} {
+      width: $size;
+      height: $thickness;
+      top: 50%;
+      left: 50%;
+      margin-left: -$size/2;
+      margin-top: -$thickness/2;
+    }
+  } @else if $type == vertical {
+    &#{$elPath} {
+      width: $thickness;
+      height: $size;
+      top: 50%;
+      left: 50%;
+      margin-left: -$thickness/2;
+      margin-top: -$size/2;
+    }
+  }
+
+  &:hover {
+    &#{$elPath} {
+      background: $hoverColor;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: default;
+    &#{$elPath} {
+      //noinspection CssInvalidFunction
+      background: opacify($color, 0.5);
+    }
+  }
+}
+
+@mixin minus($size: 16px, $color: #555, $hoverColor: #999, $thickness: 4px) {
+  position: relative;
+
+  @include dash($size, $color, $hoverColor, $thickness, ':before');
+}
+
+@mixin plus($size: 16px, $color: #555, $hoverColor: #999, $thickness: 4px) {
+  position: relative;
+
+  @include dash($size, $color, $hoverColor, $thickness, ':before');
+  @include dash($size, $color, $hoverColor, $thickness, ':after', 'vertical');
+}
+
+/*---------------------------*/
+// IMAGE-ZOOM LIST
+/*---------------------------*/
+.image-zoom-blocks {
+  @include no-highlight;
+  font-size: 0; // removes indents between inline-block elements
+
+  .image-zoom-block {
+    font-size: 14px; // reset font-size
+    width: 33.333%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: $vertical-indent*1.5;
+    padding: 0 5px;
+
+    @media only screen and (max-width: 680px) {
+      width: 50%;
+    }
+
+    @media only screen and (max-width: 450px) {
+      width: 100%;
+    }
+
+    .image-zoom-block-inner {
+      border-radius: $radius;
+      background-color: #525252;
+      padding: 10px;
+    }
+  }
+}
+
+/*---------------------------*/
+// IMAGE
+/*---------------------------*/
+
+.image-wrapper {
+  overflow: hidden; // to overflow scale()
+
+  img {
+    border-radius: $radius;
+  }
+}
+
+/*---------------------------*/
+// ZOOM CONTROL
+/*---------------------------*/
+
+.zoom {
+  display: inline-block;
+  @include clearfix;
+  background-color: #3a3a3a;
+  padding: 5px;
+  border-radius: $radius;
+  margin: $vertical-indent 0 0;
+
+  > * {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .indicator {
+    $chunkSize: 10px;
+    $chunkSpaceBetween: 5px;
+
+    margin: 0 $spacing;
+
+    @for $zoomStep from $minZoomStep through $maxZoomStep {
+      $json: '{"maxZoomStep":#{$zoomStep}}';
+
+      &.indicator-steps-#{$zoomStep} {
+        & > div {
+          @include zoomLines($chunkSize, $chunkSpaceBetween, $zoomControlsSize, $columnsCount: ($zoomStep+1));
+          font-family: $json
+        }
+      }
+    }
+
+  }
+
+  .zoomChange {
+    margin: 0;
+    width: $zoomControlsSize;
+    height: $zoomControlsSize;
+    background: #292929;
+    border-radius: $radius;
+
+    // reset
+    &:before,
+    &:after {
+      transition: all .2s ease-in-out;
+      background: none;
+      opacity: 1 !important;
+    }
+
+    transition: all .2s ease-in-out;
+    &.minusBtn {
+      @include minus;
+    }
+    &.plusBtn {
+      @include plus;
+    }
+  }
+}
