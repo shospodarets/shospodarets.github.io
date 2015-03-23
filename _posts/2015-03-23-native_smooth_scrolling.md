@@ -104,7 +104,7 @@ if (isSmoothScrollSupported) {
     window.scrollTo(options);
 } else if (window.jQuery && jQuery.scrollTo) {
     // jQuery scrollTo (you can change to you plugin/realization)
-    $(window).scrollTo(options.left, options.top);
+    $(window).scrollTo(options.top, options.left);
 } else {
     // Old way scrolling without effects
     window.scrollTo(options.left, options.top);

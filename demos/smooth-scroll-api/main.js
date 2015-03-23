@@ -37,6 +37,16 @@
             notify(
                 'window.scrollBy(' + JSON.stringify(options) + ')'
             );
+        } else if (window.jQuery && jQuery.scrollTo) {
+            var leftSign = options.left >= 0 ? '+=' : '-=';
+            var left = leftSign + options.left + 'px';
+            var topSign = options.top >= 0 ? '+=' : '-=';
+            var top = topSign + options.top + 'px';
+
+            $(window).scrollTo(top, left);
+            notify(
+                '$(window).scrollTo("' + top + '" , "' + left + '")'
+            );
         } else {
             window.scrollBy(options.left, options.top);
             notify(
@@ -50,6 +60,11 @@
             window.scrollTo(options);
             notify(
                 'window.scrollTo(' + JSON.stringify(options) + ')'
+            );
+        } else if (window.jQuery && jQuery.scrollTo) {
+            $(window).scrollTo(options.top, options.left);
+            notify(
+                '$(window).scrollTo(' + options.top + ' , ' + options.left + ')'
             );
         } else {
             window.scrollTo(options.left, options.top);
