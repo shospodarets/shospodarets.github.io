@@ -30,7 +30,7 @@ and it is already supported in [Firefox](https://developer.mozilla.org/en-US/doc
 
 ## API
 
-First of all- you can provide smooth scroll behavior either ways- from JavaScript or CSS.
+First of all- you can provide smooth scroll behavior in two ways- from JavaScript or CSS.
 
 ### JavaScript
 
