@@ -15,7 +15,8 @@ Previously to implement it we had to use plugins like ["jQuery.scrollTo"](https:
 or similar [solutions](https://css-tricks.com/snippets/jquery/smooth-scrolling/).
 
 But dreams came true- there is a specification for [native smooth scroll behavior API](http://dev.w3.org/csswg/cssom-view/)
-and it is already supported in [Firefox](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior) and [Chrome Canary](https://www.chromestatus.com/feature/5812155903377408).
+and it is already supported in [Firefox](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior) out of the box and
+[Chrome](https://www.chromestatus.com/feature/5812155903377408) under the `Enable experimental Web Platform features` flag on the `chrome://flags/` page.
 
 <a href="{{ site.baseurl }}/demos/smooth-scroll-api/"
    target="_blank"
