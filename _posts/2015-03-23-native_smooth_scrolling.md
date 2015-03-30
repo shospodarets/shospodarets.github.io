@@ -14,9 +14,7 @@ To provide better UX and feeling usually smooth scrolling is used.
 Previously to implement it we had to use plugins like ["jQuery.scrollTo"](https://github.com/flesler/jquery.scrollTo)
 or similar [solutions](https://css-tricks.com/snippets/jquery/smooth-scrolling/).
 
-But dreams came true- there is a specification for [native smooth scroll behavior API](http://dev.w3.org/csswg/cssom-view/)
-and it is already supported in [Firefox](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior) out of the box and
-in [Chrome](https://www.chromestatus.com/feature/5812155903377408) under the `Enable experimental Web Platform features` flag on the `chrome://flags/` page.
+But dreams came true- there is a specification for [native smooth scroll behavior API](http://dev.w3.org/csswg/cssom-view/).
 
 <a href="{{ site.baseurl }}/demos/smooth-scroll-api/"
    target="_blank"
@@ -126,6 +124,15 @@ if (isSmoothScrollSupported) {
         <img src="http://i.imgur.com/6P5ikUL.gif" alt=""/>
     </a>
 </div>
+
+## Browser Support
+
+API is already supported in desktop [Firefox](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior) out of the box and
+in [Chrome](https://www.chromestatus.com/feature/5812155903377408) under the `Enable experimental Web Platform features` flag on the `chrome://flags/` page.
+
+In Chrome up to 42 only JS part of the API is supported.
+
+In 43+ (currently it is [Canary](https://www.google.com/chrome/browser/canary.html) and [Dev Channel](https://www.chromium.org/getting-involved/dev-channel)) - both CSS and JS.
 
 ## Profits
 1. It's a native solution. You can change browser scroll behavior with only one line of CSS!
