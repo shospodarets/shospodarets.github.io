@@ -7,6 +7,7 @@
     if (!isSmoothScrollSupported) {
         document.body.className += ' not-supported';
     }
+    document.querySelector('[type="checkbox"]').checked = false;// reset if it was checked
 
     // METHODS
     function getScrollOptions(formData) {
