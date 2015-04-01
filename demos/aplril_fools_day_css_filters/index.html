@@ -1,0 +1,41 @@
+---
+layout: demo
+title: April Fools' Day CSS filters
+tags: [Demo]
+share_image: http://i.imgur.com/VnF9zsP.png
+share_description: April Fools' Day CSS filters demo
+article_link: aplril_fools_day_css_filters
+demo_code_url: aplril_fools_day_css_filters
+---
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="./main.css"/>
+
+<div class="demo text-center">
+    <h2>Custom CSS filter is applied to the &lt;html/&gt; element on each page load</h2>
+
+    <div>
+        <button class="btn btn-primary btn-lg btn-filter-remove">
+            Remove the applied filter
+        </button>
+    </div>
+
+    <div class="bg-success">
+        <p>
+            Currently applied filter is:
+        </p>
+        <pre class="text-left">
+            body{
+                <span class="applied-filter"></span>
+            }
+        </pre>
+    </div>
+
+    <div>
+        <button class="btn btn-primary btn-lg btn-page-reload">
+            Reload the page to apply another CSS filter
+        </button>
+    </div>
+</div>
+
+<script src="./main.js"></script>
