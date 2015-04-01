@@ -16,13 +16,13 @@ So, want to provide some nice effect for your site/page? It's easy to do adding 
 
 <div class="text-center">
     <p>
-        <a href="{{ site.baseurl }}/demos/aplril_fools_day_css_filters/">
+        <a href="{{ site.baseurl }}/demos/april_fools_day_css_filters/">
             <img class="rounded" width="400" src="http://i.imgur.com/HwT3PvG.gif" alt=""/>
         </a>
     </p>
 
     <div>
-        <a href="{{ site.baseurl }}/demos/aplril_fools_day_css_filters/"
+        <a href="{{ site.baseurl }}/demos/april_fools_day_css_filters/"
            target="_blank"
            class="btn-pulse">
             <span class="wrapper">
@@ -147,7 +147,7 @@ init();
 - To set frequency of appearing use `frequencyOfAppearing` (it takes percents from "0%" to "100%").
 - Add you filter values to be applied to `FILTER_VALUES`. If you want to play with CSS filters and find the best- you can use range sliders in [CSS filters DEMO](http://blog.gospodarets.com/css-filters/)
 
-<a href="{{ site.baseurl }}/demos/aplril_fools_day_css_filters/"
+<a href="{{ site.baseurl }}/demos/april_fools_day_css_filters/"
    target="_blank"
    class="btn-pulse">
             <span class="wrapper">
