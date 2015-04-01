@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Provide a cool effects for the 1 of April with CSS filters
+title: Provide cool effects for April Fools with CSS filters
 tags: [CSS]
 share_image: http://i.imgur.com/VnF9zsP.png
 share_description: Implement wonderful
