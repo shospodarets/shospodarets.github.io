@@ -3,7 +3,7 @@ layout: post
 title: Cool effects for April Fools with CSS filters
 tags: [CSS]
 share_image: http://i.imgur.com/VnF9zsP.png
-share_description: Implement wonderful
+share_description: How to implement nice effects for 1 April Fools Day with CSS filters
 ---
 
 And here is the April 1st!
