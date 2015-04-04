@@ -5,8 +5,29 @@ layout: default
 <div class="posts">
     {% for post in paginator.posts %}
     <article class="post post-short">
+        <span class="date">
+            <span
+                    itemprop="datePublished"
+                    content='{{ post.date | date: "%Y-%m-%d" }}'>
+                {{ post.date | date: "%B %e, %Y" }}
+            </span>
+            {% if post.external_site %}
+                at {{ post.external_site }}
+            {% endif %}
+        </span>
         <h1 class="post-title">
-            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            {% if post.external-url %}
+                <div class="clearfix">
+                    <i class="external-link-icon"></i>
+                    <a href="{{ post.external-url }}">
+                        {{ post.title }}
+                    </a>
+                </div>
+            {% else %}
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                    {{ post.title }}
+                </a>
+            {% endif %}
         </h1>
 
         <div class="entry">

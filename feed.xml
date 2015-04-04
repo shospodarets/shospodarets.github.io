@@ -20,8 +20,20 @@ layout: none
           {% endif %}
         </description>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <link>
+            {% if post.external-url %}
+                {{ post.external-url }}
+            {% else %}
+                {{ site.url }}{{ post.url }}
+            {% endif %}
+        </link>
+        <guid isPermaLink="true">
+            {% if post.external-url %}
+                {{ post.external-url }}
+            {% else %}
+                {{ site.url }}{{ post.url }}
+            {% endif %}
+        </guid>
       </item>
     {% endfor %}
   </channel>

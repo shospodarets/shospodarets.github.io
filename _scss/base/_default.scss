@@ -1,3 +1,5 @@
+$h1FontSize: 32px;
+
 /**************/
 /* BASE RULES */
 /**************/
@@ -52,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: $h1FontSize;
   a {
     text-decoration: none;
     color: $darkGray;

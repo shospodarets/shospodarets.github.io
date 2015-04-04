@@ -10,14 +10,32 @@
       }
     }
   }
+
+  .date {
+    display: block;
+    padding-top: $marginVertical;
+    margin-bottom: -$marginVertical;
+  }
 }
 
 .posts .post-short:last-child {
   border-bottom: none;
 }
 
+// class present in either short and full posts
 .post {
   @include clearfix;
+
+  .external-link-icon {
+    $size: $h1FontSize * 1.7;
+
+    width: $size;
+    height: $size;
+    float: right;
+
+    background: transparent url(/images/icons/external-link.svg) no-repeat center center;
+    background-size: auto 75%;
+  }
 
   .meta {
     span {
