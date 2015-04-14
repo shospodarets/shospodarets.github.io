@@ -22,16 +22,28 @@ module.exports = function (grunt) {
         },
 
         sass: {
-            options: {
-                outputStyle: 'compressed'
-                //sourceComments: true
-            },
             global: {
+                options: {
+                    outputStyle: 'compressed'
+                    //sourceComments: true
+                },
                 files: [{
                     expand: true,
                     cwd: '_scss',
                     src: ['**/*.scss'],
                     dest: 'css',
+                    ext: '.css'
+                }]
+            },
+            demos: {// all *.scss files in "demos" folder
+                options: {
+                    sourceMap: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'demos',
+                    src: ['**/*.scss'],
+                    dest: 'demos',
                     ext: '.css'
                 }]
             }
@@ -41,6 +53,9 @@ module.exports = function (grunt) {
             global: {
                 src: "css/style.css",
                 dest: "css/style.css"
+            },
+            demos: {
+                src: "demos/**/*.css"
             }
         },
 
@@ -73,7 +88,11 @@ module.exports = function (grunt) {
             },
             css: {
                 files: ["_scss/**/*.scss"],
-                tasks: ["compass", "autoprefixer", "shell:jekyllBuild"]
+                tasks: ["sass", "autoprefixer", "shell:jekyllBuild"]
+            },
+            css_demos: {
+                files: ["demos/**/*.scss"],
+                tasks: ["sass:demos", "autoprefixer:demos", "shell:jekyllBuild"]
             }
         }
 
@@ -85,10 +104,13 @@ module.exports = function (grunt) {
     grunt.registerTask("default", [
         'browserify',
         "uglify",
+
         "sass",
         "autoprefixer",
+        "sass:demos",
+        "autoprefixer:demos",
+
         "shell:jekyllBuild",
         "watch"
     ]);
-
 };
