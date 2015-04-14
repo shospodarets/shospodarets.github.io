@@ -6,6 +6,6 @@
         "es6-promise": "~2.0.1"
     },
     "devDependencies": {
-        "susy": "~2.1.3"
+        "susy": "~2.2.2"
     }
 }

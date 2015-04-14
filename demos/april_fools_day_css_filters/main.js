@@ -80,7 +80,7 @@
      */
     function init() {
         // CHECK THE DATE
-        var checkDate = true;
+        var checkDate = false;
 
         var dateNow = new Date();
         var day = dateNow.getDate();

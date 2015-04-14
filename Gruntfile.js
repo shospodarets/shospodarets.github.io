@@ -21,17 +21,22 @@ module.exports = function (grunt) {
             }
         },
 
-        compass: {
+        sass: {
+            options: {
+                outputStyle: 'compressed'
+                //sourceComments: true
+            },
             global: {
-                options: {
-                    sassDir: '_scss',
-                    cssDir: 'css',
-                    imagesDir: 'images',
-                    outputStyle: 'compressed'
-//                    debugInfo: true
-                }
+                files: [{
+                    expand: true,
+                    cwd: '_scss',
+                    src: ['**/*.scss'],
+                    dest: 'css',
+                    ext: '.css'
+                }]
             }
         },
+
         autoprefixer: {
             global: {
                 src: "css/style.css",
@@ -80,7 +85,7 @@ module.exports = function (grunt) {
     grunt.registerTask("default", [
         'browserify',
         "uglify",
-        "compass",
+        "sass",
         "autoprefixer",
         "shell:jekyllBuild",
         "watch"
