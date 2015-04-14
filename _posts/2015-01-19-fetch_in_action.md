@@ -552,8 +552,8 @@ loadJSON('https://api.github.com/users/malyw');// is parsed normally
 
 <h2 id="browser-support">Browser support</h2>
 
-Fetch API is available in Chrome Canary after enabling "Experimental Web Platform features" flag at <mark>chrome://flags</mark> page<br>
-Support is announced in Firefox Nightly and <a href="https://status.modern.ie/fetchapi">under consideration for IE</a><br>
+Fetch API is available in Chrome 42+, Firefox 39+<br>
+and is <a href="https://status.modern.ie/fetchapi">under consideration for IE</a>.<br>
 With Fetch and Promise Polyfills it works wonderful in all browsers up-to IE9 (but IE9 doesn't support Cross-origin fetching, which works in others).<br>
 
 
