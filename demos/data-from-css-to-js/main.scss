@@ -1,3 +1,5 @@
+@import "bower_components/sass-to-js/sass/sass-to-js";
+
 $vertical-indent: 10px;
 $minZoomStep: 2;
 $maxZoomStep: 6;
@@ -44,9 +46,9 @@ $zoomControlsSize: 30px;
 @function addShadow($count: 1, $x: 0, $y: 0, $blur: 0, $color: white) {
   $shadow: 0;
   @for $i from 1 through $count {
-    $shadow: $shadow + $x*$i #{$y*$i} $blur $color;
+    $shadow: $shadow + ($x*$i #{$y*$i} $blur $color);
     @if $i < $count {
-      $shadow: $shadow + ', '
+      $shadow: $shadow + ', ';
     }
   }
   @return $shadow;
@@ -210,7 +212,8 @@ $zoomControlsSize: 30px;
     margin: 0 $spacing;
 
     @for $zoomStep from $minZoomStep through $maxZoomStep {
-      $json: '{"maxZoomStep":#{$zoomStep}}';
+      $dataMap: ("maxZoomStep" : #{$zoomStep});
+      $json: sassToJs($dataMap);
 
       &.indicator-steps-#{$zoomStep} {
         & > div {

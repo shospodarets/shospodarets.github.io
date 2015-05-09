@@ -61,7 +61,7 @@
       height: 30px;
       margin-right: -5px;
       overflow: hidden;
-      font-family: '{"maxZoomStep":2}'; }
+      font-family: '{"maxZoomStep":"2"}'; }
       .zoom .indicator.indicator-steps-2 > div:after, .zoom .indicator.indicator-steps-2 > div:before {
         width: 10px;
         background: #808080;
@@ -71,20 +71,20 @@
         left: 0;
         top: 100%;
         margin-top: -15px;
-        box-shadow: 15px -15px 0 #808080; }
+        box-shadow: 015px -15px 0 #808080; }
       .zoom .indicator.indicator-steps-2 > div.zoom1:after {
         background: #fff;
-        box-shadow: 15px -15px 0 #fff0px 0px 0 #fff; }
+        box-shadow: 015px -15px 0 #fff0px 0px 0 #fff; }
       .zoom .indicator.indicator-steps-2 > div.zoom2:after {
         background: #fff;
-        box-shadow: 15px -15px 0 #fff; }
+        box-shadow: 015px -15px 0 #fff; }
     .zoom .indicator.indicator-steps-3 > div {
       width: 45px;
       position: relative;
       height: 30px;
       margin-right: -5px;
       overflow: hidden;
-      font-family: '{"maxZoomStep":3}'; }
+      font-family: '{"maxZoomStep":"3"}'; }
       .zoom .indicator.indicator-steps-3 > div:after, .zoom .indicator.indicator-steps-3 > div:before {
         width: 10px;
         background: #808080;
@@ -94,23 +94,23 @@
         left: 0;
         top: 100%;
         margin-top: -10px;
-        box-shadow: '15px -10px 0 #808080, 30px' -20px 0 #808080; }
+        box-shadow: 015px -10px 0 #808080, 30px -20px 0 #808080; }
       .zoom .indicator.indicator-steps-3 > div.zoom1:after {
         background: #fff;
-        box-shadow: 15px -10px 0 #fff0px 0px 0 #fff; }
+        box-shadow: 015px -10px 0 #fff0px 0px 0 #fff; }
       .zoom .indicator.indicator-steps-3 > div.zoom2:after {
         background: #fff;
-        box-shadow: 15px -10px 0 #fff; }
+        box-shadow: 015px -10px 0 #fff; }
       .zoom .indicator.indicator-steps-3 > div.zoom3:after {
         background: #fff;
-        box-shadow: '15px -10px 0 #fff, 30px' -20px 0 #fff; }
+        box-shadow: 015px -10px 0 #fff, 30px -20px 0 #fff; }
     .zoom .indicator.indicator-steps-4 > div {
       width: 60px;
       position: relative;
       height: 30px;
       margin-right: -5px;
       overflow: hidden;
-      font-family: '{"maxZoomStep":4}'; }
+      font-family: '{"maxZoomStep":"4"}'; }
       .zoom .indicator.indicator-steps-4 > div:after, .zoom .indicator.indicator-steps-4 > div:before {
         width: 10px;
         background: #808080;
@@ -120,26 +120,26 @@
         left: 0;
         top: 100%;
         margin-top: -7.5px;
-        box-shadow: '15px -7.5px 0 #808080, 30px' -15px 0 #808080, 45px -22.5px 0 #808080; }
+        box-shadow: 015px -7.5px 0 #808080, 30px -15px 0 #808080, 45px -22.5px 0 #808080; }
       .zoom .indicator.indicator-steps-4 > div.zoom1:after {
         background: #fff;
-        box-shadow: 15px -7.5px 0 #fff0px 0px 0 #fff; }
+        box-shadow: 015px -7.5px 0 #fff0px 0px 0 #fff; }
       .zoom .indicator.indicator-steps-4 > div.zoom2:after {
         background: #fff;
-        box-shadow: 15px -7.5px 0 #fff; }
+        box-shadow: 015px -7.5px 0 #fff; }
       .zoom .indicator.indicator-steps-4 > div.zoom3:after {
         background: #fff;
-        box-shadow: '15px -7.5px 0 #fff, 30px' -15px 0 #fff; }
+        box-shadow: 015px -7.5px 0 #fff, 30px -15px 0 #fff; }
       .zoom .indicator.indicator-steps-4 > div.zoom4:after {
         background: #fff;
-        box-shadow: '15px -7.5px 0 #fff, 30px' -15px 0 #fff, 45px -22.5px 0 #fff; }
+        box-shadow: 015px -7.5px 0 #fff, 30px -15px 0 #fff, 45px -22.5px 0 #fff; }
     .zoom .indicator.indicator-steps-5 > div {
       width: 75px;
       position: relative;
       height: 30px;
       margin-right: -5px;
       overflow: hidden;
-      font-family: '{"maxZoomStep":5}'; }
+      font-family: '{"maxZoomStep":"5"}'; }
       .zoom .indicator.indicator-steps-5 > div:after, .zoom .indicator.indicator-steps-5 > div:before {
         width: 10px;
         background: #808080;
@@ -149,29 +149,29 @@
         left: 0;
         top: 100%;
         margin-top: -6px;
-        box-shadow: '15px -6px 0 #808080, 30px' -12px 0 #808080, 45px -18px 0 #808080, 60px -24px 0 #808080; }
+        box-shadow: 015px -6px 0 #808080, 30px -12px 0 #808080, 45px -18px 0 #808080, 60px -24px 0 #808080; }
       .zoom .indicator.indicator-steps-5 > div.zoom1:after {
         background: #fff;
-        box-shadow: 15px -6px 0 #fff0px 0px 0 #fff; }
+        box-shadow: 015px -6px 0 #fff0px 0px 0 #fff; }
       .zoom .indicator.indicator-steps-5 > div.zoom2:after {
         background: #fff;
-        box-shadow: 15px -6px 0 #fff; }
+        box-shadow: 015px -6px 0 #fff; }
       .zoom .indicator.indicator-steps-5 > div.zoom3:after {
         background: #fff;
-        box-shadow: '15px -6px 0 #fff, 30px' -12px 0 #fff; }
+        box-shadow: 015px -6px 0 #fff, 30px -12px 0 #fff; }
       .zoom .indicator.indicator-steps-5 > div.zoom4:after {
         background: #fff;
-        box-shadow: '15px -6px 0 #fff, 30px' -12px 0 #fff, 45px -18px 0 #fff; }
+        box-shadow: 015px -6px 0 #fff, 30px -12px 0 #fff, 45px -18px 0 #fff; }
       .zoom .indicator.indicator-steps-5 > div.zoom5:after {
         background: #fff;
-        box-shadow: '15px -6px 0 #fff, 30px' -12px 0 #fff, 45px -18px 0 #fff, 60px -24px 0 #fff; }
+        box-shadow: 015px -6px 0 #fff, 30px -12px 0 #fff, 45px -18px 0 #fff, 60px -24px 0 #fff; }
     .zoom .indicator.indicator-steps-6 > div {
       width: 90px;
       position: relative;
       height: 30px;
       margin-right: -5px;
       overflow: hidden;
-      font-family: '{"maxZoomStep":6}'; }
+      font-family: '{"maxZoomStep":"6"}'; }
       .zoom .indicator.indicator-steps-6 > div:after, .zoom .indicator.indicator-steps-6 > div:before {
         width: 10px;
         background: #808080;
@@ -181,25 +181,25 @@
         left: 0;
         top: 100%;
         margin-top: -5px;
-        box-shadow: '15px -5px 0 #808080, 30px' -10px 0 #808080, 45px -15px 0 #808080, 60px -20px 0 #808080, 75px -25px 0 #808080; }
+        box-shadow: 015px -5px 0 #808080, 30px -10px 0 #808080, 45px -15px 0 #808080, 60px -20px 0 #808080, 75px -25px 0 #808080; }
       .zoom .indicator.indicator-steps-6 > div.zoom1:after {
         background: #fff;
-        box-shadow: 15px -5px 0 #fff0px 0px 0 #fff; }
+        box-shadow: 015px -5px 0 #fff0px 0px 0 #fff; }
       .zoom .indicator.indicator-steps-6 > div.zoom2:after {
         background: #fff;
-        box-shadow: 15px -5px 0 #fff; }
+        box-shadow: 015px -5px 0 #fff; }
       .zoom .indicator.indicator-steps-6 > div.zoom3:after {
         background: #fff;
-        box-shadow: '15px -5px 0 #fff, 30px' -10px 0 #fff; }
+        box-shadow: 015px -5px 0 #fff, 30px -10px 0 #fff; }
       .zoom .indicator.indicator-steps-6 > div.zoom4:after {
         background: #fff;
-        box-shadow: '15px -5px 0 #fff, 30px' -10px 0 #fff, 45px -15px 0 #fff; }
+        box-shadow: 015px -5px 0 #fff, 30px -10px 0 #fff, 45px -15px 0 #fff; }
       .zoom .indicator.indicator-steps-6 > div.zoom5:after {
         background: #fff;
-        box-shadow: '15px -5px 0 #fff, 30px' -10px 0 #fff, 45px -15px 0 #fff, 60px -20px 0 #fff; }
+        box-shadow: 015px -5px 0 #fff, 30px -10px 0 #fff, 45px -15px 0 #fff, 60px -20px 0 #fff; }
       .zoom .indicator.indicator-steps-6 > div.zoom6:after {
         background: #fff;
-        box-shadow: '15px -5px 0 #fff, 30px' -10px 0 #fff, 45px -15px 0 #fff, 60px -20px 0 #fff, 75px -25px 0 #fff; }
+        box-shadow: 015px -5px 0 #fff, 30px -10px 0 #fff, 45px -15px 0 #fff, 60px -20px 0 #fff, 75px -25px 0 #fff; }
   .zoom .zoomChange {
     margin: 0;
     width: 30px;

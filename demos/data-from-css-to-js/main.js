@@ -39,13 +39,9 @@
         this.indicator = imageZoomBlock.querySelector('.indicator');
         this.zoom = imageZoomBlock.querySelector('[data-zoom]');
 
-        // getting Maximum Zoom Step from CSS
-        var maxZoomStepCssValue = window.getComputedStyle(this.zoom).getPropertyValue('font-family');
-        //var maxZoomStepCssValue = window.getComputedStyle(this.indicator, ':after').getPropertyValue('content')
-        maxZoomStepCssValue = this.normalizeCssValue(
-            maxZoomStepCssValue
+        this.maxZoomStep = Number(
+            sassToJs(this.zoom).maxZoomStep// parse JSON
         );
-        this.maxZoomStep = JSON.parse(maxZoomStepCssValue).maxZoomStep;// parse JSON
 
         // INIT
         this.setScale(1);
@@ -95,17 +91,6 @@
 
         // set model scale level
         this.scale = scale;
-    };
-
-    ZoomControl.prototype.normalizeCssValue = function (string) {
-        if (string[0] === "'" || string[0] === "\"") {// first symbol
-            string = string.substring(1);
-        }
-        if (string[string.length - 1] === "'" || string[string.length - 1] === "\"") {// last symbol
-            string = string.substring(0, string.length - 1)
-        }
-        string = string.replace(/\\"/g, "\"");// normalize quotes (FF)
-        return string;
     };
 
     ZoomControl.prototype.setDisabledState = function () {

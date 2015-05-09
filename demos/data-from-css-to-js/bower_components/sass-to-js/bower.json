@@ -1,0 +1,31 @@
+{
+  "name": "sass-to-js",
+  "version": "1.0.7",
+  "homepage": "https://github.com/malyw/sass-to-js",
+  "authors": [
+    {
+      "name": "Sergey Gospodarets",
+      "homepage": "http://blog.gospodarets.com/"
+    }
+  ],
+  "description": "API to read Sass variables from JavaScript",
+  "main": [
+    "js/dist/sass-to-js.min.js",
+    "sass/_sass-to-js.scss"
+  ],
+  "keywords": [
+    "sass",
+    "scss",
+    "json",
+    "javascript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "test",
+    ".gitignore",
+    ".npmignore",
+    "Gruntfile.js",
+    "package.json"
+  ]
+}
