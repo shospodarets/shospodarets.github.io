@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Finding unused SCSS variables
-tags: [CSS, SASS]
+tags: [CSS, Sass]
 ---
 
 When you have big project with many files and dependencies, usually you should care about good code base and periodic cleaning / refactoring.

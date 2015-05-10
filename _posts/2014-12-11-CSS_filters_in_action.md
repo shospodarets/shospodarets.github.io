@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS filters in action
-tags: [Javascript, CSS]
+tags: [JavaScript, CSS]
 share_image: http://i.imgur.com/ppLN9Sv.jpg
 share_description: CSS filters usage examples, how to use filter() in CSS
 ---

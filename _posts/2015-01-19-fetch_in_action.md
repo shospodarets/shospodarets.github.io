@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript Fetch API in action
-tags: [Javascript, Javascript API]
+tags: [JavaScript]
 share_image: http://i.imgur.com/ghk4Ptj.png
 share_description: JavaScript Fetch API usage examples, how to use fetch() natively in JS
 ---
