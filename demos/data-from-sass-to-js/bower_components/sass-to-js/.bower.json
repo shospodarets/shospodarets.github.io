@@ -1,6 +1,6 @@
 {
   "name": "sass-to-js",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "homepage": "https://github.com/malyw/sass-to-js",
   "authors": [
     {
@@ -8,7 +8,7 @@
       "homepage": "http://blog.gospodarets.com/"
     }
   ],
-  "description": "API to read Sass variables from JavaScript",
+  "description": "Library to pass Sass variables via CSS to JavaScript",
   "main": [
     "js/dist/sass-to-js.min.js",
     "sass/_sass-to-js.scss"
@@ -28,14 +28,13 @@
     "Gruntfile.js",
     "package.json"
   ],
-  "_release": "1.0.7",
+  "_release": "1.1.0",
   "_resolution": {
     "type": "version",
-    "tag": "v1.0.7",
-    "commit": "e49eac6dcb6e2ebdd3ca285476eba2a5587f306b"
+    "tag": "v1.1.0",
+    "commit": "a390b64d4eb5835834c7264e0655e33aee4cc019"
   },
   "_source": "git://github.com/malyw/sass-to-js.git",
-  "_target": "~1.0.7",
-  "_originalSource": "sass-to-js",
-  "_direct": true
+  "_target": "~1.1.0",
+  "_originalSource": "sass-to-js"
 }

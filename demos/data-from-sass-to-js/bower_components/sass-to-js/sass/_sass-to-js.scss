@@ -3,12 +3,32 @@
 @import "./utils/map-to-js";
 
 //---
+// [$propName] - optional param (otherwise $value is taken as first)
+// if provided- function returns {'propName': sassToJs($value)}
+//
 // $value [map, list] - Converts provided value to JSON string
 // $value [bool, nulls, number, string, color] - Converts provided value to a proper format for JSON
 //
 // Data types in Sass: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#data_types
+//
+// Examples of usage:
+//
+// .breakpoints-data{
+//   font-family: sassToJs($mediaBreakPointsMap);
+// }
+//
+// .zoom-control:before{
+//   content: sassToJs("maxZoomStep", $zoomStep);
+// }
+//
 //---
-@function sassToJs($value) {
+@function sassToJs($propName: null, $value: null) {
+  @if ($value == null) {
+    $value: $propName; // emulates sassToJs($value)
+  } @else {
+    @return '{#{sassToJs($propName)}:#{sassToJs($value)}}'; // returns {'propName': sassToJs($value)}
+  }
+
   //--- VARS ---
   $valueType: type-of($value);
   $jsonPropValue: '';

@@ -1,6 +1,6 @@
 {
   "name": "sass-to-js",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "homepage": "https://github.com/malyw/sass-to-js",
   "authors": [
     {
@@ -8,7 +8,7 @@
       "homepage": "http://blog.gospodarets.com/"
     }
   ],
-  "description": "API to read Sass variables from JavaScript",
+  "description": "Library to pass Sass variables via CSS to JavaScript",
   "main": [
     "js/dist/sass-to-js.min.js",
     "sass/_sass-to-js.scss"

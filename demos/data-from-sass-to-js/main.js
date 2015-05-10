@@ -39,9 +39,7 @@
         this.indicator = imageZoomBlock.querySelector('.indicator');
         this.zoom = imageZoomBlock.querySelector('[data-zoom]');
 
-        this.maxZoomStep = Number(
-            sassToJs(this.zoom).maxZoomStep// parse JSON
-        );
+        this.maxZoomStep = sassToJs(this.zoom).maxZoomStep;// parse JSON
 
         // INIT
         this.setScale(1);

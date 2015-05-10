@@ -2,6 +2,6 @@
   "name": "data-from-css-to-js",
   "version": "1.0.0",
   "dependencies": {
-    "sass-to-js": "~1.0.7"
+    "sass-to-js": "~1.1.0"
   }
 }

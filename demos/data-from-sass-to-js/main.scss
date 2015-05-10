@@ -212,13 +212,11 @@ $zoomControlsSize: 30px;
     margin: 0 $spacing;
 
     @for $zoomStep from $minZoomStep through $maxZoomStep {
-      $dataMap: ("maxZoomStep" : #{$zoomStep});
-      $json: sassToJs($dataMap);
 
       &.indicator-steps-#{$zoomStep} {
         & > div {
           @include zoomLines($chunkSize, $chunkSpaceBetween, $zoomControlsSize, $columnsCount: ($zoomStep+1));
-          font-family: $json
+          font-family: sassToJs("maxZoomStep", $zoomStep);
         }
       }
     }
