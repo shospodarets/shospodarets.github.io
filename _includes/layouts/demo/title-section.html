@@ -17,6 +17,11 @@
             <a href="{{ site.demos_code_base_url }}/{{ page.demo_code_url }}">Check the code on Github</a>
         </li>
         {% endif %}
+        {% if page.demo_code_full_url %}
+        <li>
+            <a href="{{ page.demo_code_full_url }}">Check the code on Github</a>
+        </li>
+        {% endif %}
     </ul>
     {% endif %}
 </div>

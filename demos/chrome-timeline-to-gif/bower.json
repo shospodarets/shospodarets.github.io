@@ -1,0 +1,7 @@
+{
+  "name": "chrome-timeline-to-gif",
+  "version": "1.0.0",
+  "dependencies": {
+    "iframe-resizer": "~2.8.6"
+  }
+}
