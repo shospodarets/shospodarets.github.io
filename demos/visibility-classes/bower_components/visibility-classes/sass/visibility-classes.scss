@@ -14,49 +14,49 @@ $visibilityClassesPrefix: 'show-for-' !default;
       SHOW ONLY FOR SPECIFIC SIZE
   \*------------------------------------*/
   &desktop-large-only {
-    @include media('', 'desktopSmall') {
+    @include media('', 'desktop-small') {
       display: none;
     }
   }
 
   &desktop-small-only {
-    @include media('', 'tabletLandscape') {
+    @include media('', 'tablet-landscape') {
       display: none;
     }
-    @include media('desktopSmall', '') {
+    @include media('desktop-small', '') {
       display: none;
     }
   }
 
   &tablet-landscape-only {
-    @include media('', 'tabletPortrait') {
+    @include media('', 'tablet-portrait') {
       display: none;
     }
-    @include media('tabletLandscape', '') {
+    @include media('tablet-landscape', '') {
       display: none;
     }
   }
 
   &tablet-portrait-only {
-    @include media('', 'phoneLandscape') {
+    @include media('', 'phone-landscape') {
       display: none;
     }
-    @include media('tabletPortrait', '') {
+    @include media('tablet-portrait', '') {
       display: none;
     }
   }
 
   &phone-landscape-only {
-    @include media('', 'phonePortrait') {
+    @include media('', 'phone-portrait') {
       display: none;
     }
-    @include media('phoneLandscape', '') {
+    @include media('phone-landscape', '') {
       display: none;
     }
   }
 
   &phone-portrait-only {
-    @include media('phonePortrait', '') {
+    @include media('phone-portrait', '') {
       display: none;
     }
   }
@@ -65,31 +65,31 @@ $visibilityClassesPrefix: 'show-for-' !default;
       SHOW ONLY WHEN SIZE IS SMALLER THEN SPECIFIED
   \*------------------------------------*/
   &desktop-small-down {
-    @include media('desktopSmall', '') {
+    @include media('desktop-small', '') {
       display: none;
     }
   }
 
   &tablet-landscape-down {
-    @include media('tabletLandscape', '') {
+    @include media('tablet-landscape', '') {
       display: none;
     }
   }
 
   &tablet-portrait-down {
-    @include media('tabletPortrait', '') {
+    @include media('tablet-portrait', '') {
       display: none;
     }
   }
 
   &phone-landscape-down {
-    @include media('phoneLandscape', '') {
+    @include media('phone-landscape', '') {
       display: none;
     }
   }
 
   &phone-portrait-down {
-    @include media('phonePortrait', '') {
+    @include media('phone-portrait', '') {
       display: none;
     }
   }
@@ -98,31 +98,31 @@ $visibilityClassesPrefix: 'show-for-' !default;
       SHOW ONLY WHEN SIZE IS BIGGER THEN SPECIFIED
   \*------------------------------------*/
   &phone-portrait-up {
-    @include media('', 'phonePortrait') {
+    @include media('', 'phone-portrait') {
       display: none;
     }
   }
 
   &phone-landscape-up {
-    @include media('', 'phoneLandscape') {
+    @include media('', 'phone-landscape') {
       display: none;
     }
   }
 
   &tablet-portrait-up {
-    @include media('', 'tabletPortrait') {
+    @include media('', 'tablet-portrait') {
       display: none;
     }
   }
 
   &tablet-landscape-up {
-    @include media('', 'tabletLandscape') {
+    @include media('', 'tablet-landscape') {
       display: none;
     }
   }
 
   &desktop-small-up {
-    @include media('', 'desktopSmall') {
+    @include media('', 'desktop-small') {
       display: none;
     }
   }

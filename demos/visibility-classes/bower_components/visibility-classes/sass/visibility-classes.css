@@ -5,17 +5,17 @@
 
   USAGE EXAMPLES (with variations):
 
-  @include media($smaller: 'phoneLandscape') {
-  @include media('', 'phoneLandscape') {
-    // styles to be applied for 'phoneLandscape' and smaller
+  @include media($smaller: 'phone-landscape') {
+  @include media('', 'phone-landscape') {
+    // styles to be applied for 'phone-landscape' and smaller
   }
 
-  @include media($bigger: 'tabletPortrait') {
-  @include media('tabletPortrait', '') {
-    // styles to be applied for 'tabletPortrait' and bigger
+  @include media($bigger: 'tablet-portrait') {
+  @include media('tablet-portrait', '') {
+    // styles to be applied for 'tablet-portrait' and bigger
   }
-  @include media('tabletPortrait', 'tabletLandscape') {
-  @include media($bigger: 'tabletPortrait', $smaller: 'tabletLandscape') {
+  @include media('tablet-portrait', 'tablet-landscape') {
+  @include media($bigger: 'tablet-portrait', $smaller: 'tablet-landscape') {
     // styles to be applied for tablets
   }
 */

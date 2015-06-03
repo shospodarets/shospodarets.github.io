@@ -1,26 +1,26 @@
 // Breakpoints for Media-Queries
 //
-// Max/Min postfix: in @media conditions use for
-// "max-width" -> "...Max"
-// "min-width" -> "...Min"
+// postfix: in @media conditions is used for:
+// "max-width" -> "$BREAKPOINT_NAME$"
+// "min-width" -> "$BREAKPOINT_NAME$Min"
 //
 // $mediaBreakPoints might be pre-defined
 // in that case pre-defined value is used
 $mediaBreakPoints: (
-        phonePortraitMax: 479px,
-        phonePortraitMin: 480px,
+        phone-portrait: 479px,
+        phone-portraitMin: 480px,
   //
-        phoneLandscapeMax:639px,
-        phoneLandscapeMin:640px,
+        phone-landscape:639px,
+        phone-landscapeMin:640px,
   //
-        tabletPortraitMax: 767px,
-        tabletPortraitMin: 768px,
+        tablet-portrait: 767px,
+        tablet-portraitMin: 768px,
   //
-        tabletLandscapeMax: 1023px,
-        tabletLandscapeMin: 1024px,
+        tablet-landscape: 1023px,
+        tablet-landscapeMin: 1024px,
   //
-        desktopSmallMax: 1199px,
-        desktopSmallMin: 1200px
+        desktop-small: 1199px,
+        desktop-smallMin: 1200px
 ) !default;
 
 /**
@@ -30,17 +30,17 @@ $mediaBreakPoints: (
 
   USAGE EXAMPLES (with variations):
 
-  @include media($smaller: 'phoneLandscape') {
-  @include media('', 'phoneLandscape') {
-    // styles to be applied for 'phoneLandscape' and smaller
+  @include media($smaller: 'phone-landscape') {
+  @include media('', 'phone-landscape') {
+    // styles to be applied for 'phone-landscape' and smaller
   }
 
-  @include media($bigger: 'tabletPortrait') {
-  @include media('tabletPortrait', '') {
-    // styles to be applied for 'tabletPortrait' and bigger
+  @include media($bigger: 'tablet-portrait') {
+  @include media('tablet-portrait', '') {
+    // styles to be applied for 'tablet-portrait' and bigger
   }
-  @include media('tabletPortrait', 'tabletLandscape') {
-  @include media($bigger: 'tabletPortrait', $smaller: 'tabletLandscape') {
+  @include media('tablet-portrait', 'tablet-landscape') {
+  @include media($bigger: 'tablet-portrait', $smaller: 'tablet-landscape') {
     // styles to be applied for tablets
   }
 */
@@ -51,13 +51,13 @@ $mediaBreakPoints: (
   @if ($bigger and $bigger != '') {
     $biggerQuery: map-get($mediaBreakPoints, #{$bigger}Min);
     @if ($biggerQuery == null) {
-      @error "$bigger:#{$bigger} is not provided in media breakpoints list";
+      @error "$bigger:#{$bigger} is not provided in the media breakpoints list";
     }
   }
   @if ($smaller and $smaller != '') {
-    $smallerQuery: map-get($mediaBreakPoints, #{$smaller}Max);
+    $smallerQuery: map-get($mediaBreakPoints, #{$smaller});
     @if ($smallerQuery == null) {
-      @error "$smaller:#{$smaller} is not provided in media breakpoints list";
+      @error "$smaller:#{$smaller} is not provided in the media breakpoints list";
     }
   }
 

@@ -1,6 +1,6 @@
 {
   "name": "visibility-classes",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "homepage": "https://github.com/malyw/visibility-classes",
   "authors": [
     {
@@ -26,14 +26,13 @@
     "Gruntfile.js",
     "package.json"
   ],
-  "_release": "1.0.1",
+  "_release": "1.0.3",
   "_resolution": {
     "type": "version",
-    "tag": "v1.0.1",
-    "commit": "4016dd50e47937d65a70fb75e8977353d9114ac6"
+    "tag": "v1.0.3",
+    "commit": "3288d2ad74f5d00de5c86b1503cd9829f31e8dd2"
   },
   "_source": "git://github.com/malyw/visibility-classes.git",
-  "_target": "~1.0.1",
-  "_originalSource": "visibility-classes",
-  "_direct": true
+  "_target": "~1.0.3",
+  "_originalSource": "visibility-classes"
 }
