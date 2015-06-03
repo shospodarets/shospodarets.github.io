@@ -1,0 +1,120 @@
+---
+layout: demo
+title: Visibility Classes demo
+tags: [Demo]
+share_image:
+share_description: Let you show elements based on screen size
+article_link: visibility-classes
+demo_code_full_url: https://github.com/malyw/visibility-classes
+---
+
+<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="./main.css"/>
+<link rel="stylesheet" href="./bower_components/fontawesome/css/font-awesome.min.css">
+
+<div class="visibility-classes">
+    <p>
+        Visibility classes let you show elements based on a screen width.
+    </p>
+
+    <p>
+        <strong>Resize your screen</strong> to check how it works.
+    </p>
+
+    <hr/>
+
+    <div class="panel">
+        <h4>Show only for specific size</h4>
+
+        <div class="show-for-desktop-large-only">
+            <i class="fa fa-desktop"></i>
+            This text is shown on desktop-large screens only.
+        </div>
+        <div class="show-for-desktop-small-only">
+            <i class="fa fa-laptop"></i>
+            This text is shown on desktop-small screens only.
+        </div>
+        <div class="show-for-tablet-landscape-only">
+            <i class="fa fa-tablet rotate-90"></i>
+            This text is shown on tablet-landscape screens only.
+        </div>
+        <div class="show-for-tablet-portrait-only">
+            <i class="fa fa-tablet"></i>
+            This text is shown on tablet-portrait screens only.
+        </div>
+        <div class="show-for-phone-landscape-only">
+            <i class="fa fa-mobile rotate-90"></i>
+            This text is shown on phone-landscape screens only.
+        </div>
+        <div class="show-for-phone-portrait-only">
+            <i class="fa fa-mobile"></i>
+            This text is shown on phone-portrait screens only.
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="panel">
+        <h4>Show only when size is equal or smaller then specified</h4>
+
+        <div class="show-for-desktop-small-down">
+            <i class="fa fa-laptop"></i>
+            <i class="fa fa-compress"></i>
+            This text is shown on desktop-small screens and down.
+        </div>
+        <div class="show-for-tablet-landscape-down">
+            <i class="fa fa-tablet rotate-90"></i>
+            <i class="fa fa-compress"></i>
+            This text is shown on tablet-landscape screens and down.
+        </div>
+        <div class="show-for-tablet-portrait-down">
+            <i class="fa fa-tablet"></i>
+            <i class="fa fa-compress"></i>
+            This text is shown on tablet-portrait screens and down.
+        </div>
+        <div class="show-for-phone-landscape-down">
+            <i class="fa fa-mobile rotate-90"></i>
+            <i class="fa fa-compress"></i>
+            This text is shown on phone-landscape screens and down.
+        </div>
+        <div class="show-for-phone-portrait-down">
+            <i class="fa fa-mobile"></i>
+            <i class="fa fa-compress"></i>
+            This text is shown on phone-portrait screens and down.
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="panel">
+        <h4>Show only when size is equal or bigger then specified</h4>
+
+        <div class="show-for-desktop-small-up">
+            <i class="fa fa-laptop"></i>
+            <i class="fa fa-expand"></i>
+            This text is shown on desktop-small screens and up.
+        </div>
+        <div class="show-for-tablet-landscape-up">
+            <i class="fa fa-tablet rotate-90"></i>
+            <i class="fa fa-expand"></i>
+            This text is shown on tablet-landscape screens and up.
+        </div>
+        <div class="show-for-tablet-portrait-up">
+            <i class="fa fa-tablet"></i>
+            <i class="fa fa-expand"></i>
+            This text is shown on tablet-portrait screens and up.
+        </div>
+        <div class="show-for-phone-landscape-up">
+            <i class="fa fa-mobile rotate-90"></i>
+            <i class="fa fa-expand"></i>
+            This text is shown on phone-landscape screens and up.
+        </div>
+        <div class="show-for-phone-portrait-up">
+            <i class="fa fa-mobile"></i>
+            <i class="fa fa-expand"></i>
+            This text is shown on phone-portrait screens and up.
+        </div>
+    </div>
+
+    <hr/>
+</div>

@@ -1,0 +1,9 @@
+{
+  "name": "visibility-classes",
+  "version": "1.0.0",
+  "dependencies": {
+    "fontawesome": "~4.3.0",
+    "bootstrap": "~3.3.4",
+    "visibility-classes": "~1.0.1"
+  }
+}

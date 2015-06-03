@@ -1,0 +1,29 @@
+{
+  "name": "visibility-classes",
+  "version": "1.0.1",
+  "homepage": "https://github.com/malyw/visibility-classes",
+  "authors": [
+    {
+      "name": "Sergey Gospodarets",
+      "homepage": "http://blog.gospodarets.com/"
+    }
+  ],
+  "description": "Let you show elements based on screen size",
+  "main": [
+    "sass/visibility-classes.scss",
+    "css/visibility-classes.min.css"
+  ],
+  "keywords": [
+    "sass",
+    "scss",
+    "visibility",
+    "classes",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "Gruntfile.js",
+    "package.json"
+  ]
+}
