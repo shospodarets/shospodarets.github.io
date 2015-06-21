@@ -1,0 +1,52 @@
+$galleryWidth: 500px;
+$galleryHeight: 275px;
+
+@mixin with-vendor($prop, $value) {
+  -webkit-#{$prop}: $value;
+  #{$prop}: $value;
+}
+
+.gallery-wrapper {
+  width: $galleryWidth;
+}
+
+.gallery {
+  width: $galleryWidth;
+  height: $galleryHeight;
+  @include with-vendor(scroll-behavior, smooth);
+  @include with-vendor(scroll-snap-type, mandatory);
+
+  img {
+    width: $galleryWidth;
+    height: $galleryHeight;
+  }
+}
+
+.horizontal-gallery {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  font-size: 0;
+  /*to fix spaces between images*/
+
+  @include with-vendor(scroll-snap-points-x, repeat(100%));
+
+  img {
+    display: inline-block;
+  }
+}
+
+.vertical-gallery {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @include with-vendor(scroll-snap-points-y, repeat(100%));
+
+  img {
+    display: block;
+  }
+}
+
+.gallery-switchers {
+  margin: 5px 0;
+}
