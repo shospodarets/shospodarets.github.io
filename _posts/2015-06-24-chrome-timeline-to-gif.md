@@ -8,7 +8,7 @@ share_description: Convert a Chrome Timeline data to an animated GIF (video)
 
 Recently the [ability to record a Filmstrip was added to Chrome](https://twitter.com/malyw/status/594137242655821826).
 
-Now it's available even in a stable version of the Chrome Browser as DevTools experiment and is supposed to be enabled by default in one of the next versions of Chrome.
+Now it's available in Canary and Dev Channel versions of the Chrome Browser as DevTools experiment and is supposed to be enabled by default in one of the next versions of Chrome.
 
 To enable it:
 
@@ -17,7 +17,7 @@ To enable it:
 * Open the DevTools Settings
 * Select the "Experiments" tab
 * Press "SHIFT" button 6 times :wink: to show hidden DevTools experiments
-* Check the "Record Filmstrip in Network Panel" (Chrome stable) / "Filmstrip in Network and Timeline Panel" (Canary) checkbox
+* Check the "Filmstrip in Network and Timeline Panel" checkbox
 * Reload (open/close) the DevTools
 * In the "Timeline" check the "Screenshots" checkbox
 
