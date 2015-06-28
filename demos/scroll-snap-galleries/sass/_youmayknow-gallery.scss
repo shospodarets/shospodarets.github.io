@@ -10,6 +10,7 @@
   overflow-y: hidden;
   display: flex;
   white-space: nowrap;
+  margin-bottom: 20px;
 
   $galleryIndent: $galleryWidth * 0.1;
   $visibleGalleryItems: 2;

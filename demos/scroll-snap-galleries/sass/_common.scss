@@ -15,8 +15,13 @@ $galleryHeight: 275px;
   }
 }
 
+h1{
+  text-align: center;
+}
+
 .gallery-wrapper {
   width: $galleryWidth;
+  margin: 0 auto;
   overflow: hidden;
 }
 

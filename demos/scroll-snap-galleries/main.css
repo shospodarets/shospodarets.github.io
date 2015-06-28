@@ -24,8 +24,12 @@
     -webkit-transform: scale(1);
             transform: scale(1); } }
 
+h1 {
+  text-align: center; }
+
 .gallery-wrapper {
   width: 500px;
+  margin: 0 auto;
   overflow: hidden; }
 
 .gallery {
@@ -80,7 +84,8 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  white-space: nowrap; }
+  white-space: nowrap;
+  margin-bottom: 20px; }
   .youmayknow-gallery .item {
     -webkit-scroll-snap-coordinate: 50% 50%;
     scroll-snap-coordinate: 50% 50%;
