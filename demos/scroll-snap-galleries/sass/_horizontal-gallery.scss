@@ -1,0 +1,16 @@
+/*
+  HORIZONTAL GALLERY
+*/
+.horizontal-gallery {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  font-size: 0;
+  /*to fix spaces between images*/
+
+  @include with-vendor(scroll-snap-points-x, repeat(100%));
+
+  img {
+    display: inline-block;
+  }
+}

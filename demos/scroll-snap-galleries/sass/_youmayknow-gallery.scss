@@ -1,0 +1,101 @@
+/*
+  YOUMAYKNOW GALLERY
+*/
+.youmayknow-gallery {
+  // SCROLL SNAP
+  @include with-vendor(scroll-snap-destination, 50% 50%);
+  // VIEW
+  height: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  white-space: nowrap;
+
+  $galleryIndent: $galleryWidth * 0.1;
+  $visibleGalleryItems: 2;
+  $itemWidth: ($galleryWidth - $galleryIndent * ($visibleGalleryItems - 1)) / $visibleGalleryItems;
+
+  .item {
+    // SCROLL SNAP
+    @include with-vendor(scroll-snap-coordinate, 50% 50%);
+    // VIEW
+    flex: 0 0 auto;
+    width: $itemWidth;
+    margin-right: $galleryIndent;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 13px;
+    padding: 9px 9px 5px;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    max-height: 250px;
+  }
+
+  .info {
+    &:after {
+      @include clearfix;
+    }
+
+    // ACTION BOX
+    .action-box {
+      float: right;
+      overflow: hidden;
+
+      label {
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+
+        i {
+          display: block;
+          content: '';
+          width: 40px;
+          height: 40px;
+          background-image: url(http://i.imgur.com/18g89bA.png);
+          background-repeat: no-repeat;
+          background-size: 109px 163px;
+
+          background-position: 0 -91px;
+        }
+
+        input[type=checkbox] {
+          @include absolute-hidden;
+        }
+
+        input[type=checkbox]:checked + i {
+          background-position: -41px -91px;
+          animation: bounce 0.3s;
+        }
+
+      }
+    }
+
+    // TEXT
+    .text {
+      text-align: left;
+      line-height: 20px;
+      padding-top: 5px;
+      overflow: hidden;
+
+      .name {
+        @include overflowEllipsis;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .mutual-friends {
+        @include overflowEllipsis;
+        color: rgb(128, 128, 128);
+      }
+    }
+  }
+}

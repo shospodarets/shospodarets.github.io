@@ -1,0 +1,21 @@
+@mixin with-vendor($prop, $value) {
+  -webkit-#{$prop}: $value;
+  #{$prop}: $value;
+}
+
+@mixin clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@mixin absolute-hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
+@mixin overflowEllipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

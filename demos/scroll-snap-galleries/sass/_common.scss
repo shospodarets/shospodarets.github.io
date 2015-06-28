@@ -1,0 +1,37 @@
+$galleryWidth: 500px;
+$galleryHeight: 275px;
+
+@keyframes bounce {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(2)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+.gallery-wrapper {
+  width: $galleryWidth;
+  overflow: hidden;
+}
+
+.gallery {
+  width: $galleryWidth;
+  height: $galleryHeight;
+  @include with-vendor(scroll-behavior, smooth);
+  @include with-vendor(scroll-snap-type, mandatory);
+
+  img {
+    width: $galleryWidth;
+    height: $galleryHeight;
+  }
+}
+
+.gallery-switchers {
+  margin: 5px 0;
+}

@@ -1,0 +1,13 @@
+/*
+  VERTICAL GALLERY
+*/
+.vertical-gallery {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @include with-vendor(scroll-snap-points-y, repeat(100%));
+
+  img {
+    display: block;
+  }
+}
