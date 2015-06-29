@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Smooth Scroll behavior
-tags: [CSS]
+tags: [CSS, JavaScript]
 share_image: http://i.imgur.com/a6xtXnx.png
 share_description: Using CSSOM smooth scroll API in JavaScript and CSS
 ---
