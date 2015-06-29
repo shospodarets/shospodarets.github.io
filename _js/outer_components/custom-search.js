@@ -15,6 +15,8 @@ var CustomSearch = function (options) {
     this._onFocus = this.onFocus.bind(this);// create link function to add/remove it as event listener
 
     this.placeholderForm = document.querySelector('.google-custom-search-placeholder');
+    if (!this.placeholderForm) return;
+
     this.placeholderInput = this.placeholderForm.querySelector('input');
     this.originalInput =
         this.googleOriginalSubmit = undefined;

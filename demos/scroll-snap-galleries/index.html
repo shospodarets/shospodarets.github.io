@@ -1,17 +1,23 @@
 ---
 layout: demo
-title: Native Scroll Snap Galleries demo (pure HTML/CSS)
+title: CSS Scroll Snap Galleries demo (pure HTML/CSS)
 tags: [Demo]
 share_image: http://i.imgur.com/hndMbNo.png
-share_description: Native Scroll Snap Galleries demo
-article_link: scroll-snap
+share_description: CSS Scroll Snap Galleries demo
+article_link: css-scroll-snap
 demo_code_url: scroll-snap-galleries
 ---
 
 <link rel="stylesheet" href="./main.css"/>
 <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 
-<h1>Horizontal Scrolling Gallery</h1>
+<div class="is-not-supported alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    Scroll Snap is not supported in the current browser
+</div>
+
+<h1 id="horizontal-gallery">Horizontal Scrolling Gallery</h1>
 
 <div class="gallery-wrapper">
     <div class="gallery horizontal-gallery">
@@ -34,7 +40,7 @@ demo_code_url: scroll-snap-galleries
 </div>
 
 
-<h1>Vertical Scrolling Gallery</h1>
+<h1 id="vertical-gallery">Vertical Scrolling Gallery</h1>
 
 <div class="gallery-wrapper">
     <div class="gallery vertical-gallery">
@@ -56,7 +62,7 @@ demo_code_url: scroll-snap-galleries
     </div>
 </div>
 
-<h1>"People You May Know" Scrolling Gallery</h1>
+<h1 id="youmayknow-gallery">"People You May Know" Scrolling Gallery</h1>
 
 <div class="gallery-wrapper">
     <div class="gallery youmayknow-gallery">

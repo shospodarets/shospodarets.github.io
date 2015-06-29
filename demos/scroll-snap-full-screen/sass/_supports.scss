@@ -1,0 +1,10 @@
+// HIDE BLOCK WHEN SCROLL SNAP IS SUPPORTED
+@supports ( (scroll-snap-type: mandatory) or (-webkit-scroll-snap-type: mandatory) ) {
+  .is-not-supported {
+    display: none;
+  }
+
+  .box-wrapper {
+    height: $box-height;
+  }
+}

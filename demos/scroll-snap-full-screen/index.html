@@ -1,0 +1,55 @@
+---
+layout: fullpage
+title: CSS Scroll Snap Full page demo (pure HTML/CSS)
+tags: [Demo]
+share_image: http://i.imgur.com/hndMbNo.png
+share_description: CSS Scroll Snap Full page demo
+article_link: css-scroll-snap
+demo_code_url: scroll-snap-full-screen
+---
+
+<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="./main.css"/>
+
+<div class="box-wrapper">
+    <div class="box-bg">
+        <div id="box1" class="box">
+            <div class="centered">
+                <div class="is-not-supported alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    Scroll Snap is not supported in the current browser.
+                    <p>
+                        <a href="http://projects.lukehaas.me/scrollify">jQuery Scrollify plugin</a> is used instead of it
+                    </p>
+                </div>
+
+                <div>box1</div>
+                <a class="arrow" href="#box2">Scroll for more</a>
+            </div>
+        </div>
+        <div id="box2" class="box">
+            <div class="centered">box2</div>
+        </div>
+        <div id="box3" class="box">
+            <div class="centered">box3</div>
+        </div>
+        <div id="box4" class="box">
+            <div class="centered">
+                <div>Back to top</div>
+                <a class="arrow upside-down" href="#box1"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="switchers">
+    <a href="#box1"></a>
+    <a href="#box2"></a>
+    <a href="#box3"></a>
+    <a href="#box4"></a>
+</div>
+
+<script src="bower_components/jquery/jquery.min.js"></script>
+<script src="bower_components/jquery-easing/jquery.easing.min.js"></script>
+<script src="bower_components/Scrollify/jquery.scrollify.min.js"></script>
+<script src="main.js"></script>

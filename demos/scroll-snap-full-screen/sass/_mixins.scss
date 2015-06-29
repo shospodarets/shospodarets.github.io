@@ -1,0 +1,10 @@
+@mixin with-vendor($prop, $value) {
+  -webkit-#{$prop}: $value;
+  #{$prop}: $value;
+}
+
+@mixin clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}
