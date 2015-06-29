@@ -25,6 +25,15 @@
   color: #fff;
   position: relative;
 
+  a {
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   .centered {
     position: absolute;
     top: 50%;
@@ -33,53 +42,28 @@
   }
 }
 
-#box1 {
-  background-color: rgba(0, 255, 255, 0.5);
-}
-
-#box2 {
+[data-section-name=screen1] {
   background-color: rgba(255, 0, 255, 0.5);
 }
 
-#box3 {
+[data-section-name=screen2] {
   background-color: rgba(255, 255, 0, 0.5);
 }
 
-#box4 {
+[data-section-name=screen3] {
+  background-color: rgba(0, 255, 255, 0.5);
+}
+
+[data-section-name=screen4] {
   background-color: rgba(255, 0, 0, 0.5);
 }
 
 // SWITCHERS
 .switchers {
-  position: absolute;
+  position: fixed;
   right: 25px;
   top: 50%;
   transform: translateY(-50%);
-
-  a:after {
-    content: '';
-    display: block;
-    width: 4px;
-    height: 4px;
-    background: rgba(0, 0, 0, 0.85);
-    border-radius: 10px;
-    margin: 6px;
-  }
-  a:hover:after {
-    width: 10px;
-    height: 10px;
-    background: none;
-    border: 1px solid black;
-    margin: 2px;
-    margin-top: -4px;
-    margin-bottom: -4px;
-  }
-  a:first-child:hover:after {
-    margin-top: 2px;
-  }
-  a:last-child:hover:after {
-    margin-bottom: 2px;
-  }
 }
 
 // ARROW LINE
@@ -106,5 +90,7 @@ a.arrow {
 
   &.upside-down {
     transform: rotate(180deg);
+    left: 20px;
+    top: -30px;
   }
 }

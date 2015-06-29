@@ -34,7 +34,7 @@
     <script src="{{ site.baseurl }}/bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css"/>
+    {% if page.disable_default_css %}{% else %}<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css"/>{% endif %}
 
 </head>
 

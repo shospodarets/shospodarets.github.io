@@ -6,6 +6,7 @@ share_image: http://i.imgur.com/hndMbNo.png
 share_description: CSS Scroll Snap Full page demo
 article_link: css-scroll-snap
 demo_code_url: scroll-snap-full-screen
+disable_default_css: true
 ---
 
 <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
@@ -13,7 +14,7 @@ demo_code_url: scroll-snap-full-screen
 
 <div class="box-wrapper">
     <div class="box-bg">
-        <div id="box1" class="box">
+        <div id="screen1" data-section-name="screen1" class="box">
             <div class="centered">
                 <div class="is-not-supported alert alert-danger" role="alert">
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -24,29 +25,41 @@ demo_code_url: scroll-snap-full-screen
                     </p>
                 </div>
 
-                <div>box1</div>
-                <a class="arrow" href="#box2">Scroll for more</a>
+                <p>
+                    <a href="{{ site.baseurl }}/{{ page.article_link }}">Read the article</a>
+                </p>
+
+                <div>Screen 1</div>
+                <a class="arrow scrollTo" href="#screen2">Scroll for more</a>
             </div>
         </div>
-        <div id="box2" class="box">
-            <div class="centered">box2</div>
+        <div id="screen2" data-section-name="screen2" class="box">
+            <div class="centered">Screen 2</div>
         </div>
-        <div id="box3" class="box">
-            <div class="centered">box3</div>
+        <div id="screen3" data-section-name="screen3" class="box">
+            <div class="centered">Screen 3</div>
         </div>
-        <div id="box4" class="box">
+        <div id="screen4" data-section-name="screen4" class="box">
             <div class="centered">
-                <div>Back to top</div>
-                <a class="arrow upside-down" href="#box1"></a>
+                <div>
+                    <a class="scrollTo" href="#screen1">
+                        Back to top
+                    </a>
+                </div>
+                <a class="arrow upside-down scrollTo" href="#screen1"></a>
+                <div>Screen 4</div>
             </div>
         </div>
     </div>
 </div>
 <div class="switchers">
-    <a href="#box1"></a>
-    <a href="#box2"></a>
-    <a href="#box3"></a>
-    <a href="#box4"></a>
+    <div class="btn-group-vertical">
+        <a class="btn btn-default scrollTo" href="#screen1">Screen 1</a>
+        <a class="btn btn-default scrollTo" href="#screen2">Screen 2</a>
+        <a class="btn btn-default scrollTo" href="#screen3">Screen 3</a>
+        <a class="btn btn-default scrollTo" href="#screen4">Screen 4</a>
+    </div>
+</div>
 </div>
 
 <script src="bower_components/jquery/jquery.min.js"></script>
