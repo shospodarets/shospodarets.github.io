@@ -415,7 +415,7 @@ Don't forget to provide a `-webkit` vendor prefix for Safari.
 
 <ul>
     <li>
-        In Safari when you scroll using a scrollbox (not a wheel)- scroll snap doesn't work, scroll just stops in the same place.
+        In Safari when you scroll using a scrollbox (not a wheel)- scroll snapping doesn't work, scroll just stops in the same place.
         <div class="open-close-wrapper">
             <label>
                 <input type="checkbox"/>
