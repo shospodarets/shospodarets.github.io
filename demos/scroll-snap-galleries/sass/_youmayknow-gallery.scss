@@ -1,9 +1,16 @@
 /*
   YOUMAYKNOW GALLERY
 */
+.youmayknow-gallery-wrapper {
+  text-align: center;
+
+  label {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
 .youmayknow-gallery {
-  // SCROLL SNAP
-  @include with-vendor(scroll-snap-destination, 50% 50%);
   // VIEW
   height: auto;
   overflow-x: auto;
@@ -17,8 +24,6 @@
   $itemWidth: ($galleryWidth - $galleryIndent * ($visibleGalleryItems - 1)) / $visibleGalleryItems;
 
   .item {
-    // SCROLL SNAP
-    @include with-vendor(scroll-snap-coordinate, 50% 50%);
     // VIEW
     flex: 0 0 auto;
     width: $itemWidth;
@@ -97,6 +102,33 @@
         @include overflowEllipsis;
         color: rgb(128, 128, 128);
       }
+    }
+  }
+}
+
+/*
+  SCROLL SNAPPING ALIGNMENT
+*/
+#align-to-center:checked ~ .gallery-wrapper {
+  .youmayknow-gallery {
+    // SCROLL SNAP
+    @include with-vendor(scroll-snap-destination, 50% 50%);
+
+    .item {
+      // SCROLL SNAP
+      @include with-vendor(scroll-snap-coordinate, 50% 50%);
+    }
+  }
+}
+
+#align-to-left:checked ~ .gallery-wrapper {
+  .youmayknow-gallery {
+    // SCROLL SNAP
+    @include with-vendor(scroll-snap-destination, 0 50%);
+
+    .item {
+      // SCROLL SNAP
+      @include with-vendor(scroll-snap-coordinate, 0 50%);
     }
   }
 }

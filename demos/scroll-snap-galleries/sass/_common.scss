@@ -15,7 +15,7 @@ $galleryHeight: 275px;
   }
 }
 
-h1{
+h1 {
   text-align: center;
 }
 
@@ -39,4 +39,15 @@ h1{
 
 .gallery-switchers {
   margin: 5px 0;
+}
+
+/* ALIGN HORIZONTALLY */
+.open-close-wrapper {
+  text-align: center;
+
+  .open-close {
+    div {
+      margin: 0 auto;
+    }
+  }
 }

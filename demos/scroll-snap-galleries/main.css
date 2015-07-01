@@ -50,6 +50,12 @@ h1 {
 .gallery-switchers {
   margin: 5px 0; }
 
+/* ALIGN HORIZONTALLY */
+.open-close-wrapper {
+  text-align: center; }
+  .open-close-wrapper .open-close div {
+    margin: 0 auto; }
+
 /*
   HORIZONTAL GALLERY
 */
@@ -78,9 +84,13 @@ h1 {
 /*
   YOUMAYKNOW GALLERY
 */
+.youmayknow-gallery-wrapper {
+  text-align: center; }
+  .youmayknow-gallery-wrapper label {
+    margin-right: 10px;
+    margin-bottom: 10px; }
+
 .youmayknow-gallery {
-  -webkit-scroll-snap-destination: 50% 50%;
-  scroll-snap-destination: 50% 50%;
   height: auto;
   overflow-x: auto;
   overflow-y: hidden;
@@ -91,8 +101,6 @@ h1 {
   white-space: nowrap;
   margin-bottom: 20px; }
   .youmayknow-gallery .item {
-    -webkit-scroll-snap-coordinate: 50% 50%;
-    scroll-snap-coordinate: 50% 50%;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
@@ -157,3 +165,20 @@ h1 {
       white-space: nowrap;
       text-overflow: ellipsis;
       color: gray; }
+
+/*
+  SCROLL SNAPPING ALIGNMENT
+*/
+#align-to-center:checked ~ .gallery-wrapper .youmayknow-gallery {
+  -webkit-scroll-snap-destination: 50% 50%;
+  scroll-snap-destination: 50% 50%; }
+  #align-to-center:checked ~ .gallery-wrapper .youmayknow-gallery .item {
+    -webkit-scroll-snap-coordinate: 50% 50%;
+    scroll-snap-coordinate: 50% 50%; }
+
+#align-to-left:checked ~ .gallery-wrapper .youmayknow-gallery {
+  -webkit-scroll-snap-destination: 0 50%;
+  scroll-snap-destination: 0 50%; }
+  #align-to-left:checked ~ .gallery-wrapper .youmayknow-gallery .item {
+    -webkit-scroll-snap-coordinate: 0 50%;
+    scroll-snap-coordinate: 0 50%; }

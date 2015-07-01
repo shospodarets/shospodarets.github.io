@@ -19,6 +19,24 @@ demo_code_url: scroll-snap-galleries
 
 <h1 id="horizontal-gallery">Horizontal Scrolling Gallery</h1>
 
+<div class="open-close-wrapper">
+    <label>
+        <input type="checkbox"/>
+        <span class="text">Watch the Horizontal Gallery in action</span>
+        <i class="icon"></i>
+        <div class="open-close">
+            <a href="{{ site.baseurl }}/demos/scroll-snap-galleries/#horizontal-gallery">
+                <div style="
+                    background: url(http://i.imgur.com/zAC2TNG.gif) no-repeat 0 0;
+                    width:522px;
+                    height:322px;
+                ">
+                </div>
+            </a>
+        </div>
+    </label>
+</div>
+
 <div class="gallery-wrapper">
     <div class="gallery horizontal-gallery">
         <img id="horizontal-1" src="http://i.imgur.com/wU7Dj4d.png"/>
@@ -42,6 +60,24 @@ demo_code_url: scroll-snap-galleries
 
 <h1 id="vertical-gallery">Vertical Scrolling Gallery</h1>
 
+<div class="open-close-wrapper">
+    <label>
+        <input type="checkbox"/>
+        <span class="text">Watch the Vertical Gallery in action</span>
+        <i class="icon"></i>
+        <div class="open-close">
+            <a href="{{ site.baseurl }}/demos/scroll-snap-galleries/#vertical-gallery">
+                <div style="
+                    background: url(http://i.imgur.com/Q6UEyOU.gif) no-repeat 0 0;
+                    width:512px;
+                    height:324px;
+                ">
+                </div>
+            </a>
+        </div>
+    </label>
+</div>
+
 <div class="gallery-wrapper">
     <div class="gallery vertical-gallery">
         <img id="vertical-1" src="http://i.imgur.com/u3aHqm8.jpg"/>
@@ -62,106 +98,132 @@ demo_code_url: scroll-snap-galleries
     </div>
 </div>
 
-<h1 id="youmayknow-gallery">"People You May Know" Scrolling Gallery</h1>
+<div class="youmayknow-gallery-wrapper">
+    <h1 id="youmayknow-gallery">"People You May Know" Scrolling Gallery</h1>
 
-<div class="gallery-wrapper">
-    <div class="gallery youmayknow-gallery">
-        <div class="item">
-            <img id="youmayknow-1" src="http://i.imgur.com/cZOLPvQ.jpg"/>
-
-            <div class="info">
-                <div class="action-box">
-                    <label>
-                        <input type="checkbox"/>
-                        <i></i>
-                    </label>
+    <div class="open-close-wrapper">
+        <label>
+            <input type="checkbox"/>
+            <span class="text">Watch the "People You May Know" Gallery in action</span>
+            <i class="icon"></i>
+            <div class="open-close">
+                <a href="{{ site.baseurl }}/demos/scroll-snap-galleries/#youmayknow-gallery">
+                <div style="
+                    background: url(http://i.imgur.com/JJuHxoZ.gif) no-repeat 0 0;
+                    width:260px;
+                    height:192px;
+                ">
                 </div>
-                <div class="text">
-                    <div class="name">
-                        Iron Man
+                </a>
+            </div>
+        </label>
+    </div>
+
+    <h5>Complete scrolling with an images aligned to the following part of the gallery:</h5>
+    <input type="radio" id="align-to-center" name="youmayknow-gallery-aligning" checked/>
+    <label for="align-to-center">Center</label>
+    <input type="radio" id="align-to-left" name="youmayknow-gallery-aligning"/>
+    <label for="align-to-left">Left</label>
+
+    <div class="gallery-wrapper">
+        <div class="gallery youmayknow-gallery">
+            <div class="item">
+                <img id="youmayknow-1" src="http://i.imgur.com/cZOLPvQ.jpg"/>
+
+                <div class="info">
+                    <div class="action-box">
+                        <label>
+                            <input type="checkbox"/>
+                            <i></i>
+                        </label>
                     </div>
-                    <div class="mutual-friends">
-                        10 mutual fiends
+                    <div class="text">
+                        <div class="name">
+                            Iron Man
+                        </div>
+                        <div class="mutual-friends">
+                            10 mutual fiends
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="item">
-            <img id="youmayknow-2" src="http://i.imgur.com/N4tPPgy.jpg"/>
+            <div class="item">
+                <img id="youmayknow-2" src="http://i.imgur.com/N4tPPgy.jpg"/>
 
-            <div class="info">
-                <div class="action-box">
-                    <label>
-                        <input type="checkbox"/>
-                        <i></i>
-                    </label>
-                </div>
-                <div class="text">
-                    <div class="name">
-                        Nick Fury
+                <div class="info">
+                    <div class="action-box">
+                        <label>
+                            <input type="checkbox"/>
+                            <i></i>
+                        </label>
                     </div>
-                    <div class="mutual-friends">
-                        3 mutual fiends
+                    <div class="text">
+                        <div class="name">
+                            Nick Fury
+                        </div>
+                        <div class="mutual-friends">
+                            3 mutual fiends
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="item">
-            <img id="youmayknow-3" src="http://i.imgur.com/gQsgxsc.jpg"/>
+            <div class="item">
+                <img id="youmayknow-3" src="http://i.imgur.com/gQsgxsc.jpg"/>
 
-            <div class="info">
-                <div class="action-box">
-                    <label>
-                        <input type="checkbox"/>
-                        <i></i>
-                    </label>
-                </div>
-                <div class="text">
-                    <div class="name">
-                        Black Widow
+                <div class="info">
+                    <div class="action-box">
+                        <label>
+                            <input type="checkbox"/>
+                            <i></i>
+                        </label>
                     </div>
-                    <div class="mutual-friends">
-                        7 mutual fiends
+                    <div class="text">
+                        <div class="name">
+                            Black Widow
+                        </div>
+                        <div class="mutual-friends">
+                            7 mutual fiends
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="item">
-            <img id="youmayknow-4" src="http://i.imgur.com/RSJjqYw.jpg"/>
+            <div class="item">
+                <img id="youmayknow-4" src="http://i.imgur.com/RSJjqYw.jpg"/>
 
-            <div class="info">
-                <div class="action-box">
-                    <label>
-                        <input type="checkbox"/>
-                        <i></i>
-                    </label>
-                </div>
-                <div class="text">
-                    <div class="name">
-                        Hawkeye
+                <div class="info">
+                    <div class="action-box">
+                        <label>
+                            <input type="checkbox"/>
+                            <i></i>
+                        </label>
                     </div>
-                    <div class="mutual-friends">
-                        5 mutual fiends
+                    <div class="text">
+                        <div class="name">
+                            Hawkeye
+                        </div>
+                        <div class="mutual-friends">
+                            5 mutual fiends
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="item">
-            <img id="youmayknow-5" src="http://i.imgur.com/sEZFxFR.jpg"/>
+            <div class="item">
+                <img id="youmayknow-5" src="http://i.imgur.com/sEZFxFR.jpg"/>
 
-            <div class="info">
-                <div class="action-box">
-                    <label>
-                        <input type="checkbox"/>
-                        <i></i>
-                    </label>
-                </div>
-                <div class="text">
-                    <div class="name">
-                        Captain America
+                <div class="info">
+                    <div class="action-box">
+                        <label>
+                            <input type="checkbox"/>
+                            <i></i>
+                        </label>
                     </div>
-                    <div class="mutual-friends">
-                        9 mutual fiends
+                    <div class="text">
+                        <div class="name">
+                            Captain America
+                        </div>
+                        <div class="mutual-friends">
+                            9 mutual fiends
+                        </div>
                     </div>
                 </div>
             </div>
