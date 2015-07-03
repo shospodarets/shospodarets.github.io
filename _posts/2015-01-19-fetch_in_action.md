@@ -556,6 +556,8 @@ Fetch API is available in Chrome 42+, Firefox 39+<br>
 and is <a href="https://status.modern.ie/fetchapi">under consideration for IE</a>.<br>
 With Fetch and Promise Polyfills it works wonderfully in all browsers up-to IE9 (but IE9 doesn't support Cross-origin fetching, which works in others).<br>
 
+<div class="caniuse" data-feature="fetch"></div>
+
 
 
 <h2 id="links-and-demo">Useful links and demo</h2>
