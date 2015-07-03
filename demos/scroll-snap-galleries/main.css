@@ -175,6 +175,9 @@ h1 {
   #align-to-center:checked ~ .gallery-wrapper .youmayknow-gallery .item {
     -webkit-scroll-snap-coordinate: 50% 50%;
     scroll-snap-coordinate: 50% 50%; }
+    #align-to-center:checked ~ .gallery-wrapper .youmayknow-gallery .item:last-child {
+      -webkit-scroll-snap-coordinate: 0 50%;
+      scroll-snap-coordinate: 0 50%; }
 
 #align-to-left:checked ~ .gallery-wrapper .youmayknow-gallery {
   -webkit-scroll-snap-destination: 0 50%;

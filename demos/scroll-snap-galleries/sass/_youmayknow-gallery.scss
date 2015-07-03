@@ -117,6 +117,10 @@
     .item {
       // SCROLL SNAP
       @include with-vendor(scroll-snap-coordinate, 50% 50%);
+
+      &:last-child{
+        @include with-vendor(scroll-snap-coordinate, 0 50%);
+      }
     }
   }
 }
