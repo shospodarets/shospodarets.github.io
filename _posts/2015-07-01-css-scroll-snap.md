@@ -401,14 +401,15 @@ Then Firefox team announced [intent to implement the support (FF 39+)](https://g
 [Chrome](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/g1Kb-8AGE2Y) and, finally,
 Apple also announced [their support in Safari 9.0](https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html#//apple_ref/doc/uid/TP40014305-CH9-SW21)!
 
-You might be surprised, but it is already implemented in [many next versions of browsers](http://caniuse.com/#feat=css-snappoints):
+You might be surprised, but it is already implemented in [Firefox stable and many next versions of browsers](http://caniuse.com/#feat=css-snappoints):
 
 <div class="caniuse" data-feature="css-snappoints"></div>
 
-If you want to play with Scroll Snap today, you can download either
+If you want to play with Scroll Snap Points today, you can either download
 [Webkit Nightly](http://nightly.webkit.org/)
 or
-[Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
+just run Firefox.
+
 Don't forget to provide a `-webkit` vendor prefix for Safari.
 
 # Bugs/missed parts
@@ -456,7 +457,7 @@ Don't forget to provide a `-webkit` vendor prefix for Safari.
         </div>
 
         <p>
-            For the demo it was fixed (thanks to <a href="https://disqus.com/by/bigbosssnk/">BigBossSNK</a> <a href="http://blog.gospodarets.com/css-scroll-snap/#comment-2114038202">comment</a>) providing:
+            For the demo it was fixed (thanks to the <a href="https://disqus.com/by/bigbosssnk/">BigBossSNK</a> <a href="http://blog.gospodarets.com/css-scroll-snap/#comment-2114038202">comment</a>) providing:
         </p>
 
         <div class="highlight">
