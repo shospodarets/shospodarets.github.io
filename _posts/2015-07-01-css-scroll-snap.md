@@ -240,7 +240,7 @@ SCROLL SNAPPING ALIGNMENT
 }
 
 /* LEFT */
-#align-to-center:checked ~ .gallery-wrapper .youmayknow-gallery{
+#align-to-left:checked ~ .gallery-wrapper .youmayknow-gallery{
     /*
     Defines that each snap coordinate has to be aligned
     with the left edge of the gallery wrapper
@@ -248,7 +248,7 @@ SCROLL SNAPPING ALIGNMENT
     scroll-snap-destination: 0 50%;
 }
 
-#align-to-center:checked ~ .gallery-wrapper .item{
+#align-to-left:checked ~ .gallery-wrapper .item{
     /*
     Sets the left edge of each gallery item
     as the Scroll Snapping point
