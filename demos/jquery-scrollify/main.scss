@@ -1,0 +1,93 @@
+@import "sass/common";
+@import "sass/mixins";
+@import "sass/reset";
+@import "sass/control-group";
+
+
+// OTHER
+.box-wrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+.box-bg {
+  background: url(http://i.imgur.com/tGiZYsy.jpg) 100% 0;
+}
+
+.box {
+  height: $box-height;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+[data-section-name=screen1] {
+  background-color: rgba(255, 0, 255, 0.5);
+}
+
+[data-section-name=screen2] {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+
+[data-section-name=screen3] {
+  background-color: rgba(0, 255, 255, 0.5);
+}
+
+[data-section-name=screen4] {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+// SWITCHERS
+.switchers {
+  position: fixed;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// ARROW LINE
+a.arrow {
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    border-right: 2px solid #FFF;
+    border-bottom: 2px solid #FFF;
+    transform: rotate(45deg);
+
+    content: '';
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin: auto;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: 3s arrow infinite ease;
+  }
+
+  &.upside-down {
+    transform: rotate(180deg);
+    left: 20px;
+    top: -30px;
+  }
+}

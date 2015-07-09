@@ -1,0 +1,10 @@
+{
+  "name": "gospodarets-blog",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~1.9.0",
+    "Scrollify": "~0.1.6",
+    "jquery-easing": "*"
+  }
+}
