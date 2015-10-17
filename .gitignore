@@ -6,3 +6,7 @@ node_modules
 
 # JS source maps
 js/*.map
+
+# CSS source maps
+_includes/*.css.map
+css/*.css.map

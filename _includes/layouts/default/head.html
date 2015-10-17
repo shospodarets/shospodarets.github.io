@@ -30,7 +30,9 @@
 
     {% include head/webmasters-verifications.html %}
 
-    {% if page.disable_default_css %}{% else %}<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/critical.css"/>{% endif %}
+    {% if page.disable_default_css %}{% else %}
+    <style type="text/css">{% include critical.css %}</style>
+    {% endif %}
 
     <script>
         window.jekyllVariables = {

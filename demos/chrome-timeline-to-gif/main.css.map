@@ -1,10 +1,1 @@
-{
-	"version": 3,
-	"file": "main.css",
-	"sources": [
-		"main.scss"
-	],
-	"sourcesContent": [],
-	"mappings": "AAAA,MAAM,CAAC;EACL,KAAK,EAAE,IAAK;EACZ,gBAAgB,EAAE,WAAY;EAC9B,MAAM,EAAE,IAAK,GAHP",
-	"names": []
-}
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAAA,OACE,WACA,6BACA,WAAa,CAHP","file":"main.css"}

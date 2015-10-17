@@ -68,29 +68,36 @@ module.exports = function (grunt) {
         },
 
         sass: {
-            global: {
-                options: {
-                    outputStyle: 'compressed'
-                    //sourceComments: true
-                },
+            options: {
+                outputStyle: 'compressed',
+                sourceMap: true
+            },
+            critical: {
                 files: [{
                     expand: true,
                     cwd: '_scss',
-                    src: ['**/*.scss'],
+                    src: ['critical.scss'],
+                    dest: '_includes',
+                    ext: '.css'
+                }]
+            },
+            nonCritical: {
+                files: [{
+                    expand: true,
+                    cwd: '_scss',
+                    src: ['non-critical.scss'],
                     dest: 'css',
                     ext: '.css'
                 }]
             },
             demos: {// all *.scss files in "demos" folder
-                options: {
-                    sourceMap: true
-                },
                 files: [{
                     expand: true,
                     cwd: 'demos',
                     src: [
                         '**/*.scss',
-                        '!**/bower_components/**/*.scss'
+                        '!**/bower_components/**/*.scss',
+                        '!**/node_modules/**/*.scss'
                     ],
                     dest: 'demos',
                     ext: '.css'
@@ -99,11 +106,21 @@ module.exports = function (grunt) {
         },
 
         autoprefixer: {
-            global: {
-                src: "css/**/*.css"
+            options: {
+                map: true
+            },
+            critical: {
+                src: "_includes/critical.css"
+            },
+            nonCritical: {
+                src: "css/non-critical.css"
             },
             demos: {
-                src: "demos/**/*.css"
+                src: [
+                    'demos/**/*.css',
+                    '!demos/**/bower_components/**/*.css',
+                    '!demos/**/node_modules/**/*.css'
+                ]
             }
         },
 
@@ -136,11 +153,11 @@ module.exports = function (grunt) {
             },
             css: {
                 files: ["_scss/**/*.scss"],
-                tasks: ["sass", "autoprefixer", "shell:jekyllBuild"]
+                tasks: ["generateCss", "shell:jekyllBuild"]
             },
             css_demos: {
                 files: ["demos/**/*.scss"],
-                tasks: ["sass:demos", "autoprefixer:demos", "shell:jekyllBuild"]
+                tasks: ["generateDemosCss", "shell:jekyllBuild"]
             }
         }
     });
@@ -150,15 +167,23 @@ module.exports = function (grunt) {
     grunt.registerTask("generateJs", [
         "webpack"
     ]);
+
+    grunt.registerTask("generateCss", [
+        "sass:critical", "autoprefixer:critical",
+        "sass:nonCritical", "autoprefixer:nonCritical"
+    ]);
+
+    grunt.registerTask("generateDemosCss", [
+        "sass:demos", "autoprefixer:demos"
+    ]);
+
     grunt.registerTask("serve", ["shell:jekyllServe"]);
 
     grunt.registerTask("default", [
         "generateJs",
 
-        "sass",
-        "autoprefixer",
-        "sass:demos",
-        "autoprefixer:demos",
+        "generateCss",
+        "generateDemosCss",
 
         "shell:jekyllBuild",
         "watch"
