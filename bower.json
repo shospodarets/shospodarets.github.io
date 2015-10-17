@@ -4,8 +4,5 @@
     "dependencies": {
         "html5shiv": "~3.7.2",
         "es6-promise": "~2.0.1"
-    },
-    "devDependencies": {
-        "susy": "~2.2.2"
     }
 }

@@ -1,6 +1,13 @@
 .pagination {
+  $pagination-btn-number: 7;
+  $pagination-btn-width: round((100%/$pagination-btn-number)*1000)/1000; // round to third decimal after a point
+  $pagination-btn-indent: $pagination-btn-width/10;
+
+  $pagination-pages-btn-number: 5;
+  $pagination-pages-btn-width: round((100%/$pagination-pages-btn-number)*1000)/1000; // round to third decimal after a point
+
   @include clearfix;
-  @include remove-edge-gutters;
+  display: flex;
   text-align: center;
 
   a, em {
@@ -13,30 +20,34 @@
 
   .prev-btn,
   .next-btn {
-     a, em{
-       color: #fff;
-       background-color: #e85c33;
+    a, em {
+      color: #fff;
+      background-color: #e85c33;
 
-       &:hover{
-         background-color: #333;
-       }
+      &:hover {
+        background-color: #333;
+      }
 
-       &.empty{
-         visibility: hidden;
-       }
-     }
+      &.empty {
+        visibility: hidden;
+      }
+    }
   }
 
   .prev-btn {
-    @include span(1 of 7);
+    flex: 0 0 $pagination-btn-width;
+    padding-right: $pagination-btn-indent;
   }
 
   .pagination-links-wrapper {
-    @include span(5 of 7);
-    @include remove-edge-gutters;
+    display: flex;
+    flex: 0 0 5*$pagination-btn-width;
+    padding-right: $pagination-btn-indent;
+    padding-left: $pagination-btn-indent;
 
     .pagination-link {
-      @include span(1 of 5);
+      flex: 0 0 $pagination-pages-btn-width;
+
       min-height: 1px; // fix for 0 height if there is no content (because of float:left;)
 
       a, em {
@@ -52,6 +63,7 @@
   }
 
   .next-btn {
-    @include span(1 of 7);
+    flex: 0 0 $pagination-btn-width;
+    padding-left: $pagination-btn-indent;
   }
 }
