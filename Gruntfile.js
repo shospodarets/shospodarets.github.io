@@ -101,7 +101,7 @@ module.exports = function (grunt) {
 
     });
 
-    require('jit-grunUpdate t')(grunt);
+    require('jit-grunt')(grunt);
 
     grunt.registerTask("serve", ["shell:jekyllServe"]);
     grunt.registerTask("default", [
