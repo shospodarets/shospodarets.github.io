@@ -3,3 +3,6 @@
 _site
 
 node_modules
+
+# JS source maps
+js/*.map

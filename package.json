@@ -2,6 +2,10 @@
   "name": "blog.gospodarets.com",
   "version": "1.0.0",
   "devDependencies": {
+    "babel": "~5.8.23",
+    "babel-core": "~5.8.25",
+    "babel-loader": "~5.3.2",
+    "babel-runtime": "~5.8.25",
     "grunt": "~0.4.5",
     "grunt-autoprefixer": "~3.0.3",
     "grunt-browserify": "~3.2.1",
@@ -10,7 +14,10 @@
     "grunt-jekyll": "~0.4.2",
     "grunt-sass": "~1.0.0",
     "grunt-shell": "~1.1.1",
-    "jit-grunt": "~0.9.1"
+    "grunt-webpack": "~1.0.11",
+    "jit-grunt": "~0.9.1",
+    "webpack": "~1.12.2",
+    "webpack-dev-server": "~1.12.0"
   },
   "private": true
 }

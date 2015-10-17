@@ -1,23 +1,69 @@
 'use strict';
 
+var path = require('path');
+var webpack = require('webpack');
+
+var rootPath = path.resolve();
+
+//var DEBUG_IS_ENABLED = Boolean(process.env.BLOG_DEBUG);// environment variable
+
 module.exports = function (grunt) {
 
     "use strict";
 
     grunt.initConfig({
-        browserify: {
-            global: {
-                files: {
-                    "js/main.min.js": ["_js/main.js"]
-                }
-            }
-        },
+        webpack: {
+            dist: {
+                entry: rootPath + '/_js/main.js',
+                output: {
+                    filename: 'js/main.min.js'
+                },
+                module: {
+                    loaders: [
+                        {
+                            test: /\.js$/,
+                            exclude: [/node_modules/, /bower_components/],
+                            loader: 'babel',
+                            query: {
+                                // https://github.com/babel/babel-loader#options
+                                cacheDirectory: true,
+                                // http://babeljs.io/docs/usage/options/
+                                optional: ['runtime'],
 
-        uglify: {
-            global: {
-                files: {
-                    "js/main.min.js": ["js/main.min.js"]
-                }
+                                //stage: 0// Strawman specification
+                                //stage: 1// Proposal specification
+                                stage: 2// Draft specification
+                                //stage: 3// Candidate specification
+                                //stage: 4// Finished specification
+                            }
+                        }
+                    ],
+                    noParse: [
+                        // do not process any bower modules- just use them
+                        /bower_components/
+                    ]
+                },
+                resolve: {
+                    extensions: ['', '.js'],
+                    root: [
+                        '_js'
+                    ]
+                },
+                resolveLoader: {
+                    root: path.join(__dirname, 'node_modules')// use common/node_modules for dependencies
+                },
+                //watch: true,
+                plugins: [
+                    new webpack.optimize.UglifyJsPlugin({
+                        minimize: true,
+                        compress: {// http://lisperator.net/uglifyjs/compress
+                            dead_code: false,
+                            side_effects: false,
+                            unused: false
+                        }
+                    })
+                ],
+                devtool: 'source-map'
             }
         },
 
@@ -87,7 +133,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ["_js/**/*.js"],
-                tasks: ["browserify", "uglify", "shell:jekyllBuild"]
+                tasks: ["generateJs", "shell:jekyllBuild"]
             },
             css: {
                 files: ["_scss/**/*.scss"],
@@ -98,15 +144,17 @@ module.exports = function (grunt) {
                 tasks: ["sass:demos", "autoprefixer:demos", "shell:jekyllBuild"]
             }
         }
-
     });
 
     require('jit-grunt')(grunt);
 
+    grunt.registerTask("generateJs", [
+        "webpack"
+    ]);
     grunt.registerTask("serve", ["shell:jekyllServe"]);
+
     grunt.registerTask("default", [
-        'browserify',
-        "uglify",
+        "generateJs",
 
         "sass",
         "autoprefixer",
