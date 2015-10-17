@@ -9,7 +9,7 @@ share_description: How to pass a data from Sass (via CSS) / CSS to JavaScript ( 
 ## The idea
 
 Once I needed to add component to show controls like the following:
-[![control](http://i.imgur.com/a4cv7Kc.png)]({{ site.baseurl }}/demos/data-from-sass-to-js/)
+[![control](http://i.imgur.com/5w2pnut.png)]({{ site.baseurl }}/demos/data-from-sass-to-js/)
 
 The number of sections in it had to be configurable. To do it usually you can add two config variables: one in Sass, one in JavaScript.
 
