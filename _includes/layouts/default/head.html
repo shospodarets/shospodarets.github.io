@@ -32,6 +32,17 @@
 
     {% if page.disable_default_css %}{% else %}<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css"/>{% endif %}
 
+    <script>
+        window.jekyllVariables = {
+            SITE_BASE_URL: "{{ site.baseurl }}",
+            GOOGLE_ANALYTICS: "{{ site.google_analytics }}",
+            DISCUSS_ID: "{{ site.disqus }}",
+            GOOGLE_SEARCH_ID: "{{ site.google_search }}",
+            SHARE_BUTTONS_ID: "{{ site.share_buttons }}"
+        }
+    </script>
+    <script defer src="{{ site.baseurl }}/js/main.min.js"></script>
+
 </head>
 
 <body>

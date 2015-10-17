@@ -9,22 +9,24 @@
     var CustomSearch = require('./outer_components/custom-search').CustomSearch;
     var ConditionalLoader = require('./outer_components/conditional-loader').ConditionalLoader;
 
-    // APP
-    var APP = window.jekyllVariables;
-    delete window.jekyllVariables;// cleaning
+    document.addEventListener("DOMContentLoaded", function () {
+        // APP
+        var APP = window.jekyllVariables;
+        delete window.jekyllVariables;// cleaning
 
-    // COMPONENTS
-    APP.events = new Events();
-    // OUTER COMPONENTS (loading services/additions from outside)
-    APP.analytics = new Analytics({
-        GOOGLE_ANALYTICS: APP.GOOGLE_ANALYTICS
-    });
-    APP.conditionalLoader = new ConditionalLoader({
-        SITE_BASE_URL: APP.SITE_BASE_URL,
-        DISCUSS_ID: APP.DISCUSS_ID,
-        SHARE_BUTTONS_ID: APP.SHARE_BUTTONS_ID
-    });
-    APP.customSearch = new CustomSearch({
-        GOOGLE_SEARCH_ID: APP.GOOGLE_SEARCH_ID
+        // COMPONENTS
+        APP.events = new Events();
+        // OUTER COMPONENTS (loading services/additions from outside)
+        APP.analytics = new Analytics({
+            GOOGLE_ANALYTICS: APP.GOOGLE_ANALYTICS
+        });
+        APP.conditionalLoader = new ConditionalLoader({
+            SITE_BASE_URL: APP.SITE_BASE_URL,
+            DISCUSS_ID: APP.DISCUSS_ID,
+            SHARE_BUTTONS_ID: APP.SHARE_BUTTONS_ID
+        });
+        APP.customSearch = new CustomSearch({
+            GOOGLE_SEARCH_ID: APP.GOOGLE_SEARCH_ID
+        });
     });
 }());
