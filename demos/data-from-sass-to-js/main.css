@@ -206,11 +206,12 @@
     height: 30px;
     background: #292929;
     border-radius: 3px;
-    -webkit-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out; }
-    .zoom .zoomChange:before, .zoom .zoomChange:after {
-      -webkit-transition: all .2s ease-in-out;
-              transition: all .2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out; }
+    .zoom .zoomChange:before,
+    .zoom .zoomChange:after {
+      -webkit-transition: all 0.2s ease-in-out;
+              transition: all 0.2s ease-in-out;
       background: none;
       opacity: 1 !important; }
     .zoom .zoomChange.minusBtn {

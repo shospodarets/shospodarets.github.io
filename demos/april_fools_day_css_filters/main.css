@@ -4,7 +4,9 @@ body {
 
 .demo > * {
   margin-bottom: 10px; }
+
 .demo pre {
   font-size: 16px; }
+
 .demo .bg-success {
   border-radius: 5px; }

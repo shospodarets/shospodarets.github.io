@@ -19,20 +19,16 @@
     // styles to be applied for tablets
   }
 */
-/*------------------------------------*\
-    Visibility classes let you show or hide elements based on screen size.
+/*------------------------------------*    Visibility classes let you show or hide elements based on screen size.
 
     $visibilityClassesPrefix may be pre-defined- in that case pre-defined value is used
 \*------------------------------------*/
 .show-for- {
-  /*------------------------------------*\
-      SHOW ONLY FOR SPECIFIC SIZE
+  /*------------------------------------*      SHOW ONLY FOR SPECIFIC SIZE
   \*------------------------------------*/
-  /*------------------------------------*\
-      SHOW ONLY WHEN SIZE IS SMALLER THEN SPECIFIED
+  /*------------------------------------*      SHOW ONLY WHEN SIZE IS SMALLER THEN SPECIFIED
   \*------------------------------------*/
-  /*------------------------------------*\
-      SHOW ONLY WHEN SIZE IS BIGGER THEN SPECIFIED
+  /*------------------------------------*      SHOW ONLY WHEN SIZE IS BIGGER THEN SPECIFIED
   \*------------------------------------*/ }
   @media only screen and (max-width: 1199px) {
     .show-for-desktop-large-only {

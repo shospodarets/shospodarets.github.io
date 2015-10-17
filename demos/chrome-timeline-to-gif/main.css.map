@@ -2,9 +2,9 @@
 	"version": 3,
 	"file": "main.css",
 	"sources": [
-		"../../main.scss"
+		"main.scss"
 	],
 	"sourcesContent": [],
-	"mappings": "AAAA;EACE,AAAO;EACP,AAAkB;EAClB,AAAQ",
+	"mappings": "AAAA,MAAM,CAAC;EACL,KAAK,EAAE,IAAK;EACZ,gBAAgB,EAAE,WAAY;EAC9B,MAAM,EAAE,IAAK,GAHP",
 	"names": []
 }

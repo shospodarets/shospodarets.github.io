@@ -42,7 +42,10 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'demos',
-                    src: ['**/*.scss'],
+                    src: [
+                        '**/*.scss',
+                        '!**/bower_components/**/*.scss'
+                    ],
                     dest: 'demos',
                     ext: '.css'
                 }]

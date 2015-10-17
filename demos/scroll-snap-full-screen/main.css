@@ -1,14 +1,12 @@
 @-webkit-keyframes arrow {
   0%, 100% {
     top: 50px; }
-
   50% {
     top: 80px; } }
 
 @keyframes arrow {
   0%, 100% {
     top: 50px; }
-
   50% {
     top: 80px; } }
 
