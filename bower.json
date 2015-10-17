@@ -1,8 +1,6 @@
 {
     "name": "blog.gospodarets.com",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "dependencies": {
-        "html5shiv": "~3.7.2",
-        "es6-promise": "~2.0.1"
     }
 }
