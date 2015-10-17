@@ -100,8 +100,7 @@ module.exports = function (grunt) {
 
         autoprefixer: {
             global: {
-                src: "css/style.css",
-                dest: "css/style.css"
+                src: "css/**/*.css"
             },
             demos: {
                 src: "demos/**/*.css"
