@@ -1,6 +1,10 @@
 <header class="masthead clearfix">
     <a href="{{ site.baseurl }}/" class="site-avatar">
-        <img width="70" src="{{ site.avatar }}" alt=""/>
+        <img alt="avatar"
+             width="70" height="70"
+             src="{{ site.avatar }}"
+             srcset="{{ site.avatar2x }} 2x, {{ site.avatar3x }} 3x"
+        >
     </a>
 
     <div class="site-info">

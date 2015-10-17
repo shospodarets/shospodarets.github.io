@@ -11,7 +11,9 @@ description: A front end web development blog with tutorials and ideas about Jav
 description_short: A front end web development blog
 
 # URL of your avatar or profile pic
-avatar: /images/avatar2.jpg
+avatar: /images/avatar.jpg
+avatar2x: /images/avatar2x.jpg
+avatar3x: /images/avatar3x.jpg
 
 #
 # Flags below are optional
