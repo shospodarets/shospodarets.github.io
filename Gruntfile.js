@@ -179,13 +179,18 @@ module.exports = function (grunt) {
 
     grunt.registerTask("serve", ["shell:jekyllServe"]);
 
-    grunt.registerTask("default", [
+    grunt.registerTask("build", [
         "generateJs",
 
         "generateCss",
         "generateDemosCss",
 
-        "shell:jekyllBuild",
+        "shell:jekyllBuild"
+    ]);
+
+    grunt.registerTask("default", [
+        "build",
+
         "watch"
     ]);
 };
