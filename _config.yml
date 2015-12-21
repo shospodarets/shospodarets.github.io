@@ -90,8 +90,14 @@ exclude:
 
 # Gems
 gems:
-  - jemoji # Emoji please!
+  - jekyll
+  - jemoji
   - jekyll-sitemap
+  - jekyll-paginate
+  - redcarpet
+  - jekyll-gist
+  - jekyll-feed
+  - pygments.rb
 
 # Tagging
 tag_page_layout: tag_page
