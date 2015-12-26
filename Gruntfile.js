@@ -77,7 +77,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: '_scss',
                     src: ['critical.scss'],
-                    dest: '_includes',
+                    dest: '_includes/generated',
                     ext: '.css'
                 }]
             },
