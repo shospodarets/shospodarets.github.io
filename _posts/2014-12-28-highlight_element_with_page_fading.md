@@ -23,7 +23,7 @@ Sometimes to highlight something we need to fade entire page except element/part
 
 Usually people provide such effect using 4 "fade" divs technique:
 
-<img width="350" src="http://i.imgur.com/sjaiFLR.png" alt=""/>
+<img width="350" src="https://i.imgur.com/sjaiFLR.png" alt=""/>
 
 <ol>
     <li>

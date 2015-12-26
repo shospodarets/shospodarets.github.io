@@ -2,14 +2,14 @@
 layout: post
 title: Passing data from Sass to JavaScript&#58; sass-to-js
 tags: [Sass, CSS, JavaScript, jQuery, AngularJS]
-share_image: http://i.imgur.com/e2Npbpf.gif
+share_image: https://i.imgur.com/e2Npbpf.gif
 share_description: How to pass a data from Sass (via CSS) / CSS to JavaScript ( js ) using sass-to-js
 ---
 
 ## The idea
 
 Once I needed to add component to show controls like the following:
-[![control](http://i.imgur.com/5w2pnut.png)]({{ site.baseurl }}/demos/data-from-sass-to-js/)
+[![control](https://i.imgur.com/5w2pnut.png)]({{ site.baseurl }}/demos/data-from-sass-to-js/)
 
 The number of sections in it had to be configurable. To do it usually you can add two config variables: one in Sass, one in JavaScript.
 
@@ -189,12 +189,12 @@ $(htmlEl)
 
 ### Codepen
 
-Usually to make quick demos or for code testing I use the wonderful [Codepen](http://codepen.io/).
+Usually to make quick demos or for code testing I use the wonderful [Codepen](https://codepen.io/).
 It has easy way to reuse your Pens as [External Resources](http://blog.codepen.io/2013/05/28/new-feature-use-pens-as-external-resources/).
 
-[sass-to-js](https://github.com/malyw/sass-to-js) code was just added as basis in [sass-to-js Pen](http://codepen.io/malyw/pen/zGxodr)
+[sass-to-js](https://github.com/malyw/sass-to-js) code was just added as basis in [sass-to-js Pen](https://codepen.io/malyw/pen/zGxodr)
 
-and can be reused in any other Pen as in [Sass-to-js demo](http://codepen.io/malyw/pen/zGxodr):
+and can be reused in any other Pen as in [Sass-to-js demo](https://codepen.io/malyw/pen/zGxodr):
 
 <span data-height="340" data-theme-id="178" data-slug-hash="zGxodr" data-user="malyw" data-default-tab="result" class="codepen"></span>
 

@@ -11,7 +11,7 @@ tags: [Awesome Demos]
         </h2>
     </div>
     <div>
-        <a href="http://codepen.io/pixelgrid/full/oxsGB" target="_blank">
+        <a href="https://codepen.io/pixelgrid/full/oxsGB" target="_blank">
             Web audio experiment
         </a>
     </div>
@@ -36,17 +36,17 @@ tags: [Awesome Demos]
 </div>
 <div class="more"></div>
 <div>
-    <a href="http://codepen.io/i0z/full/rEJjf" target="_blank">
+    <a href="https://codepen.io/i0z/full/rEJjf" target="_blank">
         3d city
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/noeldelgado/full/pGwFx" target="_blank">
+    <a href="https://codepen.io/noeldelgado/full/pGwFx" target="_blank">
         Direction-aware hover effect
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/fixcl/full/BIAjK" target="_blank">
+    <a href="https://codepen.io/fixcl/full/BIAjK" target="_blank">
         Lighting test
     </a>
 </div>
@@ -56,7 +56,7 @@ tags: [Awesome Demos]
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/onediv/full/hBrqE" target="_blank">
+    <a href="https://codepen.io/onediv/full/hBrqE" target="_blank">
         ToDo list design
     </a>
 </div>
@@ -75,7 +75,7 @@ tags: [Awesome Demos]
         </a>
     </div>
     <div>
-        <a href="http://codepen.io/PChambino/full/gqjtD" target="_blank">
+        <a href="https://codepen.io/PChambino/full/gqjtD" target="_blank">
             Labyrinth
         </a>
     </div>
@@ -85,17 +85,17 @@ tags: [Awesome Demos]
         </a>
     </div>
     <div>
-        <a href="http://codepen.io/stuffit/full/yFuma" target="_blank">
+        <a href="https://codepen.io/stuffit/full/yFuma" target="_blank">
             Cogs
         </a>
     </div>
     <div>
-        <a href="http://codepen.io/shubhra/full/fDhvH" target="_blank">
+        <a href="https://codepen.io/shubhra/full/fDhvH" target="_blank">
             Rain text
         </a>
     </div>
     <div>
-        <a href="http://codepen.io/ericthewino/full/ABbzr" target="_blank">
+        <a href="https://codepen.io/ericthewino/full/ABbzr" target="_blank">
             Lighting
         </a>
     </div>
@@ -105,7 +105,7 @@ tags: [Awesome Demos]
         </a>
     </div>
     <div>
-        <a href="http://codepen.io/shubhra/full/ItJqA" target="_blank">
+        <a href="https://codepen.io/shubhra/full/ItJqA" target="_blank">
             3d sphere
         </a>
     </div>

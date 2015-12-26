@@ -2,7 +2,7 @@
 layout: post
 title: Native CSS Scroll Snap Points
 tags: [CSS, JavaScript]
-share_image: http://i.imgur.com/hndMbNo.png
+share_image: https://i.imgur.com/hndMbNo.png
 share_description: Native CSS Scroll Snap Points
 ---
 
@@ -29,7 +29,7 @@ Meet the [CSS Scroll Snap Points specification](http://dev.w3.org/csswg/css-snap
 </a>
 
 <a href="{{ site.baseurl }}/demos/scroll-snap-full-screen/">
-    <img src="http://i.imgur.com/MwDPVuP.gif" alt=""/>
+    <img src="https://i.imgur.com/MwDPVuP.gif" alt=""/>
 </a>
 
 <div class="more"></div>
@@ -120,7 +120,7 @@ There is a block of common CSS rules for all galleries:
     scroll-snap-type: mandatory;
 
     /*
-    Make a Native Smooth Scrolling work: http://blog.gospodarets.com/native_smooth_scrolling/
+    Make a Native Smooth Scrolling work: blog.gospodarets.com/native_smooth_scrolling/
     After that browser starts to scroll blocks
     when you use anchors: http://help.typepad.com/anchor-tags.html
     It adds smooth scrolling instead of "jumping"
@@ -158,7 +158,7 @@ There is a block of common CSS rules for all galleries:
         <div class="open-close">
             <a href="{{ site.baseurl }}/demos/scroll-snap-galleries/#horizontal-gallery">
                 <div style="
-                    background: url(http://i.imgur.com/zAC2TNG.gif) no-repeat 0 0;
+                    background: url(https://i.imgur.com/zAC2TNG.gif) no-repeat 0 0;
                     width:522px;
                     height:322px;
                 ">
@@ -195,7 +195,7 @@ There is a block of common CSS rules for all galleries:
         <div class="open-close">
             <a href="{{ site.baseurl }}/demos/scroll-snap-galleries/#vertical-gallery">
                 <div style="
-                    background: url(http://i.imgur.com/Q6UEyOU.gif) no-repeat 0 0;
+                    background: url(https://i.imgur.com/Q6UEyOU.gif) no-repeat 0 0;
                     width:512px;
                     height:324px;
                 ">
@@ -209,7 +209,7 @@ There is a block of common CSS rules for all galleries:
 
 ["People You May Know" gallery]({{ site.baseurl }}/demos/scroll-snap-galleries/#youmayknow-gallery) shows a different type of snapping:
 snapping to the center/left of the image.
-Similar effect (showing part of the nearby images) is used, e.g. in the [Facebook "People You May Know" block](http://i.imgur.com/KYuC2Lk.gif).
+Similar effect (showing part of the nearby images) is used, e.g. in the [Facebook "People You May Know" block](https://i.imgur.com/KYuC2Lk.gif).
 
 In these examples Scroll Snapping alignement is set to the left/center of the gallery and can be switched using the checkboxes.
 
@@ -265,7 +265,7 @@ SCROLL SNAPPING ALIGNMENT
         <div class="open-close">
             <a href="{{ site.baseurl }}/demos/scroll-snap-galleries/#youmayknow-gallery">
                 <div style="
-                    background: url(http://i.imgur.com/JJuHxoZ.gif) no-repeat 0 0;
+                    background: url(https://i.imgur.com/JJuHxoZ.gif) no-repeat 0 0;
                     width:260px;
                     height:192px;
                 ">
@@ -322,7 +322,7 @@ That's it, we have set up a vertical full page height blocks with a scroll snapp
 All the other additions you can add on top of it:
 
 * Specific %ID% to each block to use then links with `href="%ID%"` to scroll to that box
-* `scroll-behavior, smooth;` to make the above scrolling smooth (check the [Smooth Scrolling article](http://blog.gospodarets.com/native_smooth_scrolling/) for details)
+* `scroll-behavior, smooth;` to make the above scrolling smooth (check the [Smooth Scrolling article](//blog.gospodarets.com/native_smooth_scrolling/) for details)
 * Using the links from the item 1 you can add boxes switcher and specific links like "scroll to the next slide"/"scroll to top"..
 
 As always, to make it work in browsers without a Snap Point support- the JavaScript Plugin is used ([jQuery Scrollify](http://projects.lukehaas.me/scrollify/)):
@@ -346,7 +346,7 @@ if (!isScrollSnapSupported) {
         <div class="open-close">
             <a href="{{ site.baseurl }}/demos/scroll-snap-full-screen/">
                 <div style="
-                    background: url(http://i.imgur.com/MwDPVuP.gif) no-repeat 0 0;
+                    background: url(https://i.imgur.com/MwDPVuP.gif) no-repeat 0 0;
                     width:240px;
                     height:234px;
                 ">
@@ -425,7 +425,7 @@ Don't forget to provide a `-webkit` vendor prefix for Safari.
                 <div class="open-close">
                     <a href="{{ site.baseurl }}/demos/scroll-snap-galleries/#youmayknow-gallery">
                         <div style="
-                    background: url(http://i.imgur.com/axmOqf3.gif) no-repeat 0 0;
+                    background: url(https://i.imgur.com/axmOqf3.gif) no-repeat 0 0;
                     width:522px;
                     height:322px;
                 ">
@@ -446,7 +446,7 @@ Don't forget to provide a `-webkit` vendor prefix for Safari.
                 <div class="open-close">
                     <a href="{{ site.baseurl }}/demos/scroll-snap-galleries/#youmayknow-gallery">
                         <div style="
-                    background: url(http://i.imgur.com/V90oXsC.gif) no-repeat 0 0;
+                    background: url(https://i.imgur.com/V90oXsC.gif) no-repeat 0 0;
                     width:522px;
                     height:354px;
                 ">
@@ -457,7 +457,7 @@ Don't forget to provide a `-webkit` vendor prefix for Safari.
         </div>
 
         <p>
-            For the demo it was fixed (thanks to the <a href="https://disqus.com/by/bigbosssnk/">BigBossSNK</a> <a href="http://blog.gospodarets.com/css-scroll-snap/#comment-2114038202">comment</a>) providing:
+            For the demo it was fixed (thanks to the <a href="https://disqus.com/by/bigbosssnk/">BigBossSNK</a> <a href="//blog.gospodarets.com/css-scroll-snap/#comment-2114038202">comment</a>) providing:
         </p>
 
         <div class="highlight">
@@ -485,7 +485,7 @@ Don't forget to provide a `-webkit` vendor prefix for Safari.
                 <div class="open-close">
                     <a href="{{ site.baseurl }}/demos/scroll-snap-galleries/#vetical-gallery">
                         <div style="
-                    background: url(http://i.imgur.com/Zd0rUPC.gif) no-repeat 0 0;
+                    background: url(https://i.imgur.com/Zd0rUPC.gif) no-repeat 0 0;
                     width:524px;
                     height:328px;
                 ">

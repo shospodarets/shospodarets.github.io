@@ -10,7 +10,7 @@ tags: [Awesome Demos]
     </h2>
 </div>
 <div>
-    <a href="http://codepen.io/thebabydino/pen/xbfao" target="_blank">
+    <a href="https://codepen.io/thebabydino/pen/xbfao" target="_blank">
         Animated 3D Molecules
     </a>
     <br/>
@@ -18,19 +18,19 @@ tags: [Awesome Demos]
         3D Beach Ball
     </a>
     <br/>
-    <a href="http://codepen.io/peterwestendorp/pen/wGECk" target="_blank">
+    <a href="https://codepen.io/peterwestendorp/pen/wGECk" target="_blank">
         3D CSS Sphere
     </a>
     <br/>
-    <a href="http://codepen.io/jlwebart/full/JDHne" target="_blank">
+    <a href="https://codepen.io/jlwebart/full/JDHne" target="_blank">
         Iphone 4S
     </a>
     <br/>
-    <a href="http://codepen.io/noeldelgado/pen/pGwFx" target="_blank">
+    <a href="https://codepen.io/noeldelgado/pen/pGwFx" target="_blank">
         Direction-aware hover effect
     </a>
     <br/>
-    <a href="http://codepen.io/ksksoft/pen/qnumF" target="_blank">
+    <a href="https://codepen.io/ksksoft/pen/qnumF" target="_blank">
         Real eye with CSS Sfumato
     </a>
 </div>

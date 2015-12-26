@@ -131,7 +131,7 @@ tags: [Awesome Demos]
     </div>
     <div>
         2.&nbsp;
-        <a href="http://codepen.io/noahblon/pen/GKflw" target="_blank">
+        <a href="https://codepen.io/noahblon/pen/GKflw" target="_blank">
             HyperSpace
             <br/>
             <img alt="image"
@@ -142,7 +142,7 @@ tags: [Awesome Demos]
     </div>
     <div>
         3.&nbsp;
-        <a href="http://codepen.io/juliangarnier/full/BsIih" target="_blank">
+        <a href="https://codepen.io/juliangarnier/full/BsIih" target="_blank">
             3d chess
             <br/>
             <img alt="image"
@@ -154,7 +154,7 @@ tags: [Awesome Demos]
     <div>
         4.&nbsp;
     <span>
-      <a href="http://codepen.io/peterwestendorp/pen/JEomi" target="_blank">
+      <a href="https://codepen.io/peterwestendorp/pen/JEomi" target="_blank">
           Tunnel 3D vision
           <br/>
           <img

@@ -60,12 +60,12 @@ tags: [Awesome Demos]
         </a>
     </div>
     <div>
-        <a href="http://codepen.io/jackrugile/pen/ejsbf" target="_blank">
+        <a href="https://codepen.io/jackrugile/pen/ejsbf" target="_blank">
             Organic Circle Loader
         </a>
     </div>
     <div>
-        <a href="http://codepen.io/zulien/pen/zsIGJ" target="_blank">
+        <a href="https://codepen.io/zulien/pen/zsIGJ" target="_blank">
             Piet style
         </a>
     </div>
@@ -94,26 +94,26 @@ tags: [Awesome Demos]
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/thebabydino/full/vDbyA" target="_blank">
+    <a href="https://codepen.io/thebabydino/full/vDbyA" target="_blank">
         Quasar
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/frankieali4/full/iHAEq" target="_blank">
+    <a href="https://codepen.io/frankieali4/full/iHAEq" target="_blank">
         Game Dice
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/thebabydino/pen/AhIiH" target="_blank">
+    <a href="https://codepen.io/thebabydino/pen/AhIiH" target="_blank">
         Another 3D experiment
     </a>
     <br/>
-    <a href="http://codepen.io/secretgspot/pen/yDcja" target="_blank">
+    <a href="https://codepen.io/secretgspot/pen/yDcja" target="_blank">
         css Sphere
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/pankajparashar/pen/EAbmo" target="_blank">
+    <a href="https://codepen.io/pankajparashar/pen/EAbmo" target="_blank">
         Arsenal VS Tottenham
     </a>
     <br/>
@@ -121,11 +121,11 @@ tags: [Awesome Demos]
         Motion Blur
     </a>
     <br/>
-    <a href="http://codepen.io/dropside/pen/qjDmb" target="_blank">
+    <a href="https://codepen.io/dropside/pen/qjDmb" target="_blank">
         Forest Encounter
     </a>
     <br/>
-    <a href="http://codepen.io/thebabydino/pen/JHtnG" target="_blank">
+    <a href="https://codepen.io/thebabydino/pen/JHtnG" target="_blank">
         Psychedelic Rainbow Spiral
     </a>
     <br/>

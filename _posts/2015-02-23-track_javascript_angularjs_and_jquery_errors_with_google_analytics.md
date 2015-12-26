@@ -2,7 +2,7 @@
 layout: post
 title: Track JavaScript, AngularJS and jQuery errors with Google Analytics
 tags: [AngularJS, jQuery, JavaScript, Analytics]
-share_image: http://i.imgur.com/zp4lwnW.png
+share_image: https://i.imgur.com/zp4lwnW.png
 share_description: How to track JavaScript, AngularJS and jQuery errors with Google Analytics
 ---
 
@@ -253,11 +253,11 @@ In GA you can find two main reports for `Events`:
 
 * **Real-Time Events**: GA :arrow_right: Real-Time :arrow_right: Events :arrow_right: Events (Last 30 min) (TAB)
 
-<img src="http://i.imgur.com/xOGfMIo.png" alt="Real-Time Events"/>
+<img src="https://i.imgur.com/xOGfMIo.png" alt="Real-Time Events"/>
 
 * **Common Events Report**: GA :arrow_right: Behavior :arrow_right: Events :arrow_right: Overview :arrow_right: view full report (LINK)
 
-<img src="http://i.imgur.com/YkUt26G.gif" alt="Common Events Report"/>
+<img src="https://i.imgur.com/YkUt26G.gif" alt="Common Events Report"/>
 
 ## `0, true` params in the end
 
@@ -265,15 +265,15 @@ These params mean respectively according [the manual](https://developers.google.
 
 * `0` - opt_value (default value is `0`)
 
-[Detailed info about this param](http://stackoverflow.com/a/22722302/1120798)
+[Detailed info about this param](//stackoverflow.com/a/22722302/1120798)
 
 * `true` - opt_noninteraction (default value is `false`)
 
-Is set to `true` to not affect the bounce rate. Here is [the description](http://stackoverflow.com/a/15651831/1120798) in more details
+Is set to `true` to not affect the bounce rate. Here is [the description](//stackoverflow.com/a/15651831/1120798) in more details
 
 
 ## Exceptions - Web Tracking (analytics.js)
 
 [**Universal Analytics**](https://support.google.com/analytics/answer/2790010) proposes other way to track exceptions- [Exceptions - Web Tracking (analytics.js)](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions).
 
-But after some research it appeared that report for it is [not so easy to configure and even to find](http://stackoverflow.com/a/21718577/1120798).
+But after some research it appeared that report for it is [not so easy to configure and even to find](//stackoverflow.com/a/21718577/1120798).

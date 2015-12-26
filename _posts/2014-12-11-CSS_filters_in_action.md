@@ -2,7 +2,7 @@
 layout: post
 title: CSS filters in action
 tags: [JavaScript, CSS]
-share_image: http://i.imgur.com/ppLN9Sv.jpg
+share_image: https://i.imgur.com/ppLN9Sv.jpg
 share_description: CSS filters usage examples, how to use filter() in CSS
 ---
 
@@ -170,14 +170,14 @@ html{
         Enjoy the result:
 
         <div>
-            <img src="http://i.imgur.com/2RFO8fL.gif?1" />
+            <img src="https://i.imgur.com/2RFO8fL.gif?1" />
         </div>
     </li>
 </ol>
 
-Other example- applying inverted theme to my site <a href="http://gospodarets.com" target="_blank">gospodarets.com</a>:
+Other example- applying inverted theme to my site <a href="//gospodarets.com" target="_blank">gospodarets.com</a>:
 <iframe
-        src="http://malyw.github.io/css-filters/?src=http://gospodarets.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&hideContentExcept=.iframe-wrapper&overflowHeight=350"
+        src="//malyw.github.io/css-filters/?src=http://gospodarets.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&hideContentExcept=.iframe-wrapper&overflowHeight=350"
         frameborder="0"
         allowtransparency="true" allowfullscreen="true"
         style="width: 100%; overflow: hidden;"
@@ -221,7 +221,7 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Vintage:
         <iframe
-                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22grayscale%22:0.1,%22saturate%22:1,%22sepia%22:0.6%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="//malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22grayscale%22:0.1,%22saturate%22:1,%22sepia%22:0.6%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
@@ -233,7 +233,7 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Acid:
         <iframe
-                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22hue-rotate%22:72,%22saturate%22:3,%22sepia%22:0.2%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="//malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22hue-rotate%22:72,%22saturate%22:3,%22sepia%22:0.2%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
@@ -245,7 +245,7 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Grayscale:
         <iframe
-                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22grayscale%22:1%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="//malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22grayscale%22:1%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
@@ -257,7 +257,7 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Inverted colors:
         <iframe
-                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="//malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
@@ -297,7 +297,7 @@ And of course it just looks awesome :wink:
     <li>
         Result:
         <iframe
-                src="http://malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22blur%22:2%7D&modal=1&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="//malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22blur%22:2%7D&modal=1&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"

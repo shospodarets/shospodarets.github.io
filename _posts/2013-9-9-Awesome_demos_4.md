@@ -10,20 +10,20 @@ tags: [Awesome Demos]
     </h2>
 </div>
 <div>
-    <a href="http://codepen.io/ltackett/full/tIHzp" target="_blank">
+    <a href="https://codepen.io/ltackett/full/tIHzp" target="_blank">
         Backgrounds Clouds
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/thebabydino/full/BdDvF" target="_blank">
+    <a href="https://codepen.io/thebabydino/full/BdDvF" target="_blank">
         Pure CSS animated pyramid ball
     </a>
     <br/>
-    <a href="http://codepen.io/timohausmann/full/KdeAb" target="_blank">
+    <a href="https://codepen.io/timohausmann/full/KdeAb" target="_blank">
         Color Wheel. Literally
     </a>
     <br/>
-    <a href="http://codepen.io/hugo/full/sgJji" target="_blank">
+    <a href="https://codepen.io/hugo/full/sgJji" target="_blank">
         Color Changing Spirograph
     </a>
 </div>
@@ -45,11 +45,11 @@ tags: [Awesome Demos]
         Wind map
     </a>
     <br/>
-    <a href="http://codepen.io/ara_node/full/nuJCG" target="_blank">
+    <a href="https://codepen.io/ara_node/full/nuJCG" target="_blank">
         Motion graphic typeface
     </a>
     <br/>
-    <a href="http://codepen.io/Francext/full/pHobv" target="_blank">
+    <a href="https://codepen.io/Francext/full/pHobv" target="_blank">
         Molecules
     </a>
     <br/>
@@ -66,17 +66,17 @@ tags: [Awesome Demos]
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/grgrdvrt/full/xoEHs" target="_blank">
+    <a href="https://codepen.io/grgrdvrt/full/xoEHs" target="_blank">
         Circles
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/msval/full/dLyDG" target="_blank">
+    <a href="https://codepen.io/msval/full/dLyDG" target="_blank">
         Random spherical effects
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/EvanWard/full/yKGrH" target="_blank">
+    <a href="https://codepen.io/EvanWard/full/yKGrH" target="_blank">
         Minimal Planets
     </a>
 </div>

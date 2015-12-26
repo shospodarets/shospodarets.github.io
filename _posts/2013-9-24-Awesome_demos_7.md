@@ -54,12 +54,12 @@ tags: [Awesome Demos]
     </strong>
 </div>
 <div>
-    <a href="http://codepen.io/Sheepeuh/pen/cFazd" target="_blank">
+    <a href="https://codepen.io/Sheepeuh/pen/cFazd" target="_blank">
         Rain
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/rlemon/pen/gkwzF" target="_blank">
+    <a href="https://codepen.io/rlemon/pen/gkwzF" target="_blank">
         Petals?
     </a>
 </div>
@@ -72,37 +72,37 @@ tags: [Awesome Demos]
     </strong>
 </div>
 <div>
-    <a href="http://codepen.io/hugo/pen/AjJFL" target="_blank">
+    <a href="https://codepen.io/hugo/pen/AjJFL" target="_blank">
         DNA Double Helix
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/jordanoaragao/pen/hyFzg" target="_blank">
+    <a href="https://codepen.io/jordanoaragao/pen/hyFzg" target="_blank">
         3D iPhone5
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/maggiben/pen/zhloq" target="_blank">
+    <a href="https://codepen.io/maggiben/pen/zhloq" target="_blank">
         3D TagCloud
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/hugo/pen/IfDhj" target="_blank">
+    <a href="https://codepen.io/hugo/pen/IfDhj" target="_blank">
         Rainbow
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/hugo/pen/xIbnz" target="_blank">
+    <a href="https://codepen.io/hugo/pen/xIbnz" target="_blank">
         Few more watches
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/thebabydino/pen/yehGi" target="_blank">
+    <a href="https://codepen.io/thebabydino/pen/yehGi" target="_blank">
         Explode cube to rhombic
     </a>
 </div>
 <div>
-    <a href="http://codepen.io/siiron/pen/bufei" target="_blank">
+    <a href="https://codepen.io/siiron/pen/bufei" target="_blank">
         Animated books
     </a>
 </div>

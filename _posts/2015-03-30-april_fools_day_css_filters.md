@@ -2,7 +2,7 @@
 layout: post
 title: Cool effects for April Fools with CSS filters
 tags: [CSS]
-share_image: http://i.imgur.com/VnF9zsP.png
+share_image: https://i.imgur.com/VnF9zsP.png
 share_description: How to implement nice effects for 1 April Fools Day with CSS filters
 ---
 
@@ -12,12 +12,12 @@ We already have some jokes from Google like [com.google](https://com.google/) an
 
 There is [the list of others](http://www.theguardian.com/world/live/2015/apr/01/april-fools-day-jokes-2015-the-best-from-around-the-world).
 
-So, want to provide some nice effect for your site/page? It's easy to do adding only one line of CSS- [CSS filter](http://blog.gospodarets.com/CSS_filters_in_action/).
+So, want to provide some nice effect for your site/page? It's easy to do adding only one line of CSS- [CSS filter](//blog.gospodarets.com/CSS_filters_in_action/).
 
 <div class="text-center">
     <p>
         <a href="{{ site.baseurl }}/demos/april_fools_day_css_filters/">
-            <img class="rounded" width="400" src="http://i.imgur.com/HwT3PvG.gif" alt=""/>
+            <img class="rounded" width="400" src="https://i.imgur.com/HwT3PvG.gif" alt=""/>
         </a>
     </p>
 

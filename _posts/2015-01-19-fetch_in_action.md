@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript Fetch API in action
 tags: [JavaScript]
-share_image: http://i.imgur.com/ghk4Ptj.png
+share_image: https://i.imgur.com/ghk4Ptj.png
 share_description: JavaScript Fetch API usage examples, how to use fetch() natively in JS
 ---
 
@@ -372,7 +372,7 @@ function require(/* 'URL1', 'URL2', ... */) {
 
 /*--- TEST  --*/
 var jqueryUrl = 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js';
-var d3Url = 'http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.5/d3.min.js';
+var d3Url = 'https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.5/d3.min.js';
 require(jqueryUrl, d3Url)
     .then(function (loadedModules) {// "then" accepts only one param
         var jQuery = loadedModules[0];
@@ -510,7 +510,7 @@ console.log('Started downloading image from <a href="' + sourceImageUrl + '">goo
 downloadFile(sourceImageUrl)// download file from one resource
     .then(uploadImageToImgur)// upload it to another
     .then(function (data) {
-        console.log('Image successfully uploaded to <a href="http://imgur.com/' + data.data.id + '">imgur.com url</a>');
+        console.log('Image successfully uploaded to <a href="//imgur.com/' + data.data.id + '">imgur.com url</a>');
         console.log('<img src="' + data.data.link + '"/>');// for demo
     })
     .catch(function (error) {
@@ -576,7 +576,7 @@ With Fetch and Promise Polyfills it works wonderfully in all browsers up-to IE9 
 
 Fetching HTML from one JS Bin to another:<br>
 
-<a class="jsbin-embed" href="http://jsbin.com/payaxo/latest/embed?output&height=400px"></a>
+<a class="jsbin-embed" href="//jsbin.com/payaxo/latest/embed?output&height=400px"></a>
 
 <h2 id="limitations">Limitations</h2>
 

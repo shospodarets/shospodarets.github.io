@@ -2,7 +2,7 @@
 layout: post
 title: TITLE
 tags: [Tag1, Tag2]
-share_image: http://i.imgur.com/xlqN8Gs.png
+share_image: https://i.imgur.com/xlqN8Gs.png
 share_description: Description how to use something
 ---
 
@@ -12,7 +12,7 @@ share_description: Description how to use something
 
 Paragraph `inline code`
 
-<a href="http://malyw.github.io/css-filters/"
+<a href="//malyw.github.io/css-filters/"
    target="_blank"
    class="btn-pulse">
     <span class="wrapper">
@@ -31,7 +31,7 @@ Paragraph `inline code`
 ```
 
 <iframe
-        src="http://malyw.github.io/css-filters/?src=http://gospodarets.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&hideContentExcept=.iframe-wrapper&overflowHeight=350"
+        src="//malyw.github.io/css-filters/?src=//gospodarets.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&hideContentExcept=.iframe-wrapper&overflowHeight=350"
         frameborder="0"
         allowtransparency="true" allowfullscreen="true"
         style="width: 100%; overflow: hidden;"
@@ -46,4 +46,4 @@ Paragraph `inline code`
 
 <div class="caniuse" data-feature="css-filters"></div>
 
-<a class="jsbin-embed" href="http://jsbin.com/payaxo/latest/embed?output&height=400px"></a>
+<a class="jsbin-embed" href="//jsbin.com/payaxo/latest/embed?output&height=400px"></a>

@@ -60,27 +60,27 @@ tags: [Awesome Demos]
     </a>
   </div>
   <div>
-    <a href="http://codepen.io/jackrugile/full/BlDjk" target="_blank">
+    <a href="https://codepen.io/jackrugile/full/BlDjk" target="_blank">
       Light loader
     </a>
   </div>
   <div>
-    <a href="http://codepen.io/soulwire/full/Ckzen" target="_blank">
+    <a href="https://codepen.io/soulwire/full/Ckzen" target="_blank">
       Ribbon
     </a>
   </div>
   <div>
-    <a href="http://codepen.io/tholman/full/Apvxe" target="_blank">
+    <a href="https://codepen.io/tholman/full/Apvxe" target="_blank">
       Mechanical Grass
     </a>
   </div>
   <div>
-    <a href="http://codepen.io/jjhesk/full/nuKzi" target="_blank">
+    <a href="https://codepen.io/jjhesk/full/nuKzi" target="_blank">
       Train
     </a>
   </div>
   <div>
-    <a href="http://codepen.io/simeydotme/full/uoBqE" target="_blank">
+    <a href="https://codepen.io/simeydotme/full/uoBqE" target="_blank">
       Particools
     </a>
   </div>
@@ -95,7 +95,7 @@ tags: [Awesome Demos]
     </strong>
   </div>
   <div>
-    <a href="http://codepen.io/diegoleme/full/rIokB" target="_blank">
+    <a href="https://codepen.io/diegoleme/full/rIokB" target="_blank">
       Whale
     </a>
   </div>
@@ -117,27 +117,27 @@ tags: [Awesome Demos]
   </strong>
 </div>
 <div>
-  <a href="http://codepen.io/hugo/full/xzjGB" target="_blank">
+  <a href="https://codepen.io/hugo/full/xzjGB" target="_blank">
     Shade
   </a>
 </div>
 <div>
-  <a href="http://codepen.io/Xpressive_Team/full/tDHgb" target="_blank">
+  <a href="https://codepen.io/Xpressive_Team/full/tDHgb" target="_blank">
     Gran Turismo
   </a>
 </div>
 <div>
-  <a href="http://codepen.io/HugoGiraudel/full/avFEk" target="_blank">
+  <a href="https://codepen.io/HugoGiraudel/full/avFEk" target="_blank">
     Meta Fizzy
   </a>
 </div>
 <div>
-  <a href="http://codepen.io/chriscoyier/pen/uaryz" target="_blank">
+  <a href="https://codepen.io/chriscoyier/pen/uaryz" target="_blank">
     Magic Carpet
   </a>
 </div>
 <div>
-  <a href="http://codepen.io/jkneb/full/qJBIl" target="_blank">
+  <a href="https://codepen.io/jkneb/full/qJBIl" target="_blank">
     CSS 3D cube
   </a>
 </div>
@@ -147,17 +147,17 @@ tags: [Awesome Demos]
   </a>
 </div>
 <div>
-  <a href="http://codepen.io/hugo/full/Dlicg" target="_blank">
+  <a href="https://codepen.io/hugo/full/Dlicg" target="_blank">
     Animated atom
   </a>
 </div>
 <div>
-  <a href="http://codepen.io/thebabydino/full/IdJCi" target="_blank">
+  <a href="https://codepen.io/thebabydino/full/IdJCi" target="_blank">
     CSS Torus
   </a>
 </div>
 <div>
-  <a href="http://codepen.io/BluNeon/full/FGjxK" target="_blank">
+  <a href="https://codepen.io/BluNeon/full/FGjxK" target="_blank">
     GTA Vice City Text Effect
   </a>
 </div>
@@ -174,7 +174,7 @@ tags: [Awesome Demos]
     </strong>
   </div>
   <div>
-    <a href="http://codepen.io/sol0mka/full/aHImz" target="_blank">
+    <a href="https://codepen.io/sol0mka/full/aHImz" target="_blank">
       Music time!
     </a>
     <strong>
@@ -242,7 +242,7 @@ tags: [Awesome Demos]
       </a>
     </div>
     <div>
-      <a href="http://codepen.io/sol0mka/full/Jsyxq" target="_blank">
+      <a href="https://codepen.io/sol0mka/full/Jsyxq" target="_blank">
         Touch device scroll effect
       </a>
     </div>

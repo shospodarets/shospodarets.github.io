@@ -3,7 +3,7 @@ layout: default
 ---
 
 <article
-        itemscope itemtype="http://schema.org/Article"
+        itemscope itemtype="https://schema.org/Article"
         class="post">
     <h1
             itemprop="name"
@@ -18,11 +18,11 @@ layout: default
             <meta itemprop="articleSection" content="{{ tag }}">
             {% endfor %}
             <meta itemprop="url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}">
-            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
                 <meta itemprop="name" content="{{ site.author }}">
             </span>
             <img class="article-image" itemprop="image" src="{{ site.avatar }}"/>
-            <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+            <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
                 <span itemprop="name">
                     {{ site.name }}
                 </span>

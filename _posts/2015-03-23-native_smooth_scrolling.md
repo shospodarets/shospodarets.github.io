@@ -2,7 +2,7 @@
 layout: post
 title: Native Smooth Scroll behavior
 tags: [CSS, JavaScript]
-share_image: http://i.imgur.com/a6xtXnx.png
+share_image: https://i.imgur.com/a6xtXnx.png
 share_description: Using CSSOM smooth scroll API in JavaScript and CSS
 ---
 
@@ -121,7 +121,7 @@ if (isSmoothScrollSupported) {
 
 <div class="text-center">
     <a href="{{ site.baseurl }}/demos/smooth-scroll-api/">
-        <img src="http://i.imgur.com/6P5ikUL.gif" alt=""/>
+        <img src="https://i.imgur.com/6P5ikUL.gif" alt=""/>
     </a>
 </div>
 

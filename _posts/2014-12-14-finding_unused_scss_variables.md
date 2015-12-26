@@ -61,7 +61,7 @@ Let's imagine you have folder "sass" where are SCSS files of your project. Then:
         As result you will have in the shell list of the unused SCSS variables
     </li>
 </ol>
-<img src="http://i.imgur.com/1o0jhwL.gif" alt=""/>
+<img src="https://i.imgur.com/1o0jhwL.gif" alt=""/>
 
 
 <h2>N.B.</h2>

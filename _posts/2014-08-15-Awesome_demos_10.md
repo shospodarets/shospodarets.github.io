@@ -28,39 +28,39 @@ tags: [Awesome Demos]
     <br/>
     <br/>
     <strong>
-        <a href="http://codepen.io/noahblon/pen/CsxfH" target="_blank">
+        <a href="https://codepen.io/noahblon/pen/CsxfH" target="_blank">
             3D CSS Typography
         </a>
     </strong>
     <br/>
     <strong>
-        <a href="http://codepen.io/noahblon/pen/CsxfH" target="_blank">
+        <a href="https://codepen.io/noahblon/pen/CsxfH" target="_blank">
             <img alt="image" src="https://31.media.tumblr.com/1b96980522b1e80fe2a9c95afe25442a/tumblr_inline_nacj8cOgfw1qhadd5.png"/>
         </a>
     </strong>
     <br/>
     <br/>
     <strong>
-        <a href="http://codepen.io/sivan/pen/alKwf" target="_blank">
+        <a href="https://codepen.io/sivan/pen/alKwf" target="_blank">
             CSS-Only Animated input placeholders
         </a>
     </strong>
     <br/>
     <strong>
-        <a href="http://codepen.io/sivan/pen/alKwf" target="_blank">
+        <a href="https://codepen.io/sivan/pen/alKwf" target="_blank">
             <img alt="image" src="https://31.media.tumblr.com/bead0d88570c4b542b877201eee13ec8/tumblr_inline_nacj8qukvI1qhadd5.png"/>
         </a>
     </strong>
     <br/>
     <br/>
     <strong>
-        <a href="http://codepen.io/fbrz/pen/whxbF" target="_blank">
+        <a href="https://codepen.io/fbrz/pen/whxbF" target="_blank">
             CSS 3D Bending Effect
         </a>
     </strong>
     <br/>
     <strong>
-        <a href="http://codepen.io/fbrz/pen/whxbF" target="_blank">
+        <a href="https://codepen.io/fbrz/pen/whxbF" target="_blank">
             <img alt="image" src="https://31.media.tumblr.com/0cd21c2deee62a20c7bb8811d5b2a294/tumblr_inline_nacj90TkFi1qhadd5.png"/>
         </a>
     </strong>
@@ -69,25 +69,25 @@ tags: [Awesome Demos]
 <div>
     <strong>
         <br/>
-        <a href="http://codepen.io/florian-wirtz/pen/pohIK" target="_blank">
+        <a href="https://codepen.io/florian-wirtz/pen/pohIK" target="_blank">
             Rotating Pyramids
         </a>
     </strong>
     <br/>
     <strong>
-        <a href="http://codepen.io/florian-wirtz/pen/pohIK" target="_blank">
+        <a href="https://codepen.io/florian-wirtz/pen/pohIK" target="_blank">
             <img alt="image" src="https://31.media.tumblr.com/d696f0eaa4e7c598c69d596c2af21fc4/tumblr_inline_nacj9pxnqj1qhadd5.png"/>
         </a>
         <br/>
     </strong>
     <strong>
         <br/>
-        <a href="http://codepen.io/keithclark/pen/ptHKv" target="_blank">
+        <a href="https://codepen.io/keithclark/pen/ptHKv" target="_blank">
             Coloured lightmaps with CSS blend modes
         </a>
     </strong>
     <strong>
-        <a href="http://codepen.io/keithclark/pen/ptHKv" target="_blank">
+        <a href="https://codepen.io/keithclark/pen/ptHKv" target="_blank">
             <img alt="image" src="https://31.media.tumblr.com/298fb4e287470393d2c7bc545f2710dd/tumblr_inline_nacjatxCOZ1qhadd5.png"/>
         </a>
         <br/>

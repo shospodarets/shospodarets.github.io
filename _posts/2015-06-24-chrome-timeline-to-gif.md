@@ -2,7 +2,7 @@
 layout: post
 title: Convert a Chrome Timeline data to a GIF (video)
 tags: [JavaScript]
-share_image: http://i.imgur.com/ezQWlBV.gif
+share_image: https://i.imgur.com/ezQWlBV.gif
 share_description: Convert a Chrome Timeline data to an animated GIF (video)
 ---
 
@@ -21,7 +21,7 @@ To enable it:
 * Reload (open/close) the DevTools
 * In the "Timeline" check the "Screenshots" checkbox
 
-![manual](http://i.imgur.com/0Q2bPXU.gif)
+![manual](https://i.imgur.com/0Q2bPXU.gif)
 
 After that during the timeline recording screenshots would be automatically included and shown in the DevTools.
 
@@ -48,7 +48,7 @@ So I created a project where anyone can convert a saved Chrome Timeline Data to 
 </a>
 
 <a target="_blank" href="{{ site.baseurl }}/demos/chrome-timeline-to-gif/">
-    <img src="http://i.imgur.com/ezQWlBV.gif" alt="" />
+    <img src="https://i.imgur.com/ezQWlBV.gif" alt="" />
 </a>
 
 ### [Check the code on Github](https://github.com/malyw/chrome-timeline-to-gif-demo)
