@@ -35,7 +35,9 @@ ConditionalLoader.prototype.loadScripts = function () {
     /* SHARE BUTTONS */
     if (document.querySelectorAll('.share-buttons').length) {
         UTILS.loadScript(
-            UTILS.httpProtocol + '//w.sharethis.com/button/buttons.js',
+            document.location.protocol == 'https:' ?
+                'https://ws.sharethis.com/button/buttons.js' :
+                'http://w.sharethis.com/button/buttons.js',
             false,// if "false"-> loads async
             function () {
                 stLight.options({
