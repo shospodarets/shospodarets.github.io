@@ -1,4 +1,4 @@
-# [blog.gospodarets.com](http://blog.gospodarets.com/)
+# [blog.gospodarets.com](https://blog.gospodarets.com/)
 
 1. $ npm run gem-install
 1. $ npm install

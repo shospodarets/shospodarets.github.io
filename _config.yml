@@ -1,6 +1,6 @@
 author: Serg Gospodarets
 keywords: javascript,js,html,html5,css,css3,git,shell,node.js,frontend
-personal-site-url: http://gospodarets.com
+personal-site-url: https://gospodarets.com
 google-plus-account-url: https://plus.google.com/u/0/+SergeyGospodarets
 google-plus-posts: https://plus.google.com/u/0/+SergeyGospodarets/posts
 # Name of site (displayed in the header)
@@ -36,11 +36,11 @@ footer-links:
   linkedin: gospodarets
   pinterest:
   rss: blog.gospodarets.com # make sure the "url" above is set!
-  feedburner: http://feeds.feedburner.com/sergey_gospodarets_blog # RSS alternative subscription
+  feedburner: https://feeds.feedburner.com/sergey_gospodarets_blog # RSS alternative subscription
   twitter: malyw
   googleplus: SergeyGospodarets
 
-# http://jekyllrb.com/docs/pagination/
+# https://jekyllrb.com/docs/pagination/
 paginate: 5
 
 # This will enable commenting on posts
@@ -57,12 +57,12 @@ share_buttons: d17f6eee-8573-4fba-b16e-2bca31a25157
 
 # Website URL
 # Used for Sitemap.xml and your RSS feed
-url: http://blog.gospodarets.com
+url: https://blog.gospodarets.com
 demos_code_base_url: https://github.com/malyw/malyw.github.io/tree/master/demos
 
 # If hosting site at a Project repository on GitHub pages
-# (http://username.github.io/repository-name)
-# and NOT your User repository (http://username.github.io)
+# (https://username.github.io/repository-name)
+# and NOT your User repository (https://username.github.io)
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
