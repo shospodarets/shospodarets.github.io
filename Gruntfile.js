@@ -8,9 +8,6 @@ var rootPath = path.resolve();
 //var DEBUG_IS_ENABLED = Boolean(process.env.BLOG_DEBUG);// environment variable
 
 module.exports = function (grunt) {
-
-    "use strict";
-
     grunt.initConfig({
         webpack: {
             dist: {
@@ -27,14 +24,8 @@ module.exports = function (grunt) {
                             query: {
                                 // https://github.com/babel/babel-loader#options
                                 cacheDirectory: true,
-                                // http://babeljs.io/docs/usage/options/
-                                optional: ['runtime'],
-
-                                //stage: 0// Strawman specification
-                                //stage: 1// Proposal specification
-                                stage: 2// Draft specification
-                                //stage: 3// Candidate specification
-                                //stage: 4// Finished specification
+                                presets: ['es2015', 'stage-2'],
+                                compact: false
                             }
                         }
                     ],

@@ -1,4 +1,9 @@
-'use strict';
+/**
+ * Babel Polyfill (to include Promise etc.)
+ *
+ * https://babeljs.io/docs/usage/polyfill/
+ */
+require('babel-polyfill');
 
 (function () {
     // DEPENDENCIES
