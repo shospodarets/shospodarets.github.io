@@ -2,7 +2,7 @@ importScripts('js/libs/cache-polyfill.js');
 
 /*--- CACHE ---*/
 
-const CACHE_NAME = 'v2';
+const CACHE_NAME = 'v3';
 
 /* CACHE REQUIRED ITEMS */
 const urlsToCache = [
@@ -17,66 +17,79 @@ const urlsToCache = [
     '/js/main.min.js'
 ];
 
-self.addEventListener('install', function (event) {
+self.addEventListener('install', (event) => {
     // OLD SW MIGHT BE STILL ACTIVE HERE
     event.waitUntil(
-        caches.open(CACHE_NAME).then(function (cache) {
-            return cache.addAll(urlsToCache);
-        })
+        caches.open(CACHE_NAME)
+            .then((cache) =>cache.addAll(urlsToCache))
+            .catch((err)=> {
+                log(`Error opening the cache "${CACHE_NAME}": ${err}`, 'error');
+            })
     );
 });
 
 /* DELETE PREVIOUS CACHES */
-self.addEventListener('activate', function (event) {
+self.addEventListener('activate', (event) => {
+    log('CACHE_NAME:' + CACHE_NAME);
     // CURRENT SW TAKES CONTROL, OLD ISN'T ACTIVE HERE
-    var cacheWhitelist = [CACHE_NAME];
-
     event.waitUntil(
-        caches.keys().then(function (cacheNames) {
-            return Promise.all(
-                cacheNames.map(function (cacheName) {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
-        })
+        caches.keys()
+            .then((cacheNames) => {
+                return Promise.all(
+                    cacheNames.map((cacheName) => {
+                        if (cacheName !== CACHE_NAME) {
+                            return caches.delete(cacheName);
+                        }
+                    })
+                );
+            })
+            .catch((err) => {
+                log(`Error reading cache keys for "${CACHE_NAME}": ${err}`, 'error');
+            })
     );
 });
 
 /* FETCH */
-self.addEventListener('fetch', function (event) {
+self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request)
-            .then(function (responseFromCache) {
+            .then((responseFromCache) => {
                     if (responseFromCache) {
                         log('* [Serving cached]: ' + event.request.url);
                         return responseFromCache;
                     }
 
-                    log('* [Fetching]: ' + event.request.url);
-                    log('CACHE_NAME:' + CACHE_NAME);
+                    //log('* [Fetching]: ' + event.request.url);
 
                     // event.request.clone -  as event.request is used after and can be consumed only once
                     return fetch(event.request.clone())
-                        .then(function (response) {
+                        .then((response) => {
                             // Check if we received a valid response
                             if (!response || response.status !== 200 || response.type !== 'basic') {
                                 return response;
                             }
 
                             caches.open(CACHE_NAME)
-                                .then(function (cache) {
+                                .then((cache) => {
                                     log('* [Cumulative add to cache:]: ' + event.request.url);
 
                                     // response.clone - because response can be consumed only once
                                     cache.put(event.request, response.clone());
+                                })
+                                .catch((err)=> {
+                                    log(`Error opening the cache "${CACHE_NAME}": ${err}`, 'error');
                                 });
 
                             return response;
+                        })
+                        .catch((err)=> {
+                            log(`Error fetching the request "${event.request.url}": ${err}`, 'error');
                         });
                 }
             )
+            .catch((err)=> {
+                log(`Error matching cache for the request "${event.request}": ${err}`, 'error');
+            })
     );
 });
 
@@ -84,11 +97,16 @@ self.addEventListener('fetch', function (event) {
 
 /**
  * @param str {String}
+ * @param isError {Boolean|String}
  *
  * Output string to console
  */
-function log(str) {
-    //if (!self.debug) return;
+function log(str, isError) {
+    //if (!self.debug) return;// ToDo
 
-    console.log(str);
+    if (isError) {
+        console.error(str);
+    } else {
+        console.log(str);
+    }
 }
