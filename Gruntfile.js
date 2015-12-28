@@ -140,10 +140,6 @@ module.exports = function (grunt) {
                 files: ["_js/main/**"],
                 tasks: ["generateJs", "jekyllBuild"]
             },
-            jsDist: {
-                files: ["_js/dist/**/*"],
-                tasks: ["jekyllBuild"]
-            },
             css: {
                 files: ["_scss/**/*.scss"],
                 tasks: ["generateCss", "jekyllBuild"]
@@ -151,26 +147,6 @@ module.exports = function (grunt) {
             css_demos: {
                 files: ["demos/**/*.scss"],
                 tasks: ["generateDemosCss", "jekyllBuild"]
-            }
-        },
-
-        clean: {
-            jsDist: [
-                "js/dist"
-            ]
-        },
-
-        copy: {
-            jsDist: {
-                files: [
-                    // js/dist
-                    {
-                        expand: true,
-                        cwd: '_js/dist',
-                        src: ['**'],
-                        dest: 'js/dist'
-                    }
-                ]
             }
         }
     });
@@ -193,10 +169,6 @@ module.exports = function (grunt) {
     grunt.registerTask("serve", ["shell:jekyllServe"]);
 
     grunt.registerTask("jekyllBuild", [
-        // copy ready for deploy JS files
-        "clean:jsDist",
-        "copy:jsDist",
-
         // Jekyll build
         "shell:jekyllBuild"
     ]);

@@ -14,6 +14,8 @@ require('babel-polyfill');
     var CustomSearch = require('./outer_components/custom-search').CustomSearch;
     var ConditionalLoader = require('./outer_components/conditional-loader').ConditionalLoader;
 
+    require('./components/register-service-worker');// execute file without imports
+
     document.addEventListener("DOMContentLoaded", function () {
         // APP
         var APP = window.jekyllVariables;
