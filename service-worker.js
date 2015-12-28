@@ -1,6 +1,6 @@
 importScripts('js/libs/cache-polyfill.js');
 
-const cacheVersion = 'v27';
+const cacheVersion = 'v28';
 
 /* DELETE PREVIOUS CACHES */
 self.addEventListener('activate', function (event) {
@@ -65,5 +65,7 @@ self.addEventListener('fetch', function (event) {
  * Output string to console
  */
 function log(str) {
+    if (!self.debug) return;
+
     console.log(str);
 }
