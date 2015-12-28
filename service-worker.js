@@ -102,7 +102,7 @@ self.addEventListener('fetch', (event) => {
  * Output string to console
  */
 function log(str, isError) {
-    //if (!self.debug) return;// ToDo
+    if (!self.debug) return;
 
     if (isError) {
         console.error(str);
