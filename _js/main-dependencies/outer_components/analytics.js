@@ -1,5 +1,3 @@
-'use strict';
-
 var UTILS = require('../utils/utils');
 
 /**

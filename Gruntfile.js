@@ -1,5 +1,3 @@
-'use strict';
-
 var path = require('path');
 var webpack = require('webpack');
 
@@ -150,6 +148,26 @@ module.exports = function (grunt) {
                 files: ["demos/**/*.scss"],
                 tasks: ["generateDemosCss", "shell:jekyllBuild"]
             }
+        },
+
+        clean: {
+            jsDist: [
+                "js/dist"
+            ]
+        },
+
+        copy: {
+            jsDist: {
+                files: [
+                    // js/dist
+                    {
+                        expand: true,
+                        cwd: '_js/dist',
+                        src: ['**'],
+                        dest: 'js/dist'
+                    }
+                ]
+            }
         }
     });
 
@@ -170,13 +188,22 @@ module.exports = function (grunt) {
 
     grunt.registerTask("serve", ["shell:jekyllServe"]);
 
+    grunt.registerTask("jekyllBuild", [
+        // copy ready for deploy JS files
+        "clean:jsDist",
+        "copy:jsDist",
+
+        // Jekyll build
+        "shell:jekyllBuild"
+    ]);
+
     grunt.registerTask("build", [
         "generateJs",
 
         "generateCss",
         "generateDemosCss",
 
-        "shell:jekyllBuild"
+        "jekyllBuild"
     ]);
 
     grunt.registerTask("default", [

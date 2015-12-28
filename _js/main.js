@@ -8,11 +8,11 @@ require('babel-polyfill');
 (function () {
     // DEPENDENCIES
     // components
-    var Events = require('./components/events-binding').EventsBinding;
-    var Analytics = require('./outer_components/analytics').Analytics;
+    var Events = require('./main-dependencies/components/events-binding').EventsBinding;
+    var Analytics = require('./main-dependencies/outer_components/analytics').Analytics;
     // outer components
-    var CustomSearch = require('./outer_components/custom-search').CustomSearch;
-    var ConditionalLoader = require('./outer_components/conditional-loader').ConditionalLoader;
+    var CustomSearch = require('./main-dependencies/outer_components/custom-search').CustomSearch;
+    var ConditionalLoader = require('./main-dependencies/outer_components/conditional-loader').ConditionalLoader;
 
     document.addEventListener("DOMContentLoaded", function () {
         // APP

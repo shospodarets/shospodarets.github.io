@@ -1,5 +1,3 @@
-'use strict';
-
 var UTILS = require('../utils/utils');
 
 /**
@@ -16,7 +14,7 @@ var ConditionalLoader = function (options) {
 ConditionalLoader.prototype.loadScripts = function () {
     /* CAN I USE INFO */
     if (document.querySelectorAll('.caniuse').length) {
-        UTILS.loadScript(this.options.SITE_BASE_URL + '/js/caniuse.min.js');
+        UTILS.loadScript(this.options.SITE_BASE_URL + '/js/dist/caniuse.min.js');
     }
     /* CODEPEN EXAMPLES */
     if (document.querySelectorAll('.codepen').length) {
