@@ -9,7 +9,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         webpack: {
             dist: {
-                entry: rootPath + '/_js/main.js',
+                entry: rootPath + '/_js/main/main.js',
                 output: {
                     filename: 'js/main.min.js'
                 },
@@ -134,19 +134,23 @@ module.exports = function (grunt) {
             },
             site: {
                 files: ["*.html", "_layouts/**/*.html", "_posts/*.md", "_includes/**/*.html"],
-                tasks: ["shell:jekyllBuild"]
+                tasks: ["jekyllBuild"]
             },
             js: {
-                files: ["_js/**/*.js"],
-                tasks: ["generateJs", "shell:jekyllBuild"]
+                files: ["_js/main/**"],
+                tasks: ["generateJs", "jekyllBuild"]
+            },
+            jsDist: {
+                files: ["_js/dist/**/*"],
+                tasks: ["jekyllBuild"]
             },
             css: {
                 files: ["_scss/**/*.scss"],
-                tasks: ["generateCss", "shell:jekyllBuild"]
+                tasks: ["generateCss", "jekyllBuild"]
             },
             css_demos: {
                 files: ["demos/**/*.scss"],
-                tasks: ["generateDemosCss", "shell:jekyllBuild"]
+                tasks: ["generateDemosCss", "jekyllBuild"]
             }
         },
 
