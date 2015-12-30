@@ -21,6 +21,7 @@
   "private": true,
   "scripts": {
     "gem-install": "gem install jekyll jemoji jekyll-sitemap redcarpet jekyll-paginate jekyll-gist jekyll-feed pygments.rb",
+    "gem-update": "gem update jekyll jemoji jekyll-sitemap redcarpet jekyll-paginate jekyll-gist jekyll-feed pygments.rb",
     "start": "grunt serve & grunt"
   }
 }
