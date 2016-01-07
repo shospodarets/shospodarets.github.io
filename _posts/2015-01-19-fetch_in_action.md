@@ -560,7 +560,7 @@ With Fetch and Promise Polyfills it works wonderfully in all browsers up-to IE9 
 
 
 
-<h2 id="links-and-demo">Useful links and demo</h2>
+<h2 id="links-and-demo">Useful links</h2>
 
 <ul>
     <li>
@@ -573,10 +573,6 @@ With Fetch and Promise Polyfills it works wonderfully in all browsers up-to IE9 
         <a href="https://github.com/jakearchibald/es6-promise">Promise Polyfill</a>
     </li>
 </ul>
-
-Fetching HTML from one JS Bin to another:<br>
-
-<a class="jsbin-embed" href="//jsbin.com/payaxo/latest/embed?output&height=400px"></a>
 
 <h2 id="limitations">Limitations</h2>
 
