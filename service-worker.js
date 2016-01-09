@@ -1,8 +1,9 @@
-importScripts('js/libs/cache-polyfill.js');
+/* VARS */
 
-/*--- CACHE ---*/
+// enables debug logging
+var IS_DEBUG_ENABLED = false;
 
-const CACHE_NAME = 'v5';
+const CACHE_NAME = 'v7';
 
 /* CACHE REQUIRED ITEMS */
 const urlsToCache = [
@@ -18,19 +19,26 @@ const urlsToCache = [
 ];
 
 self.addEventListener('install', (event) => {
+    //log('SW is installed');
+    self.addEventListener('message', (event)=> {
+        //log('Handling a message', event);
+        if (event.data.IS_DEBUG_ENABLED !== undefined) {
+            IS_DEBUG_ENABLED = event.data.IS_DEBUG_ENABLED;
+        }
+    });
     // OLD SW MIGHT BE STILL ACTIVE HERE
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then((cache) =>cache.addAll(urlsToCache))
             .catch((err)=> {
-                log(`Error opening the cache "${CACHE_NAME}": ${err}`, 'error');
+                logError(`Error opening the cache "${CACHE_NAME}": ${err}`);
             })
     );
 });
 
 /* DELETE PREVIOUS CACHES */
 self.addEventListener('activate', (event) => {
-    log('CACHE_NAME:' + CACHE_NAME);
+    //log('SW is activated');
     // CURRENT SW TAKES CONTROL, OLD ISN'T ACTIVE HERE
     event.waitUntil(
         caches.keys()
@@ -44,7 +52,7 @@ self.addEventListener('activate', (event) => {
                 );
             })
             .catch((err) => {
-                log(`Error reading cache keys for "${CACHE_NAME}": ${err}`, 'error');
+                logError(`Error reading cache keys for "${CACHE_NAME}": ${err}`);
             })
     );
 });
@@ -55,8 +63,15 @@ self.addEventListener('fetch', (event) => {
         caches.match(event.request)
             .then((responseFromCache) => {
                     if (responseFromCache) {
-                        log('* [Serving cached]: ' + event.request.url);
-                        return responseFromCache;
+                        // Fetching request as usually
+                        // and serve cached version only in cases of errors
+                        // (offline mode, network or server errors etc.)
+                        return fetch(event.request.clone())
+                            .then((response) => response)
+                            .catch(()=> {
+                                log('* [Serving cached because of fetching error]: ' + event.request.url);
+                                return responseFromCache;
+                            });
                     }
 
                     //log('* [Fetching]: ' + event.request.url);
@@ -77,36 +92,35 @@ self.addEventListener('fetch', (event) => {
                                     cache.put(event.request, response.clone());
                                 })
                                 .catch((err)=> {
-                                    log(`Error opening the cache "${CACHE_NAME}": ${err}`, 'error');
+                                    logError(`Error opening the cache "${CACHE_NAME}": ${err}`);
                                 });
 
                             return response;
                         })
                         .catch((err)=> {
-                            log(`Error fetching the request "${event.request.url}": ${err}`, 'error');
+                            logError(`Error fetching the request "${event.request.url}": ${err}`);
                         });
                 }
             )
             .catch((err)=> {
-                log(`Error matching cache for the request "${event.request}": ${err}`, 'error');
+                logError(`Error matching cache for the request "${event.request}": ${err}`);
             })
     );
 });
 
 /*--- UTILS ---*/
+function log() {
+    if (!IS_DEBUG_ENABLED) return;
+    console.log.apply(console, addMessagePrefix('SW:', arguments));
+}
 
-/**
- * @param str {String}
- * @param isError {Boolean|String}
- *
- * Output string to console
- */
-function log(str, isError) {
-    if (!self.debug) return;
+function logError() {
+    if (!IS_DEBUG_ENABLED) return;
+    console.error.apply(console, addMessagePrefix('SW:', arguments));
+}
 
-    if (isError) {
-        console.error(str);
-    } else {
-        console.log(str);
-    }
+function addMessagePrefix(prefix, args) {
+    var res = Array.prototype.slice.apply(args);
+    res.unshift(prefix);
+    return res;
 }
