@@ -5,12 +5,12 @@ var IS_DEBUG_ENABLED = localStorage.debug || location.search.indexOf('debug') !=
 
 /* LOGGING */
 function log() {
-    //if (!IS_DEBUG_ENABLED) return;
+    if (!IS_DEBUG_ENABLED) return;
     console.log.apply(console, addMessagePrefix('PAGE:', arguments));
 }
 
 function logError() {
-    //if (!IS_DEBUG_ENABLED) return;
+    if (!IS_DEBUG_ENABLED) return;
     console.error.apply(console, addMessagePrefix('PAGE:', arguments));
 }
 

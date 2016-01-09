@@ -115,13 +115,13 @@ module.exports = function (grunt) {
 
         shell: {
             jekyllServe: {
-                command: "jekyll serve",
+                command: "jekyll serve --incremental",
                 options: {
                     stdin: false
                 }
             },
             jekyllBuild: {
-                command: "jekyll build",
+                command: "jekyll build --incremental",
                 options: {
                     stdin: false
                 }
@@ -130,7 +130,8 @@ module.exports = function (grunt) {
 
         watch: {
             options: {
-                livereload: true
+                livereload: true,
+                atBegin: true// trigger all tasks at startup
             },
             site: {
                 files: ["*.html", "_layouts/**/*.html", "_posts/*.md", "_includes/**/*.html"],
@@ -183,8 +184,6 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask("default", [
-        "build",
-
         "watch"
     ]);
 };
