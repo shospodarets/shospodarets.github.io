@@ -31,7 +31,7 @@ self.addEventListener('install', (event) => {
         caches.open(CACHE_NAME)
             .then((cache) =>cache.addAll(urlsToCache))
             .catch((err)=> {
-                logError(`Error opening the cache "${CACHE_NAME}": ${err}`);
+                logError(`Error opening the cache "${CACHE_NAME}"`, err);
             })
     );
 });
@@ -52,28 +52,18 @@ self.addEventListener('activate', (event) => {
                 );
             })
             .catch((err) => {
-                logError(`Error reading cache keys for "${CACHE_NAME}": ${err}`);
+                logError(`Error reading cache keys for "${CACHE_NAME}"`, err);
             })
     );
 });
 
 /* FETCH */
 self.addEventListener('fetch', (event) => {
+    // Fetching request as usually if possible updating the cached version
+    // and serve cached version only in cases of errors (offline mode, network or server errors etc.)
     event.respondWith(
         caches.match(event.request)
             .then((responseFromCache) => {
-                    if (responseFromCache) {
-                        // Fetching request as usually
-                        // and serve cached version only in cases of errors
-                        // (offline mode, network or server errors etc.)
-                        return fetch(event.request.clone())
-                            .then((response) => response)
-                            .catch(()=> {
-                                console.log('* [Serving cached because of fetching error]: ' + event.request.url);
-                                return responseFromCache;
-                            });
-                    }
-
                     //log('* [Fetching]: ' + event.request.url);
 
                     // event.request.clone -  as event.request is used after and can be consumed only once
@@ -92,18 +82,23 @@ self.addEventListener('fetch', (event) => {
                                     cache.put(event.request, response.clone());
                                 })
                                 .catch((err)=> {
-                                    logError(`Error opening the cache "${CACHE_NAME}": ${err}`);
+                                    logError(`Error opening the cache "${CACHE_NAME}"`, err);
                                 });
 
                             return response;
                         })
                         .catch((err)=> {
-                            logError(`Error fetching the request "${event.request.url}": ${err}`);
+                            if (responseFromCache) {
+                                console.log(`Serving cached response for "${event.request.url}" because of fetching error`, err);
+                                return responseFromCache;
+                            } else {
+                                logError(`Error fetching the request "${event.request.url}"`, err);
+                            }
                         });
                 }
             )
             .catch((err)=> {
-                logError(`Error matching cache for the request "${event.request}": ${err}`);
+                logError(`Error matching cache for the request "${event.request}"`, err);
             })
     );
 });

@@ -30,7 +30,7 @@ if ('serviceWorker' in navigator) {
         log(`Service Worker "${swPath}" registration successful with scope: ${registration.scope}`);
     }).catch(function (error) {
         // registration failed
-        logError(`Registration of Service Worker "${swPath}" failed with ${error}`);
+        logError(`Registration of Service Worker "${swPath}" failed with error`, error);
     });
 }
 
@@ -55,7 +55,7 @@ function sendMessageToWorker(message) {
                 [messageChannel.port2]
             );
         } else {
-            logError(`Message sending to SW failed: navigator.serviceWorker.controller is ${navigator.serviceWorker.controller}`);
+            logError(`Message sending to SW failed: navigator.serviceWorker.controller is`, navigator.serviceWorker.controller);
         }
     }).then(()=> {
     }, (err)=> {
