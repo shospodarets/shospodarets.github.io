@@ -3,7 +3,7 @@
 // enables debug logging
 var IS_DEBUG_ENABLED = false;
 
-const CACHE_NAME = 'v7';
+const CACHE_NAME = 'v8';
 
 /* CACHE REQUIRED ITEMS */
 const urlsToCache = [
