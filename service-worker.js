@@ -2,7 +2,7 @@ importScripts('js/libs/cache-polyfill.js');
 
 /*--- CACHE ---*/
 
-const CACHE_NAME = 'v4';
+const CACHE_NAME = 'v5';
 
 /* CACHE REQUIRED ITEMS */
 const urlsToCache = [
