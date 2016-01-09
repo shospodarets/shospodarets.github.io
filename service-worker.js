@@ -69,7 +69,7 @@ self.addEventListener('fetch', (event) => {
                         return fetch(event.request.clone())
                             .then((response) => response)
                             .catch(()=> {
-                                log('* [Serving cached because of fetching error]: ' + event.request.url);
+                                console.log('* [Serving cached because of fetching error]: ' + event.request.url);
                                 return responseFromCache;
                             });
                     }
