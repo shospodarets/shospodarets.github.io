@@ -1,0 +1,74 @@
+// https://github.com/wavded/humane-js
+
+.humane,
+.humane-libnotify {
+  position: fixed;
+  transition: all 0.3s ease-out;
+  z-index: 10000;
+}
+
+.humane,
+.humane-libnotify {
+  text-align: center;
+  font-size: 15px;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  width: 250px;
+  color: #fff;
+  padding: 10px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(50, 50, 50, 0.9) 100%) no-repeat;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px -4px #000;
+  transform: translateY(-40px);
+}
+
+.humane p,
+.humane-libnotify p,
+.humane ul,
+.humane-libnotify ul {
+  margin: 0;
+  padding: 0;
+}
+
+.humane ul,
+.humane-libnotify ul {
+  list-style: none;
+}
+
+.humane.humane-libnotify-info,
+.humane-libnotify.humane-libnotify-info {
+  background: linear-gradient(to bottom, rgba(0, 0, 50, 0.9) 0%, rgba(0, 0, 100, 0.9) 100%) no-repeat;
+}
+
+.humane.humane-libnotify-success,
+.humane-libnotify.humane-libnotify-success {
+  background: linear-gradient(to bottom, rgba(0, 50, 0, 0.9) 0%, rgba(0, 100, 0, 0.9) 100%) no-repeat;
+}
+
+.humane.humane-libnotify-error,
+.humane-libnotify.humane-libnotify-error {
+  background: linear-gradient(to bottom, rgba(50, 0, 0, 0.9) 0%, rgba(100, 0, 0, 0.9) 100%) no-repeat;
+}
+
+.humane.humane-animate,
+.humane-libnotify.humane-libnotify-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.humane.humane-animate:hover,
+.humane-libnotify.humane-libnotify-animate:hover {
+  opacity: 0.2;
+}
+
+.humane.humane-animate,
+.humane-libnotify.humane-libnotify-js-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.humane.humane-animate:hover,
+.humane-libnotify.humane-libnotify-js-animate:hover {
+  opacity: 0.2;
+}
