@@ -44,7 +44,7 @@ footer-links:
 paginate: 5
 
 # This will enable commenting on posts
-disqus: blog.gospodarets.com
+disqus: malyw-github-io
 
 # Google Analytics web tracking code
 google_analytics: UA-53471595-1
