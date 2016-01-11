@@ -30,6 +30,8 @@ require('babel-polyfill');
         APP.conditionalLoader = new ConditionalLoader({
             SITE_BASE_URL: APP.SITE_BASE_URL,
             DISCUSS_ID: APP.DISCUSS_ID,
+            PAGE_URL: APP.PAGE_URL,
+            PAGE_IDENTIFIER: APP.PAGE_IDENTIFIER,
             SHARE_BUTTONS_ID: APP.SHARE_BUTTONS_ID
         });
         APP.customSearch = new CustomSearch({

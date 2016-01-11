@@ -26,6 +26,10 @@ ConditionalLoader.prototype.loadScripts = function () {
     }
     /* DISCUSS */
     if (document.querySelectorAll('#disqus_thread').length) {
+        window.disqus_config = function () {
+            this.page.url = this.options.PAGE_URL;
+            this.page.identifier = this.options.PAGE_IDENTIFIER;
+        };
         UTILS.loadScript(
             UTILS.httpProtocol + '//' + this.options.DISCUSS_ID + '.disqus.com/embed.js'
         );
