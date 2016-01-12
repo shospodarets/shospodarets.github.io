@@ -24,14 +24,14 @@ layout: none
             {% if post.external-url %}
                 {{ post.external-url }}
             {% else %}
-                {{ site.url }}{{ post.url }}
+                {{ site.url }}{{ post.url }}/
             {% endif %}
         </link>
         <guid isPermaLink="true">
             {% if post.external-url %}
                 {{ post.external-url }}
             {% else %}
-                {{ site.url }}{{ post.url }}
+                {{ site.url }}{{ post.url }}/
             {% endif %}
         </guid>
       </item>
