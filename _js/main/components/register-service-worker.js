@@ -22,18 +22,18 @@ function addMessagePrefix(prefix, args) {
 }
 
 /* REGISTER WORKER */
-if ('serviceWorker' in navigator) {
-    let swPath = `/service-worker.js`;
-    navigator.serviceWorker.register(
-        swPath
-    ).then(function (registration) {
-        sendMessageToWorker({'---isDebugEnabled---': isDebugEnabled});// send debug state info
-        log(`Service Worker "${swPath}" registration successful with scope: ${registration.scope}`);
-    }).catch(function (error) {
-        // registration failed
-        logError(`Registration of Service Worker "${swPath}" failed with error`, error);
-    });
-}
+//if ('serviceWorker' in navigator) {
+//    let swPath = `/service-worker.js`;
+//    navigator.serviceWorker.register(
+//        swPath
+//    ).then(function (registration) {
+//        sendMessageToWorker({'---isDebugEnabled---': isDebugEnabled});// send debug state info
+//        log(`Service Worker "${swPath}" registration successful with scope: ${registration.scope}`);
+//    }).catch(function (error) {
+//        // registration failed
+//        logError(`Registration of Service Worker "${swPath}" failed with error`, error);
+//    });
+//}
 
 /*--- MESSAGING ---*/
 
