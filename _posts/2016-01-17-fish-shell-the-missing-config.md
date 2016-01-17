@@ -21,6 +21,9 @@ Either are worth and have their advantages/disadvantages.
 
 I decided to try Fish Shell as one of my biggest requirements installation without need of long configuration.
 It's really something Fish was designed for.
+
+<div class="more"></div>
+
 If you are interested in Z shell starting guide and plugins- you can watch nice [manuals from Wes Bos](http://wesbos.com/command-line-video-tutorials/).
 
 # Looking for the best terminal option
