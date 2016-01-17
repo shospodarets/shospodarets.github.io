@@ -50,10 +50,11 @@ After that start Fish from your terminal running: `fish`
 Try playing with autosuggestions and tabs- hope you'll like it.
 
 If you want to change your default terminal to Fish,
-you have to add Fish to `/etc/shells`, which will require an administrative password:
+you have to add Fish to valid login shells. For that to the `/etc/shells` file add the afterward line
+(requires administrative rights)
 
 ```bash
-sudo echo /usr/local/bin/fish >> /etc/shells
+/usr/local/bin/fish
 ```
 
 And then make Fish your default shell with `chsh`:
