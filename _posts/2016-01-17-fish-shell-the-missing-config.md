@@ -161,7 +161,7 @@ source ~/.config/fish/nvm-wrapper/nvm.fish
 
 Open a new tab and try running `nvm`:
 
-![nvm in fish](http://i.imgur.com/7GpgRfV.png)
+![nvm in fish](https://i.imgur.com/7GpgRfV.png)
 
 ## Repeat previous command and last command option are missed in Fish
 
