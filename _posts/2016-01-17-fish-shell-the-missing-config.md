@@ -220,7 +220,7 @@ If you wish to remove it just add:
 set fish_greeting ""
 ```
 
-to your `~/.config/fish/config.fish`
+to your `~/.config/fish/config.fish`.
 
 # Сonclusions
 
