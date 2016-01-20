@@ -1,4 +1,4 @@
-{% if site.footer-links.rss %}<a href="{% if site.footer-links.feedburner %}{{site.footer-links.feedburner}}{% else %}{{ site.baseurl }}/feed.xml{% endif %}">{% include svg-icons/rss.html %}</a>{% endif %}
+{% if site.footer-links.rss %}<a href="{{ site.baseurl }}/feed.xml">{% include svg-icons/rss.html %}</a>{% endif %}
 {% if site.footer-links.twitter %}<a href="https://twitter.com/{{ site.footer-links.twitter }}">{% include svg-icons/twitter.html %}</a>{% endif %}
 {% if site.footer-links.facebook %}<a href="https://facebook.com/{{ site.footer-links.facebook }}">{% include svg-icons/facebook.html %}</a>{% endif %}
 {% if site.footer-links.googleplus %}<a href="https://plus.google.com/+{{ site.footer-links.googleplus }}">{% include svg-icons/googleplus.html %}</a>{% endif %}
