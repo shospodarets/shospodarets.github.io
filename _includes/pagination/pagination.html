@@ -2,7 +2,13 @@
 <div class="pagination">
     {% if paginator.previous_page %}
     <div class="prev-btn">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}">&laquo; prev</a>
+        <a href="
+           {% if paginator.previous_page %}
+            {{ paginator.previous_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}"
+           {% else %}
+           {{ site.baseurl }}
+           {% endif %}
+        >&laquo; prev</a>
     </div>
     {% else %}
     <div class="prev-btn">
