@@ -1,5 +1,5 @@
 {
-  "name": "blog.gospodarets.com",
+  "name": "web-blog",
   "version": "1.0.0",
   "devDependencies": {
     "babel-core": "~6.3.0",
@@ -25,6 +25,7 @@
   "scripts": {
     "gem-install": "gem install jekyll jemoji jekyll-sitemap redcarpet jekyll-paginate jekyll-gist jekyll-feed pygments.rb",
     "gem-update": "gem update jekyll jemoji jekyll-sitemap redcarpet jekyll-paginate jekyll-gist jekyll-feed pygments.rb",
-    "start": "grunt serve & grunt"
+    "start": "grunt serve & grunt",
+    "build": "grunt build"
   }
 }
