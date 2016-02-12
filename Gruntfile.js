@@ -115,13 +115,13 @@ module.exports = function (grunt) {
 
         shell: {
             jekyllServe: {
-                command: "jekyll serve",
+                command: "jekyll serve",// --profile
                 options: {
                     stdin: false
                 }
             },
             jekyllBuild: {
-                command: "jekyll build",
+                command: "jekyll build",// --profile
                 options: {
                     stdin: false
                 }

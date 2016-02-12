@@ -70,9 +70,9 @@ baseurl: ""
 #
 #
 
-markdown: redcarpet
-redcarpet:
-    extensions: [with_toc_data]
+#markdown: redcarpet
+#redcarpet:
+#    extensions: [with_toc_data]
 
 highlighter: pygments
 permalink: /:title
