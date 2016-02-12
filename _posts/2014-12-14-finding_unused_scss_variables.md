@@ -47,15 +47,15 @@ Let's imagine you have folder "sass" where are SCSS files of your project. Then:
     </li>
     <li>
         Run the following command to do this file executable:
-        {% highlight bash %}
+        ```bash
         chmod +x ./find_unused_variables.sh
-        {% endhighlight %}
+        ```
     </li>
     <li>
         Run the script:
-        {% highlight bash %}
+        ```bash
         ./find_unused_variables.sh ./sass
-        {% endhighlight %}
+        ```
     </li>
     <li>
         As result you will have in the shell list of the unused SCSS variables
