@@ -70,11 +70,11 @@ baseurl: ""
 #
 #
 
-#markdown: redcarpet
-#redcarpet:
-#    extensions: [with_toc_data]
+markdown: redcarpet
+redcarpet:
+    extensions: [with_toc_data]
 
-highlighter: pygments
+highlighter: rouge
 permalink: /:title
 
 # Exclude these files from production _site
