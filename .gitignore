@@ -4,4 +4,5 @@ _site
 .jekyll-metadata
 
 npm-debug.log
+npm-debug.log.*
 node_modules

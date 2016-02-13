@@ -1,0 +1,13 @@
+{
+  "short_name": "Serg Blog",
+  "name": "Serg Blog",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "lang": "en",
+  "icons": [{
+    "src": "/images/favicons/apple-touch-icon-144x144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }]
+}
