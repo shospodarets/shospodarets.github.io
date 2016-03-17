@@ -11,7 +11,7 @@ tags: [JavaScript, CSS, Android]
 <mark>"onload" in link === true</mark>
 <p>So, my solution is to detect Android browser from userAgent and then wait for some special css rule in your stylesheet (e.g., reset for "body" margins).<br />If it's not Android browser and it supports "onload" event- we will use it:</p>
 <div class="more"></div>
-{% highlight javascript %}
+```javascript
 var userAgent = navigator.userAgent,
     iChromeBrowser = /CriOS|Chrome/.test(userAgent),
     isAndroidBrowser = /Mozilla\/5.0/.test(userAgent) &amp;&amp; /Android/.test(userAgent) &amp;&amp; /AppleWebKit/.test(userAgent) &amp;&amp; !iChromeBrowser; 
@@ -65,7 +65,7 @@ function waitForCss(params) {
 
     nextStep();
 }
-{% endhighlight %}
+```
 <p>
     <span>Demo:&nbsp;</span>
     <span data-height="250" data-theme-id="178" data-slug-hash="AuCtH" data-user="malyw" data-default-tab="result" class="codepen"></span>

@@ -2,7 +2,13 @@
 <div class="pagination">
     {% if paginator.previous_page %}
     <div class="prev-btn">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; prev</a>
+        <a href="
+           {% if paginator.previous_page != 1 %}
+            {{ paginator.previous_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}"
+           {% else %}
+           {{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+        {% endif %}
+        >&laquo; prev</a>
     </div>
     {% else %}
     <div class="prev-btn">
@@ -49,7 +55,7 @@
 
     {% if paginator.next_page %}
     <div class="next-btn">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">next &raquo;</a>
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}">next &raquo;</a>
     </div>
     {% else %}
     <div class="next-btn">

@@ -59,22 +59,22 @@ This technique has many problems like:
 To avoid using faders elements and provide shadow from element- of course,
 the best to use <mark>box-shadow</mark> which was provided exactly for such things.
 
-{% highlight css %}
+```css
 .highlight {
     box-shadow: 0 0 0 99999px rgba(0, 0, 0, .8);
 }
-{% endhighlight %}
+```
 
 For old browsers (like IE < 9) you can use <a href="http://css3pie.com/">CSS3 Pie</a> or old IE <mark>filter</mark> property
 
 To move element to front on Z-axis (over all others) you can provide:
 
-{% highlight css %}
+```css
 .highlight {
     position: relative;
     z-index: 9999;
 }
-{% endhighlight %}
+```
 
 <h4>Prevent any user actions outside of highlighted area</h4>
 
@@ -86,7 +86,7 @@ In that it's possible to use <mark>pointer-events</mark> property which
 allows to control under what circumstances a particular graphic element can become the target of mouse/touch events.
 It means, you can prevent any user actions for any part of your application.
 
-{% highlight css %}
+```css
 body.highlight-is-active {
     pointer-events:  none;
 }
@@ -94,7 +94,7 @@ body.highlight-is-active {
 .highlight {
     pointer-events:  auto;
 }
-{% endhighlight %}
+```
 
 <mark>Pointer-events</mark> (for HTML) has not bad browser support, if you need to provide it in old browsers-
 use <a href="https://github.com/kmewhort/pointer_events_polyfill/blob/master/pointer_events_polyfill.js">Pointer Events Polyfill</a>

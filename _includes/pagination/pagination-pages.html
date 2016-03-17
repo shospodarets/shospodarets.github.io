@@ -4,10 +4,10 @@
 </div>
 {% elsif page == 1 %}
 <div class="pagination-link">
-    <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    <a href="{{ '/index.html' | prepend: site.baseurl}}">{{ page }}</a>
 </div>
 {% else %}
 <div class="pagination-link">
-    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    <a href="{{ site.paginate_path | prepend: site.baseurl | append: '/' | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
 </div>
 {% endif %}

@@ -12,7 +12,7 @@ The CSS <mark>filter</mark> property provides the way to modify rendering for el
 You can use it to apply visual effects like blur or shifting colors.
 There are many ways to use it- from providing Instagram/PhotoShop- like filters to the site themes.
 
-<a href="http://malyw.github.io/css-filters/"
+<a href="https://blog.gospodarets.com/css-filters/"
    target="_blank"
    class="btn-pulse">
     <span class="wrapper">
@@ -25,7 +25,7 @@ There are many ways to use it- from providing Instagram/PhotoShop- like filters 
 
 <h2>Syntax and examples</h2>
 
-{% highlight css %}
+```css
 /* SYNTAX */
 .apply-filters {
     [vendor-prefix]filter: <filter-function> [<filter-function>]* | none
@@ -42,7 +42,7 @@ body {
     -webkit-filter: grayscale(0.1) saturate(1) sepia(0.6);/* Webkit vendor */
     filter: grayscale(0.1) saturate(1) sepia(0.6);
 }
-{% endhighlight %}
+```
 
 <mark>&lt;filter-function&gt;</mark> examples and small descriptions:
 
@@ -50,89 +50,89 @@ body {
     <li>
 
         Applies a Gaussian blur:
-        {% highlight css %}
+        ```css
         filter: blur(2px);
-        {% endhighlight %}
+        ```
 
     </li>
     <li>
 
         Makes appearing more or less bright
-        {% highlight css %}
+        ```css
         filter: brightness(7);
-        {% endhighlight %}
+        ```
 
     </li>
     <li>
 
         Adjusts the contrast:
-        {% highlight css %}
+        ```css
         filter: contrast(3);
-        {% endhighlight %}
+        ```
 
     </li>
     <li>
 
         Converts the colors to grayscale:
-        {% highlight css %}
+        ```css
         filter: grayscale(0.6);
-        {% endhighlight %}
+        ```
 
     </li>
     <li>
 
         Adds drop shadow effect:
-        {% highlight css %}
+        ```css
         filter: drop-shadow(20px 20px 10px black);
-        {% endhighlight %}
+        ```
 
     </li>
     <li>
 
         Applies hue-rotation:
-        {% highlight css %}
+        ```css
         filter: hue-rotate(108deg);
-        {% endhighlight %}
+        ```
 
     </li>
     <li>
 
         Inverts the colors:
-        {% highlight css %}
+        ```css
         filter: invert(0.5);
-        {% endhighlight %}
+        ```
 
     </li>
     <li>
 
         Applies transparency:
-        {% highlight css %}
+        ```css
         filter: opacity(0.4);
-        {% endhighlight %}
+        ```
 
     </li>
     <li>
 
         Saturates element:
-        {% highlight css %}
+        ```css
         filter: saturate(3);
-        {% endhighlight %}
+        ```
 
     </li>
     <li>
 
         Converts the samples to sepia:
-        {% highlight css %}
+        ```css
         filter: sepia(0.2);
-        {% endhighlight %}
+        ```
 
     </li>
     <li>
 
         For applying SVG filters:
-        {% highlight css %}
+        ```css
         filter: url(filter.svg#anchor-to-specific-element);
-        {% endhighlight %}
+        ```
 
     </li>
 </ul>
@@ -158,12 +158,12 @@ As example, let's provide dark theme using CSS filters to GitHub in your browser
 
         Apply the following css to <mark>html</mark> element:
 
-{% highlight css %}
+```css
 html{
     -webkit-filter: brightness(0.9) hue-rotate(180deg) invert(1);
     filter: brightness(0.9) hue-rotate(180deg) invert(1);
 }
-{% endhighlight %}
+```
     </li>
     <li>
 
@@ -175,9 +175,9 @@ html{
     </li>
 </ol>
 
-Other example- applying inverted theme to my site <a href="//gospodarets.com" target="_blank">gospodarets.com</a>:
+Other example- applying inverted theme to my site <a href="https://gospodarets.com" target="_blank">gospodarets.com</a>:
 <iframe
-        src="//malyw.github.io/css-filters/?src=http://gospodarets.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&hideContentExcept=.iframe-wrapper&overflowHeight=350"
+        src="https://blog.gospodarets.com/css-filters/?src=https://gospodarets.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&hideContentExcept=.iframe-wrapper&overflowHeight=350"
         frameborder="0"
         allowtransparency="true" allowfullscreen="true"
         style="width: 100%; overflow: hidden;"
@@ -196,12 +196,12 @@ Other example of using CSS filters- to show user status- show color avatar when 
 
         When user is offline just apply the grayscale filter to image:
 
-{% highlight css %}
+```css
 .offline .avatar{
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
 }
-{% endhighlight %}
+```
 
     </li>
     <li>
@@ -221,7 +221,7 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Vintage:
         <iframe
-                src="//malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22grayscale%22:0.1,%22saturate%22:1,%22sepia%22:0.6%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="https://blog.gospodarets.com/css-filters/?src=https://blog.gospodarets.com/&filters=%7B%22grayscale%22:0.1,%22saturate%22:1,%22sepia%22:0.6%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
@@ -233,7 +233,7 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Acid:
         <iframe
-                src="//malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22hue-rotate%22:72,%22saturate%22:3,%22sepia%22:0.2%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="https://blog.gospodarets.com/css-filters/?src=https://blog.gospodarets.com/&filters=%7B%22hue-rotate%22:72,%22saturate%22:3,%22sepia%22:0.2%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
@@ -245,7 +245,7 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Grayscale:
         <iframe
-                src="//malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22grayscale%22:1%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="https://blog.gospodarets.com/css-filters/?src=https://blog.gospodarets.com/&filters=%7B%22grayscale%22:1%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
@@ -257,7 +257,7 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Inverted colors:
         <iframe
-                src="//malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="https://blog.gospodarets.com/css-filters/?src=https://blog.gospodarets.com/&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
@@ -278,26 +278,26 @@ And of course it just looks awesome :wink:
 
         Provide page content box and modal box on the same level in HTML:
 
-{% highlight html %}
+```html
 <div class="page-container"></div>
 <div class="modal"></div>
-{% endhighlight %}
+```
     </li>
     <li>
 
         When open modal dialog just add the following styles for page container:
 
-{% highlight css %}
+```css
 .page-container{
     -webkit-filter: blur(2px);
     filter: blur(2px);
 }
-{% endhighlight %}
+```
     </li>
     <li>
         Result:
         <iframe
-                src="//malyw.github.io/css-filters/?src=http://malyw.github.io/&filters=%7B%22blur%22:2%7D&modal=1&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="https://blog.gospodarets.com/css-filters/?src=https://blog.gospodarets.com/&filters=%7B%22blur%22:2%7D&modal=1&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"

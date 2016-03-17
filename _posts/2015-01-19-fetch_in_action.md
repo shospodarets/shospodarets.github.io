@@ -25,7 +25,7 @@ And time is come!
 Before we had XMLHttpRequest syntax. E.g. to get JSON usually we had to provide the following methods in some utilities file:<br>
 (simple demo without listening <mark>onerror</mark> etc. events and manual <mark>timeout</mark> checking)<br>
 
-{% highlight javascript %}
+```javascript
 /*--- Send Ajax ---*/
 var MAX_XHR_WAITING_TIME = 5000;// in ms
 
@@ -78,7 +78,7 @@ getJSON({
     error: onError,
     complete: onComplete
 });
-{% endhighlight %}
+```
 
 <span data-height="250" data-theme-id="178" data-slug-hash="rayEBR" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
@@ -93,10 +93,10 @@ Let's figure out how to do the same using Fetch API.
 
 First, we fetch a resource:
 
-{% highlight javascript %}
+```javascript
 var url = 'https://api.github.com/users/malyw';
 fetch(url);
-{% endhighlight %}
+```
 
 Fetching resource returns promise with response data (in case of any is fetched/response gotten) or error (otherwise).
 
@@ -105,7 +105,7 @@ Fetching resource returns promise with response data (in case of any is fetched/
 Promise will be resolved successufully in case of any server responce, even 404 etc.<br>
 So (as in case with XHR) we need to handle it:
 
-{% highlight javascript %}
+```javascript
 var processStatus = function (response) {
     // status "0" to handle local files fetching (e.g. Cordova/Phonegap etc.)
     if (response.status === 200 || response.status === 0) {
@@ -120,7 +120,7 @@ fetch(url)
     // the following code added for example only
     .then()
     .catch();
-{% endhighlight %}
+```
 
 If there is response with status "200" or "0"- will be returned resolved promise,<br>
 which means, we can use <mark>.then().then()</mark> promise syntax.<br>
@@ -131,14 +131,14 @@ In other case <mark>.catch()</mark> will be invoked.
 Also there is a method <mark>json()</mark> to proceed the response.<br>
 Knowing it let's add parsing:
 
-{% highlight javascript %}
+```javascript
 var parseJson = function (response) {
     return response.json();
 };
 
 fetch(url)
     .then(parseJson);
-{% endhighlight %}
+```
 
 This code gives promise in which (in case of success) will be returned parsed JSON data.
 
@@ -148,14 +148,14 @@ Nice, going further. We need to set "get" as <mark>method</mark> for doing our r
 There is a <mark>cache</mark> option but so far let's use manual cache busting.<br>
 It can be done passing them in second argument (options) to <mark>fetch()</mark>:
 
-{% highlight javascript %}
+```javascript
 fetch(url, {
     method: 'get',
     headers: {
         'Accept': 'application/json'
     }
 });
-{% endhighlight %}
+```
 
 <h3>Adding waiting timeout</h3>
 
@@ -166,7 +166,7 @@ So we need to wrap <mark>fetch()</mark> promise to be able to reject it when tim
 It adds complexity to our code but provides more flexibility.
 So let's imagine so far (code will be provided below) that we have some <mark>wrappedFetch</mark> Promise-like object with ability to trigger <mark>.reject()</mark> on it:
 
-{% highlight javascript %}
+```javascript
 var MAX_WAITING_TIME = 5000;// in ms
 
 var timeoutId = setTimeout(function () {
@@ -178,11 +178,11 @@ return wrappedFetch.promise// getting clear promise from wrapped
         clearTimeout(timeoutId);
         return response;
     });
-{% endhighlight %}
+```
 
 <h3>ALL TOGETHER</h3>
 
-{% highlight javascript %}
+```javascript
 /* @returns {wrapped Promise} with .resolve/.reject/.catch methods */
 // It goes against Promise concept to not have external access to .resolve/.reject methods, but provides more flexibility
 var getWrappedPromise = function () {
@@ -263,7 +263,7 @@ getJSON({
     console.error(error.message ? error.message : error);
     onComplete(error);
 });
-{% endhighlight %}
+```
 
 <span data-height="250" data-theme-id="178" data-slug-hash="zxZVxV" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
@@ -286,7 +286,7 @@ To create loader for AMD style, we need to process all required modules together
 First- fetch them, then- get their texts, invoke them and provide modules as promise result.<br>
 Let's create loader for simple AMD cases and test it with <mark>jQuery</mark> and <mark>d3.js</mark> libraries:<br>
 
-{% highlight javascript %}
+```javascript
 /*--- AMD-specific ---*/
 var loadedModules = [];
 
@@ -387,7 +387,7 @@ require(jqueryUrl, d3Url)
 
         console.log('d3 in global scope: ' + window.d3);// undefined - as expected
     });
-{% endhighlight %}
+```
 
 <span data-height="250" data-theme-id="178" data-slug-hash="ogZrLx" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
@@ -397,7 +397,7 @@ require(jqueryUrl, d3Url)
 <mark>fetch()</mark> can invoke onSuccess/onReject callbacks only asynchronously.<br>
 That's why result loader call is similar to AMD syntax.
 
-{% highlight javascript %}
+```javascript
 var require = function (url) {
     return fetch(url)
         .then(function (response) {// converts response to text
@@ -418,7 +418,7 @@ require('https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js').then
     console.log('Loaded jQuery version: ' + exports.fn.jquery);// show fetched jQuery version
     console.log('jQuery in global scope: ' + window.jQuery);// undefined - nothing were added to global scope
 });
-{% endhighlight %}
+```
 
 <span data-height="250" data-theme-id="178" data-slug-hash="wBJLWy" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
@@ -432,7 +432,7 @@ As we already saw, in second argument for <mark>fetch()</mark> we can set reques
 As well we can set <mark>mode</mark>, <mark>body</mark>, <mark>credentials</mark>, <mark>cache</mark>, <mark>context</mark>, <mark>referrer</mark>.<br>
 E.g. to send POST request to the service for JSON validation:<br>
 
-{% highlight javascript %}
+```javascript
 var serialize = function (data) {
     return Object.keys(data).map(function (keyName) {
         return encodeURIComponent(keyName) + '=' + encodeURIComponent(data[keyName])
@@ -468,7 +468,7 @@ function validateJSON(url, json) {
 var jsonTestUrl = 'http://validate.jsontest.com/';
 validateJSON(jsonTestUrl, '{');// not valid JSON- the closing "}" is missed
 validateJSON(jsonTestUrl, {hello: 'world'});// JS object-> valid JSON is generated
-{% endhighlight %}
+```
 
 <span data-height="250" data-theme-id="178" data-slug-hash="jEmNjx" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
@@ -479,7 +479,7 @@ There are also <mark>formData()</mark>, <mark>arrayBuffer()</mark>, <mark>blob()
 So there is possibility to work with form data and files too.<br>
 Next example will show how to fetch image from one resource and upload it to another:<br>
 
-{% highlight javascript %}
+```javascript
 var downloadFile = function (url) {
     return fetch(url)
             .then(processStatus)
@@ -516,14 +516,14 @@ downloadFile(sourceImageUrl)// download file from one resource
     .catch(function (error) {
         console.error(error.message ? error.message : error);
     });
-{% endhighlight %}
+```
 
 <span data-height="440" data-theme-id="178" data-slug-hash="emWmBz" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
 In getting JSON example <mark>headers</mark> option was set before fetching resource to show JSON is expected as answer.<br>
 But we also can work with response headers. Let's check that server answers with JSON as expected:<br>
 
-{% highlight javascript %}
+```javascript
 function loadJSON(url) {
     fetch(url)
             .then(function (response) {
@@ -544,7 +544,7 @@ function loadJSON(url) {
 
 loadJSON('https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js');// throws a TypeError
 loadJSON('https://api.github.com/users/malyw');// is parsed normally
-{% endhighlight %}
+```
 
 <span data-height="250" data-theme-id="178" data-slug-hash="XJRrNY" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
