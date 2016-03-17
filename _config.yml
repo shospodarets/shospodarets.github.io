@@ -29,7 +29,7 @@ web-master-verifications:
 footer-links:
   dribbble:
 #  email: sgospodarets@gmail.com
-  facebook: sergeygospodaretsblog
+  facebook:
   flickr:
   github: malyw
   instagram:
@@ -38,7 +38,7 @@ footer-links:
   rss: blog.gospodarets.com # make sure the "url" above is set!
   feedburner: https://feeds.feedburner.com/sergey_gospodarets_blog # RSS alternative subscription
   twitter: malyw
-  googleplus: SergeyGospodarets
+  googleplus:
 
 # https://jekyllrb.com/docs/pagination/
 paginate: 5
