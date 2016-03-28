@@ -1,0 +1,46 @@
+---
+layout: demo
+title: Theme switcher based on CSS custom properties set
+tags: [Demo]
+share_image: https://i.imgur.com/DwLCfC0.gif
+share_description: Theme switcher based on CSS custom properties set
+article_link: css_properties_in_depth
+demo_code_full_url: css-custom-props-theme-switcher
+---
+
+<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="./main.css"/>
+
+<div class="is-not-supported alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    CSS custom properties are not supported in the current browser
+</div>
+
+<div>
+    Include CSS file with custom properties set:
+</div>
+<div class="sets">
+    <button class="btn"
+            data-set="pink-set"
+    >
+        pink-set.css
+    </button>
+    <button class="btn"
+            data-set="dark-set"
+    >
+        dark-set.css
+    </button>
+    <button class="btn"
+            data-set="default-set"
+    >
+        default-set.css
+    </button>
+</div>
+
+<div>
+    <span class="selected-set">Selected set: </span>
+</div>
+
+<link rel="stylesheet" class="link-element" href="./default-set.css"/>
+<script src="./main.js"></script>

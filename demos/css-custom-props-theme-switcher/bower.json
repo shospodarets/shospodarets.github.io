@@ -1,0 +1,21 @@
+{
+  "name": "css-custom-props-theme-switcher",
+  "homepage": "https://github.com/malyw/malyw.github.io",
+  "authors": [
+    "Serg Gospodarets <sgospodarets@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

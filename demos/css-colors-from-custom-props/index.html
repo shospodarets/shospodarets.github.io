@@ -1,0 +1,77 @@
+---
+layout: demo
+title:  Generate colors from CSS custom properties (R,G,B)
+tags: [Demo]
+share_image: https://i.imgur.com/9IUE3FR.gif
+share_description:  Generate colors from CSS custom properties (R,G,B)
+article_link: css_properties_in_depth
+demo_code_full_url: css-colors-from-custom-props
+---
+
+<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="./main.css"/>
+
+<div class="is-not-supported alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    CSS custom properties are not supported in the current browser
+</div>
+
+<h2>
+    Color components:
+</h2>
+<div class="sliders">
+    <label>
+        <span>
+            Red
+            <code>var(--r);</code>
+        </span>
+        <input type="range" min="0" max="255" name="r" value="207">
+    </label>
+    <label>
+        <span>
+            Green
+            <code>var(--g);</code>
+        </span>
+        <input type="range" min="0" max="255" name="g" value="50">
+    </label>
+    <label>
+        <span>
+            Blue
+            <code>var(--b);</code>
+        </span>
+        <input type="range" min="0" max="255" name="b" value="50">
+    </label>
+</div>
+
+<h2>
+    Color:
+</h2>
+<div class="color-block">
+    <pre><code>rgba(var(--r), var(--g), var(--b), 1);</code></pre>
+    <div class="color main-color"></div>
+</div>
+
+<h2>
+    Filtered colors:
+</h2>
+<div class="filters">
+    <div class="filter color-block">
+        <strong class="text">Grayscale</strong>
+        <pre><code>rgba( calc(0.2126 * var(--r)), calc(0.7152 * var(--g)), calc(0.0722 * var(--b)), 1 );</code></pre>
+        <div class="color grayscale"></div>
+    </div>
+    <div class="filter color-block">
+        <strong class="text">Invert</strong>
+        <pre><code>rgba( calc(255 - var(--r)), calc(255 - var(--g)), calc(255 - var(--b)), 1 );</code></pre>
+        <div class="color invert"></div>
+    </div>
+    <div class="filter color-block">
+        <strong class="text">Sepia</strong>
+        <pre><code>rgba( calc(var(--r) * 0.393 + var(--g) * 0.769 + var(--b) * 0.189), calc(var(--r) * 0.349 + var(--g) * 0.686 + var(--b) * 0.168), calc(var(--r) * 0.272 + var(--g) * 0.534 + var(--b) * 0.131), 1 );</code></pre>
+        <div class="color sepia"></div>
+    </div>
+</div>
+
+
+<script src="./main.js"></script>
