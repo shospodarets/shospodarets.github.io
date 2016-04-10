@@ -97,6 +97,7 @@ As a value you can use colors, strings, values etc.:
  --base-line-height: 1.428571429;
  --transition-duration: .35s;
  --external-link: "external link";
+ --margin-top: calc(2vh + 20px);
 }
 ```
 
