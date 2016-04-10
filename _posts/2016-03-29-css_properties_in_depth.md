@@ -389,6 +389,8 @@ a simple plugin which processes only variables declared for `:root`
 syntax into a static representation](https://github.com/MadLittleMods/postcss-css-variables)
 and [online demo of it](https://madlittlemods.github.io/postcss-css-variables/playground/).
 It tries to process scopes like media queries, pseudo classes and elements + nested rules.
+- and of course [CSS next](https://github.com/MoOx/postcss-cssnext) which makes
+much of the new CSS syntax work today.
 
 # Using together with CSS preprocessor (SCSS)
 
@@ -548,6 +550,14 @@ The last idea and demo is close to theme switching based on custom properties, s
 <a href="{{ site.baseurl }}/demos/css-custom-props-theme-switcher/">
     <img src="https://i.imgur.com/DwLCfC0.gif" alt=""/>
 </a>
+
+* and, of course, [usage as an emulation of missed separate CSS properties](http://codepen.io/malyw/pen/KzZXRq?editors=1100)- once again the name "custom properties"
+sounds good in this case:
+    <div>
+        <a href="http://codepen.io/malyw/pen/KzZXRq?editors=1100">
+            <img src="https://i.imgur.com/E0FTuI1.jpg" />
+        </a>
+    </div>
 
 # Demo
 
