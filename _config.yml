@@ -26,19 +26,15 @@ web-master-verifications:
   yandex: 66d8056d3b1e88fd
 
 # Includes an icon in the footer for each username
-footer-links:
-  dribbble:
-#  email: sgospodarets@gmail.com
-  facebook:
-  flickr:
-  github: malyw
-  instagram:
-  linkedin: gospodarets
-  pinterest:
+social-links:
+#  facebook: sergeygospodaretsblog
+#  github: malyw
+#  linkedin: gospodarets
   rss: blog.gospodarets.com # make sure the "url" above is set!
   feedburner: https://feeds.feedburner.com/sergey_gospodarets_blog # RSS alternative subscription
+  feedburner_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=sergey_gospodarets_blog
   twitter: malyw
-  googleplus:
+#  googleplus: SergeyGospodarets
 
 # https://jekyllrb.com/docs/pagination/
 paginate: 5
@@ -51,9 +47,6 @@ google_analytics: UA-53471595-1
 
 # Google custom search ID
 google_search: 012363491708652379866:741arfehybe
-
-# Share buttons ID
-share_buttons: d17f6eee-8573-4fba-b16e-2bca31a25157
 
 # Website URL
 # Used for Sitemap.xml and your RSS feed

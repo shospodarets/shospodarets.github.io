@@ -4,7 +4,7 @@ title: About
 ---
 
 <div class="about-image-wrapper">
-    <a href="https://twitter.com/{{ site.footer-links.twitter }}">
+    <a href="https://twitter.com/{{ site.social-links.twitter }}">
         <img src="{{ site.baseurl }}/images/about.png" alt="about image"/>
     </a>
 </div>

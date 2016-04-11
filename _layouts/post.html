@@ -12,6 +12,7 @@ layout: default
     </h1>
 
     <div class="meta">
+        {% include share-buttons.html %}
         <!-- META FOR ARTICLE START -->
         <span class="absolute-hidden">
             {% for tag in page.tags %}
@@ -36,13 +37,12 @@ layout: default
                 {{ page.date | date: "%B %e, %Y" }}
             </span>
         </span>
-        {% include share-buttons.html %}
     </div>
 
     <div class="entry">
         <div
                 itemprop="articleBody"
-                >
+        >
             {{ content }}
         </div>
     </div>

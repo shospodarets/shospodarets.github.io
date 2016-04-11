@@ -31,8 +31,7 @@ require('babel-polyfill');
             SITE_BASE_URL: APP.SITE_BASE_URL,
             DISCUSS_ID: APP.DISCUSS_ID,
             PAGE_URL: APP.PAGE_URL,
-            PAGE_IDENTIFIER: APP.PAGE_IDENTIFIER,
-            SHARE_BUTTONS_ID: APP.SHARE_BUTTONS_ID
+            PAGE_IDENTIFIER: APP.PAGE_IDENTIFIER
         });
         APP.customSearch = new CustomSearch({
             GOOGLE_SEARCH_ID: APP.GOOGLE_SEARCH_ID

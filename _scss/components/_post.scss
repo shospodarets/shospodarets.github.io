@@ -38,8 +38,15 @@
   }
 
   .meta {
+    @include clearfix;
+
+    .share-buttons {
+      float: right;
+    }
+
     span {
       display: inline-block;
+      vertical-align: middle;
     }
 
     .date {

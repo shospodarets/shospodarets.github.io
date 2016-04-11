@@ -1,5 +1,19 @@
-<span class="share share-buttons">
-    <span class='st_twitter_large' displayText='Tweet' st_via="malyw" st_username='malyw'></span>
-    <span class='st_reddit_large' displayText='Reddit'></span>
-    <span class='st_googleplus_large' displayText='Google +'></span>
+<span class="share-buttons">
+    <a href="https://twitter.com/share"
+       class="twitter-widget twitter-share-button"
+       data-text="{% if page.share_description %}{{ page.share_description }}{% elsif page.path contains '_posts' %}{{ page.content | strip_html | xml_escape | truncate: 200 }}{% else %}{{ site.description }}{% endif %}"
+       data-via="{{ site.social-links.twitter }}"
+       data-related="{{ site.social-links.twitter }}"
+       data-size="large"
+    >
+        Tweet
+    </a>
+
+    <a href="https://twitter.com/{{ site.social-links.twitter }}"
+       class="twitter-widget twitter-follow-button"
+       data-show-count="false"
+       data-size="large"
+    >
+        Follow @{{ site.social-links.twitter }}
+    </a>
 </span>

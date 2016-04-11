@@ -4,9 +4,11 @@
             class="demo-title">
         {{ page.title }}
     </h1>
-    {% include share-buttons.html %}
+    <div class="demo-title-share-buttons">
+        {% include share-buttons.html %}
+    </div>
     {% if page.article_link %}
-    <ul>
+    <ul class="demo-title-links">
         {% if page.article_link %}
         <li>
             <a href="{{ site.baseurl }}/{{ page.article_link }}">Read the article</a>

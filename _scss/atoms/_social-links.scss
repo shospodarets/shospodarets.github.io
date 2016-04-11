@@ -1,24 +1,40 @@
+$social-links-indent: 8px;
+
 .social-links {
   @include clearfix;
-}
 
-.small-social-links {
-  $size: 35px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  > * {
+    margin-right: $social-links-indent;
+
+    @include mobile-breakpoint {
+      margin-bottom: $social-links-indent;
+    }
+  }
 
   svg {
     float: left;
+  }
+}
 
-    @include mobile-breakpoint {
-      float: none;
-    }
+.small-social-links {
+  @include mobile-breakpoint {
+    justify-content: center;
+  }
 
-    margin-right: 8px;
+  $size: 35px;
+  svg {
     width: $size;
     height: $size;
   }
 }
 
 .big-social-links {
+  justify-content: center;
+
   $size: 40px;
   svg {
     width: $size;

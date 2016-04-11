@@ -34,22 +34,10 @@ ConditionalLoader.prototype.loadScripts = function () {
             UTILS.httpProtocol + '//' + this.options.DISCUSS_ID + '.disqus.com/embed.js'
         );
     }
-    /* SHARE BUTTONS */
-    if (document.querySelectorAll('.share-buttons').length) {
+    /* TWITTER BUTTONS */
+    if (document.querySelectorAll('.twitter-widget').length) {
         UTILS.loadScript(
-            document.location.protocol == 'https:' ?
-                'https://ws.sharethis.com/button/buttons.js' :
-                'http://w.sharethis.com/button/buttons.js',
-            false,// if "false"-> loads async
-            function () {
-                stLight.options({
-                    publisher: this.options.SHARE_BUTTONS_ID,
-                    doNotHash: true,
-                    doNotCopy: true,// if false-> “See more: yourURL.com#SThashtag” will appear
-                    hashAddressBar: false,
-                    shorten: false
-                });
-            }.bind(this)
+            UTILS.httpProtocol + '//' + 'platform.twitter.com/widgets.js'
         );
     }
 };
