@@ -14,7 +14,7 @@ next your question might be: "what about mixins"?
 
 And voilà- there is not only an editor's draft- [https://tabatkins.github.io/specs/css-apply-rule/](https://tabatkins.github.io/specs/css-apply-rule/)
 
-but even working implementation in Chrome Canary- [https://www.chromestatus.com/feature/5753701012602880](https://www.chromestatus.com/feature/5753701012602880)
+but even working implementation in Chrome- [https://www.chromestatus.com/feature/5753701012602880](https://www.chromestatus.com/feature/5753701012602880)
 
 Before continuing reading, make sure you understand the terms of
 [CSS custom properties]({{ site.baseurl }}/css_properties_in_depth/)
@@ -214,7 +214,7 @@ Currently there is a discussion regarding such cases.
 
 ##  Browsers
 
-1. `@apply` is supported in [Chrome Canary](https://codereview.chromium.org/1645433002)
+1. `@apply` is supported in [Chrome Dev and Canary (desktop and mobile)](https://codereview.chromium.org/1645433002)
 under the `chrome://flags/#enable-experimental-web-platform-features` flag ([issue](https://bugs.chromium.org/p/chromium/issues/detail?id=586974))
 2. check a
 [Chrome Platform Status issue](https://www.chromestatus.com/feature/5753701012602880)
