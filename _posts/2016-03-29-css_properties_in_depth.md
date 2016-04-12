@@ -617,4 +617,4 @@ I hope after reading this article you are excited to start using custom properti
 # Further reading
 
 Recently CSS native mixins syntax was announced -
-read my article [CSS @apply rule (native CSS mixins)]({{ site.baseurl }}/css_apply_rule/)  
+read my article [CSS @apply rule (native CSS mixins)]({{ site.baseurl }}/css_apply_rule)  

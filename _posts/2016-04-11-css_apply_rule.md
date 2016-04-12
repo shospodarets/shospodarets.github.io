@@ -6,7 +6,7 @@ share_image: http://i.imgur.com/o7pDpdQ.png
 share_description: CSS @apply rule (native CSS mixins / custom sets of properties) 
 ---
 
-In my previous article [CSS custom properties (variables) In-Depth]({{ site.baseurl }}/css_properties_in_depth/)
+In my previous article [CSS custom properties (variables) In-Depth]({{ site.baseurl }}/css_properties_in_depth)
 I described CSS custom properties (variables) and variations of their usages.
 
 If you started thinking to move from CSS preprocessors to plain CSS after that-
@@ -17,14 +17,14 @@ And voilà- there is not only an editor's draft- [https://tabatkins.github.io/sp
 but even working implementation in Chrome Canary- [https://www.chromestatus.com/feature/5753701012602880](https://www.chromestatus.com/feature/5753701012602880)
 
 Before continuing reading, make sure you understand the terms of
-[CSS custom properties]({{ site.baseurl }}/css_properties_in_depth/)
+[CSS custom properties]({{ site.baseurl }}/css_properties_in_depth)
 and [CSS mixins](https://css-tricks.com/custom-user-mixins/).
 
 <div class="more"></div>
 
 # Defining custom sets
 
-As we know, you can [define anything as a custom properties value]({{ site.baseurl }}/css_properties_in_depth/#set).
+As we know, you can [define anything as a custom properties value]({{ site.baseurl }}/css_properties_in_depth#set).
 
 Let's just define set of properties:
 
