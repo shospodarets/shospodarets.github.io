@@ -2,7 +2,7 @@
 layout: post
 title: CSS custom properties (native variables) In-Depth
 tags: [CSS, Sass]
-share_image: https://i.imgur.com/Hg1U3mu.png
+share_image: https://i.imgur.com/YgnJv5r.png
 share_description: CSS custom properties (native variables) In-Depth   
 ---
 
@@ -93,7 +93,6 @@ As a value you can use colors, strings, values etc.:
  --logo-border-color: rebeccapurple;
  --header-height: 68px;
  --content-padding: 10px 20px;
- --main-font-family: "Times, Georgia, Palatino, serif";
  --base-line-height: 1.428571429;
  --transition-duration: .35s;
  --external-link: "external link";
@@ -188,7 +187,7 @@ better to follow [a common convention naming your variables](http://codepen.io/m
 ```css
 :root {
   /* main (page-wide) variables */
-  --main-font-family: "Times, Georgia, Palatino, serif";
+  --main-color: #555;
   --main-bg: rgb(200, 200, 200);
   /* accordion variables */
   --accordion-bg: #f00;
@@ -197,7 +196,7 @@ better to follow [a common convention naming your variables](http://codepen.io/m
 }
 
 body {
-  font-family: var(--main-font-family);
+  color: var(--main-color);
   background-color: var(--main-bg);
   /*...*/
 }
