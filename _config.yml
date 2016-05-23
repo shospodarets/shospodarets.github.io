@@ -31,8 +31,8 @@ social-links:
 #  github: malyw
 #  linkedin: gospodarets
   rss: blog.hospodarets.com # make sure the "url" above is set!
-  feedburner: https://feeds.feedburner.com/sergey_gospodarets_blog # RSS alternative subscription
-  feedburner_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=sergey_gospodarets_blog
+  feedburner: https://feeds.feedburner.com/serg_hospodarets_blog # RSS alternative subscription
+  feedburner_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=serg_hospodarets_blog
   twitter: malyw
 #  googleplus: SergeyGospodarets
 
