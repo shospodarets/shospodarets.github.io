@@ -1,5 +1,5 @@
 {
-  "name": "gospodarets-blog",
+  "name": "hospodarets-blog",
   "version": "1.0.0",
   "dependencies": {
     "bootstrap": "~3.3.5"

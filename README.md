@@ -1,4 +1,4 @@
-# [blog.gospodarets.com](https://blog.gospodarets.com/)
+# [blog.hospodarets.com](https://blog.hospodarets.com/)
 
 1. $ [sudo] npm run gem-install
 1. $ npm install

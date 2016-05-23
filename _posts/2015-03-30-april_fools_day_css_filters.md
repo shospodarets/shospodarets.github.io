@@ -12,7 +12,7 @@ We already have some jokes from Google like [com.google](https://com.google/) an
 
 There is [the list of others](http://www.theguardian.com/world/live/2015/apr/01/april-fools-day-jokes-2015-the-best-from-around-the-world).
 
-So, want to provide some nice effect for your site/page? It's easy to do adding only one line of CSS- [CSS filter](//blog.gospodarets.com/CSS_filters_in_action/).
+So, want to provide some nice effect for your site/page? It's easy to do adding only one line of CSS- [CSS filter](//blog.hospodarets.com/CSS_filters_in_action/).
 
 <div class="text-center">
     <p>
@@ -145,7 +145,7 @@ init();
 
 - If you want to make this joke work not only at April 1- set `checkDate` to `false`.
 - To set frequency of appearing use `frequencyOfAppearing` (it takes percents from "0%" to "100%").
-- Add you filter values to be applied to `FILTER_VALUES`. If you want to play with CSS filters and find the best- you can use range sliders in [CSS filters DEMO](http://blog.gospodarets.com/css-filters/)
+- Add you filter values to be applied to `FILTER_VALUES`. If you want to play with CSS filters and find the best- you can use range sliders in [CSS filters DEMO](http://blog.hospodarets.com/css-filters/)
 
 <a href="{{ site.baseurl }}/demos/april_fools_day_css_filters/"
    target="_blank"

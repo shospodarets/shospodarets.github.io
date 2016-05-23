@@ -9,11 +9,11 @@ title: About
     </a>
 </div>
 
-Hi, my name is Serg Gospodarets.
+Hi, my name is Serg Hospodarets.
 
 I'm a Lead Front-End Developer / Engineering Manager and :heart: Front-End and Web related stuff.
 
-Author of [Serg Gospodarets Blog](https://blog.gospodarets.com/),
+Author of [Serg Hospodarets Blog](https://blog.hospodarets.com/),
 [speaker](https://speakerdeck.com/malyw/)
 and open-source community member ([Github](https://github.com/malyw), [npm](https://www.npmjs.com/~malyw)).
 
@@ -23,4 +23,4 @@ JS, HTML and CSS enthusiast.
 
 ### Contact me
 
-[sgospodarets@gmail.com](mailto:sgospodarets@gmail.com)
+[shospodarets@gmail.com](mailto:shospodarets@gmail.com)

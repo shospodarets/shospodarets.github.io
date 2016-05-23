@@ -4,8 +4,8 @@
   "homepage": "https://github.com/malyw/sass-to-js",
   "authors": [
     {
-      "name": "Serg Gospodarets",
-      "homepage": "http://blog.gospodarets.com/"
+      "name": "Serg Hospodarets",
+      "homepage": "http://blog.hospodarets.com/"
     }
   ],
   "description": "Library to pass Sass variables via CSS to JavaScript",

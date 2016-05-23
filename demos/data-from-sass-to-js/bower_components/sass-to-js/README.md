@@ -21,7 +21,7 @@ You can use it e.g. for passing data from Sass to JS like:
 * some variables values (e.g. theme colors, dimensions etc.)
 * list of variable values which might be applied in some circumstances (for example, columns count for different types of devices)
 * to test your Sass code/framework with JavaScript
-* to prevent providing same variables in Sass and JavaScript (as described in [sass-to-js article](http://blog.gospodarets.com/passing_data_from_sass_to_js))
+* to prevent providing same variables in Sass and JavaScript (as described in [sass-to-js article](http://blog.hospodarets.com/passing_data_from_sass_to_js))
 
 ## Install
 
@@ -186,11 +186,11 @@ $(htmlEl)
 
 ### Article with description
 
-[Sass-to-js: Passing data from Sass to JavaScript](http://blog.gospodarets.com/passing_data_from_sass_to_js)
+[Sass-to-js: Passing data from Sass to JavaScript](http://blog.hospodarets.com/passing_data_from_sass_to_js)
 
 ### Demo
 
-[Passing data from Sass to JS demo](http://blog.gospodarets.com/demos/data-from-sass-to-js/)
+[Passing data from Sass to JS demo](http://blog.hospodarets.com/demos/data-from-sass-to-js/)
 
 ### Codepen
 
@@ -210,4 +210,4 @@ grunt
 
 MIT
 
-[![logo](http://imgh.us/sass-to-js_1.svg)](http://blog.gospodarets.com/passing_data_from_sass_to_js)
+[![logo](http://imgh.us/sass-to-js_1.svg)](http://blog.hospodarets.com/passing_data_from_sass_to_js)

@@ -315,7 +315,7 @@ document.documentElement.style.setProperty(
 
 Ability to assign anything as a CSS variable value and an easy interface to read/write that from JS,
 allows to skip the old hacky ways of
-[passing data from CSS/Sass to JS](https://blog.gospodarets.com/passing_data_from_sass_to_js)
+[passing data from CSS/Sass to JS](https://blog.hospodarets.com/passing_data_from_sass_to_js)
 (e.g. [list of media queries breakpoints](http://codepen.io/malyw/pen/zGxodr)).
 
 For debug you can just output the value of a variable on your page in the `content` rule:

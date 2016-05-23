@@ -4,7 +4,7 @@
 
 ## Demo
 
-[Visibility classes demo](http://blog.gospodarets.com/demos/visibility-classes/)
+[Visibility classes demo](http://blog.hospodarets.com/demos/visibility-classes/)
 
 ## Install
 

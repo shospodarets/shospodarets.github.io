@@ -1,10 +1,10 @@
-author: Serg Gospodarets
+author: Serg Hospodarets
 keywords: javascript,js,html,html5,css,css3,git,shell,node.js,frontend
-personal-site-url: https://gospodarets.com
+personal-site-url: https://hospodarets.com
 google-plus-account-url: https://plus.google.com/u/0/+SergeyGospodarets
 google-plus-posts: https://plus.google.com/u/0/+SergeyGospodarets/posts
 # Name of site (displayed in the header)
-name: Serg Gospodarets Blog
+name: Serg Hospodarets Blog
 
 # Short bio or description (displayed in the header)
 description: A front end web development blog with tutorials and ideas about JavaScript, AngularJS, jQuery, CSS, CSS3 and HTML, HTML5
@@ -30,7 +30,7 @@ social-links:
 #  facebook: sergeygospodaretsblog
 #  github: malyw
 #  linkedin: gospodarets
-  rss: blog.gospodarets.com # make sure the "url" above is set!
+  rss: blog.hospodarets.com # make sure the "url" above is set!
   feedburner: https://feeds.feedburner.com/sergey_gospodarets_blog # RSS alternative subscription
   feedburner_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=sergey_gospodarets_blog
   twitter: malyw
@@ -50,7 +50,7 @@ google_search: 012363491708652379866:741arfehybe
 
 # Website URL
 # Used for Sitemap.xml and your RSS feed
-url: https://blog.gospodarets.com
+url: https://blog.hospodarets.com
 demos_code_base_url: https://github.com/malyw/malyw.github.io/tree/master/demos
 
 # If hosting site at a Project repository on GitHub pages
