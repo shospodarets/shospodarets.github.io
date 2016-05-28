@@ -47,9 +47,15 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.7;
   margin: $marginVertical 0;
   padding: 0;
+  transition: background-color .3s;
 
   @include mobile-breakpoint {
     line-height: 1.4;
+  }
+
+  &[id]:hover {
+    cursor: pointer;
+    background-color: $lightGray;
   }
 }
 
