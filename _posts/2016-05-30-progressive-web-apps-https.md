@@ -55,7 +55,7 @@ In short here are pros/cons of either way:
 In April [Let’s Encrypt](https://letsencrypt.org/) guys
 [left beta](https://letsencrypt.org/2016/04/12/leaving-beta-new-sponsors.html)
 and started serving free certificates,
-before the only one way was to pay for it.
+before the only one way (usually) was to pay for it.
 
 Cons:
 
