@@ -104,10 +104,7 @@ module.exports = function (grunt) {
                         features: {
                             calc: false,
                             rem: false,
-                            colorRgba: false,
-                            // ToDo
-                            customProperties: false,
-                            applyRule: false
+                            colorRgba: false
                         }
                     }),
                     require("postcss-reporter")()

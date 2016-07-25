@@ -1,4 +1,4 @@
-// HIDE BLOCK WHEN FUNCTIONALITY IS SUPPORTED
+/* HIDE BLOCK WHEN FUNCTIONALITY IS SUPPORTED */
 @supports ( (--a: 0)) {
   .is-not-supported {
     display: none;
