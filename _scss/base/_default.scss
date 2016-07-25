@@ -25,7 +25,6 @@ a {
   cursor: pointer;
 
   // prevent long links scroll
-  overflow-wrap: break-word;
   word-wrap: break-word;
 
   &:hover {

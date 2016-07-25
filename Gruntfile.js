@@ -110,7 +110,7 @@ module.exports = function (grunt) {
                 ]
             },
             critical: {
-                src: "_includes/critical.css"
+                src: "_includes/generated/critical.css"
             },
             nonCritical: {
                 options: {
