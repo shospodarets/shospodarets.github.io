@@ -57,11 +57,11 @@ module.exports = function (grunt) {
         },
 
         sass: {
-            options: {
-                outputStyle: 'compressed',
-                sourceMap: true
-            },
             critical: {
+                options: {
+                    outputStyle: 'compressed',
+                    sourceMap: true
+                },
                 files: [{
                     expand: true,
                     cwd: '_scss',
@@ -71,6 +71,10 @@ module.exports = function (grunt) {
                 }]
             },
             nonCritical: {
+                options: {
+                    outputStyle: 'compressed',
+                    sourceMap: true
+                },
                 files: [{
                     expand: true,
                     cwd: '_scss',
@@ -84,9 +88,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'demos',
                     src: [
-                        '**/*.scss',
-                        '!**/bower_components/**/*.scss',
-                        '!**/node_modules/**/*.scss'
+                        '*/main.scss'
                     ],
                     dest: 'demos',
                     ext: '.css'
@@ -94,21 +96,38 @@ module.exports = function (grunt) {
             }
         },
 
-        autoprefixer: {
+        postcss: {
             options: {
-                map: true
+                processors: [
+                    require('postcss-cssnext')({
+                        browsers: ['last 2 versions', 'IE > 10'],
+                        features: {
+                            calc: false,
+                            rem: false,
+                            colorRgba: false,
+                            // ToDo
+                            customProperties: false,
+                            applyRule: false
+                        }
+                    }),
+                    require("postcss-reporter")()
+                ]
             },
             critical: {
+                options: {
+                    map: true
+                },
                 src: "_includes/critical.css"
             },
             nonCritical: {
+                options: {
+                    map: true
+                },
                 src: "css/non-critical.css"
             },
             demos: {
                 src: [
-                    'demos/**/*.css',
-                    '!demos/**/bower_components/**/*.css',
-                    '!demos/**/node_modules/**/*.css'
+                    'demos/*/main.css'
                 ]
             }
         },
@@ -158,12 +177,12 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask("generateCss", [
-        "sass:critical", "autoprefixer:critical",
-        "sass:nonCritical", "autoprefixer:nonCritical"
+        "sass:critical", "postcss:critical",
+        "sass:nonCritical", "postcss:nonCritical"
     ]);
 
     grunt.registerTask("generateDemosCss", [
-        "sass:demos", "autoprefixer:demos"
+        "sass:demos", "postcss:demos"
     ]);
 
     grunt.registerTask("serve", ["shell:jekyllServe"]);

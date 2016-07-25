@@ -1,2 +1,10 @@
-@supports (--a: 0){.is-not-supported{display:none}}body{color:var(--main-color, #000);background-color:var(--main-bg, #fff)}.selected-set:after{content:var(--selected-set, "default")}
-/*# sourceMappingURL=main.css.map */
+@supports (--a: 0) {
+  .is-not-supported {
+    display: none; } }
+
+body {
+  color: var(--main-color, #000);
+  background-color: var(--main-bg, #fff); }
+
+.selected-set:after {
+  content: var(--selected-set, "default"); }
