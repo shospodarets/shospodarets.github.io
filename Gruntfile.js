@@ -58,9 +58,6 @@ module.exports = function (grunt) {
 
         sass: {
             critical: {
-                options: {
-                    outputStyle: 'compressed'
-                },
                 files: [{
                     expand: true,
                     cwd: '_scss',
@@ -71,7 +68,6 @@ module.exports = function (grunt) {
             },
             nonCritical: {
                 options: {
-                    outputStyle: 'compressed',
                     sourceMap: true
                 },
                 files: [{

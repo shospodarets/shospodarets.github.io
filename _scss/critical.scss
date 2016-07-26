@@ -1,3 +1,18 @@
+/* custom properties set & @apply rule */
+:root {
+  --centered: #{'
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  '}
+}
+
+.centered {
+  @apply --centered;
+}
+
 // app common
 @import "mixins";
 @import "_variables";
