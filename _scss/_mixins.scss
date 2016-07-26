@@ -16,6 +16,21 @@
   overflow: hidden;
 }
 
+@mixin expander {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// Mobile breakpoints
+@mixin mobile-breakpoint {
+  @media screen and (max-width: 680px) {
+    @content;
+  }
+}
+
 /*
  TRIANGLE
 */

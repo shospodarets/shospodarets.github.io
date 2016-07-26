@@ -6,7 +6,7 @@
   &:hover {
     h1 {
       a {
-        @include hoveredTitle;
+        color: $hover-title-color;
       }
     }
   }

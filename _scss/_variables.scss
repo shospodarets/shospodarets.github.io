@@ -4,6 +4,7 @@
 
 // Colors
 $blue: #4183C4;
+$hover-title-color: $blue;
 
 // Grays
 $black: #000;
@@ -17,13 +18,6 @@ $white: #fff;
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
-
-// Mobile breakpoints
-@mixin mobile-breakpoint {
-  @media screen and (max-width: 680px) {
-    @content;
-  }
-}
 
 // Layout
 $marginVertical: 15px;

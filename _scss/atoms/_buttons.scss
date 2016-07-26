@@ -1,13 +1,6 @@
 // ----
 // PULSE BUTTON (CIRCLE FROM CENTER ON HOVER)
 // ----
-@mixin pulse-center {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 
 .btn-pulse {
   $height: 2.8em;
@@ -32,14 +25,14 @@
 
   .wrapper {
     display: inline-block;
-    @include pulse-center;
+    @include expander;
     height: 100%;
     width: $width;
     overflow: hidden;
 
     .inner {
       display: block;
-      @include pulse-center;
+      @include expander;
       border-radius: 50%;
       width: $width*2;
       height: $width*2;
