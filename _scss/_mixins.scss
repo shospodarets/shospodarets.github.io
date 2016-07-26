@@ -31,9 +31,7 @@
   }
 }
 
-/*
- TRIANGLE
-*/
+// TRIANGLE
 /// https://css-tricks.com/snippets/sass/opposite-direction-function/
 /// Returns the opposite direction of each direction in a list
 /// @author Hugo Giraudel
@@ -69,7 +67,7 @@
 /// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
 /// @param {Length} $size [1em] - Triangle size
 /// @param {Color} $color [currentcolor] - Triangle color
-@mixin triangle($direction, $size: 1em, $color: $white-color) {
+@mixin triangle($direction, $color, $size: 1em) {
   @if not index(top right bottom left, $direction) {
     @error "Direction must be either `top`, `right`, `bottom` or `left`.";
   }

@@ -1,8 +1,9 @@
-$h1FontSize: 32px;
+@import "../variables";
+@import "../mixins";
 
-/**************/
-/* BASE RULES */
-/**************/
+//------------------------------------
+//    BASE RULES
+//------------------------------------
 html, body {
   // stretch to get minimum the full height
   height: 100%;

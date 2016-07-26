@@ -1,6 +1,8 @@
-/*
-  OPEN-CLOSE block
-*/
+@import "../mixins";
+
+//------------------------------------
+//    OPEN-CLOSE block
+//------------------------------------
 .open-close-wrapper {
   position: relative;
 
@@ -16,7 +18,7 @@
   .icon {
     cursor: pointer;
     display: inline-block;
-    @include triangle(bottom, $size: 5px, $color: #000);
+    @include triangle(bottom, $color: #000, $size: 5px);
     transition: transform .3s;
   }
 

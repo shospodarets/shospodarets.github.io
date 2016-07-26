@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../mixins";
+
 .entry {
   @include clearfix;
   $lightBorderColor: #eee;

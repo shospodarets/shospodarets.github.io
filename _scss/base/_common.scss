@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../mixins";
+
 .unloading {
   // added onbeforeunload page
   #main {
@@ -39,7 +42,7 @@
 blockquote {
   margin: $marginVertical .8em;
   border-left: 2px solid $gray;
-  padding: $marginVertical/2 $marginVertical/2;
+  padding: $blockquote-padding;
   color: $gray;
   font-size: 22px;
   font-style: italic;

@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../mixins";
+
 .post-short {
   cursor: pointer;
   padding-bottom: $marginVertical;
@@ -27,7 +30,7 @@
   @include clearfix;
 
   .external-link-icon {
-    $size: $h1FontSize * 1.7;
+    $size: round($h1FontSize * 1.7);
 
     width: $size;
     height: $size;

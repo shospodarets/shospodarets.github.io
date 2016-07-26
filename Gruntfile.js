@@ -67,9 +67,6 @@ module.exports = function (grunt) {
                 }]
             },
             nonCritical: {
-                options: {
-                    sourceMap: true
-                },
                 files: [{
                     expand: true,
                     cwd: '_scss',
@@ -109,9 +106,6 @@ module.exports = function (grunt) {
                 src: "_includes/generated/critical.css"
             },
             nonCritical: {
-                options: {
-                    map: true
-                },
                 src: "css/non-critical.css"
             },
             demos: {

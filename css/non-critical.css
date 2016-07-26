@@ -1,72 +1,6 @@
-/*
- TRIANGLE
-*/
-/***********************/
-/* SYNTAX HIGHLIGHTING */
-/***********************/
 .highlight {
   background: #f8f8f8;
-  overflow: auto;
-  /* Comment */
-  /* Error */
-  /* Keyword */
-  /* Operator */
-  /* Comment.Multiline */
-  /* Comment.Preproc */
-  /* Comment.Single */
-  /* Comment.Special */
-  /* Generic.Deleted */
-  /* Generic.Emph */
-  /* Generic.Error */
-  /* Generic.Heading */
-  /* Generic.Inserted */
-  /* Generic.Output */
-  /* Generic.Prompt */
-  /* Generic.Strong */
-  /* Generic.Subheading */
-  /* Generic.Traceback */
-  /* Keyword.Constant */
-  /* Keyword.Declaration */
-  /* Keyword.Namespace */
-  /* Keyword.Pseudo */
-  /* Keyword.Reserved */
-  /* Keyword.Type */
-  /* Literal.Number */
-  /* Literal.String */
-  /* Name.Attribute */
-  /* Name.Builtin */
-  /* Name.Class */
-  /* Name.Constant */
-  /* Name.Decorator */
-  /* Name.Entity */
-  /* Name.Exception */
-  /* Name.Function */
-  /* Name.Label */
-  /* Name.Namespace */
-  /* Name.Tag */
-  /* Name.Variable */
-  /* Operator.Word */
-  /* Text.Whitespace */
-  /* Literal.Number.Float */
-  /* Literal.Number.Hex */
-  /* Literal.Number.Integer */
-  /* Literal.Number.Oct */
-  /* Literal.String.Backtick */
-  /* Literal.String.Char */
-  /* Literal.String.Doc */
-  /* Literal.String.Double */
-  /* Literal.String.Escape */
-  /* Literal.String.Heredoc */
-  /* Literal.String.Interpol */
-  /* Literal.String.Other */
-  /* Literal.String.Regex */
-  /* Literal.String.Single */
-  /* Literal.String.Symbol */
-  /* Name.Builtin.Pseudo */
-  /* Name.Variable.Class */
-  /* Name.Variable.Global */
-  /* Name.Variable.Instance */
-  /* Literal.Number.Integer.Long */ }
+  overflow: auto; }
   .highlight .highlight pre {
     word-break: break-all;
     word-wrap: break-word; }
@@ -214,11 +148,10 @@
   .highlight .il {
     color: #666666; }
 
-/* fonts for browser icons (used with permission from IcoMoon.io) */
 @font-face {
   font-family: 'agents';
-  src: url("../../fonts/agents.eot");
-  src: url("../../fonts/agents.eot?#iefix") format("embedded-opentype"), url("../../fonts/agents.svg#agents") format("svg"), url("../../fonts/agents.woff") format("woff"), url("../../fonts/agents.ttf") format("truetype");
+  src: url("/fonts/agents.eot");
+  src: url("/fonts/agents.eot?#iefix") format("embedded-opentype"), url("/fonts/agents.svg#agents") format("svg"), url("/fonts/agents.woff") format("woff"), url("/fonts/agents.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -251,15 +184,10 @@
 
 .caniuse .agents,
 .caniuse .legend {
-  margin: 0 auto;
-  max-width: 1200px;
-  overflow: hidden;
   width: auto;
   list-style-type: none;
-  margin: 0;
   overflow: auto;
   padding: 0;
-  width: auto;
   margin: 0 auto;
   max-width: 400px; }
 
@@ -303,15 +231,7 @@
   margin-right: 0; }
 
 .caniuse .agents li {
-  font-size: 1em;
-  /* android */
-  /* chrome */
-  /* firefox */
-  /* ie */
-  /* ios */
-  /* opera */
-  /* safari */
-  /* hover states */ }
+  font-size: 1em; }
 
 .caniuse .agents li:hover,
 .caniuse .agents li:hover:before {
@@ -324,7 +244,7 @@
 
 .caniuse .agents li[class^="icon-"]:before,
 .caniuse .agents li [class*=" icon-"]:before {
-  font-family: 'agents';
+  font-family: 'agents', sans-serif;
   font-style: normal;
   speak: none;
   font-weight: normal;
@@ -343,8 +263,7 @@
 
 .caniuse .agents li.icon-ie:before,
 .caniuse .agents li.icon-windows:before {
-  content: "\e001";
-  /* alternate windows icon: content: "\e007" */ }
+  content: "\e001"; }
 
 .caniuse .agents li.icon-ios_saf:before {
   content: "\e005"; }
@@ -500,8 +419,6 @@
   box-shadow: 0 0 5px rgba(109, 207, 246, 0.5); }
 
 .google-custom-search-original {
-  /*------------------------------------*      RESET BLOG STYLES FOR GOOGLE CUSTOM SEARCH
-  \*------------------------------------*/
   box-sizing: content-box;
   text-align: left; }
   .google-custom-search-original table {
@@ -532,14 +449,10 @@
     overflow: hidden; }
     .btn-pulse .wrapper .inner {
       display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
       border-radius: 50%;
       width: 200px;
       height: 200px;
+      position: absolute;
       top: 50%;
       left: 50%;
       transition: box-shadow 0.5s ease-out;
@@ -654,4 +567,3 @@ footer {
   text-align: center; }
   .about-image-wrapper img {
     border-radius: 8px; }
-/*# sourceMappingURL=non-critical.css.map */
