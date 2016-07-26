@@ -1,13 +1,7 @@
+@import "../variables";
 @import "../mixins";
 
 .pagination {
-  $pagination-btn-number: 7;
-  $pagination-btn-width: round((100%/$pagination-btn-number)*1000)/1000; // round to third decimal after a point
-  $pagination-btn-indent: $pagination-btn-width/10;
-
-  $pagination-pages-btn-number: 5;
-  $pagination-pages-btn-width: round((100%/$pagination-pages-btn-number)*1000)/1000; // round to third decimal after a point
-
   @include clearfix;
   display: flex;
   text-align: center;

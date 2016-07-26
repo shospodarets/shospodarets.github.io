@@ -1,3 +1,4 @@
+@import "../variables";
 @import "../mixins";
 
 // ----
@@ -5,14 +6,7 @@
 // ----
 
 .btn-pulse {
-  $height: 2.8em;
-  $width: 100px;
-  $btn-pulse-color: rgba(#2a65a0, 0.8);
-  $btn-pulse-hover-color: #fff;
-  $btn-pulse-bg: #f1f1f1;
-  $btn-pulse-hover-bg: #3884cd;
-
-  width: $width;
+  width: $btn-width;
   text-decoration: none;
   display: inline-block;
   text-align: center;
@@ -29,14 +23,14 @@
     display: inline-block;
     @include expander;
     height: 100%;
-    width: $width;
+    width: $btn-width;
     overflow: hidden;
 
     .inner {
       display: block;
       border-radius: 50%;
-      width: $width*2;
-      height: $width*2;
+      width: $btn-width*2;
+      height: $btn-width*2;
       // align center horizontally and vertically
       position: absolute;
       top: 50%;
@@ -50,7 +44,7 @@
     color: $btn-pulse-hover-color;
 
     .inner {
-      box-shadow: inset 0 0 0 $width rgba($btn-pulse-hover-bg, 0.8);
+      box-shadow: inset 0 0 0 $btn-width rgba($btn-pulse-hover-bg, 0.8);
     }
   }
 

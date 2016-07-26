@@ -30,10 +30,10 @@
   @include clearfix;
 
   .external-link-icon {
-    $size: round($h1FontSize * 1.7);
+    $_size: round($h1FontSize * 1.7);
 
-    width: $size;
-    height: $size;
+    width: $_size;
+    height: $_size;
     float: right;
 
     background: transparent url(/images/icons/external-link.svg) no-repeat center center;

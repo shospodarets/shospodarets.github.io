@@ -3,7 +3,6 @@
 
 .entry {
   @include clearfix;
-  $lightBorderColor: #eee;
 
   .highlight {
     border-bottom: 1px solid $lightBorderColor;

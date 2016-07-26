@@ -13,6 +13,7 @@ $darkGray: #333;
 $gray: #666;
 $lightGray: #eee;
 $white: #fff;
+$lightBorderColor: #eee;
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
@@ -23,6 +24,23 @@ $georgia: Georgia, serif;
 $marginVertical: 15px;
 $main-container-max-width: 960px;
 
+// Buttons
+$btn_height: 2.8em;
+$btn-width: 100px;
+$btn-pulse-color: rgba(#2a65a0, 0.8);
+$btn-pulse-hover-color: #fff;
+$btn-pulse-bg: #f1f1f1;
+$btn-pulse-hover-bg: #3884cd;
+
+// Pagination
+$pagination-btn-number: 7;
+$pagination-btn-width: round((100%/$pagination-btn-number)*1000)/1000; // round to third decimal after a point
+$pagination-btn-indent: $pagination-btn-width/10;
+
+$pagination-pages-btn-number: 5;
+$pagination-pages-btn-width: round((100%/$pagination-pages-btn-number)*1000)/1000; // round to third decimal after a point
+
 // Other
 $h1FontSize: 32px;
 $blockquote-padding: round($marginVertical/2);
+$social-links-indent: 8px;

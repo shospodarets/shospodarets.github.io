@@ -1,6 +1,5 @@
+@import "../variables";
 @import "../mixins";
-
-$social-links-indent: 8px;
 
 .social-links {
   @include clearfix;
@@ -27,19 +26,19 @@ $social-links-indent: 8px;
     justify-content: center;
   }
 
-  $size: 35px;
+  $_size: 35px;
   svg {
-    width: $size;
-    height: $size;
+    width: $_size;
+    height: $_size;
   }
 }
 
 .big-social-links {
   justify-content: center;
 
-  $size: 40px;
+  $_size: 40px;
   svg {
-    width: $size;
-    height: $size;
+    width: $_size;
+    height: $_size;
   }
 }

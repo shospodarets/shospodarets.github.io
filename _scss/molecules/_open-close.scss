@@ -18,7 +18,7 @@
   .icon {
     cursor: pointer;
     display: inline-block;
-    @include triangle(bottom, $color: #000, $size: 5px);
+    @include triangle(bottom, $_color: #000, $_size: 5px);
     transition: transform .3s;
   }
 
