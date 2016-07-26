@@ -1,24 +1,21 @@
-//
-// VARIABLES
-//
+:root {
+  // COLORS
+  --link-color: #4183C4;
+  --link-hover-color: lighten(#4183C4, 10%); // Sass/CSS variables mix
+  --title-hover-color: var(--link-color);
+  --code-block-border-color: #eee;
+  // Gray colors
+  --darker-gray-color: #222;
+  --dark-gray-color: #333;
+  --gray-color: #666;
+  --light-gray-color: #eee;
 
-// Colors
-$blue: #4183C4;
-$hover-title-color: $blue;
+  // BACKGROUNDS
+  --main-bg: #fff;
 
-// Grays
-$black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
-$lightBorderColor: #eee;
-
-// Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+  // Fonts
+  --main-font-family: Helvetica, Arial, sans-serif;
+}
 
 // Layout
 $marginVertical: 15px;

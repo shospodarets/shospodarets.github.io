@@ -3,7 +3,7 @@
 
 .wrapper-masthead {
   margin-bottom: 10px;
-  background-color: $lightGray;
+  background-color: var(--light-gray-color);
 }
 
 .masthead {
@@ -44,9 +44,8 @@
 .site-name {
   line-height: 1;
   margin: 0 0 7px;
-  color: $darkGray;
+  color: var(--dark-gray-color);
   cursor: pointer;
-  font-family: $helveticaNeue;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -74,7 +73,6 @@
 }
 
 nav {
-  font-family: $helveticaNeue;
   font-size: 20px;
 
   @include mobile-breakpoint {
@@ -83,14 +81,14 @@ nav {
 
   a {
     margin-left: 15px;
-    color: $darkGray;
+    color: var(--dark-gray-color);
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile-breakpoint {
       margin: 0 10px;
-      color: $blue;
+      color: var(--link-color);
     }
   }
 }

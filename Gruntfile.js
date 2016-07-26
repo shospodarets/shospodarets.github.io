@@ -94,7 +94,7 @@ module.exports = function (grunt) {
                     require('postcss-cssnext')({
                         browsers: ['last 2 versions', 'IE > 10'],
                         features: {
-                            customProperties: false // don't process custom props
+                            // customProperties: false // don't process custom props
                         }
                     }),
                     require("postcss-reporter")()

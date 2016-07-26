@@ -11,7 +11,7 @@
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: var(--gray-color);
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -41,9 +41,9 @@
 
 blockquote {
   margin: $marginVertical .8em;
-  border-left: 2px solid $gray;
+  border-left: 2px solid var(--gray-color);
   padding: $blockquote-padding;
-  color: $gray;
+  color: var(--gray-color);
   font-size: 22px;
   font-style: italic;
 }

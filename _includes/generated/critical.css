@@ -71,7 +71,6 @@ a {
   width: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
   line-height: 1.7;
   margin: 15px 0;
@@ -269,7 +268,6 @@ blockquote {
   margin: 0 0 7px;
   color: #333;
   cursor: pointer;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px; }
@@ -294,7 +292,6 @@ blockquote {
         float: none; } }
 
 nav {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px; }
   @media screen and (max-width: 680px) {
     nav {

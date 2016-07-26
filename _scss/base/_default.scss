@@ -15,13 +15,13 @@ html {
 }
 
 body {
-  background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
+  background: var(--main-bg);
+  font: 18px/1.4 var(--main-font-family);
+  color: var(--dark-gray-color);
 }
 
 a {
-  color: $blue;
+  color: var(--link-color);
   text-decoration: underline;
   cursor: pointer;
 
@@ -29,7 +29,7 @@ a {
   word-wrap: break-word;
 
   &:hover {
-    color: lighten($blue, 10%);
+    color: var(--link-hover-color);
   }
 }
 
@@ -41,8 +41,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: var(--darker-gray-color);
 
   line-height: 1.7;
   margin: $marginVertical 0;
@@ -55,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 
   &[id]:hover {
     cursor: pointer;
-    background-color: $lightGray;
+    background-color: var(--light-gray-color);
   }
 }
 
@@ -63,10 +62,10 @@ h1 {
   font-size: $h1FontSize;
   a {
     text-decoration: none;
-    color: $darkGray;
+    color: var(--dark-gray-color);
 
     &:hover {
-      color: $hover-title-color;
+      color: var(--title-hover-color);
     }
   }
 }
@@ -81,7 +80,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
+  color: var(--gray-color);
 }
 
 p {

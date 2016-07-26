@@ -4,12 +4,12 @@
 .post-short {
   cursor: pointer;
   padding-bottom: $marginVertical;
-  border-bottom: 3px solid $lightGray;
+  border-bottom: 3px solid var(--light-gray-color);
 
   &:hover {
     h1 {
       a {
-        color: $hover-title-color;
+        color: var(--title-hover-color);
       }
     }
   }

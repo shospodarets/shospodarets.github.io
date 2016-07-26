@@ -4,9 +4,10 @@
 .entry {
   @include clearfix;
 
+  // block code
   .highlight {
-    border-bottom: 1px solid $lightBorderColor;
-    border-top: 1px solid $lightBorderColor;
+    border-bottom: 1px solid var(--code-block-border-color);
+    border-top: 1px solid var(--code-block-border-color);
     padding: 10px 0;
     margin: $marginVertical 0;
   }
