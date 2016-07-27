@@ -1,4 +1,3 @@
-@import "../variables";
 @import "../mixins";
 
 //------------------------------------
@@ -16,7 +15,10 @@ html {
 
 body {
   background: var(--main-bg);
-  font: 18px/1.4 var(--main-font-family);
+  font-size: 18px;
+  line-height: 1.4;
+  // not in shorthand because of http://codepen.io/malyw/pen/mEKKqY?editors=1100
+  font-family: var(--main-font-family);
   color: var(--dark-gray-color);
 }
 

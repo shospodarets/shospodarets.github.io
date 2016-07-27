@@ -1,4 +1,3 @@
-@import "../variables";
 @import "../mixins";
 
 .post-short {
@@ -17,9 +16,6 @@
   .date {
     display: block;
     padding-top: var(--main-vertical-indent);
-    // ToDo -var is proceeded by Sass
-    // but IDEA is not happy
-    // margin-bottom: -$marginVertical;
     margin-bottom: calc(-1 * var(--main-vertical-indent));
   }
 }
@@ -33,13 +29,10 @@
   @apply --clearfix;
 
   .external-link-icon {
-    // ToDo Assignment of CSS vars to Sass vars doesn't work
-    // change to local CSS vars
-    //$_size: round(var(--main-heading-font-size) * 1.7);
-    $_size: round(32px * 1.7);
+    --_size: calc(var(--main-heading-font-size) * 1.7);
 
-    width: $_size;
-    height: $_size;
+    width: var(--_size);
+    height: var(--_size);
     float: right;
 
     background: transparent url(/images/icons/external-link.svg) no-repeat center center;

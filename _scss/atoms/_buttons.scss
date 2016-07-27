@@ -1,4 +1,3 @@
-@import "../variables";
 @import "../mixins";
 
 // ----
@@ -29,11 +28,7 @@
     .inner {
       display: block;
       border-radius: 50%;
-      // ToDo *2 -> calc
-      //width: var(--btn-width)*2;
       width: calc(var(--btn-width) * 2);
-      // ToDo *2 -> calc
-      //height: var(--btn-width)*2;
       height: calc(var(--btn-width) * 2);
       // align center horizontally and vertically
       position: absolute;
@@ -48,9 +43,6 @@
     color: var(--btn-pulse-hover-color);
 
     .inner {
-      // ToDo doesn't work with Sass (error "argument `$color` of `rgba($color, $alpha)` must be a color")
-      // btn-pulse-hover-bg redefined
-      //box-shadow: inset 0 0 0 var(--btn-width) rgba(var(--btn-pulse-hover-bg), 0.8);
       box-shadow: inset 0 0 0 var(--btn-width) var(--btn-pulse-hover-bg);
     }
   }
