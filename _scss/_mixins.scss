@@ -1,10 +1,7 @@
-// ToDo CSS vars and mixins in :root
-// are removed from output (if enabled in cssnext)
-// ToDo #{'...}; are introduced to stop Sass processing mixins
+// CSS vars and mixins in :root are removed from output (if enabled in cssnext)
+// #{'...}; are introduced to stop Sass processing mixins
 // and provide problems with using '' inside. Solution=> ""
 // Possible solution- post css, then Sass
-
-// ToDo for some reason plugin changes output and sometimes add empty blocks of rules post{}; or spaces
 :root {
   --absolute-hidden: #{'{
     position: absolute;
@@ -23,7 +20,7 @@
     bottom: 0;
   }'};
 
-  // ToDo might not work as native mixin
+  // Doesn't work as a native mixin
   --clearfix: #{"{
     &:before,
     &:after {
@@ -34,14 +31,15 @@
   }"};
 }
 
-// ToDo native mixins don't apply @content
+// Cannot use a native mixin as they don't apply @content
 @mixin mobile-breakpoint {
   @media screen and (max-width: 680px) {
     @content;
   }
 }
 
-// ToDo logic cannot be included
+// Logic cannot be included in native mixins so far
+
 // TRIANGLE
 /// https://css-tricks.com/snippets/sass/opposite-direction-function/
 /// Returns the opposite direction of each direction in a list

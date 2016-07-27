@@ -95,6 +95,9 @@ module.exports = function (grunt) {
                         browsers: ['last 2 versions', 'IE > 10'],
                         features: {
                             customProperties: false // don't process custom props
+                            /* If applyRule is disabled, processing of mixins stops with
+                             "Fatal error: Expected pseudo-class or pseudo-element" */
+                            // ,applyRule: false // don't process mixins
                         }
                     }),
                     require("postcss-reporter")()

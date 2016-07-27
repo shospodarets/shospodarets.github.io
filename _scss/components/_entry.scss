@@ -1,8 +1,6 @@
 @import "../mixins";
 
 .entry {
-  // ToDo IDEA doesn't like the syntax
-  // "Unknown at-rule"
   @apply --clearfix;
 
   // block code
