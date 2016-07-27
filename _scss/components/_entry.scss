@@ -2,7 +2,9 @@
 @import "../mixins";
 
 .entry {
-  @include clearfix;
+  // ToDo IDEA doesn't like the syntax
+  // "Unknown at-rule"
+  @apply --clearfix;
 
   // block code
   .highlight {

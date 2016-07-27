@@ -499,10 +499,11 @@
   display: -ms-flexbox;
   display: flex;
   text-align: center; }
-  .pagination:before, .pagination:after {
-    display: table;
-    content: '';
-    clear: both; }
+
+.pagination:before, .pagination:after {
+  display: table;
+  content: '';
+  clear: both; }
   .pagination a, .pagination em {
     display: inline-block;
     width: 100%;

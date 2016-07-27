@@ -171,10 +171,11 @@ blockquote {
       align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  .social-links:before, .social-links:after {
-    display: table;
-    content: '';
-    clear: both; }
+
+.social-links:before, .social-links:after {
+  display: table;
+  content: '';
+  clear: both; }
   .social-links > * {
     margin-right: 8px; }
     @media screen and (max-width: 680px) {
@@ -321,53 +322,49 @@ nav {
 .posts .post-short:last-child {
   border-bottom: none; }
 
+.post { }
+
 .post:before, .post:after {
   display: table;
   content: '';
   clear: both; }
-
-.post .external-link-icon {
-  width: 54px;
-  height: 54px;
-  float: right;
-  background: transparent url(/images/icons/external-link.svg) no-repeat center center;
-  background-size: auto 75%; }
-
-.post .meta:before, .post .meta:after {
+  .post .external-link-icon {
+    width: 54px;
+    height: 54px;
+    float: right;
+    background: transparent url(/images/icons/external-link.svg) no-repeat center center;
+    background-size: auto 75%; }
+  .post .meta { }
+  .post .meta:before, .post .meta:after {
   display: table;
   content: '';
   clear: both; }
+    .post .meta .share-buttons {
+      float: right; }
+    .post .meta span {
+      display: inline-block;
+      vertical-align: middle; }
+    .post .meta .date {
+      padding-right: 15px; }
+  .post .comments {
+    margin-top: 10px; }
 
-.post .meta .share-buttons {
-  float: right; }
-
-.post .meta span {
-  display: inline-block;
-  vertical-align: middle; }
-
-.post .meta .date {
-  padding-right: 15px; }
-
-.post .comments {
-  margin-top: 10px; }
+.entry { }
 
 .entry:before, .entry:after {
   display: table;
   content: '';
   clear: both; }
-
-.entry .highlight {
-  border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
-  padding: 10px 0;
-  margin: 15px 0; }
-
-.entry code.highlighter-rouge {
-  background: #f0f0f0;
-  border-radius: 3px;
-  padding: 0 5px; }
-
-.entry iframe,
-.entry .cp_embed_iframe {
-  margin: 15px 0;
-  max-width: 100%; }
+  .entry .highlight {
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+    margin: 15px 0; }
+  .entry code.highlighter-rouge {
+    background: #f0f0f0;
+    border-radius: 3px;
+    padding: 0 5px; }
+  .entry iframe,
+  .entry .cp_embed_iframe {
+    margin: 15px 0;
+    max-width: 100%; }

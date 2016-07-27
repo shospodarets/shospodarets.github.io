@@ -7,7 +7,7 @@
 }
 
 .google-custom-search-original {
-  @include absolute-hidden; // hide original google search
+  @apply --absolute-hidden; // hide original google search
 }
 
 .google-custom-search-placeholder {

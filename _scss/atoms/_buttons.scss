@@ -21,7 +21,7 @@
 
   .wrapper {
     display: inline-block;
-    @include expander;
+    @apply --expander;
     height: 100%;
     width: var(--btn-width);
     overflow: hidden;

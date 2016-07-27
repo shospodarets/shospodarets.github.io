@@ -1,36 +1,47 @@
-@mixin clearfix {
-  &:before,
-  &:after {
-    display: table;
-    content: '';
-    clear: both;
-  }
+// ToDo CSS vars and mixins in :root
+// are removed from output
+// ToDo #{'...}; are introduced to stop Sass processing mixins
+// and provide problems with using '' inside. Solution=> ""
+// Possible solution- post css, then Sass
+
+// ToDo for some reason plugin changes output and sometimes add empty blocks of rules post{}; or spaces
+:root {
+  --absolute-hidden: #{'{
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }'};
+
+  --expander: #{'{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }'};
+
+  // ToDo might not work as native mixin
+  --clearfix: #{"{
+    &:before,
+    &:after {
+      display: table;
+      content: '';
+      clear: both;
+    }
+  }"};
 }
 
-@mixin absolute-hidden {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-@mixin expander {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-// Mobile breakpoints
+// ToDo native mixins don't apply @content
 @mixin mobile-breakpoint {
   @media screen and (max-width: 680px) {
     @content;
   }
 }
 
+// ToDo logic cannot be included
 // TRIANGLE
 /// https://css-tricks.com/snippets/sass/opposite-direction-function/
 /// Returns the opposite direction of each direction in a list

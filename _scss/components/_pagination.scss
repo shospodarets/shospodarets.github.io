@@ -2,7 +2,7 @@
 @import "../mixins";
 
 .pagination {
-  @include clearfix;
+  @apply --clearfix;
   display: flex;
   text-align: center;
 

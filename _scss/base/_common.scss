@@ -49,5 +49,5 @@ blockquote {
 }
 
 .absolute-hidden {
-  @include absolute-hidden;
+  @apply --absolute-hidden;
 }

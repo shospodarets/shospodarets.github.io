@@ -52,7 +52,7 @@
 }
 
 .site-description {
-  @include absolute-hidden;
+  @apply --absolute-hidden;
 }
 
 .header-options {
