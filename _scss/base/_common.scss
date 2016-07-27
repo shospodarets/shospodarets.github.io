@@ -40,9 +40,9 @@
 }
 
 blockquote {
-  margin: $marginVertical .8em;
+  margin: var(--main-vertical-indent) .8em;
   border-left: 2px solid var(--gray-color);
-  padding: $blockquote-padding;
+  padding: var(--blockquote-padding);
   color: var(--gray-color);
   font-size: 22px;
   font-style: italic;

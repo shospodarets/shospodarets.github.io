@@ -31,18 +31,20 @@
   }
 
   .prev-btn {
-    flex: 0 0 $pagination-btn-width;
-    padding-right: $pagination-btn-indent;
+    flex: 0 0 var(--pagination-btn-width);
+    padding-right: var(--pagination-btn-indent);
   }
 
   .pagination-links-wrapper {
     display: flex;
-    flex: 0 0 5*$pagination-btn-width;
-    padding-right: $pagination-btn-indent;
-    padding-left: $pagination-btn-indent;
+    // ToDo 5 * -> calc
+    //flex: 0 0 5*var(--pagination-btn-width);
+    flex: 0 0 calc(5 * var(--pagination-btn-width));
+    padding-right: var(--pagination-btn-indent);
+    padding-left: var(--pagination-btn-indent);
 
     .pagination-link {
-      flex: 0 0 $pagination-pages-btn-width;
+      flex: 0 0 var(--pagination-pages-btn-width);
 
       min-height: 1px; // fix for 0 height if there is no content (because of float:left;)
 
@@ -59,7 +61,7 @@
   }
 
   .next-btn {
-    flex: 0 0 $pagination-btn-width;
-    padding-left: $pagination-btn-indent;
+    flex: 0 0 var(--pagination-btn-width);
+    padding-left: var(--pagination-btn-indent);
   }
 }

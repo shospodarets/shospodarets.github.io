@@ -6,31 +6,35 @@
 // ----
 
 .btn-pulse {
-  width: $btn-width;
+  width: var(--btn-width);
   text-decoration: none;
   display: inline-block;
   text-align: center;
   position: relative;
   overflow: hidden;
   padding: 10px;
-  color: $btn-pulse-color;
-  border: 1px solid $btn-pulse-color;
+  color: var(--btn-pulse-color);
+  border: 1px solid var(--btn-pulse-color);
   border-radius: 3px;
   transition: color 0.3s 0.1s ease-out;
-  background-color: $btn-pulse-bg;
+  background-color: var(--btn-pulse-bg);
 
   .wrapper {
     display: inline-block;
     @include expander;
     height: 100%;
-    width: $btn-width;
+    width: var(--btn-width);
     overflow: hidden;
 
     .inner {
       display: block;
       border-radius: 50%;
-      width: $btn-width*2;
-      height: $btn-width*2;
+      // ToDo *2 -> calc
+      //width: var(--btn-width)*2;
+      width: calc(var(--btn-width) * 2);
+      // ToDo *2 -> calc
+      //height: var(--btn-width)*2;
+      height: calc(var(--btn-width) * 2);
       // align center horizontally and vertically
       position: absolute;
       top: 50%;
@@ -41,10 +45,13 @@
   }
 
   &:hover {
-    color: $btn-pulse-hover-color;
+    color: var(--btn-pulse-hover-color);
 
     .inner {
-      box-shadow: inset 0 0 0 $btn-width rgba($btn-pulse-hover-bg, 0.8);
+      // ToDo doesn't work with Sass (error "argument `$color` of `rgba($color, $alpha)` must be a color")
+      // btn-pulse-hover-bg redefined
+      //box-shadow: inset 0 0 0 var(--btn-width) rgba(var(--btn-pulse-hover-bg), 0.8);
+      box-shadow: inset 0 0 0 var(--btn-width) var(--btn-pulse-hover-bg);
     }
   }
 

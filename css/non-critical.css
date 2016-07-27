@@ -523,16 +523,16 @@
     .pagination .next-btn em.empty {
       visibility: hidden; }
   .pagination .prev-btn {
-    -ms-flex: 0 0 14.286%;
-        flex: 0 0 14.286%;
-    padding-right: 1.4286%; }
+    -ms-flex: 0 0 14.28571%;
+        flex: 0 0 14.28571%;
+    padding-right: 1.42857%; }
   .pagination .pagination-links-wrapper {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex: 0 0 71.43%;
-        flex: 0 0 71.43%;
-    padding-right: 1.4286%;
-    padding-left: 1.4286%; }
+    -ms-flex: 0 0 71.42855%;
+        flex: 0 0 71.42855%;
+    padding-right: 1.42857%;
+    padding-left: 1.42857%; }
     .pagination .pagination-links-wrapper .pagination-link {
       -ms-flex: 0 0 20%;
           flex: 0 0 20%;
@@ -543,9 +543,9 @@
           color: #fff;
           background-color: #41b7d8; }
   .pagination .next-btn {
-    -ms-flex: 0 0 14.286%;
-        flex: 0 0 14.286%;
-    padding-left: 1.4286%; }
+    -ms-flex: 0 0 14.28571%;
+        flex: 0 0 14.28571%;
+    padding-left: 1.42857%; }
 
 .wrapper-footer {
   margin-top: 50px;

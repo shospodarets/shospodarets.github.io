@@ -3,7 +3,7 @@
 
 .post-short {
   cursor: pointer;
-  padding-bottom: $marginVertical;
+  padding-bottom: var(--main-vertical-indent);
   border-bottom: 3px solid var(--light-gray-color);
 
   &:hover {
@@ -16,8 +16,11 @@
 
   .date {
     display: block;
-    padding-top: $marginVertical;
-    margin-bottom: -$marginVertical;
+    padding-top: var(--main-vertical-indent);
+    // ToDo -var is proceeded by Sass
+    // but IDEA is not happy
+    // margin-bottom: -$marginVertical;
+    margin-bottom: calc(-1 * var(--main-vertical-indent));
   }
 }
 
@@ -30,7 +33,10 @@
   @include clearfix;
 
   .external-link-icon {
-    $_size: round($h1FontSize * 1.7);
+    // ToDo Assignment of CSS vars to Sass vars doesn't work
+    // change to local CSS vars
+    //$_size: round(var(--main-heading-font-size) * 1.7);
+    $_size: round(32px * 1.7);
 
     width: $_size;
     height: $_size;

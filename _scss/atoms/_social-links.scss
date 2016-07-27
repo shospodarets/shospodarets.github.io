@@ -9,10 +9,10 @@
   flex-wrap: wrap;
 
   > * {
-    margin-right: $social-links-indent;
+    margin-right: var(--social-links-indent);
 
     @include mobile-breakpoint {
-      margin-bottom: $social-links-indent;
+      margin-bottom: var(--social-links-indent);
     }
   }
 
@@ -26,6 +26,8 @@
     justify-content: center;
   }
 
+  // ToDo Assignment of CSS vars to Sass vars doesn't work
+  // change to local CSS vars
   $_size: 35px;
   svg {
     width: $_size;
@@ -36,6 +38,8 @@
 .big-social-links {
   justify-content: center;
 
+  // ToDo Assignment of CSS vars to Sass vars doesn't work
+  // change to local CSS vars
   $_size: 40px;
   svg {
     width: $_size;

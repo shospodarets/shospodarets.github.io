@@ -13,31 +13,34 @@
   // BACKGROUNDS
   --main-bg: #fff;
 
-  // Fonts
+  // Typography
   --main-font-family: Helvetica, Arial, sans-serif;
+  --main-heading-font-size: 32px;
+
+  // Layout
+  --main-vertical-indent: 15px;
+  --main-container-max-width: 960px;
+  --blockquote-padding: calc(var(--main-vertical-indent)/2);
+  --social-links-indent: 8px;
+
+  // Buttons
+  --btn-width: 100px;
+  --btn-height: 2.8em;
+  --btn-pulse-color: rgba(#2a65a0, 0.8);
+  --btn-pulse-hover-color: #fff;
+  --btn-pulse-bg: #f1f1f1;
+  --btn-pulse-hover-bg: rgba(#3884cd, 0.8);
+
+  // Pagination
+  --pagination-btn-number: 7;
+  // ToDo no round, css autoround on 5th digit
+  //--pagination-btn-width: round((100%/var(--pagination-btn-number))*1000)/1000; // round to third decimal after a point
+  --pagination-btn-width: calc(100%/var(--pagination-btn-number)); // round to third decimal after a point
+  // ToDo in the result CSS "14.28571%/10"
+  //--pagination-btn-indent: var(--pagination-btn-width)/10;
+  --pagination-btn-indent: calc(var(--pagination-btn-width)/10);
+  --pagination-pages-btn-number: 5;
+  // ToDo no round
+  //--pagination-pages-btn-width: round((100%/var(--pagination-pages-btn-number))*1000)/1000; // round to third decimal after a point
+  --pagination-pages-btn-width: calc(100%/var(--pagination-pages-btn-number));
 }
-
-// Layout
-$marginVertical: 15px;
-$main-container-max-width: 960px;
-
-// Buttons
-$btn_height: 2.8em;
-$btn-width: 100px;
-$btn-pulse-color: rgba(#2a65a0, 0.8);
-$btn-pulse-hover-color: #fff;
-$btn-pulse-bg: #f1f1f1;
-$btn-pulse-hover-bg: #3884cd;
-
-// Pagination
-$pagination-btn-number: 7;
-$pagination-btn-width: round((100%/$pagination-btn-number)*1000)/1000; // round to third decimal after a point
-$pagination-btn-indent: $pagination-btn-width/10;
-
-$pagination-pages-btn-number: 5;
-$pagination-pages-btn-width: round((100%/$pagination-pages-btn-number)*1000)/1000; // round to third decimal after a point
-
-// Other
-$h1FontSize: 32px;
-$blockquote-padding: round($marginVertical/2);
-$social-links-indent: 8px;

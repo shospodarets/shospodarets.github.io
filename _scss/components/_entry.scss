@@ -9,7 +9,7 @@
     border-bottom: 1px solid var(--code-block-border-color);
     border-top: 1px solid var(--code-block-border-color);
     padding: 10px 0;
-    margin: $marginVertical 0;
+    margin: var(--main-vertical-indent) 0;
   }
 
   // inline code
@@ -22,7 +22,7 @@
   iframe,
   .cp_embed_iframe {
     // e.g. codepen example
-    margin: $marginVertical 0;
+    margin: var(--main-vertical-indent) 0;
     max-width: 100%;
   }
 }

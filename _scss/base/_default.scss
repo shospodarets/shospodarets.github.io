@@ -35,7 +35,7 @@ a {
 
 .container {
   margin: 0 auto;
-  max-width: $main-container-max-width;
+  max-width: var(--main-container-max-width);
   padding: 0 10px;
   width: 100%;
 }
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--darker-gray-color);
 
   line-height: 1.7;
-  margin: $marginVertical 0;
+  margin: var(--main-vertical-indent) 0;
   padding: 0;
   transition: background-color .3s;
 
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: $h1FontSize;
+  font-size: var(--main-heading-font-size);
   a {
     text-decoration: none;
     color: var(--dark-gray-color);
@@ -84,11 +84,11 @@ h4 {
 }
 
 p {
-  margin: $marginVertical 0;
+  margin: var(--main-vertical-indent) 0;
 }
 
 ul, ol {
-  margin: $marginVertical 0;
+  margin: var(--main-vertical-indent) 0;
   padding-left: 30px;
 }
 
