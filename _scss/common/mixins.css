@@ -1,0 +1,33 @@
+:root {
+  --absolute-hidden: {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  };
+
+  --expander: {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  };
+
+  --clearfix: {
+    display: table;
+    content: '';
+    clear: both;
+  };
+
+  /* Cannot contain logic/ process variables */
+  --triangle-preset: {
+    width: 0;
+    height: 0;
+    border-style: solid;
+  };
+}
+
+@custom-media --mobile-breakpoint (width <= 680px);

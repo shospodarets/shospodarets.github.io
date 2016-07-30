@@ -27,7 +27,7 @@
   }
 
   --_size: 35px;
-  svg {
+  & svg {
     width: var(--_size);
     height: var(--_size);
   }
@@ -37,7 +37,7 @@
   justify-content: center;
 
   --_size: 40px;
-  svg {
+  & svg {
     width: var(--_size);
     height: var(--_size);
   }

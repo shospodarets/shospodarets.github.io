@@ -12,6 +12,7 @@
   @media (--mobile-breakpoint) {
     text-align: center;
   }
+
   /* reset */
   & input {
     outline: none;

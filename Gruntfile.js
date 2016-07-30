@@ -56,25 +56,7 @@ module.exports = function (grunt) {
             }
         },
 
-        sass: {
-            critical: {
-                files: [{
-                    expand: true,
-                    cwd: '_scss',
-                    src: ['critical.scss'],
-                    dest: '_includes/generated',
-                    ext: '.css'
-                }]
-            },
-            nonCritical: {
-                files: [{
-                    expand: true,
-                    cwd: '_scss',
-                    src: ['non-critical.scss'],
-                    dest: 'css',
-                    ext: '.css'
-                }]
-            },
+        sass: {// ToDo
             demos: {// all *.scss files in "demos" folder
                 files: [{
                     expand: true,
@@ -91,8 +73,9 @@ module.exports = function (grunt) {
         postcss: {
             options: {
                 processors: [
+                    require("postcss-import")(),
                     require('postcss-cssnext')({
-                        browsers: ['last 2 versions', 'IE > 10'],
+                        browsers: ['last 2 versions'],
                         features: {
                             customProperties: false // don't process custom props
                             /* If applyRule is disabled, processing of mixins stops with
@@ -104,10 +87,22 @@ module.exports = function (grunt) {
                 ]
             },
             critical: {
-                src: "_includes/generated/critical.css"
+                files: [{
+                    expand: true,
+                    cwd: '_scss',
+                    src: ['critical.css'],
+                    dest: '_includes/generated',
+                    ext: '.css'
+                }]
             },
             nonCritical: {
-                src: "css/non-critical.css"
+                files: [{
+                    expand: true,
+                    cwd: '_scss',
+                    src: ['non-critical.css'],
+                    dest: 'css',
+                    ext: '.css'
+                }]
             },
             demos: {
                 src: [
@@ -161,8 +156,8 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask("generateCss", [
-        "sass:critical", "postcss:critical",
-        "sass:nonCritical", "postcss:nonCritical"
+        "postcss:critical",
+        "postcss:nonCritical"
     ]);
 
     grunt.registerTask("generateDemosCss", [

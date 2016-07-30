@@ -6,7 +6,7 @@
 :root {
   /* COLORS */
   --link-color: #4183C4;
-  --link-hover-color: lighten(#4183C4, 10%); /* Sass/CSS variables mix */
+  --link-hover-color: #689cd0;
   --title-hover-color: var(--link-color);
   --code-block-border-color: #eee;
   /* Gray colors */
@@ -31,10 +31,10 @@
   /* Buttons */
   --btn-width: 100px;
   --btn-height: 2.8em;
-  --btn-pulse-color: rgba(#2a65a0, 0.8);
+  --btn-pulse-color: rgba(42, 101, 160, 0.8);
   --btn-pulse-hover-color: #fff;
   --btn-pulse-bg: #f1f1f1;
-  --btn-pulse-hover-bg: rgba(#3884cd, 0.8);
+  --btn-pulse-hover-bg: rgba(56, 132, 205, 0.8);
 
   /* Pagination */
   --pagination-btn-number: 7;
