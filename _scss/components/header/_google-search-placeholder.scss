@@ -13,17 +13,17 @@
     text-align: center;
   }
   /* reset */
-  input {
+  & input {
     outline: none;
   }
 
-  input[type=search] {
+  & input[type=search] {
     font-family: inherit;
     font-size: 18px;
   }
 
   /* styles */
-  input[type=search] {
+  & input[type=search] {
     float: right;
 
     @media (--mobile-breakpoint) {
@@ -40,7 +40,7 @@
     transition: all .5s;
   }
 
-  input[type=search]:focus {
+  & input[type=search]:focus {
     width: 100%;
     border-color: #66CC75;
     box-shadow: 0 0 5px rgba(109, 207, 246, .5);

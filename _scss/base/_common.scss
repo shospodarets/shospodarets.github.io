@@ -1,6 +1,6 @@
 .unloading {
   /* added onbeforeunload page */
-  #main {
+  & #main {
     opacity: 0.5;
     pointer-events: none;
   }
@@ -11,16 +11,11 @@
   color: var(--gray-color);
 }
 
-/* Nicolas Gallagher's micro clearfix hack */
-/* http://nicolasgallagher.com/micro-clearfix-hack/ */
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
+.clearfix {
+  &:before,
+  &:after {
+    @apply --clearfix;
+  }
 }
 
 .more {

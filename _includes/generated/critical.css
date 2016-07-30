@@ -199,14 +199,9 @@ img {
   font-style: italic;
   color: var(--gray-color); }
 
-/* Nicolas Gallagher's micro clearfix hack */
-/* http://nicolasgallagher.com/micro-clearfix-hack/ */
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table; }
-
-.clearfix:after {
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: '';
   clear: both; }
 
 .more {

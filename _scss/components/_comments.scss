@@ -1,14 +1,14 @@
 .comments {
   padding-top: 15px;
 
-  .comment-code-highlight {
+  & .comment-code-highlight {
     font-style: italic;
 
-    .highlight {
+    & .highlight {
       display: inline-block;
       overflow: visible;
 
-      code {
+      & code {
         white-space: normal;
       }
     }

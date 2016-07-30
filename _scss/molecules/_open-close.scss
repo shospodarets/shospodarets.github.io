@@ -4,16 +4,16 @@
 .open-close-wrapper {
   position: relative;
 
-  .open-close {
+  & .open-close {
     display: none;
   }
 
-  .text {
+  & .text {
     border-bottom: 1px dashed #999;
     cursor: pointer;
   }
 
-  .icon {
+  & .icon {
     cursor: pointer;
     display: inline-block;
     transition: transform .3s;
@@ -24,16 +24,16 @@
     border-bottom: none;
   }
 
-  [type=checkbox] {
+  & [type=checkbox] {
     position: absolute;
     visibility: hidden;
 
     &:checked {
-      ~ .open-close {
+      & ~ .open-close {
         display: block;
       }
 
-      ~ .icon {
+      & ~ .icon {
         transform: rotate(180deg);
       }
     }

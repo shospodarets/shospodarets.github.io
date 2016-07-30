@@ -8,7 +8,7 @@
   align-items: center;
   flex-wrap: wrap;
 
-  > * {
+  & > * {
     margin-right: var(--social-links-indent);
 
     @media (--mobile-breakpoint) {
@@ -16,7 +16,7 @@
     }
   }
 
-  svg {
+  & svg {
     float: left;
   }
 }

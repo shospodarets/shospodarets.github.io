@@ -4,14 +4,14 @@
   border-bottom: 3px solid var(--light-gray-color);
 
   &:hover {
-    h1 {
-      a {
+    & h1 {
+      & a {
         color: var(--title-hover-color);
       }
     }
   }
 
-  .date {
+  & .date {
     display: block;
     padding-top: var(--main-vertical-indent);
     margin-bottom: calc(-1 * var(--main-vertical-indent));
@@ -29,7 +29,7 @@
     @apply --clearfix;
   }
 
-  .external-link-icon {
+  & .external-link-icon {
     --_size: calc(var(--main-heading-font-size) * 1.7);
 
     width: var(--_size);
@@ -40,27 +40,27 @@
     background-size: auto 75%;
   }
 
-  .meta {
+  & .meta {
     &:before,
     &:after {
       @apply --clearfix;
     }
 
-    .share-buttons {
+    & .share-buttons {
       float: right;
     }
 
-    span {
+    & span {
       display: inline-block;
       vertical-align: middle;
     }
 
-    .date {
+    & .date {
       padding-right: 15px;
     }
   }
 
-  .comments {
+  & .comments {
     margin-top: 10px;
   }
 }

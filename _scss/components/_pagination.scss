@@ -7,7 +7,8 @@
   display: flex;
   text-align: center;
 
-  a, em {
+  & a,
+  & em {
     display: inline-block;
     width: 100%;
     border-radius: 5px;
@@ -15,9 +16,10 @@
     text-decoration: none;
   }
 
-  .prev-btn,
-  .next-btn {
-    a, em {
+  & .prev-btn,
+  & .next-btn {
+    & a,
+    & em {
       color: #fff;
       background-color: #e85c33;
 
@@ -31,23 +33,24 @@
     }
   }
 
-  .prev-btn {
+  & .prev-btn {
     flex: 0 0 var(--pagination-btn-width);
     padding-right: var(--pagination-btn-indent);
   }
 
-  .pagination-links-wrapper {
+  & .pagination-links-wrapper {
     display: flex;
     flex: 0 0 calc(5 * var(--pagination-btn-width));
     padding-right: var(--pagination-btn-indent);
     padding-left: var(--pagination-btn-indent);
 
-    .pagination-link {
+    & .pagination-link {
       flex: 0 0 var(--pagination-pages-btn-width);
 
       min-height: 1px; /* fix for 0 height if there is no content (because of float:left;) */
 
-      a, em {
+      & a,
+      & em {
         max-width: 50px;
 
         &:hover,
@@ -59,7 +62,7 @@
     }
   }
 
-  .next-btn {
+  & .next-btn {
     flex: 0 0 var(--pagination-btn-width);
     padding-left: var(--pagination-btn-indent);
   }

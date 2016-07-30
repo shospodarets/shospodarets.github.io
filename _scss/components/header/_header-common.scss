@@ -23,7 +23,7 @@
     margin: 0 auto;
   }
 
-  img {
+  & img {
     border-radius: 5px;
   }
 }
@@ -76,7 +76,7 @@ nav {
     display: block;
   }
 
-  a {
+  & a {
     margin-left: 15px;
     color: var(--dark-gray-color);
     text-align: right;
