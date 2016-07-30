@@ -43,13 +43,7 @@
   --pagination-pages-btn-number: 5;
   --pagination-pages-btn-width: calc(100%/var(--pagination-pages-btn-number));
 }
-/* CSS vars and mixins in :root are removed from output (if enabled in cssnext) */
-/* # { '... } ; are introduced to stop Sass processing mixins */
-/* and provide problems with using '' inside. Solution=> "" */
-/* Possible solution- post css, then Sass */
 :root {;
-
-  /* Nesting doesn't work inside CSS mixins */;
 
   /* Cannot contain logic/ process variables */;
 }
