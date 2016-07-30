@@ -1,7 +1,7 @@
 /* variables/mixins */
-@import "mixins";
+@import "common/mixins";
 /* jekyll */
-@import "highlights";
+@import "common/highlights";
 /* libraries */
 @import "libs/caniuse";
 @import "libs/humane-libnotify";

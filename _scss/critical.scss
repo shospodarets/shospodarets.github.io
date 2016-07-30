@@ -1,8 +1,8 @@
 /* variables/mixins */
-@import "root-variables";
-@import "mixins";
+@import "common/root-variables";
+@import "common/mixins";
 /* reset, common layout and defaults classes */
-@import "reset";
+@import "common/reset";
 @import "base/default";
 @import "base/common";
 /* atoms */
