@@ -11,7 +11,7 @@
 }
 
 .google-custom-search-placeholder {
-  @include mobile-breakpoint {
+  @media (--mobile-breakpoint) {
     text-align: center;
   }
   // reset
@@ -28,7 +28,7 @@
   input[type=search] {
     float: right;
 
-    @include mobile-breakpoint {
+    @media (--mobile-breakpoint) {
       float: none;
     }
 

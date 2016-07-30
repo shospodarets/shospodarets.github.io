@@ -38,9 +38,4 @@
   }"};
 }
 
-// Cannot use a native mixin as they don't apply @content
-@mixin mobile-breakpoint {
-  @media screen and (max-width: 680px) {
-    @content;
-  }
-}
+@custom-media --mobile-breakpoint (width <= 680px);

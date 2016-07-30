@@ -10,7 +10,7 @@
   > * {
     margin-right: var(--social-links-indent);
 
-    @include mobile-breakpoint {
+    @media (--mobile-breakpoint) {
       margin-bottom: var(--social-links-indent);
     }
   }
@@ -21,7 +21,7 @@
 }
 
 .small-social-links {
-  @include mobile-breakpoint {
+  @media (--mobile-breakpoint) {
     justify-content: center;
   }
 
