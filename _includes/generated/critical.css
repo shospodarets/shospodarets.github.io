@@ -1,31 +1,56 @@
+/* variables/mixins */
+/* SCSS variables can be used in CSS vars, but not vice versa */
+/* Cannot live in a file which is imported many */
+/* time as :root content would be included everytime */
+/* should exist and be imported only in one place (critical CSS) */
 :root {
+  /* COLORS */
   --link-color: #4183C4;
   --link-hover-color: #689cd0;
+  /* Sass/CSS variables mix */
   --title-hover-color: var(--link-color);
   --code-block-border-color: #eee;
+  /* Gray colors */
   --darker-gray-color: #222;
   --dark-gray-color: #333;
   --gray-color: #666;
   --light-gray-color: #eee;
+  /* BACKGROUNDS */
   --main-bg: #fff;
+  /* Typography */
   --main-font-family: Helvetica, Arial, sans-serif;
   --main-heading-font-size: 32px;
+  /* Layout */
   --main-vertical-indent: 15px;
   --main-container-max-width: 960px;
   --blockquote-padding: calc(var(--main-vertical-indent)/2);
   --social-links-indent: 8px;
+  /* Buttons */
   --btn-width: 100px;
   --btn-height: 2.8em;
   --btn-pulse-color: rgba(42, 101, 160, 0.8);
   --btn-pulse-hover-color: #fff;
   --btn-pulse-bg: #f1f1f1;
   --btn-pulse-hover-bg: rgba(56, 132, 205, 0.8);
+  /* Pagination */
   --pagination-btn-number: 7;
   --pagination-btn-width: calc(100%/var(--pagination-btn-number));
+  /* round to third decimal after a point */
   --pagination-btn-indent: calc(var(--pagination-btn-width)/10);
   --pagination-pages-btn-number: 5;
   --pagination-pages-btn-width: calc(100%/var(--pagination-pages-btn-number)); }
 
+/* CSS vars and mixins in :root are removed from output (if enabled in cssnext) */
+/* # { '... } ; are introduced to stop Sass processing mixins */
+/* and provide problems with using '' inside. Solution=> "" */
+/* Possible solution- post css, then Sass */
+:root {;
+  /* Nesting doesn't work inside CSS mixins */;
+  /* Cannot contain logic/ process variables */; }
+/* reset, common layout and defaults classes */
+/*------------------------------------ */
+/*    MEYER RESET */
+/*------------------------------------ */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,6 +67,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0; }
 
+/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
   display: block; }
@@ -63,15 +89,24 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*------------------------------------ */
+/*    Border-box */
+/*------------------------------------ */
 html {
   box-sizing: border-box; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
+/* OTHER */
 img {
   vertical-align: top; }
+
+/*------------------------------------ */
+/*    BASE RULES */
+/*------------------------------------ */
 html, body {
+  /* stretch to get minimum the full height */
   height: 100%;
   min-height: 100%; }
 
@@ -82,6 +117,7 @@ body {
   background: var(--main-bg);
   font-size: 18px;
   line-height: 1.4;
+  /* not in shorthand because of http://codepen.io/malyw/pen/mEKKqY?editors=1100 */
   font-family: var(--main-font-family);
   color: var(--dark-gray-color); }
 
@@ -89,6 +125,7 @@ a {
   color: var(--link-color);
   text-decoration: underline;
   cursor: pointer;
+  /* prevent long links scroll */
   word-wrap: break-word; }
   a:hover {
     color: var(--link-hover-color); }
@@ -151,14 +188,19 @@ ul ul, ol ul {
 
 img {
   max-width: 100%; }
-.unloading #main {
-  opacity: 0.5;
-  pointer-events: none; }
+
+.unloading {
+  /* added onbeforeunload page */ }
+  .unloading #main {
+    opacity: 0.5;
+    pointer-events: none; }
 
 .date {
   font-style: italic;
   color: var(--gray-color); }
 
+/* Nicolas Gallagher's micro clearfix hack */
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -168,6 +210,7 @@ img {
   clear: both; }
 
 .more {
+  /* provide post-short boundary */
   display: none; }
 
 .text-center {
@@ -191,6 +234,8 @@ blockquote {
   width: 1px;
   height: 1px;
   overflow: hidden; }
+
+/* atoms */
 .social-links {
   display: -ms-flexbox;
   display: flex;
@@ -230,10 +275,18 @@ blockquote {
 
 .share-buttons {
   display: inline-block;
-  min-height: 34px; }
+  min-height: 34px;
+  /* widget height */ }
 
 .twitter-widget {
+  /* hidden until loaded */
+  /* (is replaced) */
   display: none; }
+
+/* molecules */
+/*------------------------------------ */
+/*    OPEN-CLOSE block */
+/*------------------------------------ */
 .open-close-wrapper {
   position: relative; }
   .open-close-wrapper .open-close {
@@ -258,6 +311,8 @@ blockquote {
       display: block; }
     .open-close-wrapper [type=checkbox]:checked ~ .icon {
       transform: rotate(180deg); }
+
+/* header */
 .wrapper-masthead {
   margin-bottom: 10px;
   background-color: var(--light-gray-color); }
@@ -332,6 +387,8 @@ nav {
       nav a {
         margin: 0 10px;
         color: var(--link-color); } }
+
+/* layout */
 .post-short {
   cursor: pointer;
   padding-bottom: var(--main-vertical-indent);
@@ -346,6 +403,7 @@ nav {
 .posts .post-short:last-child {
   border-bottom: none; }
 
+/* class present in either short and full posts */
 .post:before, .post:after {
   display: table;
   content: '';
@@ -376,23 +434,25 @@ nav {
 
 .post .comments {
   margin-top: 10px; }
-.entry:before, .entry:after {
-  display: table;
-  content: '';
-  clear: both; }
 
-.entry .highlight {
-  border-bottom: 1px solid var(--code-block-border-color);
-  border-top: 1px solid var(--code-block-border-color);
-  padding: 10px 0;
-  margin: var(--main-vertical-indent) 0; }
-
-.entry code.highlighter-rouge {
-  background: #f0f0f0;
-  border-radius: 3px;
-  padding: 0 5px; }
-
-.entry iframe,
-.entry .cp_embed_iframe {
-  margin: var(--main-vertical-indent) 0;
-  max-width: 100%; }
+.entry {
+  /* block code */
+  /* inline code */ }
+  .entry:before, .entry:after {
+    display: table;
+    content: '';
+    clear: both; }
+  .entry .highlight {
+    border-bottom: 1px solid var(--code-block-border-color);
+    border-top: 1px solid var(--code-block-border-color);
+    padding: 10px 0;
+    margin: var(--main-vertical-indent) 0; }
+  .entry code.highlighter-rouge {
+    background: #f0f0f0;
+    border-radius: 3px;
+    padding: 0 5px; }
+  .entry iframe,
+  .entry .cp_embed_iframe {
+    /* e.g. codepen example */
+    margin: var(--main-vertical-indent) 0;
+    max-width: 100%; }

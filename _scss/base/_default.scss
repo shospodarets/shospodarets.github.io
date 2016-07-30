@@ -1,10 +1,8 @@
-@import "../mixins";
-
-//------------------------------------
-//    BASE RULES
-//------------------------------------
+/*------------------------------------ */
+/*    BASE RULES */
+/*------------------------------------ */
 html, body {
-  // stretch to get minimum the full height
+  /* stretch to get minimum the full height */
   height: 100%;
   min-height: 100%;
 }
@@ -17,7 +15,7 @@ body {
   background: var(--main-bg);
   font-size: 18px;
   line-height: 1.4;
-  // not in shorthand because of http://codepen.io/malyw/pen/mEKKqY?editors=1100
+  /* not in shorthand because of http://codepen.io/malyw/pen/mEKKqY?editors=1100 */
   font-family: var(--main-font-family);
   color: var(--dark-gray-color);
 }
@@ -27,7 +25,7 @@ a {
   text-decoration: underline;
   cursor: pointer;
 
-  // prevent long links scroll
+  /* prevent long links scroll */
   word-wrap: break-word;
 
   &:hover {

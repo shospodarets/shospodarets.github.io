@@ -1,5 +1,3 @@
-@import "../mixins";
-
 .post-short {
   cursor: pointer;
   padding-bottom: var(--main-vertical-indent);
@@ -24,7 +22,7 @@
   border-bottom: none;
 }
 
-// class present in either short and full posts
+/* class present in either short and full posts */
 .post {
   &:before,
   &:after {

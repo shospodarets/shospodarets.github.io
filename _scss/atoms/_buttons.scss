@@ -1,8 +1,6 @@
-@import "../mixins";
-
-// ----
-// PULSE BUTTON (CIRCLE FROM CENTER ON HOVER)
-// ----
+/* ---- */
+/* PULSE BUTTON (CIRCLE FROM CENTER ON HOVER) */
+/* ---- */
 
 .btn-pulse {
   width: var(--btn-width);
@@ -30,7 +28,7 @@
       border-radius: 50%;
       width: calc(var(--btn-width) * 2);
       height: calc(var(--btn-width) * 2);
-      // align center horizontally and vertically
+      /* align center horizontally and vertically */
       position: absolute;
       top: 50%;
       left: 50%;
@@ -52,7 +50,7 @@
   }
 
   .text {
-    // to move text front
+    /* to move text front */
     position: relative;
   }
 }

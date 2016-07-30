@@ -1,6 +1,85 @@
+/* variables/mixins */
+/* CSS vars and mixins in :root are removed from output (if enabled in cssnext) */
+/* # { '... } ; are introduced to stop Sass processing mixins */
+/* and provide problems with using '' inside. Solution=> "" */
+/* Possible solution- post css, then Sass */
+:root {;
+  /* Nesting doesn't work inside CSS mixins */;
+  /* Cannot contain logic/ process variables */; }
+/* jekyll */
+/*------------------------------------ */
+/*    BSYNTAX HIGHLIGHTING */
+/*------------------------------------ */
 .highlight {
   background: #f8f8f8;
-  overflow: auto; }
+  overflow: auto;
+  /*  code { */
+  /*    font-family: 'Courier', monospace; */
+  /*    font-size: 14px; */
+  /*    color: #999 */
+  /*  } */
+  /* https://github.com/richleland/pygments-css/blob/master/default.css */
+  /* http://blog.favrik.com/2011/02/22/preview-all-pygments-styles-for-your-code-highlighting-needs/#stylesheetNavigator */
+  /*  Comment  */
+  /*  Error  */
+  /*  Keyword  */
+  /*  Operator  */
+  /*  Comment.Multiline  */
+  /*  Comment.Preproc  */
+  /*  Comment.Single  */
+  /*  Comment.Special  */
+  /*  Generic.Deleted  */
+  /*  Generic.Emph  */
+  /*  Generic.Error  */
+  /*  Generic.Heading  */
+  /*  Generic.Inserted  */
+  /*  Generic.Output  */
+  /*  Generic.Prompt  */
+  /*  Generic.Strong  */
+  /*  Generic.Subheading  */
+  /*  Generic.Traceback  */
+  /*  Keyword.Constant  */
+  /*  Keyword.Declaration  */
+  /*  Keyword.Namespace  */
+  /*  Keyword.Pseudo  */
+  /*  Keyword.Reserved  */
+  /*  Keyword.Type  */
+  /*  Literal.Number  */
+  /*  Literal.String  */
+  /*  Name.Attribute  */
+  /*  Name.Builtin  */
+  /*  Name.Class  */
+  /*  Name.Constant  */
+  /*  Name.Decorator  */
+  /*  Name.Entity  */
+  /*  Name.Exception  */
+  /*  Name.Function  */
+  /*  Name.Label  */
+  /*  Name.Namespace  */
+  /*  Name.Tag  */
+  /*  Name.Variable  */
+  /*  Operator.Word  */
+  /*  Text.Whitespace  */
+  /*  Literal.Number.Float  */
+  /*  Literal.Number.Hex  */
+  /*  Literal.Number.Integer  */
+  /*  Literal.Number.Oct  */
+  /*  Literal.String.Backtick  */
+  /*  Literal.String.Char  */
+  /*  Literal.String.Doc  */
+  /*  Literal.String.Double  */
+  /*  Literal.String.Escape  */
+  /*  Literal.String.Heredoc  */
+  /*  Literal.String.Interpol  */
+  /*  Literal.String.Other  */
+  /*  Literal.String.Regex  */
+  /*  Literal.String.Single  */
+  /*  Literal.String.Symbol  */
+  /*  Name.Builtin.Pseudo  */
+  /*  Name.Variable.Class  */
+  /*  Name.Variable.Global  */
+  /*  Name.Variable.Instance  */
+  /*  Literal.Number.Integer.Long  */ }
   .highlight .highlight pre {
     word-break: break-all;
     word-wrap: break-word; }
@@ -148,6 +227,8 @@
   .highlight .il {
     color: #666666; }
 
+/* libraries */
+/* fonts for browser icons (used with permission from IcoMoon.io) */
 @font-face {
   font-family: 'agents';
   src: url("/fonts/agents.eot");
@@ -263,7 +344,8 @@
 
 .caniuse .agents li.icon-ie:before,
 .caniuse .agents li.icon-windows:before {
-  content: "\e001"; }
+  content: "\e001";
+  /* alternate windows icon: content: "\e007" */ }
 
 .caniuse .agents li.icon-ios_saf:before {
   content: "\e005"; }
@@ -314,6 +396,7 @@
 .caniuse .version {
   display: block; }
 
+/* https://github.com/wavded/humane-js */
 .humane,
 .humane-libnotify {
   position: fixed;
@@ -375,6 +458,10 @@
 .humane.humane-animate:hover,
 .humane-libnotify.humane-libnotify-js-animate:hover {
   opacity: 0.2; }
+
+/* header */
+/* GOOGLE SEARCH */
+/* from http://codepen.io/912lab/pen/LsplC */
 .google-custom-search {
   width: 100%;
   margin: 5px 0; }
@@ -385,43 +472,51 @@
   left: -9999px;
   width: 1px;
   height: 1px;
-  overflow: hidden; }
+  overflow: hidden;
+  /* hide original google search */ }
 
-@media (max-width: 680px) {
-  .google-custom-search-placeholder {
-    text-align: center; } }
-
-.google-custom-search-placeholder input {
-  outline: none; }
-
-.google-custom-search-placeholder input[type=search] {
-  font-family: inherit;
-  font-size: 18px; }
-
-.google-custom-search-placeholder input[type=search] {
-  float: right;
-  background: #fff url(/images/icons/search.svg) no-repeat 5px center;
-  background-size: auto 75%;
-  border: solid 1px #ccc;
-  padding: 2px 5px 2px 23px;
-  width: 110px;
-  max-width: 250px;
-  border-radius: 10em;
-  transition: all .5s; }
+.google-custom-search-placeholder {
+  /* reset */
+  /* styles */ }
   @media (max-width: 680px) {
-    .google-custom-search-placeholder input[type=search] {
-      float: none; } }
-
-.google-custom-search-placeholder input[type=search]:focus {
-  width: 100%;
-  border-color: #66CC75;
-  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5); }
+    .google-custom-search-placeholder {
+      text-align: center; } }
+  .google-custom-search-placeholder input {
+    outline: none; }
+  .google-custom-search-placeholder input[type=search] {
+    font-family: inherit;
+    font-size: 18px; }
+  .google-custom-search-placeholder input[type=search] {
+    float: right;
+    background: #fff url(/images/icons/search.svg) no-repeat 5px center;
+    background-size: auto 75%;
+    border: solid 1px #ccc;
+    padding: 2px 5px 2px 23px;
+    width: 110px;
+    max-width: 250px;
+    border-radius: 10em;
+    transition: all .5s; }
+    @media (max-width: 680px) {
+      .google-custom-search-placeholder input[type=search] {
+        float: none; } }
+  .google-custom-search-placeholder input[type=search]:focus {
+    width: 100%;
+    border-color: #66CC75;
+    box-shadow: 0 0 5px rgba(109, 207, 246, 0.5); }
 
 .google-custom-search-original {
+  /*------------------------------------ */
+  /*    RESET BLOG STYLES FOR GOOGLE CUSTOM SEARCH */
+  /*------------------------------------ */
   box-sizing: content-box;
   text-align: left; }
   .google-custom-search-original table {
     border-collapse: separate; }
+
+/* atoms */
+/* ---- */
+/* PULSE BUTTON (CIRCLE FROM CENTER ON HOVER) */
+/* ---- */
 .btn-pulse {
   width: var(--btn-width);
   text-decoration: none;
@@ -450,6 +545,7 @@
       border-radius: 50%;
       width: calc(var(--btn-width) * 2);
       height: calc(var(--btn-width) * 2);
+      /* align center horizontally and vertically */
       position: absolute;
       top: 50%;
       left: 50%;
@@ -462,8 +558,10 @@
   .btn-pulse:active {
     top: 1px; }
   .btn-pulse .text {
+    /* to move text front */
     position: relative; }
 
+/* layout */
 .comments {
   padding-top: 15px; }
   .comments .comment-code-highlight {
@@ -474,6 +572,7 @@
       .comments .comment-code-highlight .highlight code {
         white-space: normal; }
 
+/* http://blog.lanyonm.org/articles/2013/11/21/alphabetize-jekyll-page-tags-pure-liquid.html */
 .tags .tag-box.inline li {
   display: inline-block;
   font-size: 14px; }
@@ -492,6 +591,7 @@
   list-style: none; }
   .tags ul.posts li {
     margin-bottom: 5px; }
+
 .pagination {
   display: -ms-flexbox;
   display: flex;
@@ -533,7 +633,8 @@
     .pagination .pagination-links-wrapper .pagination-link {
       -ms-flex: 0 0 var(--pagination-pages-btn-width);
           flex: 0 0 var(--pagination-pages-btn-width);
-      min-height: 1px; }
+      min-height: 1px;
+      /* fix for 0 height if there is no content (because of float:left;) */ }
       .pagination .pagination-links-wrapper .pagination-link a, .pagination .pagination-links-wrapper .pagination-link em {
         max-width: 50px; }
         .pagination .pagination-links-wrapper .pagination-link a:hover, .pagination .pagination-links-wrapper .pagination-link a.current, .pagination .pagination-links-wrapper .pagination-link em:hover, .pagination .pagination-links-wrapper .pagination-link em.current {
@@ -554,12 +655,14 @@ footer {
   padding: 20px 0 12px;
   text-align: center; }
 
+/* layouts */
 .demo-title-section .demo-title-links {
   padding-top: 10px; }
 
 .demo-title-section .demo-title-share-buttons {
   text-align: right; }
 
+/* pages */
 .about-image-wrapper {
   text-align: center; }
   .about-image-wrapper img {

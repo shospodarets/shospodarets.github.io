@@ -1,5 +1,3 @@
-@import "../mixins";
-
 .pagination {
   &:before,
   &:after {
@@ -47,7 +45,7 @@
     .pagination-link {
       flex: 0 0 var(--pagination-pages-btn-width);
 
-      min-height: 1px; // fix for 0 height if there is no content (because of float:left;)
+      min-height: 1px; /* fix for 0 height if there is no content (because of float:left;) */
 
       a, em {
         max-width: 50px;

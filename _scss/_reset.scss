@@ -1,6 +1,6 @@
-//------------------------------------
-//    MEYER RESET
-//------------------------------------
+/*------------------------------------ */
+/*    MEYER RESET */
+/*------------------------------------ */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -19,7 +19,7 @@ time, mark, audio, video {
   padding: 0;
 }
 
-// HTML5 display-role reset for older browsers
+/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
   display: block;
@@ -47,9 +47,9 @@ table {
   border-spacing: 0;
 }
 
-//------------------------------------
-//    Border-box
-//------------------------------------
+/*------------------------------------ */
+/*    Border-box */
+/*------------------------------------ */
 html {
   box-sizing: border-box;
 }
@@ -58,7 +58,7 @@ html {
   box-sizing: inherit;
 }
 
-// OTHER
+/* OTHER */
 
 img {
   vertical-align: top;

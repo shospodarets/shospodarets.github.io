@@ -1,12 +1,10 @@
-@import "../mixins";
-
 .entry {
   &:before,
   &:after {
     @apply --clearfix;
   }
 
-  // block code
+  /* block code */
   .highlight {
     border-bottom: 1px solid var(--code-block-border-color);
     border-top: 1px solid var(--code-block-border-color);
@@ -14,7 +12,7 @@
     margin: var(--main-vertical-indent) 0;
   }
 
-  // inline code
+  /* inline code */
   code.highlighter-rouge {
     background: #f0f0f0;
     border-radius: 3px;
@@ -23,7 +21,7 @@
 
   iframe,
   .cp_embed_iframe {
-    // e.g. codepen example
+    /* e.g. codepen example */
     margin: var(--main-vertical-indent) 0;
     max-width: 100%;
   }

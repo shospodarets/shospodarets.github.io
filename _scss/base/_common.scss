@@ -1,7 +1,5 @@
-@import "../mixins";
-
 .unloading {
-  // added onbeforeunload page
+  /* added onbeforeunload page */
   #main {
     opacity: 0.5;
     pointer-events: none;
@@ -13,8 +11,8 @@
   color: var(--gray-color);
 }
 
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
+/* Nicolas Gallagher's micro clearfix hack */
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -26,7 +24,7 @@
 }
 
 .more {
-  // provide post-short boundary
+  /* provide post-short boundary */
   display: none;
 }
 

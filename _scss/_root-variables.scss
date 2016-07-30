@@ -1,34 +1,34 @@
-// SCSS variables can be used in CSS vars, but not vice versa
+/* SCSS variables can be used in CSS vars, but not vice versa */
 
-// Cannot live in a file which is imported many
-// time as :root content would be included everytime
-// should exist and be imported only in one place (critical CSS)
+/* Cannot live in a file which is imported many */
+/* time as :root content would be included everytime */
+/* should exist and be imported only in one place (critical CSS) */
 :root {
-  // COLORS
+  /* COLORS */
   --link-color: #4183C4;
-  --link-hover-color: lighten(#4183C4, 10%); // Sass/CSS variables mix
+  --link-hover-color: lighten(#4183C4, 10%); /* Sass/CSS variables mix */
   --title-hover-color: var(--link-color);
   --code-block-border-color: #eee;
-  // Gray colors
+  /* Gray colors */
   --darker-gray-color: #222;
   --dark-gray-color: #333;
   --gray-color: #666;
   --light-gray-color: #eee;
 
-  // BACKGROUNDS
+  /* BACKGROUNDS */
   --main-bg: #fff;
 
-  // Typography
+  /* Typography */
   --main-font-family: Helvetica, Arial, sans-serif;
   --main-heading-font-size: 32px;
 
-  // Layout
+  /* Layout */
   --main-vertical-indent: 15px;
   --main-container-max-width: 960px;
   --blockquote-padding: calc(var(--main-vertical-indent)/2);
   --social-links-indent: 8px;
 
-  // Buttons
+  /* Buttons */
   --btn-width: 100px;
   --btn-height: 2.8em;
   --btn-pulse-color: rgba(#2a65a0, 0.8);
@@ -36,9 +36,9 @@
   --btn-pulse-bg: #f1f1f1;
   --btn-pulse-hover-bg: rgba(#3884cd, 0.8);
 
-  // Pagination
+  /* Pagination */
   --pagination-btn-number: 7;
-  --pagination-btn-width: calc(100%/var(--pagination-btn-number)); // round to third decimal after a point
+  --pagination-btn-width: calc(100%/var(--pagination-btn-number)); /* round to third decimal after a point */
   --pagination-btn-indent: calc(var(--pagination-btn-width)/10);
   --pagination-pages-btn-number: 5;
   --pagination-pages-btn-width: calc(100%/var(--pagination-pages-btn-number));

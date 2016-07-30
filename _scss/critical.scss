@@ -1,16 +1,17 @@
-// variables/mixins
+/* variables/mixins */
 @import "root-variables";
-// reset, common layout and defaults classes
+@import "mixins";
+/* reset, common layout and defaults classes */
 @import "reset";
 @import "base/default";
 @import "base/common";
-// atoms
+/* atoms */
 @import "atoms/social-links";
 @import "atoms/share-buttons";
-// molecules
+/* molecules */
 @import "molecules/open-close";
-// header
+/* header */
 @import "components/header/header-common";
-// layout
+/* layout */
 @import "components/post";
 @import "components/entry";
