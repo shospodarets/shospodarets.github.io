@@ -1,7 +1,10 @@
 @import "../mixins";
 
 .entry {
-  @apply --clearfix;
+  &:before,
+  &:after {
+    @apply --clearfix;
+  }
 
   // block code
   .highlight {

@@ -20,14 +20,11 @@
     bottom: 0;
   }'};
 
-  // Doesn't work as a native mixin
+  // Nesting doesn't work inside CSS mixins
   --clearfix: #{"{
-    &:before,
-    &:after {
-      display: table;
-      content: '';
-      clear: both;
-    }
+    display: table;
+    content: '';
+    clear: both;
   }"};
 
   // Cannot contain logic/ process variables

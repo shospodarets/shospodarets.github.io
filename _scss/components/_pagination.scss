@@ -1,7 +1,11 @@
 @import "../mixins";
 
 .pagination {
-  @apply --clearfix;
+  &:before,
+  &:after {
+    @apply --clearfix;
+  }
+
   display: flex;
   text-align: center;
 

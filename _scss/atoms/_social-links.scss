@@ -1,7 +1,10 @@
 @import "../mixins";
 
 .social-links {
-  @apply --clearfix;
+  &:before,
+  &:after {
+    @apply --clearfix;
+  }
 
   display: flex;
   align-items: center;
