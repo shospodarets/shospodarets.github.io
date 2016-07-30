@@ -18,8 +18,12 @@
   .icon {
     cursor: pointer;
     display: inline-block;
-    @include triangle(bottom, $_color: #000, $_size: 5px);
     transition: transform .3s;
+
+    @apply --triangle-preset;
+    border-width: 5px;
+    border-color: #000 transparent transparent;
+    border-bottom: none;
   }
 
   [type=checkbox] {

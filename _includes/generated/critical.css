@@ -249,14 +249,13 @@ blockquote {
   .open-close-wrapper .icon {
     cursor: pointer;
     display: inline-block;
+    transition: transform .3s;
     width: 0;
     height: 0;
-    content: '';
-    z-index: 2;
-    border-top: 5px solid #000;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    transition: transform .3s; }
+    border-style: solid;
+    border-width: 5px;
+    border-color: #000 transparent transparent;
+    border-bottom: none; }
   .open-close-wrapper [type=checkbox] {
     position: absolute;
     visibility: hidden; }

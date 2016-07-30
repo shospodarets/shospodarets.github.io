@@ -29,71 +29,18 @@
       clear: both;
     }
   }"};
+
+  // Cannot contain logic/ process variables
+  --triangle-preset: #{"{
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }"};
 }
 
 // Cannot use a native mixin as they don't apply @content
 @mixin mobile-breakpoint {
   @media screen and (max-width: 680px) {
     @content;
-  }
-}
-
-// Logic cannot be included in native mixins so far
-
-// TRIANGLE
-/// https://css-tricks.com/snippets/sass/opposite-direction-function/
-/// Returns the opposite direction of each direction in a list
-/// @author Hugo Giraudel
-/// @param {List} $_directions - List of initial directions
-/// @return {List} - List of opposite directions
-@function opposite-direction($_directions) {
-  $_opposite-directions: ();
-  $_direction-map: (
-          'top': 'bottom',
-          'right': 'left',
-          'bottom': 'top',
-          'left': 'right',
-          'center': 'center',
-          'ltr': 'rtl',
-          'rtl': 'ltr'
-  );
-
-  @each $_direction in $_directions {
-    $_direction: to-lower-case($_direction);
-
-    @if map-has-key($_direction-map, $_direction) {
-      $_opposite-directions: append($_opposite-directions, unquote(map-get($_direction-map, $_direction)));
-    } @else {
-      @warn "No opposite direction can be found for `#{$_direction}`. Direction omitted.";
-    }
-  }
-
-  @return $_opposite-directions;
-}
-
-//// https://css-tricks.com/snippets/sass/css-triangle-mixin/
-/// Triangle helper mixin
-/// @param {Direction} $_direction - Triangle direction, either `top`, `right`, `bottom` or `left`
-/// @param {Color} $_color [currentColor] - Triangle color
-/// @param {Length} $_size [1em] - Triangle size
-@mixin triangle($_direction, $_color: currentColor, $_size: 1em) {
-  @if not index(top right bottom left, $_direction) {
-    @error "Direction must be either `top`, `right`, `bottom` or `left`.";
-  }
-
-  width: 0;
-  height: 0;
-  content: '';
-  z-index: 2;
-  border-#{opposite-direction($_direction)}: $_size solid $_color;
-
-  $_perpendicular-borders: $_size solid transparent;
-
-  @if $_direction == top or $_direction == bottom {
-    border-left: $_perpendicular-borders;
-    border-right: $_perpendicular-borders;
-  } @else if $_direction == right or $_direction == left {
-    border-bottom: $_perpendicular-borders;
-    border-top: $_perpendicular-borders;
   }
 }
