@@ -1,0 +1,44 @@
+.social-links {
+  &:before,
+  &:after {
+    @apply --clearfix;
+  }
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  & > * {
+    margin-right: var(--social-links-indent);
+
+    @media (--mobile-breakpoint) {
+      margin-bottom: var(--social-links-indent);
+    }
+  }
+
+  & svg {
+    float: left;
+  }
+}
+
+.small-social-links {
+  @media (--mobile-breakpoint) {
+    justify-content: center;
+  }
+
+  --_size: 35px;
+  & svg {
+    width: var(--_size);
+    height: var(--_size);
+  }
+}
+
+.big-social-links {
+  justify-content: center;
+
+  --_size: 40px;
+  & svg {
+    width: var(--_size);
+    height: var(--_size);
+  }
+}

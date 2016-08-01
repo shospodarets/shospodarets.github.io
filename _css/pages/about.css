@@ -1,0 +1,7 @@
+.about-image-wrapper {
+  text-align: center;
+
+  & img {
+    border-radius: 8px;
+  }
+}

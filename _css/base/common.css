@@ -1,0 +1,45 @@
+.unloading {
+  /* added onbeforeunload page */
+  & #main {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.date {
+  font-style: italic;
+  color: var(--gray-color);
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    @apply --clearfix;
+  }
+}
+
+.more {
+  /* provide post-short boundary */
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+blockquote {
+  margin: var(--main-vertical-indent) .8em;
+  border-left: 2px solid var(--gray-color);
+  padding: var(--blockquote-padding);
+  color: var(--gray-color);
+  font-size: 22px;
+  font-style: italic;
+}
+
+.absolute-hidden {
+  @apply --absolute-hidden;
+}

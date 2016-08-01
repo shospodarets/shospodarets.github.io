@@ -1,0 +1,49 @@
+/* from http://codepen.io/912lab/pen/LsplC */
+.google-custom-search {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.google-custom-search-original {
+  @apply --absolute-hidden; /* hide original google search */
+}
+
+.google-custom-search-placeholder {
+  @media (--mobile-breakpoint) {
+    text-align: center;
+  }
+
+  /* reset */
+  & input {
+    outline: none;
+  }
+
+  & input[type=search] {
+    font-family: inherit;
+    font-size: 18px;
+  }
+
+  /* styles */
+  & input[type=search] {
+    float: right;
+
+    @media (--mobile-breakpoint) {
+      float: none;
+    }
+
+    background: #fff url(/images/icons/search.svg) no-repeat 5px center;
+    background-size: auto 75%;
+    border: solid 1px #ccc;
+    padding: 2px 5px 2px 23px;
+    width: 110px;
+    max-width: 250px;
+    border-radius: 10em;
+    transition: all .5s;
+  }
+
+  & input[type=search]:focus {
+    width: 100%;
+    border-color: #66CC75;
+    box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+  }
+}

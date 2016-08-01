@@ -56,32 +56,7 @@ module.exports = function (grunt) {
             }
         },
 
-        sass: {
-            critical: {
-                options: {
-                    outputStyle: 'compressed'
-                },
-                files: [{
-                    expand: true,
-                    cwd: '_scss',
-                    src: ['critical.scss'],
-                    dest: '_includes/generated',
-                    ext: '.css'
-                }]
-            },
-            nonCritical: {
-                options: {
-                    outputStyle: 'compressed',
-                    sourceMap: true
-                },
-                files: [{
-                    expand: true,
-                    cwd: '_scss',
-                    src: ['non-critical.scss'],
-                    dest: 'css',
-                    ext: '.css'
-                }]
-            },
+        sass: {// ToDo
             demos: {// all *.scss files in "demos" folder
                 files: [{
                     expand: true,
@@ -98,25 +73,36 @@ module.exports = function (grunt) {
         postcss: {
             options: {
                 processors: [
+                    require("postcss-import")(),
                     require('postcss-cssnext')({
-                        browsers: ['last 2 versions', 'IE > 10'],
+                        browsers: ['last 2 versions'],
                         features: {
-                            calc: false,
-                            rem: false,
-                            colorRgba: false
+                            customProperties: false // don't process custom props
+                            /* If applyRule is disabled, processing of mixins stops with
+                             "Fatal error: Expected pseudo-class or pseudo-element" */
+                            // ,applyRule: false // don't process mixins
                         }
                     }),
                     require("postcss-reporter")()
                 ]
             },
             critical: {
-                src: "_includes/generated/critical.css"
+                files: [{
+                    expand: true,
+                    cwd: '_css',
+                    src: ['critical.css'],
+                    dest: '_includes/generated',
+                    ext: '.css'
+                }]
             },
             nonCritical: {
-                options: {
-                    map: true
-                },
-                src: "css/non-critical.css"
+                files: [{
+                    expand: true,
+                    cwd: '_css',
+                    src: ['non-critical.css'],
+                    dest: 'css',
+                    ext: '.css'
+                }]
             },
             demos: {
                 src: [
@@ -153,7 +139,7 @@ module.exports = function (grunt) {
                 tasks: ["generateJs", "jekyllBuild"]
             },
             css: {
-                files: ["_scss/**/*.scss"],
+                files: ["_css/**/*.css"],
                 tasks: ["generateCss", "jekyllBuild"]
             },
             css_demos: {
@@ -170,8 +156,8 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask("generateCss", [
-        "sass:critical", "postcss:critical",
-        "sass:nonCritical", "postcss:nonCritical"
+        "postcss:critical",
+        "postcss:nonCritical"
     ]);
 
     grunt.registerTask("generateDemosCss", [

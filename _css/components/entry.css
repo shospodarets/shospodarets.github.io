@@ -1,0 +1,28 @@
+.entry {
+  &:before,
+  &:after {
+    @apply --clearfix;
+  }
+
+  /* block code */
+  & .highlight {
+    border-bottom: 1px solid var(--code-block-border-color);
+    border-top: 1px solid var(--code-block-border-color);
+    padding: 10px 0;
+    margin: var(--main-vertical-indent) 0;
+  }
+
+  /* inline code */
+  & code.highlighter-rouge {
+    background: #f0f0f0;
+    border-radius: 3px;
+    padding: 0 5px;
+  }
+
+  & iframe,
+  & .cp_embed_iframe {
+    /* e.g. codepen example */
+    margin: var(--main-vertical-indent) 0;
+    max-width: 100%;
+  }
+}

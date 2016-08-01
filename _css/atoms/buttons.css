@@ -1,0 +1,56 @@
+/* ---- */
+/* PULSE BUTTON (CIRCLE FROM CENTER ON HOVER) */
+/* ---- */
+
+.btn-pulse {
+  width: var(--btn-width);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  color: var(--btn-pulse-color);
+  border: 1px solid var(--btn-pulse-color);
+  border-radius: 3px;
+  transition: color 0.3s 0.1s ease-out;
+  background-color: var(--btn-pulse-bg);
+
+  & .wrapper {
+    display: inline-block;
+    @apply --expander;
+    height: 100%;
+    width: var(--btn-width);
+    overflow: hidden;
+
+    & .inner {
+      display: block;
+      border-radius: 50%;
+      width: calc(var(--btn-width) * 2);
+      height: calc(var(--btn-width) * 2);
+      /* align center horizontally and vertically */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: box-shadow 0.5s ease-out;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &:hover {
+    color: var(--btn-pulse-hover-color);
+
+    & .inner {
+      box-shadow: inset 0 0 0 var(--btn-width) var(--btn-pulse-hover-bg);
+    }
+  }
+
+  &:active {
+    top: 1px;
+  }
+
+  & .text {
+    /* to move text front */
+    position: relative;
+  }
+}
