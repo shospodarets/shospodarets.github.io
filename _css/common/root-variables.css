@@ -1,7 +1,5 @@
-/* SCSS variables can be used in CSS vars, but not vice versa */
-
 /* Cannot live in a file which is imported many */
-/* time as :root content would be included everytime */
+/* times as :root content would be included everytime */
 /* should exist and be imported only in one place (critical CSS) */
 :root {
   /* COLORS */
@@ -38,7 +36,7 @@
 
   /* Pagination */
   --pagination-btn-number: 7;
-  --pagination-btn-width: calc(100%/var(--pagination-btn-number)); /* round to third decimal after a point */
+  --pagination-btn-width: calc(100%/var(--pagination-btn-number)); /* rounded to a third decimal after a point */
   --pagination-btn-indent: calc(var(--pagination-btn-width)/10);
   --pagination-pages-btn-number: 5;
   --pagination-pages-btn-width: calc(100%/var(--pagination-pages-btn-number));

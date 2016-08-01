@@ -43,10 +43,7 @@
   --pagination-pages-btn-number: 5;
   --pagination-pages-btn-width: calc(100%/var(--pagination-pages-btn-number));
 }
-:root {;
-
-  /* Cannot contain logic/ process variables */;
-}
+/* Mixins cannot contain logic/ process variables */
 /* reset, common layout and defaults classes */
 /*------------------------------------ */
 /*    MEYER RESET */

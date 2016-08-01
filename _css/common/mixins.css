@@ -1,3 +1,4 @@
+/* Mixins cannot contain logic/ process variables */
 :root {
   --absolute-hidden: {
     position: absolute;
@@ -22,7 +23,6 @@
     clear: both;
   };
 
-  /* Cannot contain logic/ process variables */
   --triangle-preset: {
     width: 0;
     height: 0;
