@@ -1,4 +1,23 @@
 /* variables/mixins */
+/* Cannot live in a file which is imported many */
+/* times as :root content would be included everytime */
+/* should exist and be imported only in one place (critical CSS) */
+:root {
+  /* COLORS */
+  /* Gray colors */
+
+  /* BACKGROUNDS */
+
+  /* Typography */
+
+  /* Layout */
+
+  /* Icon links */
+
+  /* Buttons */
+
+  /* Pagination */ /* rounded to a third decimal after a point */
+}
 /* Mixins cannot contain logic/ process variables */
 /* jekyll */
 /*------------------------------------ */
@@ -587,18 +606,18 @@
 /* PULSE BUTTON (CIRCLE FROM CENTER ON HOVER) */
 /* ---- */
 .btn-pulse {
-  width: var(--btn-width);
+  width: 100px;
   text-decoration: none;
   display: inline-block;
   text-align: center;
   position: relative;
   overflow: hidden;
   padding: 10px;
-  color: var(--btn-pulse-color);
-  border: 1px solid var(--btn-pulse-color);
+  color: rgba(42, 101, 160, 0.8);
+  border: 1px solid rgba(42, 101, 160, 0.8);
   border-radius: 3px;
   transition: color 0.3s 0.1s ease-out;
-  background-color: var(--btn-pulse-bg)
+  background-color: #f1f1f1
 }
 .btn-pulse .wrapper {
   display: inline-block;
@@ -608,14 +627,14 @@
   right: 0;
   bottom: 0;
   height: 100%;
-  width: var(--btn-width);
+  width: 100px;
   overflow: hidden;
 }
 .btn-pulse .wrapper .inner {
   display: block;
   border-radius: 50%;
-  width: calc(var(--btn-width) * 2);
-  height: calc(var(--btn-width) * 2);/* align center horizontally and vertically */
+  width: 200px;
+  height: 200px;/* align center horizontally and vertically */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -623,10 +642,10 @@
   transform: translateX(-50%) translateY(-50%);
 }
 .btn-pulse:hover {
-  color: var(--btn-pulse-hover-color);
+  color: #fff;
 }
 .btn-pulse:hover .inner {
-  box-shadow: inset 0 0 0 var(--btn-width) var(--btn-pulse-hover-bg);
+  box-shadow: inset 0 0 0 100px rgba(56, 132, 205, 0.8);
 }
 .btn-pulse:active {
   top: 1px;
@@ -712,21 +731,21 @@
   visibility: hidden;
 }
 .pagination .prev-btn {
-  -ms-flex: 0 0 var(--pagination-btn-width);
-      flex: 0 0 var(--pagination-btn-width);
-  padding-right: var(--pagination-btn-indent);
+  -ms-flex: 0 0 14.28571%;
+      flex: 0 0 14.28571%;
+  padding-right: 1.42857%;
 }
 .pagination .pagination-links-wrapper {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex: 0 0 calc(5 * var(--pagination-btn-width));
-      flex: 0 0 calc(5 * var(--pagination-btn-width));
-  padding-right: var(--pagination-btn-indent);
-  padding-left: var(--pagination-btn-indent);
+  -ms-flex: 0 0 71.42855%;
+      flex: 0 0 71.42855%;
+  padding-right: 1.42857%;
+  padding-left: 1.42857%;
 }
 .pagination .pagination-links-wrapper .pagination-link {
-  -ms-flex: 0 0 var(--pagination-pages-btn-width);
-      flex: 0 0 var(--pagination-pages-btn-width);
+  -ms-flex: 0 0 20%;
+      flex: 0 0 20%;
   min-height: 1px;/* fix for 0 height if there is no content (because of float:left;) */
 }
 .pagination .pagination-links-wrapper .pagination-link a,
@@ -741,15 +760,15 @@
   background-color: #41b7d8;
 }
 .pagination .next-btn {
-  -ms-flex: 0 0 var(--pagination-btn-width);
-      flex: 0 0 var(--pagination-btn-width);
-  padding-left: var(--pagination-btn-indent);
+  -ms-flex: 0 0 14.28571%;
+      flex: 0 0 14.28571%;
+  padding-left: 1.42857%;
 }
 .wrapper-footer {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: var(--light-gray-color);
+  background-color: #eee;
 }
 footer {
   padding: 20px 0 12px;

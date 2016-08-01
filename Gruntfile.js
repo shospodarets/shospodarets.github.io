@@ -77,7 +77,7 @@ module.exports = function (grunt) {
                     require('postcss-cssnext')({
                         browsers: ['last 2 versions'],
                         features: {
-                            customProperties: false // don't process custom props
+                            // customProperties: false // don't process custom props
                             /* If applyRule is disabled, processing of mixins stops with
                              "Fatal error: Expected pseudo-class or pseudo-element" */
                             // ,applyRule: false // don't process mixins

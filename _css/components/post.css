@@ -30,10 +30,8 @@
   }
 
   & .external-link-icon {
-    --_size: calc(var(--main-heading-font-size) * 1.7);
-
-    width: var(--_size);
-    height: var(--_size);
+    width: var(--external-link-size);
+    height: var(--external-link-size);
     float: right;
 
     background: transparent url(/images/icons/external-link.svg) no-repeat center center;

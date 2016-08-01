@@ -1,4 +1,5 @@
 /* variables/mixins */
+@import "common/root-variables";
 @import "common/mixins";
 /* jekyll */
 @import "common/highlights";

@@ -26,19 +26,17 @@
     justify-content: center;
   }
 
-  --_size: 35px;
   & svg {
-    width: var(--_size);
-    height: var(--_size);
+    width: var(--small-social-link-size);
+    height: var(--small-social-link-size);
   }
 }
 
 .big-social-links {
   justify-content: center;
 
-  --_size: 40px;
   & svg {
-    width: var(--_size);
-    height: var(--_size);
+    width: var(--big-social-link-size);
+    height: var(--big-social-link-size);
   }
 }

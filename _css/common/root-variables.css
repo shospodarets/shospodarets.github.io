@@ -24,7 +24,12 @@
   --main-vertical-indent: 15px;
   --main-container-max-width: 960px;
   --blockquote-padding: calc(var(--main-vertical-indent)/2);
+
+  /* Icon links */
   --social-links-indent: 8px;
+  --small-social-link-size: 35px;
+  --big-social-link-size: 40px;
+  --external-link-size: calc(var(--main-heading-font-size) * 1.7);
 
   /* Buttons */
   --btn-width: 100px;
