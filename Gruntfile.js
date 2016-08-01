@@ -83,6 +83,14 @@ module.exports = function (grunt) {
                             // ,applyRule: false // don't process mixins
                         }
                     }),
+                    require('cssnano')({
+                        // http://cssnano.co/optimisations/
+                        safe: true,
+                        autoprefixer: false,
+                        core: false,
+                        minifyFontValues: false,
+                        mergeRules: false
+                    }),
                     require("postcss-reporter")()
                 ]
             },

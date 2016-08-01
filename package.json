@@ -9,6 +9,7 @@
     "babel-preset-stage-2": "~6.11.0",
     "babel-register": "~6.11.5",
     "bower": "~1.7.9",
+    "cssnano": "~3.7.3",
     "grunt": "~1.0.1",
     "grunt-contrib-watch": "~1.0.0",
     "grunt-jekyll": "~0.4.4",
