@@ -89,7 +89,7 @@ module.exports = function (grunt) {
             critical: {
                 files: [{
                     expand: true,
-                    cwd: '_scss',
+                    cwd: '_css',
                     src: ['critical.css'],
                     dest: '_includes/generated',
                     ext: '.css'
@@ -98,7 +98,7 @@ module.exports = function (grunt) {
             nonCritical: {
                 files: [{
                     expand: true,
-                    cwd: '_scss',
+                    cwd: '_css',
                     src: ['non-critical.css'],
                     dest: 'css',
                     ext: '.css'
@@ -139,7 +139,7 @@ module.exports = function (grunt) {
                 tasks: ["generateJs", "jekyllBuild"]
             },
             css: {
-                files: ["_scss/**/*.scss"],
+                files: ["_css/**/*.css"],
                 tasks: ["generateCss", "jekyllBuild"]
             },
             css_demos: {

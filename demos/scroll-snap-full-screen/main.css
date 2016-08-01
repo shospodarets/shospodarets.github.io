@@ -38,12 +38,15 @@
   text-transform: uppercase;
   color: #fff;
   position: relative; }
-  .box a {
+
+.box a {
     color: #fff;
     text-decoration: underline; }
-    .box a:hover {
+
+.box a:hover {
       text-decoration: none; }
-  .box .centered {
+
+.box .centered {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -70,7 +73,8 @@
 a.arrow {
   display: inline-block;
   position: relative; }
-  a.arrow:after {
+
+a.arrow:after {
     border-right: 2px solid #FFF;
     border-bottom: 2px solid #FFF;
     transform: rotate(45deg);
@@ -84,7 +88,8 @@ a.arrow {
     bottom: 0;
     left: 0;
     animation: 3s arrow infinite ease; }
-  a.arrow.upside-down {
+
+a.arrow.upside-down {
     transform: rotate(180deg);
     left: 20px;
     top: -30px; }

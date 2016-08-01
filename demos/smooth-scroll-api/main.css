@@ -5,8 +5,7 @@ html {
     font-size: 24px;
     background-color: #e74c3c;
     font-family: 'Lato', Arial, sans-serif; }
-
-.demo .scroll-form {
+  .demo .scroll-form {
   position: fixed;
   max-width: 30%;
   top: 250px;
@@ -36,24 +35,20 @@ html {
       padding-top: 1.5rem; }
     .demo .scroll-form .label-text {
       display: block; } }
-
-.demo .box {
+  .demo .box {
   color: #ecf0f1;
   opacity: 0.5;
   text-align: justify; }
-
-.supported {
+  .supported {
   position: fixed;
   display: none;
   left: 10px;
   right: 10px;
   top: 10px;
   z-index: 5; }
-
-.not-supported .supported {
+  .not-supported .supported {
   display: block; }
-
-.notifyjs-corner {
+  .notifyjs-corner {
   font-size: 14px;
   max-width: 100%; }
   .notifyjs-corner [data-notify-text] {

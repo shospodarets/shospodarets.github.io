@@ -26,7 +26,8 @@ h1 {
   -webkit-scroll-snap-type: mandatory;
   -ms-scroll-snap-type: mandatory;
       scroll-snap-type: mandatory; }
-  .gallery img {
+
+.gallery img {
     width: 500px;
     height: 275px; }
 
@@ -34,14 +35,17 @@ h1 {
   margin: 5px 0; }
 
 /* ALIGN HORIZONTALLY */
+
 .open-close-wrapper {
   text-align: center; }
-  .open-close-wrapper .open-close div {
+
+.open-close-wrapper .open-close div {
     margin: 0 auto; }
 
 /*
   HORIZONTAL GALLERY
 */
+
 .horizontal-gallery {
   overflow-x: auto;
   overflow-y: hidden;
@@ -51,27 +55,32 @@ h1 {
   -webkit-scroll-snap-points-x: repeat(100%);
   -ms-scroll-snap-points-x: repeat(100%);
       scroll-snap-points-x: repeat(100%); }
-  .horizontal-gallery img {
+
+.horizontal-gallery img {
     display: inline-block; }
 
 /*
   VERTICAL GALLERY
 */
+
 .vertical-gallery {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-scroll-snap-points-y: repeat(100%);
   -ms-scroll-snap-points-y: repeat(100%);
       scroll-snap-points-y: repeat(100%); }
-  .vertical-gallery img {
+
+.vertical-gallery img {
     display: block; }
 
 /*
   YOUMAYKNOW GALLERY
 */
+
 .youmayknow-gallery-wrapper {
   text-align: center; }
-  .youmayknow-gallery-wrapper label {
+
+.youmayknow-gallery-wrapper label {
     margin-right: 10px;
     margin-bottom: 10px; }
 
@@ -83,7 +92,8 @@ h1 {
   display: flex;
   white-space: nowrap;
   margin-bottom: 20px; }
-  .youmayknow-gallery .item {
+
+.youmayknow-gallery .item {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     width: 225px;
@@ -94,27 +104,33 @@ h1 {
     font-size: 13px;
     padding: 9px 9px 5px;
     text-align: center; }
-    .youmayknow-gallery .item:last-child {
+
+.youmayknow-gallery .item:last-child {
       margin-right: 0; }
-  .youmayknow-gallery img {
+
+.youmayknow-gallery img {
     width: auto;
     height: auto;
     max-height: 250px; }
-  .youmayknow-gallery .info:after {
+
+.youmayknow-gallery .info:after {
     content: '';
     display: block;
     clear: both; }
-  .youmayknow-gallery .info .action-box {
+
+.youmayknow-gallery .info .action-box {
     float: right;
     overflow: hidden; }
-    .youmayknow-gallery .info .action-box label {
+
+.youmayknow-gallery .info .action-box label {
       -webkit-user-select: none;
          -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
       cursor: pointer;
       position: relative; }
-      .youmayknow-gallery .info .action-box label i {
+
+.youmayknow-gallery .info .action-box label i {
         display: block;
         content: '';
         width: 40px;
@@ -123,24 +139,29 @@ h1 {
         background-repeat: no-repeat;
         background-size: 109px 163px;
         background-position: 0 -91px; }
-      .youmayknow-gallery .info .action-box label input[type=checkbox] {
+
+.youmayknow-gallery .info .action-box label input[type=checkbox] {
         position: absolute;
         visibility: hidden; }
-      .youmayknow-gallery .info .action-box label input[type=checkbox]:checked + i {
+
+.youmayknow-gallery .info .action-box label input[type=checkbox]:checked + i {
         background-position: -41px -91px;
         animation: bounce 0.3s; }
-  .youmayknow-gallery .info .text {
+
+.youmayknow-gallery .info .text {
     text-align: left;
     line-height: 20px;
     padding-top: 5px;
     overflow: hidden; }
-    .youmayknow-gallery .info .text .name {
+
+.youmayknow-gallery .info .text .name {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
       font-size: 14px;
       font-weight: bold; }
-    .youmayknow-gallery .info .text .mutual-friends {
+
+.youmayknow-gallery .info .text .mutual-friends {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -149,15 +170,18 @@ h1 {
 /*
   SCROLL SNAPPING ALIGNMENT
 */
+
 #align-to-center:checked ~ .gallery-wrapper .youmayknow-gallery {
   -webkit-scroll-snap-destination: 50% 50%;
   -ms-scroll-snap-destination: 50% 50%;
       scroll-snap-destination: 50% 50%; }
-  #align-to-center:checked ~ .gallery-wrapper .youmayknow-gallery .item {
+
+#align-to-center:checked ~ .gallery-wrapper .youmayknow-gallery .item {
     -webkit-scroll-snap-coordinate: 50% 50%;
     -ms-scroll-snap-coordinate: 50% 50%;
         scroll-snap-coordinate: 50% 50%; }
-    #align-to-center:checked ~ .gallery-wrapper .youmayknow-gallery .item:last-child {
+
+#align-to-center:checked ~ .gallery-wrapper .youmayknow-gallery .item:last-child {
       -webkit-scroll-snap-coordinate: 0 50%;
       -ms-scroll-snap-coordinate: 0 50%;
           scroll-snap-coordinate: 0 50%; }
@@ -166,7 +190,8 @@ h1 {
   -webkit-scroll-snap-destination: 0 50%;
   -ms-scroll-snap-destination: 0 50%;
       scroll-snap-destination: 0 50%; }
-  #align-to-left:checked ~ .gallery-wrapper .youmayknow-gallery .item {
+
+#align-to-left:checked ~ .gallery-wrapper .youmayknow-gallery .item {
     -webkit-scroll-snap-coordinate: 0 50%;
     -ms-scroll-snap-coordinate: 0 50%;
         scroll-snap-coordinate: 0 50%; }
