@@ -89,7 +89,8 @@ module.exports = function (grunt) {
                         autoprefixer: false,
                         core: false,
                         minifyFontValues: false,
-                        mergeRules: false
+                        mergeRules: false,
+                        colormin: false
                     }),
                     require("postcss-reporter")()
                 ]

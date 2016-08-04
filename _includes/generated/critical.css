@@ -45,7 +45,7 @@ body{
   color:#333;
 }
 a{
-  color:#4183c4;
+  color:#4183C4;
   text-decoration:underline;
   cursor:pointer;
   word-wrap:break-word
@@ -72,7 +72,7 @@ h1{
   font-size:32px
 }
 h1 a{text-decoration:none;color:#333;}
-h1 a:hover{color:#4183c4;}
+h1 a:hover{color:#4183C4;}
 h2{
   font-size:28px;
 }
@@ -229,13 +229,13 @@ nav{
 @media (max-width:680px){nav{display:block;}
   }
 nav a{margin-left:15px;color:#333;text-align:right;font-weight:300;letter-spacing:1px;}
-@media (max-width:680px){nav a{margin:0 10px;color:#4183c4;}}
+@media (max-width:680px){nav a{margin:0 10px;color:#4183C4;}}
 .post-short{
   cursor:pointer;
   padding-bottom:15px;
   border-bottom:3px solid #eee
 }
-.post-short:hover h1 a{color:#4183c4;}
+.post-short:hover h1 a{color:#4183C4;}
 .post-short .date{display:block;padding-top:15px;margin-bottom:-15px;}
 .posts .post-short:last-child{
   border-bottom:none;

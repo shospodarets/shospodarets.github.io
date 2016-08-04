@@ -1,17 +1,17 @@
 /* variables/mixins */
-@import "common/root-variables";
-@import "common/mixins";
+@import "common/root-variables.css";
+@import "common/mixins.css";
 /* reset, common layout and defaults classes */
-@import "common/reset";
-@import "base/default";
-@import "base/common";
+@import "common/reset.css";
+@import "base/default.css";
+@import "base/common.css";
 /* atoms */
-@import "atoms/social-links";
-@import "atoms/share-buttons";
+@import "atoms/social-links.css";
+@import "atoms/share-buttons.css";
 /* molecules */
-@import "molecules/open-close";
+@import "molecules/open-close.css";
 /* header */
-@import "components/header/header-common";
+@import "components/header/header-common.css";
 /* layout */
-@import "components/post";
-@import "components/entry";
+@import "components/post.css";
+@import "components/entry.css";

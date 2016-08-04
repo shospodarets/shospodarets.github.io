@@ -1,23 +1,23 @@
 /* variables/mixins */
-@import "common/root-variables";
-@import "common/mixins";
+@import "common/root-variables.css";
+@import "common/mixins.css";
 /* jekyll */
-@import "common/highlights";
+@import "common/highlights.css";
 /* libraries */
-@import "libs/caniuse";
-@import "libs/humane-libnotify";
+@import "libs/caniuse.css";
+@import "libs/humane-libnotify.css";
 /* header */
 /* GOOGLE SEARCH */
-@import "components/header/google-search-placeholder";
-@import "components/header/google-search-reset";
+@import "components/header/google-search-placeholder.css";
+@import "components/header/google-search-reset.css";
 /* atoms */
-@import "atoms/buttons";
+@import "atoms/buttons.css";
 /* layout */
-@import "components/comments";
-@import "components/tags";
-@import "components/pagination";
-@import "components/footer";
+@import "components/comments.css";
+@import "components/tags.css";
+@import "components/pagination.css";
+@import "components/footer.css";
 /* layouts */
-@import "layouts/demo";
+@import "layouts/demo.css";
 /* pages */
-@import "pages/about";
+@import "pages/about.css";
