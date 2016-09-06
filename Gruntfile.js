@@ -3,7 +3,72 @@ var webpack = require('webpack');
 
 var rootPath = path.resolve();
 
-//var DEBUG_IS_ENABLED = Boolean(process.env.BLOG_DEBUG);// environment variable
+//const DEBUG_IS_ENABLED = Boolean(process.env.BLOG_DEBUG);// environment variable
+
+function getPostCssOptions(noCssVars) {
+    return {
+        processors: [
+            require("postcss-import")(),
+            require('postcss-cssnext')({
+                browsers: ['last 2 versions'],
+                features: {
+                    customProperties: !!noCssVars // processing custom props
+                    /* If applyRule is disabled, processing of mixins stops with
+                     "Fatal error: Expected pseudo-class or pseudo-element" */
+                    // ,applyRule: false // don't process mixins
+                }
+            }),
+            require('cssnano')({
+                // http://cssnano.co/optimisations/
+                safe: true,
+                autoprefixer: false,
+                core: false,
+                minifyFontValues: false,
+                mergeRules: false,
+                colormin: false
+            }),
+            require("postcss-reporter")()
+        ]
+    };
+}
+
+function getCriticalCssConfig(noCssVars) {
+    const config = {
+        options: getPostCssOptions(noCssVars),
+        files: [{
+            expand: true,
+            cwd: '_css',
+            src: ['critical.css'],
+            dest: '_includes/generated',
+            ext: '.css'
+        }]
+    };
+    if (noCssVars) {
+        config.files[0].rename = function () {
+            return 'css/critical-no-css-vars.css';
+        }
+    }
+    return config;
+}
+
+function getNonCriticalCssConfig(noCssVars) {
+    const config = {
+        options: getPostCssOptions(noCssVars),
+        files: [{
+            expand: true,
+            cwd: '_css',
+            src: ['non-critical.css'],
+            dest: 'css',
+            ext: '.css'
+        }]
+    };
+    if (noCssVars) {
+        config.files[0].rename = function () {
+            return 'css/non-critical-no-css-vars.css';
+        }
+    }
+    return config;
+}
 
 module.exports = function (grunt) {
     grunt.initConfig({
@@ -71,49 +136,12 @@ module.exports = function (grunt) {
         },
 
         postcss: {
-            options: {
-                processors: [
-                    require("postcss-import")(),
-                    require('postcss-cssnext')({
-                        browsers: ['last 2 versions'],
-                        features: {
-                            // customProperties: false // don't process custom props
-                            /* If applyRule is disabled, processing of mixins stops with
-                             "Fatal error: Expected pseudo-class or pseudo-element" */
-                            // ,applyRule: false // don't process mixins
-                        }
-                    }),
-                    require('cssnano')({
-                        // http://cssnano.co/optimisations/
-                        safe: true,
-                        autoprefixer: false,
-                        core: false,
-                        minifyFontValues: false,
-                        mergeRules: false,
-                        colormin: false
-                    }),
-                    require("postcss-reporter")()
-                ]
-            },
-            critical: {
-                files: [{
-                    expand: true,
-                    cwd: '_css',
-                    src: ['critical.css'],
-                    dest: '_includes/generated',
-                    ext: '.css'
-                }]
-            },
-            nonCritical: {
-                files: [{
-                    expand: true,
-                    cwd: '_css',
-                    src: ['non-critical.css'],
-                    dest: 'css',
-                    ext: '.css'
-                }]
-            },
+            critical: getCriticalCssConfig(),
+            criticalIE: getCriticalCssConfig('noCssVars'),
+            nonCritical: getNonCriticalCssConfig(),
+            nonCriticalIE: getNonCriticalCssConfig('noCssVars'),
             demos: {
+                options: getPostCssOptions('forAllBrowsers'),
                 src: [
                     'demos/*/main.css'
                 ]
@@ -166,7 +194,9 @@ module.exports = function (grunt) {
 
     grunt.registerTask("generateCss", [
         "postcss:critical",
-        "postcss:nonCritical"
+        "postcss:nonCritical",
+        "postcss:criticalIE",
+        "postcss:nonCriticalIE"
     ]);
 
     grunt.registerTask("generateDemosCss", [

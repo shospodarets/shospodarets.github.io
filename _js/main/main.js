@@ -6,6 +6,7 @@
 require('babel-polyfill');
 
 (function () {
+    require('./components/check-css-variables-support');
     // DEPENDENCIES
     // components
     var Events = require('./components/events-binding').EventsBinding;
