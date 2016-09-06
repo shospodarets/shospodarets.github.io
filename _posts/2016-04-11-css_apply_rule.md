@@ -80,7 +80,7 @@ So general syntax is:
 }
 
 // APPLYING
-@apply custom-property-name;
+@apply --custom-property-name;
 
 ```
 
