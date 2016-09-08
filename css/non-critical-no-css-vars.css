@@ -308,9 +308,7 @@
 .tags ul.posts{list-style:none}
 .tags ul.posts li{margin-bottom:5px}
 .pagination{
-
   display:-ms-flexbox;
-
   display:flex;
   text-align:center
 }

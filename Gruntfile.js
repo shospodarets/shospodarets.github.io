@@ -1,7 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
-var rootPath = path.resolve();
+const rootPath = path.resolve();
 
 //const DEBUG_IS_ENABLED = Boolean(process.env.BLOG_DEBUG);// environment variable
 
@@ -38,7 +38,7 @@ function getCriticalCssConfig(noCssVars) {
         files: [{
             expand: true,
             cwd: '_css',
-            src: ['critical.css'],
+            src: ['critical.pcss'],
             dest: '_includes/generated',
             ext: '.css'
         }]
@@ -57,7 +57,7 @@ function getNonCriticalCssConfig(noCssVars) {
         files: [{
             expand: true,
             cwd: '_css',
-            src: ['non-critical.css'],
+            src: ['non-critical.pcss'],
             dest: 'css',
             ext: '.css'
         }]
@@ -220,6 +220,6 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask("default", [
-        "watch"
+        "build"
     ]);
 };
