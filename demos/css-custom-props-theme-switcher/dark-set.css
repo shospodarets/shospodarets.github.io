@@ -1,6 +1,5 @@
 :root {
-    --main-color: #BABABA;
-    --main-bg: #2B2B2B;
+    --main-color-demo: #BABABA;
+    --main-bg-demo: #2B2B2B;
     --selected-set: 'dark';
 }
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRhcmstc2V0LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHNCQUFzQjtJQUN0QixtQkFBbUI7SUFDbkIsdUJBQXVCO0NBQzFCIiwiZmlsZSI6ImRhcmstc2V0LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIjpyb290IHtcbiAgICAtLW1haW4tY29sb3I6ICNCQUJBQkE7XG4gICAgLS1tYWluLWJnOiAjMkIyQjJCO1xuICAgIC0tc2VsZWN0ZWQtc2V0OiAnZGFyayc7XG59Il19 */
