@@ -1,0 +1,19 @@
+:root {
+    --screen-category: 'desktop';
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --screen-category: 'tablet';
+    }
+}
+
+@media screen and (max-width: 640px) {
+    :root {
+        --screen-category: 'phone';
+    }
+}
+
+body:after {
+    content: '--screen-category : 'var(--screen-category);
+}
