@@ -6,8 +6,8 @@
 }
 
 body {
-  color: var(--main-color-demo, #000);
-  background-color: var(--main-bg-demo, #fff);
+  color: var(--main-color, #000);
+  background-color: var(--main-bg, #fff);
 }
 
 .selected-set:after {
