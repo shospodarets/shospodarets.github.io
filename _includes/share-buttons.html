@@ -1,7 +1,7 @@
 <span class="share-buttons">
     <a href="https://twitter.com/share"
        class="twitter-widget twitter-share-button"
-       data-text="{% if page.share_description %}{{ page.share_description }}{% elsif page.path contains '_posts' %}{{ page.content | strip_html | xml_escape | truncate: 200 }}{% else %}{{ site.description }}{% endif %}"
+       data-text="{{ page.title }}"
        data-via="{{ site.social-links.twitter }}"
        data-related="{{ site.social-links.twitter }}"
        data-size="large"
