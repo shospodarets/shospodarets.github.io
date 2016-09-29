@@ -35,8 +35,8 @@ and now is qualified as an experiment.
 
 To enable it, you have to do the following:
 
-* Open the [chrome://flags/#enable-experimental-web-platform-features](chrome://flags/#enable-experimental-web-platform-features) URL
-* Enable the `Experimental Web Platform Features` flag
+* Open the [chrome://flags/#enable-devtools-experiments](chrome://flags/#enable-devtools-experiments) URL
+* Enable the `Developer Tools experiments` flag
 * Relaunch Chrome
 * Open `DevTools Setting` -> `Experiments` tab (it started being visible after the reload)
 * Press `"SHIFT"` 6 times (enjoy it ¯ \ _ (ツ) _ / ¯) to show the hidden experiments
@@ -97,7 +97,7 @@ It contains a usual static server using Node.js (`node.js` file)
 and a page which just makes fetch requests to the pointed URL (the code is in the `browser.js` file).
 
 You can try it to see how easily you can debug Node.js in Chrome.
-Just download the demo and run `node --inspect node.js` in its folder.
+Just download the demo code from Github and run `node --inspect node.js` in its folder.
 
 After that open `http://localhost:8033/` in Chrome and so you can debug both `browser.js` and `node.js` the same time:
 
