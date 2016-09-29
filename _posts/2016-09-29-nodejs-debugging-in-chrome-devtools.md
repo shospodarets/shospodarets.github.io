@@ -3,7 +3,7 @@ layout: post
 title: "Node.js debugging with Chrome DevTools (in parallel with browser JavaScript)"
 tags: [Chrome, Browsers, Node.js]
 share_image: https://hospodarets.com/img/blog/1475142739485610000.png
-share_description: An easy way to debug Node.js with Chrome DevTools 
+share_description: Node.js debugging with Chrome DevTools in parallel with browser JavaScript
 ---
 
 Recently Paul Irish [described](https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27#.iz61p83zw) how you can debug Node.js applications with Chrome DevTools.
