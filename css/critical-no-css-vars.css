@@ -247,6 +247,8 @@ nav a{margin-left:15px;color:#333;text-align:right;font-weight:300;letter-spacin
 .post .meta span{display:inline-block;vertical-align:middle;}
 .post .meta .date{padding-right:15px;}
 .post .comments{margin-top:10px;}
+@media (min-width:1024px){.post .smaller-img{text-align:center;}.post .smaller-img img{max-width:60%;}
+  }
 .entry:after,.entry:before{display:table;content:'';clear:both;}
 .entry .highlight{border-bottom:1px solid #eee;border-top:1px solid #eee;padding:10px 0;margin:15px 0;}
 .entry code.highlighter-rouge{background:#f0f0f0;border-radius:3px;padding:0 5px;}

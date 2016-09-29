@@ -61,4 +61,14 @@
   & .comments {
     margin-top: 10px;
   }
+
+  @media (--desktop-breakpoint) {
+    & .smaller-img {
+      text-align: center;
+
+      & img {
+        max-width: 60%;
+      }
+    }
+  }
 }

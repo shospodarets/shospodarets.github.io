@@ -278,6 +278,8 @@ nav a{margin-left:15px;color:var(--dark-gray-color);text-align:right;font-weight
 .post .meta span{display:inline-block;vertical-align:middle;}
 .post .meta .date{padding-right:15px;}
 .post .comments{margin-top:10px;}
+@media (min-width:1024px){.post .smaller-img{text-align:center;}.post .smaller-img img{max-width:60%;}
+  }
 .entry:after,.entry:before{display:table;content:'';clear:both;}
 .entry .highlight{border-bottom:1px solid var(--code-block-border-color);border-top:1px solid var(--code-block-border-color);padding:10px 0;margin:var(--main-vertical-indent) 0;}
 .entry code.highlighter-rouge{background:#f0f0f0;border-radius:3px;padding:0 5px;}

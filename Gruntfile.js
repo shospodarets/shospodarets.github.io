@@ -176,7 +176,7 @@ module.exports = function (grunt) {
                 tasks: ["generateJs", "jekyllBuild"]
             },
             css: {
-                files: ["_css/**/*.css"],
+                files: ["_css/**/*.pcss"],
                 tasks: ["generateCss", "jekyllBuild"]
             },
             css_demos: {
@@ -216,7 +216,8 @@ module.exports = function (grunt) {
         "generateCss",
         "generateDemosCss",
 
-        "jekyllBuild"
+        "jekyllBuild",
+        "watch"
     ]);
 
     grunt.registerTask("default", [
