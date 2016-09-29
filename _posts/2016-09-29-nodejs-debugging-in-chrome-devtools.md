@@ -23,6 +23,8 @@ Let's take a look how it works.
 
 You can install it directly from the [Node.js site](https://nodejs.org/en/download/current/)
  or switch to it using [nvm (Node Version Manager)](https://github.com/creationix/nvm)
+ 
+Better to you use 6.6+ as Paul Irish mentioned in the comment, "in 6.4 there are a few flaky bugs".
 
 2) Chrome 55+
 
