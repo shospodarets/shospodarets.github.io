@@ -1,10 +1,10 @@
-var UTILS = require('../utils/utils');
+const UTILS = require('../utils/utils');
 
 /**
  * @constructor
  */
 
-var ConditionalLoader = function (options) {
+const ConditionalLoader = function (options) {
     this.options = options;
 
     this.loadScripts();

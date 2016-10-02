@@ -1,5 +1,5 @@
 exports.triggerEvent = function (el, eventName) {
-    var event = document.createEvent('HTMLEvents');
+    const event = document.createEvent('HTMLEvents');
     event.initEvent(eventName, true, true);
     event.eventName = eventName;
     el.dispatchEvent(event);
@@ -12,7 +12,7 @@ exports.triggerEvent = function (el, eventName) {
  */
 exports.loadScript = function (src, onload) {
     return new Promise(function (resolve, reject) {
-        var script = document.createElement('script');
+        const script = document.createElement('script');
         script.async = true;
         script.src = src;
         if (onload) {

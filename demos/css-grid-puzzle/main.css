@@ -17,7 +17,7 @@
   grid:100%/100%;
   -ms-grid-column-align:center;
       justify-items:center;
-  -ms-grid-row-align:center;
+  -ms-flex-align:center;
       align-items:center;
   position:relative; }
 

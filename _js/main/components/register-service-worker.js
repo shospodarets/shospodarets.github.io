@@ -1,8 +1,8 @@
 /* VARS */
-var humane = require('../libs/humane');// http://wavded.github.io/humane-js/
+const humane = require('../libs/humane');// http://wavded.github.io/humane-js/
 
 // enables debug logging in the browser script and Service Worker
-var isDebugEnabled = localStorage.debug || location.search.indexOf('debug') !== -1;
+const isDebugEnabled = localStorage.debug || location.search.indexOf('debug') !== -1;
 
 /* LOGGING */
 function log() {
@@ -16,7 +16,7 @@ function logError() {
 }
 
 function addMessagePrefix(prefix, args) {
-    var res = Array.prototype.slice.apply(args);
+    const res = Array.prototype.slice.apply(args);
     res.unshift(prefix);
     return res;
 }
@@ -40,7 +40,7 @@ if ('serviceWorker' in navigator) {
 // https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/post-message
 function sendMessageToWorker(message) {
     return new Promise(function (resolve, reject) {
-        var messageChannel = new MessageChannel();
+        const messageChannel = new MessageChannel();
         messageChannel.port1.onmessage = function (event) {
             if (event.data.error) {
                 reject(event.data.error);

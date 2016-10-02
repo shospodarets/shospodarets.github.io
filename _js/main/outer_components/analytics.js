@@ -1,9 +1,9 @@
-var UTILS = require('../utils/utils');
+const UTILS = require('../utils/utils');
 
 /**
  * @constructor
  */
-var Analytics = function (options) {
+const Analytics = function (options) {
     this.options = options;
 
     this.prepare();

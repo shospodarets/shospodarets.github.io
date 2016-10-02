@@ -1,11 +1,11 @@
-var UTILS = require('../utils/utils');
+const UTILS = require('../utils/utils');
 
 /**
  * Applies placeholder actions to original google custom search form
  * @constructor
  */
 
-var CustomSearch = function (options) {
+const CustomSearch = function (options) {
     this.options = options;
 
     this.isLoading = false;
