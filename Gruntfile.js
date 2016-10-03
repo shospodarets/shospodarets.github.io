@@ -99,7 +99,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '_css',
-                    src: ['critical.css'],
+                    src: ['critical.pcss'],
                     dest: '_includes/generated',
                     ext: '.css'
                 }]
@@ -108,7 +108,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '_css',
-                    src: ['non-critical.css'],
+                    src: ['non-critical.pcss'],
                     dest: 'css',
                     ext: '.css'
                 }]
