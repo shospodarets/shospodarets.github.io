@@ -46,6 +46,13 @@
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
+
+  @media (--mobile-breakpoint) {
+    --site-name-mobile-indent: 10px;
+
+    padding-top: var(--site-name-mobile-indent);
+    margin-bottom: var(--site-name-mobile-indent);
+  }
 }
 
 .site-description {

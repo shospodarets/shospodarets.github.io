@@ -237,8 +237,10 @@ blockquote{
   cursor:pointer;
   font-weight:300;
   font-size:28px;
-  letter-spacing:1px;
+  letter-spacing:1px
 }
+@media (max-width:680px){.site-name{--site-name-mobile-indent:10px;padding-top:var(--site-name-mobile-indent);margin-bottom:var(--site-name-mobile-indent);}
+  }
 .site-description{
   position:absolute;
   top:-9999px;
