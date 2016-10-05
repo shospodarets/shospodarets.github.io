@@ -38,7 +38,9 @@
     width: 110px;
     max-width: 250px;
     border-radius: 10em;
-    transition: all .5s;
+
+    --transition-time: .5s;
+    transition: width var(--transition-time), border-color var(--transition-time), box-shadow var(--transition-time);
   }
 
   & input[type=search]:focus {

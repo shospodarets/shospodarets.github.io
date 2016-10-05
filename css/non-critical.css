@@ -252,25 +252,6 @@
 .humane-libnotify.humane-libnotify-js-animate:hover,.humane.humane-animate:hover{
   opacity:.2;
 }
-.google-custom-search{
-  width:100%;
-  margin:5px 0;
-}
-.google-custom-search-original{
-  position:absolute;
-  top:-9999px;
-  left:-9999px;
-  width:1px;
-  height:1px;
-  overflow:hidden;
-}
-@media (max-width:680px){.google-custom-search-placeholder{text-align:center}
-  }
-.google-custom-search-placeholder input{outline:none}
-.google-custom-search-placeholder input[type=search]{font-family:inherit;font-size:18px}
-.google-custom-search-placeholder input[type=search]{float:right;background:#fff url(/images/icons/search.svg) no-repeat 5px;background-size:auto 75%;border:1px solid #ccc;padding:2px 5px 2px 23px;width:110px;max-width:250px;border-radius:10em;transition:all .5s}
-@media (max-width:680px){.google-custom-search-placeholder input[type=search]{float:none}}
-.google-custom-search-placeholder input[type=search]:focus{width:100%;border-color:#66CC75;box-shadow:0 0 5px rgba(109,207,246,.5)}
 .google-custom-search-original{
   box-sizing:content-box;
   text-align:left
