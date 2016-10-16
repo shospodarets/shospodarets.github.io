@@ -12,7 +12,7 @@
   --main-heading-font-size:32px;
   --main-vertical-indent:15px;
   --main-container-max-width:960px;
-  --blockquote-padding:calc(var(--main-vertical-indent)/2);
+  --blockquote-padding:calc(var(--main-vertical-indent) / 2);
   --social-links-indent:8px;
   --small-social-link-size:35px;
   --big-social-link-size:40px;
@@ -24,10 +24,10 @@
   --btn-pulse-bg:#f1f1f1;
   --btn-pulse-hover-bg:rgba(56,132,205,0.8);
   --pagination-btn-number:7;
-  --pagination-btn-width:calc(100%/var(--pagination-btn-number));
-  --pagination-btn-indent:calc(var(--pagination-btn-width)/10);
+  --pagination-btn-width:calc(100% / var(--pagination-btn-number));
+  --pagination-btn-indent:calc(var(--pagination-btn-width) / 10);
   --pagination-pages-btn-number:5;
-  --pagination-pages-btn-width:calc(100%/var(--pagination-pages-btn-number));
+  --pagination-pages-btn-width:calc(100% / var(--pagination-pages-btn-number));
 }
 a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,html,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{
   margin:0;
