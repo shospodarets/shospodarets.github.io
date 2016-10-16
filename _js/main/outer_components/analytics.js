@@ -1,4 +1,4 @@
-const UTILS = require('../utils/utils');
+import {loadScript} from "../utils/utils";
 
 /**
  * @constructor
@@ -19,7 +19,7 @@ Analytics.prototype.prepare = function () {
 };
 
 Analytics.prototype.load = function () {
-    UTILS.loadScript(
+    loadScript(
         ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
         '.google-analytics.com/ga.js'
     );
@@ -37,4 +37,4 @@ Analytics.prototype.addJsErrorsTracking = function () {
     };
 };
 
-exports.Analytics = Analytics;
+export default Analytics;

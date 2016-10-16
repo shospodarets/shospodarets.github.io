@@ -1,4 +1,5 @@
-const UTILS = require('../utils/utils');
+import {loadScript} from "../utils/utils";
+import {httpProtocol} from "../utils/utils";
 
 /**
  * @constructor
@@ -14,32 +15,34 @@ const ConditionalLoader = function (options) {
 ConditionalLoader.prototype.loadScripts = function () {
     /* CAN I USE INFO */
     if (document.querySelectorAll('.caniuse').length) {
-        UTILS.loadScript(this.options.SITE_BASE_URL + '/js/libs/caniuse.min.js');
+        loadScript(this.options.SITE_BASE_URL + '/js/libs/caniuse.min.js');
     }
     /* CODEPEN EXAMPLES */
     if (document.querySelectorAll('.codepen').length) {
-        UTILS.loadScript(UTILS.httpProtocol + '//codepen.io/assets/embed/ei.js');
+        loadScript(httpProtocol + '//codepen.io/assets/embed/ei.js');
     }
     /* JSBIN EXAMPLES */
     if (document.querySelectorAll('.jsbin-embed').length) {
-        UTILS.loadScript(UTILS.httpProtocol + '//static.jsbin.com/js/embed.js');
+        loadScript(httpProtocol + '//static.jsbin.com/js/embed.js');
     }
     /* DISCUSS */
     if (document.querySelectorAll('#disqus_thread').length) {
         window.disqus_config = function () {
+            //noinspection JSPotentiallyInvalidUsageOfThis
             this.page.url = this.options.PAGE_URL;
+            //noinspection JSPotentiallyInvalidUsageOfThis
             this.page.identifier = this.options.PAGE_IDENTIFIER;
         };
-        UTILS.loadScript(
-            UTILS.httpProtocol + '//' + this.options.DISCUSS_ID + '.disqus.com/embed.js'
+        loadScript(
+            httpProtocol + '//' + this.options.DISCUSS_ID + '.disqus.com/embed.js'
         );
     }
     /* TWITTER BUTTONS */
     if (document.querySelectorAll('.twitter-widget').length) {
-        UTILS.loadScript(
-            UTILS.httpProtocol + '//' + 'platform.twitter.com/widgets.js'
+        loadScript(
+            httpProtocol + '//' + 'platform.twitter.com/widgets.js'
         );
     }
 };
 
-exports.ConditionalLoader = ConditionalLoader;
+export default ConditionalLoader;

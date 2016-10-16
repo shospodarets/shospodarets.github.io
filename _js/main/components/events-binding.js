@@ -60,4 +60,4 @@ EventsBinding.prototype.bindEvents = function () {
     this.bindHeadingClick();
 };
 
-exports.EventsBinding = EventsBinding;
+export default EventsBinding;

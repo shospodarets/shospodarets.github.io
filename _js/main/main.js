@@ -3,19 +3,19 @@
  *
  * https://babeljs.io/docs/usage/polyfill/
  */
-require('babel-polyfill');
+import 'babel-polyfill';
 
 // DEPENDENCIES
 // components
-const Events = require('./components/events-binding').EventsBinding;
-const Analytics = require('./outer_components/analytics').Analytics;
+import Events from "./components/events-binding";
+import "./components/register-service-worker";// execute file without imports
+
 // outer components
-const CustomSearch = require('./outer_components/custom-search').CustomSearch;
-const ConditionalLoader = require('./outer_components/conditional-loader').ConditionalLoader;
+import Analytics from "./outer_components/analytics";
+import CustomSearch from "./outer_components/custom-search";
+import ConditionalLoader from "./outer_components/conditional-loader";
 
-require('./components/register-service-worker');// execute file without imports
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () =>{
     // APP
     const APP = window.jekyllVariables;
     delete window.jekyllVariables;// cleaning

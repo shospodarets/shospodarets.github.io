@@ -1,5 +1,5 @@
 /* VARS */
-const humane = require('../libs/humane');// http://wavded.github.io/humane-js/
+import humane from "../libs/humane";// http://wavded.github.io/humane-js/
 
 // enables debug logging in the browser script and Service Worker
 const isDebugEnabled = localStorage.debug || location.search.indexOf('debug') !== -1;
@@ -58,8 +58,8 @@ function sendMessageToWorker(message) {
         } else {
             logError(`Message sending to SW failed: navigator.serviceWorker.controller is`, navigator.serviceWorker.controller);
         }
-    }).then(()=> {
-    }, (err)=> {
+    }).then(() => {
+    }, (err) => {
         logError(`Message sending to SW failed with error`, err);
     });
 }

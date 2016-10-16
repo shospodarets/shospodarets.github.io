@@ -1,4 +1,6 @@
-const UTILS = require('../utils/utils');
+import {loadScript} from "../utils/utils";
+import {httpProtocol} from "../utils/utils";
+import {triggerEvent} from "../utils/utils";
 
 /**
  * Applies placeholder actions to original google custom search form
@@ -38,13 +40,13 @@ CustomSearch.prototype.runSearch = function (value) {
 
     window.console.log = function () {
     };// to keep console clear from google suggestions
-    UTILS.triggerEvent(this.googleOriginalSubmit, 'click');
+    triggerEvent(this.googleOriginalSubmit, 'click');
     delete console.log;// get console back
 };
 
 CustomSearch.prototype.loadSearch = function () {
-    return UTILS.loadScript(
-        UTILS.httpProtocol + '//www.google.com/cse/cse.js?cx=' + this.options.GOOGLE_SEARCH_ID
+    return loadScript(
+        httpProtocol + '//www.google.com/cse/cse.js?cx=' + this.options.GOOGLE_SEARCH_ID
     );
 };
 
@@ -83,4 +85,4 @@ CustomSearch.prototype.bindAdditionalEvents = function () {
     }.bind(this));
 };
 
-exports.CustomSearch = CustomSearch;
+export default CustomSearch;
