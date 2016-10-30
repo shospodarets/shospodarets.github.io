@@ -4,6 +4,10 @@ $slide-padding: 10px;
 $btn-size: 50px;
 
 // COMMON
+.page{
+  text-align: center;
+}
+
 .slideshow {
   padding: 20px 0;
 }
@@ -24,7 +28,6 @@ $btn-size: 50px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
   overflow: hidden;
-  text-align: center;
 
   > div {
     // expand slides to all the parent size (- the padding)
@@ -77,6 +80,18 @@ $btn-size: 50px;
 
     &.active {
       cursor: default;
+    }
+  }
+}
+
+// Other
+.animation-type {
+  .radios {
+    padding-left: 10px;
+    font-size: 80%;
+
+    label {
+      padding-right: 5px;
     }
   }
 }

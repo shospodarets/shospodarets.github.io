@@ -1,3 +1,6 @@
+.page{
+  text-align:center; }
+
 .slideshow{
   padding:20px 0; }
 
@@ -16,8 +19,7 @@
   height:280px;
   padding:10px;
   box-shadow:0 0 20px rgba(0,0,0,.4);
-  overflow:hidden;
-  text-align:center; }
+  overflow:hidden; }
 
 .images>div{
     position:absolute;
@@ -61,3 +63,10 @@
 
 .switchers>div.active{
       cursor:default; }
+
+.animation-type .radios{
+  padding-left:10px;
+  font-size:80%; }
+
+.animation-type .radios label{
+    padding-right:5px; }

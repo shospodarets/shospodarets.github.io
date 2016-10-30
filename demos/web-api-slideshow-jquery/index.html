@@ -1,6 +1,6 @@
 ---
 layout: demo
-title: Web API slideshow (jQuery)
+title: Web API / jQuery slideshow
 tags: [Demo]
 share_image:
 share_description:
@@ -11,6 +11,19 @@ demo_code_url: web-api-slideshow-jquery
 <link rel="stylesheet" href="./main.css"/>
 
 <div class="page">
+    <form class="animation-type">
+        <span>Animate using:</span>
+        <span class="radios">
+            <label>
+                <input type="radio" name="animation-type" value="web-animations" checked>
+                Web animation API
+            </label>
+            <label>
+                <input type="radio" name="animation-type" value="jquery">
+                jQuery
+            </label>
+        </span>
+    </form>
 
     <div class="slideshow">
         <div class="slideshow-inner">

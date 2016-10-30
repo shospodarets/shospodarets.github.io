@@ -3,6 +3,7 @@ const slides = Array.from(document.querySelectorAll('.images > *'));
 const switchersWrapper = document.querySelector('.switchers');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
+const animationTypesInputs = Array.from(document.querySelectorAll('input[name="animation-type"]'));
 
 const ACTIVE_CLASS = 'active';
 const LAST_SLIDES_NUMBER = slides.length - 1;
@@ -10,15 +11,16 @@ const CHANGE_INTERVAL = 3000;// ms
 const CHANGE_SPEED = 600;// ms
 
 const switchers = [];
-let activeNumber = 0;
+let activeNumber = NaN;
 let currentInterval = NaN;
+let ANIMATION;
 
-const ANIMATION = 'web-animations'; // 'jquery'|'web-animations'
 
 /*** IMAGES ***/
 function hideImages() {
     slides.forEach((slide) => {
         slide.style.display = 'none';
+        slide.style.opacity = '';
     });
 }
 
@@ -90,6 +92,15 @@ function hideImage(slideNumber) {
     }
 }
 
+function stopImageAnimations() {
+    slides.forEach((slide) => {
+        $(slide).stop();// jquery
+        slide.getAnimations().forEach(// web animations
+            animation => animation.cancel()
+        );
+    });
+}
+
 /*** SWITCHERS ***/
 function fillSwitchers() {
     slides.forEach(() => {
@@ -97,6 +108,10 @@ function fillSwitchers() {
         switchersWrapper.appendChild(switcher);
         switchers.push(switcher);
     });
+}
+
+function resetSwitchers() {
+    switchers.forEach((switcher, i) => resetSwitcher(i));
 }
 
 function activateSwitcher(slideNumber) {
@@ -162,6 +177,15 @@ function addEventListeners() {
             onClickJumpTo(i);
         });
     });
+
+    // animation types
+    animationTypesInputs.forEach((animationTypesInput) => {
+        animationTypesInput.addEventListener('change', () => {
+            if (animationTypesInput.checked) {// check restart once
+                restartSlideshow();
+            }
+        });
+    })
 }
 
 /*** AUTO INTERVAL ***/
@@ -177,15 +201,24 @@ function resetAutoplay() {
 
 
 /*** INIT ***/
-// COMMON INIT
-hideImages();
+function restartSlideshow() {
+    // put the checked value as an animation type
+    ANIMATION = animationTypesInputs.filter((input) => {
+        return input.checked;
+    })[0].value;
+
+    stopImageAnimations();
+    hideImages();
+    resetSwitchers();
+    // SLIDES
+    activateSlide(0);
+
+    // AUTOPLAY
+    stopAutoplay();
+    resetAutoplay();
+}
+
+
 fillSwitchers();
-
-// SLIDES
-activateSlide(activeNumber);
-
-// EVENT LISTENERS
 addEventListeners();
-
-// AUTOPLAY
-resetAutoplay();
+restartSlideshow();
