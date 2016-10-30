@@ -1,0 +1,82 @@
+$slide-width: 250px;
+$slide-height: 280px;
+$slide-padding: 10px;
+$btn-size: 50px;
+
+// COMMON
+.slideshow {
+  padding: 20px 0;
+}
+
+.slideshow-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// IMAGES
+.images {
+  margin: 10px;
+  position: relative;
+  width: $slide-width;
+  height: $slide-height;
+  padding: $slide-padding;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+  overflow: hidden;
+  text-align: center;
+
+  > div {
+    // expand slides to all the parent size (- the padding)
+    position: absolute;
+    top: $slide-padding;
+    left: $slide-padding;
+    right: $slide-padding;
+    bottom: $slide-padding;
+  }
+}
+
+// BUTTONS
+.action-btn {
+  opacity: 0.9;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  img {
+    width: $btn-size;
+    height: $btn-size;
+  }
+
+  &.next-btn img {
+    transform: rotate(180deg);
+  }
+}
+
+// SWITCHERS
+.switchers {
+  display: flex;
+  justify-content: center;
+
+  > div {
+    width: 20px;
+    height: 20px;
+    background-color: #d3d3d3;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: background-color .3s ease;
+    margin: 0 5px;
+
+    &:hover,
+    &.active {
+      background-color: #4397ce;
+    }
+
+    &.active {
+      cursor: default;
+    }
+  }
+}
