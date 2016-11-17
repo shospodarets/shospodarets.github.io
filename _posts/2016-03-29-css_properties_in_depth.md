@@ -338,7 +338,7 @@ They are
 
 There are some limitations and bugs:
 
-- [complex calc() calculation with CSS variables](http://codepen.io/malyw/pen/ONmjzp) might not work in some browsers
+- [complex calc() calculation with CSS variables](https://blog.hospodarets.com/demos/css-colors-from-custom-props/) may not work in some browsers
 - people discuss adding an
 [ability to apply common rules (e.g. reset) for all custom properties for the current scope](https://github.com/w3c/webcomponents/issues/300#issuecomment-144551648) like `--: initial;`
 - you cannot use them for usual CSS properties names: <strike><code>var(--side): 10px;</code></strike>
