@@ -2,7 +2,7 @@
 /* times as :root content would be included everytime */
 /* should exist and be imported only in one place (critical CSS) */
 :root {
-  @include cssVars((
+  @include css-vars((
     /* COLORS */
           --link-color: #4183C4,
     /* Typography */
@@ -10,7 +10,7 @@
     /* Layout */
           --main-vertical-indent: 15px
   ));
-  @include cssVars((
+  @include css-vars((
     /* COLORS */
           --link-hover-color: #689cd0,
           --title-hover-color: var(--link-color),
@@ -43,12 +43,12 @@
           --pagination-btn-number: 7,
           --pagination-pages-btn-number: 5
   ));
-  @include cssVars((
+  @include css-vars((
     /* Pagination */
           --pagination-btn-width: calc(100% / #{var(--pagination-btn-number)}),
           --pagination-pages-btn-width: calc(100% / #{var(--pagination-pages-btn-number)})
   ));
-  @include cssVars((
+  @include css-vars((
     /* Pagination */
           --pagination-btn-indent: calc(#{var(--pagination-btn-width)} / 10)
   ));

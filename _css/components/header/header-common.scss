@@ -48,7 +48,7 @@
   letter-spacing: 1px;
 
   @media (--mobile-breakpoint) {
-    @include cssVars((
+    @include css-vars((
             --site-name-mobile-indent: 10px
     ));
 

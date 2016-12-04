@@ -40,7 +40,7 @@
     max-width: 250px;
     border-radius: 10em;
 
-    @include cssVars((
+    @include css-vars((
             --transition-time: .5s
     ));
     transition: width var(--transition-time), border-color var(--transition-time), box-shadow var(--transition-time);
