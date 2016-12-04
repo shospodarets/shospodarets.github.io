@@ -21,6 +21,17 @@ Have successful experience creating Mobile Web Applications from scratch to more
 
 JS, HTML and CSS enthusiast.
 
-### Contact me
+## Talks
+
+
+🇮🇪 [DublinCSS](http://www.meetup.com/DublinCSS/), Dublin (Ireland), December 2016
+
+🇪🇪 [TopConf](http://topconf.com/tallinn-2016/), Tallinn (Estonia), November 2016
+
+🇵🇱 [DevDay](http://devday.pl/), Krakow (Poland), September 2016
+
+🇮🇪 [DublinJS](http://www.meetup.com/DublinJS/), Dublin (Ireland), February 2016
+
+## Do you want me to talk at your conference/meetup..? Contact me:
 
 [shospodarets@gmail.com](mailto:shospodarets@gmail.com)
