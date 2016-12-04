@@ -26,8 +26,8 @@
     & .inner {
       display: block;
       border-radius: 50%;
-      width: calc(var(--btn-width) * 2);
-      height: calc(var(--btn-width) * 2);
+      width: calc(#{var(--btn-width)} * 2);
+      height: calc(#{var(--btn-width)} * 2);
       /* align center horizontally and vertically */
       position: absolute;
       top: 50%;

@@ -40,7 +40,7 @@
 
   & .pagination-links-wrapper {
     display: flex;
-    flex: 0 0 calc(5 * var(--pagination-btn-width));
+    flex: 0 0 calc(5 * #{var(--pagination-btn-width)});
     padding-right: var(--pagination-btn-indent);
     padding-left: var(--pagination-btn-indent);
 

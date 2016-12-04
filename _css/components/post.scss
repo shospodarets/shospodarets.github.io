@@ -14,7 +14,7 @@
   & .date {
     display: block;
     padding-top: var(--main-vertical-indent);
-    margin-bottom: calc(-1 * var(--main-vertical-indent));
+    margin-bottom: calc(-1 * #{var(--main-vertical-indent)});
   }
 }
 

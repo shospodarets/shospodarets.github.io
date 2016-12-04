@@ -5,6 +5,13 @@
   @include cssVars((
     /* COLORS */
           --link-color: #4183C4,
+    /* Typography */
+          --main-heading-font-size: 32px,
+    /* Layout */
+          --main-vertical-indent: 15px
+  ));
+  @include cssVars((
+    /* COLORS */
           --link-hover-color: #689cd0,
           --title-hover-color: var(--link-color),
           --code-block-border-color: #eee,
@@ -17,16 +24,14 @@
           --main-bg: #fff,
     /* Typography */
           --main-font-family: (Helvetica, Arial, sans-serif),
-          --main-heading-font-size: 32px,
     /* Layout */
-          --main-vertical-indent: 15px,
           --main-container-max-width: 960px,
-          --blockquote-padding: calc(var(--main-vertical-indent) / 2),
+          --blockquote-padding: calc(#{var(--main-vertical-indent)} / 2),
     /* Icon links */
           --social-links-indent: 8px,
           --small-social-link-size: 35px,
           --big-social-link-size: 40px,
-          --external-link-size: calc(var(--main-heading-font-size) * 1.7),
+          --external-link-size: calc(#{var(--main-heading-font-size)} * 1.7),
     /* Buttons */
           --btn-width: 100px,
           --btn-height: 2.8em,
@@ -36,9 +41,15 @@
           --btn-pulse-hover-bg: rgba(56, 132, 205, 0.8),
     /* Pagination */
           --pagination-btn-number: 7,
-          --pagination-btn-width: calc(100% / var(--pagination-btn-number)), /* rounded to a third decimal after a point */
-          --pagination-btn-indent: calc(var(--pagination-btn-width) / 10),
-          --pagination-pages-btn-number: 5,
-          --pagination-pages-btn-width: calc(100% / var(--pagination-pages-btn-number))
+          --pagination-pages-btn-number: 5
+  ));
+  @include cssVars((
+    /* Pagination */
+          --pagination-btn-width: calc(100% / #{var(--pagination-btn-number)}),
+          --pagination-pages-btn-width: calc(100% / #{var(--pagination-pages-btn-number)})
+  ));
+  @include cssVars((
+    /* Pagination */
+          --pagination-btn-indent: calc(#{var(--pagination-btn-width)} / 10)
   ));
 }
