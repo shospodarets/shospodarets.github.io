@@ -56,7 +56,25 @@ module.exports = function (grunt) {
             }
         },
 
-        sass: {// ToDo
+        sass: {
+            critical: {
+                files: [{
+                    expand: true,
+                    cwd: '_css',
+                    src: ['critical.scss'],
+                    dest: '_includes/generated',
+                    ext: '.css'
+                }]
+            },
+            nonCritical: {
+                files: [{
+                    expand: true,
+                    cwd: '_css',
+                    src: ['non-critical.scss'],
+                    dest: 'css',
+                    ext: '.css'
+                }]
+            },
             demos: {// all *.scss files in "demos" folder
                 files: [{
                     expand: true,
@@ -98,8 +116,8 @@ module.exports = function (grunt) {
             critical: {
                 files: [{
                     expand: true,
-                    cwd: '_css',
-                    src: ['critical.pcss'],
+                    cwd: '_includes/generated',
+                    src: 'critical.css',
                     dest: '_includes/generated',
                     ext: '.css'
                 }]
@@ -107,8 +125,8 @@ module.exports = function (grunt) {
             nonCritical: {
                 files: [{
                     expand: true,
-                    cwd: '_css',
-                    src: ['non-critical.pcss'],
+                    cwd: 'css',
+                    src: 'non-critical.css',
                     dest: 'css',
                     ext: '.css'
                 }]
@@ -148,7 +166,7 @@ module.exports = function (grunt) {
                 tasks: ["generateJs", "jekyllBuild"]
             },
             css: {
-                files: ["_css/**/*.pcss"],
+                files: ["_css/**/*.scss"],
                 tasks: ["generateCss", "jekyllBuild"]
             },
             css_demos: {
@@ -165,6 +183,8 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask("generateCss", [
+        "sass:critical",
+        "sass:nonCritical",
         "postcss:critical",
         "postcss:nonCritical"
     ]);

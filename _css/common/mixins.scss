@@ -1,33 +1,33 @@
 /* Mixins cannot contain logic/ process variables */
 :root {
-  --absolute-hidden: {
+  --absolute-hidden: #{'{
     position: absolute;
     top: -9999px;
     left: -9999px;
     width: 1px;
     height: 1px;
     overflow: hidden;
-  };
+  }'};
 
-  --expander: {
+  --expander: #{'{
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-  };
+  }'};
 
-  --clearfix: {
+  --clearfix: #{'{
     display: table;
-    content: '';
+    content: "";
     clear: both;
-  };
+  }'};
 
-  --triangle-preset: {
+  --triangle-preset: #{'{
     width: 0;
     height: 0;
     border-style: solid;
-  };
+  }'};
 }
 
 @custom-media --mobile-breakpoint (width <= 680px);
