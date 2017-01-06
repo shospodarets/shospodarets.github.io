@@ -1,10 +1,10 @@
 /* VENDOR */
 $css-vars-debug-log: true;
-$css-vars-use-native: true;
+//$css-vars-use-native: true;
 @import "../node_modules/css-vars/css-vars";
 
 /* variables/mixins */
-//@import "common/root-variables";
+@import "common/root-variables";
 @import "common/mixins";
 /* jekyll */
 @import "common/highlights";
