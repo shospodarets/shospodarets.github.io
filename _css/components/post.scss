@@ -64,6 +64,7 @@
 
   @media (--desktop-breakpoint) {
     & .smaller-img {
+      display: block;
       text-align: center;
 
       & img {
