@@ -283,7 +283,7 @@ For today each of the main browsers is working on shipping the ES6 modules:
 - Firefox- [work in progress](https://bugzilla.mozilla.org/show_bug.cgi?id=568953)
 - Chrome- [work in progress](https://www.chromestatus.com/features/5365692190687232)
 - EDGE- [implemented, available under the flag in EDGE 15 Preview Build 14342+](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/moduleses6/?q=module)
-- Webkit- [implemented, available under the flag in Safari Technology Preview 19+, enabled by default in Webkit Nightly](https://webkit.org/status/#feature-modules)
+- Webkit- [implemented, enabled by default in Safari Technology Preview 21+](https://webkit.org/status/#feature-modules)
 - Node.js- [under consideration, requires additional discussion](https://github.com/nodejs/node-eps/blob/master/002-es6-modules.md)
 
 ## Getting the environment to test
@@ -293,11 +293,14 @@ Let's download and enable the features in them:
 
 ### Getting the Safari Technology Preview with the ES modules enabled
 
-If you use macOS, just download the latest Safari Technology Preview from [developer.apple.com](https://developer.apple.com/safari/download/)
+If you use macOS, just download the latest Safari Technology Preview (TP) from [developer.apple.com](https://developer.apple.com/safari/download/)
 
 Install and open it.
 
-Check that ES6 modules feature is enabled, opening "Develop" menu -> "Experimental Features" -> "ES6 Modules".
+Starting from the
+[Safari Technology Preview version 21+, the ES modules are enabled by default](https://webkit.org/blog/7265/release-notes-for-safari-technology-preview-21/).
+
+If it's Safari TP 19 or 20, check that ES6 modules feature is enabled, opening "Develop" menu -> "Experimental Features" -> "ES6 Modules".
 
 <span class="smaller-img">
     <img src="https://hospodarets.com/img/blog/1482848774988713000.gif" />
