@@ -373,13 +373,14 @@ Currently, there is still [a discussion regarding the appropriate way of doing t
 Some solutions were rejected by the community:
 
 1. adding `"use module";` to every file
-2. detect the type by inspection of the code
-
-Other options are still under the consideration:
-
-1. New file extension for ES6 Modules, e.g. `.mjs`
 2. Meta in package.json
-3. again, [Determining if the source is an ES Module](https://github.com/nodejs/node-eps/issues/13) :)
+
+Other options are still under the consideration (thanks to [@bmeck](https://github.com/bmeck) for highlighting):
+
+1. [Determining if the source is an ES Module](https://github.com/bmeck/UnambiguousJavaScriptGrammar)
+2. New file extension for the ES6 Modules
+[`.mjs`](https://github.com/nodejs/node-eps/blob/5dae5a537c2d56fbaf23aaf2ae9da15e74474021/002-es6-modules.md#51-determining-if-source-is-an-es-module)
+, which will be used as a fallback if the previous version doesn't work
 
 Each method has own pros and cons, and currently, it's still no clear answer which [way Node.js will go](https://github.com/nodejs/node-eps/blob/master/002-es6-modules.md).
 
