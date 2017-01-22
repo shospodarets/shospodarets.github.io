@@ -8,33 +8,35 @@ layout: null
     <description>{{ site.description | xml_escape }}</description>
     <link>{{ site.url }}</link>
     <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
-      <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>
-          {% if post.content contains "<div class="more"></div>" %}
-          {{ post.content | split:"<div class="more"></div>" | first % | xml_escape }}
-          ...
-          {% else %}
-          {{ post.content | truncatewords:40 | xml_escape}}
-          {% endif %}
-        </description>
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>
-            {% if post.external-url %}
-                {{ post.external-url }}
-            {% else %}
-                {{ site.url }}{{ post.url }}
-            {% endif %}
-        </link>
-        <guid isPermaLink="true">
-            {% if post.external-url %}
-                {{ post.external-url }}
-            {% else %}
-                {{ site.url }}{{ post.url }}
-            {% endif %}
-        </guid>
-      </item>
+    {% for post in site.posts %}
+      {% unless post.draft %}
+          <item>
+            <title>{{ post.title | xml_escape }}</title>
+            <description>
+              {% if post.content contains "<div class="more"></div>" %}
+              {{ post.content | split:"<div class="more"></div>" | first % | xml_escape }}
+              ...
+              {% else %}
+              {{ post.content | truncatewords:40 | xml_escape}}
+              {% endif %}
+            </description>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+            <link>
+                {% if post.external-url %}
+                    {{ post.external-url }}
+                {% else %}
+                    {{ site.url }}{{ post.url }}
+                {% endif %}
+            </link>
+            <guid isPermaLink="true">
+                {% if post.external-url %}
+                    {{ post.external-url }}
+                {% else %}
+                    {{ site.url }}{{ post.url }}
+                {% endif %}
+            </guid>
+          </item>
+      {% endunless %}
     {% endfor %}
   </channel>
 </rss>
