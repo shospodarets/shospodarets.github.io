@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Web Share API</title>
+
+    <meta http-equiv="origin-trial" data-feature="Web Share" data-expires="2017-03-06"
+          content="AlkztyRQHTpOFwOWmuZtRx6O9prNDXSm0WcKoDIxsYuAI2CCZDE3zrKCZt4SkO1D2xpsm/tslihU87IbLwcTzAkAAABkeyJvcmlnaW4iOiJodHRwczovL2hvc3BvZGFyZXRzLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViU2hhcmUiLCJleHBpcnkiOjE0ODg4MTA2NjQsImlzU3ViZG9tYWluIjp0cnVlfQ==">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+    <!--Import Google Icon Font-->
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+
+    <link type="text/css" rel="stylesheet" href="css/main.css" media="all"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+<div class="page">
+    <nav>
+        <div class="nav-wrapper">
+            <div class="container">
+                <h4 class="title">
+                    Web Share API demo
+                </h4>
+            </div>
+        </div>
+    </nav>
+
+    <content>
+        <div class="container">
+            <div>
+                <strong>
+                    Test in Chrome on Android:
+                </strong>
+                &nbsp;
+                <a class="btn-floating btn-large waves-effect waves-light red web-share-test">
+                    <i class="material-icons">share</i>
+                </a>
+            </div>
+
+            <dl class="links">
+                <dt>
+                    <strong>
+                        Links:
+                    </strong>
+                </dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <a href="https://developers.google.com/web/updates/2016/10/navigator-share">
+                                Introducing the Web Share API
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/zuqQaLp3js8/5V9wpRWhBgAJ">
+                                Intent to Experiment: Web Share on Android
+                            </a>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </content>
+
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                Made by:
+                &nbsp;
+                <span class="main-link">
+                    <a href="https://twitter.com/malyw">
+                        @malyw
+                    </a>
+                </span>
+                &nbsp;
+                (Serg Hospodarets)
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    const webShareTestEl = document.querySelector('.web-share-test');
+
+    webShareTestEl.addEventListener('click', () => {
+        // SHARE CODE
+        navigator.share({
+            title: document.title,
+            text: "Here is the Web Share demo Text",
+            url: window.location.href
+        }).then(() => console.log('Successful share'))
+            .catch(error => console.log('Error sharing:', error));
+    });
+</script>
+
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
+</html>

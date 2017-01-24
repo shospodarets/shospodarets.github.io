@@ -1,0 +1,50 @@
+html, body {
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, #6c5fce 0%, #6c5fce 15%, #62b3d0 100%);
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+a {
+    color: #ff0;
+}
+
+nav,
+footer.page-footer {
+    background-color: #03a9f4;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+header, footer {
+    flex: 0 0 auto;
+}
+
+content {
+    flex: 1 0 auto;
+    padding-top: 20px;
+}
+
+.title {
+    text-align: center;
+    margin: 0;
+    line-height: 56px;
+}
+
+.links {
+    padding-top: 50px;
+    margin: 0;
+}
+
+.main-link {
+    font-size: 150%;
+}
