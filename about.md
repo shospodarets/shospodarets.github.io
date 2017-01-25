@@ -12,7 +12,8 @@ title: About
 
 Hi, my name is Serg Hospodarets.
 
-I'm a Lead Front-End Developer / Engineering Manager based in Dublin <br/>:heart: Front-End and Web related stuff.
+I'm a Lead Front-End Developer / Engineering Manager based in Dublin <br/>
+❤️ Front-End and Web related stuff.
 
 And I'm a big fan of moving CSS and JavaScript forward, participate specifications debates and discuss new features with the community.
 
