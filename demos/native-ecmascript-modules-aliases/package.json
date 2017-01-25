@@ -1,0 +1,19 @@
+{
+  "name": "native-ecmascript-modules-aliases",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "lodash": "^4.17.4",
+    "lodash-es": "^4.17.4",
+    "webpack": "^2.2.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "private": true
+}

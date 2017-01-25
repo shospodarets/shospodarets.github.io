@@ -1,0 +1,56 @@
+.demo-wrapper{
+    color:#f8f8f8;
+    background-color:#222;
+    font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-weight:300;
+}
+
+h1,h2{
+    margin:5px 0 10px;
+}
+
+h1{
+    font-size:24px;
+}
+
+h2{
+    font-size:22px;
+}
+
+pre{
+    font-size:20px;
+    word-wrap:break-word;
+    white-space:pre-wrap;
+    -webkit-hyphens:auto;
+        -ms-hyphens:auto;
+            hyphens:auto;
+
+    padding:10px;
+    border-radius:5px;
+    margin:0;
+}
+
+code{
+    font-family:Courier,'New Courier',monospace;
+    font-size:18px;
+}
+
+span.gray{
+    color:#888;
+}
+
+.console-log{
+    color:#f8f8f8;
+}
+
+.light-theme .console-log{
+    color:#080808;
+}
+
+.console-warn{
+    color:yellow;
+}
+
+.console-error{
+    color:red;
+}
