@@ -37,7 +37,7 @@ Let's just define set of properties:
 }
 ```
 
-(for now even my CSS code highlighter goes crazy from such syntax so I use SCSS instead :unamused:)
+(for now even my CSS code highlighter goes crazy from such syntax so I use SCSS instead 😒)
 
 It's still just a valid CSS custom property only one specific think-
 it's a list of CSS properties wrapped in a `{}` block.
@@ -55,7 +55,7 @@ Examples: `@charset`, `@import`, `@keyframes`, `@media` and [many others](https:
 
 So meet a new CSS statement for CSS mixins: `@apply`.
 
-Let's apply (sorry for a tautology :smile:) our list of rules:
+Let's apply (sorry for a tautology 🙂) our list of rules:
 
 ```scss
 body{

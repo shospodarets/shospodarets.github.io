@@ -185,7 +185,7 @@ Other example- applying inverted theme to my site <a href="https://hospodarets.c
         height="350"
         >
 </iframe>
-Looks scary, doesn't it? :scream:
+Looks scary, doesn't it? 😱
 
 
 <h3>Online/offline status</h3>

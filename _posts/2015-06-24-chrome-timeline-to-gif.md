@@ -16,7 +16,7 @@ To enable it:
 * Reload Chrome
 * Open the DevTools Settings
 * Select the "Experiments" tab
-* Press "SHIFT" button 6 times :wink: to show hidden DevTools experiments
+* Press "SHIFT" button 6 times 😉 to show hidden DevTools experiments
 * Check the "Filmstrip in Network and Timeline Panel" checkbox
 * Reload (open/close) the DevTools
 * In the "Timeline" check the "Screenshots" checkbox

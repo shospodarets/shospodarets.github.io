@@ -599,7 +599,7 @@ Interesting facts:
 
 - Chrome doesn't like multiplying/dividing with non integer numbers in `calc()` with CSS variables
 - Firefox doesn't work with custom properties in `calc()` inside of `rgba()` at all
-- Demo works in Safari as expected :blush:
+- Demo works in Safari as expected 😊
 
 # Сonclusions
 

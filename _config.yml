@@ -78,16 +78,18 @@ exclude:
     - Gruntfile.js
     - package.json
     - node_modules
+    - /**/node_modules
     - other
+
+include:
+    # lodash-es/_*.js files for native ECMAScript imports
+    - _*.js
 
 # Gems
 gems:
   - jekyll
-  - jemoji
   - jekyll-sitemap
   - jekyll-paginate
-  - redcarpet
-  - jekyll-gist
   - jekyll-feed
   - pygments.rb
 

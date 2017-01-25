@@ -28,8 +28,24 @@ The ways they appear is usual:
 
 <h2>Solution</h2>
 So was decided just to create simple shell script to find SCSS-syntax variables which appear in the code only one time.
-Here it is:
-{% gist malyw/fade28c8d398a3a86334 %}
+[Here it is](https://gist.github.com/malyw/fade28c8d398a3a86334#file-find-unused-scss-variables):
+
+> Script finds all SCSS variables (e.g. $some_variable-NAME1)
+which are used in code only once
+(e.g. declaration or using variable from some framework).
+Tested on MAC and Linux.
+
+```bash
+#!/usr/bin/env bash
+# HOW TO USE
+# Save code to file
+# Run as "SCRIPT_FILE_NAME SASS_DIRECTORY"
+# e.g "./find_unused_variables.sh ./sass"
+ 
+VAR_NAME_CHARS='A-Za-z0-9_-'
+
+find "$1" -type f -name "*.scss" -exec grep -o "\$[$VAR_NAME_CHARS]*" {} ';' | sort | uniq -u
+```
 
 <h2>How to use</h2>
 

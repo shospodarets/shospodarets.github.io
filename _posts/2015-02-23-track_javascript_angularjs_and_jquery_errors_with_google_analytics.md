@@ -251,11 +251,11 @@ You can generate errors and check in "Network" tab that for each error GA sends 
 
 In GA you can find two main reports for `Events`:
 
-* **Real-Time Events**: GA :arrow_right: Real-Time :arrow_right: Events :arrow_right: Events (Last 30 min) (TAB)
+* **Real-Time Events**: GA ➡️ Real-Time ➡️ Events ➡️ Events (Last 30 min) (TAB)
 
 <img src="https://i.imgur.com/xOGfMIo.png" alt="Real-Time Events"/>
 
-* **Common Events Report**: GA :arrow_right: Behavior :arrow_right: Events :arrow_right: Overview :arrow_right: view full report (LINK)
+* **Common Events Report**: GA ➡️ Behavior ➡️ Events ➡️ Overview ➡️ view full report (LINK)
 
 <img src="https://i.imgur.com/YkUt26G.gif" alt="Common Events Report"/>
 

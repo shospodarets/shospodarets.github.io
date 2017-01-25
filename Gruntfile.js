@@ -154,9 +154,6 @@ module.exports = function (grunt) {
         },
 
         watch: {
-            options: {
-                livereload: true
-            },
             site: {
                 files: ["*.html", "_layouts/**/*.html", "_posts/*.md", "_includes/**/*.html"],
                 tasks: ["jekyllBuild"]

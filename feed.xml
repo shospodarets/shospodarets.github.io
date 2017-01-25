@@ -13,8 +13,8 @@ layout: null
           <item>
             <title>{{ post.title | xml_escape }}</title>
             <description>
-              {% if post.content contains "<div class="more"></div>" %}
-              {{ post.content | split:"<div class="more"></div>" | first % | xml_escape }}
+              {% if post.content contains '<div class="more"></div>' %}
+              {{ post.content | split:'<div class="more"></div>' | first | xml_escape }}
               ...
               {% else %}
               {{ post.content | truncatewords:40 | xml_escape}}

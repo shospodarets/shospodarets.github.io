@@ -32,8 +32,8 @@ layout: default
             </h1>
 
             <div class="entry">
-                {% if post.content contains "<div class="more"></div>" %}
-                {{ post.content | split:"<div class="more"></div>" | first % }}
+                {% if post.content contains '<div class="more"></div>' %}
+                {{ post.content | split:'<div class="more"></div>' | first }}
                 ...
                 {% else %}
                 {{ post.content | truncatewords:40}}

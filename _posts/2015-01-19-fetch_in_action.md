@@ -593,4 +593,4 @@ With Fetch and Promise Polyfills it works wonderfully in all browsers up-to IE9 
     </li>
 </ul>
 
-:end:
+🔚
