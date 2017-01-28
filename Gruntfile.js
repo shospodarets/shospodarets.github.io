@@ -209,12 +209,12 @@ module.exports = function (grunt) {
         "generateCss",
         "generateDemosCss",
 
-        "jekyllBuild"
+        "jekyllBuild",
+        "open",
+        "watch"
     ]);
 
     grunt.registerTask("default", [
-        "build",
-        "open",
-        "watch"
+        "build"
     ]);
 };

@@ -71,6 +71,8 @@ permalink: /:title
 
 # Exclude these files from production _site
 exclude:
+    - Gemfile
+    - Gemfile.lock
     - LICENSE
     - README.md
     - Gruntfile.js
@@ -78,8 +80,6 @@ exclude:
     - node_modules
     - /**/node_modules
     - other
-    - npm-debug.log
-    - npm-debug.log.*
 
 include:
     # lodash-es/_*.js files for native ECMAScript imports
