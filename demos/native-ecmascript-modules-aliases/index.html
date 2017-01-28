@@ -6,18 +6,28 @@ article_link: native-ecmascript-modules-first-steps
 demo_code_url: native-ecmascript-modules-aliases
 ---
 
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/console-log-output.css">
+
+<div class="status no-esmodules alert alert-danger">
+    The browser DOESN'T support ECMAScript modules
+</div>
+
+<div class="status esmodules alert alert-success">
+    The browser DOES support ECMAScript modules
+</div>
 
 <h1>DevConsole output:</h1>
 
 <div class="demo-wrapper">
     <pre id="log-box"></pre>
-
-    <link rel="stylesheet" href="console-log-output.css">
-    <script type="text/javascript" src="console-log-output.js"></script>
 </div>
 
 
-<script type="text/javascript" src="js/common.js"></script>
-
-<script type="text/javascript" src="dist/app.bundle.js"></script>
-<script type="module" src="js/main-native.js"></script>
+<script src="js/console-log-output.js"></script>
+<script
+        src="dist_node_modules/es-modules-utils/es-js-script.js"
+        es="js/main-native.js"
+        js="dist/app.bundle.js"
+        add-global-class
+></script>
