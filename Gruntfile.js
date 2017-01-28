@@ -170,6 +170,12 @@ module.exports = function (grunt) {
                 files: ["demos/**/*.scss"],
                 tasks: ["generateDemosCss", "jekyllBuild"]
             }
+        },
+
+        open: {
+            dist: {
+                path: 'http://localhost:4000/'
+            }
         }
     });
 
@@ -204,6 +210,7 @@ module.exports = function (grunt) {
         "generateDemosCss",
 
         "jekyllBuild",
+        "open",
         "watch"
     ]);
 

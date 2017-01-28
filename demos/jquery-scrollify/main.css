@@ -70,7 +70,7 @@ a.arrow:after{
     border-right:2px solid #FFF;
     border-bottom:2px solid #FFF;
     transform:rotate(45deg);
-    content:'';
+    content:"";
     width:40px;
     height:40px;
     position:absolute;

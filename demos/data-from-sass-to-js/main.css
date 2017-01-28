@@ -36,7 +36,7 @@
   border-radius:3px;
   margin:10px 0 0; }
 .zoom:after{
-    content:'';
+    content:"";
     display:block;
     clear:both; }
 .zoom>*{
@@ -51,7 +51,7 @@
       height:30px;
       margin-right:-5px;
       overflow:hidden;
-      font-family:'{"maxZoomStep":"2"}'; }
+      font-family:'{"maxZoomStep":2}'; }
 .zoom .indicator.indicator-steps-2>div:after,.zoom .indicator.indicator-steps-2>div:before{
         width:10px;
         background:#808080;
@@ -74,7 +74,7 @@
       height:30px;
       margin-right:-5px;
       overflow:hidden;
-      font-family:'{"maxZoomStep":"3"}'; }
+      font-family:'{"maxZoomStep":3}'; }
 .zoom .indicator.indicator-steps-3>div:after,.zoom .indicator.indicator-steps-3>div:before{
         width:10px;
         background:#808080;
@@ -100,7 +100,7 @@
       height:30px;
       margin-right:-5px;
       overflow:hidden;
-      font-family:'{"maxZoomStep":"4"}'; }
+      font-family:'{"maxZoomStep":4}'; }
 .zoom .indicator.indicator-steps-4>div:after,.zoom .indicator.indicator-steps-4>div:before{
         width:10px;
         background:#808080;
@@ -129,7 +129,7 @@
       height:30px;
       margin-right:-5px;
       overflow:hidden;
-      font-family:'{"maxZoomStep":"5"}'; }
+      font-family:'{"maxZoomStep":5}'; }
 .zoom .indicator.indicator-steps-5>div:after,.zoom .indicator.indicator-steps-5>div:before{
         width:10px;
         background:#808080;
@@ -161,7 +161,7 @@
       height:30px;
       margin-right:-5px;
       overflow:hidden;
-      font-family:'{"maxZoomStep":"6"}'; }
+      font-family:'{"maxZoomStep":6}'; }
 .zoom .indicator.indicator-steps-6>div:after,.zoom .indicator.indicator-steps-6>div:before{
         width:10px;
         background:#808080;

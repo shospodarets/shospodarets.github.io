@@ -148,7 +148,7 @@
 .highlight .il{
     color:#666666; }
 @font-face{
-  font-family:'agents';
+  font-family:"agents";
   src:url(/fonts/agents.eot);
   src:url(/fonts/agents.eot?#iefix) format("embedded-opentype"),url(/fonts/agents.svg#agents) format("svg"),url(/fonts/agents.woff) format("woff"),url(/fonts/agents.ttf) format("truetype");
   font-weight:normal;
@@ -206,7 +206,7 @@
   color:#555;
   font-size:2em; }
 .caniuse .agents li [class*=" icon-"]:before,.caniuse .agents li[class^=icon-]:before{
-  font-family:'agents',sans-serif;
+  font-family:"agents",sans-serif;
   font-style:normal;
   speak:none;
   font-weight:normal;

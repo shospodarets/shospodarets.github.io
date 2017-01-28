@@ -99,7 +99,7 @@ h1{
     max-height:250px; }
 
 .youmayknow-gallery .info:after{
-    content:'';
+    content:"";
     display:block;
     clear:both; }
 
@@ -117,7 +117,7 @@ h1{
 
 .youmayknow-gallery .info .action-box label i{
         display:block;
-        content:'';
+        content:"";
         width:40px;
         height:40px;
         background-image:url(https://i.imgur.com/18g89bA.png);
