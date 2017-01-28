@@ -46,6 +46,10 @@
     </script>
     <script defer src="{{ site.baseurl }}/js/main.min.js"></script>
 
+    {% if page.add_to_main_head %}
+    {{ page.add_to_main_head }}
+    {% endif %}
+
 </head>
 
 <body>
