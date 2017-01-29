@@ -1,13 +1,23 @@
-html, body {
+html, body, .container {
     min-height: 100%;
     height: 100%;
 }
 
 body {
     background: linear-gradient(135deg, #6c5fce 0%, #6c5fce 15%, #62b3d0 100%);
+    color: #fff;
+}
+
+body,
+body > .container {
     display: flex;
     flex-direction: column;
-    color: #fff;
+}
+
+body > .container {
+    margin: 0;
+    max-width: none;
+    width: auto;
 }
 
 a {
@@ -35,7 +45,6 @@ content {
 }
 
 .title {
-    text-align: center;
     margin: 0;
     line-height: 56px;
 }
