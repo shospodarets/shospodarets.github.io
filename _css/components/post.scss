@@ -72,4 +72,15 @@
       }
     }
   }
+
+  @media (--mobile-up-breakpoint) {
+    & .even-smaller-img {
+      display: block;
+      text-align: center;
+
+      & img {
+        max-width: 30%;
+      }
+    }
+  }
 }

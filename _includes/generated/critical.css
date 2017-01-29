@@ -321,6 +321,12 @@ nav a{
     text-align:center; }
     .post .smaller-img img{
       max-width:60%; } }
+@media (min-width:680px){
+  .post .even-smaller-img{
+    display:block;
+    text-align:center; }
+    .post .even-smaller-img img{
+      max-width:30%; } }
 .entry:after,.entry:before{
     display:table;
     content:"";
