@@ -511,14 +511,14 @@ downloadFile(sourceImageUrl)// download file from one resource
     .then(uploadImageToImgur)// upload it to another
     .then(function (data) {
         console.log('Image successfully uploaded to <a href="//imgur.com/' + data.data.id + '">imgur.com url</a>');
-        console.log('<img src="' + data.data.link + '"/>');// for demo
+        //console.log('<img src="' + data.data.link + '"/>');// for demo
     })
     .catch(function (error) {
         console.error(error.message ? error.message : error);
     });
 ```
 
-<span data-height="440" data-theme-id="178" data-slug-hash="emWmBz" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="200" data-theme-id="178" data-slug-hash="emWmBz" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
 In getting JSON example <mark>headers</mark> option was set before fetching resource to show JSON is expected as answer.<br>
 But we also can work with response headers. Let's check that server answers with JSON as expected:<br>
