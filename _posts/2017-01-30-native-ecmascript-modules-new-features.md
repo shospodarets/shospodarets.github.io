@@ -816,7 +816,8 @@ I posted this script to the [`es-modules-utils` on Github](https://github.com/ma
 
 Currently there is a [discussion to add the native `nomodule` or `nosupport`
 attributes to the `script`](https://github.com/whatwg/html/pull/2261)
-which will provide easier native ability to fallback.
+which will provide the easier native ability to fallback
+(thanks to [@rauschma](https://twitter.com/rauschma) for pointing this out).
 
 ## Conclusions
 
