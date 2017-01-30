@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Native ECMAScript modules: differences from Webpack and new features"
+title: "Native ECMAScript modules: the new features and differences from Webpack modules"
 tags: [JavaScript, Browsers]
 share_image: https://hospodarets.com/img/blog/1485800018475263000.png
 share_description: Differences between ES and bundled modules, abilities to interact with the module scripts, tips and tricks.
