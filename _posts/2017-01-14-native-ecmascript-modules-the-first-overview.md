@@ -18,7 +18,7 @@ Now we are facing the situation when [the support amongst them is close to 100%]
 But the standard actually introduced also [ECMAScript modules](http://www.ecma-international.org/ecma-262/6.0/#sec-modules) (today also often named ES or ES6 modules).
 It's the only part which took (and still taking) the most time to implement as none browser published it yet in the stable version.
 
-Recently Safari 19 Technical Preview and Edge 15 shipped the native implementation behind the flags, so the time we can
+Recently Safari 10.1 (Safari Beta) and Edge 15 (next EDGE version) shipped the native implementation behind the flags, so the time we can
 use this without module bundlers is coming.
 
 To understand better how we come to this point let's start from the JS modules history and
@@ -282,13 +282,15 @@ For today each of the main browsers is working on shipping the ES6 modules:
 
 - Firefox- [work in progress](https://bugzilla.mozilla.org/show_bug.cgi?id=568953)
 - Chrome- [work in progress](https://www.chromestatus.com/features/5365692190687232)
-- EDGE- [implemented, available under the flag in EDGE 15 Preview Build 14342+](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/moduleses6/?q=module)
-- Webkit- [implemented, enabled by default in Safari Technology Preview 21+](https://webkit.org/status/#feature-modules)
+- EDGE- [implemented, available under the flag in EDGE 15+](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/moduleses6/?q=module)
+- Webkit- [implemented, enabled by default in Safari 10.1](https://webkit.org/status/#feature-modules)
 - Node.js- [under consideration, requires additional discussion](https://github.com/nodejs/node-eps/blob/master/002-es6-modules.md)
+
+<div class="caniuse" data-feature="es6-module"></div>
 
 ## Getting the environment to test
 
-As we saw, currently you can test native JS modules in Safari Technology Preview 19+ and EDGE 15 Preview Build 14342+.
+As we saw, currently you can test native JS modules in Safari 10.1+ and EDGE 15 Preview Build.
 Let's download and enable the features in them:
 
 ### Getting the Safari Technology Preview with the ES modules enabled
