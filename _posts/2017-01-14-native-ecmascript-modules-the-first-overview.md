@@ -548,14 +548,10 @@ so we are coming into an era where they will be supported in the browsers native
 and their usage will be inescapable.
 
 That's it for the first acquaintance with the native ECMAScript modules.
-In the next article(s) I will describe the ways to interact with the module scripts,
-detect the browser support, specific moment and differences with the usual bundled modules behavior etc.
 
-If you want to read more now, here are useful links:
-
-- [Modules part JavaScript books by Dr. Axel Rauschmayer](http://exploringjs.com/es6/ch_modules.html)
-- [The proposal of \<script type="module"\> by Domenic Denicola](https://github.com/whatwg/html/pull/443)
-- [HTML live standard, "Scripting" section](https://html.spec.whatwg.org/multipage/scripting.html#scripting-3)
+You can read about the differences between the ES and bundled modules,
+abilities to interact with the module scripts, tips, and tricks
+in my next article [Native ECMAScript modules: the new features and differences from Webpack modules]({{ site.baseurl }}/native-ecmascript-modules-new-features).
 
 *P.S.:*
 
