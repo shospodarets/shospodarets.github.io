@@ -16,7 +16,7 @@ For now, we have 2 available implementations, which we tried and compared to the
 The main takeaways, so far, are:
 
 1. To execute a script or load an external file and execute it as a module use `<script type="module">`
-2. `.js` extension cannot be omitted in the `import`
+2. `.js` extension cannot be omitted in the `import` (the exact URL should be provided)
 3. the modules' scope is not global and `this` doesn’t refer to anything
 4. native modules are in the strict mode by default (not needed to provide `'use strict'` anymore)
 5. module scripts are deferred by default (like `<script type="text/javascript" defer />`)

@@ -434,6 +434,10 @@ export default {
 As you might notice, we provided the `.js` file extension when used the `import` directive.
 This is another difference with the usual bundlers behavior-
  native modules don't add the `.js` extension by default.
+ 
+Actually, it means you have to provide the exact URL.
+And the main requirement is that the resource [should have a proper MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type)
+(thanks to [@bradleymeck](https://twitter.com/bradleymeck) for the correcting this).
 
 Secondary, let's check the scope of the module ([demo](https://plnkr.co/edit/i4rZ8U?p=preview)):
 
@@ -475,7 +479,7 @@ Strict mode cannot be avoided in the module scripts.
 
 **Takeaways**
 
-- **`.js` extension cannot be omitted**
+- **`.js` extension cannot be omitted (the exact URL should be provided)**
 - **the scope is not global, `this` doesn't refer to anything**
 - **native modules are in the strict mode by default (not needed to provide 'use strict' anymore)**
 
