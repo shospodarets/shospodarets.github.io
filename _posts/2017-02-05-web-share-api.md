@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Web Share API brings the native sharing capabilities to the Web"
+title: "Web Share API brings the native sharing capabilities to the browser"
 tags: [JavaScript, Browsers]
 share_image: https://hospodarets.com/img/blog/1485701075462830000.png
 share_description: Extend users sharing experience using the easy API to access the native sharing capabilities on the platform
