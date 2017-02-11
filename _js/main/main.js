@@ -14,8 +14,9 @@ import "./components/register-service-worker";// execute file without imports
 import Analytics from "./outer_components/analytics";
 import CustomSearch from "./outer_components/custom-search";
 import ConditionalLoader from "./outer_components/conditional-loader";
+import IncludeCss from "./outer_components/include-css";
 
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", () => {
     // APP
     const APP = window.jekyllVariables;
     delete window.jekyllVariables;// cleaning
@@ -34,5 +35,10 @@ document.addEventListener("DOMContentLoaded", () =>{
     });
     APP.customSearch = new CustomSearch({
         GOOGLE_SEARCH_ID: APP.GOOGLE_SEARCH_ID
+    });
+
+    APP.includeCss = new IncludeCss({
+        isDefaultCssEnabled: APP.isDefaultCssEnabled,
+        SITE_BASE_URL: APP.SITE_BASE_URL
     });
 });
