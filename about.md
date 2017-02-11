@@ -30,6 +30,7 @@ JS, CSS and HTML enthusiast.
 
 ## Talks
 
+🇳🇱 [Codemotion Amsterdam](http://amsterdam2017.codemotionworld.com/), Amsterdam (Netherlands), May 2017 `(upcoming)`
 
 🇮🇪 [DublinCSS](http://www.meetup.com/DublinCSS/), Dublin (Ireland), December 2016
 
