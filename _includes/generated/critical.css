@@ -150,6 +150,8 @@ blockquote{
   min-height:34px; }
 .twitter-widget{
   display:none; }
+.twitter-tweet{
+  margin:0 auto; }
 .open-close-wrapper{
   position:relative; }
 .open-close-wrapper .open-close{
