@@ -115,7 +115,7 @@ the native ES modules from the classic JS ones- you can load and work with them 
 And the third difference:
 the dynamically imported scripts are executed not in the order they appear in the code.
 Though the static `import` guarantees you to execute the scripts in the order.
-You have to know this feature, as each dynamic import lives by it's own and is not connected to/doesn't wait for
+You have to know this feature, as each dynamic import lives by its own and is not connected to/doesn't wait for
 others to be finished.
 
 
@@ -226,9 +226,9 @@ if(user.loggedIn){
 - **dynamic `import()` can be used anywhere in your scripts**
 - **`import()` takes string literals and you can construct the specifier depending on your needs**
 
-## Promises API advantages
+## Promise API advantages
 
-So the dynamic import uses JS Promises API.
+So the dynamic import uses JS Promise API.
 What advantages does it give us?
 
 First of all, we can load multiple scripts dynamically in parallel.
@@ -336,7 +336,7 @@ test();
 - **you can use the dynamic import with async/await**
 
 
-## Promises API caveats
+## Promise API caveats
 
 There is an additional caveat from Promises nature we always have to remember- the error handling.
 If there is any error in static import with the specifier or in module graph or even during the execution-
@@ -365,8 +365,8 @@ Here how you can add the global unhandled Promises listener:
 
 ```js
 window.addEventListener("unhandledrejection", (event)=> {
-  console.warn(`WARNING: Unhandled promise rejection.
-    Reason: ${event.reason}`, event);
+  console.warn(`WARNING: Unhandled promise rejection. Reason: ${event.reason}`);
+  console.warn(event);
 });
 // process.on('unhandledRejection'... in case of Node.js
 ```
@@ -431,8 +431,8 @@ as `import()` is available from anywhere, but there is still [a bug](https://bug
 # Support and polyfills
 
 For now, `import()` has little browser support.
-[Node.js is considering it's addition](https://medium.com/@jasnell/an-update-on-es6-modules-in-node-js-42c958b890c#.e4eyz1aew)
-which may result in `require.import()`.
+[Node.js is considering adding this feature](https://medium.com/@jasnell/an-update-on-es6-modules-in-node-js-42c958b890c#.e4eyz1aew)
+which may look something like `require.import()`.
 
 To detect if it's supported in a particular browser or Node.js, run the following code
 or try [the demo](https://plnkr.co/edit/pgsxdd6hE7uzQY9dHCwz?p=preview):
@@ -521,4 +521,4 @@ Here are the additional links for you:
 - [ES proposal: import() – dynamically importing ES modules](http://www.2ality.com/2017/01/import-operator.html)
 - [import() spec draft](https://tc39.github.io/proposal-dynamic-import/)
 - [node-es-module-loader](https://www.npmjs.com/package/node-es-module-loader)
-and [systemjs](https://tc39.github.io/proposal-dynamic-import/) by [Guy Bedford](https://twitter.com/guybedford)
+and [systemjs](https://github.com/systemjs/systemjs) by [Guy Bedford](https://twitter.com/guybedford)
