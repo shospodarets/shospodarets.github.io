@@ -75,8 +75,7 @@ import('./b.js').then((module)=>{
   b('isDynamic');
 });
 
-import('./c.js').then((module)=>{
-  const c = module.c;
+import('./c.js').then(({c})=>{
   c('isDynamic');
 });
 ```
