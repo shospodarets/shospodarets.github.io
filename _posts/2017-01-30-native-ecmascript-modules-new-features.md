@@ -834,3 +834,6 @@ The next step can be checking how the ServiceWorker/Worker world will be changed
  in terms of modules.
  
  All this I plan to describe in the next articles. Stay tuned.
+ 
+P.S.: You can also read my next article regarding the ability to load the scripts
+dynamically using the dynamic `import()` operator: [Native ECMAScript modules: dynamic import()]({{ site.baseurl }}/native-ecmascript-modules-dynamic-import).
