@@ -95,7 +95,7 @@ As you may remember, it's a
  
 Secondary, dynamic imports were invoked before the static.
 and that is because I included the dynamic `import()` calls in a classic script in my HTML
-(yes, you can use `module()` in classic scripts as well, not only module ones!):
+(yes, you can use dynamic imports in classic scripts as well, not only in module ones!):
 
 ```html
 <script type="module" src="static.js"></script>
