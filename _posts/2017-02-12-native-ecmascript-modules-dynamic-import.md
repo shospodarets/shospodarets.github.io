@@ -2,7 +2,7 @@
 layout: post
 title: "Native ECMAScript modules: dynamic import()"
 tags: [JavaScript, Browsers]
-share_image: https://hospodarets.com/img/blog/1485800018475263000.png
+share_image: https://i.imgur.com/lCOfE6u.png
 share_description: From now you can dynamically load ES modules on demand and use dynamic specifiers for them together with dynamic import()
 draft: true
 ---
