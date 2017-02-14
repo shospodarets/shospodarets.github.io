@@ -656,18 +656,33 @@ if (isSupported) {
 }
 ```
 
-You can, e.g. generate 2 versions of the CSS file:
-one with CSS Custom Properties, second- without them, where properties are inlined
+As we saw, CSS Custom Properties are still not available in every browser.
+Knowing that and having the ability to check if they are supported, you can progressively enhance
+your application by checking if they are available.
+
+For instance, you can generate 2 main CSS files:
+one with CSS Custom Properties, and a second without them, where the Properties are inlined
 (we will discuss the ways to do it further).
 
-And then, depending on browser support, remove/load the supported one:
+Load the second one by default.
+After just do a check in JS and switch to the enhanced version if it's supported: 
+
+```html
+<!--html-->
+<link href="without-css-custom-properties.css" rel="stylesheet" type="text/css" media="all"/>
+```
 
 ```js
-if(!isSupported){
-    removeCss('css-custom-properties.css')
-    loadCss('without-css-custom-properties.css');
+// js
+if(isSupported){
+    removeCss('without-css-custom-properties.css');
+    loadCss('css-custom-properties.css');
+    // + conditionally apply some application enhancements using the Custom Properties
 }
 ```
+
+This is just an example, as you'll see further, there are better options.
+
 
 # How to start using
 
