@@ -735,7 +735,7 @@ so you don't have a path to prepare your project for a switch from Sass variable
 as it's done after Sass is compiled to CSS
 - plugin doesn't provide much debug info.
 
-## 3. [`css-vars`](https://github.com/malyw/css-vars) mixin
+## 3. `css-vars` mixin
 
 I started using CSS Custom Properties in most of my projects and tried many strategies:
 
@@ -751,7 +751,7 @@ As result having that experience I started looking for a solution which would sa
 - if the team/member learned how to use the solution, it mostly means they are familiar with CSS Custom Properties
 - a way to have the debug info about edge cases in variables usage
 
-As result, I created a `css-vars` Sass
+As result, I created the `css-vars` Sass
 mixin which you can find on Github: [https://github.com/malyw/css-vars](https://github.com/malyw/css-vars) <br>
 with which you can start using CSS Custom Properties -ish syntax.
 
