@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "CSS custom properties- time to start using."
+title: "CSS custom properties- time to start using"
 tags: [CSS, Sass]
-share_image: https://i.imgur.com/Ynj2yYy.png
+share_image: https://hospodarets.com/img/blog/1487437673839038000.png
 share_description: How to start using CSS custom properties and prepare a path to switch/use in parallel with a CSS preprocessor
 draft: true
 ---
@@ -693,7 +693,7 @@ So let's take it and consider options how we can start using CSS custom properti
 
 There are a few options:
 
-### 1. Manual checks in the code if Custom Properties are supported and use them.
+## 1. Manual checks in the code if Custom Properties are supported and use them.
 
 One pro for this- yes, it will work and is something we can do right now (don't forget, we have switched to SCSS):
 
@@ -715,7 +715,7 @@ $color: red;
 
 This way have many cons- overcomplicated code, copy-paste and is quite hard to maintain.
 
-### 2. Use a plugin which will automatically process your result CSS
+## 2. Use a plugin which will automatically process your result CSS
 
 PostCSS plugins ecosystem provides dozens of plugins today.
 A couple of them process Custom Properties (inline values) in the result CSS output and make it work,
@@ -735,9 +735,9 @@ so you don't have a path to prepare your project for a switch from Sass variable
 as it's done after Sass is compiled to CSS
 - plugin doesn't provide much debug info.
 
-# 3. [`css-vars` mixin](https://github.com/malyw/css-vars)
+## 3. [`css-vars`](https://github.com/malyw/css-vars) mixin
 
-I started using CSS Custom Properties in most of my Projects and tried many strategies:
+I started using CSS Custom Properties in most of my projects and tried many strategies:
 
 - switch from Sass to PostCSS with [cssnext](http://cssnext.io/)
 - switch from Sass variables to pure CSS Custom Properties
@@ -752,27 +752,12 @@ As result having that experience I started looking for a solution which would sa
 - a way to have the debug info about edge cases in variables usage
 
 As result, I created a `css-vars` Sass
-mixin which you can find on Github: [https://github.com/malyw/css-vars](https://github.com/malyw/css-vars)
+mixin which you can find on Github: [https://github.com/malyw/css-vars](https://github.com/malyw/css-vars) <br>
+with which you can start using CSS Custom Properties -ish syntax.
 
-This mixin can be easily added to your project, e.g.:
+### Mixin usage
 
-```bash
-npm install css-vars
-```
-
-Then just import the main file:
-
-```scss
-@import "node-modules/css-vars/css-vars";
-```
-
-and that's it, you can start using CSS Custom Properties -ish syntax.
-"-ish" I use here to represent that it's actually very close to it,
-but still Sass-based.
-
-## `css-vars` mixin usage
-
-To declare variable(s), use the mixin as the following `@include css-vars(<map of variables>)` (you can reuse Sass variables):
+To declare variable(s), use the mixin as the following:
 
 ```scss
 $white-color: #fff;
@@ -796,86 +781,41 @@ body {
   padding: var(--padding-top) 0 10px;
 }
 ```
-
-This syntax is very similar to the native CSS variables,
-the only difference is that we use the mixin to wrap a map of variables.
  
-Variables are declared in the global scope (`$css-vars` map for Sass, `:root` for native CSS).
-
-## CSS output and triggering the native CSS Custom Properties usage
-
-The above by default gives the following CSS:
-
-```css
-body {
-  color: #000;
-  background: #fff;
-  font-size: 15px;
-  padding: calc(2vh + 20px) 0 10px;
-}
-```
-
-It means that by default you are continuing using Sass variables,
-but the syntax looks like CSS Custom Properties.
- 
-It gives you a way to control all the CSS output from one place (from Sass)
+This gives you a way to control all the CSS output from one place (from Sass)
 and start getting used to the syntax + you can reuse Sass variables/logic with the mixin.
 
-When all the browsers you support work with CSS variables, everything you have to do is to add in your code:
+When all the browsers you support work with CSS variables, everything you have to do is to add:
 
 ```scss
 $css-vars-use-native: true;
 ```
 
-So the above example will provide the native CSS Custom Properties output:
+And instead of aligning the variable properties in the result CSS, 
+the mixin will start registering Custom Properties and the `var()` usages will
+go to the result CSS without any transformations.
+Which means you'll fully switch to CSS Custom Properties usage and have all the advantages we discussed.
 
-```css
-:root {
-  --main-color: #000;
-  --main-bg: #fff;
-  --main-font-size: 15px;
-  --padding-top: calc(2vh + 20px);
-}
-
-body {
-  color: var(--main-color);
-  background: var(--main-bg, #f00);
-  font-size: var(--main-font-size);
-  padding: var(--padding-top) 0 10px;
-}
-```
-
-## Advantages of the mixin
-
-Usage of the mixin gives the useful debug information:
-
-* logs when a variable was not assigned but used
-* logs when some variable is reassigned
-* provides info when a variable is not defined, but there is a default value passed, which is used instead
-
-This information is helpful in both cases for Sass and CSS variables.
-
-None browser so far provides such debug info for CSS Custom Properties.
-
-To enable the mixin's debug messages output during the Sass compilation, just add the following to your project:
+If you want to turn on the useful debug info, add the following:
 
 ```scss
 $css-vars-debug-log: true;
 ```
 
+so you'll have:
+
+* logs when a variable was not assigned but used
+* logs when some variable is reassigned
+* info when a variable is not defined, but there is a default value passed, which is used instead
+
 # Conclusions
 
-Now you know the CSS Custom Properties syntax and advantages,
-how to interact with them from JS and detect if they are supported.
+Now you know the CSS Custom Properties syntax, advantages,
+good usage examples and how to interact with them from JavaScript.
 
-Also, we have the [css-vars mixin](https://github.com/malyw/css-vars) to:
+You have learned how to detect if they are supported,
+how they are different from the CSS Preprocessor variables
+and options to start using the native CSS variables till they are supported cross-browser. 
 
-- continue using Sass but start learning and adoption of CSS Custom Properties syntax
-- having an ability to use Sass variables in CSS Custom Properties up to passing them to JavaScript
-- an easy way to switch to CSS variables with one line as only supported browsers for the project work with them
-- easily debug edge cases when working with CSS Custom Properties "-ish" syntax (not defined / redefined variables, usage of default values)
-- there are some [caveats](https://github.com/malyw/css-vars#caveats) and [limitations](https://github.com/malyw/css-vars#limitations-in-case-of-sass-variables)
-which mostly are caused by the Sass nature
-
-So this is the perfect time to start using CSS Custom Properties syntax
+So this is the perfect time to start using CSS Custom Properties
 and preparing for their native support in the browsers.
