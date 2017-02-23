@@ -36,7 +36,7 @@ It means, that before it is finished (Stage 4), a couple of implementations are 
 plus additional gathering and addressing of the feedback from the implementations and users.
 
 And it could be you, as the dynamic `import()` [is shipped](https://bugs.webkit.org/show_bug.cgi?id=165724)
-OOB in [Webkit Nightly](https://webkit.org/downloads/).
+OOB in [Safari Technology Preview](https://webkit.org/downloads/).
 You can download, start using and test it ([here is a simple demo](https://plnkr.co/edit/XZB9GaIBOatuNwFiTVCS?p=preview)).
 
 Your feedback regarding the dynamic import can be appreciated and you can provide it either via
@@ -419,7 +419,11 @@ so always keep in mind this fact to avoid unexpected bugs.
 
 
 Regarding the debugging- the good of all this, that finally, you can play with ES modules in browsers DevTools console,
-as `import()` is available from anywhere, but there is still [a bug](https://bugs.webkit.org/show_bug.cgi?id=165724#c19) and work in progress, till you can try this in Webkit
+as `import()` is available from anywhere:
+
+<span class="smaller-img">
+    <img src="https://hospodarets.com/img/blog/1487815539233395000.png" />
+</span>
 
 **Takeaways:**
 
