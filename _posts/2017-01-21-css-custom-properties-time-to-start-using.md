@@ -433,7 +433,7 @@ One of the most common cases for Custom Properties is the color themes for the a
 They were created to solve this kind of problems, so let's provide a simple color theme for a component
 (the same steps can be used for an application).
 
-Here is our [button-component code](http://codepen.io/malyw/pen/XpRjNK):
+Here is our [button-component code](https://codepen.io/malyw/pen/XpRjNK):
 
 ```css
 .btn {
@@ -449,7 +449,7 @@ Here is our [button-component code](http://codepen.io/malyw/pen/XpRjNK):
 Let's assume we want to create an inverted color theme.
 
 The first step will be to extend all the color variables to the CSS Custom Properties and rewrite our component,
-so the [result is the same](http://codepen.io/malyw/pen/EZmgmZ):
+so the [result is the same](https://codepen.io/malyw/pen/EZmgmZ):
 
 ```css
 .btn {
@@ -613,7 +613,7 @@ body:after {
 }
 ```
 
-You can check it [in the plain CSS demo (no HTML/JS)](http://codepen.io/malyw/pen/oBWMOY)
+You can check it [in the plain CSS demo (no HTML/JS)](https://codepen.io/malyw/pen/oBWMOY)
 (resize a browser window to see the browser reflects the changed CSS Custom Property value automatically)
 
 # Browsers support
