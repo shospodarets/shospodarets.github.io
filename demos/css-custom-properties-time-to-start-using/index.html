@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<!-- Please do not change this code -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='styles-please-dont-delete/style.css'>
+    <title>Smashing Magazine article template</title>
+</head>
+
+<body>
+<header class="site-header">
+    <div class="flag">
+        <div class="table-cell">
+            <a href="http://www.smashingmagazine.com/"><h1 class="logo">Smashing Magazine</h1></a>
+        </div>
+        <div class="table-cell text-right">
+            <h1>Author's Article Template</h1>
+        </div>
+    </div>
+</header>
+
+<div class="page">
+
+    <!--
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        START editing here
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+    <h2>CSS custom properties- time to start using</h2>
+
+
+
+    <p>Today CSS preprocessors is a tech standard for the Web development.
+        One of the main advantages of the preprocessors is an ability to use variables.
+        It helps to avoid copy-pasting of the code, simplifies development and refactoring.</p>
+
+    <p>We use them to store colors, font and layout details etc.- mostly everything we use in CSS.</p>
+
+    <p>But preprocessor’s variables have own problems:</p>
+
+    <ul>
+        <li>you cannot change them dynamically</li>
+        <li>they have no clue about the DOM structure</li>
+        <li>they cannot be read / changed from JavaScript</li>
+    </ul>
+
+    <p>As a silver bullet to solve these and other problems, the community invented CSS Custom Properties.
+        Essentially, they look and work as CSS variables and the way they work is reflected in their name.</p>
+
+    <p>The Custom Properties are opening the new horizons for the Web development.</p>
+
+
+    <h2>Syntax to declare and use</h2>
+
+    <p>The usual problem when you start the new preprocessor/framework- is to learn the new syntax to solve your issues.</p>
+
+    <p>The same situation we have in preprocessors, each of them requires an own way to declare variables.
+        Usually, they start with a different symbol, e.g. <code>$</code> (Sass) or <code>@</code> (Less).</p>
+
+    <p>CSS custom properties went the same way and started using <code>--</code> at the beginning to represent the declaration.
+        But the good point here is that you can learn this syntax once and you can reuse it across the browsers!</p>
+
+    <p>You may want to ask:
+        <strong>“Why not to reuse one of the previous syntaxes?”</strong></p>
+
+    <p><a href="http://www.xanthir.com/blog/b4KT0">There was a reason</a>- in short, it’s to provide a way to use Custom Properties in any preprocessors.
+        This way you can provide/use Custom Properties and preprocessor will not compile them, so they will directly go to the output CSS.
+        On the other hand, you can reuse preprocessor variables in the native ones, but I will describe that later.</p>
+
+    <blockquote>
+        <p>Regarding the name: <br/>
+            As the idea and purpose are very similar, sometimes Custom Properties are called
+            the “CSS variables” though the correct name is “CSS custom properties” and reading further you will understand
+            why such a name describes them the best.</p>
+    </blockquote>
+
+    <p>So, to declare a variable just instead of the usual CSS properties like <code>color</code>/<code>padding</code> etc. provide a custom named property which name starts from <code>--</code>:</p>
+
+    <pre><code class="language-css">.box{
+    --box-color: #4d4e53;
+    --box-padding: 0 10px;
+}</code></pre>
+
+    <p>A value of a property can be any valid CSS value,
+        from colors to strings, layout values and even expressions.</p>
+
+    <p>Here is the example of valid Custom Properties:</p>
+
+
+    <pre><code class="language-css">:root{
+    --main-color: #4d4e53;
+    --main-bg: rgb(255, 255, 255);
+    --logo-border-color: rebeccapurple;
+
+    --header-height: 68px;
+    --content-padding: 10px 20px;
+
+    --base-line-height: 1.428571429;
+    --transition-duration: .35s;
+    --external-link: "external link";
+    --margin-top: calc(2vh + 20px);
+
+    /* valid CSS Custom Prop, can be reused later e.g. in JS */
+    --foo: if(x > 5) this.width = 10;
+}
+</code></pre>
+
+    <p>If you are not sure what the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:root"><code>:root</code></a>
+        matches, in case of HTML it’s the same as <code>html</code>, but with the higher specificity.</p>
+
+    <p>As other CSS properties, Custom ones cascade in the same way and are dynamic.
+        It means, they can be changed at any moment and the change is processed accordingly by the browser.</p>
+
+    <p>To use the variable, you have to use the <code>var()</code> CSS function and provide a name of the property inside:</p>
+
+    <pre><code class="language-css">.box{
+    --box-color:#4d4e53;
+    --box-padding: 0 10px;
+
+    padding: var(--box-padding);
+}
+
+.box div{
+    color: var(--box-color);
+}
+</code></pre>
+
+    <h3>Declaration/usage cases</h3>
+
+    <p>The <code>var()</code> function provides a handy way to provide a default value to be used.
+        For instance, you are not sure if a Custom Property is defined and want to give a value to be used in such a case.
+        It can be done easily, passing the second param to the function:</p>
+
+    <pre><code class="language-css">.box{
+    --box-color:#4d4e53;
+    --box-padding: 0 10px;
+
+    /*10px is used as --box-margin is not defined*/
+    margin: var(--box-margin, 10px);
+}
+</code></pre>
+
+    <p>As you may expect, you can reuse other variables to declare new ones:</p>
+
+    <pre><code class="language-css">.box{
+    /* "--main-padding" variable is used if "--box-padding" is not defined */
+    padding: var(--box-padding, var(--main-padding));
+
+    --box-text: 'This is my box';
+
+    /* equal to: --box-highlight-text:'This is my box with highlight'; */
+    --box-highlight-text: var(--box-text)' with highlight';
+}
+</code></pre>
+
+    <h2>Operations (+, -, *, /)</h2>
+
+    <p>As we got used in preprocessors and other languages, we want to use basic operators when working with variables.
+        For such purposes CSS provides a <code>calc()</code> function, which will make the browser to recalculate the expressions
+        after any changes to the Custom Properties values:</p>
+
+    <pre><code class="language-css">:root{
+    --indent-size: 10px;
+
+    --indent-xl: calc(2*var(--indent-size));
+    --indent-l: calc(var(--indent-size) + 2px);
+    --indent-s: calc(var(--indent-size) - 2px);
+    --indent-xs: calc(var(--indent-size)/2);
+}
+</code></pre>
+
+
+    <p>A problem waits for you when you try to use unit-less values.
+        You will see that <code>calc()</code> is your friend there again as without that it doesn’t work:</p>
+
+    <pre><code class="language-css">:root{
+    --gap: 10;
+}
+
+.box{
+    padding: var(--spacer)px 0; /* DOESN'T work */
+    padding: calc(var(--spacer)*1px) 0; /* WORKS */
+}
+</code></pre>
+
+    <h2>Scopes and inheritance</h2>
+
+    <p>Before we move to CSS Custom properties scopes,
+        let’s recollect the JS/preprocessors scopes,
+        so we can easier understand the differences.</p>
+
+    <p>We know the idea of the scope applied e.g. for JavaScript variables (<code>var</code>)- the scope is limited to the functions.</p>
+
+    <p>A similar situation is for <code>let</code> \ <code>const</code>, but they are block-scope local variables.</p>
+
+    <p>A <code>closure</code> in JavaScript is a function that has access to the outer (enclosing) function’s variables—scope chain.
+        The closure has three scope chains and it has access to:</p>
+
+    <ol>
+        <li>its own scope (variables defined between its curly brackets)</li>
+        <li>the outer function’s variables</li>
+        <li>the global variables.</li>
+    </ol>
+
+    <figure>
+        <img src="./article-images/closure.png"/>
+    </figure>
+
+    <p>The similar story is around preprocessors.
+        Let’s take a look into Sass example, as it’s one of the most popular preprocessors for today.</p>
+
+    <p>In Sass, there are two types of variables: <code>local</code> and <code>global</code> variables.</p>
+
+    <p>A <code>global</code> variable you can declare providing it outside of any selector or construction (e.g. a <code>mixin</code>), otherwise you get a <code>local</code> one.</p>
+
+    <p>Any nested blocks of code can access the enclosing variables (similar to the JS case).</p>
+
+    <figure>
+        <img src="./article-images/closure-scss.png"/>
+    </figure>
+
+    <p>Which means, in Sass, the variable scopes are fully reliable on the code structure.</p>
+
+    <p>On the other hand, CSS Custom Properties are inherited by default and as other CSS properties, they cascade.</p>
+
+    <p>You also cannot provide a “global” variable providing a Custom Property outside of the selectors- it’s not valid CSS.
+        The global scope for CSS Custom Properties is actually the <code>:root</code> scope, after what the property is available “globally”.</p>
+
+    <p>Let’s use our syntax knowledge and reflect the Sass example in HTML/CSS
+        and create a demo using the native CSS Custom Properties:</p>
+
+    <pre><code class="language-markup">global
+&lt;div class="enclosing"&gt;
+  enclosing
+  &lt;div class="closure"&gt;
+    closure
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+    <p>and CSS:</p>
+
+    <pre><code class="language-css">:root {
+  --globalVar: 10px;
+}
+
+.enclosing {
+  --enclosingVar: 20px;
+}
+
+.enclosing .closure {
+  --closureVar: 30px;
+
+  font-size: calc(var(--closureVar) + var(--enclosingVar) + var(--globalVar));
+  /* 60px for now */
+}
+</code></pre>
+
+    <p><span data-height="150" data-theme-id="178" data-slug-hash="MJmebz" data-user="malyw" data-default-tab="result" class="codepen"></span></p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+    <h3>Change of the Custom Property immediately is applied to all its usages</h3>
+
+    <p>So far we haven’t faced differences with the Sass variables, but let’s reassign the variable after it’s usage:</p>
+
+    <p>It has no effect in the Sass case:</p>
+
+    <pre><code class="language-scss">.closure {
+    $closureVar: 30px; // local variable
+    font-size: $closureVar +$enclosingVar+ $globalVar;
+    // 60px, $closureVar: 30px is used
+
+    $closureVar: 50px; // local variable
+}
+</code></pre>
+
+    <p><span data-height="150" data-theme-id="178" data-slug-hash="bgWerv" data-user="malyw" data-default-tab="result" class="codepen"></span></p>
+
+    <p>But in CSS, the calculated value is changed, as the <code>font-size</code> value is recalculated from the changed <code>--closureVar</code> value:</p>
+
+    <pre><code class="language-css">.enclosing .closure {
+  --closureVar: 30px;
+
+  font-size: calc(var(--closureVar) + var(--enclosingVar) + var(--globalVar));
+  /* 80px for now, --closureVar: 50px is used */
+
+  --closureVar: 50px;
+}
+</code></pre>
+
+    <p><span data-height="170" data-theme-id="178" data-slug-hash="WRjxOy" data-user="malyw" data-default-tab="result" class="codepen"></span></p>
+
+    <p>That’s the first huge difference-
+        <strong>if you reassign a Custom Property value, the browser recalculates all the variables/calc() expression etc. where it’s applied</strong></p>
+
+    <h3>Preprocessor has no clue about the DOM structure</h3>
+
+    <p>Let’s provide an example where we want to use a default <code>font-size</code> for the block,
+        except the case when the <code>highlighted</code> class is present.</p>
+
+    <p>Here it the HTML:</p>
+
+    <pre><code class="language-markup">&lt;div class="default"&gt;
+  default
+&lt;/div&gt;
+
+&lt;div class="default highlighted"&gt;
+  default highlighted
+&lt;/div&gt;
+</code></pre>
+
+    <p>Let’s do it using CSS Custom Properties:</p>
+
+    <pre><code class="language-css">.highlighted {
+  --highlighted-size: 30px;
+}
+
+.default {
+  --default-size: 10px;
+
+  /* use the "default-size" except the "highlighted-size" is provided */
+  font-size: var(--highlighted-size, var(--default-size));
+}
+</code></pre>
+
+    <p>As the second HTML element with the <code>default</code> class has the <code>highlighted</code> class, <br/>
+        properties from the <code>highlighted</code> class starts being applied to the element. <br/>
+        In out case, it means <code>--highlighted-size: 30px;</code> is applied, <br/>
+        which in turn makes <code>font-size</code> property being assign using the <code>--highlighted-size</code>.</p>
+
+    <p>Everything is straightforward and works:</p>
+
+    <p><span data-height="100" data-theme-id="178" data-slug-hash="ggWMvG" data-user="malyw" data-default-tab="result" class="codepen"></span></p>
+
+    <p>And now we’ll try to achieve the same using Sass:</p>
+
+    <pre><code class="language-scss">.highlighted {
+  $highlighted-size: 30px;
+}
+
+.default {
+  $default-size: 10px;
+
+  /* use the "default-size" except the "highlighted-size" is provided */
+  @if variable-exists(highlighted-size) {
+    font-size: $highlighted-size;
+  }
+  @else {
+    font-size: $default-size;
+  }
+}
+</code></pre>
+
+    <p>And the result shows that the default size is applied to both:</p>
+
+    <p><span data-height="100" data-theme-id="178" data-slug-hash="PWmzQO" data-user="malyw" data-default-tab="result" class="codepen"></span></p>
+
+    <p>It happens because all the Sass calculations and processing happen during the compilation time,
+        and, of course, it doesn’t now anything regarding the DOM structure and fully relies on the code structure.</p>
+
+    <p>As you see, Custom Properties took the best practice in terms of variables scoping but added the
+        usual CSS Properties cascading, which is aware of the DOM structure and follows the same rules as other CSS properties.</p>
+
+    <p>The second takeaways is:
+        <strong>CSS Custom properties are aware on the DOM structure and are dynamic</strong></p>
+
+    <h2>CSS-wide keywords and <code>all</code> property</h2>
+
+    <p>CSS custom properties subject to the same rules as the usual CSS Custom Properties (CCP).
+        It means you can assign any of the common CSS keywords to them.</p>
+
+    <ul>
+        <li><code>inherit</code> CSS keyword applies the value of the element’s parent.</li>
+        <li><code>initial</code> applies the initial value as defined in the CSS specifications (empty value, nothing in some cases for CCP)</li>
+        <li><code>unset</code> applies the inherited value if the property is normally inherited (Custom Properties case), or the initial value if the property is normally not inherited</li>
+        <li><code>revert</code> resetting the property to the default value established by the user-agent stylesheet (empty value for CSS Custom Properties)</li>
+    </ul>
+
+    <p>Here is an example:</p>
+
+    <pre><code class="language-css">.common-values{
+    --border: inherit;
+    --bgcolor: initial;
+    --padding: unset;
+    --animation: revert;
+}
+</code></pre>
+
+    <p>And now let’s consider an another case: <br/>
+        Let’s assume you want to build a component and be sure no other styles/Custom Properties are applied to it unintentionally
+        (for styles, in such cases, usually CSS Modules-related solutions are used).</p>
+
+    <p>But now there is another way, to use the <a href="https://developer.mozilla.org/en/docs/Web/CSS/all"><code>all</code> CSS property</a>.
+        It’s a shorthand which resets all the CSS properties.</p>
+
+    <p>Together with CSS keywords, you can do the following:</p>
+
+    <pre><code class="language-css">.my-wonderful-clean-component{
+    all: initial;
+}
+</code></pre>
+
+    <p>So you will reset all the styles for your component.</p>
+
+    <p>Unfortunately <code>all</code> keyword <a href="https://drafts.csswg.org/css-variables/#defining-variables">doesn’t reset Custom Properties</a>,
+        but currently, <a href="https://github.com/w3c/webcomponents/issues/300#issuecomment-144551648">there is still a discussion to add the <code>--</code></a>
+        which will reset all the CSS Custom Properties.</p>
+
+    <p>So after a while, the full reset may be done using:</p>
+
+    <pre><code class="language-css">.my-wonderful-clean-component{
+    --: initial; /* reset all Custom CSS Properties */
+    all: initial; /* reset all other CSS styles */
+}
+</code></pre>
+
+    <h2>CSS Custom Properties use cases</h2>
+
+    <p>There are many usages for the Custom Properties, I will provide the most interesting of them.</p>
+
+    <h3>Emulating non-existing CSS rule</h3>
+
+    <p>As the name of CSS variables is “Custom Properties” why not to use them to emulate non-existing properties?</p>
+
+    <p>There are many of them from <code>translateX/Y/Z</code> to <code>background-repeat-x/y</code> (still not cross-browser) and <code>box-shadow-color</code>.</p>
+
+    <p>Let’s take the last and make it work.
+        In the example, we will change the box-shadow color on hover.
+        We just want to follow the DRY rule and instead of repeating all the <code>box-shadow</code> value into the <code>:hover</code>
+        section, just change its color.
+        Custom Properties to the rescue:</p>
+
+    <pre><code class="language-css">.test {
+  --box-shadow-color: yellow;
+  box-shadow: 0 0 30px var(--box-shadow-color);
+}
+
+.test:hover {
+  --box-shadow-color: orange;
+  /* Instead of: box-shadow: 0 0 30px orange; */
+}
+</code></pre>
+
+    <p><span data-height="140" data-theme-id="178" data-slug-hash="KzZXRq" data-user="malyw" data-default-tab="result" class="codepen"></span></p>
+
+    <h3>Color themes</h3>
+
+    <p>One of the most common cases for Custom Properties is the color themes for the applications.
+        They were created to solve this kind of problems, so let’s provide a simple color theme for a component
+        (the same steps can be used for an application).</p>
+
+    <p>Here is our <a href="http://codepen.io/malyw/pen/XpRjNK">button-component code</a>:</p>
+
+    <pre><code class="language-css">.btn {
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  text-shadow: 1px 1px 3px #777;
+  box-shadow: 0px 1px 3px #777;
+  border-radius: 28px;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+}
+</code></pre>
+
+    <p>Let’s assume we want to create an inverted color theme.</p>
+
+    <p>The first step will be to extend all the color variables to the CSS Custom Properties and rewrite our component,
+        so the <a href="http://codepen.io/malyw/pen/EZmgmZ">result is the same</a>:</p>
+
+    <pre><code class="language-css">.btn {
+  --shadow-color: #777;
+  --gradient-from-color: #3498db;
+  --gradient-to-color: #2980b9;
+  --color: #ffffff;
+
+  background-image: linear-gradient(
+        to bottom,
+        var(--gradient-from-color),
+        var(--gradient-to-color)
+  );
+  text-shadow: 1px 1px 3px var(--shadow-color);
+  box-shadow: 0px 1px 3px var(--shadow-color);
+  border-radius: 28px;
+  color: var(--color);
+  padding: 10px 20px 10px 20px;
+}
+</code></pre>
+
+    <p>Everything we need now- to override the color variables value to the inverted ones and apply them when it’s needed.
+        We can e.g. add the global <code>inverted</code> HTML class (e.g. to the <code>body</code> element) and change the colors when it’s applied:</p>
+
+    <pre><code class="language-css">body.inverted .btn{
+  --shadow-color: #888888;
+  --gradient-from-color: #CB6724;
+  --gradient-to-color: #D67F46;
+  --color: #000000;
+}
+</code></pre>
+
+    <p>And here is the demo where you can click a button to add/remove a global class and see the demo in action:</p>
+
+    <p><span data-height="150" data-theme-id="178" data-slug-hash="dNWpRd" data-user="malyw" data-default-tab="result" class="codepen"></span></p>
+
+    <p>This behavior cannot be achieved without the code duplication overhead using CSS preprocessors.
+        With preprocessors, you always need to override the actual values and rules
+        which always results in the additional CSS output.</p>
+
+    <p>In the case of CSS Custom Properties, the solution is as clean as poosible and avoids copy-paste,
+        as only the values of the variables are redefined.</p>
+
+    <h2>Using Custom Properties with JavaScript</h2>
+
+    <p>Previously, to send some data from CSS to JS, we often had to use
+        <a href="https://blog.hospodarets.com/passing_data_from_sass_to_js">tricks</a> to writing CSS values via plain JSON in the CSS output
+        and then read it from JS.</p>
+
+    <p>Now you can easily interact with the CSS variables from JavaScript, read and write to them
+        using well known <code>.getPropertyValue()</code> and <code>.setProperty()</code> methods,
+        which are used for the usual CSS properties:</p>
+
+    <pre><code class="language-javascript">/**
+* Gives a CSS custom property value applied at the element
+* element {Element}
+* varName {String} without '--'
+*
+* E.g.:
+* readCssVar(document.querySelector('.box'), 'color');
+*/
+function readCssVar(element, varName){
+    const elementStyles = getComputedStyle(element);
+    return elementStyles.getPropertyValue(`--${varName}`).trim();
+}
+
+/**
+* Writes a CSS custom property value at the element
+* element {Element}
+* varName {String} without '--'
+*
+* E.g.:
+* readCssVar(document.querySelector('.box'), 'color', 'white');
+*/
+function writeCssVar(element, varName, value){
+    return element.style.setProperty(`--${varName}`, value);
+}
+</code></pre>
+
+    <p>Let’s assume you have a list of the used media query values:</p>
+
+    <pre><code class="language-css">.breakpoints-data {
+  --phone: 480px;
+  --tablet: 800px;
+}
+</code></pre>
+
+    <p>As only you want to reuse them in JS e.g. in
+        <a href="https://developer.mozilla.org/en/docs/Web/API/Window/matchMedia">Window.matchMedia()</a>,
+        you can easily get them from CSS:</p>
+
+    <pre><code class="language-javascript">const breakpointsData = document.querySelector('.breakpoints-data');
+
+// GET
+const phoneBreakpoint = getComputedStyle(breakpointsData)
+    .getPropertyValue('--phone');
+</code></pre>
+
+    <p>To show how to assign Custom Properties from JS,
+        I created an interactive 3D CSS cube demo which responds to the user actions.</p>
+
+    <p>It’s not very hard, for that is enough to provide a simple background, and place 5 cube faces using
+        the proper values for the <code>transform</code> property: <code>translateZ()</code>, <code>translateY()</code>, <code>rotateX()</code> and <code>rotateY()</code>.</p>
+
+    <p>To provide a perspective and proper view, I added the following to the page wrapper:</p>
+
+    <pre><code class="language-css">#world{
+    --translateZ:0;
+    --rotateX:65;
+    --rotateY:0;
+
+    transform-style:preserve-3d;
+    transform:
+        translateZ(calc(var(--translateZ) * 1px))
+        rotateX(calc(var(--rotateX) * 1deg))
+        rotateY(calc(var(--rotateY) * 1deg));
+}
+</code></pre>
+
+    <p>The only missed part was to add the interactivity, so the demo would change the X/Y view angles (<code>--rotateX</code>, <code>--rotateY</code>) on mousemove
+        and zoom in/out the view on mouse scroll (<code>--translateZ</code>).</p>
+
+    <p>Here is the JS parts which do the trick:</p>
+
+    <pre><code class="language-javascript">// EVENTS
+onMouseMove(e) {
+    this.worldXAngle = (.5 - (e.clientY / window.innerHeight)) * 180;
+    this.worldYAngle = -(.5 - (e.clientX / window.innerWidth)) * 180;
+    this.updateView();
+};
+
+onMouseWheel(e) {
+    ...
+
+    this.worldZ += delta * 5;
+    this.updateView();
+};
+
+// JS-> CSS
+updateView() {
+    this.worldEl.style.setProperty('--translateZ', this.worldZ);
+    this.worldEl.style.setProperty('--rotateX', this.worldXAngle);
+    this.worldEl.style.setProperty('--rotateY', this.worldYAngle);
+};
+</code></pre>
+
+    <p>After that on user mouse activities the demo changes it’s view.
+        You can check it moving the mouse and using mouse wheel to zoom in/out:</p>
+
+    <p><span data-height="500" data-theme-id="178" data-slug-hash="xgdEQp" data-user="malyw" data-default-tab="result" class="codepen"></span></p>
+
+    <p>Essentially we just change the CSS Custom Properties values, everything else (rotating, zoom in/out) is done by CSS.</p>
+
+    <p>Just a useful tip: one of the easiest ways to debug the CSS custom property
+        values is just to show their content in CSS generated content (works in simple cases, e.g. for strings),
+        so the browser will automatically show the current (up to date) applied value:</p>
+
+    <pre><code class="language-css">body:after {
+    content: '--screen-category : 'var(--screen-category);
+}
+</code></pre>
+
+    <p>You can check it <a href="http://codepen.io/malyw/pen/oBWMOY">in the plain CSS demo (no HTML/JS)</a>
+        (resize a browser window to see the browser reflects the changed CSS Custom Property value automatically)</p>
+
+    <h2>Browsers support</h2>
+
+    <p>CSS custom properties for today are <a href="http://caniuse.com/#feat=css-variables">supported in all the major browsers</a>
+        (except EDGE, where <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/csscustompropertiesakacssvariables/?q=variab">they are in development</a>
+        and should be available in the next version):</p>
+
+    <figure>
+        <img src="./article-images/can-i-use.png"/>
+    </figure>
+
+    <p>It means, that after a short time they are supported in all browsers and you can start using them natively.</p>
+
+    <p>Meanwhile, you can learn the syntax, usage examples and consider possible ways of switching/using CSS and preprocessor variables in parallel.</p>
+
+    <p>And, of course, we need to have the ability to detect the support in both CSS and JS to provide fallbacks or vice versa, improvements.</p>
+
+    <p>It’s quite easy. For CSS you can use a <a href="https://developer.mozilla.org/en/docs/Web/CSS/@supports">supports condition</a>
+        with a dummy CSS Custom Property feature query:</p>
+
+    <pre><code class="language-css">@supports ( (--a: 0)) {
+    /* supported */
+}
+
+@supports ( not (--a: 0)) {
+    /* not supported */
+}
+</code></pre>
+
+    <p>In JavaScript you can use the same dummy Custom Property with <code>CSS.supports()</code> static method:</p>
+
+    <pre><code class="language-javascript">const isSupported = window.CSS &&
+    window.CSS.supports && window.CSS.supports('--a', 0);
+
+if (isSupported) {
+    /* supported */
+} else {
+    /* not supported */
+}
+</code></pre>
+
+    <p>As we saw, CSS Custom Properties are still not available in every browser.
+        Knowing that and having the ability to check if they are supported, you can progressively enhance
+        your application by checking if they are available.</p>
+
+    <p>For instance, you can generate 2 main CSS files:
+        one with CSS Custom Properties, and a second without them, where the Properties are inlined
+        (we will discuss the ways to do it further).</p>
+
+    <p>Load the second one by default.
+        After just do a check in JS and switch to the enhanced version if it’s supported:</p>
+
+    <pre><code class="language-markup">&lt;!-- html --&gt;
+&lt;link href="without-css-custom-properties.css"
+    rel="stylesheet" type="text/css" media="all" /&gt;
+</code></pre>
+
+    <pre><code class="language-javascript">// js
+if(isSupported){
+    removeCss('without-css-custom-properties.css');
+    loadCss('css-custom-properties.css');
+    // + conditionally apply some application enhancements
+    // using the Custom Properties
+}
+</code></pre>
+
+    <p>This is just an example, as you’ll see further, there are better options.</p>
+
+    <h2>How to start using</h2>
+
+    <p>Accordingly to <a href="https://ashleynolan.co.uk/blog/frontend-tooling-survey-2016-results">the recent survey</a>
+        Sass continuing being a main preprocessor for the community.</p>
+
+    <p>So let’s take it and consider options how we can start using CSS custom properties or being prepared for that using Sass.</p>
+
+    <p>There are a few options:</p>
+
+    <h3>1. Manual checks in the code if Custom Properties are supported and use them.</h3>
+
+    <p>One pro for this- yes, it will work and is something we can do right now (don’t forget, we have switched to SCSS):</p>
+
+    <pre><code class="language-scss">$color: red;
+:root {
+  --color: red;
+}
+
+.box {
+  @supports ( (--a: 0)) {
+    color: var(--color);
+  }
+  @supports ( not (--a: 0)) {
+    color: $color;
+  }
+}
+</code></pre>
+
+    <p>This way have many cons- overcomplicated code, copy-paste and is quite hard to maintain.</p>
+
+    <h3>2. Use a plugin which will automatically process your result CSS</h3>
+
+    <p>PostCSS plugins ecosystem provides dozens of plugins today.
+        A couple of them process Custom Properties (inline values) in the result CSS output and make it work,
+        assuming you provide only global variables (declare/change CSS Custom Properties only inside the <code>:root</code> selector(s)),
+        so their values can be easily inlined.</p>
+
+    <p>Here is an example- <a href="https://github.com/postcss/postcss-custom-properties">postcss-custom-properties</a>.</p>
+
+    <p>The plugin gives more pros: it makes the syntax work and
+        is compatible with all the PostCSS infrastructure, doesn’t require too much setup/configuration.</p>
+
+    <p>From cons:</p>
+
+    <ul>
+        <li>the plugin requires you to use CSS custom properties,
+            so you don’t have a path to prepare your project for a switch from Sass variables.
+        </li>
+        <li>You don’t have too much control on the transformation,
+            as it’s done after Sass is compiled to CSS
+        </li>
+        <li>plugin doesn’t provide much debug info.</li>
+    </ul>
+
+    <h3>3. <code>css-vars</code> mixin</h3>
+
+    <p>I started using CSS Custom Properties in most of my projects and tried many strategies:</p>
+
+    <ul>
+        <li>switch from Sass to PostCSS with <a href="http://cssnext.io/">cssnext</a></li>
+        <li>switch from Sass variables to pure CSS Custom Properties</li>
+        <li>use CSS variables in Sass detecting if they are supported</li>
+    </ul>
+
+    <p>As result having that experience I started looking for a solution which would satisfy my needs:</p>
+
+    <ul>
+        <li>is easy to start using with Sass</li>
+        <li>straightforward to use and syntax is as much close to native CSS Custom properties as possible</li>
+        <li>it should be easy to switch the CSS output from the inlined values to the CSS variables usage</li>
+        <li>if the team/member learned how to use the solution, it mostly means they are familiar with CSS Custom Properties</li>
+        <li>a way to have the debug info about edge cases in variables usage</li>
+    </ul>
+
+    <p>As result, I created the <code>css-vars</code> Sass
+        mixin which you can find on Github: <a href="https://github.com/malyw/css-vars">https://github.com/malyw/css-vars</a> <br/>
+        with which you can start using CSS Custom Properties -ish syntax.</p>
+
+    <h4>Mixin usage</h4>
+
+    <p>To declare variable(s), use the mixin as the following:</p>
+
+    <pre><code class="language-scss">$white-color: #fff;
+$base-font-size: 10px;
+
+@include css-vars((
+        --main-color: #000,
+        --main-bg: $white-color,
+        --main-font-size: 1.5*$base-font-size,
+        --padding-top: calc(2vh + 20px)
+));
+</code></pre>
+
+    <p>To use these variables, use the <code>var()</code> function:</p>
+
+    <pre><code class="language-scss">body {
+  color: var(--main-color);
+  background: var(--main-bg, #f00);
+  font-size: var(--main-font-size);
+  padding: var(--padding-top) 0 10px;
+}
+</code></pre>
+
+    <p>This gives you a way to control all the CSS output from one place (from Sass)
+        and start getting used to the syntax + you can reuse Sass variables/logic with the mixin.</p>
+
+    <p>When all the browsers you support work with CSS variables, everything you have to do is to add:</p>
+
+    <pre><code class="language-scss">$css-vars-use-native: true;
+</code></pre>
+
+    <p>And instead of aligning the variable properties in the result CSS,
+        the mixin will start registering Custom Properties and the <code>var()</code> usages will
+        go to the result CSS without any transformations.
+        Which means you’ll fully switch to CSS Custom Properties usage and have all the advantages we discussed.</p>
+
+    <p>If you want to turn on the useful debug info, add the following:</p>
+
+    <pre><code class="language-scss">$css-vars-debug-log: true;
+</code></pre>
+
+    <p>so you’ll have:</p>
+
+    <ul>
+        <li>logs when a variable was not assigned but used</li>
+        <li>logs when some variable is reassigned</li>
+        <li>info when a variable is not defined, but there is a default value passed, which is used instead</li>
+    </ul>
+
+    <h2>Conclusions</h2>
+
+    <p>Now you know the CSS Custom Properties syntax, advantages,
+        good usage examples and how to interact with them from JavaScript.</p>
+
+    <p>You have learned how to detect if they are supported,
+        how they are different from the CSS Preprocessor variables
+        and options to start using the native CSS variables till they are supported cross-browser.</p>
+
+    <p>So this is the perfect time to start using CSS Custom Properties
+        and preparing for their native support in the browsers.</p>
+
+
+    <h3>Author's Biography</h3>
+
+    <p>
+        Serg is a Lead Front-End Developer / Engineering Manager based in Dublin.
+    </p>
+
+    <p>
+        He loves the Web and shares his knowledge in his <a href="https://blog.hospodarets.com/">blog</a>.
+    </p>
+
+    <p>
+        Being a big fan of moving CSS and JavaScript forward, Serg participates specifications debates and discusses new features with the community.
+    </p>
+
+    <p>
+        He likes to stay on top of the latest Web technologies and browser additions, participates their development, standardization, and enhancement.
+    </p>
+
+    <p><a href="https://twitter.com/malyw">Twitter handle</a></p>
+    <p><a href="https://blog.hospodarets.com/">Website</a></p>
+
+    <p>Email address (only to generate your user account &mdash; won't be displayed in public): shospodarets@gmail.com</p>
+
+
+    <!--
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        STOP editing here
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+</div> <!--  .page -->
+<script src='styles-please-dont-delete/prism.js'></script>
+</body>
+</html>

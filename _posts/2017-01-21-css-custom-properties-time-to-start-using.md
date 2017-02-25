@@ -149,6 +149,7 @@ after any changes to the Custom Properties values:
     --indent-l: calc(var(--indent-size) + 2px);
     --indent-s: calc(var(--indent-size) - 2px);
     --indent-xs: calc(var(--indent-size)/2);
+}
 ```
 
 A problem waits for you when you try to use unit-less values.
@@ -424,7 +425,7 @@ Custom Properties to the rescue:
 }
 ```
 
-<span data-height="130" data-theme-id="178" data-slug-hash="KzZXRq" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="140" data-theme-id="178" data-slug-hash="KzZXRq" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
 ## Color themes
 
