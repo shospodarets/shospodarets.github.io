@@ -9,7 +9,7 @@ share_description: From now you can dynamically load ES modules on demand and us
 In the previous article
 [Native ECMAScript modules: the new features and differences from Webpack modules]({{ site.baseurl }}/native-ecmascript-modules-new-features)
  we understood the differences between ES modules and their implementation in bundlers/compilers like Webpack/Babel.
-So far we found couple gotchas and know how to use the `import`\`export` declarations and
+So far we found couple gotchas and know how to use the `import` \ `export` declarations and
 which caveats we may have using them in JS.
 
 But JavaScript went asynchronous many years ago, and it is a good practice is to use non-blocking Promise-based syntax
