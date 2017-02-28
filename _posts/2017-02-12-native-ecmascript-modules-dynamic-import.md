@@ -250,7 +250,7 @@ And here is the console output:
 
 **Takeaways:**
 
-- **`import()` can be used for the Dev/debugging purposes in the DevTools console**
+- **you can use dynamic imports in the DevTools console (useful for development and debugging)**
 
 ## Promise API advantages
 
@@ -446,7 +446,7 @@ so always keep in mind this fact to avoid unexpected bugs.
 
 **Takeaways:**
 
-- **you can use dynamic imports in DevTools console (useful for debugging)**
+- **`import()` specifier is always related to the file its called**
 
 
 # Support and polyfills
