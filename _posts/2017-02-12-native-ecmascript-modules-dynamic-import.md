@@ -224,6 +224,34 @@ if(user.loggedIn){
 - **dynamic `import()` can be used anywhere in your scripts**
 - **`import()` takes string literals and you can construct the specifier depending on your needs**
 
+## Debugging
+
+Regarding the debugging- the good of all this, that finally, you can play with ES modules in the browsers DevTools console,
+as `import()` is available from anywhere.
+
+You can easily load the module and test or debug it.
+Let's do a simple example,
+loading an official ECMAScript version of lodash, which is called [lodash-es](https://www.npmjs.com/package/lodash-es)
+and check its version and some of the functions:
+
+```js
+import("https://cdn.rawgit.com/lodash/lodash/4.17.4-es/lodash.default.js")
+.then(({default:_})=>{// load and use lodash 
+ console.log(`lodash version ${_.VERSION} is loaded`)
+ console.log('_.uniq([2, 1, 2]) :', _.uniq([2, 1, 2]));
+});
+```
+
+And here is the console output:
+
+<span class="smaller-img">
+    <img src="https://hospodarets.com/img/blog/1488318422492715000.png" />
+</span>
+
+**Takeaways:**
+
+- **`import()` can be used for the Dev/debugging purposes in the DevTools console**
+
 ## Promise API advantages
 
 So the dynamic import uses JS Promise API.
@@ -369,7 +397,7 @@ window.addEventListener("unhandledrejection", (event)=> {
 // process.on('unhandledRejection'... in case of Node.js
 ```
 
-# Caveats
+# Other caveats
 
 Let's discuss the relative paths in the `import()` specifier.
 As you may expect, it is relative to the file, from which it is called.
@@ -416,19 +444,10 @@ loadDependency('./dependency.js');// Successfully loaded
 As it is shown in the demo, the `import()` specifier is always relative to the file it's called from,
 so always keep in mind this fact to avoid unexpected bugs.
 
-
-
-Regarding the debugging- the good of all this, that finally, you can play with ES modules in browsers DevTools console,
-as `import()` is available from anywhere:
-
-<span class="smaller-img">
-    <img src="https://hospodarets.com/img/blog/1487815539233395000.png" />
-</span>
-
 **Takeaways:**
 
-- **`import()` specifier is always related to the file its called**
 - **you can use dynamic imports in DevTools console (useful for debugging)**
+
 
 # Support and polyfills
 
