@@ -281,7 +281,7 @@ That the common approach with bundlers, let's take a look how to make it work in
 For today each of the main browsers is working on shipping the ES6 modules:
 
 - Firefox- [implemented, available under the flag in Firefox 54+](https://bugzilla.mozilla.org/show_bug.cgi?id=568953)
-- Chrome- [work in progress](https://www.chromestatus.com/features/5365692190687232)
+- Chrome- [work in progress](https://www.chromestatus.com/feature/5365692190687232)
 - EDGE- [implemented, available under the flag in EDGE 15+](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/moduleses6/?q=module)
 - Webkit- [implemented, enabled by default in Safari 10.1](https://webkit.org/status/#feature-modules)
 - Node.js- [under consideration, requires additional discussion](https://github.com/nodejs/node-eps/blob/master/002-es6-modules.md)

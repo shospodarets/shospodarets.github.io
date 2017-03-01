@@ -132,7 +132,7 @@ in [Chrome](https://www.chromestatus.com/feature/5812155903377408) under the `En
 
 In Chrome up to 42 only JS part of the API is supported. In 43+ (currently it is [Canary](https://www.google.com/chrome/browser/canary.html) and [Dev Channel](https://www.chromium.org/getting-involved/dev-channel)) - both CSS and JS.
 
-Smooth scrolling to the anchors currently works only in Firefox. For Chrome it's [in development](https://www.chromestatus.com/features/5812155903377408).
+Smooth scrolling to the anchors currently works only in Firefox. For Chrome it's [in development](https://www.chromestatus.com/feature/5812155903377408).
 
 ## Profits
 1. It's a native solution. You can change browser scroll behavior with only one line of CSS!
