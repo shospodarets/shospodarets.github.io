@@ -14,17 +14,16 @@ module.exports = function (grunt) {
                     filename: 'js/main.min.js'
                 },
                 module: {
-                    loaders: [
+                    rules: [
                         {
                             test: /\.js$/,
                             exclude: [/node_modules/, /bower_components/],
-                            loader: 'babel',
-                            query: {
-                                // https://github.com/babel/babel-loader#options
-                                cacheDirectory: true,
-                                presets: ['es2015', 'stage-2'],
-                                compact: false
-                            }
+                            use: [{
+                                loader: 'babel-loader',
+                                options: {
+                                    presets: ["es2015", 'stage-2'/*, {"modules": false}*/]
+                                }
+                            }],
                         }
                     ],
                     noParse: [
@@ -33,18 +32,23 @@ module.exports = function (grunt) {
                     ]
                 },
                 resolve: {
-                    extensions: ['', '.js'],
-                    root: [
-                        '_js'
+                    extensions: ['.js'],
+                    modules: [
+                        path.join(__dirname, './_js'),
+                        'node_modules'
                     ]
                 },
                 resolveLoader: {
-                    root: path.join(__dirname, 'node_modules')// use common/node_modules for dependencies
+                    modules: [
+                        path.join(__dirname, './node_modules'),
+                        'node_modules'
+                    ]
                 },
                 //watch: true,
                 plugins: [
                     new webpack.optimize.UglifyJsPlugin({
                         minimize: true,
+                        sourceMap: true,
                         compress: {// http://lisperator.net/uglifyjs/compress
                             dead_code: false,
                             side_effects: false,

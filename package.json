@@ -18,13 +18,13 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^2.0.0",
     "grunt-shell": "^2.1.0",
-    "grunt-webpack": "^1.0.18",
+    "grunt-webpack": "^2.0.1",
     "jit-grunt": "^0.10.0",
     "postcss-cssnext": "^2.9.0",
     "postcss-import": "^9.1.0",
     "postcss-reporter": "^3.0.0",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
   },
   "private": true,
   "scripts": {
