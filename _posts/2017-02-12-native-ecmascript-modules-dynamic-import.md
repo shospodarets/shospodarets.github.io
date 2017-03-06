@@ -543,3 +543,8 @@ Here are the additional links for you:
 - [import() spec draft](https://tc39.github.io/proposal-dynamic-import/)
 - [node-es-module-loader](https://www.npmjs.com/package/node-es-module-loader)
 and [systemjs](https://github.com/systemjs/systemjs) by [Guy Bedford](https://twitter.com/guybedford)
+
+P.S.: You can also read my next article,
+where I describe the `nomodule` script attribute, which was introduced to have a way
+to painlessly start migrating to ES modules till they are supported in all the browsers:
+[Native ECMAScript modules: nomodule attribute for the migration]({{ site.baseurl }}/native-ecmascript-modules-nomodule).
