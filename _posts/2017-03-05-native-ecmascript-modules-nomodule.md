@@ -4,7 +4,6 @@ title: "Native ECMAScript modules: nomodule attribute for the migration"
 tags: [JavaScript, Browsers]
 share_image: https://hospodarets.com/img/blog/1488739109376005000.png
 share_description: nomodule script attribute provides an easy way to start migrating to ES modules till they are supported in all the browsers
-draft: true
 ---
 
 In one of my previous articles
