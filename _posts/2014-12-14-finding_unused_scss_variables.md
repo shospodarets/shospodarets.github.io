@@ -38,7 +38,7 @@ which are used in code only once
 Tested on MAC and Linux.
 
 ```bash
-# !/usr/bin/env bash
+#!/usr/bin/env bash
 # HOW TO USE
 # Save code to file
 # Run as "SCRIPT_FILE_NAME SASS_DIRECTORY"
