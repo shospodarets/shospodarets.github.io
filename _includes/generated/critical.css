@@ -91,7 +91,7 @@ img{
   font-style:italic;
   color:#666; }
 .clearfix:after,.clearfix:before{
-  display:table;
+  display:block;
   content:"";
   clear:both; }
 .more{
@@ -122,7 +122,7 @@ blockquote{
   -ms-flex-wrap:wrap;
       flex-wrap:wrap; }
 .social-links:after,.social-links:before{
-    display:table;
+    display:block;
     content:"";
     clear:both; }
 .social-links>*{
@@ -295,7 +295,7 @@ nav a{
 .posts .post-short:last-child{
   border-bottom:none; }
 .post:after,.post:before{
-  display:table;
+  display:block;
   content:"";
   clear:both; }
 .post .external-link-icon{
@@ -305,7 +305,7 @@ nav a{
   background:transparent url(/images/icons/external-link.svg) no-repeat 50%;
   background-size:auto 75%; }
 .post .meta:after,.post .meta:before{
-  display:table;
+  display:block;
   content:"";
   clear:both; }
 .post .meta .share-buttons{
@@ -330,7 +330,7 @@ nav a{
     .post .even-smaller-img img{
       max-width:30%; } }
 .entry:after,.entry:before{
-    display:table;
+    display:block;
     content:"";
     clear:both; }
 .entry .highlight{

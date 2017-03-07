@@ -22,6 +22,7 @@ The ways they appear is usual:
     </li>
     <li>
         etc.
+   </li>
 </ul>
 
 <div class="more"></div>
@@ -30,13 +31,14 @@ The ways they appear is usual:
 So was decided just to create simple shell script to find SCSS-syntax variables which appear in the code only one time.
 [Here it is](https://gist.github.com/malyw/fade28c8d398a3a86334#file-find-unused-scss-variables):
 
+
 > Script finds all SCSS variables (e.g. $some_variable-NAME1)
 which are used in code only once
 (e.g. declaration or using variable from some framework).
 Tested on MAC and Linux.
 
 ```bash
-#!/usr/bin/env bash
+# !/usr/bin/env bash
 # HOW TO USE
 # Save code to file
 # Run as "SCRIPT_FILE_NAME SASS_DIRECTORY"
@@ -77,6 +79,7 @@ Let's imagine you have folder "sass" where are SCSS files of your project. Then:
         As result you will have in the shell list of the unused SCSS variables
     </li>
 </ol>
+
 <img src="https://i.imgur.com/1o0jhwL.gif" alt=""/>
 
 

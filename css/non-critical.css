@@ -361,7 +361,7 @@
   display:flex;
   text-align:center; }
 .pagination:after,.pagination:before{
-    display:table;
+    display:block;
     content:"";
     clear:both; }
 .pagination a,.pagination em{
