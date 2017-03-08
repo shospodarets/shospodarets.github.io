@@ -7,7 +7,7 @@ share_description: nomodule script attribute provides an easy way to start migra
 ---
 
 In one of my previous articles
-[Native ECMAScript modules: the new features and differences from Webpack modules]({{ site.baseurl }}/https://blog.hospodarets.com/native-ecmascript-modules-new-features#detect-es-modules-are-supported-by-the-browser)
+[Native ECMAScript modules: the new features and differences from Webpack modules]({{ site.baseurl }}/native-ecmascript-modules-new-features#detect-es-modules-are-supported-by-the-browser)
 we attempted to detect if the browser supported ES modules.
 We needed this to determine either, to execute a bundled (classic) file or a script which uses the native ECMAScript module features.
  
