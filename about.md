@@ -30,8 +30,6 @@ JS, CSS and HTML enthusiast.
 
 ## Talks
 
-🇷🇺 [pitercss](https://pitercss.com/), Saint Petersburg (Russia), June 2017 `(upcoming)`
-
 🇳🇴 [NDC Oslo](http://ndcoslo.com/), Oslo (Norway), June 2017 `(upcoming)`
 
 🇬🇷 [Frontend United](http://frontendunited.org/), Athens (Greece), May 2017 `(upcoming)`
