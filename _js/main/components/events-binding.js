@@ -6,17 +6,6 @@ const EventsBinding = function () {
     this.bindEvents();
 };
 
-// unload
-EventsBinding.prototype.onUnload = function () {
-    const unloadingClass = 'unloading';
-
-    document.body.classList.add(unloadingClass);
-    // timeout in case of problem (e.g. page stuck after mailto: click on mac)
-    setTimeout(function () {
-        document.body.classList.remove(unloadingClass);
-    }, 5000);
-};
-
 // post click
 EventsBinding.prototype.onPostShortClick = function (e) {
     // Open post content on post-short click
@@ -53,9 +42,6 @@ EventsBinding.prototype.bindHeadingClick = function () {
 
 // BIND EVENTS
 EventsBinding.prototype.bindEvents = function () {
-    window.addEventListener('beforeunload', this.onUnload);
-    window.addEventListener('unload', this.onUnload);
-
     this.bindPostClick();
     this.bindHeadingClick();
 };

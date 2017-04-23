@@ -1,11 +1,3 @@
-.unloading {
-  /* added onbeforeunload page */
-  & #main {
-    opacity: 0.5;
-    pointer-events: none;
-  }
-}
-
 .date {
   font-style: italic;
   color: var(--gray-color);

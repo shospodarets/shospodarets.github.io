@@ -84,9 +84,6 @@ ol ul,ul ul{
   list-style-type:circle; }
 img{
   max-width:100%; }
-.unloading #main{
-    opacity:.5;
-    pointer-events:none; }
 .date{
   font-style:italic;
   color:#666; }
