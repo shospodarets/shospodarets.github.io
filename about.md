@@ -30,6 +30,8 @@ JS, CSS and HTML enthusiast.
 
 ## Talks
 
+🇪🇪 [Refresh](https://refresh.rocks/), Tallinn (Estonia), September 2017 `(upcoming)`
+
 🇳🇴 [NDC Oslo](http://ndcoslo.com/), Oslo (Norway), June 2017 `(upcoming)`
 
 🇬🇷 [Frontend United](http://frontendunited.org/), Athens (Greece), May 2017 `(upcoming)`
