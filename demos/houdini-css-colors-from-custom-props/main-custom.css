@@ -1,0 +1,73 @@
+/* HIDE BLOCK WHEN FUNCTIONALITY IS SUPPORTED */
+@supports (--a: 0) {
+    .is-not-supported {
+        display: none;
+    }
+}
+
+/* COMMON */
+.color {
+    width: 50px;
+    height: 50px;
+}
+
+/* SLIDERS */
+.sliders {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.sliders > * {
+    margin-right: 20px;
+}
+
+/* COLOR-BLOCK */
+.color-block {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.color-block > pre {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;margin: 0 10px;
+}
+
+.color-block > .color {
+    -ms-flex: 0 0 50px;
+    flex: 0 0 50px;
+}
+
+/* COLOR, FILTERS */
+.main-color {
+    background-color: rgba(var(--r), var(--g), var(--b), 1);
+}
+
+.grayscale {
+    background-color: rgba(
+            calc(0.2126 * var(--r)),
+            calc(0.7152 * var(--g)),
+            calc(0.0722 * var(--b)),
+            1
+    );
+}
+
+.invert {
+    background-color: rgba(
+            calc(255 - var(--r)),
+            calc(255 - var(--g)),
+            calc(255 - var(--b)),
+            1
+    );
+}
+
+.sepia {
+    background-color: rgba(
+            calc(var(--r) * 0.393 + var(--g) * 0.769 + var(--b) * 0.189),
+            calc(var(--r) * 0.349 + var(--g) * 0.686 + var(--b) * 0.168),
+            calc(var(--r) * 0.272 + var(--g) * 0.534 + var(--b) * 0.131),
+            1
+    );
+}
