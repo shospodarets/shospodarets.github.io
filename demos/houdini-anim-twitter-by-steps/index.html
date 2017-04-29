@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="resources/main.css">
+    <title>Houdini new twitter header by steps</title>
+</head>
+
+<body>
+<div class="top-nav-wrapper">
+    <ul class="top-nav">
+        <li>
+            <a href="#">
+                <span class="Icon Icon--home Icon--large"></span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="Icon Icon--lightning Icon--large"></span>
+                <span class="text">Moments</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="Icon Icon--notifications Icon--large"></span>
+                <span class="text">Notifications</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="Icon Icon--dm Icon--large"></span>
+                <span class="text">Messages</span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="tweet-btn-wrapper">
+        <div class="tweet-btn">
+            <span class="Icon Icon--tweet Icon--large"></span>
+        </div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="resources/banner.jpeg" alt="">
+</div>
+
+<div class="second-navbar">
+    <ul class="profile-list">
+        <li>
+            <a href="#">
+                    <span class="label">
+                        Tweets
+                    </span>
+                <span class="value">
+                        1,480
+                    </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                    <span class="label">
+                        Following
+                    </span>
+                <span class="value">
+                        445
+                    </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                    <span class="label">
+                        Followers
+                    </span>
+                <span class="value">
+                        12.1K
+                    </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                    <span class="label">
+                        Likes
+                    </span>
+                <span class="value">
+                        268
+                    </span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="small-avatar-wrapper">
+        <div class="small-avatar">
+            <img src="resources/avatar.jpg" alt="">
+            <div class="details">
+                <div class="name">
+                    Serg Hospodarets
+                </div>
+                <div class="username">
+                    @malyw
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="avatar-wrapper">
+        <div class="avatar">
+            <img src="resources/avatar.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<!--include Twitter timeline-->
+<a class="twitter-timeline" href="https://twitter.com/malyw">Tweets by malyw</a>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<!--HOUDINI PART START-->
+<script src="houdini/anim-worklet.js"></script>
+
+<style>
+    .avatar-wrapper {
+        --animator: scroll-worklet avatar;
+    }
+
+    .small-avatar {
+        --animator: scroll-worklet small-avatar;
+    }
+</style>
+
+<script>
+    window.polyfillAnimationWorklet.import('houdini/worklet.js');
+</script>
+<!--HOUDINI PART END-->
+
+</body>
+</html>
+
