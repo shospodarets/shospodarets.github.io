@@ -20,29 +20,32 @@
         assignGlobalProp('b', Number(rgbaArr[2]));
     });
 
-    // register CSS variables types to improve performance
-    const optimizationOn = true;
-    if (optimizationOn) {
-        ['--main-r', '--main-g', '--main-b'].forEach((name) => {
-            CSS.registerProperty({
-                name,
-                syntax: '<number>',
-                initialValue: 255
-            })
-        });
+    // OPTIONS
+    const options = {};
 
-        ['--is-in-light-half-r', '--is-in-light-half-g', '--is-in-light-half-b'].forEach((name) => {
-            CSS.registerProperty({
-                name,
-                syntax: '<number>',
-                initialValue: 1
-            });
-        });
-    }
+    let optionEls = document.querySelectorAll('.options input');
+    optionEls = [...optionEls];
 
-    // auto changer
-    const autochangerOn = false;
-    if (autochangerOn) {
+    optionEls.forEach((optionEl) => {
+        // use DOM classes as option names
+        const optionName = optionEl.className;
+
+        // INIT
+        // checkbox state from localStorage
+        const optionEnabled = localStorage[optionName] === 'true';
+        optionEl.checked = optionEnabled;
+        // option value
+        options[optionName] = optionEnabled;
+
+        // EVENTS
+        optionEl.addEventListener('change', () => {
+            localStorage[optionName] = optionEl.checked;
+            window.location.reload();
+        });
+    });
+
+    // AUTOCHANGER
+    if (options.autochanger) {
         function autochangeProperty(propName) {
             let propValue = Number(getComputedStyle(document.documentElement).getPropertyValue(`--main-${propName}`).trim());
             let propIncrease = true;// indicates to increase or decrease in the next iteration
@@ -67,5 +70,25 @@
         autochangeProperty('r');
         autochangeProperty('g');
         autochangeProperty('b');
+    }
+
+    // OPTIMIZATIONS
+    // register CSS variables types to improve performance
+    if (options.optimizer) {
+        ['--main-r', '--main-g', '--main-b'].forEach((name) => {
+            CSS.registerProperty({
+                name,
+                syntax: '<number>',
+                initialValue: 255
+            })
+        });
+
+        ['--is-in-light-half-r', '--is-in-light-half-g', '--is-in-light-half-b'].forEach((name) => {
+            CSS.registerProperty({
+                name,
+                syntax: '<number>',
+                initialValue: 1
+            });
+        });
     }
 })();

@@ -130,8 +130,46 @@
     }
 </style>
 
+<div class="options">
+    <h5>Demo Options (reload the page on change):</h5>
+    <div>
+        <label>
+            <input type="checkbox" class="bysteps">
+            Animate by steps
+        </label>
+    </div>
+</div>
+
 <script>
-    window.polyfillAnimationWorklet.import('houdini/worklet.js');
+    // OPTIONS
+    const options = {};
+
+    let optionEls = document.querySelectorAll('.options input');
+    optionEls = [...optionEls];
+
+    optionEls.forEach((optionEl) => {
+        // use DOM classes as option names
+        const optionName = optionEl.className;
+
+        // INIT
+        // checkbox state from localStorage
+        const optionEnabled = localStorage[optionName] === 'true';
+        optionEl.checked = optionEnabled;
+        // option value
+        options[optionName] = optionEnabled;
+
+        // EVENTS
+        optionEl.addEventListener('change', () => {
+            localStorage[optionName] = optionEl.checked;
+            window.location.reload();
+        });
+    });
+
+    if (!options.bysteps) {
+        window.polyfillAnimationWorklet.import('houdini/animate-on-edge.js');
+    } else {
+        window.polyfillAnimationWorklet.import('houdini/animate-by-steps.js');
+    }
 </script>
 <!--HOUDINI PART END-->
 

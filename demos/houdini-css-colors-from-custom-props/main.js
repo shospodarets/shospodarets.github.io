@@ -13,11 +13,33 @@ inputsArr.forEach(function (input) {
     setProp(input.name, input.value);// init values
 });
 
+// OPTIONS
+const options = {};
 
-// AUTOCHAGER
-const enableAutoChanger = true;
+let optionEls = document.querySelectorAll('.options input');
+optionEls = [...optionEls];
 
-if (enableAutoChanger) {
+optionEls.forEach((optionEl) => {
+    // use DOM classes as option names
+    const optionName = optionEl.className;
+
+    // INIT
+    // checkbox state from localStorage
+    const optionEnabled = localStorage[optionName] === 'true';
+    optionEl.checked = optionEnabled;
+    // option value
+    options[optionName] = optionEnabled;
+
+    // EVENTS
+    optionEl.addEventListener('change', () => {
+        localStorage[optionName] = optionEl.checked;
+        window.location.reload();
+    });
+});
+
+
+// AUTOCHANGER
+if (options.autochanger) {
     let isValueGrowth = true; //boolean to indicate to add or minus the value
 
     const firstInput = inputsArr[0];
@@ -44,10 +66,8 @@ if (enableAutoChanger) {
     }, 5);
 }
 
-// OPTIMIZATION
-const enableOptimization = enableAutoChanger && true;
-
-if (enableOptimization && CSS.registerProperty) {
+// OPTIMIZATIONS
+if (options.optimizer) {
     // register props
     CSS.registerProperty({
         name: '--r',
