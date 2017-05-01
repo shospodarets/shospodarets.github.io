@@ -16,10 +16,8 @@ Now we are facing the situation when [the support amongst them is close to 100%]
 
 
 But the standard actually introduced also [ECMAScript modules](http://www.ecma-international.org/ecma-262/6.0/#sec-modules) (today also often named ES or ES6 modules).
-It's the only part which took (and still taking) the most time to implement as none browser published it yet in the stable version.
-
-Recently Safari 10.1 (Safari Beta), Firefox 54 (Nighly) and Edge 15 (next EDGE version) shipped the native implementation out of the box or behind a flag, so the time we can
-use this without module bundlers is coming.
+It's the only part which took (and still taking) the most time to implement as
+only some have shipped it in the stable version, but all have the implementation available.
 
 To understand better how we come to this point let's start from the JS modules history and
 then take a look at the current Native ES modules features and implementations.
@@ -290,13 +288,17 @@ For today all the major browsers have ES6 modules implementation available:
 
 ## Getting the environment to test
 
-As we saw, currently you can test native JS modules in Safari 10.1+ and EDGE 15 Preview Build.
-Let's download and enable the features in them:
+As we saw, currently you can test native JS modules in Safari 10.1+ out of the box.
+To test them in other browsers you have to:
+
+### Getting Chrome with the ES modules enabled
+
+* download [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
+or [Chromium](https://www.chromium.org/getting-involved/download-chromium)
+* open the `chrome://flags/#enable-experimental-web-platform-features` URL
+* turn on the flag and reload the browser
 
 ### Enabling ES modules in Firefox
-
-Currently you have to download [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/), which means it will be really soon in
-[FF Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) and then in the stable version.
 
 To enable the ES modules:
 
@@ -306,23 +308,6 @@ To enable the ES modules:
 * double click to change its value to "true"
 
 That's it, now you can test how the module scripts work in FF.
-
-### Getting the Safari Technology Preview with the ES modules enabled
-
-If you use macOS, just download the latest Safari Technology Preview (TP) from [developer.apple.com](https://developer.apple.com/safari/download/)
-
-Install and open it.
-
-Starting from the
-[Safari Technology Preview version 21+, the ES modules are enabled by default](https://webkit.org/blog/7265/release-notes-for-safari-technology-preview-21/).
-
-If it's Safari TP 19 or 20, check that ES6 modules feature is enabled, opening "Develop" menu -> "Experimental Features" -> "ES6 Modules".
-
-<span class="smaller-img">
-    <img src="https://hospodarets.com/img/blog/1482848774988713000.gif" />
-</span>
-
-Another option is to [download the latest Webkit Nightly](https://webkit.org/downloads/) and play with it.
 
 ### Getting the EDGE 15 with ES modules enabled
 
