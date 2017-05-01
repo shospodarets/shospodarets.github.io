@@ -284,6 +284,9 @@ For today all the major browsers have ES6 modules implementation available:
 - Webkit- [implemented, enabled by default in Safari 10.1 (iOS 10.3)](https://webkit.org/status/#feature-modules)
 - Node.js- [work in progress](https://github.com/nodejs/node/issues/8866)
 
+[Demo](https://codepen.io/malyw/project/full/DkddeZ/) and
+[Code](https://github.com/malyw/es-modules-utils) to test the browser support.
+
 <div class="caniuse" data-feature="es6-module"></div>
 
 ## Getting the environment to test
