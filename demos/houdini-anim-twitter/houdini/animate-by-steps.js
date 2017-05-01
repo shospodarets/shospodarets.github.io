@@ -41,7 +41,10 @@ registerAnimator('scroll-worklet', class {
             elem.outputStyleMap.set('transform',
                 new CSSTransformValue(
                     [
-                        new CSSTranslation(0, new CSSSimpleLength(100 - currentPercent, '%'), 0)
+                        new CSSTranslation(
+                            0,
+                            new CSSSimpleLength(100 - currentPercent, '%'),
+                            0)
                     ]
                 )
             );

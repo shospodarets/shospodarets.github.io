@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Houdini CSS Custom Properties based Themes demo</title>
+    <title>Custom Properties based Themes demo</title>
 </head>
 <body>
 
@@ -15,6 +15,14 @@
 <!-- credits to http://codepen.io/Funchilly/pen/dOOqNz -->
 <header>
     <nav>
+        <div class="base-color-wrapper">
+            <label>
+                Pick base color: <input type="color" class="base-color" value="#ffffff">
+                <br>
+                (all other colors are generated from it)
+
+            </label>
+        </div>
         <div class="links">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -85,10 +93,8 @@
     </div>
 </div>
 
-<div class="absolute-hidden"></div>
-
 <div class="options">
-    <h5>Demo Options (reload the page on change):</h5>
+    <h5>Demo Options (auto reload the page on change):</h5>
     <div>
         <label>
             <input type="checkbox" class="autochanger">

@@ -3,22 +3,31 @@
      * Listen base color change and assign global CSS variables from it
      */
 
-    const baseColorTransitionEl = document.querySelector('.absolute-hidden');
-
     function assignGlobalProp(name, value) {
         document.documentElement.style.setProperty(`--main-${name}`, value);
         document.documentElement.style.setProperty(`--is-in-light-half-${name}`, value > 126 ? 1 : -1);
     }
 
-    baseColorTransitionEl.addEventListener("transitionend", function () {
-        const baseColor = getComputedStyle(baseColorTransitionEl).backgroundColor;
-        // expected color is rgb(r,g,b) or rgba(r,g,b,a)
-        const rgbaArr = baseColor.split('(')[1].split(')')[0].split(',');
+    const baseColorInput = document.querySelector('.base-color');
 
-        assignGlobalProp('r', Number(rgbaArr[0]));
-        assignGlobalProp('g', Number(rgbaArr[1]));
-        assignGlobalProp('b', Number(rgbaArr[2]));
+    baseColorInput.addEventListener("input", function () {
+        changeMainColors(baseColorInput.value);
     });
+
+
+    function changeMainColors(baseColorHex) {
+        // expected color is rgb(r,g,b) or rgba(r,g,b,a)
+        const r = parseInt(baseColorHex.substring(1, 3), 16);
+        const g = parseInt(baseColorHex.substring(3, 5), 16);
+        const b = parseInt(baseColorHex.substring(5, 7), 16);
+
+        assignGlobalProp('r', r);
+        assignGlobalProp('g', g);
+        assignGlobalProp('b', b);
+    }
+
+    // INIT
+    changeMainColors(baseColorInput.value);
 
     // OPTIONS
     const options = {};
