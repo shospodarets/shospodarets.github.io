@@ -278,13 +278,13 @@ That the common approach with bundlers, let's take a look how to make it work in
 
 ## Browsers support
 
-For today each of the main browsers is working on shipping the ES6 modules:
+For today all the major browsers have ES6 modules implementation available:
 
 - Firefox- [implemented, available under the flag in Firefox 54+](https://bugzilla.mozilla.org/show_bug.cgi?id=568953)
-- Chrome- [work in progress](https://www.chromestatus.com/feature/5365692190687232)
+- Chrome- [implemented, available under the flag in Chrome 60+](https://groups.google.com/a/chromium.org/d/msg/blink-dev/uba6pMr-jec/s4xe95KJCgAJ)
 - EDGE- [implemented, available under the flag in EDGE 15+](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/moduleses6/?q=module)
-- Webkit- [implemented, enabled by default in Safari 10.1](https://webkit.org/status/#feature-modules)
-- Node.js- [under consideration, requires additional discussion](https://github.com/nodejs/node-eps/blob/master/002-es6-modules.md)
+- Webkit- [implemented, enabled by default in Safari 10.1 (iOS 10.3)](https://webkit.org/status/#feature-modules)
+- Node.js- [work in progress](https://github.com/nodejs/node/issues/8866)
 
 <div class="caniuse" data-feature="es6-module"></div>
 
