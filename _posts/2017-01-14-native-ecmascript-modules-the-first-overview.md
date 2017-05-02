@@ -272,11 +272,11 @@ In that case typically the index.html file contains the following:
 And you app is using the bundled/transpiled JS code.
 That the common approach with bundlers, let's take a look how to make it work in the browser without any bundlers.
 
-# How to make JavaScript modules work in the browser
+# How to make ECMAScript modules work in the browser
 
 ## Browsers support
 
-For today all the major browsers have ES6 modules implementation available:
+For today all the major browsers have ES modules implementation available:
 
 - Firefox- [implemented, available under the flag in Firefox 54+](https://bugzilla.mozilla.org/show_bug.cgi?id=568953)
 - Chrome- [implemented, available under the flag in Chrome 60+](https://groups.google.com/a/chromium.org/d/msg/blink-dev/uba6pMr-jec/s4xe95KJCgAJ)
