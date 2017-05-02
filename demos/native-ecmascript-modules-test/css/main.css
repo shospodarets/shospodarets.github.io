@@ -1,0 +1,99 @@
+/* reset + structure */
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 30px;
+    color: #fff;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+body > * {
+    padding: 5px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* common */
+
+.support-wrapper {
+    font-size: 110px;
+    font-weight: bold;
+}
+
+.support {
+    display: none;
+}
+
+.supported-yes {
+    background-color: green;
+}
+
+.supported-yes .yes {
+    display: block;
+}
+
+.supported-no {
+    background-color: #f00;
+}
+
+.supported-no .no {
+    display: block;
+}
+
+.supported-yes.supported-no {
+    background-color: #FFA500;
+}
+
+.supported-yes.supported-no .yes,
+.supported-yes.supported-no .no {
+    display: none;
+}
+
+.supported-yes.supported-no .partially {
+    display: block;
+}
+
+.supported-yes.supported-no .partially .small {
+    font-size: 30%;
+}
+
+/* dynamic */
+.dynamic-yes, .dynamic-no{
+    display: none;
+}
+
+.dynamic-supported-yes .dynamic-yes{
+    display: inline-block;
+}
+
+.dynamic-supported-no footer{
+    color: #FFD700;
+}
+
+.dynamic-supported-no .dynamic-no{
+    display: inline-block;
+}
