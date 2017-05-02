@@ -166,9 +166,9 @@
     });
 
     if (!options.bysteps) {
-        window.polyfillAnimationWorklet.import('houdini/animate-on-edge.js');
+        window.polyfillAnimationWorklet.import('./animate-on-edge.js');
     } else {
-        window.polyfillAnimationWorklet.import('houdini/animate-by-steps.js');
+        window.polyfillAnimationWorklet.import('./animate-by-steps.js');
     }
 </script>
 <!--HOUDINI PART END-->
