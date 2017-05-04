@@ -1,0 +1,274 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial sans-serif;
+  margin: 0;
+  color: rgb(102, 117, 127);
+}
+
+a {
+  color: rgb(102, 117, 127);
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* header */
+
+.top-nav-wrapper {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 10px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.top-nav {
+  display: flex;
+  flex: 1 1 auto;
+  list-style: none;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0 10px 0 0;
+  overflow: hidden;
+}
+
+.top-nav li {
+  margin-right: 25px;
+}
+
+.top-nav .text {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 3px;
+}
+
+.tweet-btn-wrapper {
+  flex: 0 0 auto;
+}
+
+.tweet-btn {
+  color: #fff;
+  padding: 0 7px 0 8px;
+  background: rgba(27, 149, 224, .8);
+  height: 32px;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+
+}
+
+/* banner */
+
+.banner {
+  position: sticky;
+  height: 150px;
+  overflow: hidden;
+  top: -85px;
+}
+
+.banner img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* second-navbar */
+
+.second-navbar {
+  padding: 14px 10px 7px 240px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 65px;
+  background-color: #fff;
+  transform-style: preserve-3d;
+}
+
+.profile-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  overflow: hidden;
+}
+
+.profile-list a {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.profile-list li {
+  margin-right: 30px;
+}
+
+.profile-list .label {
+  font-size: 11px;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+.profile-list .value {
+  color: #66757f;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 3px;
+}
+
+/* icons */
+
+@font-face {
+  font-family: "rosettaIconFont";
+  src: url(assets/rosetta-icons-Regular.woff);
+}
+
+.Icon {
+  font-family: 'rosettaIconFont';
+  font-size: 25px;
+  display: block;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Icon--home:before {
+  content: "\f053";
+}
+
+.Icon--lightning:before {
+  content: "\f160";
+}
+
+.Icon--notifications:before {
+  content: "\f055";
+}
+
+.Icon--dm:before {
+  content: "\f054";
+}
+
+.Icon--tweet:before {
+  content: "\f029";
+}
+
+/* avatar */
+
+.avatar-wrapper {
+  position: absolute;
+  top: -90px;
+  left: 5px;
+  transition: transform 0.3s, background-color 1s;
+  transform-style: preserve-3d;
+}
+
+.avatar {
+  background: #fff;
+  border: 5px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 1px rgba(136, 153, 166, 0.15);
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  transition: transform 1s;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+/* small-avatar */
+
+.small-avatar-wrapper {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  overflow: hidden;
+}
+
+.small-avatar {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  transition: transform 0.3s;
+}
+
+.small-avatar img {
+  border-radius: 4px;
+  height: 36px;
+  max-width: 100%;
+  width: 36px;
+}
+
+.small-avatar .details {
+  padding-left: 10px;
+}
+
+.small-avatar .name {
+  color: #14171a;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.small-avatar .username {
+  font-size: 14px;
+  color: #1B95E0;
+}
+
+/* 3d dependency */
+.world-wrapper-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.world-wrapper {
+  height: 100%;
+}
+
+.world-inner{
+  height: 100%;
+  overflow: auto;
+}
+
+.world {
+  transition: transform 1s;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+// 3D
+body._3d_{
+  .world-wrapper {
+    perspective: 400;
+    perspective: 400px;
+  }
+  .world {
+    transform: translateZ(0px) rotateZ(34deg) rotateX(34deg) rotateY(-29deg) translateX(251px) translateY(340px) translateZ(127px);
+  }
+
+  .avatar-wrapper {
+    background-color: rgba(0,0,255, 0.5);
+  }
+
+  .avatar {
+    transform: translateZ(50px);
+  }
+}
