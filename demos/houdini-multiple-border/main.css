@@ -15,6 +15,10 @@
     border-image: paint(border-colors);
     border-image-slice: var(--worklet-border-top-width) var(--worklet-border-right-width) var(--worklet-border-bottom-width) var(--worklet-border-left-width);
     border-width: calc(var(--worklet-border-top-width) * 1px) calc(var(--worklet-border-right-width) * 1px) calc(var(--worklet-border-bottom-width) * 1px) calc(var(--worklet-border-left-width) * 1px);
+
+    background-repeat:no-repeat;
+    background-size: 100%;
+    /*background-image: paint(border-colors);*/
 }
 
 /* concrete multiple borders */

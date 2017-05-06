@@ -26,74 +26,80 @@ registerPaint('border-colors', class {
     }
 
     paint(ctx, size, styleMap) {
-        const tw = styleMap.get('--worklet-border-top-width').value;
-        const rw = styleMap.get('--worklet-border-right-width').value;
-        const bw = styleMap.get('--worklet-border-bottom-width').value;
-        const lw = styleMap.get('--worklet-border-left-width').value;
+        const topWidth = styleMap.get('--worklet-border-top-width').value;
+        const rightWidth = styleMap.get('--worklet-border-right-width').value;
+        const bottomWidth = styleMap.get('--worklet-border-bottom-width').value;
+        const leftWidth = styleMap.get('--worklet-border-left-width').value;
 
-        const ti = tw;
-        const ri = size.width - rw;
-        const bi = size.height - bw;
-        const li = lw;
+        const topBorderBeginning = topWidth;
+        const rightBorderBeginning = size.width - rightWidth;
+        const bottomBorderBeginning = size.height - bottomWidth;
+        const leftBorderBeginning = leftWidth;
 
-        let tp, rp, bp, lp, colors;
+        // To make implementation simple
+        // border width is just divided equally between assigned colors
+        // (doesn't take each border color width in CSS)
+        let topSquadSize, rightSquadSize, bottomSquadSize, leftSquadSize, borderColors;
+
         const updateProgression = function () {
-            tp = tw / colors.length;
-            rp = rw / colors.length;
-            bp = bw / colors.length;
-            lp = lw / colors.length;
+            topSquadSize = topWidth / borderColors.length;
+            rightSquadSize = rightWidth / borderColors.length;
+            bottomSquadSize = bottomWidth / borderColors.length;
+            leftSquadSize = leftWidth / borderColors.length;
         };
 
-        colors = this.getColors(styleMap, '--worklet-border-top-color');
+        // BORDER-TOP
+        borderColors = this.getColors(styleMap, '--worklet-border-top-color');
         updateProgression();
-        for (let i = 0; i < colors.length; i++) {
-            ctx.fillStyle = colors[i].cssText;
-            this.fillQuad(ctx,
-                li - lp * i, ti - tp * i,
-                li - lp * (i + 1), ti - tp * (i + 1),
-                ri + lp * (i + 1), ti - tp * (i + 1),
-                ri + lp * i, ti - tp * i);
+        for (let i = 0; i < borderColors.length; i++) {
+            this.fillQuad(ctx, borderColors[i].cssText,
+                leftBorderBeginning - leftSquadSize * i, topBorderBeginning - topSquadSize * i,
+                leftBorderBeginning - leftSquadSize * (i + 1), topBorderBeginning - topSquadSize * (i + 1),
+                rightBorderBeginning + leftSquadSize * (i + 1), topBorderBeginning - topSquadSize * (i + 1),
+                rightBorderBeginning + leftSquadSize * i, topBorderBeginning - topSquadSize * i);
         }
 
-        colors = this.getColors(styleMap, '--worklet-border-right-color');
+        // BORDER-RIGHT
+        borderColors = this.getColors(styleMap, '--worklet-border-right-color');
         updateProgression();
-        for (let i = 0; i < colors.length; i++) {
-            ctx.fillStyle = colors[i].cssText;
-            this.fillQuad(ctx,
-                ri + rp * i, ti - tp * i,
-                ri + rp * (i + 1), ti - tp * (i + 1),
-                ri + rp * (i + 1), bi + bp * (i + 1),
-                ri + rp * i, bi + bp * i);
+        for (let i = 0; i < borderColors.length; i++) {
+            this.fillQuad(ctx, borderColors[i].cssText,
+                rightBorderBeginning + rightSquadSize * i, topBorderBeginning - topSquadSize * i,
+                rightBorderBeginning + rightSquadSize * (i + 1), topBorderBeginning - topSquadSize * (i + 1),
+                rightBorderBeginning + rightSquadSize * (i + 1), bottomBorderBeginning + bottomSquadSize * (i + 1),
+                rightBorderBeginning + rightSquadSize * i, bottomBorderBeginning + bottomSquadSize * i);
         }
 
-        colors = this.getColors(styleMap, '--worklet-border-bottom-color');
+        // BORDER-BOTTOM
+        borderColors = this.getColors(styleMap, '--worklet-border-bottom-color');
         updateProgression();
-        for (let i = 0; i < colors.length; i++) {
-            ctx.fillStyle = colors[i].cssText;
-            this.fillQuad(ctx,
-                ri + rp * i, bi + bp * i,
-                ri + rp * (i + 1), bi + bp * (i + 1),
-                li - lp * (i + 1), bi + bp * (i + 1),
-                li - lp * i, bi + bp * i);
+        for (let i = 0; i < borderColors.length; i++) {
+            this.fillQuad(ctx, borderColors[i].cssText,
+                rightBorderBeginning + rightSquadSize * i, bottomBorderBeginning + bottomSquadSize * i,
+                rightBorderBeginning + rightSquadSize * (i + 1), bottomBorderBeginning + bottomSquadSize * (i + 1),
+                leftBorderBeginning - leftSquadSize * (i + 1), bottomBorderBeginning + bottomSquadSize * (i + 1),
+                leftBorderBeginning - leftSquadSize * i, bottomBorderBeginning + bottomSquadSize * i);
         }
 
-        colors = this.getColors(styleMap, '--worklet-border-left-color');
+        // BORDER-LEFT
+        borderColors = this.getColors(styleMap, '--worklet-border-left-color');
         updateProgression();
-        for (let i = 0; i < colors.length; i++) {
-            ctx.fillStyle = colors[i].cssText;
-            this.fillQuad(ctx,
-                li - lp * i, bi + bp * i,
-                li - lp * (i + 1), bi + bp * (i + 1),
-                li - lp * (i + 1), ti - tp * (i + 1),
-                li - lp * i, ti - tp * i);
+        for (let i = 0; i < borderColors.length; i++) {
+            this.fillQuad(ctx, borderColors[i].cssText,
+                leftBorderBeginning - leftSquadSize * i, bottomBorderBeginning + bottomSquadSize * i,
+                leftBorderBeginning - leftSquadSize * (i + 1), bottomBorderBeginning + bottomSquadSize * (i + 1),
+                leftBorderBeginning - leftSquadSize * (i + 1), topBorderBeginning - topSquadSize * (i + 1),
+                leftBorderBeginning - leftSquadSize * i, topBorderBeginning - topSquadSize * i);
         }
     }
 
+    // HELPERS
     getColors(styleMap, propName) {
         return styleMap.getAll(propName);
     }
 
-    fillQuad(ctx, x1, y1, x2, y2, x3, y3, x4, y4) {
+    fillQuad(ctx, fillColor, x1, y1, x2, y2, x3, y3, x4, y4) {
+        ctx.fillStyle = fillColor;
         ctx.beginPath();
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
