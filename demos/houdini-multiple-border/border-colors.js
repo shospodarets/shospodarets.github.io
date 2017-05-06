@@ -26,6 +26,8 @@ registerPaint('border-colors', class {
     }
 
     paint(ctx, size, styleMap) {
+        console.log('paint');
+
         const topWidth = styleMap.get('--worklet-border-top-width').value;
         const rightWidth = styleMap.get('--worklet-border-right-width').value;
         const bottomWidth = styleMap.get('--worklet-border-bottom-width').value;
