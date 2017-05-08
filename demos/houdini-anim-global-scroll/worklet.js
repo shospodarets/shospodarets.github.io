@@ -1,7 +1,7 @@
-registerAnimator('global-scroll-position-worklet', class CanBeNamed {
+registerAnimator('scroll-position-worklet', class ScrollPositionAnimator {
     static get elements() {
         return [{
-            name: 'scrollerElelementReference',
+            name: 'scrollerElementReference',
             inputProperties: [],
             outputProperties: ['transform']
         }]
@@ -14,7 +14,7 @@ registerAnimator('global-scroll-position-worklet', class CanBeNamed {
     };
 
     animate(elementMap, timelines) {
-        elementMap.get('scrollerElelementReference').forEach(elem => {
+        elementMap.get('scrollerElementReference').forEach(elem => {
             elem.outputStyleMap.set('transform', new CSSTransformValue([
                 new CSSTranslation(
                     new CSSSimpleLength(
