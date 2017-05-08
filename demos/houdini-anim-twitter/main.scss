@@ -243,7 +243,7 @@ a {
   height: 100%;
 }
 
-.world-inner{
+.world-inner {
   height: 100%;
   overflow: auto;
 }
@@ -255,17 +255,21 @@ a {
 }
 
 // 3D
-body._3d_{
+body._3d_ {
   .world-wrapper {
     perspective: 400;
     perspective: 400px;
   }
   .world {
-    transform: translateZ(0px) rotateZ(34deg) rotateX(34deg) rotateY(-29deg) translateX(251px) translateY(340px) translateZ(127px);
+    transform: translateZ(0) rotateZ(17deg) rotateX(17deg) rotateY(-14deg) translateX(125px) translateY(340px) translateZ(-68px);
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      transform: translateZ(0px) rotateZ(34deg) rotateX(34deg) rotateY(-29deg) translateX(251px) translateY(340px) translateZ(127px);
+    }
   }
 
   .avatar-wrapper {
-    background-color: rgba(0,0,255, 0.5);
+    background-color: rgba(0, 0, 255, 0.5);
   }
 
   .avatar {

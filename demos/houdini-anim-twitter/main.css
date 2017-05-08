@@ -215,10 +215,15 @@ a{
   transform-style:preserve-3d; }
 
 body._3d_ .world-wrapper{
+  perspective:400;
   perspective:400px; }
 
 body._3d_ .world{
-  transform:translateZ(0) rotate(34deg) rotateX(34deg) rotateY(-29deg) translateX(251px) translateY(340px) translateZ(127px); }
+  transform:translateZ(0) rotate(17deg) rotateX(17deg) rotateY(-14deg) translateX(125px) translateY(340px) translateZ(-68px); }
+
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:2dppx){
+    body._3d_ .world{
+      transform:translateZ(0) rotate(34deg) rotateX(34deg) rotateY(-29deg) translateX(251px) translateY(340px) translateZ(127px); } }
 
 body._3d_ .avatar-wrapper{
   background-color:rgba(0,0,255,.5); }
