@@ -6,10 +6,17 @@ registerPaint('eye-paint', class {
     }
 
     paint(ctx, size, styleMap) {
-        console.log('paint');
 
         const eyePropValue = styleMap.get('--eye').cssText;
-        const isRightEye = (eyePropValue === 'right');
+        const isLeftEye = (eyePropValue === 'left');
+        let eyeBg = 'lightblue';
+
+        if(isLeftEye){
+            console.log(`%cpaint the ${isLeftEye ? 'left' : 'right'} eye`,`background:${eyeBg}; color: white; padding: 0 5px;`);
+        }else{
+            eyeBg = 'green';
+            console.log(`%cpaint the ${isLeftEye ? 'left' : 'right'} eye`,`background:${eyeBg}; color: white; padding: 0 5px;`);
+        }
 
         const smallerSize = Math.min(size.width, size.height);
 
@@ -37,7 +44,7 @@ registerPaint('eye-paint', class {
             let dx = mouseX - this.xOrigin;
             let dy = mouseY - this.yOrigin;
 
-            if (isRightEye) {// right eye
+            if (isLeftEye) {// right eye
                 dx = mouseX + this.xOrigin;
                 dy = mouseY + this.yOrigin;
             }
@@ -85,6 +92,9 @@ registerPaint('eye-paint', class {
         };
 
         // DRAW
+        if(isLeftEye){
+
+        }
         const eye = new Eye({
             x: size.width / 2,
             y: size.height / 2,
@@ -92,7 +102,7 @@ registerPaint('eye-paint', class {
             irisRadius: size.width / 8,
             pupilRadius: size.width / 24,
             scleraColor: '#fff',
-            irisColor: 'hsla(100, 80%, 60%, 1)',
+            irisColor: eyeBg,
             pupilColor: '#111'
         });
         eye.update();
