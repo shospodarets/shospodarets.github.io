@@ -1,22 +1,20 @@
-registerPaint('cursor-follow-eyes', class {
+registerPaint('eye-paint', class {
     static get inputProperties() {
         return [
-            '--origin-x',
-            '--origin-y',
-            '--mouse-x',
-            '--mouse-y',
+            '--eye',
         ];
     }
 
     paint(ctx, size, styleMap) {
         console.log('paint');
 
-        let smallerSize = Math.min(size.width, size.height);
+        const eyePropValue = styleMap.get('--eye').cssText;
+        const isRightEye = (eyePropValue === 'right');
 
-        const originX = styleMap.get('--origin-x').value;
-        const originY = styleMap.get('--origin-y').value;
-        const mouseX = styleMap.get('--mouse-x').value;
-        const mouseY = styleMap.get('--mouse-y').value;
+        const smallerSize = Math.min(size.width, size.height);
+
+        const mouseX = smallerSize / 2;
+        const mouseY = smallerSize / 2;
 
         const pi2 = Math.PI * 2;
 
@@ -35,11 +33,18 @@ registerPaint('cursor-follow-eyes', class {
         };
 
         Eye.prototype.update = function () {
-            const dx = mouseX - this.xOrigin,
-                dy = mouseY - this.yOrigin,
-                angle = Math.atan2(dy, dx),
-                vx = Math.cos(angle) * smallerSize / 4,
-                vy = Math.sin(angle) * smallerSize / 8;
+            // left eye
+            let dx = mouseX - this.xOrigin;
+            let dy = mouseY - this.yOrigin;
+
+            if (isRightEye) {// right eye
+                dx = mouseX + this.xOrigin;
+                dy = mouseY + this.yOrigin;
+            }
+
+            const angle = Math.atan2(dy, dx);
+            const vx = Math.cos(angle) * smallerSize / 4;
+            const vy = Math.sin(angle) * smallerSize / 8;
 
             this.x = this.xOrigin + vx;
             this.y = this.yOrigin + vy;
@@ -81,11 +86,11 @@ registerPaint('cursor-follow-eyes', class {
 
         // DRAW
         const eye = new Eye({
-            x: smallerSize / 2,// 583
-            y: smallerSize / 4, // 136
-            scleraRadius: smallerSize / 2,
-            irisRadius: smallerSize / 4,
-            pupilRadius: smallerSize / 8,
+            x: size.width / 2,
+            y: size.height / 2,
+            scleraRadius: size.width / 4,
+            irisRadius: size.width / 8,
+            pupilRadius: size.width / 24,
             scleraColor: '#fff',
             irisColor: 'hsla(100, 80%, 60%, 1)',
             pupilColor: '#111'

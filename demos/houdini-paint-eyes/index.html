@@ -13,37 +13,55 @@
 
 <div class="page">
     <div class="example example1">
-        <h2>example1</h2>
-        <pre><code>ToDo</code></pre>
-        <ul>
-            <li class="cursor-follow-eyes">1</li>
-            <li class="cursor-follow-eyes">2</li>
-            <li class="cursor-follow-eyes">3</li>
-            <li class="cursor-follow-eyes">4</li>
-            <li class="cursor-follow-eyes">5</li>
-            <li class="cursor-follow-eyes">6</li>
-            <li class="cursor-follow-eyes">7</li>
-        </ul>
+        <h2>Paint Worklet: Eye example</h2>
+        <pre><code>.eye {background-image: paint(eye-paint);}
+.eye-left {--eye: left;}
+.eye-right {--eye: right;}</code></pre>
+
+        <div class="eyes">
+            <div class="eye-paint-wrapper">
+                <div>.eye.eye-left</div>
+                <textarea class="eye eye-right"></textarea>
+            </div>
+            <div class="eye-paint-wrapper">
+                <div>.eye.eye-right</div>
+                <textarea class="eye eye-left"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="example example2">
+        <textarea>usual textarea</textarea>
     </div>
 </div>
 
-<!--<div class="example example2">-->
-    <!--<h2>example2</h2>-->
-    <!--<pre><code>ToDo</code></pre>-->
-    <!--<div class="demo">-->
-        <!--<ul class="cursor-follow-eyes">-->
-            <!--<li>1</li>-->
-            <!--<li>2</li>-->
-            <!--<li>3</li>-->
-            <!--<li>4</li>-->
-            <!--<li>5</li>-->
-            <!--<li>6</li>-->
-            <!--<li>7</li>-->
-        <!--</ul>-->
-    <!--</div>-->
-<!--</div>-->
-</div>
+<style>
+    .eye {
+        background-image: paint(eye-paint);
+    }
 
-<script src="main.js"></script>
+    .eye-left {
+        --eye: left;
+    }
+
+    .eye-right {
+        --eye: right;
+    }
+</style>
+
+<script>
+    [
+        '--eye',
+    ].forEach((name) => {
+        CSS.registerProperty({
+            name: name,
+            syntax: 'left | right',
+            inherits: false,
+            initialValue: 'left',
+        });
+    });
+
+    paintWorklet.addModule('eye-paint-worklet.js');
+</script>
 </body>
 </html>

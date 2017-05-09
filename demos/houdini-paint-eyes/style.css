@@ -1,14 +1,3 @@
-/* houdini */
-ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.cursor-follow-eyes {
-    background-image: paint(cursor-follow-eyes);
-}
-
 /* common styles */
 body {
     background: url('assets/bg.png');
@@ -35,4 +24,16 @@ body {
     border-radius: 4px;
     padding: 10px;
     color: rgba(55, 55, 55, 0.8);
+}
+
+.eyes {
+    display: flex;
+}
+
+.eyes .eye-paint-wrapper {
+    flex: 0 1 auto;
+}
+
+.eyes .eye-paint-wrapper textarea {
+    width: 350px;
 }
