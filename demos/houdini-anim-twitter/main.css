@@ -214,6 +214,9 @@ a{
   height:100%;
   transform-style:preserve-3d; }
 
+.twitter-timeline-wrapper{
+  min-height:6000px; }
+
 body._3d_ .world-wrapper{
   perspective:400;
   perspective:400px; }

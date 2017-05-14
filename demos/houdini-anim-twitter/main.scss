@@ -254,6 +254,11 @@ a {
   transform-style: preserve-3d;
 }
 
+.twitter-timeline-wrapper{
+  // in case Twitter widget is not loaded
+  min-height: 6000px;
+}
+
 // 3D
 body._3d_ {
   .world-wrapper {
