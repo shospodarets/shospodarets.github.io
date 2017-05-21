@@ -43,6 +43,12 @@ ConditionalLoader.prototype.loadScripts = function () {
             httpProtocol + '//' + 'platform.twitter.com/widgets.js'
         );
     }
+    /* IMAGE GALLERY */
+    if (document.querySelectorAll('.image-gallery').length) {
+        loadScript(this.options.SITE_BASE_URL + '/js/libs/baguetteBox.min.js', () => {
+            baguetteBox.run('.image-gallery');
+        });
+    }
 };
 
 export default ConditionalLoader;

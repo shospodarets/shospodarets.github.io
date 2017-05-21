@@ -36,7 +36,7 @@ JS, CSS and HTML enthusiast.
 
 🇬🇷 [Frontend United](http://frontendunited.org/), Athens (Greece), May 2017 `(upcoming)`
 
-🇳🇱 [Codemotion Amsterdam](http://amsterdam2017.codemotionworld.com/), Amsterdam (Netherlands), May 2017 `(upcoming)`
+🇳🇱 [Codemotion Amsterdam](http://amsterdam2017.codemotionworld.com/), Amsterdam (Netherlands), May 2017
 
 🇮🇪 [DublinCSS](http://www.meetup.com/DublinCSS/), Dublin (Ireland), December 2016
 

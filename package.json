@@ -34,6 +34,6 @@
     "stop": "node ./_other/scripts/killProcessByPort.js 35729 && node ./_other/scripts/killProcessByPort.js 4000",
     "build": "grunt build",
     "grunt": "grunt",
-    "lock": "npm shrinkwrap --dev"
+    "lock": "npm prune && npm shrinkwrap --dev"
   }
 }

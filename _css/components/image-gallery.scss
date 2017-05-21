@@ -1,0 +1,19 @@
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > * {
+    width: 240px;
+    height: 180px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 4px 6px;
+    text-align: center;
+
+    & img {
+      height: 100%;
+      box-shadow: 0 0 4px -1px #000;
+    }
+  }
+}
