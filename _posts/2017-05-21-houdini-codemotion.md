@@ -36,7 +36,7 @@ which gave more ability to show to the audience the interactive examples with li
 
 Here you can find the slides:
 
-<a class="smaller-img" href="http://slides.com/malyw/houdini-codemotion">
+<a class="smaller-img" target="_blank" href="http://slides.com/malyw/houdini-codemotion">
     <img src="https://hospodarets.com/img/blog/1495030040554093000.png" />
 </a>
 
