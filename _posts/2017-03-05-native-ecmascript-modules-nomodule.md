@@ -187,11 +187,15 @@ which give browser projects confidence that they are shipping software that is c
 The good news is, that the attribute is "supported" without any additions in all browsers without ES Modules support,
 as they just execute the scripts without doing anything with the unknown attributes.
 
-Currently `nomodule` has been [implemented](https://bugs.webkit.org/show_bug.cgi?id=166987)
-in [`Safari` Technology preview](https://webkit.org/blog/7423/release-notes-for-safari-technology-preview-24/), but as the proposal came from Google initially, there is no doubt it will be delivered together with ES modules support in `Chrome` ([the issue](https://bugs.chromium.org/p/chromium/issues/detail?id=681050)).
+The current browser support for `nomodule` ES modules fallback attribute is:
+ 
+* it's [implemented](https://bugs.webkit.org/show_bug.cgi?id=166987) in **Safari**
+* Confirmed and should [arrive soon in **Microsoft EDGE**](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/10525830/)
 
-In addition, it's just been confirmed and should [arrive soon in `Microsoft EDGE`](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/10525830/).
-`Firefox` also [has an issue for this](https://bugzilla.mozilla.org/show_bug.cgi?id=1330900).
+Available together with ES modules:
+
+* [in **Chrome**](https://bugs.chromium.org/p/chromium/issues/detail?id=681050) under the `experimental-web-platform-features` flag
+* [in **Firefox**](https://bugzilla.mozilla.org/show_bug.cgi?id=1330900) under the `dom.moduleScripts.enabled` flag
 
 ## Conclusions
 
