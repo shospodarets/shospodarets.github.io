@@ -33,7 +33,7 @@ So after 5-10 minutes since I started it went down and took some time till guys 
 As a good guy, I prepared offline versions of the slides and demos, which helped till we switched back online,
 which gave more ability to show to the audience the interactive examples with live editing via Codepen.
 
-Here you can find the slides:
+[Here you can find the slides](http://slides.com/malyw/houdini-codemotion):
 
 <a class="smaller-img" target="_blank" href="http://slides.com/malyw/houdini-codemotion">
     <img src="https://hospodarets.com/img/blog/1495030040554093000.png" />
@@ -53,8 +53,15 @@ and [Shmuela Jacobs](Shmuela Jacobs) described the best practices to create an a
 
 It was a pleasure to speak at Codemotion, meet old good friends there and have a great evening walking
 at the wonderful Amsterdam city center.
+
+In a week I'll present this talk in Athens at [Frontend United](https://frontendunited.org/)-
+everyone is welcome and I'd be delighted to answer any of your question.
+And it's always a good idea to enjoy the perfect Greek food and weather!
+
+## P.S.:
+
 And if you need a suggestion what to try in Amsterdam,
-start from the local herring (with/without sandwich)- it's unexpectedly delicious!
+start from the local herring (with/without a sandwich)- it's unexpectedly delicious!
 
 Here are some photos (oh, dat "rabbit" photo 😁):
 
