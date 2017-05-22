@@ -75,6 +75,9 @@ Here are some photos (oh, dat "rabbit" photo 😁):
     <a href="https://hospodarets.com/img/blog/1495399002235688000.jpg">
         <img src="https://hospodarets.com/img/blog/1495399002235688000.jpg" alt="">
     </a>
+    <a href="https://hospodarets.com/img/blog/1495463959918412000.JPG">
+        <img src="https://hospodarets.com/img/blog/1495463959918412000.JPG" alt="">
+    </a>
     <a href="https://hospodarets.com/img/blog/1495403177338302000.JPG">
         <img src="https://hospodarets.com/img/blog/1495403177338302000.JPG" alt="">
     </a>
