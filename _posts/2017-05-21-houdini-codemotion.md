@@ -4,7 +4,6 @@ title: "Participating and Speaking: Codemotion Amsterdam"
 tags: [Speaking, Conferences]
 share_image: https://hospodarets.com/img/blog/1495030040554093000.png
 share_description: "Participating and Speaking: Codemotion Amsterdam"
-draft: true
 ---
 
 The previous week I spent in Amsterdam where was glad to be invited to speak
