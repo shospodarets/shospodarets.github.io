@@ -34,7 +34,7 @@ JS, CSS and HTML enthusiast.
 
 🇳🇴 [NDC Oslo](http://ndcoslo.com/), Oslo (Norway), June 2017 `(upcoming)`
 
-🇬🇷 [Frontend United](http://frontendunited.org/), Athens (Greece), May 2017 `(upcoming)`
+🇬🇷 [Frontend United](http://frontendunited.org/), Athens (Greece), May 2017
 
 🇳🇱 [Codemotion Amsterdam](http://amsterdam2017.codemotionworld.com/), Amsterdam (Netherlands), May 2017
 
