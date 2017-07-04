@@ -16,7 +16,7 @@ the ability to share a page, article or some specific data.
 
 The Web Share API is the first step to fill the gap and bring the
 native sharing capabilities to the Web.
- 
+
 <div class="more"></div>
 
 # Why do we need a new API
@@ -45,7 +45,7 @@ But users need a way to quickly share URL/text/image data into their favorite ap
 
 The current abilities are:
 
-1. Share buttons to the specific services (which resulted in the number of API's from the services and 
+1. Share buttons to the specific services (which resulted in the number of API's from the services and
 aggregators to provide just share buttons)
 
 2. Many browsers and applications provide their own specific share buttons.
@@ -68,7 +68,7 @@ function onShareClick(photo){
     navigator.share({
         title: 'Checkout this funny photo',
         text: '',
-        url: window.location.origin + '/' + photo.id 
+        url: window.location.origin + '/' + photo.id
     })
     .then(() => console.log('Successfully shared'))
     .catch((error) => console.log('Error sharing:', error));
@@ -87,9 +87,9 @@ As you see, the API is quite simple and currently expects at least one of the fo
 
 The method returns a Promise.
  It is resolved if the user chooses a target application, and that application accepts the data without errors.
- 
+
 There may be cases when the Promise is rejected:
- 
+
 - invalid data to be shared (for instance, inappropriate fields passed)
 - the user canceled the picker dialog or there is no app to share the data
 - the data couldn't be delivered to the target app
@@ -152,7 +152,7 @@ navigator.share({
 Where [`link[rel=canonical]`](https://en.wikipedia.org/wiki/Canonical_link_element) represent the optional but quite popular `<link>` element,
  which represents the URL to be used if the site has e.g. has e.g. a prefixed `mobile.` URL
  or other additions in the URL, which shouldn't be shared.
- 
+
 If the canonical link is not provided, the default URL is shared.
 
 The latest suggestion, don't remember to disable or fallback the share functionality if it's not available
@@ -167,38 +167,18 @@ if(!navigator.share){
 // SHARE CODE
 ```
 
-# Requirements
+# Browser support and requirements
 
-Currently, the Web share API is available in the stable Chrome on Android.
+Currently, the Web share API is available by default in Chrome for Android version 61.
 
-But, first of all, it requires HTTPS and secondary is enabled under the [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
-
-In short, the Origin Trial makes a way for developers to enable the API for a fixed period of time.
-This will give the feedback for a vendor and the API authors/implementors.
-You can interpret that like a flag for the browser you can enable for your site.
-You can find the list of the available trials [here](https://github.com/jpchase/OriginTrials/blob/gh-pages/available-trials.md).
-
-To enable the Web Share API you need:
-
-1. [Sign up to get the trial token](https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform)
-2. During the next 24 hours, you are sent an email with the Trial Token and details how to include it to the Web App
-3. You include the token via header or directly into the page HTML, globally or everywhere where you want to use the API:
-
-```html
-<meta http-equiv="origin-trial" data-feature="Web Share" content="TOKEN_FROM_THE_EMAIL">
-```
-
-Web Share trial was introduced in Chrome 55 and may end in April 2017, after which may be enabled by default in the browser.
-
-Let's summarize the steps to make the Web Share API work:
+Here are the steps to make the Web Share API work:
 
 1. The site is served via HTTPS
-2. The origin trial header/meta is provided till the API enabled by default
-3. `navigator.share()` is called via user action (click, tap..)
+2. `navigator.share()` is called via user action (click, tap..)
 
 # Conclusion
 
-The Web is moving forward to remove the border between the mobile Web and Native apps, and 
+The Web is moving forward to remove the border between the mobile Web and Native apps, and
 the Web Share API is the next step to it you can use today.
 
 The future work will be around the implementation of the API to other platforms and adding the ability to
@@ -213,4 +193,4 @@ and we may hear more from there after a while.
 And the list of the useful links in the end:
 
 - [Web Share API Proposal](https://github.com/WICG/web-share)
-- [Intent to Experiment: Web Share on Android](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/zuqQaLp3js8/5V9wpRWhBgAJ)
+- [Chrome Platform Status](https://www.chromestatus.com/feature/5668769141620736)
