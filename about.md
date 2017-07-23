@@ -30,9 +30,13 @@ JS, CSS and HTML enthusiast.
 
 ## Talks
 
+🇬🇷 [Voxxed Days Thessaloniki](https://voxxeddays.com/thessaloniki/), Thessaloniki (Greece), November 2017 `(upcoming)`
+
+🇧🇾 [CSS-Minsk-JS](http://css-minsk-js.by/), Minsk (Belarus), September 2017 `(upcoming)`
+
 🇪🇪 [Refresh](https://refresh.rocks/), Tallinn (Estonia), September 2017 `(upcoming)`
 
-🇳🇴 [NDC Oslo](http://ndcoslo.com/), Oslo (Norway), June 2017 `(upcoming)`
+🇳🇴 [NDC Oslo](http://ndcoslo.com/), Oslo (Norway), June 2017
 
 🇬🇷 [Frontend United](http://frontendunited.org/), Athens (Greece), May 2017
 
