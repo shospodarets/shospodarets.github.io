@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fish Shell- the missing config
-tags: [shell]
+tags: [Shell]
 share_image: https://i.imgur.com/Mc61zrr.png
 share_description: Config to reuse environment variables and aliases from ~/.bash_profile in Fish Shell
 ---
