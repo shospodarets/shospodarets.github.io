@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Internationalization of AngularJS Applications
-tags: [AngularJS]
+tags: [JavaScript]
 share_image: https://i.imgur.com/X8YEo43.png
 share_gif: https://i.imgur.com/zkKrFl4.gif
 share_description: Translate your AngularJS application without page reload using angular-translate and angular-dynamic-locale

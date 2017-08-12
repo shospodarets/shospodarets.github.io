@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Passing data from Sass to JavaScript&#58; sass-to-js
-tags: [Sass, CSS, JavaScript, jQuery, AngularJS]
+tags: [Sass, CSS, JavaScript]
 share_image: https://i.imgur.com/e2Npbpf.gif
 share_description: How to pass a data from Sass (via CSS) / CSS to JavaScript ( js ) using sass-to-js
 ---

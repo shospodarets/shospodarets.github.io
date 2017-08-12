@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Progressive Web Apps: How to migrate to HTTPS"
-tags: [Progressive Web Apps]
+tags: [Browsers]
 share_image: https://i.imgur.com/KAPWWVp.png
 share_description: "Progressive Web Apps: How to migrate to HTTPS" 
 ---

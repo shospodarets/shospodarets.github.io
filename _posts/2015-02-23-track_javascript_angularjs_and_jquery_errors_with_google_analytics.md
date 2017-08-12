@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Track JavaScript, AngularJS and jQuery errors with Google Analytics
-tags: [AngularJS, jQuery, JavaScript, Analytics]
+tags: [JavaScript]
 share_image: https://i.imgur.com/zp4lwnW.png
 share_description: How to track JavaScript, AngularJS and jQuery errors with Google Analytics
 ---
