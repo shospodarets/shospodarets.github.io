@@ -109,7 +109,6 @@ module.exports = function (grunt) {
                         // http://cssnano.co/optimisations/
                         safe: true,
                         autoprefixer: false,
-                        core: false,
                         minifyFontValues: false,
                         mergeRules: false,
                         colormin: false
