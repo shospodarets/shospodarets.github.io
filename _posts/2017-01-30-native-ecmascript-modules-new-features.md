@@ -142,7 +142,7 @@ But let's change the `main-bundled.js` to load the `utils.js` from the another p
 // https://plnkr.co/….main-bundled.js
 
 // DOESN'T allow CORS (Cross Origin Resource Sharing)
-import utils from "https://hospodarets.com/developments/demos/native-javascript-modules/js/utils.js";
+import utils from "https://hospodarets.com/img/dev/demos/native-javascript-modules/js/utils.js";
 
 utils.alert(`
   JavaScript modules work in this browser:
@@ -151,7 +151,7 @@ utils.alert(`
 ```
 
 And the demo accidentally stops working, despite you can open <br/>
-[https://hospodarets.com/.../native-javascript-modules/js/utils.js](https://hospodarets.com/developments/demos/native-javascript-modules/js/utils.js)  <br/>
+[https://hospodarets.com/.../native-javascript-modules/js/utils.js](https://hospodarets.com/img/dev/demos/native-javascript-modules/js/utils.js)  <br/>
 in your browser and make sure it's content is the same as the  <br/>
 [https://blog.hospodarets.com/.../utils.js](https://blog.hospodarets.com/demos/native-javascript-modules/js/utils.js).
 
@@ -208,7 +208,7 @@ when the module scripts are executed in the order after the document is parsed,
 but before firing [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded)
 
 - `integrity` still can be used
-[to verify that fetched files (for example, from a CDN) are delivered without unexpected manipulation](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) 
+[to verify that fetched files (for example, from a CDN) are delivered without unexpected manipulation](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
 
 - with the [`crossorigin` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes),
 you can control the exchange of the data which is sent with the CORS requests
@@ -471,7 +471,7 @@ So we need a different way to detect it.
 
 We have the functionality to detect if classic/module script was loaded,
 listening `onload/onerror` events on them.
-We also know that the `script` element provided with unsupported 
+We also know that the `script` element provided with unsupported
 `type` element will be just ignored by the browser.
 It means, we can include `<script type="module">` and know,
 that if it was loaded, then the browser supports the modules system.
@@ -511,7 +511,7 @@ function checkJsModulesSupport() {
     function triggerResolve() {
       if (isFulfilled) return;
       isFulfilled = true;
-      
+
       resolve();
       onFulfill();
     }
@@ -591,7 +591,7 @@ Ok, so we use aliases and Webpack features to simplify the `import` syntax.
 For example, we do:
 
 ```js
-import _ from 'lodash'; 
+import _ from 'lodash';
 ```
 
 and Webpack looks into your `node_modules`, finds `lodash`
@@ -612,7 +612,7 @@ Let's try to port the following code, which works well with Webpack,
 
 ```js
 // main-bundled.js
-import _ from 'lodash'; 
+import _ from 'lodash';
 
 console.log('lodash version:', _.VERSION); // e.g. 4.17.4
 
@@ -676,7 +676,7 @@ the native modules**, so first of all, we need to add that.
 
 ```js
 // 1) main-native.js DOESN'T WORK
-import lodash from 'lodash-es.js'; 
+import lodash from 'lodash-es.js';
 import map from 'lodash-es/map.js';
 ```
 
@@ -692,9 +692,9 @@ import map from '../dist_node_modules/lodash-es/map.js';
 
 As after a while we can start having more complex ECMAScript modules
 file structure, we can have relative URLs with a very long values,
-so better to switch to use the base URL, 
+so better to switch to use the base URL,
 which you can easily replace in all the files:
- 
+
 ```js
 // 2) main-native.js WORKS, CAN BE REUSED/COPIED IN ANY ES MODULE IN THE PROJECT
 import _ from '/dist_node_modules/lodash-es/lodash.js';
@@ -702,7 +702,7 @@ import map from '/dist_node_modules/lodash-es/map.js';
 ```
 
 Don't forget, usually this URL points to the location
- where your main `index.html` is placed 
+ where your main `index.html` is placed
  and the value of the [`<base>` HTML tag](https://developer.mozilla.org/en/docs/Web/HTML/Element/base)
  doesn't affect the `import` behavior.
 
