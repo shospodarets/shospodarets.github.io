@@ -58,7 +58,7 @@ any leading or trailing sequences of space characters are removed in both `<scri
 
 ```js
 // WORKS
-import utils from "      https://blog.hospodarets.com/demos/native-javascript-modules/js/utils.js    ";
+import utils from "      https://hospodarets.com/demos/native-javascript-modules/js/utils.js    ";
 ```
 
 You can find more examples reading
@@ -89,7 +89,7 @@ The another difference with the module bundlers is an ability to load files from
 
 Let's create a [https://plnkr.co/... demo](https://plnkr.co/edit/YrqP8N?p=preview)
 where we load a module script `main-bundled.js`, which in turn
-imports and uses a module [https://blog.hospodarets.com/.../utils.js](https://blog.hospodarets.com/demos/native-javascript-modules/js/utils.js)
+imports and uses a module [https://hospodarets.com/.../utils.js](https://hospodarets.com/demos/native-javascript-modules/js/utils.js)
 from another domain.
 
 ```html
@@ -101,7 +101,7 @@ from another domain.
 // https://plnkr.co/….main-bundled.js
 
 // DOES allow CORS (Cross Origin Resource Sharing)
-import utils from "https://blog.hospodarets.com/demos/native-javascript-modules/js/utils.js";
+import utils from "https://hospodarets.com/demos/native-javascript-modules/js/utils.js";
 
 utils.alert(`
   JavaScript modules work in this browser:
@@ -110,7 +110,7 @@ utils.alert(`
 ```
 
 ```js
-// https://blog.hospodarets.com/.../utils.js
+// https://hospodarets.com/.../utils.js
 export default {
     alert: (msg) => {
         alert(msg);
@@ -124,7 +124,7 @@ It's good to being able to provide the absolute URL, as the classic scripts coul
 Of course, such type of requests follows the [CORS (Cross Origin Resource Sharing)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 rules.
 For instance, in the previous example, we loaded a script from
-[https://blog.hospodarets.com/demos/native-javascript-modules/js/utils.js](https://blog.hospodarets.com/demos/native-javascript-modules/js/utils.js) which allows CORS.
+[https://hospodarets.com/demos/native-javascript-modules/js/utils.js](https://hospodarets.com/demos/native-javascript-modules/js/utils.js) which allows CORS.
 It can be easily detected looking into its response headers:
 
 <span class="smaller-img">
@@ -136,38 +136,6 @@ Its format is [`Access-Control-Allow-Origin: <origin> | *`](https://developer.mo
 and it specifies a URI that may access the resource.
 The wildcard `*` allows any origin to access the resource, so our demo works.
 
-But let's change the `main-bundled.js` to load the `utils.js` from the another place ([demo](https://plnkr.co/edit/yutRmC?p=preview)) :
-
-```js
-// https://plnkr.co/….main-bundled.js
-
-// DOESN'T allow CORS (Cross Origin Resource Sharing)
-import utils from "https://hospodarets.com/img/dev/demos/native-javascript-modules/js/utils.js";
-
-utils.alert(`
-  JavaScript modules work in this browser:
-  https://blog.whatwg.org/js-modules
-`);
-```
-
-And the demo accidentally stops working, despite you can open <br/>
-[https://hospodarets.com/.../native-javascript-modules/js/utils.js](https://hospodarets.com/img/dev/demos/native-javascript-modules/js/utils.js)  <br/>
-in your browser and make sure it's content is the same as the  <br/>
-[https://blog.hospodarets.com/.../utils.js](https://blog.hospodarets.com/demos/native-javascript-modules/js/utils.js).
-
-The only one difference in our case is that the second `utils.js` doesn't provide the `access-control-allow-origin` header:
-
-<span class="smaller-img">
-    <img src="https://hospodarets.com/img/blog/1485004883983339000.png" />
-</span>
-
-which is interpreted by the browser as the reject of any other origins (`https://plnkr.co` for us)
-to access the resource, so the demo stops working with the following error:
-
-<span class="smaller-img">
-    <img src="https://hospodarets.com/img/blog/1485004669331423000.png" />
-</span>
-
 There are some other limitations, which are applied to both module / classic scripts and resources, <br/>
 e.g. you cannot import HTTP-based module from HTTPS-based app
 (a.k.a. [Mixed Content](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content))
@@ -177,7 +145,7 @@ e.g. you cannot import HTTP-based module from HTTPS-based app
 // https://plnkr.co/….main-bundled.js
 
 // HTTP insecure import under the app served via HTTPS
-import utils from "http://blog.hospodarets.com/demos/native-javascript-modules/js/utils.js";
+import utils from "http://hospodarets.com/demos/native-javascript-modules/js/utils.js";
 ```
 
 <span class="smaller-img">
