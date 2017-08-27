@@ -1,0 +1,35 @@
+.sidebar-events {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li:not(:last-child) {
+      @include sidebar-hr;
+    }
+  }
+
+  .event-img {
+    img {
+      max-height: calc(5 * var(--spacer));
+      margin-bottom: calc(3 * var(--spacer));
+    }
+  }
+
+  .event-type {
+    color: var(--warm-grey);
+    font-size: var(--small-font-size);
+  }
+
+  .event-name {
+    margin-bottom: calc(1.5 * var(--spacer));
+  }
+
+  .event-date {
+
+  }
+
+  .event-location {
+
+  }
+}

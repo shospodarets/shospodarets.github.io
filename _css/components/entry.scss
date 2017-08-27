@@ -1,7 +1,7 @@
 .entry {
   &:before,
   &:after {
-    @apply --clearfix;
+    @include clearfix;
   }
 
   /* block code */
@@ -14,8 +14,8 @@
 
   /* inline code */
   & code.highlighter-rouge {
-    background: #f0f0f0;
-    border-radius: 3px;
+    background: var(--inline-code-bg);
+    border-radius: var(--text-border-radius);
     padding: 0 5px;
   }
 

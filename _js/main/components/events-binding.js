@@ -18,25 +18,25 @@ EventsBinding.prototype.onPostShortClick = function (e) {
 };
 
 EventsBinding.prototype.bindPostClick = function () {
-    const postShorts = document.querySelectorAll('.post-short');
+    const postShorts = document.querySelectorAll('.post__short');
     [].slice.apply(postShorts).forEach(function (postShort) {
-        postShort.addEventListener('click', this.onPostShortClick);
+        postShort.addEventListener('click', this.onPostShortClick, true);
     }.bind(this));
 };
 
-// heading click
-EventsBinding.prototype.onHeadingClick = function (e) {
-    // Set window hash
-    const hash = e.target.getAttribute('id');
-    if (hash) {
-        window.location.hash = hash;
-    }
-};
-
+// heading with ID click
 EventsBinding.prototype.bindHeadingClick = function () {
     const headings = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
     [].slice.apply(headings).forEach(function (heading) {
-        heading.addEventListener('click', this.onHeadingClick);
+
+        const hash = heading.getAttribute('id');
+        if (hash) {
+            heading.addEventListener('click', () => {
+                // Set window hash
+                window.location.hash = hash
+            });
+        }
+
     }.bind(this));
 };
 

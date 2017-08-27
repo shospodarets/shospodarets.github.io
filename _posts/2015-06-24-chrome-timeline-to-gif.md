@@ -21,6 +21,8 @@ To enable it:
 * Reload (open/close) the DevTools
 * In the "Timeline" check the "Screenshots" checkbox
 
+<div class="more"></div>
+
 ![manual](https://i.imgur.com/0Q2bPXU.gif)
 
 After that during the timeline recording screenshots would be automatically included and shown in the DevTools.
@@ -38,21 +40,18 @@ Usually some third party apps are used but now ability to use Chrome instead of 
 
 So I created a project where anyone can convert a saved Chrome Timeline Data to a GIF (video):
 
-<a href="{{ site.baseurl }}/demos/chrome-timeline-to-gif/"
-   target="_blank"
-   class="btn-pulse">
-    <span class="wrapper">
-        <span class="inner"></span>
-    </span>
-    <span class="text">Demo</span>
-</a>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/chrome-timeline-to-gif/"
+       target="_blank">
+        Demo
+    </a>
+</p>
 
-<a target="_blank" href="{{ site.baseurl }}/demos/chrome-timeline-to-gif/">
+<a href="{{ site.baseurl }}/demos/chrome-timeline-to-gif/">
     <img src="https://i.imgur.com/ezQWlBV.gif" alt="" />
 </a>
 
-### [Check the code on Github](https://github.com/malyw/chrome-timeline-to-gif-demo)
-
-<div class="more"></div>
+## [Check the code on Github](https://github.com/malyw/chrome-timeline-to-gif-demo)
 
 

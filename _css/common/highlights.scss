@@ -1,21 +1,18 @@
 /*------------------------------------ */
-/*    BSYNTAX HIGHLIGHTING */
+/*    BLOCK CODE HIGHLIGHTING */
 /*------------------------------------ */
 
 .highlight {
-  background: #f8f8f8;
+  background: var(--code-bg);
+
+  // scroll
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 
   & .highlight pre {
     word-break: break-all;
     word-wrap: break-word;
   }
-
-  /*  code { */
-  /*    font-family: 'Courier', monospace; */
-  /*    font-size: 14px; */
-  /*    color: #999 */
-  /*  } */
 
   /* https://github.com/richleland/pygments-css/blob/master/default.css */
   /* http://blog.favrik.com/2011/02/22/preview-all-pygments-styles-for-your-code-highlighting-needs/#stylesheetNavigator */

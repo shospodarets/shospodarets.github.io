@@ -1,0 +1,20 @@
+// Roboto
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/roboto/Roboto-Regular.woff2') format('woff2'), /* Modern Browsers */
+  url('/fonts/roboto/Roboto-Regular.woff') format('woff'), /* Modern Browsers on old platforms (e.g. Safari on older macOS)  */
+  url('/fonts/roboto/Roboto-Regular.ttf') format('truetype'); /* fallback */
+  font-display: swap; // fallback text is shown immediately until the custom font loads
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('/fonts/roboto/Roboto-Light.ttf') format('truetype'); /* fallback */
+  font-display: swap; // fallback text is shown immediately until the custom font loads
+}
+
+@font-face {
+  font-family: 'Roboto-Mono';
+  src: url('/fonts/roboto/RobotoMono-Regular.ttf') format('truetype'); /* fallback */
+  font-display: swap; // fallback text is shown immediately until the custom font loads
+}

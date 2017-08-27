@@ -25,7 +25,7 @@ ConditionalLoader.prototype.loadScripts = function () {
     if (document.querySelectorAll('.jsbin-embed').length) {
         loadScript(httpProtocol + '//static.jsbin.com/js/embed.js');
     }
-    /* DISCUSS */
+    /* DISCUSS COMMENTS */
     if (document.querySelectorAll('#disqus_thread').length) {
         window.disqus_config = function () {
             //noinspection JSPotentiallyInvalidUsageOfThis
@@ -37,17 +37,33 @@ ConditionalLoader.prototype.loadScripts = function () {
             httpProtocol + '//' + this.options.DISCUSS_ID + '.disqus.com/embed.js'
         );
     }
+
+    /* DISCUSS COMMENTS COUNTERS */
+    if (document.querySelectorAll('.post__short-comment-counter').length) {
+        loadScript(
+            httpProtocol + '//' + this.options.DISCUSS_ID + '.disqus.com/count.js',
+            {
+                id: 'dsq-count-scr'
+            }
+        );
+    }
+
     /* TWITTER BUTTONS */
     if (document.querySelectorAll('.twitter-widget').length) {
         loadScript(
             httpProtocol + '//' + 'platform.twitter.com/widgets.js'
         );
     }
-    /* IMAGE GALLERY */
-    if (document.querySelectorAll('.image-gallery').length) {
-        loadScript(this.options.SITE_BASE_URL + '/js/libs/baguetteBox.min.js', () => {
-            baguetteBox.run('.image-gallery');
-        });
+
+    /* TWITTER BUTTONS */
+    if (document.querySelectorAll('.fb-widget').length) {
+        const fbRoot = document.createElement('div');
+        fbRoot.setAttribute('id', 'fb-root');
+        document.body.appendChild(fbRoot);
+
+        loadScript(
+            httpProtocol + '//' + '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10'
+        );
     }
 };
 

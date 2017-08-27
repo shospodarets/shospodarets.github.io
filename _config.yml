@@ -5,15 +5,12 @@ google-plus-account-url: https://plus.google.com/u/0/111936785055168982101
 google-plus-posts: https://plus.google.com/u/0/111936785055168982101/posts
 # Name of site (displayed in the header)
 name: Serg Hospodarets Blog
+email: shospodarets@gmail.com
+CONTACT_EMAIL: shospodarets
 
 # Short bio or description (displayed in the header)
 description: A front end web development blog with tutorials and ideas about JavaScript, AngularJS, jQuery, CSS, CSS3 and HTML, HTML5
 description_short: A front end web development blog
-
-# URL of your avatar or profile pic
-avatar: /images/avatar.jpg
-avatar2x: /images/avatar2x.jpg
-avatar3x: /images/avatar3x.jpg
 
 #
 # Flags below are optional
@@ -27,13 +24,14 @@ web-master-verifications:
 
 # Includes an icon in the footer for each username
 social-links:
-#  facebook: sergeygospodaretsblog
-#  github: malyw
-#  linkedin: gospodarets
-  rss: blog.hospodarets.com # make sure the "url" above is set!
-  feedburner: https://feeds.feedburner.com/serg_hospodarets_blog # RSS alternative subscription
-  feedburner_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=serg_hospodarets_blog
+  linkedin: malyw
+  github: malyw
+  rss: hospodarets.com # make sure the "url" above is set!
+  feedburner: https://feeds.feedburner.com/hospodarets # RSS alternative subscription
+  feedburner_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=hospodarets
   twitter: malyw
+  codepen: malyw
+#  facebook: sergeygospodaretsblog
 #  googleplus: SergeyGospodarets
 
 # https://jekyllrb.com/docs/pagination/
@@ -50,8 +48,16 @@ google_search: 012363491708652379866:741arfehybe
 
 # Website URL
 # Used for Sitemap.xml and your RSS feed
-url: https://blog.hospodarets.com
-demos_code_base_url: https://github.com/malyw/malyw.github.io/tree/master/demos
+url: https://hospodarets.com
+urls:
+  blog: /
+  speaking: /speaking
+  code-review: /code-review
+  about: /about
+  contact: /contact
+code_base_url: https://github.com/malyw/hospodarets.com
+demos_code_base_url: https://github.com/malyw/hospodarets.com/tree/master/demos
+full_base_url: https://hospodarets.com
 
 # If hosting site at a Project repository on GitHub pages
 # (https://username.github.io/repository-name)

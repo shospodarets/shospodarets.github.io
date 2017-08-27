@@ -19,14 +19,13 @@ Can you imagine how easy would be creating such effects using CSS only?
 
 Meet the [CSS Scroll Snap Points specification](http://dev.w3.org/csswg/css-snappoints/)!
 
-<a href="{{ site.baseurl }}/demos/scroll-snap-full-screen/"
-   target="_blank"
-   class="btn-pulse">
-    <span class="wrapper">
-        <span class="inner"></span>
-    </span>
-    <span class="text">Demo</span>
-</a>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/scroll-snap-full-screen/"
+       target="_blank">
+        Demo
+    </a>
+</p>
 
 <a href="{{ site.baseurl }}/demos/scroll-snap-full-screen/">
     <img src="https://i.imgur.com/MwDPVuP.gif" alt=""/>
@@ -100,14 +99,13 @@ For the demo I decided to implement one page with the galleries and another one-
 
 ## Scrolling galleries
 
-<a href="{{ site.baseurl }}/demos/scroll-snap-galleries/"
-   target="_blank"
-   class="btn-pulse">
-    <span class="wrapper">
-        <span class="inner"></span>
-    </span>
-    <span class="text">Demo</span>
-</a>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/scroll-snap-galleries/"
+       target="_blank">
+        Demo
+    </a>
+</p>
 
 There is a block of common CSS rules for all galleries:
 
@@ -120,7 +118,7 @@ There is a block of common CSS rules for all galleries:
     scroll-snap-type: mandatory;
 
     /*
-    Make a Native Smooth Scrolling work: blog.hospodarets.com/native_smooth_scrolling/
+    Make a Native Smooth Scrolling work: {{ site.baseurl }}/native_smooth_scrolling/
     After that browser starts to scroll blocks
     when you use anchors: http://help.typepad.com/anchor-tags.html
     It adds smooth scrolling instead of "jumping"
@@ -322,7 +320,7 @@ That's it, we have set up a vertical full page height blocks with a scroll snapp
 All the other additions you can add on top of it:
 
 * Specific %ID% to each block to use then links with `href="%ID%"` to scroll to that box
-* `scroll-behavior, smooth;` to make the above scrolling smooth (check the [Smooth Scrolling article](//blog.hospodarets.com/native_smooth_scrolling/) for details)
+* `scroll-behavior, smooth;` to make the above scrolling smooth (check the [Smooth Scrolling article]({{ site.baseurl }}/native_smooth_scrolling/) for details)
 * Using the links from the item 1 you can add boxes switcher and specific links like "scroll to the next slide"/"scroll to top"..
 
 As always, to make it work in browsers without a Snap Point support- the JavaScript Plugin is used ([jQuery Scrollify](http://projects.lukehaas.me/scrollify/)):
@@ -356,14 +354,13 @@ if (!isScrollSnapSupported) {
     </label>
 </div>
 
-<a href="{{ site.baseurl }}/demos/scroll-snap-full-screen/"
-   target="_blank"
-   class="btn-pulse">
-    <span class="wrapper">
-        <span class="inner"></span>
-    </span>
-    <span class="text">Demo</span>
-</a>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/scroll-snap-full-screen/"
+       target="_blank">
+        Demo
+    </a>
+</p>
 
 # How to detect Scroll Snap is supported in a browser
 
@@ -457,7 +454,7 @@ Don't forget to provide a `-webkit` vendor prefix for Safari.
         </div>
 
         <p>
-            For the demo it was fixed (thanks to the <a href="https://disqus.com/by/bigbosssnk/">BigBossSNK</a> <a href="//blog.hospodarets.com/css-scroll-snap/#comment-2114038202">comment</a>) providing:
+            For the demo it was fixed (thanks to the <a href="https://disqus.com/by/bigbosssnk/">BigBossSNK</a> <a href="{{ site.baseurl }}/css-scroll-snap/#comment-2114038202">comment</a>) providing:
         </p>
 
         <div class="highlight">
@@ -502,4 +499,4 @@ Don't forget to provide a `-webkit` vendor prefix for Safari.
 * [Scroll Snap Points on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type)
 * [Specification (Draft)](http://dev.w3.org/csswg/css-snappoints/)
 * [CSS Scroll Snap Points implementation status in Chrome](https://www.chromestatus.com/feature/5721832506261504)
-* [Native Smooth Scrolling](http://blog.hospodarets.com/native_smooth_scrolling/)
+* [Native Smooth Scrolling]({{ site.baseurl }}/native_smooth_scrolling/)

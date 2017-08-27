@@ -1,0 +1,7 @@
+.posts_tag-info {
+  @include post-short-layout;
+}
+
+.posts_tag-info-title {
+  margin-bottom: var(--spacer);
+}

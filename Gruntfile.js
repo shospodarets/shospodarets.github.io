@@ -1,9 +1,20 @@
 const path = require('path');
-const webpack = require('webpack');
+const BabiliPlugin = require("babili-webpack-plugin");
 
 const rootPath = path.resolve();
 
 //const DEBUG_IS_ENABLED = Boolean(process.env.BLOG_DEBUG);// environment variable
+
+const supportedBrowsersList = {
+    // https://github.com/ai/browserslist
+    'browsers': [
+        'last 1 Chrome version',
+        'last 1 ChromeAndroid version',
+        'last 1 iOS version',
+        'last 1 Edge version',
+        'last 1 Firefox version'
+    ]
+};
 
 module.exports = function (grunt) {
     grunt.initConfig({
@@ -17,18 +28,24 @@ module.exports = function (grunt) {
                     rules: [
                         {
                             test: /\.js$/,
-                            exclude: [/node_modules/, /bower_components/],
-                            use: [{
-                                loader: 'babel-loader',
-                                options: {
-                                    presets: ["es2015", 'stage-2'/*, {"modules": false}*/]
-                                }
-                            }],
+                            exclude: [/node_modules/],
+                            loader: 'babel-loader',
+                            options: {
+                                // https://github.com/babel/babel-loader#options
+                                cacheDirectory: true,
+                                presets: [
+                                    [
+                                        'env', // https://github.com/babel/babel-preset-env
+                                        {
+                                            'targets': supportedBrowsersList,
+                                            'modules': false
+                                        }
+                                    ],
+                                    'stage-2'
+                                ],
+                                compact: false
+                            }
                         }
-                    ],
-                    noParse: [
-                        // do not process any bower modules- just use them
-                        /bower_components/
                     ]
                 },
                 resolve: {
@@ -44,18 +61,11 @@ module.exports = function (grunt) {
                         'node_modules'
                     ]
                 },
-                //watch: true,
                 plugins: [
-                    new webpack.optimize.UglifyJsPlugin({
-                        minimize: true,
-                        sourceMap: true,
-                        compress: {// http://lisperator.net/uglifyjs/compress
-                            dead_code: false,
-                            side_effects: false,
-                            unused: false
-                        }
-                    })
+                    // https://github.com/webpack-contrib/babili-webpack-plugin
+                    new BabiliPlugin()
                 ],
+                // https://webpack.js.org/configuration/devtool/
                 devtool: 'source-map'
             }
         },
@@ -95,16 +105,7 @@ module.exports = function (grunt) {
         postcss: {
             options: {
                 processors: [
-                    require("postcss-import")(),
-                    require('postcss-cssnext')({
-                        browsers: ['last 2 versions'],
-                        features: {
-                            customProperties: false // don't process custom props
-                            /* If applyRule is disabled, processing of mixins stops with
-                             "Fatal error: Expected pseudo-class or pseudo-element" */
-                            // ,applyRule: false // don't process mixins
-                        }
-                    }),
+                    require('autoprefixer')(supportedBrowsersList),
                     require('cssnano')({
                         // http://cssnano.co/optimisations/
                         safe: true,
@@ -158,7 +159,7 @@ module.exports = function (grunt) {
 
         watch: {
             site: {
-                files: ["*.html", "_layouts/**/*.html", "_posts/*.md", "_includes/**/*.html"],
+                files: ["./*.md", "./*.html", "_layouts/**/*.html", "_posts/*.md", "_includes/**/*.html"],
                 tasks: ["jekyllBuild"]
             },
             js: {

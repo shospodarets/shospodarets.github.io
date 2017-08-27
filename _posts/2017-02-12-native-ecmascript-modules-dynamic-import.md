@@ -429,16 +429,13 @@ loadDependency('../dependency.js');
 loadDependency('./dependency.js');// Successfully loaded
 ```
 
-<div>
-    <a href="{{ site.baseurl }}/demos/native-ecmascript-modules-dynamic-import/"
-       target="_blank"
-       class="btn-pulse">
-        <span class="wrapper">
-            <span class="inner"></span>
-        </span>
-        <span class="text">Demo</span>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/native-ecmascript-modules-dynamic-import/"
+       target="_blank">
+        Demo
     </a>
-</div>
+</p>
 
 
 As it is shown in the demo, the `import()` specifier is always relative to the file it's called from,

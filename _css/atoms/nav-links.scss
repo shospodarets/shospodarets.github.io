@@ -1,0 +1,31 @@
+.nav-links {
+  font-size: var(--nav-links-font-size);
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    display: inline-block;
+    padding: var(--main-horizontal-indent) 0;
+    color: var(--header-footer-color);
+    border-top: 2px solid transparent;
+    margin-left: calc(3 * var(--spacer));
+
+    &:hover,
+    &.active {
+      border-top-color: var(--header-footer-color);
+      color: var(--header-footer-color);
+      text-decoration: none;
+    }
+
+    &.active {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+}

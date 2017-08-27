@@ -1,0 +1,29 @@
+@import "header-wrapper";
+@import "sub-header";
+@import "sub-header-default";
+@import "sub-header-common";
+
+.header {
+  --header-vertical-indent: calc(3 * var(--spacer));
+
+  display: flex;
+  padding-top: var(--header-vertical-indent);
+  justify-content: space-between;
+  color: var(--header-footer-color);
+  height: var(--header-height);
+
+  > * {
+    margin-bottom: var(--header-vertical-indent);
+  }
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+
+  & img {
+    border-radius: 5px;
+    margin-top: -10px;
+  }
+}

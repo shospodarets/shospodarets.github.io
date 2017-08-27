@@ -1,42 +1,35 @@
 .social-links {
-  &:before,
-  &:after {
-    @apply --clearfix;
-  }
-
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
 
-  & > * {
+  a {
+    width: var(--social-link-size);
+    height: var(--social-link-size);
     margin-right: var(--social-links-indent);
-
-    @media (--mobile-breakpoint) {
-      margin-bottom: var(--social-links-indent);
-    }
+    border: 1px solid var(--header-footer-color);
+    border-radius: 50%;
+    background: no-repeat 50% 50%;
+    background-size: 24px auto;
   }
 
-  & svg {
-    float: left;
-  }
-}
-
-.small-social-links {
-  @media (--mobile-breakpoint) {
-    justify-content: center;
+  // icons
+  .social-links__twitter {
+    background-image: url(/images/icons/social/twitter.svg);
   }
 
-  & svg {
-    width: var(--small-social-link-size);
-    height: var(--small-social-link-size);
+  .social-links__rss {
+    background-image: url(/images/icons/social/rss.svg);
   }
-}
 
-.big-social-links {
-  justify-content: center;
+  .social-links__github {
+    background-image: url(/images/icons/social/github.svg);
+  }
 
-  & svg {
-    width: var(--big-social-link-size);
-    height: var(--big-social-link-size);
+  .social-links__linkedin {
+    background-image: url(/images/icons/social/linkedin.svg);
+  }
+
+  .social-links__email {
+    background-image: url(/images/icons/social/mail.svg);
   }
 }

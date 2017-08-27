@@ -1,0 +1,34 @@
+.page-404 {
+  --_404-vertical-indent: calc(8 * var(--spacer));
+
+  text-align: center;
+  padding-top: calc(4 * var(--spacer));
+  color: var(--white-color);
+
+
+  .page-404__icon {
+    background: url(/images/icons/404.svg) no-repeat 50% 0;
+    height: calc(24 * var(--spacer));
+    margin-bottom: calc(6 * var(--spacer));
+  }
+
+  .page-404__text {
+    text-transform: uppercase;
+    font-size: calc(4 * var(--main-font-size));
+    margin-bottom: var(--_404-vertical-indent);
+  }
+
+  .page-404__link {
+    display: inline-block;
+    font-size: calc(1.5 * var(--main-font-size));
+    padding: calc(4 * var(--spacer)) calc(10 * var(--spacer));
+    border: 2px solid var(--white-color);
+    border-radius: var(--main-border-radius);
+    margin-bottom: var(--_404-vertical-indent);
+
+    &,
+    &:hover {
+      color: var(--white-color);
+    }
+  }
+}

@@ -21,7 +21,7 @@ Let's provide JavaScript, AngularJS and jQuery errors checking.
 
 <div class="more"></div>
 
-## Classic `ga.js`
+# Classic `ga.js`
 
 This way works when you include Google Analytics in the next way:
 
@@ -39,7 +39,7 @@ _gaq.push(['_trackPageview']);
 })();
 ```
 
-### JavaScript errors
+## JavaScript errors
 
 The following code sends to GA data about all thrown JS errors (error message and place when error appeared).
 `navigator.userAgent` provides info about the browser to simpify detecting problems in difficult cases.
@@ -59,7 +59,7 @@ window.addEventListener('error', function (err) {
 });
 ```
 
-### AngularJS exceptions handler
+## AngularJS exceptions handler
 
 AngularJS delegates all uncaught exceptions to [`$exceptionHandler` service](https://docs.angularjs.org/api/ng/service/$exceptionHandler).
 
@@ -83,9 +83,9 @@ angular.module('loggerApp')
         });
 ```
 
-### jQuery
+## jQuery
 
-#### jQuery errors
+### jQuery errors
 
 jQuery provides util method [.error()](http://api.jquery.com/jquery.error/) which is advised for developers to use for exceptions.
 
@@ -103,7 +103,7 @@ jQuery.error = function (message) {
 }
 ```
 
-#### jQuery AJAX errors handler
+### jQuery AJAX errors handler
 
 Whenever an Ajax request completes with an error, jQuery triggers the [`ajaxError` event](http://api.jquery.com/ajaxerror/).
 
@@ -128,7 +128,7 @@ $(document).ajaxError(function (event, request, settings) {
 ```
 
 
-## Modern `analytics.js`
+# Modern `analytics.js`
 
 You can use it when include the analytics like:
 
@@ -145,7 +145,7 @@ ga('send', 'pageview');
 Here is [the manual](https://developers.google.com/analytics/devguides/collection/upgrade/reference/gajs-analyticsjs#events)
 about updating Event Tracking to Universal Analytics (analytics.js)
 
-### JavaScript errors
+## JavaScript errors
 
 ```javascript
 // Pure JavaScript errors handler
@@ -163,7 +163,7 @@ window.addEventListener('error', function (err) {
 });
 ```
 
-### AngularJS exceptions handler
+## AngularJS exceptions handler
 
 ```javascript
 // AngularJS errors handler
@@ -186,9 +186,9 @@ angular.module('loggerApp')
         });
 ```
 
-### jQuery
+## jQuery
 
-#### jQuery errors
+### jQuery errors
 
 ```javascript
 // jQuery errors handler (jQuery API)
@@ -205,7 +205,7 @@ jQuery.error = function (message) {
 }
 ```
 
-#### jQuery AJAX errors handler
+### jQuery AJAX errors handler
 
 ```javascript
 // jQuery AJAX errors handler (jQuery API)
@@ -229,7 +229,7 @@ $(document).ajaxError(function (event, request, settings) {
 ```
 
 
-## Demo
+# Demo
 
 In the prepared demos all output from developer console is shown in special block under buttons.
 
@@ -238,16 +238,16 @@ You can generate errors and check in "Network" tab that for each error GA sends 
 1. `ga.js` - to `http://www.google-analytics.com/__utm.gif?...`
 2. `analytics.js` - to `http://www.google-analytics.com/r/collect?...`
 
-### Classic `ga.js`
+## Classic `ga.js`
 
 <span data-height="270" data-theme-id="178" data-slug-hash="myLPeJ" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
-### Modern `analytics.js`
+## Modern `analytics.js`
 
 <span data-height="270" data-theme-id="178" data-slug-hash="MYGwzz" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
 
-## Checking analytics data in GA
+# Checking analytics data in GA
 
 In GA you can find two main reports for `Events`:
 
@@ -259,7 +259,7 @@ In GA you can find two main reports for `Events`:
 
 <img src="https://i.imgur.com/YkUt26G.gif" alt="Common Events Report"/>
 
-## `0, true` params in the end
+# `0, true` params in the end
 
 These params mean respectively according [the manual](https://developers.google.com/analytics/devguides/collection/upgrade/reference/gajs-analyticsjs#events):
 
@@ -272,7 +272,7 @@ These params mean respectively according [the manual](https://developers.google.
 Is set to `true` to not affect the bounce rate. Here is [the description](//stackoverflow.com/a/15651831/1120798) in more details
 
 
-## Exceptions - Web Tracking (analytics.js)
+# Exceptions - Web Tracking (analytics.js)
 
 [**Universal Analytics**](https://support.google.com/analytics/answer/2790010) proposes other way to track exceptions- [Exceptions - Web Tracking (analytics.js)](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions).
 

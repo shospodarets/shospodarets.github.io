@@ -1,0 +1,35 @@
+.container-wrapper__sub-header-common {
+  --header-padding-top: calc(4 * var(--spacer));
+
+  // put under header
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: calc(var(--header-height) + var(--header-padding-top));
+  padding-bottom: calc(2 * var(--spacer));
+  color: var(--white-color);
+}
+
+.sub-header-common {
+  --sub-header-common-font-size: calc(4.5 * var(--main-font-size));
+  --sub-header-common-text-size: calc(var(--main-line-height) * var(--sub-header-common-font-size));
+  --sub-header-common-image-size: 256px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sub-header-common__text {
+  font-size: var(--sub-header-common-font-size);
+}
+
+.sub-header-common__image {
+  // make image take the same size as text with minus margins
+  --text-image-size-difference: calc(var(--sub-header-common-image-size) - var(--sub-header-common-text-size));
+
+  margin: calc(-1 * var(--text-image-size-difference) / 2) 0;
+  width: var(--sub-header-common-image-size);
+  height: var(--sub-header-common-image-size);
+  border-radius: 50%;
+  border: calc(2 * var(--spacer)) solid var(--image-blue-border-color);
+}

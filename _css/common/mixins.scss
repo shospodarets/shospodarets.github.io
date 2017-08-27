@@ -1,38 +1,50 @@
-/* Mixins cannot contain logic/ process variables */
-:root {
-  --absolute-hidden: #{'{
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-  }'};
-
-  --expander: #{'{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }'};
-
-  --clearfix: #{'{
-    display: block;
-    content: "";
-    clear: both;
-  }'};
-
-  --triangle-preset: #{'{
-    width: 0;
-    height: 0;
-    border-style: solid;
-  }'};
+@mixin absolute-hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
-@custom-media --mobile-breakpoint (width <= 680px);
+@mixin expander {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
+@mixin clearfix {
+  display: table;
+  content: "";
+  clear: both;
+}
 
-@custom-media --mobile-up-breakpoint (width >= 680px);
+@mixin triangle-preset {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
 
-@custom-media --desktop-breakpoint (width >= 1024px);
+// https://github.com/eduardoboucas/include-media
+@import "../../node_modules/include-media/dist/_include-media";
+$breakpoints: (mobile: 680px);
+
+@mixin mobile {
+  @include media("<=mobile") {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include media(">mobile") {
+    @content;
+  }
+}
+
+@mixin white-tile {
+  border-radius: var(--main-border-radius);
+  background-color: var(--white-color);
+  box-shadow: 0 2px 4px 0 var(--white-tile-box-shadow-color);
+}

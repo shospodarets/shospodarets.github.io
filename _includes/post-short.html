@@ -1,0 +1,59 @@
+{% unless post.draft %}
+<article class="post post__short">
+    <div class="post-title post__short_title">
+        {% if post.external-url %}
+        <a class="post__short_link hover-on-post__short-hover" href="{{ post.external-url }}">
+            {{ post.title }}
+        </a>
+        <i class="external-link-icon"></i>
+        {% else %}
+        <a class="post__short_link hover-on-post__short-hover" href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+        </a>
+        {% endif %}
+    </div>
+
+    <div class="post__short_meta">
+        <span class="post__date post__short_date">
+            <span
+                    itemprop="datePublished"
+                    content='{{ post.date | date: "%Y-%m-%d" }}'>
+                {{ post.date | date: "%B %e, %Y" }}
+            </span>
+            {% if post.external_site %}
+                on {{ post.external_site }}
+            {% endif %}
+        </span>
+    </div>
+
+    <div class="entry">
+        {% if post.content contains '<div class="more"></div>' %}
+        {{ post.content | split:'<div class="more"></div>' | first }}
+        ...
+        {% else %}
+        {{ post.content | truncatewords:40}}
+        {% endif %}
+    </div>
+
+    <div class="post__short-footer">
+        <a class="hover-on-post__short-hover" href="{{ site.baseurl }}{{ post.url }}">
+            Read full post &nbsp;>
+        </a>
+        <div class="post__short-footer_right">
+            <span class="post__tags">
+            {% for tag in post.tags %}
+                {% unless forloop.first %}
+                    ,
+                {% endunless %}
+
+                <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+            </span>
+
+            {% unless post.external-url %}
+            <a href="{{ site.baseurl }}{{ post.url }}#post_comments" class="post__short-comment-counter disqus-comment-count" data-disqus-url="{{ site.full_base_url }}{{ post.url }}"></a>
+            {% endunless %}
+        </div>
+    </div>
+</article>
+{% endunless %}

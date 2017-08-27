@@ -27,7 +27,7 @@ The ways they appear is usual:
 
 <div class="more"></div>
 
-<h2>Solution</h2>
+<h1>Solution</h1>
 So was decided just to create simple shell script to find SCSS-syntax variables which appear in the code only one time.
 [Here it is](https://gist.github.com/malyw/fade28c8d398a3a86334#file-find-unused-scss-variables):
 
@@ -49,7 +49,7 @@ VAR_NAME_CHARS='A-Za-z0-9_-'
 find "$1" -type f -name "*.scss" -exec grep -o "\$[$VAR_NAME_CHARS]*" {} ';' | sort | uniq -u
 ```
 
-<h2>How to use</h2>
+<h1>How to use</h1>
 
 Let's imagine you have folder "sass" where are SCSS files of your project. Then:
 
@@ -83,6 +83,6 @@ Let's imagine you have folder "sass" where are SCSS files of your project. Then:
 <img src="https://i.imgur.com/1o0jhwL.gif" alt=""/>
 
 
-<h2>N.B.</h2>
+<h1>N.B.</h1>
 When you use in your codebase some 3rd party libraries variables (e.g. "susy" to provide settings for it)-
 script will also show them as unused because they might appear only once in the folder with your SCSS code.

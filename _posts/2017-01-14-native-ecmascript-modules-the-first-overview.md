@@ -16,8 +16,10 @@ Now we are facing the situation when [the support amongst them is close to 100%]
 
 
 But the standard actually introduced also [ECMAScript modules](http://www.ecma-international.org/ecma-262/6.0/#sec-modules) (today also often named ES or ES6 modules).
-It's the only part which took (and still taking) the most time to implement as
-only some have shipped it in the stable version, but all have the implementation available.
+It's the only part which took (and still taking) the most time to implement as none browser published it yet in the stable version.
+
+Recently Safari 10.1 (Safari Beta), Firefox 54 (Nighly) and Edge 15 (next EDGE version) shipped the native implementation out of the box or behind a flag, so the time we can
+use this without module bundlers is coming.
 
 To understand better how we come to this point let's start from the JS modules history and
 then take a look at the current Native ES modules features and implementations.
@@ -272,37 +274,29 @@ In that case typically the index.html file contains the following:
 And you app is using the bundled/transpiled JS code.
 That the common approach with bundlers, let's take a look how to make it work in the browser without any bundlers.
 
-# How to make ECMAScript modules work in the browser
+# How to make JavaScript modules work in the browser
 
 ## Browsers support
 
-For today all the major browsers have ES modules implementations available:
+For today each of the main browsers is working on shipping the ES6 modules:
 
 - Firefox- [implemented, available under the flag in Firefox 54+](https://bugzilla.mozilla.org/show_bug.cgi?id=568953)
-- Chrome- [implemented, available under the flag in Chrome 60+](https://groups.google.com/a/chromium.org/d/msg/blink-dev/uba6pMr-jec/s4xe95KJCgAJ)
+- Chrome- [work in progress](https://www.chromestatus.com/feature/5365692190687232)
 - EDGE- [implemented, available under the flag in EDGE 15+](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/moduleses6/?q=module)
-- Webkit- [implemented, enabled by default in Safari 10.1 (iOS 10.3)](https://webkit.org/status/#feature-modules)
-- Node.js- [work in progress](https://github.com/nodejs/node/issues/8866)
-
-[Demo](https://blog.hospodarets.com/es-modules-test/) and
-[Code](https://github.com/malyw/es-modules-test)
-to test the browser support.
+- Webkit- [implemented, enabled by default in Safari 10.1](https://webkit.org/status/#feature-modules)
+- Node.js- is expected early 2018
 
 <div class="caniuse" data-feature="es6-module"></div>
 
 ## Getting the environment to test
 
-As we saw, currently you can test native JS modules in Safari 10.1+ out of the box.
-To test them in other browsers you have to:
-
-### Getting Chrome with the ES modules enabled
-
-* download [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
-or [Chromium](https://www.chromium.org/getting-involved/download-chromium)
-* open the `chrome://flags/#enable-experimental-web-platform-features` URL
-* turn on the flag and reload the browser
+As we saw, currently you can test native JS modules in Safari 10.1+ and EDGE 15 Preview Build.
+Let's download and enable the features in them:
 
 ### Enabling ES modules in Firefox
+
+Currently you have to download [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/), which means it will be really soon in
+[FF Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) and then in the stable version.
 
 To enable the ES modules:
 
@@ -312,6 +306,23 @@ To enable the ES modules:
 * double click to change its value to "true"
 
 That's it, now you can test how the module scripts work in FF.
+
+### Getting the Safari Technology Preview with the ES modules enabled
+
+If you use macOS, just download the latest Safari Technology Preview (TP) from [developer.apple.com](https://developer.apple.com/safari/download/)
+
+Install and open it.
+
+Starting from the
+[Safari Technology Preview version 21+, the ES modules are enabled by default](https://webkit.org/blog/7265/release-notes-for-safari-technology-preview-21/).
+
+If it's Safari TP 19 or 20, check that ES6 modules feature is enabled, opening "Develop" menu -> "Experimental Features" -> "ES6 Modules".
+
+<span class="smaller-img">
+    <img src="https://hospodarets.com/img/blog/1482848774988713000.gif" />
+</span>
+
+Another option is to [download the latest Webkit Nightly](https://webkit.org/downloads/) and play with it.
 
 ### Getting the EDGE 15 with ES modules enabled
 
@@ -383,14 +394,13 @@ Some solutions were rejected by the community:
 1. adding `"use module";` to every file
 2. Meta in package.json
 
-Other options are still under the consideration (thanks to [@bmeck](https://github.com/bmeck) for highlighting):
+Other options were under the consideration (thanks to [@bmeck](https://github.com/bmeck) for highlighting):
 
 1. [Determining if the source is an ES Module](https://github.com/bmeck/UnambiguousJavaScriptGrammar)
 2. New file extension for the ES6 Modules
 [`.mjs`](https://github.com/nodejs/node-eps/blob/5dae5a537c2d56fbaf23aaf2ae9da15e74474021/002-es6-modules.md#51-determining-if-source-is-an-es-module)
-, which will be used as a fallback if the previous version doesn't work
 
-Each method has own pros and cons, and currently, it's still no clear answer which [way Node.js will go](https://github.com/nodejs/node-eps/blob/master/002-es6-modules.md).
+Each method has own pros and cons, looks like [Node.js will take the `.mjs` approach](https://twitter.com/bradleymeck/status/901428116337426433).
 
 # Simple native module example
 

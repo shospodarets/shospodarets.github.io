@@ -1,0 +1,26 @@
+:root {
+  /* Layout */
+  --main-container-max-width: 1200px;
+  --main-container-max-width-one-column: 800px;
+  --main-page-horizontal-indents: calc(2 * var(--spacer));
+  --main-content-width: 67%;
+  --main-sidebar-width: 33%;
+  --main-sidebar-indent: 6.7%;
+  --spacer: 8px;
+  --main-vertical-indent: 15px;
+  --main-horizontal-indent: 15px;
+  --header-height: calc(15 * var(--spacer));
+  /* Icon links */
+  --social-link-size: 48px;
+  --social-links-indent: 12px;
+
+  /* Layout */
+  --blockquote-padding: calc(#{var(--main-vertical-indent)} / 2);
+  /* other */
+  --main-border-radius: 2px;
+  --text-border-radius: 1px;
+  --sidebar-box-margin: calc(1.5 * var(--spacer));
+
+  /* timing */
+  --transition-main: 0.2s;
+}

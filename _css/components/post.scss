@@ -1,68 +1,25 @@
-.post-short {
-  cursor: pointer;
-  padding-bottom: var(--main-vertical-indent);
-  border-bottom: 3px solid var(--light-gray-color);
-
-  &:hover {
-    & h1 {
-      & a {
-        color: var(--title-hover-color);
-      }
-    }
-  }
-
-  & .date {
-    display: block;
-    padding-top: var(--main-vertical-indent);
-    margin-bottom: calc(-1 * #{var(--main-vertical-indent)});
+// VARIATION 2 - full post page
+.post__full {
+  .post__footer {
+    padding: calc(2 * var(--main-vertical-indent)) 0;
   }
 }
 
-.posts .post-short:last-child {
-  border-bottom: none;
-}
-
-/* class present in either short and full posts */
-.post {
+// COMMON (list of posts and post itself)
+.post { /* class present in both short and full posts */
   &:before,
   &:after {
-    @apply --clearfix;
+    @include clearfix;
   }
 
-  & .external-link-icon {
-    width: var(--external-link-size);
-    height: var(--external-link-size);
-    float: right;
-
-    background: transparent url(/images/icons/external-link.svg) no-repeat center center;
-    background-size: auto 75%;
-  }
-
-  & .meta {
+  & .post__meta {
     &:before,
     &:after {
-      @apply --clearfix;
-    }
-
-    & .share-buttons {
-      float: right;
-    }
-
-    & span {
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    & .date {
-      padding-right: 15px;
+      @include clearfix;
     }
   }
 
-  & .comments {
-    margin-top: 10px;
-  }
-
-  @media (--desktop-breakpoint) {
+  @include desktop {
     & .smaller-img {
       display: block;
       text-align: center;
@@ -73,7 +30,7 @@
     }
   }
 
-  @media (--mobile-up-breakpoint) {
+  @include desktop {
     & .even-smaller-img {
       display: block;
       text-align: center;
@@ -83,4 +40,68 @@
       }
     }
   }
+
+  // HEADINGS FONT INDENTS
+  h1, h2 {
+    --padding-top: calc(1.5 * var(--main-vertical-indent)); // for hover link position
+    padding-top: var(--padding-top);
+    margin-bottom: calc(1.5 * var(--main-vertical-indent));
+  }
+
+  h3 {
+    --padding-top: calc(1 * var(--main-vertical-indent)); // for hover link position
+    padding-top: var(--padding-top);
+    margin-bottom: calc(1 * var(--main-vertical-indent));
+  }
+
+  // HEADINGS HOVER LINK SHOW
+  h1, h2, h3 { // h4-h6 are not supposed to be used
+    transition: background-color .3s;
+    position: relative;
+
+    // show the link icon for heading with ID
+    &[id]:hover {
+      --top-indent: var(--padding-top, 0); // if any top indent is needed
+      cursor: pointer;
+      &:after {
+        position: absolute;
+        top: calc(50% + var(--top-indent) / 2);
+        right: var(--spacer);
+
+        transform: translateY(-50%);
+        background: url(/images/icons/link.svg) no-repeat 0 0;
+        content: '';
+
+        // set size
+        width: var(--main-font-size);
+        height: var(--main-font-size);
+      }
+    }
+  }
+}
+
+// common meta
+.post__meta {
+  margin-bottom: calc(2 * var(--main-vertical-indent));
+
+  & > *:not(:last-child) {
+    padding-right: calc(3 * var(--spacer));
+  }
+}
+
+.post__date {
+  color: var(--warm-grey)
+}
+
+.post-title {
+  margin-bottom: calc(2 * var(--main-vertical-indent));
+
+  a {
+    color: var(--main-color);
+  }
+}
+
+.post__tags {
+  background: url(/images/icons/tag.svg) no-repeat;
+  padding-left: calc(4 * var(--spacer));
 }

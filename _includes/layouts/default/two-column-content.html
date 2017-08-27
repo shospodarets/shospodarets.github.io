@@ -1,0 +1,14 @@
+<div class="sh-container-wrapper container-wrapper__main">
+    {% if page.layout-one-column %}
+    {{ content }}
+    {% else %}
+    <div role="main" class="sh-container sh-container-main">
+        <div class="main-content">
+            {{ content }}
+        </div>
+        <div class="main-sidebar">
+            {% include sidebar/sidebar.html %}
+        </div>
+    </div>
+    {% endif %}
+</div>

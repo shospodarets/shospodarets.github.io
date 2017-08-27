@@ -1,0 +1,187 @@
+.page-contact {
+  .page-contact__block {
+    padding: calc(6 * var(--spacer)) 0;
+
+    &:not(:first-child) {
+      border-top: 1px solid var(--light-gray-color);
+    }
+  }
+
+  .page-contact__title {
+    font-size: var(--additional-heading-font-size);
+    line-height: var(--additional-heading-line-height);
+    margin-bottom: calc(3 * var(--spacer));
+  }
+}
+
+/* ------------------------- */
+/* SOCIAL LINKS */
+/* ------------------------- */
+.page-contact__links {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: var(--main-horizontal-indent);
+  }
+
+  li {
+    @include white-tile;
+    margin-bottom: var(--main-horizontal-indent);
+
+    a {
+      display: block;
+      padding: calc(3 * var(--spacer));
+      text-align: center;
+    }
+  }
+
+  .page-contact__social-icon {
+    --size: calc(6 * var(--spacer));
+
+    width: var(--size);
+    height: var(--size);
+
+    display: inline-block;
+    margin-bottom: calc(3 * var(--spacer));
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.twitter {
+      background-image: url(/images/icons/contact-page/contact-twitter.svg);
+    }
+
+    &.github {
+      background-image: url(/images/icons/contact-page/contact-github.svg);
+    }
+
+    &.codepen {
+      background-image: url(/images/icons/contact-page/contact-codepen.svg);
+    }
+
+    &.linkedin {
+      background-image: url(/images/icons/contact-page/contact-linkedin.svg);
+    }
+  }
+
+  .page-contact__social-text {
+    display: block;
+  }
+}
+
+/* ------------------------- */
+/* CONTACT FORM */
+/* ------------------------- */
+
+//
+// VIEW
+//
+.page-contact__form-wrapper {
+  display: grid;
+  grid-gap: 0;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.page-contact__form-text {
+  @include desktop {
+    padding-right: calc(11 * var(--spacer));
+  }
+}
+
+.page-contact__form {
+  .page-contact__form-block {
+    margin-bottom: calc(3 * var(--spacer));
+    display: block;
+
+    .page-contact__form-label {
+      display: block;
+      margin-bottom: calc(.5 * var(--spacer));
+    }
+  }
+}
+
+//
+// FORM LOGIC
+//
+.page-contact__form {
+  // disabled
+  [type="submit"] {
+    cursor: pointer;
+
+    &[disabled] {
+      cursor: not-allowed;
+    }
+  }
+
+  // STATES
+  // success
+  &.contact-form-success {
+    pointer-events: none;
+
+    & input,
+    & textarea {
+      opacity: 0.5;
+    }
+  }
+}
+
+// Form icons
+.page-contact__form-icon-wrapper {
+  --size: calc(2 * var(--spacer));
+  width: var(--size);
+  margin-left: var(--spacer);
+  font-size: 2px; // for the loading state
+  display: inline-block;
+  overflow: hidden;
+}
+
+.page-contact__form-success {
+  background-image: url(/images/icons/success.svg);
+}
+
+.page-contact__form-reject {
+  background-image: url(/images/icons/reject.svg);
+}
+
+// FORM ICONS SHOW/HIDE LOGIC
+@mixin show-form-icon($state) {
+  .contact-form-#{$state} & {
+    &.contact-form-#{$state} {
+      display: inline-block;
+    }
+  }
+}
+
+.page-contact__form-icon {
+  display: none; // hidden by default
+
+  // is shown when the form class is added
+  @include show-form-icon('loading');
+  @include show-form-icon('reject');
+  @include show-form-icon('success');
+
+  // icon styles
+  & > * {
+    display: inline-block;
+  }
+
+  .page-contact__form-loading {
+    margin-top: 5px;
+  }
+
+  .page-contact__form-reject, .page-contact__form-success {
+    width: var(--size);
+    height: var(--size);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

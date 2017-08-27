@@ -181,7 +181,7 @@ body:hover {
 
 
 As custom properties are global, to avoid conflicts
-better to follow [a common convention naming your variables](http://codepen.io/malyw/pen/eZgaQv)
+better to follow a common convention naming for your variables
 (even easier to follow such "scopes" using a [BEM naming convention](http://getbem.com/naming/)) e.g.:
 
 ```css
@@ -315,7 +315,7 @@ document.documentElement.style.setProperty(
 
 Ability to assign anything as a CSS variable value and an easy interface to read/write that from JS,
 allows to skip the old hacky ways of
-[passing data from CSS/Sass to JS](https://blog.hospodarets.com/passing_data_from_sass_to_js)
+[passing data from CSS/Sass to JS]({{ site.baseurl }}/passing_data_from_sass_to_js)
 (e.g. [list of media queries breakpoints](http://codepen.io/malyw/pen/zGxodr)).
 
 For debug you can just output the value of a variable on your page in the `content` rule:
@@ -338,7 +338,7 @@ They are
 
 There are some limitations and bugs:
 
-- [complex calc() calculation with CSS variables](https://blog.hospodarets.com/demos/css-colors-from-custom-props/) may not work in some browsers
+- [complex calc() calculation with CSS variables]({{ site.baseurl }}/demos/css-colors-from-custom-props/) may not work in some browsers
 - people discuss adding an
 [ability to apply common rules (e.g. reset) for all custom properties for the current scope](https://github.com/w3c/webcomponents/issues/300#issuecomment-144551648) like `--: initial;`
 - you cannot use them for usual CSS properties names: <strike><code>var(--side): 10px;</code></strike>
@@ -537,16 +537,13 @@ which will redefine some custom properties set.
 
 The last idea and demo is close to theme switching based on custom properties, so you can use it in both cases:
 
-<div>
-    <a href="{{ site.baseurl }}/demos/css-custom-props-theme-switcher/"
-       target="_blank"
-       class="btn-pulse">
-        <span class="wrapper">
-            <span class="inner"></span>
-        </span>
-        <span class="text">Demo</span>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/css-custom-props-theme-switcher/"
+       target="_blank">
+        Demo
     </a>
-</div>
+</p>
 
 <a href="{{ site.baseurl }}/demos/css-custom-props-theme-switcher/">
     <img src="https://i.imgur.com/DwLCfC0.gif" alt=""/>
@@ -580,16 +577,13 @@ For grayscale filter the code is:
 }
 ```
 
-<div>
-    <a href="{{ site.baseurl }}/demos/css-colors-from-custom-props/"
-       target="_blank"
-       class="btn-pulse">
-        <span class="wrapper">
-            <span class="inner"></span>
-        </span>
-        <span class="text">Demo</span>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/css-colors-from-custom-props/"
+       target="_blank">
+        Demo
     </a>
-</div>
+</p>
 
 <a href="{{ site.baseurl }}/demos/css-colors-from-custom-props/">
     <img src="https://i.imgur.com/9IUE3FR.gif" alt=""/>

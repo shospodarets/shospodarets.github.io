@@ -1,0 +1,101 @@
+/*------------------------------------ */
+/*    FONT-FAMILIES    */
+/*------------------------------------ */
+body { // global
+  /* not in shorthand because of http://codepen.io/malyw/pen/mEKKqY?editors=1100 */
+  font-family: var(--main-font-family);
+}
+
+.post-title, .page-title, .sidebar-title, .sub-header-common__text, h1, h2, h3 { // headings
+  font-family: var(--main-headings-font-family);
+  font-weight: bold;
+}
+
+.page-404__link { // 404 btn text
+  font-family: var(--main-code-font-family);
+}
+
+.highlight { // block code
+  code {
+    font-family: var(--main-code-font-family);
+  }
+}
+
+.entry { // inline code
+  & code.highlighter-rouge {
+    font-family: var(--main-code-font-family);
+  }
+}
+
+/*------------------------------------ */
+/*    FONT-SIZE, LINE_HEIGHT    */
+/*------------------------------------ */
+// GLOBAL
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+}
+
+// specific HEADINGS
+h1 {
+  font-size: var(--main-heading-font-size);
+}
+
+h2 {
+  font-size: var(--h2-heading-font-size);
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+// PAGE_TITLE
+.page-title {
+  font-size: var(--page-title-font-size);
+  line-height: var(--page-title-line-height);
+}
+
+// SIDEBAR-TITLE
+.sidebar-title {
+  font-size: calc(var(--main-font-size) * 1.5);
+}
+
+// POST-TITLE
+.post-title {
+  .post__short & {
+    font-size: var(--post-short-title-font-size);
+    line-height: var(--post-short-title-line-height);
+
+    .external-link-icon {
+      width: var(--post-short-title-line-height);
+      height: var(--post-short-title-line-height);
+    }
+  }
+
+  .post__full &,
+  .posts_tag-info & {
+    font-size: var(--post-full-title-font-size);
+    line-height: var(--post-full-title-line-height);
+  }
+}
+
+// POST
+.post {
+  // HEADINGS FONT SIZE
+  h1 {
+    font-size: var(--main-heading-font-size);
+    line-height: var(--main-heading-line-height);
+  }
+
+  h2 {
+    line-height: var(--main-heading-line-height);
+  }
+}

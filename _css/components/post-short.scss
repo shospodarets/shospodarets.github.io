@@ -1,0 +1,66 @@
+// VARIATION 1 - list of posts
+@mixin post-short-layout {
+  --post-short-indent: calc(6 * var(--spacer));
+
+  border-bottom: 1px solid var(--light-gray-color);
+
+  padding-bottom: var(--post-short-indent);
+  margin-bottom: var(--post-short-indent);
+}
+
+.post__short {
+  @include post-short-layout;
+
+  // hover state
+  cursor: pointer;
+
+  &:hover {
+    & .hover-on-post__short-hover {
+      @include link-hover;
+    }
+  }
+}
+
+.post__short_title {
+  display: flex;
+
+  .post__short_link {
+    flex-grow: 1;
+  }
+
+  .external-link-icon {
+    flex-shrink: 0;
+    align-self: center;
+
+    background: transparent url(/images/icons/external-link.svg) no-repeat center center;
+    background-size: auto 75%;
+  }
+}
+
+.post__short_meta {
+  font-size: var(--small-font-size);
+  margin-bottom: var(--main-vertical-indent);
+}
+
+.post__short-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.post__short-footer_right{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post__short-comment-counter {
+  background: url(/images/icons/comment.svg) no-repeat;
+  padding-left: calc(3.5 * var(--spacer));
+
+  display: inline-block;
+  margin-left: calc(3 * var(--spacer));
+
+  &:empty { // hide when empty
+    display: none;
+  }
+}

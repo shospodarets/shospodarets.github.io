@@ -1,13 +1,8 @@
-/**
- * Babel Polyfill (to include Promise etc.)
- *
- * https://babeljs.io/docs/usage/polyfill/
- */
-import 'babel-polyfill';
-
 // DEPENDENCIES
 // components
 import Events from "./components/events-binding";
+import TalksData from "./components/talks-data";
+import ContactForm from "./components/contact-form";
 import "./components/register-service-worker";// execute file without imports
 
 // outer components
@@ -21,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const APP = window.jekyllVariables;
     delete window.jekyllVariables;// cleaning
 
-    // COMPONENTS
-    APP.events = new Events();
     // OUTER COMPONENTS (loading services/additions from outside)
     APP.analytics = new Analytics({
         GOOGLE_ANALYTICS: APP.GOOGLE_ANALYTICS
@@ -40,5 +33,21 @@ document.addEventListener("DOMContentLoaded", () => {
     APP.includeCss = new IncludeCss({
         isDefaultCssEnabled: APP.isDefaultCssEnabled,
         SITE_BASE_URL: APP.SITE_BASE_URL
+    });
+
+    // COMPONENTS
+    APP.events = new Events();
+
+    // talks data
+    Array.from(document.querySelectorAll('.talks-data')).forEach((talksDataEl) => {
+        new TalksData(talksDataEl);// populate talks data
+    });
+
+    // contact form
+    Array.from(document.querySelectorAll('.js-contact-form')).forEach((contactFormEl) => {
+        new ContactForm({
+            contactFormEl,
+            CONTACT_EMAIL: APP.CONTACT_EMAIL
+        });
     });
 });

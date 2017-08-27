@@ -83,16 +83,13 @@ After that, you can e.g. put breakpoints in both browser and Node JavaScript fil
 
 I prepared a demo:
 
-<div>
-    <a href="{{ site.baseurl }}/demos/nodejs-debugging-in-chrome-devtools/blog-index.html"
-       target="_blank"
-       class="btn-pulse">
-        <span class="wrapper">
-            <span class="inner"></span>
-        </span>
-        <span class="text">Demo</span>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/nodejs-debugging-in-chrome-devtools/blog-index.html"
+       target="_blank">
+        Demo
     </a>
-</div>
+</p>
 
 
 It contains a usual static server using Node.js (`node.js` file)

@@ -1,0 +1,67 @@
+// inputs
+input[type=text],
+input[type=email],
+input[type=search] {
+  // italic placeholder
+  &::-webkit-input-placeholder {
+    font-style: italic;
+  }
+  &:-moz-placeholder {
+    font-style: italic;
+  }
+  &::-moz-placeholder {
+    font-style: italic;
+  }
+  &:-ms-input-placeholder {
+    font-style: italic;
+  }
+}
+
+.input, textarea {
+  border: 1px solid var(--input-border-color);
+}
+
+// buttons + inputs
+.input,
+.sh-btn,
+textarea {
+  width: 100%;
+  border-radius: var(--main-border-radius);
+  padding: calc(1.8 * var(--spacer));
+  font-size: inherit;
+}
+
+// textarea
+.textarea {
+  width: 100%;
+  min-height: 50px;
+  font-size: inherit;
+}
+
+// buttons
+.sh-btn {
+  border: none;
+  min-width: 96px;
+
+  color: var(--white-color);
+  background-color: var(--nice-blue);
+  transition: background-color var(--transition-main);
+
+  &:hover {
+    background-color: var(--nice-blue-hover);
+  }
+
+  &[flavor="text-width"] {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+  }
+}
+
+// link button
+a.sh-btn {
+  &:hover {
+    color: var(--white-color);
+    text-decoration: none;
+  }
+}

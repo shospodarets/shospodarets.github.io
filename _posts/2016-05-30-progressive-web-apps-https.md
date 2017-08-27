@@ -25,7 +25,7 @@ Let's start from the first item and add security (HTTPS).
 
 # Reason
 
-About half a year ago I migrated my site to [blog.hospodarets.com](https://blog.hospodarets.com/) to `https`.
+About half a year ago I migrated my site to [hospodarets.com]({{ site.baseurl }}/) to `https`.
 
 The main reason why I did that is that [Service Workers](https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md)
 require that and just don't work otherwise.
@@ -138,8 +138,7 @@ These rules redirect requests form HTTP to HTTPS answering via [301 http code](h
 
 # Fixing blocked mixed content
 
-If your app is served via HTTPS but some content is served via HTTP you would have the following warnings
-([example](https://s.codepen.io/malyw/debug/aZbwzo)):
+If your app is served via HTTPS but some content is served via HTTP you would have the following warnings:
 
 ![alt](https://i.imgur.com/CjNFyV7.png)
 
@@ -190,7 +189,7 @@ For different 3rd party services there might be various approaches, but most of 
 
 Another free benefit of using services like Cloudflare is an easy migration of domains.
 In my case I switched [gospodarets.com](https://gospodarets.com) to
-[hospodarets.com](https://hospodarets.com) (now all requests are redirected automatically).
+[hospodarets.com]({{ site.baseurl }}) (now all requests are redirected automatically).
 
 If you want to do something similar- there is nothing hard, just add the following page rules
 to your Cloudflare site configuration:

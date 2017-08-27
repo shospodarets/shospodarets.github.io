@@ -1,20 +1,18 @@
 ---
-layout: default
+layout: post-layout
 ---
 
 <article
         itemscope itemtype="https://schema.org/Article"
-        class="post">
-    <h1
+        class="post post__full">
+    <strong
             itemprop="name"
             class="post-title">
         {{ page.title }}
-    </h1>
+    </strong>
 
-    <div class="meta">
-        {% include share-buttons.html %}
-        <!-- META FOR ARTICLE START -->
-        <span class="absolute-hidden">
+    <!-- HIDDEN META FOR ARTICLE START -->
+    <span class="absolute-hidden">
             {% for tag in page.tags %}
             <meta itemprop="articleSection" content="{{ tag }}">
             {% endfor %}
@@ -22,20 +20,31 @@ layout: default
             <span itemprop="author" itemscope itemtype="https://schema.org/Person">
                 <meta itemprop="name" content="{{ site.author }}">
             </span>
-            <img class="article-image" itemprop="image" src="{{ site.avatar }}"/>
             <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
                 <span itemprop="name">
                     {{ site.name }}
                 </span>
             </span>
         </span>
-        <!-- META FOR ARTICLE END -->
-        <span class="date">
+    <!-- HIDDEN META FOR ARTICLE END -->
+
+    <div class="post__meta">
+        <span class="post__date">
             <span
                     itemprop="datePublished"
                     content='{{ page.date | date: "%Y-%m-%d" }}'>
                 {{ page.date | date: "%B %e, %Y" }}
             </span>
+        </span>
+
+        <span class="post__tags">
+            {% for tag in page.tags %}
+                {% unless forloop.first %}
+                    ,
+                {% endunless %}
+
+                <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+            {% endfor %}
         </span>
     </div>
 
@@ -45,6 +54,10 @@ layout: default
         >
             {{ content }}
         </div>
+    </div>
+
+    <div class="post__footer">
+        {% include share-buttons.html %}
     </div>
 
     {% include disqus.html disqus_identifier=page.disqus_identifier %}

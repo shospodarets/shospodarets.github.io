@@ -17,8 +17,8 @@
     <meta name="author" content="{{ site.author }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
 
-    <meta itemprop="image" content="{{ site.url }}/avatar.jpg">
-    <link rel="image_src" href="{{ site.url }}/images/avatar.jpg">
+    <meta itemprop="image" content="{{ site.url }}/logo.png">
+    <link rel="image_src" href="{{ site.url }}/images/logo.png">
     {% include head/favicons.html %}
 
     {% include head/social-networks/google-plus.html %}
@@ -43,6 +43,7 @@
             PAGE_URL: "{{ site.url }}{{ page.url | replace:'index.html',''}}",
             PAGE_IDENTIFIER: "{{ page.url | replace:'index.html',''}}",
             GOOGLE_SEARCH_ID: "{{ site.google_search }}",
+            CONTACT_EMAIL: "{{ site.CONTACT_EMAIL }}",
             isDefaultCssEnabled: {% if page.disable_default_css %}false{% else %}true{% endif %}
         }
     </script>

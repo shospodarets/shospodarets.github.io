@@ -1,0 +1,8 @@
+.sh-container-common {
+  font-size: var(--container-common-font-size);
+  line-height: var(--container-common-line-height);
+
+  p {
+    margin-bottom: calc(1.5 * var(--main-vertical-indent));
+  }
+}

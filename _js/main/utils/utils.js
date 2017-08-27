@@ -7,20 +7,25 @@ export function triggerEvent(el, eventName) {
 
 /**
  * @param src {String}
- * @param [onload] {Function} Can be used for specific cases when action is needed on script load
+ * @param [scriptAttributes] {Object} Additional attributes to be added to the script DOM element
  * without wait one JS cycle which will be before invoking SUCCESS function passed in promise.then
  */
-export function loadScript(src, onload) {
+export function loadScript(src, scriptAttributes) {
     return new Promise((resolve, reject) => {
         const script = document.createElement('script');
         script.async = true;
         script.src = src;
-        if (onload) {
-            script.onload = onload;
-        } else {
-            script.onload = resolve;
-            script.onerror = reject;
+
+        // add scripts attributes if needed
+        if (scriptAttributes) {
+            for (const attrName in scriptAttributes) {
+                script.setAttribute(attrName, scriptAttributes[attrName]);
+            }
         }
+
+        script.onload = resolve;
+        script.onerror = reject;
+
         document.head.appendChild(script);
     });
 }
@@ -46,4 +51,4 @@ export function loadCss(href, onload) {
     });
 }
 
-export const httpProtocol = document.location.protocol == 'https:' ? 'https:' : 'http:';
+export const httpProtocol = document.location.protocol === 'https:' ? 'https:' : 'http:';

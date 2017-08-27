@@ -1,0 +1,22 @@
+<div class="posts_tag-info">
+    <div class="posts_tag-info-title post-title">
+        Posts tagged ‘{{page.active-tag}}’.
+    </div>
+    <a href="{{ site.urls.blog }}">Show all posts</a>
+</div>
+
+<div class="posts">
+    {% for post in site.posts %}
+        {% assign post_has_active_tag = false %}
+
+        {% for tag in post.tags %}
+            {% if page.active-tag == tag %}
+                {% assign post_has_active_tag = true %}
+            {% endif %}
+        {% endfor %}
+
+        {% if post_has_active_tag == true %}
+            {% include post-short.html %}
+        {% endif %}
+    {% endfor %}
+</div>

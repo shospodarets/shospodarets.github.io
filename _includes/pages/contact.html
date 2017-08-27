@@ -1,0 +1,96 @@
+<div class="sh-container-wrapper container-wrapper__one-column">
+    <div class="sh-container">
+        <div class="one-column">
+            <div class="sh-container-common">
+                <div class="page-contact">
+                    <div class="page-contact__block page-contact__links">
+                        <h2 class="page-contact__title">
+                            Social Networks
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/{{ site.social-links.twitter }}">
+                                    <span class="page-contact__social-icon twitter"></span>
+                                    <span class="page-contact__social-text">
+                                        Twitter
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/{{ site.social-links.github }}">
+                                    <span class="page-contact__social-icon github"></span>
+                                    <span class="page-contact__social-text">
+                                        Github
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://codepen.io/{{ site.social-links.codepen }}">
+                                    <span class="page-contact__social-icon codepen"></span>
+                                    <span class="page-contact__social-text">
+                                        CodePen
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://linkedin.com/in/{{ site.social-links.linkedin }}">
+                                    <span class="page-contact__social-icon linkedin"></span>
+                                    <span class="page-contact__social-text">
+                                        Linkedin
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="page-contact__block page-contact__form-wrapper">
+                        <div class="page-contact__form-text">
+                            <h2 class="page-contact__title">
+                                Contact Me
+                            </h2>
+
+                            <p>
+                                Feel free to contact me if you have any questions and I’ll respond to you as fast as I can.
+                            </p>
+
+                            <p>
+                                You can also reach out to me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                            </p>
+                        </div>
+
+                        <form class="page-contact__form js-contact-form">
+                            <label class="page-contact__form-block">
+                                <span class="page-contact__form-label">Name</span>
+                                <input class="input" type="text" name="name" required/>
+                            </label>
+                            <label class="page-contact__form-block">
+                                <span class="page-contact__form-label">Email</span>
+                                <input class="input" type="email" name="_replyto" required/>
+                            </label>
+                            <label class="page-contact__form-block">
+                                <span class="page-contact__form-label">Message</span>
+                                <textarea class="textarea" name="message" cols="30" rows="5" required></textarea>
+                            </label>
+                            <div class="page-contact__form-block">
+                                <button class="sh-btn" type="submit">
+                                    Send
+                                    <span class="page-contact__form-icon-wrapper">
+                                    <span class="page-contact__form-icon contact-form-loading">
+                                        <span class="loader page-contact__form-loading"></span>
+                                    </span>
+                                    <span class="page-contact__form-icon contact-form-reject">
+                                        <span class="page-contact__form-reject"></span>
+                                    </span>
+                                    <span class="page-contact__form-icon contact-form-success">
+                                        <span class="page-contact__form-success"></span>
+                                    </span>
+                                </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

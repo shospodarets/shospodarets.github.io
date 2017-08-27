@@ -16,22 +16,21 @@ or similar [solutions](https://css-tricks.com/snippets/jquery/smooth-scrolling/)
 
 But dreams came true- there is a specification for [native smooth scroll behavior API](http://dev.w3.org/csswg/cssom-view/).
 
-<a href="{{ site.baseurl }}/demos/smooth-scroll-api/"
-   target="_blank"
-   class="btn-pulse">
-    <span class="wrapper">
-        <span class="inner"></span>
-    </span>
-    <span class="text">Demo</span>
-</a>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/smooth-scroll-api/"
+       target="_blank">
+        Demo
+    </a>
+</p>
 
 <div class="more"></div>
 
-## API
+# API
 
 First of all- you can provide smooth scroll behavior in two ways- from JavaScript or CSS.
 
-### JavaScript
+## JavaScript
 
 New API is quite easy to use, just instead of:
 
@@ -60,7 +59,7 @@ window.scrollTo({
 You can also use it in `scrollIntoViewOptions`
 for [Element.scrollIntoView()](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView#Parameters)
 
-### CSS
+## CSS
 
 For CSS things are even more better. Just add one line of the code:
 
@@ -76,12 +75,12 @@ If you add smooth scrolling to the `body`-
 browser automatically will apply this effect during scrolling to the anchor links
 (e.g. `#fragment` hash part in url automatically triggers page scrolling on load to the link with the `id="fragment"`).
 
-### Common
+## Common
 
 Of course you can use this API not only for global objects (`window`, `
 <body/>`) but also for some specific elements.
 
-## Implementation
+# Implementation
 
 To check if smooth scroll is supported in the browser use:
 
@@ -110,14 +109,13 @@ if (isSmoothScrollSupported) {
 }
 ```
 
-<a href="{{ site.baseurl }}/demos/smooth-scroll-api/"
-   target="_blank"
-   class="btn-pulse">
-    <span class="wrapper">
-        <span class="inner"></span>
-    </span>
-    <span class="text">Demo</span>
-</a>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/smooth-scroll-api/"
+       target="_blank">
+        Demo
+    </a>
+</p>
 
 <div class="text-center">
     <a href="{{ site.baseurl }}/demos/smooth-scroll-api/">
@@ -125,7 +123,7 @@ if (isSmoothScrollSupported) {
     </a>
 </div>
 
-## Browser Support
+# Browser Support
 
 API is already supported in desktop [Firefox](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior) out of the box and
 in [Chrome](https://www.chromestatus.com/feature/5812155903377408) under the `Enable experimental Web Platform features` flag on the `chrome://flags/` page.
@@ -134,7 +132,7 @@ In Chrome up to 42 only JS part of the API is supported. In 43+ (currently it is
 
 Smooth scrolling to the anchors currently works only in Firefox. For Chrome it's [in development](https://www.chromestatus.com/feature/5812155903377408).
 
-## Profits
+# Profits
 1. It's a native solution. You can change browser scroll behavior with only one line of CSS!
 2. API provides a way to avoid JavaScript scroll animation- just say to the browser where to scroll instead of playing with `scrollTop\scrollLeft`.
 3. Because of the browser optimizations smooth scroll works smoothly (as you see it is in its name :smiley:) and fast.

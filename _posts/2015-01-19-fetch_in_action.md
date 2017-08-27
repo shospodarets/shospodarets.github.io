@@ -23,7 +23,7 @@ And time is come!
 <h2 id="before">Before</h2>
 
 Before we had XMLHttpRequest syntax. E.g. to get JSON usually we had to provide the following methods in some utilities file:<br>
-(simple demo without listening <mark>onerror</mark> etc. events and manual <mark>timeout</mark> checking)<br>
+(simple demo without listening `onerror` etc. events and manual `timeout` checking)<br>
 
 ```javascript
 /*--- Send Ajax ---*/
@@ -123,12 +123,12 @@ fetch(url)
 ```
 
 If there is response with status "200" or "0"- will be returned resolved promise,<br>
-which means, we can use <mark>.then().then()</mark> promise syntax.<br>
-In other case <mark>.catch()</mark> will be invoked.
+which means, we can use `.then().then()` promise syntax.<br>
+In other case `.catch()` will be invoked.
 
 <h3>Parse JSON</h3>
 
-Also there is a method <mark>json()</mark> to proceed the response.<br>
+Also there is a method `json()` to proceed the response.<br>
 Knowing it let's add parsing:
 
 ```javascript
@@ -144,9 +144,9 @@ This code gives promise in which (in case of success) will be returned parsed JS
 
 <h3>Setting options</h3>
 
-Nice, going further. We need to set "get" as <mark>method</mark> for doing our request and proper "Accept" <mark>header</mark>.<br>
-There is a <mark>cache</mark> option but so far let's use manual cache busting.<br>
-It can be done passing them in second argument (options) to <mark>fetch()</mark>:
+Nice, going further. We need to set "get" as `method` for doing our request and proper "Accept" `header`.<br>
+There is a `cache` option but so far let's use manual cache busting.<br>
+It can be done passing them in second argument (options) to `fetch()`:
 
 ```javascript
 fetch(url, {
@@ -159,12 +159,12 @@ fetch(url, {
 
 <h3>Adding waiting timeout</h3>
 
-When <mark>fetch()</mark> takes more then some period of time (10-30 seconds)-<br>
+When `fetch()` takes more then some period of time (10-30 seconds)-<br>
 it's good idea to define that it was unsuccessful (depends on circumstances).<br>
 And here the problems start- there is NOT <a href="https://github.com/whatwg/fetch/issues/20">timeout</a> option.
-So we need to wrap <mark>fetch()</mark> promise to be able to reject it when timeout is reached.
+So we need to wrap `fetch()` promise to be able to reject it when timeout is reached.
 It adds complexity to our code but provides more flexibility.
-So let's imagine so far (code will be provided below) that we have some <mark>wrappedFetch</mark> Promise-like object with ability to trigger <mark>.reject()</mark> on it:
+So let's imagine so far (code will be provided below) that we have some `wrappedFetch` Promise-like object with ability to trigger `.reject()` on it:
 
 ```javascript
 var MAX_WAITING_TIME = 5000;// in ms
@@ -267,8 +267,8 @@ getJSON({
 
 <span data-height="250" data-theme-id="178" data-slug-hash="zxZVxV" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
-There is NOT <mark>.always()</mark> or <mark>.complete()</mark> for Native JavaScript promises,<br>
-that's why you have to add  <mark>onComplete()</mark> callback to the end of success and reject callbacks.<br>
+There is NOT `.always()` or `.complete()` for Native JavaScript promises,<br>
+that's why you have to add  `onComplete()` callback to the end of success and reject callbacks.<br>
 
 But with coming of Fetch API we pass callbacks in Promise-style, which is common way nowadays.
 
@@ -284,7 +284,7 @@ So idea about providing modules loader system based on it looks very reasonable.
 
 To create loader for AMD style, we need to process all required modules together.<br>
 First- fetch them, then- get their texts, invoke them and provide modules as promise result.<br>
-Let's create loader for simple AMD cases and test it with <mark>jQuery</mark> and <mark>d3.js</mark> libraries:<br>
+Let's create loader for simple AMD cases and test it with `jQuery` and `d3.js` libraries:<br>
 
 ```javascript
 /*--- AMD-specific ---*/
@@ -394,7 +394,7 @@ require(jqueryUrl, d3Url)
 
 <h3 id="commonjs-modules-loader">Fetch API-based asynchronous CommonJS modules loader</h3>
 
-<mark>fetch()</mark> can invoke onSuccess/onReject callbacks only asynchronously.<br>
+`fetch()` can invoke onSuccess/onReject callbacks only asynchronously.<br>
 That's why result loader call is similar to AMD syntax.
 
 ```javascript
@@ -428,8 +428,8 @@ require('https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js').then
 
 <h3 id="options">Options</h3>
 
-As we already saw, in second argument for <mark>fetch()</mark> we can set request <mark>headers</mark> and <mark>method</mark> for requesting resorce.
-As well we can set <mark>mode</mark>, <mark>body</mark>, <mark>credentials</mark>, <mark>cache</mark>, <mark>context</mark>, <mark>referrer</mark>.<br>
+As we already saw, in second argument for `fetch()` we can set request `headers` and `method` for requesting resorce.
+As well we can set `mode`, `body`, `credentials`, `cache`, `context`, `referrer`.<br>
 E.g. to send POST request to the service for JSON validation:<br>
 
 ```javascript
@@ -474,8 +474,8 @@ validateJSON(jsonTestUrl, {hello: 'world'});// JS object-> valid JSON is generat
 
 <h3 id="methods">Methods</h3>
 
-We used <mark>json()</mark> and <mark>text()</mark> to proceed response.<br>
-There are also <mark>formData()</mark>, <mark>arrayBuffer()</mark>, <mark>blob()</mark> methods for it.<br>
+We used `json()` and `text()` to proceed response.<br>
+There are also `formData()`, `arrayBuffer()`, `blob()` methods for it.<br>
 So there is possibility to work with form data and files too.<br>
 Next example will show how to fetch image from one resource and upload it to another:<br>
 
@@ -520,7 +520,7 @@ downloadFile(sourceImageUrl)// download file from one resource
 
 <span data-height="200" data-theme-id="178" data-slug-hash="emWmBz" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
-In getting JSON example <mark>headers</mark> option was set before fetching resource to show JSON is expected as answer.<br>
+In getting JSON example `headers` option was set before fetching resource to show JSON is expected as answer.<br>
 But we also can work with response headers. Let's check that server answers with JSON as expected:<br>
 
 ```javascript
@@ -576,21 +576,14 @@ With Fetch and Promise Polyfills it works wonderfully in all browsers up-to IE9 
 
 <h2 id="limitations">Limitations</h2>
 
-<ul>
-    <li>
-        Promises don't have <mark>finally</mark>/<mark>always</mark> method- there is a <a href="https://github.com/matthew-andrews/Promise.prototype.finally">workaround</a>
-    </li>
-    <li>
-        There is neither <a href="https://github.com/github/fetch/issues/33">abort</a> method nor a <a href="https://github.com/whatwg/fetch/issues/20">timeout</a> property for fetch()
-    </li>
-    <li>
-        <mark>fetch()</mark> (as <a href="https://promisesaplus.com/">Promise</a>- based standard) doesn't have ability to provide <mark>onProgress()</mark> callback- so you cannot process a response by chunks
-    </li>
-    <li>
-        Haven't found clear info about doing <mark>synchronous</mark> fetching<br>
-        but, most of all, it's not provided, because even in such case <mark>onSuccess</mark> and <mark>onReject</mark> callbacks
+- Promises don't have `finally` / `always` method- there is a <a href="https://github.com/matthew-andrews/Promise.prototype.finally">workaround</a>
+
+- There is neither <a href="https://github.com/github/fetch/issues/33">abort</a> method nor a <a href="https://github.com/whatwg/fetch/issues/20">timeout</a> property for fetch()
+
+- `fetch()` (as <a href="https://promisesaplus.com/">Promise</a>- based standard) doesn't have ability to provide `onProgress()` callback- so you cannot process a response by chunks
+
+- Haven't found clear info about doing `synchronous` fetching<br>
+        but, most of all, it's not provided, because even in such case `onSuccess` and `onReject` callbacks
         would be invoked on the next tick- <a href="https://promisesaplus.com/#point-67">due to Promise nature</a>.
-    </li>
-</ul>
 
 🔚

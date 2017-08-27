@@ -1,0 +1,21 @@
+.talks-data {
+  .talks-data-loader {
+    height: 7em;
+    padding: 0.5em 1.5em;
+
+    font-size: calc(var(--main-font-size) / 2); // sets the loader size
+  }
+
+  &:not(.loaded) {
+    .for-each-talk {
+      display: none;
+    }
+  }
+
+
+  &.loaded {
+    .talks-data-loader {
+      display: none;
+    }
+  }
+}

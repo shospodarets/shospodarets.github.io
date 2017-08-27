@@ -1,0 +1,67 @@
+/*------------------------------------ */
+/*    Google Search */
+/*------------------------------------ */
+
+// Google search placeholder
+
+.google-custom-search {
+}
+
+.google-custom-search-original {
+  @include absolute-hidden;
+  /* hide original google search */
+}
+
+.google-custom-search-placeholder {
+  display: flex;
+
+  @include mobile {
+    text-align: center;
+  }
+
+  /* reset */
+  & input {
+    outline: none;
+  }
+
+  & input[type=search] {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  /* styles */
+  .google-custom-search-input-wrapper {
+    flex: 1 1 auto;
+    overflow: hidden;
+
+    & input[type=search] {
+      border: none;
+      width: 100%;
+    }
+  }
+
+  & input[type=submit] {
+    --size: calc(var(--main-font-size) * var(--main-line-height));
+
+    flex: 0 0 auto;
+    background: var(--white-color) url(/images/icons/search.svg) no-repeat 5px center;
+    width: var(--size);
+    height: var(--size);
+    border: none;
+    cursor: pointer;
+  }
+}
+
+// Google search reset
+
+.google-custom-search-original {
+  /*------------------------------------ */
+  /*    RESET BLOG STYLES FOR GOOGLE CUSTOM SEARCH */
+  /*------------------------------------ */
+  box-sizing: content-box;
+  text-align: left;
+
+  & table {
+    border-collapse: separate;
+  }
+}

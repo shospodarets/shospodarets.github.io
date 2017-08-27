@@ -208,7 +208,7 @@ when the module scripts are executed in the order after the document is parsed,
 but before firing [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded)
 
 - `integrity` still can be used
-[to verify that fetched files (for example, from a CDN) are delivered without unexpected manipulation](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
+[to verify that fetched files (for example, from a CDN) are delivered without unexpected manipulation](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) 
 
 - with the [`crossorigin` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes),
 you can control the exchange of the data which is sent with the CORS requests
@@ -471,7 +471,7 @@ So we need a different way to detect it.
 
 We have the functionality to detect if classic/module script was loaded,
 listening `onload/onerror` events on them.
-We also know that the `script` element provided with unsupported
+We also know that the `script` element provided with unsupported 
 `type` element will be just ignored by the browser.
 It means, we can include `<script type="module">` and know,
 that if it was loaded, then the browser supports the modules system.
@@ -511,7 +511,7 @@ function checkJsModulesSupport() {
     function triggerResolve() {
       if (isFulfilled) return;
       isFulfilled = true;
-
+      
       resolve();
       onFulfill();
     }
@@ -591,7 +591,7 @@ Ok, so we use aliases and Webpack features to simplify the `import` syntax.
 For example, we do:
 
 ```js
-import _ from 'lodash';
+import _ from 'lodash'; 
 ```
 
 and Webpack looks into your `node_modules`, finds `lodash`
@@ -612,7 +612,7 @@ Let's try to port the following code, which works well with Webpack,
 
 ```js
 // main-bundled.js
-import _ from 'lodash';
+import _ from 'lodash'; 
 
 console.log('lodash version:', _.VERSION); // e.g. 4.17.4
 
@@ -666,7 +666,7 @@ is not a part of the distribution code.
 When we work with ES modules, we will actually need the files to be loaded at runtime, instead
 of the processing during the build time.
 
-You can find [the code on Github](https://github.com/malyw/malyw.github.io/tree/master/demos/native-ecmascript-modules-aliases).
+You can find [the code on Github]({{ site.demos_code_base_url }}/native-ecmascript-modules-aliases).
 `main-bundle.js` will be processed by Webpack 2 to `dist/app.bundle.js`, on the other hand,
 `js/main-native.js` will stay a ES module and should be processed by the browser
 together with dependencies.
@@ -676,7 +676,7 @@ the native modules**, so first of all, we need to add that.
 
 ```js
 // 1) main-native.js DOESN'T WORK
-import lodash from 'lodash-es.js';
+import lodash from 'lodash-es.js'; 
 import map from 'lodash-es/map.js';
 ```
 
@@ -692,9 +692,9 @@ import map from '../dist_node_modules/lodash-es/map.js';
 
 As after a while we can start having more complex ECMAScript modules
 file structure, we can have relative URLs with a very long values,
-so better to switch to use the base URL,
+so better to switch to use the base URL, 
 which you can easily replace in all the files:
-
+ 
 ```js
 // 2) main-native.js WORKS, CAN BE REUSED/COPIED IN ANY ES MODULE IN THE PROJECT
 import _ from '/dist_node_modules/lodash-es/lodash.js';
@@ -702,7 +702,7 @@ import map from '/dist_node_modules/lodash-es/map.js';
 ```
 
 Don't forget, usually this URL points to the location
- where your main `index.html` is placed
+ where your main `index.html` is placed 
  and the value of the [`<base>` HTML tag](https://developer.mozilla.org/en/docs/Web/HTML/Element/base)
  doesn't affect the `import` behavior.
 
@@ -726,16 +726,14 @@ console.log(
 ); // ['barney', 'fred']
 ```
 
-<div>
-    <a href="{{ site.baseurl }}/demos/native-ecmascript-modules-aliases/"
-       target="_blank"
-       class="btn-pulse">
-        <span class="wrapper">
-            <span class="inner"></span>
-        </span>
-        <span class="text">Demo</span>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/native-ecmascript-modules-aliases/"
+       target="_blank">
+        Demo
     </a>
-</div>
+</p>
+
 
 In the end of this chapter I will mention, that to
 import the module scripts and dependencies the browser

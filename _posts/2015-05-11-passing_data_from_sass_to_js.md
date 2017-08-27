@@ -6,7 +6,7 @@ share_image: https://i.imgur.com/e2Npbpf.gif
 share_description: How to pass a data from Sass (via CSS) / CSS to JavaScript ( js ) using sass-to-js
 ---
 
-## The idea
+# The idea
 
 Once I needed to add component to show controls like the following:
 [![control](https://i.imgur.com/5w2pnut.png)]({{ site.baseurl }}/demos/data-from-sass-to-js/)
@@ -15,18 +15,17 @@ The number of sections in it had to be configurable. To do it usually you can ad
 
 But I wanted to have config only in one place and reuse it in the second. That's how the idea to pass data from Sass to JavaScript came to me.
 
-<a href="{{ site.baseurl }}/demos/data-from-sass-to-js/"
-   target="_blank"
-   class="btn-pulse">
-    <span class="wrapper">
-        <span class="inner"></span>
-    </span>
-    <span class="text">Demo</span>
-</a>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/data-from-sass-to-js/"
+       target="_blank">
+        Demo
+    </a>
+</p>
 
 <div class="more"></div>
 
-## How
+# How
 
 First problem to solve was- how to pass data between CSS and JavaScript?
 
@@ -40,9 +39,9 @@ Last- which format to use?
 
 It's the simplest- JSON, which is JS-based and can be parsed without any problems.
 
-## Implementation
+# Implementation
 
-### Sass to JSON in CSS
+## Sass to JSON in CSS
 
 I'm big fan of Sass. When I started to implement [sass-to-js](https://github.com/malyw/sass-to-js) converter
 I didn't expect it would be possible to implement using only Sass and JavaScript.
@@ -123,7 +122,7 @@ And CSS output for it is:
 }
 ```
 
-## JavaScript from JSON in CSS
+# JavaScript from JSON in CSS
 
 The next part- to read provided JSON in CSS from JavaScript.
 
@@ -167,9 +166,9 @@ var resultObj = sassToJs(
 );
 ```
 
-## Additions
+# Additions
 
-### AngularJS/jQuery
+## AngularJS/jQuery
 
 I use AngularJS and/or jQuery in many of my projects, so it was decided to add helpers to use `sass-to-js` easily in them:
 
@@ -187,7 +186,7 @@ $(htmlEl)
     .sassToJs({pseudoEl: '::before', cssProperty: 'content'});
 ```
 
-### Codepen
+## Codepen
 
 Usually to make quick demos or for code testing I use the wonderful [Codepen](https://codepen.io/).
 It has easy way to reuse your Pens as [External Resources](http://blog.codepen.io/2013/05/28/new-feature-use-pens-as-external-resources/).
@@ -198,7 +197,7 @@ and can be reused in any other Pen as in [Sass-to-js demo](https://codepen.io/ma
 
 <span data-height="340" data-theme-id="178" data-slug-hash="zGxodr" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
-## Tests
+# Tests
 
 A pack of Jasmine tests were added to provide good coverage for sass-to-js code.
 
@@ -206,7 +205,7 @@ Tests are provided for integration with AngularJS/jQuery, debugging errors in co
 
 for the main part- converting of Sass data to JavaScript correctly.
 
-## Demo
+# Demo
 
 Regarding the task from which everything started (+/- control with sections)- I just provided `zoomSteps` variable in Sass.
 
@@ -227,27 +226,26 @@ And JavaScript part is:
 this.maxZoomStep = sassToJs(this.zoom).maxZoomStep;
 ```
 
-<a href="{{ site.baseurl }}/demos/data-from-sass-to-js/"
-   target="_blank"
-   class="btn-pulse">
-    <span class="wrapper">
-        <span class="inner"></span>
-    </span>
-    <span class="text">Demo</span>
-</a>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/demos/data-from-sass-to-js/"
+       target="_blank">
+        Demo
+    </a>
+</p>
 
 If instead of Sass you use other CSS preprocessors or just pure CSS-
 you still can use **sass-to-js** JavaScript module to read JSON from CSS as demonstrated in:
 
 <span data-height="210" data-theme-id="178" data-slug-hash="PqZOBd" data-user="malyw" data-default-tab="result" class="codepen"></span>
 
-## Results
+# Results
 
 The library to easily convert Sass data to JSON in CSS which can be easily read from JS is created.
 
 sass-to-js **doesn't have any dependencies** and has been **tested tested and works in all modern browsers and IE9+**.
 
-### Links
+## Links
 
 * [Github sass-to-js library](https://github.com/malyw/sass-to-js)
 * [SASSYJSON: TALK TO THE BROWSER!](http://hugogiraudel.com/2014/01/20/json-in-sass/) by [Hugo Giraudel](https://twitter.com/HugoGiraudel)

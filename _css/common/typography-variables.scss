@@ -1,0 +1,28 @@
+:root {
+  // font-families
+  --main-font-family: ('Roboto', Arial, sans-serif);
+  --main-headings-font-family: ('Roboto-Light', Arial, sans-serif);
+  --main-code-font-family: ('Roboto-Mono', 'Courier New', monospace);
+  /* Typography */
+  --main-font-size: 16px;
+  --main-line-height: 1.5;
+  --nav-links-font-size: 18px;
+  --main-heading-font-size: 32px;
+  --main-heading-line-height: 36px;
+  --h2-heading-font-size: 28px;
+  --post-short-title-font-size: 28px;
+  --post-short-title-line-height: 35px;
+  --post-full-title-font-size: 40px;
+  --post-full-title-line-height: 50px;
+  --small-font-size: 12px;
+  --small-line-height: 15px;
+  --page-title-font-size: 40px;
+  --page-title-line-height: 50px;
+  --container-common-font-size: 18px;
+  --container-common-line-height: 24px;
+  --speaking-main-font-size: 18px;
+  --speaking-main-line-height: 27px;
+  --additional-heading-font-size: var(--main-heading-font-size);
+  --additional-heading-line-height: 36px;
+  --external-link-size: calc(#{var(--main-heading-font-size)} * 1.7);
+}

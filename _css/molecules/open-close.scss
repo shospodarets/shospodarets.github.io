@@ -9,7 +9,7 @@
   }
 
   & .text {
-    border-bottom: 1px dashed #999;
+    border-bottom: 1px dashed var(--warm-grey);
     cursor: pointer;
   }
 
@@ -18,9 +18,9 @@
     display: inline-block;
     transition: transform .3s;
 
-    @apply --triangle-preset;
+    @include triangle-preset;
     border-width: 5px;
-    border-color: #000 transparent transparent;
+    border-color: var(--black-color) transparent transparent;
     border-bottom: none;
   }
 

@@ -1,0 +1,123 @@
+<div class="page-speaking">
+    <div class="page-speaking__intro">
+        <div class="page-speaking__intro-section">
+            <p>
+                I really love to create something new: from the browser API to a CSS demo.
+                Being involved in the latest discussions regarding the browser additions and latest Front-End features,
+                I really love to share my experience and excite others regarding the abilities they can learn and start using.
+            </p>
+
+            <p>
+                Usually, it’s about everything related to Front-End:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>CSS:</strong>
+                    latest layouts, new properties and modules, pre/post processor news, libraries, CSS Houdini and performance
+                </li>
+                <li>
+                    <strong>JavaScript:</strong>
+                    ES6+ features, build time and native differences/abilities, Node.js, frameworks, new APIs, and proposals, security, and perf
+                </li>
+                <li>
+                    <strong>Build tools:</strong>
+                    Node.js, npm scripts, Webpack/Rollup/Browserify, Gulp/Grunt, Bash and dozen other interesting words 😉
+                </li>
+                <li>
+                    <strong>Browsers:</strong>
+                    new DevTools features, latest additions to the browsers support, experimental flags and capabilities, page load and UI interaction performance
+                </li>
+                <li>
+                    <strong>proposals/specs:</strong>
+                    dev discussions, ideas, needs and proposals
+                </li>
+                <li>
+                    and many other things.
+                </li>
+            </ul>
+        </div>
+
+        <p>
+            It’s useful for various people, including UI developers, UX designers, JavaScript developers and many others (DevOps, Management etc.)
+        </p>
+
+        <p>
+            I usually speak at public conferences but can give a talk at private/company events.
+            Same is about workshops- I can provide them if you are interested in it.
+        </p>
+
+        <div class="page-speaking__want-me-to-speak">
+            Do you want me to speak at your conference or run a workshop-
+            <br>
+            Contact me: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </div>
+
+        <div class="page-speaking__intro-section">
+            <p>
+                Interested to see where I’m speaking next? Here is the list:
+            </p>
+        </div>
+    </div>
+    <div class="page-speaking__events">
+        <div class="page-speaking__events-list-wrapper">
+            <h2 class="page-speaking__events-title page-title">
+                Upcoming Events
+            </h2>
+            <ul class="talks-data upcoming-only page-speaking__events-list">
+                <li class="talks-data-loader">
+                    <div class="loader"></div>
+                </li>
+                <li class="for-each-talk">
+                    <div class="page-speaking__events-grid">
+                        <div class="page-speaking__events-grid-item">
+                            <div class="event-type">%%type%%</div>
+                            <div class="event-name">
+                                <a href="%%link%%">%%name%%</a>
+                            </div>
+                        </div>
+                        <div class="page-speaking__events-grid-item page-speaking__events-grid-item__top-indent">
+                            <div class="event-date">
+                                %%date%%
+                            </div>
+                        </div>
+                        <div class="page-speaking__events-grid-item page-speaking__events-grid-item__top-indent">
+                            <div class="event-location">
+                                %%flag%% %%location%%
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="page-speaking__events-list-wrapper">
+            <h2 class="page-speaking__events-title page-title">
+                Previous Events
+            </h2>
+            <ul class="talks-data previous-only page-speaking__events-list page-speaking__events-grid">
+                <li class="talks-data-loader">
+                    <div class="loader"></div>
+                </li>
+                <li class="for-each-talk">
+                    <div class="event-img">
+                        <a href="%%link%%">
+                            <img class="pre-src" pre-src="{{ site.baseurl }}/images/events/%%speakingImage%%" alt="about image"/>
+                        </a>
+                    </div>
+                    <div class="page-speaking__event-content">
+                        <div class="event-type">%%type%%</div>
+                        <div class="event-name">
+                            <a href="%%link%%">%%name%%</a>
+                        </div>
+                        <div class="event-date">
+                            %%date%%
+                        </div>
+                        <div class="event-location">
+                            %%location%% %%flag%%
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

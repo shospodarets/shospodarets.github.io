@@ -5,8 +5,8 @@
   "display": "standalone",
   "orientation": "landscape",
   "lang": "en",
-  "background_color": "#eeeeee",
-  "theme_color": "#eeeeee",
+  "background_color": "#f8f8f8",
+  "theme_color": "#323232",
   "icons": [
     {
       "src": "/images/favicons/favicon-16x16.png",
@@ -81,6 +81,11 @@
     {
       "src": "/images/favicons/favicon-300x300.png",
       "sizes": "300x300",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicons/favicon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]

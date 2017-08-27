@@ -1,66 +1,65 @@
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
-    {% if paginator.previous_page %}
-    <div class="prev-btn">
-        <a href="
+<div class="pagination-wrapper">
+    <div class="pagination">
+        <div class="prev-btn">
+            <a href="
            {% if paginator.previous_page != 1 %}
             {{ paginator.previous_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}"
-           {% else %}
-           {{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-        {% endif %}
-        >&laquo; prev</a>
+               {% else %}
+               {{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}
+            {% endif %}
+            "
+
+            {% if paginator.previous_page %}
+            {% else %}
+            class="inactive"
+            {% endif %}
+
+            >&lt;</a>
+        </div>
+
+        <div class="pagination-links-wrapper">
+            <!--1 is active-->
+            {% if paginator.page == 1 %}
+
+            {% for i in (1..3) %}
+                {% assign page = i %}
+                {% include pagination/pagination-pages.html %}
+            {% endfor %}
+
+            {% elsif paginator.page == paginator.total_pages  | minus:1 %}
+
+            <!--last is active-->
+            {% for i in (1..3) reversed %}
+                {% assign page = paginator.total_pages | minus:i | plus:1 %}
+                {% include pagination/pagination-pages.html %}
+            {% endfor %}
+
+            <!--not first/last is active-->
+            {% else %}
+
+                {% assign page = paginator.page | minus:1 %}
+                {% include pagination/pagination-pages.html %}
+
+                {% assign page = paginator.page %}
+                {% include pagination/pagination-pages.html %}
+
+                {% assign page = paginator.page | plus:1 %}
+                {% include pagination/pagination-pages.html %}
+
+            {% endif %}
+        </div>
+
+        <div class="next-btn">
+            <a
+                    {% if paginator.next_page %}
+                    {% else %}
+                    class="inactive"
+                    {% endif %}
+                    href="{{ paginator.next_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}">
+                &gt;
+            </a>
+        </div>
     </div>
-    {% else %}
-    <div class="prev-btn">
-        <em class="empty">&laquo; prev</em>
-    </div>
-    {% endif %}
-
-    <div class="pagination-links-wrapper">
-
-        {% if paginator.page > 2 %}
-        {% assign page = paginator.page | minus:2 %}
-        {% include pagination/pagination-pages.html %}
-        {% else %}
-        <div class="pagination-link empty"></div>
-        {% endif %}
-
-        {% if paginator.page > 1 %}
-        {% assign page = paginator.page | minus:1 %}
-        {% include pagination/pagination-pages.html %}
-        {% else %}
-        <div class="pagination-link empty"></div>
-        {% endif %}
-
-        {% assign page = paginator.page %}
-        {% include pagination/pagination-pages.html %}
-
-        {% assign pagePlusOne = paginator.page | plus:1 %}
-        {% if paginator.page < paginator.total_pages %}
-        {% assign page = pagePlusOne %}
-        {% include pagination/pagination-pages.html %}
-        {% else %}
-        <div class="pagination-link empty"></div>
-        {% endif %}
-
-        {% assign pagePlusTwo = paginator.page | plus:2 %}
-        {% if pagePlusOne < paginator.total_pages %}
-        {% assign page = pagePlusTwo %}
-        {% include pagination/pagination-pages.html %}
-        {% else %}
-        <div class="pagination-link empty"></div>
-        {% endif %}
-
-    </div>
-
-    {% if paginator.next_page %}
-    <div class="next-btn">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | append: '/' | replace: '//', '/' }}">next &raquo;</a>
-    </div>
-    {% else %}
-    <div class="next-btn">
-        <em class="empty">next &raquo;</em>
-    </div>
-    {% endif %}
 </div>
 {% endif %}

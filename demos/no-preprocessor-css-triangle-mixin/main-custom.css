@@ -20,5 +20,5 @@
 
 .triangle-to-bottom {
     /*--triangle-to-bottom-size: 10px;*/
-    @apply --triangle-to-bottom;
+    @include triangle-to-bottom;
 }

@@ -1,0 +1,39 @@
+@mixin sidebar-hr {
+  padding-bottom: calc(3 * var(--spacer));
+  margin-bottom: calc(3 * var(--spacer));
+
+  border-bottom: 1px solid var(--light-gray-color);
+}
+
+@import "./sidebar-blog-search";
+@import "./sidebar-tags";
+@import "./sidebar-events";
+@import "./sidebar-twitter";
+@import "./sidebar-rss";
+@import "./sidebar-email";
+
+.main-sidebar {
+  .sidebar-box {
+    --sidebar-box-padding: calc(3 * var(--spacer));
+    padding: var(--sidebar-box-padding);
+    margin-bottom: var(--sidebar-box-margin);
+
+    @include white-tile;
+
+    // elements
+    .sidebar-title {
+      @include sidebar-hr;
+    }
+
+    // flavors
+    &[flavor="smaller-padding"] {
+      --sidebar-box-padding: calc(2 * var(--spacer));
+    }
+  }
+
+  // sticky area
+  .scroller-area {
+    position: sticky;
+    top: var(--sidebar-box-margin);
+  }
+}

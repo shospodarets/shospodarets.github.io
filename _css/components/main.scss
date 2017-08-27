@@ -1,0 +1,27 @@
+.container-wrapper__main {
+  background-color: var(--main-content-bg);
+  padding-top: calc(3 * var(--main-vertical-indent));
+}
+
+.sh-container-main {
+  display: flex;
+
+  .main-sidebar {
+    padding-bottom: var(--sidebar-box-margin); // for indents and sticky area
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  @include desktop {
+    .main-content {
+      width: var(--main-content-width);
+    }
+
+    .main-sidebar {
+      width: var(--main-sidebar-width);
+      padding-left: var(--main-sidebar-indent);
+    }
+  }
+}

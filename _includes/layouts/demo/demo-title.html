@@ -1,0 +1,31 @@
+<div class="sh-container-wrapper container-wrapper__main container-wrapper__demo">
+    <div class="sh-container">
+        <strong
+                itemprop="name"
+                class="post-title">
+            {{ page.title }}
+        </strong>
+        <div class="demo-title_links">
+            <ul class="demo-title-links">
+                {% if page.article_link %}
+                <li>
+                    <a href="{{ site.baseurl }}/{{ page.article_link }}">Read the article</a>
+                </li>
+                {% endif %}
+                {% if page.demo_code_url %}
+                <li>
+                    <a href="{{ site.demos_code_base_url }}/{{ page.demo_code_url }}">Check the code on Github</a>
+                </li>
+                {% endif %}
+                {% if page.demo_code_full_url %}
+                <li>
+                    <a href="{{ page.demo_code_full_url }}">Check the code on Github</a>
+                </li>
+                {% endif %}
+            </ul>
+            <div class="demo-title-share-buttons">
+                {% include share-buttons.html %}
+            </div>
+        </div>
+    </div>
+</div>

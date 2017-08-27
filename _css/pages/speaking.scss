@@ -1,0 +1,111 @@
+.page-speaking {
+  --intro-indent: calc(6 * var(--spacer));
+}
+
+.page-speaking__intro {
+  margin-bottom: var(--intro-indent);
+}
+
+.page-speaking__intro-section {
+  p {
+    font-size: var(--speaking-main-font-size);
+    line-height: var(--speaking-main-line-height);
+    margin-bottom: var(--speaking-main-line-height);
+  }
+}
+
+.page-speaking__want-me-to-speak {
+  font-size: var(--additional-heading-font-size);
+  line-height: var(--additional-heading-line-height);
+  padding: var(--intro-indent) 0;
+  margin: var(--intro-indent) 0;
+  border-color: var(--light-gray-color);
+  border-width: 1px 0;
+  border-style: solid;
+}
+
+// common list reset
+.page-speaking__events-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// common grid system (used for different structures)
+.page-speaking__events-grid {
+  --event-gap: 13px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: var(--event-gap);
+
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+// common events inner elements styles
+.page-speaking__events .page-speaking__events-list-wrapper {
+  padding: calc(8 * var(--spacer)) 0;
+
+  &:first-child {
+    padding-top: calc(4 * var(--spacer));
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--light-gray-color);
+  }
+}
+
+.page-speaking {
+  .talks-data {
+    --event-type-bottom-indent: 2px;
+    --event-name-bottom-indent: calc(1.5 * var(--spacer));
+
+    font-size: var(--speaking-main-font-size);
+    line-height: var(--speaking-main-line-height);
+
+    .event-type {
+      font-size: var(--small-font-size);
+      line-height: var(--small-line-height);
+      color: var(--warm-grey);
+      margin-bottom: var(--event-type-bottom-indent);
+    }
+
+    .page-speaking__events-grid-item__top-indent {
+      // top indent same as ".event-type" height
+      padding-top: calc(var(--small-line-height) + var(--event-type-bottom-indent));
+
+      @include mobile {
+        padding-top: 0;
+      }
+    }
+
+    .event-name {
+      margin-bottom: var(--event-name-bottom-indent);
+    }
+  }
+}
+
+// PREVIOUS events
+.page-speaking__events-list.previous-only {
+  li {
+    @include white-tile;
+    overflow: hidden;
+    margin-bottom: var(--event-gap);
+
+    .event-img {
+      --max-event-img-height: 200px;
+
+      img {
+        object-fit: cover; // cover all the available space without image ratio changes
+        width: 100%;
+        height: var(--max-event-img-height);
+      }
+    }
+  }
+
+  .page-speaking__event-content {
+    padding: calc(3 * var(--spacer));
+  }
+}

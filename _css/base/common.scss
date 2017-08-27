@@ -1,17 +1,12 @@
-.date {
-  font-style: italic;
-  color: var(--gray-color);
-}
-
 .clearfix {
   &:before,
   &:after {
-    @apply --clearfix;
+    @include clearfix;
   }
 }
 
 .more {
-  /* provide post-short boundary */
+  /* provide post__short boundary */
   display: none;
 }
 
@@ -33,5 +28,9 @@ blockquote {
 }
 
 .absolute-hidden {
-  @apply --absolute-hidden;
+  @include absolute-hidden;
+}
+
+.page-title {
+  margin-bottom: calc(3 * var(--spacer));
 }

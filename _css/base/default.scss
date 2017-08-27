@@ -7,62 +7,47 @@ html, body {
   min-height: 100%;
 }
 
-html {
-  font-size: 100%;
+body {
+  background: var(--main-content-bg) url(/images/large/main-bg.jpg) no-repeat;
+  color: var(--main-color);
 }
 
-body {
-  background: var(--main-bg);
-  font-size: 18px;
-  line-height: 1.4;
-  /* not in shorthand because of http://codepen.io/malyw/pen/mEKKqY?editors=1100 */
-  font-family: var(--main-font-family);
-  color: var(--dark-gray-color);
+@mixin link-hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
 }
 
 a {
   color: var(--link-color);
-  text-decoration: underline;
   cursor: pointer;
+  text-decoration: none;
 
   /* prevent long links scroll */
   word-wrap: break-word;
 
   &:hover {
-    color: var(--link-hover-color);
+    @include link-hover;
   }
 }
 
-.container {
-  margin: 0 auto;
-  max-width: var(--main-container-max-width);
-  padding: 0 10px;
-  width: 100%;
+// page-wide containers
+.sh-container-wrapper {
+  .sh-container {
+    margin: 0 auto;
+    max-width: var(--main-container-max-width);
+    padding: 0 var(--main-page-horizontal-indents);
+  }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--darker-gray-color);
-
-  line-height: 1.7;
-  margin: var(--main-vertical-indent) 0;
+h1, h2, h3 { // h4-h6 are not supposed to be used
+  margin: 0;
   padding: 0;
-  transition: background-color .3s;
-
-  @media (--mobile-breakpoint) {
-    line-height: 1.4;
-  }
-
-  &[id]:hover {
-    cursor: pointer;
-    background-color: var(--light-gray-color);
-  }
 }
 
 h1 {
-  font-size: var(--main-heading-font-size);
   & a {
     text-decoration: none;
-    color: var(--dark-gray-color);
+    color: var(--main-color);
 
     &:hover {
       color: var(--title-hover-color);
@@ -70,25 +55,16 @@ h1 {
   }
 }
 
-h2 {
-  font-size: 28px;
-}
-
-h3 {
-  font-size: 22px;
-}
-
 h4 {
-  font-size: 18px;
   color: var(--gray-color);
 }
 
 p {
-  margin: var(--main-vertical-indent) 0;
+  margin: 0 0 var(--main-vertical-indent);
 }
 
 ul, ol {
-  margin: var(--main-vertical-indent) 0;
+  margin: 0 0 var(--main-vertical-indent);
   padding-left: 30px;
 }
 
@@ -108,6 +84,7 @@ ul ul, ol ul {
   list-style-type: circle;
 }
 
+// responsive images
 img {
   max-width: 100%;
 }

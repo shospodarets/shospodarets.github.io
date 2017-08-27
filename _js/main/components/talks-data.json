@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Voxxed Days Thessaloniki",
+    "location": "Thessaloniki (Greece)",
+    "flag": "🇬🇷",
+    "link": "https://voxxeddays.com/thessaloniki/",
+    "year": "2017",
+    "month": "11",
+    "type": "Talk",
+    "eventImage": "2017-11-voxxedday-event.png",
+    "speakingImage": "2017-11-voxxedday-speaking.png"
+  },
+  {
+    "name": "CSS-Minsk-JS",
+    "location": "Minsk (Belarus)",
+    "flag": "🇧🇾",
+    "link": "http://css-minsk-js.by/",
+    "year": "2017",
+    "month": "09",
+    "type": "Talk",
+    "eventImage": "2017-09-cssminskjs-event.jpg",
+    "speakingImage": "2017-09-cssminskjs-speaking.jpg"
+  },
+  {
+    "name": "Refresh",
+    "location": "Tallinn (Estonia)",
+    "flag": "🇪🇪",
+    "link": "https://refresh.rocks/",
+    "year": "2017",
+    "month": "09",
+    "type": "Talk",
+    "eventImage": "2017-09-refresh-event.png",
+    "speakingImage": "2017-09-refresh-speaking.png"
+  },
+  {
+    "name": "NDC Oslo",
+    "location": "Oslo (Norway)",
+    "flag": "🇳🇴",
+    "link": "http://ndcoslo.com/",
+    "year": "2017",
+    "month": "06",
+    "type": "Talk",
+    "eventImage": "2017-06-ndc-oslo-event.png",
+    "speakingImage": "2017-06-ndc-oslo-speaking.jpg"
+  },
+  {
+    "name": "Frontend United",
+    "location": "Athens (Greece)",
+    "flag": "🇬🇷",
+    "link": "http://frontendunited.org/",
+    "year": "2017",
+    "month": "05",
+    "type": "Talk",
+    "eventImage": "2017-05-frontendunited-athens-event.jpg",
+    "speakingImage": "2017-05-frontendunited-athens-speaking.jpg"
+  },
+  {
+    "name": "Codemotion Amsterdam",
+    "location": "Amsterdam (Netherlands)",
+    "flag": "🇳🇱",
+    "link": "http://amsterdam2017.codemotionworld.com/",
+    "year": "2017",
+    "month": "05",
+    "type": "Talk",
+    "eventImage": "2017-05-codemotion-amsterdam-event.jpg",
+    "speakingImage": "2017-05-codemotion-amsterdam-speaking.jpg"
+  },
+  {
+    "name": "DublinCSS",
+    "location": "Dublin (Ireland)",
+    "flag": "🇮🇪",
+    "link": "http://www.meetup.com/DublinCSS/",
+    "year": "2016",
+    "month": "12",
+    "type": "Talk",
+    "eventImage": "2016-12-dublincss-dublin-event.png",
+    "speakingImage": "2016-12-dublincss-dublin-speaking.jpg"
+  },
+  {
+    "name": "TopConf",
+    "location": "Tallinn (Estonia)",
+    "flag": "🇪🇪",
+    "link": "http://topconf.com/tallinn-2016/",
+    "year": "2016",
+    "month": "11",
+    "type": "Talk",
+    "eventImage": "2016-11-topconf-tallinn-event.jpg",
+    "speakingImage": "2016-11-topconf-tallinn-speaking.jpg"
+  },
+  {
+    "name": "DevDay",
+    "location": "Krakow (Poland)",
+    "flag": "🇵🇱",
+    "link": "http://devday.pl/",
+    "year": "2016",
+    "month": "09",
+    "type": "Talk",
+    "eventImage": "2016-09-devday-krakow-event.gif",
+    "speakingImage": "2016-09-devday-krakow-speaking.jpg"
+  },
+  {
+    "name": "DublinJS",
+    "location": "Dublin (Ireland)",
+    "flag": "🇮🇪",
+    "link": "http://www.meetup.com/DublinJS/",
+    "year": "2015",
+    "month": "12",
+    "type": "Talk",
+    "eventImage": "2015-12-dublinjs-dublin-event.gif",
+    "speakingImage": "2015-12-dublinjs-dublin-speaking.jpg"
+  }
+]

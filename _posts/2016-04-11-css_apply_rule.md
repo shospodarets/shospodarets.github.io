@@ -231,7 +231,7 @@ It enables custom properties sets references.
 As you can see "The plugin is in a very early state, some features are missing"
 but it covers the simle cases.
 
-Recently [support]((https://github.com/MoOx/postcss-cssnext/issues/203)) was added to [cssnext](https://github.com/MoOx/postcss-cssnext)
+Recently [support](https://github.com/MoOx/postcss-cssnext/issues/203) was added to [cssnext](https://github.com/MoOx/postcss-cssnext)
 which also processes CSS Custom Properties.
 
 # Test browser support

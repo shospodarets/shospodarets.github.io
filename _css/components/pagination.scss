@@ -1,69 +1,77 @@
+.pagination-wrapper {
+  @include clearfix;
+}
+
 .pagination {
+  --pagination-btn-size: calc(6 * var(--spacer));
+  --pagination-outer-indent: calc(6 * var(--spacer));
+  --pagination-btn-indent: calc(var(--spacer) / 2);
+  --pagination-btn-block-indent: calc(var(--spacer) * 1.5);
+
   display: flex;
+  float: left;
   text-align: center;
+  margin-bottom: var(--pagination-outer-indent);
 
   &:before,
   &:after {
-    @apply --clearfix;
+    @include clearfix;
   }
 
-  & a,
-  & em {
+  & a {
     display: inline-block;
-    width: 100%;
-    border-radius: 5px;
+    border-radius: 3px;
     transition: 0.5s all;
     text-decoration: none;
-  }
 
-  & .prev-btn,
-  & .next-btn {
-    & a,
-    & em {
-      color: #fff;
-      background-color: #e85c33;
+    width: var(--pagination-btn-size);
+    height: var(--pagination-btn-size);
+    line-height: var(--pagination-btn-size);
 
-      &:hover {
-        background-color: #333;
-      }
+    color: var(--pagination-normal-color);
+    background-color: var(--pagination-normal-bg);
+    border: 1px solid var(--pagination-normal-border);
 
-      &.empty {
-        visibility: hidden;
-      }
+    &:hover,
+    &.active {
+      color: var(--pagination-active-color);
+      background-color: var(--pagination-active-bg);
+      border: 1px solid var(--pagination-active-border);
+      opacity: 0.5;
+    }
+
+    &.inactive {
+      color: var(--pagination-inactive-color);
+      background-color: var(--pagination-inactive-bg);
+      border: 1px solid var(--pagination-inactive-border);
+      opacity: 0.5;
+    }
+
+    &.active,
+    &.inactive {
+      pointer-events: none;
     }
   }
 
   & .prev-btn {
-    flex: 0 0 var(--pagination-btn-width);
-    padding-right: var(--pagination-btn-indent);
+    flex: 0 0 var(--pagination-btn-size);
   }
 
   & .pagination-links-wrapper {
     display: flex;
-    flex: 0 0 calc(5 * #{var(--pagination-btn-width)});
-    padding-right: var(--pagination-btn-indent);
-    padding-left: var(--pagination-btn-indent);
+    margin-right: var(--pagination-btn-block-indent);
+    margin-left: var(--pagination-btn-block-indent);
 
     & .pagination-link {
-      flex: 0 0 var(--pagination-pages-btn-width);
+      flex: 0 0 var(--pagination-btn-size);
+      margin-right: var(--pagination-btn-indent);
+      margin-left: var(--pagination-btn-indent);
 
       min-height: 1px; /* fix for 0 height if there is no content (because of float:left;) */
-
-      & a,
-      & em {
-        max-width: 50px;
-
-        &:hover,
-        &.current {
-          color: #fff;
-          background-color: #41b7d8;
-        }
-      }
     }
   }
 
   & .next-btn {
-    flex: 0 0 var(--pagination-btn-width);
-    padding-left: var(--pagination-btn-indent);
+    flex: 0 0 var(--pagination-btn-size);
   }
 }

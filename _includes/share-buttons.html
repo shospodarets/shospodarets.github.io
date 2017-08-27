@@ -8,11 +8,10 @@
         Tweet
     </a>
 
-    <a href="https://twitter.com/{{ site.social-links.twitter }}"
-       class="twitter-widget twitter-follow-button"
-       data-show-count="false"
+    <a class="fb-widget fb-share-button"
+       data-href="{{ site.url }}{{ page.url | replace:'index.html',''}}"
+       data-layout="button"
        data-size="large"
-    >
-        Follow @{{ site.social-links.twitter }}
+       data-mobile-iframe="true">
     </a>
 </span>

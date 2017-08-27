@@ -1,0 +1,35 @@
+{% if page.sub-header %}
+<div class="sh-container-wrapper container-wrapper__sub-header-common {% if page.layout-one-column %}container-wrapper__sub-header_one-column{% endif %}">
+    <div class="sh-container">
+        <div class="sub-header-common">
+            {% if page.sub-header-title %}
+            <div class="sub-header-common__text">{{ page.sub-header-title }}</div>
+            {% endif %}
+            {% if page.sub-header-img-path %}
+            <img class="sub-header-common__image" src="{{ site.baseurl }}{{ page.sub-header-img-path }}" alt="">
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="sh-container-wrapper container-wrapper__sub-header-default">
+    <div class="sh-container">
+
+        <div class="header-image">
+            <div class="sub-header-default">
+                <div class="slogan">
+                    <div class="slogan__text">
+            <span class="absolute-hidden">
+                Front-End frontiers
+            </span>
+                    </div>
+                    <div class="slogan__author">
+                        Serg Hospodarets
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+

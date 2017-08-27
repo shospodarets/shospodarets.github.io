@@ -1,4 +1,4 @@
-# [blog.hospodarets.com](https://blog.hospodarets.com/)
+# [hospodarets.com](https://hospodarets.com/)
 
 1. $ [sudo] npm run gem-install
 1. $ npm install

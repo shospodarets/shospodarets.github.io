@@ -10,12 +10,12 @@ In one of my previous articles
 [Native ECMAScript modules: the new features and differences from Webpack modules]({{ site.baseurl }}/native-ecmascript-modules-new-features#detect-es-modules-are-supported-by-the-browser)
 we attempted to detect if the browser supported ES modules.
 We needed this to determine either, to execute a bundled (classic) file or a script which uses the native ECMAScript module features.
- 
+
 We managed to achieve this, but in reality how it was achieved isn't ideal. The community have since come together to propose an alternative, the `nomodule` script attribute.
 
 <div class="more"></div>
 
-## The problem
+# The problem
 
 The [initial proposal](https://github.com/whatwg/html/issues/1442)
 started from a discussion and the requests from
@@ -25,22 +25,22 @@ The idea is that you create two scripts:
 1. one is bundled with `import`/ `export` statements resolved.
 
 2. and the second one, which expects the ES modules support in the browser.
-   
+
 Depending on the ESM support browser executes one of them.
 The case is straightforward and should be used for the progressive enhancements etc.
 
 To execute a script as a module when in the browser, we need to add
  the `type="module"` attribute to it. <br>
  Browsers without ESM just ignore these scripts, as the `type="module"` attribute is unknown for them.
- 
+
 **But currently there is no boolean flag or an easy way to detect if the browser supports
  the ES modules**.<br>
 So, how do we make new browsers with ESM support ignore the additional scripts
 which shoudn't be executed?
 
-As was mentioned, I [proposed](({{ site.baseurl }}/native-ecmascript-modules-new-features#detect-es-modules-are-supported-by-the-browser))
+As was mentioned, I [proposed]({{ site.baseurl }}/native-ecmascript-modules-new-features#detect-es-modules-are-supported-by-the-browser)
 to create an empty ES script and include it to the browser using the Blob() API.
-Then we just have to wait till it's loaded. If the script is loaded successfully, the browser supports ES modules, otherwise wait for a period of time, reject and load the alternative script... 
+Then we just have to wait till it's loaded. If the script is loaded successfully, the browser supports ES modules, otherwise wait for a period of time, reject and load the alternative script...
 Not the best solution.
 
 Another solution is to provide a module script like:
@@ -56,7 +56,7 @@ Also not good.
 
 What we need is a standardized way to inform the browser, that some script shouldn't be executed if ESM is supported.
 
-## The `nomodule` proposal
+# The `nomodule` proposal
 
 [Domenic](https://github.com/domenic) raised [the discussion, which resulted in the proposal](https://github.com/whatwg/html/issues/1442).
 
@@ -82,7 +82,7 @@ As the attribute doesn't require any additional implementation in the existing b
 it was decided to stay with it
 ([there were many other reasons](https://github.com/whatwg/html/pull/2261#discussion_r95828411)).
 
-## How to use
+# How to use
 
 The way to use the attribute is described in the following code:
 
@@ -115,16 +115,13 @@ Here is a simple demo with inline scripts, which you can run in your browser:
 </script>
 ```
 
-<div>
-    <a href="https://plnkr.co/edit/uzl2q2ZGPXy7MTIJLZF3?p=preview"
-       target="_blank"
-       class="btn-pulse">
-        <span class="wrapper">
-            <span class="inner"></span>
-        </span>
-        <span class="text">Demo</span>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="https://plnkr.co/edit/uzl2q2ZGPXy7MTIJLZF3?p=preview"
+       target="_blank">
+        Demo
     </a>
-</div>
+</p>
 
 You can also consider the [es-modules-utils](https://github.com/malyw/es-modules-utils)
 way, which also adds a couple additions on top of that:
@@ -165,18 +162,15 @@ To show the loader and hide it after the JS is executed you can use
 <img class="loader" src="./loader.gif">
 ```
 
-<div>
-    <a href="https://blog.hospodarets.com/es-modules-utils/demo/"
-       target="_blank"
-       class="btn-pulse">
-        <span class="wrapper">
-            <span class="inner"></span>
-        </span>
-        <span class="text">Demo</span>
+<p>
+    <a class="sh-btn" flavor="text-width"
+       href="{{ site.baseurl }}/es-modules-utils/demo/"
+       target="_blank">
+        Demo
     </a>
-</div>
+</p>
 
-## The current state of support
+# The current state of support
 
 The `nomodule` attribute is already [added to the HTML standard](https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule)
 and [described in the specification with the examples](https://html.spec.whatwg.org/multipage/scripting.html#script-nomodule-example).
@@ -187,19 +181,15 @@ which give browser projects confidence that they are shipping software that is c
 The good news is, that the attribute is "supported" without any additions in all browsers without ES Modules support,
 as they just execute the scripts without doing anything with the unknown attributes.
 
-The current browser support for `nomodule` ES modules fallback attribute is:
- 
-* it's [implemented](https://bugs.webkit.org/show_bug.cgi?id=166987) in **Safari**
-* Confirmed and should [arrive soon in **Microsoft EDGE**](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/10525830/)
+Currently `nomodule` has been [implemented](https://bugs.webkit.org/show_bug.cgi?id=166987)
+in [`Safari` Technology preview](https://webkit.org/blog/7423/release-notes-for-safari-technology-preview-24/), but as the proposal came from Google initially, there is no doubt it will be delivered together with ES modules support in `Chrome` ([the issue](https://bugs.chromium.org/p/chromium/issues/detail?id=681050)).
 
-Available together with ES modules:
+In addition, it's just been confirmed and should [arrive soon in `Microsoft EDGE`](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/10525830/).
+`Firefox` also [has an issue for this](https://bugzilla.mozilla.org/show_bug.cgi?id=1330900).
 
-* [in **Chrome**](https://bugs.chromium.org/p/chromium/issues/detail?id=681050) under the `experimental-web-platform-features` flag
-* [in **Firefox**](https://bugzilla.mozilla.org/show_bug.cgi?id=1330900) under the `dom.moduleScripts.enabled` flag
+# Conclusions
 
-## Conclusions
-
-The idea is that when any browser ships native ES Module support in their stable version, they will also support the `nomodule` attribute (according to the spec). 
+The idea is that when any browser ships native ES Module support in their stable version, they will also support the `nomodule` attribute (according to the spec).
 
 This gives us the ability to include two versions of our scripts in HTML:
 *  classic - bundled with bundlers/transpilers

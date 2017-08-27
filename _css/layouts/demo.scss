@@ -1,9 +1,31 @@
-.demo-title-section {
-  & .demo-title-links {
-    padding-top: 10px;
+.container-wrapper__demo {
+  &:before,
+  &:after {
+    @include clearfix;
   }
 
-  & .demo-title-share-buttons {
-    text-align: right;
+  .demo-title_links {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  .demo-title-links {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include desktop {
+      flex: 1 0 auto;
+    }
+  }
+
+  .demo-title-share-buttons {
+    @include desktop {
+      flex: 0 0 auto;
+      text-align: right;
+    }
   }
 }

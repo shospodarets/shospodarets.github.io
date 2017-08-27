@@ -1,0 +1,20 @@
+<header class="header">
+    <a href="{{ site.baseurl }}/" class="logo">
+        <img width="72" height="72"
+             src="/images/{{logoSrcPrefix}}.png"
+             srcset="/images/{{logoSrcPrefix}}.png 1x, /images/{{logoSrcPrefix}}2x.png 2x"
+        />
+    </a>
+
+    <div class="absolute-hidden">
+        <h1>
+            <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+        </h1>
+
+        <p>
+            {{ site.description_short }}
+        </p>
+    </div>
+
+    {% include nav-links.html %}
+</header>

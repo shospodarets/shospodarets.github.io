@@ -1,0 +1,8 @@
+.container-wrapper__one-column {
+  --main-container-max-width: var(--main-container-max-width-one-column);
+
+  background-color: var(--main-content-bg);
+
+  padding-top: calc(3 * var(--main-vertical-indent));
+  padding-bottom: calc(6 * var(--main-vertical-indent));
+}

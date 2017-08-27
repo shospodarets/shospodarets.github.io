@@ -1,6 +1,16 @@
 .share-buttons {
   display: inline-block;
-  min-height: 34px; /* widget height */
+  min-height: 35px; /* widget height to avoid "jumping" on widgets load */
+
+  & > *:not(:last-child) {
+    margin-right: var(--main-horizontal-indent);
+  }
+
+  .fb_iframe_widget {
+    // fix indents
+    overflow: hidden;
+    vertical-align: top;
+  }
 }
 
 .twitter-widget {
