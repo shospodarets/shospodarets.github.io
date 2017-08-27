@@ -3,4 +3,4 @@
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}" />
 <meta name="twitter:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}" />
 <meta name="twitter:description" content="{% if page.share_description %}{{ page.share_description }}{% elsif page.path contains '_posts' %}{{ page.content | strip_html | xml_escape | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
-<meta name="twitter:image" content="{% if page.share_image %}{{ page.share_image }}{% else %}{{ site.url }}/share-image.jpg{% endif %}">
+<meta name="twitter:image" content="{% if page.share_image %}{{ page.share_image }}{% else %}{{ site.url }}/images/share-image.jpg{% endif %}">
