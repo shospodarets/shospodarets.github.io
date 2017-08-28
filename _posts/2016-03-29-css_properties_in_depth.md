@@ -350,13 +350,13 @@ There are some limitations and bugs:
 CSS:
   
 ```scss
-  @supports ( (--a: 0)) {
-    /* supported */
-  }
-  
-  @supports ( not (--a: 0)) {
-    /* not supported */
-  }
+@supports ( (--a: 0)) {
+/* supported */
+}
+
+@supports ( not (--a: 0)) {
+/* not supported */
+}
 ```
 
 JS:
@@ -401,25 +401,25 @@ Other small suggestion to start using CSS custom properties now with preprocesso
 [a mixed syntax checking the browser support](http://codepen.io/malyw/pen/grRQeq):
 
 ```scss
-  @supports ( (--a: 0)) {
-    /* Custom properties are supported in the browser */
-    :root{
-      --main-bg: #4d4e53;
-    }
-    
-    body {
-      background-color: var(--main-bg);
-    }
-  }
-  
-  @supports ( not (--a: 0)) {    
-    /* Custom properties are NOT supported in the browser */
-    $main-bg: #4d4e53;
-    
-    body {
-      background-color: $main-bg;
-    }
-  }
+@supports ( (--a: 0)) {
+/* Custom properties are supported in the browser */
+:root{
+  --main-bg: #4d4e53;
+}
+
+body {
+  background-color: var(--main-bg);
+}
+}
+
+@supports ( not (--a: 0)) {
+/* Custom properties are NOT supported in the browser */
+$main-bg: #4d4e53;
+
+body {
+  background-color: $main-bg;
+}
+}
 ```
 
 In such case both CSS and Sass variables are created but the Sass variable

@@ -4,21 +4,6 @@
     @include clearfix;
   }
 
-  /* block code */
-  & .highlight {
-    border-bottom: 1px solid var(--code-block-border-color);
-    border-top: 1px solid var(--code-block-border-color);
-    padding: 10px 0;
-    margin: var(--main-vertical-indent) 0;
-  }
-
-  /* inline code */
-  & code.highlighter-rouge {
-    background: var(--inline-code-bg);
-    border-radius: var(--text-border-radius);
-    padding: 0 5px;
-  }
-
   & iframe,
   & .cp_embed_iframe {
     /* e.g. codepen example */

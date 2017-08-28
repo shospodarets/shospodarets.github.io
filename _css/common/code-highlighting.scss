@@ -1,0 +1,19 @@
+/* block code */
+pre code {
+  -webkit-overflow-scrolling: touch;
+  border-bottom: 1px solid var(--code-block-border-color);
+  border-top: 1px solid var(--code-block-border-color);
+  margin: var(--main-vertical-indent) 0;
+
+  // use till highlight.js is loaded
+  display: block;
+  overflow: auto;
+  background-color: var(--code-bg);
+}
+
+/* inline code */
+code:not([class]) {
+  background: var(--inline-code-bg);
+  border-radius: var(--text-border-radius);
+  padding: 0 5px;
+}

@@ -31,8 +31,8 @@
   },
   "private": true,
   "scripts": {
-    "gem-install": "gem install jekyll jekyll-sitemap rouge jekyll-paginate jekyll-feed pygments.rb",
-    "gem-update": "gem update jekyll jekyll-sitemap rouge jekyll-paginate jekyll-feed pygments.rb",
+    "gem-install": "gem install jekyll jekyll-sitemap jekyll-paginate jekyll-feed",
+    "gem-update": "gem update jekyll jekyll-sitemap jekyll-paginate jekyll-feed",
     "start": "grunt serve & grunt",
     "stop": "node ./_other/scripts/killProcessByPort.js 4000",
     "build": "grunt build",

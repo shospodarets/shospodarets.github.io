@@ -68,7 +68,7 @@ baseurl: ""
 
 markdown: kramdown
 
-highlighter: rouge
+highlighter: none
 
 permalink: /:title
 
@@ -94,7 +94,6 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-feed
-  - pygments.rb
 
 # Tagging
 tag_page_layout: tag_page

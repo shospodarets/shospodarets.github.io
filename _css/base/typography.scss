@@ -15,16 +15,14 @@ body { // global
   font-family: var(--main-code-font-family);
 }
 
-.highlight { // block code
-  code {
-    font-family: var(--main-code-font-family);
-  }
+// block code
+pre code {
+  font-family: var(--main-code-font-family);
 }
 
-.entry { // inline code
-  & code.highlighter-rouge {
-    font-family: var(--main-code-font-family);
-  }
+// inline code
+code:not([class]) {
+  font-family: var(--main-code-font-family);
 }
 
 /*------------------------------------ */

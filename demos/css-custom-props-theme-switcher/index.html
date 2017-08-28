@@ -11,36 +11,40 @@ demo_code_url: css-custom-props-theme-switcher
 <link rel="stylesheet" href="./bootstrap.min.css"/>
 <link rel="stylesheet" href="./main-custom.css"/>
 
-<div class="is-not-supported alert alert-danger" role="alert">
-    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-    <span class="sr-only">Error:</span>
-    CSS custom properties are not supported in the current browser
-</div>
+<div class="demo-wrapper">
+    <div class="is-not-supported alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        CSS custom properties are not supported in the current browser
+    </div>
 
-<div>
-    Include a CSS file with a custom properties set:
-</div>
-<div class="sets">
-    <button class="btn"
-            data-set="pink-set"
-    >
-        pink-set.css
-    </button>
-    <button class="btn"
-            data-set="dark-set"
-    >
-        dark-set.css
-    </button>
-    <button class="btn"
-            data-set="default-set"
-    >
-        default-set.css
-    </button>
-</div>
+    <div>
+        Include a CSS file with a custom properties set:
+    </div>
+    <div class="sets">
+        <button class="btn"
+                data-set="pink-set"
+        >
+            pink-set.css
+        </button>
+        <button class="btn"
+                data-set="dark-set"
+        >
+            dark-set.css
+        </button>
+        <button class="btn"
+                data-set="default-set"
+        >
+            default-set.css
+        </button>
+    </div>
 
-<div>
-    <span class="selected-set">Selected set: </span>
+    <div>
+        <span class="selected-set">Selected set: </span>
+    </div>
+
 </div>
 
 <link rel="stylesheet" class="link-element" href="./default-set.css"/>
 <script src="./main.js"></script>
+

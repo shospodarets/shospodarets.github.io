@@ -1,10 +1,11 @@
 /* variables/mixins */
 @import "common/mixins";
 /* jekyll */
-@import "common/highlights";
+@import "common/code-highlighting";
 /* libraries */
 @import "libs/caniuse";
 @import "libs/humane-libnotify";
+@import "libs/highlight.pack";
 /* layout */
 @import "components/comments";
 @import "components/pagination";

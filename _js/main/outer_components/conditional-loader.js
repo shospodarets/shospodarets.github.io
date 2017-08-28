@@ -13,6 +13,13 @@ const ConditionalLoader = function (options) {
 
 // LOAD SCRIPTS
 ConditionalLoader.prototype.loadScripts = function () {
+    /* Highlight.js (code highlighter) */
+    if (document.querySelectorAll('pre > code').length) {
+        loadScript(this.options.SITE_BASE_URL + '/js/libs/highlight.pack.js')
+            .then(() => {
+                hljs.initHighlightingOnLoad();
+            });
+    }
     /* CAN I USE INFO */
     if (document.querySelectorAll('.caniuse').length) {
         loadScript(this.options.SITE_BASE_URL + '/js/libs/caniuse.min.js');
