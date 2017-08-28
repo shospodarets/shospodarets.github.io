@@ -452,16 +452,6 @@ Don't forget to provide a `-webkit` vendor prefix for Safari.
                 </div>
             </label>
         </div>
-
-        <p>
-            For the demo it was fixed (thanks to the <a href="https://disqus.com/by/bigbosssnk/">BigBossSNK</a> <a href="{{ site.baseurl }}/css-scroll-snap/#comment-2114038202">comment</a>) providing:
-        </p>
-
-        <div class="highlight">
-            <pre><code class="language-css" data-lang="css">.youmayknow-gallery .item:last-child{
-    scroll-snap-coordinate: 0 50%;
-}</code></pre>
-        </div>
     </li>
     <li>
         <p>
