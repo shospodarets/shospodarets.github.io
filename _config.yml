@@ -68,7 +68,7 @@ baseurl: ""
 
 markdown: kramdown
 
-highlighter: none
+highlighter: rouge
 
 permalink: /:title
 
