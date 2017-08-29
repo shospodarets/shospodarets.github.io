@@ -2,7 +2,7 @@
 layout: post
 title: "Web Share API brings the native sharing capabilities to the browser"
 tags: [JavaScript, Browsers]
-share_image: https://hospodarets.com/img/blog/1485701075462830000.png
+share_image: https://static.hospodarets.com/img/blog/1485701075462830000.png
 share_description: Extend users sharing experience using the easy API to access the native sharing capabilities on the platform
 ---
 
@@ -75,7 +75,7 @@ function onShareClick(photo){
 }
 ```
 
-![alt](https://hospodarets.com/img/blog/1485718332765671000.png)
+![alt](https://static.hospodarets.com/img/blog/1485718332765671000.png)
 
 [image credits](https://github.com/mgiuca/web-share/blob/master/docs/mocks/README.md)
 
@@ -130,7 +130,7 @@ Here is the video how it works <br/>
 (tap the share button ➡️ &nbsp;tweet ➡️ &nbsp;check the tweet is added on Twitter):
 
 <span class="even-smaller-img">
-    <img src="https://hospodarets.com/img/blog/1485720302108099000.gif" />
+    <img src="https://static.hospodarets.com/img/blog/1485720302108099000.gif" />
 </span>
 
 In the most common case, if you want to add an ability to share the data

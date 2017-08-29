@@ -2,7 +2,7 @@
 layout: post
 title: "Node.js debugging with Chrome DevTools (in parallel with browser JavaScript)"
 tags: [Chrome, Browsers]
-share_image: https://hospodarets.com/img/blog/1475142739485610000.png
+share_image: https://static.hospodarets.com/img/blog/1475142739485610000.png
 share_description: Node.js debugging with Chrome DevTools in parallel with browser JavaScript
 ---
 
@@ -46,7 +46,7 @@ To enable it, you have to do the following:
 * Open/close DevTools
 
 <div class="smaller-img">
-    <img src="https://hospodarets.com/img/blog/1475144414462210000.png" />
+    <img src="https://static.hospodarets.com/img/blog/1475144414462210000.png" />
 </div>
 
 # Debug
@@ -66,7 +66,7 @@ node --inspect node.js
 If you do this, you'll see the output from Node.js, that it started in debug mode 
 and an option to inspect the process opening a separate URL in Chrome:
 
-![alt](https://hospodarets.com/img/blog/1475142116395554000.png)
+![alt](https://static.hospodarets.com/img/blog/1475142116395554000.png)
 
 ## Debug in DevTools
 
@@ -76,7 +76,7 @@ If you have any console.log or similar output in your Node.js application (outli
 , you can notice, that it already appeared in Chrome DevTools console:
 
 <div class="smaller-img">
-    <img src="https://hospodarets.com/img/blog/1475142370725761000.png" />
+    <img src="https://static.hospodarets.com/img/blog/1475142370725761000.png" />
 </div>
 
 After that, you can e.g. put breakpoints in both browser and Node JavaScript files and debug them.
@@ -101,7 +101,7 @@ Just download the demo code from Github and run `node --inspect node.js` in its 
 After that open `http://localhost:8033/` in Chrome and so you can debug both `browser.js` and `node.js` the same time:
 
 <div class="smaller-img">
-    <img src="https://hospodarets.com/img/blog/1475140897143840000.gif" />
+    <img src="https://static.hospodarets.com/img/blog/1475140897143840000.gif" />
 </div>
 
 # Other

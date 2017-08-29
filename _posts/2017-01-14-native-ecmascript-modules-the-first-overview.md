@@ -2,7 +2,7 @@
 layout: post
 title: "Native ECMAScript modules - the first overview"
 tags: [JavaScript, Browsers]
-share_image: https://hospodarets.com/img/blog/1482849729640077000.png
+share_image: https://static.hospodarets.com/img/blog/1482849729640077000.png
 share_description: The first overview of the native ECMAScript modules, how to make them work, differences with the bundled modules, tips and tricks.
 ---
 
@@ -11,7 +11,7 @@ Now we are facing the situation when [the support amongst them is close to 100%]
 
 
 <span class="smaller-img">
-    <img src="https://hospodarets.com/img/blog/1482783056455362000.png" />
+    <img src="https://static.hospodarets.com/img/blog/1482783056455362000.png" />
 </span>
 
 
@@ -319,7 +319,7 @@ Starting from the
 If it's Safari TP 19 or 20, check that ES6 modules feature is enabled, opening "Develop" menu -> "Experimental Features" -> "ES6 Modules".
 
 <span class="smaller-img">
-    <img src="https://hospodarets.com/img/blog/1482848774988713000.gif" />
+    <img src="https://static.hospodarets.com/img/blog/1482848774988713000.gif" />
 </span>
 
 Another option is to [download the latest Webkit Nightly](https://webkit.org/downloads/) and play with it.
@@ -336,7 +336,7 @@ Install both and run the VM, where open the EDGE browser.
 Open `about:flags` page in it and check the "Enable experimental JavaScript features" checkbox.
 
 <span class="smaller-img">
-    <img src="https://hospodarets.com/img/blog/1482850342363998000.png" />
+    <img src="https://static.hospodarets.com/img/blog/1482850342363998000.png" />
 </span>
 
 That's it, now you have 2 environments where you can play with the native implementation of ECMAScript modules.
@@ -525,7 +525,7 @@ To understand it, you can imagine each `<script type="module">` has a hidden `de
 
 Here is an image from the spec to [explain this behavior](https://html.spec.whatwg.org/multipage/scripting.html#attr-script-defer):
 
-![alt](https://hospodarets.com/img/blog/1482858323861214000.png)
+![alt](https://static.hospodarets.com/img/blog/1482858323861214000.png)
 
 It means, by default module scripts are not blocking, are loaded in parallel and are executed when the page has finished parsing.
 

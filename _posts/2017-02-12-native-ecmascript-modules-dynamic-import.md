@@ -83,7 +83,7 @@ import('./c.js').then(({c})=>{
 Here is the Dev Console screenshot:
 
 <span class="even-smaller-img">
-    <img src="https://hospodarets.com/img/blog/1486915978277103000.png" />
+    <img src="https://static.hospodarets.com/img/blog/1486915978277103000.png" />
 </span>
 
 
@@ -160,7 +160,7 @@ import('./imported.js').then(()=>{
 Here is the console output, which shows that in both cases the `imported.js` is executed not in the global context:
 
 <div class="text-center">
-    <img src="https://hospodarets.com/img/blog/1486994148723269000.png" />
+    <img src="https://static.hospodarets.com/img/blog/1486994148723269000.png" />
 </div>
 
 which means, the `import()` executes the scripts as modules, which actually aligns with the syntax, where in the `then()` function
@@ -245,7 +245,7 @@ import("https://cdn.rawgit.com/lodash/lodash/4.17.4-es/lodash.default.js")
 And here is the console output:
 
 <span class="smaller-img">
-    <img src="https://hospodarets.com/img/blog/1488318422492715000.png" />
+    <img src="https://static.hospodarets.com/img/blog/1488318422492715000.png" />
 </span>
 
 **Takeaways:**
@@ -311,7 +311,7 @@ And here is the console output after a couple of reloads, which shows that the m
 which CDN-loaded the file faster (notice, `import()`s load and execute the both files, in this case, registering jQuery):
 
 <span class="even-smaller-img">
-    <img src="https://hospodarets.com/img/blog/1486925867324135000.png" />
+    <img src="https://static.hospodarets.com/img/blog/1486925867324135000.png" />
 </span>
 
 Of course, it may be a bit strange method, just wanted to show you, that you can use all the power of Promises-based API.
@@ -407,7 +407,7 @@ and a method to do it is in some third location (e.g. a  `utils` folder or simil
 Let's consider the following folder structure and the code:
 
 <span class="even-smaller-img">
-    <img src="https://hospodarets.com/img/blog/1486930537173586000.png" />
+    <img src="https://static.hospodarets.com/img/blog/1486930537173586000.png" />
 </span>
 
 ```js
