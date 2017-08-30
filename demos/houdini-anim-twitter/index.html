@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <title>Houdini new twitter header</title>
+</head>
+
+<body>
+<div class="world-wrapper-wrapper">
+    <div class="world-wrapper">
+        <div class="world-inner">
+            <div class="world">
+                <div class="top-nav-wrapper">
+                    <ul class="top-nav">
+                        <li>
+                            <a class="_3d_mode-btn" href="#">
+                                <span class="Icon Icon--home Icon--large"></span>
+                                <span class="text">Switch 3D mode</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="Icon Icon--lightning Icon--large"></span>
+                                <span class="text">Moments</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="Icon Icon--notifications Icon--large"></span>
+                                <span class="text">Notifications</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="Icon Icon--dm Icon--large"></span>
+                                <span class="text">Messages</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tweet-btn-wrapper">
+                        <div class="tweet-btn">
+                            <span class="Icon Icon--tweet Icon--large"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="banner">
+                    <img src="assets/banner.jpeg" alt="">
+                </div>
+
+                <div class="second-navbar">
+                    <ul class="profile-list">
+                        <li>
+                            <a href="#">
+                    <span class="label">
+                        Tweets
+                    </span>
+                                <span class="value">
+                        1,480
+                    </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                    <span class="label">
+                        Following
+                    </span>
+                                <span class="value">
+                        445
+                    </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                    <span class="label">
+                        Followers
+                    </span>
+                                <span class="value">
+                        12.1K
+                    </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                    <span class="label">
+                        Likes
+                    </span>
+                                <span class="value">
+                        268
+                    </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="small-avatar-wrapper">
+                        <div class="small-avatar">
+                            <img src="assets/avatar.jpg" alt="">
+                            <div class="details">
+                                <div class="name">
+                                    Serg Hospodarets
+                                </div>
+                                <div class="username">
+                                    @malyw
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="avatar-wrapper">
+                        <div class="avatar">
+                            <img src="assets/avatar.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!--include Twitter timeline-->
+                <div class="twitter-timeline-wrapper">
+                    <a class="twitter-timeline" href="https://twitter.com/malyw">Tweets by malyw</a>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
+                <!--HOUDINI PART START-->
+                <script src="polyfills/anim-worklet.js"></script>
+
+                <style>
+                    .world-inner {
+                        --animator-root: scroll-worklet worldInner;
+                    }
+
+                    .avatar-wrapper {
+                        --animator: scroll-worklet avatar;
+                    }
+
+                    .small-avatar {
+                        --animator: scroll-worklet small-avatar;
+                    }
+                </style>
+
+                <div class="options">
+                    <h5>Demo Options (auto reload the page on change):</h5>
+                    <div>
+                        <label>
+                            <input type="checkbox" class="onedge">
+                            Animate on edge only
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+<script>
+    // OPTIONS
+    const options = {};
+
+    let optionEls = document.querySelectorAll('.options input');
+    optionEls = [...optionEls];
+
+    optionEls.forEach((optionEl) => {
+        // use DOM classes as option names
+        const optionName = optionEl.className;
+
+        // INIT
+        // checkbox state from localStorage
+        const optionEnabled = localStorage[optionName] === 'true';
+        optionEl.checked = optionEnabled;
+        // option value
+        options[optionName] = optionEnabled;
+
+        // EVENTS
+        optionEl.addEventListener('change', () => {
+            localStorage[optionName] = optionEl.checked;
+            window.location.reload();
+        });
+    });
+
+    window.worldInner = document.querySelector('.world-inner');
+
+    if (!options.onedge) {
+        window.polyfillAnimationWorklet.import('./animate-by-steps.js');
+    } else {
+        window.polyfillAnimationWorklet.import('./animate-on-edge.js');
+    }
+</script>
+<!--HOUDINI PART END-->
+
+</body>
+</html>
+
