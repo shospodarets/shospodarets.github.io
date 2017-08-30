@@ -28,10 +28,10 @@ registerPaint('border-colors', class {
     paint(ctx, size, styleMap) {
         console.log('paint');
 
-        const topWidth = styleMap.get('--worklet-border-top-width').value;
-        const rightWidth = styleMap.get('--worklet-border-right-width').value;
-        const bottomWidth = styleMap.get('--worklet-border-bottom-width').value;
-        const leftWidth = styleMap.get('--worklet-border-left-width').value;
+        const topWidth = styleMap.get('--worklet-border-top-width').toString();
+        const rightWidth = styleMap.get('--worklet-border-right-width').toString();
+        const bottomWidth = styleMap.get('--worklet-border-bottom-width').toString();
+        const leftWidth = styleMap.get('--worklet-border-left-width').toString();
 
         const topBorderBeginning = topWidth;
         const rightBorderBeginning = size.width - rightWidth;
@@ -54,7 +54,7 @@ registerPaint('border-colors', class {
         borderColors = this.getColors(styleMap, '--worklet-border-top-color');
         updateProgression();
         for (let i = 0; i < borderColors.length; i++) {
-            this.fillQuad(ctx, borderColors[i].cssText,
+            this.fillQuad(ctx, borderColors[i].toString(),
                 leftBorderBeginning - leftSquadSize * i, topBorderBeginning - topSquadSize * i,
                 leftBorderBeginning - leftSquadSize * (i + 1), topBorderBeginning - topSquadSize * (i + 1),
                 rightBorderBeginning + leftSquadSize * (i + 1), topBorderBeginning - topSquadSize * (i + 1),
@@ -65,7 +65,7 @@ registerPaint('border-colors', class {
         borderColors = this.getColors(styleMap, '--worklet-border-right-color');
         updateProgression();
         for (let i = 0; i < borderColors.length; i++) {
-            this.fillQuad(ctx, borderColors[i].cssText,
+            this.fillQuad(ctx, borderColors[i].toString(),
                 rightBorderBeginning + rightSquadSize * i, topBorderBeginning - topSquadSize * i,
                 rightBorderBeginning + rightSquadSize * (i + 1), topBorderBeginning - topSquadSize * (i + 1),
                 rightBorderBeginning + rightSquadSize * (i + 1), bottomBorderBeginning + bottomSquadSize * (i + 1),
@@ -76,7 +76,7 @@ registerPaint('border-colors', class {
         borderColors = this.getColors(styleMap, '--worklet-border-bottom-color');
         updateProgression();
         for (let i = 0; i < borderColors.length; i++) {
-            this.fillQuad(ctx, borderColors[i].cssText,
+            this.fillQuad(ctx, borderColors[i].toString(),
                 rightBorderBeginning + rightSquadSize * i, bottomBorderBeginning + bottomSquadSize * i,
                 rightBorderBeginning + rightSquadSize * (i + 1), bottomBorderBeginning + bottomSquadSize * (i + 1),
                 leftBorderBeginning - leftSquadSize * (i + 1), bottomBorderBeginning + bottomSquadSize * (i + 1),
@@ -87,7 +87,7 @@ registerPaint('border-colors', class {
         borderColors = this.getColors(styleMap, '--worklet-border-left-color');
         updateProgression();
         for (let i = 0; i < borderColors.length; i++) {
-            this.fillQuad(ctx, borderColors[i].cssText,
+            this.fillQuad(ctx, borderColors[i].toString(),
                 leftBorderBeginning - leftSquadSize * i, bottomBorderBeginning + bottomSquadSize * i,
                 leftBorderBeginning - leftSquadSize * (i + 1), bottomBorderBeginning + bottomSquadSize * (i + 1),
                 leftBorderBeginning - leftSquadSize * (i + 1), topBorderBeginning - topSquadSize * (i + 1),

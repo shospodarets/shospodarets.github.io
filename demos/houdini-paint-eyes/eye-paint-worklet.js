@@ -7,7 +7,7 @@ registerPaint('eye-paint', class {
 
     paint(ctx, size, styleMap) {
 
-        const eyePropValue = styleMap.get('--eye').cssText;
+        const eyePropValue = styleMap.get('--eye').toString();
         const isLeftEye = (eyePropValue === 'left');
         let eyeBg = 'lightblue';
 

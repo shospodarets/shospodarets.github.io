@@ -27,4 +27,4 @@
 });
 
 // add a paint Worklet
-paintWorklet.addModule('border-colors.js');
+CSS.paintWorklet.addModule('border-colors.js');
