@@ -1,1 +1,1 @@
-# [Online Demo](https://blog.hospodarets.com/demos/houdini-anim-twitter/)
+# [Online Demo](https://hospodarets.com/demos/houdini-anim-twitter/)

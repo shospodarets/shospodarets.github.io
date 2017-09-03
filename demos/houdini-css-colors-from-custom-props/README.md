@@ -1,1 +1,1 @@
-# [Online Demo](https://blog.hospodarets.com/demos/houdini-css-colors-from-custom-props/)
+# [Online Demo](https://hospodarets.com/demos/houdini-css-colors-from-custom-props/)

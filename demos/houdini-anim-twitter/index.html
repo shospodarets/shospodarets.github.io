@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
-    <title>Houdini new twitter header</title>
+    <title>Houdini twitter header</title>
 </head>
 
 <body>
@@ -122,73 +122,19 @@
                     <a class="twitter-timeline" href="https://twitter.com/malyw">Tweets by malyw</a>
                     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
-
-                <!--HOUDINI PART START-->
-                <script src="polyfills/anim-worklet.js"></script>
-
-                <style>
-                    .world-inner {
-                        --animator-root: scroll-worklet worldInner;
-                    }
-
-                    .avatar-wrapper {
-                        --animator: scroll-worklet avatar;
-                    }
-
-                    .small-avatar {
-                        --animator: scroll-worklet small-avatar;
-                    }
-                </style>
-
-                <div class="options">
-                    <h5>Demo Options (auto reload the page on change):</h5>
-                    <div>
-                        <label>
-                            <input type="checkbox" class="onedge">
-                            Animate on edge only
-                        </label>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </div>
 
+
 <script src="main.js"></script>
-<script>
-    // OPTIONS
-    const options = {};
 
-    let optionEls = document.querySelectorAll('.options input');
-    optionEls = [...optionEls];
 
-    optionEls.forEach((optionEl) => {
-        // use DOM classes as option names
-        const optionName = optionEl.className;
 
-        // INIT
-        // checkbox state from localStorage
-        const optionEnabled = localStorage[optionName] === 'true';
-        optionEl.checked = optionEnabled;
-        // option value
-        options[optionName] = optionEnabled;
+<script src="polyfill/anim-worklet.js"></script>
 
-        // EVENTS
-        optionEl.addEventListener('change', () => {
-            localStorage[optionName] = optionEl.checked;
-            window.location.reload();
-        });
-    });
-
-    window.worldInner = document.querySelector('.world-inner');
-
-    if (!options.onedge) {
-        window.polyfillAnimationWorklet.import('./animate-by-steps.js');
-    } else {
-        window.polyfillAnimationWorklet.import('./animate-on-edge.js');
-    }
-</script>
-<!--HOUDINI PART END-->
+<script src="animator.js"></script>
 
 </body>
 </html>

@@ -1,29 +1,23 @@
-registerAnimator('scroll-position-worklet', class ScrollPositionAnimator {
-    static get elements() {
-        return [{
-            name: 'scrollerElementReference',
-            inputProperties: [],
-            outputProperties: ['transform']
-        }]
-    };
+// WorkletGlobalScope (can be many)
+// worklet execution context
 
-    static get timelines() {
-        return [
-            {type: 'scroll', options: {orientation: 'vertical'}}
-        ]
-    };
+registerAnimator(
+    'scroll-position-animator',// animator name
+    class {
+        constructor(options) {// Called when a new animator is instantiated.
+            this.options = options;
+        }
 
-    animate(elementMap, timelines) {
-        elementMap.get('scrollerElementReference').forEach(elem => {
-            elem.outputStyleMap.set('transform', new CSSTransformValue([
-                new CSSTranslation(
-                    new CSSSimpleLength(
-                        parseFloat(timelines[0].currentTime) * 100, '%'
-                    ),
-                    0,
-                    0
-                )]
-            ));
-        });
-    }
-});
+        // KeyframeEffect, localTime, currentTime from Web Animation API
+        animate(currentTime, effect) {// animate function with animation frame logic
+            // scroll position can be taken from option params
+            // const scrollPos = currentTime * this.options.scrollRange;
+
+            // effect.children (WorkletGroupEffect) or effect (if one effect is passed, AnimationEffect)
+            effect.children.forEach((children) => {
+                // localTime is a Number, which represent the vertical scroll position
+                // (in percentages of the page height)
+                children.localTime = currentTime * 100;
+            });
+        }
+    });

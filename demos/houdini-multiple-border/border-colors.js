@@ -11,6 +11,8 @@
  limitations under the License.
  */
 
+// worklet execution context
+
 registerPaint('border-colors', class {
     static get inputProperties() {
         return [

@@ -1,3 +1,5 @@
+// worklet execution context
+
 registerPaint('eye-paint', class {
     static get inputProperties() {
         return [

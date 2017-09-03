@@ -13,6 +13,15 @@ a{
     text-decoration:none;
 }
 
+.page-wrapper{
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .active{
     border:1px solid rgba(255,255,255,.4);
     box-shadow:0 2px 2px -2px rgba(0,0,0,.4);

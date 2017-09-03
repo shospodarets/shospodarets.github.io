@@ -1,1 +1,1 @@
-# [Online Demo](https://blog.hospodarets.com/demos/houdini-anim-global-scroll/)
+# [Online Demo](https://hospodarets.com/demos/houdini-anim-global-scroll/)

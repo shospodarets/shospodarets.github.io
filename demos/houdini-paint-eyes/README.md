@@ -1,1 +1,1 @@
-# [Online Demo](https://blog.hospodarets.com/demos/houdini-paint-eyes/)
+# [Online Demo](https://hospodarets.com/demos/houdini-paint-eyes/)
