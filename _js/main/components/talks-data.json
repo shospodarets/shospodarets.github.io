@@ -7,8 +7,8 @@
     "year": "2017",
     "month": "11",
     "type": "Talk",
-    "eventImage": "2017-11-voxxedday-event.png",
-    "speakingImage": "2017-11-voxxedday-speaking.png"
+    "eventImage": "2017-11-voxxedday-thessaloniki-event.png",
+    "speakingImage": "2017-11-voxxedday-thessaloniki-speaking.png"
   },
   {
     "name": "CSS-Minsk-JS",
@@ -18,8 +18,8 @@
     "year": "2017",
     "month": "09",
     "type": "Talk",
-    "eventImage": "2017-09-cssminskjs-event.jpg",
-    "speakingImage": "2017-09-cssminskjs-speaking.jpg"
+    "eventImage": "2017-09-cssminskjs-minsk-event.jpg",
+    "speakingImage": "2017-09-cssminskjs-minsk-speaking.jpg"
   },
   {
     "name": "Refresh",
@@ -29,8 +29,8 @@
     "year": "2017",
     "month": "09",
     "type": "Talk",
-    "eventImage": "2017-09-refresh-event.png",
-    "speakingImage": "2017-09-refresh-speaking.png"
+    "eventImage": "2017-09-refresh-tallinn-event.png",
+    "speakingImage": "2017-09-refresh-tallinn-speaking.png"
   },
   {
     "name": "DublinJS",
