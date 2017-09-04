@@ -15,6 +15,7 @@ class TalksData {
         // filter if needed
         if (this.talksDataEl.classList.contains('upcoming-only')) {
             this.talksJson = this.leaveUpcomingOnly();
+            this.checkUpcomingTalksPresent(this.talksJson, this.talksDataEl);
         }
 
         if (this.talksDataEl.classList.contains('previous-only')) {
@@ -29,6 +30,15 @@ class TalksData {
         this.populateData();
 
         this.talksDataEl.classList.add('loaded');
+    }
+
+    /**
+     * Checks if there are upcoming talks and hides dedicated closest specific parent otherwise
+     */
+    checkUpcomingTalksPresent() {
+        if (this.talksJson.length === 0) {
+            this.talksDataEl.closest('.js-talks-data_upcoming-only__hide-when-empty').style.display = 'none';
+        }
     }
 
     leaveUpcomingOnly() {

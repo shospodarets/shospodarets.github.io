@@ -33,6 +33,17 @@
     "speakingImage": "2017-09-refresh-speaking.png"
   },
   {
+    "name": "DublinJS",
+    "location": "Dublin (Ireland)",
+    "flag": "🇮🇪",
+    "link": "http://www.meetup.com/DublinJS/",
+    "year": "2017",
+    "month": "09",
+    "type": "Talk",
+    "eventImage": "2015-12-dublinjs-dublin-event.gif",
+    "speakingImage": "2017-09-dublinjs-dublin-speaking.jpg"
+  },
+  {
     "name": "NDC Oslo",
     "location": "Oslo (Norway)",
     "flag": "🇳🇴",
