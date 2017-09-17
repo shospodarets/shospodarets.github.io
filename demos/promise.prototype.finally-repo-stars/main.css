@@ -1,0 +1,136 @@
+/* LOADING ANIMATION */
+.component:not(.loading) .loader {
+    display: none;
+}
+
+/* common */
+.component {
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 5px;
+    padding: 5px;
+}
+
+.form-inline {
+    margin-bottom: 10px;
+}
+
+.form-inline .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+}
+
+.form-inline label {
+    padding-left: 5px;
+}
+
+/* loader */
+.loader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.loader-animation {
+    color: #000000;
+    font-size: 5px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    text-indent: -9999em;
+    animation: load4 1.3s infinite linear;
+    /* show in the center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+@keyframes load4 {
+    0%, 100% {
+        box-shadow: 0 -3em 0 0.2em,
+        2em -2em 0 0,
+        3em 0 0 -1em,
+        2em 2em 0 -1em,
+        0 3em 0 -1em,
+        -2em 2em 0 -1em,
+        -3em 0 0 -1em,
+        -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0,
+        2em -2em 0 0.2em,
+        3em 0 0 0,
+        2em 2em 0 -1em,
+        0 3em 0 -1em,
+        -2em 2em 0 -1em,
+        -3em 0 0 -1em,
+        -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em,
+        2em -2em 0 0,
+        3em 0 0 0.2em,
+        2em 2em 0 0,
+        0 3em 0 -1em,
+        -2em 2em 0 -1em,
+        -3em 0 0 -1em,
+        -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em,
+        2em -2em 0 -1em,
+        3em 0 0 0,
+        2em 2em 0 0.2em,
+        0 3em 0 0,
+        -2em 2em 0 -1em,
+        -3em 0 0 -1em,
+        -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em,
+        2em -2em 0 -1em,
+        3em 0 0 -1em,
+        2em 2em 0 0,
+        0 3em 0 0.2em,
+        -2em 2em 0 0,
+        -3em 0 0 -1em,
+        -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em,
+        2em -2em 0 -1em,
+        3em 0 0 -1em,
+        2em 2em 0 -1em,
+        0 3em 0 0,
+        -2em 2em 0 0.2em,
+        -3em 0 0 0,
+        -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0 -3em 0 -1em,
+        2em -2em 0 -1em,
+        3em 0 0 -1em,
+        2em 2em 0 -1em,
+        0 3em 0 -1em,
+        -2em 2em 0 0,
+        -3em 0 0 0.2em,
+        -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0 -3em 0 0,
+        2em -2em 0 -1em,
+        3em 0 0 -1em,
+        2em 2em 0 -1em,
+        0 3em 0 -1em,
+        -2em 2em 0 0,
+        -3em 0 0 0,
+        -2em -2em 0 0.2em;
+    }
+}
