@@ -134,11 +134,6 @@ module.exports = function (grunt) {
                     dest: 'css',
                     ext: '.css'
                 }]
-            },
-            demos: {
-                src: [
-                    'demos/*/main.css'
-                ]
             }
         },
 
@@ -197,7 +192,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask("generateDemosCss", [
-        "sass:demos", "postcss:demos"
+        "sass:demos"
     ]);
 
     grunt.registerTask("serve", ["shell:jekyllServe"]);
