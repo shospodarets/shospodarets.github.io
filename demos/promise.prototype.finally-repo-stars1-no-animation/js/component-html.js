@@ -1,6 +1,6 @@
 const componentHTML = `
     <div class="component-content">
-        <h4>Component: Get Github repo stars number</h4>
+        <h4 class="component-title"></h4>
 
         <form class="form-inline">
             <div class="form-group">

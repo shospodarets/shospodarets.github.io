@@ -4,6 +4,9 @@ const usernameEl = componentEl.querySelector("#username");
 const reponameEl = componentEl.querySelector("#reponame");
 const formEl = componentEl.querySelector("form");
 const starsNumberEl = componentEl.querySelector(".stars-number");
+const componentTitleEl = componentEl.querySelector(".component-title");
+
+componentTitleEl.innerHTML = document.title;
 
 // ANIMATION
 function startLoadingAnimation() {
