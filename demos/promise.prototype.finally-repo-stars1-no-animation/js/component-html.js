@@ -1,15 +1,4 @@
----
-layout: demo
-title: Promise.prototype.finally() repo stars
-tags: [Demo]
-article_link: promise.prototype.finally
-demo_code_url: promise.prototype.finally-repo-stars
----
-
-<link rel="stylesheet" href="./bootstrap.min.css">
-<link rel="stylesheet" href="./main.css">
-
-<div class="component">
+const componentHTML = `
     <div class="component-content">
         <h4>Component: Get Github repo stars number</h4>
 
@@ -38,7 +27,7 @@ demo_code_url: promise.prototype.finally-repo-stars
     <div class="component-loader">
         <div class="component-loader-animation"></div>
     </div>
-</div>
+`;
 
-<script src="./promise-finally-polyfill.js"></script>
-<script src="./main.js"></script>
+const componentElForHTML = document.querySelector(".component");
+componentElForHTML.innerHTML = componentHTML;
