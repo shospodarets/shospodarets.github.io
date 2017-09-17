@@ -5,7 +5,7 @@
 self.isDebugEnabled = false;
 
 (()=> {// incapsulate funcs, vars from global scope
-    const CACHE_NAME = 'offline';
+    const CACHE_NAME = 'offline1';
 
     /* CACHE REQUIRED ITEMS */
     const urlsToCache = [
@@ -131,7 +131,7 @@ self.isDebugEnabled = false;
     }
 
     function addMessagePrefix(prefix, args) {
-        var res = Array.prototype.slice.apply(args);
+        const res = Array.prototype.slice.apply(args);
         res.unshift(prefix);
         return res;
     }

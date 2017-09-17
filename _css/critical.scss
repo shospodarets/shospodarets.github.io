@@ -10,6 +10,8 @@
 @import "common/reset";
 @import "base/default";
 @import "base/common";
+@import "base/typography";
+@import "common/code-highlighting";
 /* atoms */
 @import "atoms/social-links";
 @import "atoms/nav-links";
@@ -37,5 +39,3 @@
 @import "pages/speaking";
 @import "pages/contact";
 @import "pages/blog-tag";
-/* other */
-@import "base/typography";
