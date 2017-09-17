@@ -1,4 +1,4 @@
-const componentLoadingClass = "loading";
+const componentLoadingClass = "component-loading";
 const componentEl = document.querySelector(".component");
 const usernameEl = componentEl.querySelector("#username");
 const reponameEl = componentEl.querySelector("#reponame");

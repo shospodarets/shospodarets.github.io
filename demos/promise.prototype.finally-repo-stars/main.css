@@ -1,5 +1,5 @@
 /* LOADING ANIMATION */
-.component:not(.loading) .loader {
+.component:not(.component-loading) .component-loader {
     display: none;
 }
 
@@ -28,7 +28,7 @@
 }
 
 /* loader */
-.loader {
+.component-loader {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -37,7 +37,7 @@
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.loader-animation {
+.component-loader-animation {
     color: #000000;
     font-size: 5px;
     width: 1em;
