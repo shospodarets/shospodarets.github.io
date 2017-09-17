@@ -52,8 +52,8 @@ urls:
   code-review: /code-review
   about: /about
   contact: /contact
-code_base_url: https://github.com/malyw/hospodarets.com
-demos_code_base_url: https://github.com/malyw/hospodarets.com/tree/master/demos
+code_base_url: https://github.com/malyw/malyw.github.io
+demos_code_base_url: https://github.com/malyw/malyw.github.io/tree/master/demos
 full_base_url: https://hospodarets.com
 
 # If hosting site at a Project repository on GitHub pages
