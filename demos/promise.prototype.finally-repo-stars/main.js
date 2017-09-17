@@ -27,5 +27,8 @@ formEl.addEventListener("submit", e => {
         .then(data => {
             starsNumberEl.innerHTML = data.stargazers_count;
         })
+        .catch(() => {
+            starsNumberEl.innerHTML = "Couldn't get the stars number";
+        })
         .finally(stopLoadingAnimation);
 });
