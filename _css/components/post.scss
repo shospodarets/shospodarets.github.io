@@ -41,7 +41,8 @@
     }
   }
 
-  // HEADINGS FONT INDENTS
+  // HEADINGS INDENTS
+  // h4-h6 are not supposed to be used
   h1, h2 {
     --padding-top: calc(1.5 * var(--main-vertical-indent)); // for hover link position
     padding-top: var(--padding-top);
@@ -54,8 +55,14 @@
     margin-bottom: calc(1 * var(--main-vertical-indent));
   }
 
+  // LONG WORDS TO NOT BREAK THE UI
+  #{$headings} { // headings
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
   // HEADINGS HOVER LINK SHOW
-  h1, h2, h3 { // h4-h6 are not supposed to be used
+  h1, h2, h3 {
     transition: background-color .3s;
     position: relative;
 

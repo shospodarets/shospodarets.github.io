@@ -6,7 +6,7 @@ body { // global
   font-family: var(--main-font-family);
 }
 
-.post-title, .page-title, .sidebar-title, .sub-header-common__text, h1, h2, h3 { // headings
+#{$headings} { // headings
   font-family: var(--main-headings-font-family);
   font-weight: bold;
 }
@@ -39,6 +39,7 @@ body {
 }
 
 // specific HEADINGS
+// h4-h6 are not supposed to be used
 h1 {
   font-size: var(--main-heading-font-size);
 }
@@ -49,10 +50,6 @@ h2 {
 
 h3 {
   font-size: 22px;
-}
-
-h4 {
-  font-size: 18px;
 }
 
 // PAGE_TITLE
