@@ -70,7 +70,7 @@ markdown: kramdown
 
 highlighter: rouge
 
-permalink: /:title
+permalink: /:title/
 
 # Exclude these files from production _site
 exclude:
