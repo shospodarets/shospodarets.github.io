@@ -6,7 +6,6 @@ import talksJson from 'json-loader!./talks-data.json';
 class TalksData {
     constructor(talksDataEl) {
         this.talksDataEl = talksDataEl;
-        console.log('talksDataEl', talksDataEl);
 
         this.talksJson = talksJson;
 
