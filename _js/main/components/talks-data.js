@@ -6,6 +6,7 @@ import talksJson from 'json-loader!./talks-data.json';
 class TalksData {
     constructor(talksDataEl) {
         this.talksDataEl = talksDataEl;
+        console.log('talksDataEl', talksDataEl);
 
         this.talksJson = talksJson;
 
@@ -110,7 +111,7 @@ class TalksData {
         });
 
         // append the result
-        this.talksDataEl.append(talkEl);
+        this.talksDataEl.appendChild(talkEl);
     }
 }
 
