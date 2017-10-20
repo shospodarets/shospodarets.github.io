@@ -45,7 +45,8 @@
             isDefaultCssEnabled: {% if page.disable_default_css %}false{% else %}true{% endif %}
         }
     </script>
-    <script defer src="{{ site.baseurl }}/js/main.bundled.js"></script>
+    <script defer nomodule src="{{ site.baseurl }}/js/main.bundled.js"></script>
+    <script type="module" src="{{ site.baseurl }}/js/modules/main.js"></script>
 
     {% if page.add_to_main_head %}
     {{ page.add_to_main_head }}
