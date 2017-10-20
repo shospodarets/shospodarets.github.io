@@ -48,13 +48,6 @@ module.exports = function (grunt) {
                         }
                     ]
                 },
-                resolve: {
-                    extensions: ['.js'],
-                    modules: [
-                        path.join(__dirname, './_js'),
-                        'node_modules'
-                    ]
-                },
                 resolveLoader: {
                     modules: [
                         path.join(__dirname, './node_modules'),
