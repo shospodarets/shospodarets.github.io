@@ -17,7 +17,7 @@ self.isDebugEnabled = false;
         '/css/non-critical.css',
 
         // js
-        '/js/main.min.js'
+        '/js/main.bundled.js'
     ];
 
     self.addEventListener('install', (event) => {

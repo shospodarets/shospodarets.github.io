@@ -22,7 +22,7 @@ module.exports = function (grunt) {
             dist: {
                 entry: rootPath + '/js/modules/main.js',
                 output: {
-                    filename: 'js/main.min.js'
+                    filename: 'js/main.bundled.js'
                 },
                 module: {
                     rules: [
