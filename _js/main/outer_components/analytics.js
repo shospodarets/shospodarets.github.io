@@ -1,4 +1,4 @@
-import {loadScript} from "../utils/utils";
+import {loadScript} from "../utils/utils.js";
 
 /**
  * @constructor

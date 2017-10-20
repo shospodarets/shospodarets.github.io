@@ -1,4 +1,4 @@
-import {loadScript, httpProtocol} from "../utils/utils";
+import {loadScript, httpProtocol} from "../utils/utils.js";
 
 /**
  * @constructor

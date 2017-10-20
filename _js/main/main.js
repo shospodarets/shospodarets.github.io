@@ -1,15 +1,15 @@
 // DEPENDENCIES
 // components
-import Events from "./components/events-binding";
-import TalksData from "./components/talks-data";
-import ContactForm from "./components/contact-form";
-import "./components/register-service-worker";// execute file without imports
+import Events from "./components/events-binding.js";
+import TalksData from "./components/talks-data.js";
+import ContactForm from "./components/contact-form.js";
+import "./components/register-service-worker.js";// execute file without imports
 
 // outer components
-import Analytics from "./outer_components/analytics";
-import CustomSearch from "./outer_components/custom-search";
-import ConditionalLoader from "./outer_components/conditional-loader";
-import IncludeCss from "./outer_components/include-css";
+import Analytics from "./outer_components/analytics.js";
+import CustomSearch from "./outer_components/custom-search.js";
+import ConditionalLoader from "./outer_components/conditional-loader.js";
+import IncludeCss from "./outer_components/include-css.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     // APP

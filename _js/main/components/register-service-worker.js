@@ -1,5 +1,5 @@
 /* VARS */
-import humane from "../libs/humane";// http://wavded.github.io/humane-js/
+import humane from "../libs/humane.js";// http://wavded.github.io/humane-js/
 
 // enables debug logging in the browser script and Service Worker
 const isDebugEnabled = localStorage.debug || location.search.indexOf('debug') !== -1;

@@ -1,4 +1,4 @@
-import {loadCss} from "../utils/utils";
+import {loadCss} from "../utils/utils.js";
 
 /**
  * @constructor
