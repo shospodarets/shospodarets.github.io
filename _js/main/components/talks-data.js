@@ -1,10 +1,22 @@
-// Modules to parse the upcoming events data
-// and populate it to the page (templating)
-
-import talksJson from 'json-loader!./talks-data.json';
+// Modules to load the the talks data,
+// parse it
+// and populate to the element using templating
 
 class TalksData {
     constructor(talksDataEl) {
+        TalksData.loadTalksData()
+            .then((talksJson) => {
+                this.initComponent({talksDataEl, talksJson});
+            });
+    }
+
+    static loadTalksData() {
+        return fetch('/js/assets/talks-data.json')
+            .then((res) => res.json())
+            .catch(console.error);
+    }
+
+    initComponent({talksDataEl, talksJson}) {
         this.talksDataEl = talksDataEl;
 
         this.talksJson = talksJson;

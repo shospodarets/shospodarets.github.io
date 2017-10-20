@@ -1,6 +1,4 @@
-import {loadScript} from "../utils/utils";
-import {httpProtocol} from "../utils/utils";
-import {triggerEvent} from "../utils/utils";
+import {loadScript, httpProtocol, triggerEvent} from "../utils/utils";
 
 /**
  * Applies placeholder actions to original google custom search form
