@@ -20,21 +20,23 @@ Analytics.prototype.prepare = function () {
 
 Analytics.prototype.load = function () {
     loadScript(
-        ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+        ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') +
         '.google-analytics.com/ga.js'
     );
 };
 
 Analytics.prototype.addJsErrorsTracking = function () {
-    window['onerror'] = function (msg, url, line) {
-        window._gaq.push([
+    window.addEventListener('error', function (err) {
+        const lineAndColumnInfo = err.colno ? ' line:' + err.lineno + ', column:' + err.colno : ' line:' + err.lineno;
+        _gaq.push([
             '_trackEvent',
-            'JavaScript Errors',
-            msg,
-            url + " : " + line,
-            new Date().toUTCString() + ' | ' + navigator.userAgent,
-            true]);
-    };
+            'JavaScript Error',
+            err.message,
+            err.filename + lineAndColumnInfo + ' -> ' + navigator.userAgent,
+            0,
+            true
+        ]);
+    });
 };
 
 export default Analytics;
