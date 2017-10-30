@@ -3,9 +3,9 @@ async function getStarsNumber(username, reponame) {
     try {
         startLoadingAnimation();
 
-        return await fetch(`https://api.github.com/repos/${username}/${reponame}`)
-            .then(res => res.json())
-            .then(data => data.stargazers_count);
+        const res = await fetch(`https://api.github.com/repos/${username}/${reponame}`);
+        const data = await res.json();
+        return data.stargazers_count;
     } catch (err) {
         return `Couldn't get the stars number`;
     } finally {
