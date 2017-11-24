@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chrome DevTools Performance monitor
+title: Chrome DevTools- Performance monitor
 tags: [Browsers, Chrome]
 share_image: https://static.hospodarets.com/img/blog/1511527599607549000.png
 share_description: Chrome DevTools Performance monitor allows easily measure your app perfomance in real-time
