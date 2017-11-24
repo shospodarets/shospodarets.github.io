@@ -18,18 +18,26 @@ For this and other performance-measuring techniques, Chrome DevTools added the
 
 <div class="more"></div>
 
-To open the "Performance Monitor":
+This is available in Chrome stable and to get the "Performance Monitor":
 
-1. Open Chrome DevTools (CMD/CTRL + SHIFT + I);
-2. Press "Esc" to open the additional panel with tabs;
-3. Choose the "Performance monitor" in the drawer;
-4. Enable/disable the metrics via click.
+1. Open "chrome://flags/#enable-devtools-experiments" URL
+2. Activate the "Developer Tools experiments" flag
+3. Press "Relaunch now" to restart Chrome
+4. Open Chrome DevTools (CMD/CTRL + SHIFT + I)
+5. Open DevTools "Setting" -> "Experiments" tab
+6. Press SHIFT 6 times (sorry 😜) to show the hidden features
+7. Check the "Performance Monitor" checkbox
+8. Close and open DevTools (CMD/CTRL + SHIFT + I twice)
+9. Press "Esc" to open the additional panel with tabs
+10. Choose the "Performance monitor" in the drawer
+11. Enable/disable the metrics via click
+12. Enjoy the "Performance Monitor" if you get here 😀
 
 <span class="smaller-img">
-    <img src="https://static.hospodarets.com/img/blog/1511533584492544000.gif" />
+    <img src="https://static.hospodarets.com/img/blog/1511540400748823000.gif" />
 </span>
 
-This is available in Chrome 63 and provides you many different metrics,
+This gives you many different metrics,
 most of which are very useful and we could/can measure them in Chrome in some ways
 (e.g. in Timeline, Performance Tab etc.)
 
