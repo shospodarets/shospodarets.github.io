@@ -1,4 +1,4 @@
-import {loadScript, httpProtocol} from "../utils/utils.js";
+import {loadScript, httpProtocol} from '../utils/utils.js';
 
 /**
  * @constructor
@@ -14,40 +14,40 @@ const ConditionalLoader = function (options) {
 ConditionalLoader.prototype.loadScripts = function () {
     /* Highlight.js (code highlighter) */
     if (document.querySelectorAll('pre > code').length) {
-        loadScript(this.options.SITE_BASE_URL + '/js/libs/highlight.pack.js')
+        loadScript(`${this.options.SITE_BASE_URL}/js/libs/highlight.pack.js`)
             .then(() => {
-                hljs.initHighlightingOnLoad();
+                window.hljs.initHighlightingOnLoad();
             });
     }
     /* CAN I USE INFO */
     if (document.querySelectorAll('.caniuse').length) {
-        loadScript(this.options.SITE_BASE_URL + '/js/libs/caniuse.min.js');
+        loadScript(`${this.options.SITE_BASE_URL}/js/libs/caniuse.min.js`);
     }
     /* CODEPEN EXAMPLES */
     if (document.querySelectorAll('.codepen').length) {
-        loadScript(httpProtocol + '//codepen.io/assets/embed/ei.js');
+        loadScript(`${httpProtocol}//codepen.io/assets/embed/ei.js`);
     }
     /* JSBIN EXAMPLES */
     if (document.querySelectorAll('.jsbin-embed').length) {
-        loadScript(httpProtocol + '//static.jsbin.com/js/embed.js');
+        loadScript(`${httpProtocol}//static.jsbin.com/js/embed.js`);
     }
     /* DISCUSS COMMENTS */
     if (document.querySelectorAll('#disqus_thread').length) {
         window.disqus_config = function () {
-            //noinspection JSPotentiallyInvalidUsageOfThis
+            // noinspection JSPotentiallyInvalidUsageOfThis
             this.page.url = this.options.PAGE_URL;
-            //noinspection JSPotentiallyInvalidUsageOfThis
+            // noinspection JSPotentiallyInvalidUsageOfThis
             this.page.identifier = this.options.PAGE_IDENTIFIER;
         };
         loadScript(
-            httpProtocol + '//' + this.options.DISCUSS_ID + '.disqus.com/embed.js'
+            `${httpProtocol}//${this.options.DISCUSS_ID}.disqus.com/embed.js`
         );
     }
 
     /* DISCUSS COMMENTS COUNTERS */
     if (document.querySelectorAll('.post__short-comment-counter').length) {
         loadScript(
-            httpProtocol + '//' + this.options.DISCUSS_ID + '.disqus.com/count.js',
+            `${httpProtocol}//${this.options.DISCUSS_ID}.disqus.com/count.js`,
             {
                 id: 'dsq-count-scr'
             }
@@ -57,7 +57,7 @@ ConditionalLoader.prototype.loadScripts = function () {
     /* TWITTER BUTTONS */
     if (document.querySelectorAll('.twitter-widget').length) {
         loadScript(
-            httpProtocol + '//' + 'platform.twitter.com/widgets.js'
+            `${httpProtocol}//platform.twitter.com/widgets.js`
         );
     }
 
@@ -68,7 +68,7 @@ ConditionalLoader.prototype.loadScripts = function () {
         document.body.appendChild(fbRoot);
 
         loadScript(
-            httpProtocol + '//' + '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10'
+            `${httpProtocol}//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10`
         );
     }
 };

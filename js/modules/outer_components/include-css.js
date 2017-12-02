@@ -1,6 +1,7 @@
-import {loadCss} from "../utils/utils.js";
+import {loadCss} from '../utils/utils.js';
 
 /**
+ * @param {Object} options
  * @constructor
  */
 const IncludeCss = function (options) {
@@ -8,7 +9,7 @@ const IncludeCss = function (options) {
 
     // include default CSS
     if (this.options.isDefaultCssEnabled) {
-        loadCss(`${this.options.SITE_BASE_URL}/css/non-critical.css`)
+        loadCss(`${this.options.SITE_BASE_URL}/css/non-critical.css`);
     }
 };
 

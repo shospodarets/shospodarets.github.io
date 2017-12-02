@@ -72,7 +72,7 @@ class TalksData {
         talksJson.forEach((talkJson) => {
             const monthName = months[Number(talkJson.month) - 1];// "- 1" as in JS months start from 0
 
-            talkJson.date = `${monthName} ${talkJson.year}`
+            talkJson.date = `${monthName} ${talkJson.year}`;
         });
         return talksJson;
     }
@@ -80,8 +80,8 @@ class TalksData {
     static isTalkUpcoming(talkJSON) {
         const talkYear = Number(talkJSON.year);
         const talkMonth = Number(talkJSON.month);
-        const currentYear = (new Date).getFullYear();
-        const currentMonth = (new Date).getMonth() + 1; // "+ 1" as starts from 0
+        const currentYear = (new Date()).getFullYear();
+        const currentMonth = (new Date()).getMonth() + 1; // "+ 1" as starts from 0
 
         if (talkYear > currentYear) { // a future year
             return true;
@@ -102,9 +102,11 @@ class TalksData {
 
         // populate field placeholders in HTML
         for (const fieldName in talkJSON) {
-            const fieldValue = talkJSON[fieldName];
+            if (talkJSON.hasOwnProperty(fieldName)) {
+                const fieldValue = talkJSON[fieldName];
 
-            talkEl.innerHTML = talkEl.innerHTML.replace(new RegExp(`%%${fieldName}%%`, 'g'), fieldValue);
+                talkEl.innerHTML = talkEl.innerHTML.replace(new RegExp(`%%${fieldName}%%`, 'g'), fieldValue);
+            }
         }
 
         // populate upcoming data

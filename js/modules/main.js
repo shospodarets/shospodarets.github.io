@@ -1,17 +1,17 @@
 // DEPENDENCIES
 // components
-import Events from "./components/events-binding.js";
-import TalksData from "./components/talks-data.js";
-import ContactForm from "./components/contact-form.js";
-import "./components/register-service-worker.js";// execute file without imports
+import Events from './components/events-binding.js';
+import TalksData from './components/talks-data.js';
+import ContactForm from './components/contact-form.js';
+import './components/register-service-worker.js';// execute file without imports
 
 // outer components
-import Analytics from "./outer_components/analytics.js";
-import CustomSearch from "./outer_components/custom-search.js";
-import ConditionalLoader from "./outer_components/conditional-loader.js";
-import IncludeCss from "./outer_components/include-css.js";
+import Analytics from './outer_components/analytics.js';
+import CustomSearch from './outer_components/custom-search.js';
+import ConditionalLoader from './outer_components/conditional-loader.js';
+import IncludeCss from './outer_components/include-css.js';
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
     // APP
     const APP = window.jekyllVariables;
     delete window.jekyllVariables;// cleaning
@@ -40,11 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // talks data
     Array.from(document.querySelectorAll('.talks-data')).forEach((talksDataEl) => {
+        // eslint-disable-next-line no-new
         new TalksData(talksDataEl);// populate talks data
     });
 
     // contact form
     Array.from(document.querySelectorAll('.js-contact-form')).forEach((contactFormEl) => {
+        // eslint-disable-next-line no-new
         new ContactForm({
             contactFormEl,
             CONTACT_EMAIL: APP.CONTACT_EMAIL

@@ -1,9 +1,9 @@
 export default class ContactForm {
     constructor(data) {
-        /*** PROPERTIES ***/
+        /** * PROPERTIES ***/
         // data
         this.contactFormEl = data.contactFormEl;
-        this.CONTACT_EMAIL = data.CONTACT_EMAIL + '@gmail.com';
+        this.CONTACT_EMAIL = `${data.CONTACT_EMAIL}@gmail.com`;
 
         // DOM
         this.contactFormSubmitEl = this.contactFormEl.querySelector('[type="submit"]');
@@ -16,7 +16,7 @@ export default class ContactForm {
         };
 
 
-        /*** METHODS ***/
+        /** * METHODS ***/
         // EVENTS
         // Classes
         this.resetClassNames = () => {
@@ -98,8 +98,8 @@ export default class ContactForm {
                 body: new FormData(this.contactFormEl)
             })
                 .then((res) => res.json())
-                .then((data) => {
-                    if (data.success) {
+                .then((_data) => {
+                    if (_data.success) {
                         this.onSuccess();
                     } else {
                         this.onReject();
@@ -109,8 +109,8 @@ export default class ContactForm {
         };
 
 
-        /*** INIT ***/
+        /** * INIT ***/
         // events
         this.contactFormEl.addEventListener('submit', this.onSubmit);
-    };
-};
+    }
+}

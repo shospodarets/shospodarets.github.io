@@ -1,5 +1,5 @@
 /* VARS */
-import humane from "../libs/humane.js";// http://wavded.github.io/humane-js/
+import humane from '../libs/humane.js';// http://wavded.github.io/humane-js/
 
 // enables debug logging in the browser script and Service Worker
 const isDebugEnabled = localStorage.debug || location.search.indexOf('debug') !== -1;
@@ -7,12 +7,12 @@ const isDebugEnabled = localStorage.debug || location.search.indexOf('debug') !=
 /* LOGGING */
 function log() {
     if (!isDebugEnabled) return;
-    console.log.apply(console, addMessagePrefix('PAGE:', arguments));
+    console.log(...addMessagePrefix('PAGE:', arguments));
 }
 
 function logError() {
     if (!isDebugEnabled) return;
-    console.error.apply(console, addMessagePrefix('PAGE:', arguments));
+    console.error(...addMessagePrefix('PAGE:', arguments));
 }
 
 function addMessagePrefix(prefix, args) {
@@ -23,29 +23,29 @@ function addMessagePrefix(prefix, args) {
 
 /* REGISTER WORKER */
 if ('serviceWorker' in navigator) {
-    let swPath = `/service-worker.js`;
+    const swPath = '/service-worker.js';
     navigator.serviceWorker.register(
         swPath
-    ).then(function (registration) {
+    ).then((registration) => {
         sendMessageToWorker({'---isDebugEnabled---': isDebugEnabled});// send debug state info
         log(`Service Worker "${swPath}" registration successful with scope: ${registration.scope}`);
-    }).catch(function (error) {
+    }).catch((error) => {
         // registration failed
         logError(`Registration of Service Worker "${swPath}" failed with error`, error);
     });
 }
 
-/*--- MESSAGING ---*/
+/* --- MESSAGING ---*/
 
 // https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/post-message
 function sendMessageToWorker(message) {
-    return new Promise(function (resolve, reject) {
+    return new Promise((resolve, reject) => {
         const messageChannel = new MessageChannel();
         messageChannel.port1.onmessage = function (event) {
             if (event.data.error) {
                 reject(event.data.error);
             } else {
-                logError(`An error occured getting a message from SW`, event.data.error);
+                logError('An error occured getting a message from SW', event.data.error);
                 resolve(event.data);
             }
         };
@@ -56,16 +56,16 @@ function sendMessageToWorker(message) {
                 [messageChannel.port2]
             );
         } else {
-            logError(`Message sending to SW failed: navigator.serviceWorker.controller is`, navigator.serviceWorker.controller);
+            logError('Message sending to SW failed: navigator.serviceWorker.controller is', navigator.serviceWorker.controller);
         }
     }).then(() => {
     }, (err) => {
-        logError(`Message sending to SW failed with error`, err);
+        logError('Message sending to SW failed with error', err);
     });
 }
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.addEventListener('message', function (event) {
+    navigator.serviceWorker.addEventListener('message', (event) => {
         if (event.data['---notification---'] !== undefined) {
             humane.log(event.data['---notification---'], {
                 addnCls: 'humane-libnotify-info',

@@ -4,7 +4,7 @@
 // in global scope to simplify debugging
 self.isDebugEnabled = false;
 
-(() => {// incapsulate funcs, vars from global scope
+(() => { // incapsulate funcs, vars from global scope
     const CACHE_NAME = 'offline1';
 
     /* CACHE REQUIRED ITEMS */
@@ -44,6 +44,7 @@ self.isDebugEnabled = false;
                             if (cacheName !== CACHE_NAME) {
                                 return caches.delete(cacheName);
                             }
+                            return undefined;
                         })
                     );
                 })
@@ -59,8 +60,9 @@ self.isDebugEnabled = false;
         // and serve cached version only in cases of errors (offline mode, network or server errors etc.)
         event.respondWith(
             caches.match(event.request)
-                .then((responseFromCache) => {
-                        //log('Fetching', event.request.url);
+                .then(
+                    (responseFromCache) => {
+                        // log('Fetching', event.request.url);
 
                         // event.request.clone -  as event.request is used after and can be consumed only once
                         return fetch(event.request.clone())
@@ -88,9 +90,8 @@ self.isDebugEnabled = false;
                                     log(`Serving cached response for "${event.request.url}" because of fetching error`, err);
                                     sendMessageToPage('Some content was served from browser cache because of connection problems');
                                     return responseFromCache;
-                                } else {
-                                    logError(`Error fetching the request "${event.request.url}"`, err);
                                 }
+                                logError(`Error fetching the request "${event.request.url}"`, err);
                             });
                     }
                 )
@@ -100,37 +101,37 @@ self.isDebugEnabled = false;
         );
     });
 
-    /*--- MESSAGING ---*/
+    /* --- MESSAGING ---*/
     self.addEventListener('message', (event) => {
-        //log('Handling a message', event);
+        // log('Handling a message', event);
         if (event.data['---isDebugEnabled---'] !== undefined) {
-            isDebugEnabled = event.data['---isDebugEnabled---'];
+            self.isDebugEnabled = event.data['---isDebugEnabled---'];
         }
     });
 
     function sendMessageToPage(message) {
-        if (!isDebugEnabled) return;
+        if (!self.isDebugEnabled) return;
 
         return self.clients.matchAll()
-            .then(function (clients) {
-                clients.forEach(function (client) {
+            .then((clients) => {
+                clients.forEach((client) => {
                     client.postMessage({
-                        "---notification---": message
+                        '---notification---': message
                     });
                 });
             });
     }
 
-    /*--- LOGGING ---*/
+    /* --- LOGGING ---*/
     function log() {
-        if (!isDebugEnabled) return;
+        if (!self.isDebugEnabled) return;
 
-        console.log.apply(console, addMessagePrefix('SW:', arguments));
+        console.log(...addMessagePrefix('SW:', arguments));
     }
 
     function logError() {
-        if (!isDebugEnabled) return;
-        console.error.apply(console, addMessagePrefix('SW:', arguments));
+        if (!self.isDebugEnabled) return;
+        console.error(...addMessagePrefix('SW:', arguments));
     }
 
     function addMessagePrefix(prefix, args) {

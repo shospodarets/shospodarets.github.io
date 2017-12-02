@@ -1,9 +1,9 @@
 const path = require('path');
-const BabiliPlugin = require("babili-webpack-plugin");
+const BabiliPlugin = require('babili-webpack-plugin');
 
 const rootPath = path.resolve();
 
-//const DEBUG_IS_ENABLED = Boolean(process.env.BLOG_DEBUG);// environment variable
+// const DEBUG_IS_ENABLED = Boolean(process.env.BLOG_DEBUG);// environment variable
 
 const supportedBrowsersList = {
     // https://github.com/ai/browserslist
@@ -17,10 +17,24 @@ const supportedBrowsersList = {
 };
 
 module.exports = function (grunt) {
+    grunt.registerTask('eslint', 'Runs the linting script', function () {
+        const done = this.async();
+        const nodeUtils = require('./_other/scripts/node-utils');
+
+        nodeUtils.runWithProgress('npm', ['run', 'lint-js', '--', '--quiet'], (code, errData) => {
+            if (code !== 0) {
+                console.error(`Can not run npm lint-js:\n${errData}`);
+                return done(false);
+            }
+
+            return done();
+        });
+    });
+
     grunt.initConfig({
         webpack: {
             dist: {
-                entry: rootPath + '/js/modules/main.js',
+                entry: `${rootPath}/js/modules/main.js`,
                 output: {
                     filename: 'js/main.bundled.js'
                 },
@@ -82,7 +96,7 @@ module.exports = function (grunt) {
                     ext: '.css'
                 }]
             },
-            demos: {// all *.scss files in "demos" folder
+            demos: {// all *.scss files in 'demos' folder
                 files: [{
                     expand: true,
                     cwd: 'demos',
@@ -107,7 +121,7 @@ module.exports = function (grunt) {
                         mergeRules: false,
                         colormin: false
                     }),
-                    require("postcss-reporter")()
+                    require('postcss-reporter')()
                 ]
             },
             critical: {
@@ -132,13 +146,13 @@ module.exports = function (grunt) {
 
         shell: {
             jekyllServe: {
-                command: "jekyll serve",// --profile
+                command: 'jekyll serve', // --profile
                 options: {
                     stdin: false
                 }
             },
             jekyllBuild: {
-                command: "jekyll build",// --profile
+                command: 'jekyll build', // --profile
                 options: {
                     stdin: false
                 }
@@ -147,20 +161,20 @@ module.exports = function (grunt) {
 
         watch: {
             site: {
-                files: ["./*.md", "./*.html", "_layouts/**/*.html", "_posts/*.md", "_includes/**/*.html"],
-                tasks: ["jekyllBuild"]
+                files: ['./*.md', './*.html', '_layouts/**/*.html', '_posts/*.md', '_includes/**/*.html'],
+                tasks: ['jekyllBuild']
             },
             js: {
-                files: ["js/modules/**"],
-                tasks: ["generateJs", "jekyllBuild"]
+                files: ['js/modules/**'],
+                tasks: ['generateJs', 'jekyllBuild']
             },
             css: {
-                files: ["_css/**/*.scss"],
-                tasks: ["generateCss", "jekyllBuild"]
+                files: ['_css/**/*.scss'],
+                tasks: ['generateCss', 'jekyllBuild']
             },
             css_demos: {
-                files: ["demos/**/*.scss"],
-                tasks: ["generateDemosCss", "jekyllBuild"]
+                files: ['demos/**/*.scss'],
+                tasks: ['generateDemosCss', 'jekyllBuild']
             }
         },
 
@@ -183,41 +197,42 @@ module.exports = function (grunt) {
 
     require('jit-grunt')(grunt);
 
-    grunt.registerTask("generateJs", [
-        "webpack"
+    grunt.registerTask('generateJs', [
+        'webpack'
     ]);
 
-    grunt.registerTask("generateCss", [
-        "sass:critical",
-        "sass:nonCritical",
-        "postcss:critical",
-        "postcss:nonCritical"
+    grunt.registerTask('generateCss', [
+        'sass:critical',
+        'sass:nonCritical',
+        'postcss:critical',
+        'postcss:nonCritical'
     ]);
 
-    grunt.registerTask("generateDemosCss", [
-        "sass:demos"
+    grunt.registerTask('generateDemosCss', [
+        'sass:demos'
     ]);
 
-    grunt.registerTask("serve", ["shell:jekyllServe"]);
+    grunt.registerTask('serve', ['shell:jekyllServe']);
 
-    grunt.registerTask("jekyllBuild", [
+    grunt.registerTask('jekyllBuild', [
         // Jekyll build
-        "shell:jekyllBuild"
+        'shell:jekyllBuild'
     ]);
 
-    grunt.registerTask("build", [
-        "generateJs",
+    grunt.registerTask('build', [
+        'eslint',
+        'generateJs',
 
-        "stylelint",
-        "generateCss",
-        "generateDemosCss",
+        'stylelint',
+        'generateCss',
+        'generateDemosCss',
 
-        "jekyllBuild"
+        'jekyllBuild'
     ]);
 
-    grunt.registerTask("default", [
-        "build",
-        "open",
-        "watch"
+    grunt.registerTask('default', [
+        'build',
+        'open',
+        'watch'
     ]);
 };

@@ -25,11 +25,13 @@ const getPlatformBinExtension = (cmd) => {
  */
 
 /**
+ * Spawns a subprocess to run a command.
  *
- * @param {string}      cmd
- * @param {string[]}    args
- * @param {object}      [options]   process.spawn options
- * @param {function}    callback
+ * @param {string} cmd - The command to run
+ * @param {string[]} args - The command arguments
+ * @param {object} [options] - process.spawn options
+ * @param {function} callback - The callback to be run upon completion
+ * @returns {ChildProcess} - The reference to the child process.
  */
 function runWithProgress(cmd, args, options, callback) {
     let errData;
@@ -43,29 +45,35 @@ function runWithProgress(cmd, args, options, callback) {
 
     cmd = spawn(cmd, args, options);
 
-    cmd.stderr.setEncoding('utf8');
-
-    cmd.stdout.setEncoding('utf8');
-    cmd.stdout.on('data', (data) => {
-        console.log(data.trim());
-    });
-
-    cmd.stderr.on('data', (data) => {
-        errData += data;
-        console.log(data);
-    });
+    // stderr and stdout may not be defined
+    // depending on value of options.stdio
+    if (cmd.stderr) {
+        cmd.stderr.setEncoding('utf8');
+        cmd.stderr.on('data', (data) => {
+            errData += data;
+            console.log(data);
+        });
+    }
+    if (cmd.stdout) {
+        cmd.stdout.setEncoding('utf8');
+        cmd.stdout.on('data', (data) => {
+            console.log(data.trim());
+        });
+    }
 
     cmd.on('close', (code) => {
         console.log('');
         callback(code, errData);
     });
+
+    return cmd;
 }
 
 /**
  * Executes a bin with the arguments
- * @param cmd {String}
- * @param args {String}
- * @param callback {Function}
+ * @param {String} cmd
+ * @param {String} args
+ * @param {Function} callback
  */
 function runExec(cmd, args, callback) {
     exec(
@@ -85,14 +93,14 @@ function runExec(cmd, args, callback) {
 
 /**
  * Executes the command with the arguments
- * @param cmd {String}
- * @param args {String}
- * @param callback {Function}
+ * @param {String} cmd
+ * @param {String} args
+ * @param {Function} callback
  */
 function runExecCommand(cmd, args, callback) {
     exec(
         `${cmd} ${args}`,
-        (err, stdout/*, stderr*/) => {
+        (err, stdout/* , stderr*/) => {
             if (err) {
                 callback(1, err);
             } else {
@@ -103,12 +111,17 @@ function runExecCommand(cmd, args, callback) {
 
 /**
  * Run process from Npm Bin path
+ *
+ * @param {String} cmd
+ * @param {string[]} args
+ * @param {Object} options
+ * @param {Function} callback
  */
 function runNpmCommonBinWithProgress(cmd, args, options, callback) {
-    return runWithProgress(`${nodeBinCommonPath}/${cmd}`, args, options, callback);
+    runWithProgress(`${nodeBinCommonPath}/${cmd}`, args, options, callback);
 }
 
-/*--- EXPORTS ---*/
+/* --- EXPORTS --- */
 module.exports = {
     runWithProgress,
     runExec,

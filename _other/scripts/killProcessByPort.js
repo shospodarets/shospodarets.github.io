@@ -69,7 +69,7 @@ if (process.platform === 'win32') { // WINDOWS
     killPyPort({
         getPIDByPortCommand: `lsof -P | grep ':'${port} | awk '{print $2}'`,
         getKillCommandFromOutput: (output) => {
-            //noinspection UnnecessaryLocalVariableJS
+            // noinspection UnnecessaryLocalVariableJS
             const PID = output;// output is the PID actually
             return `kill -9 ${PID}`;
         }

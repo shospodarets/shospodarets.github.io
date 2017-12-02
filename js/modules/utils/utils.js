@@ -6,9 +6,10 @@ export function triggerEvent(el, eventName) {
 }
 
 /**
- * @param src {String}
- * @param [scriptAttributes] {Object} Additional attributes to be added to the script DOM element
- * without wait one JS cycle which will be before invoking SUCCESS function passed in promise.then
+ * Without wait one JS cycle which will be before invoking SUCCESS function passed in promise.then
+ * @param {String} src
+ * @param {Object} [scriptAttributes] - Additional attributes to be added to the script DOM element
+ * @returns {Promise}
  */
 export function loadScript(src, scriptAttributes) {
     return new Promise((resolve, reject) => {
@@ -19,7 +20,9 @@ export function loadScript(src, scriptAttributes) {
         // add scripts attributes if needed
         if (scriptAttributes) {
             for (const attrName in scriptAttributes) {
-                script.setAttribute(attrName, scriptAttributes[attrName]);
+                if (scriptAttributes.hasOwnProperty(attrName)) {
+                    script.setAttribute(attrName, scriptAttributes[attrName]);
+                }
             }
         }
 
@@ -31,9 +34,10 @@ export function loadScript(src, scriptAttributes) {
 }
 
 /**
- * @param href {String}
- * @param [onload] {Function} Can be used for specific cases when action is needed on stylesheet load
- * without wait one JS cycle which will be before invoking SUCCESS function passed in promise.then
+ * Without wait one JS cycle which will be before invoking SUCCESS function passed in promise.then
+ * @param {String} href
+ * @param {Function} [onload] - Can be used for specific cases when action is needed on stylesheet load
+ * @returns {Promise}
  */
 export function loadCss(href, onload) {
     return new Promise((resolve, reject) => {
