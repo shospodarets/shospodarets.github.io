@@ -4,7 +4,7 @@
 // in global scope to simplify debugging
 self.isDebugEnabled = false;
 
-(()=> {// incapsulate funcs, vars from global scope
+(() => {// incapsulate funcs, vars from global scope
     const CACHE_NAME = 'offline1';
 
     /* CACHE REQUIRED ITEMS */
@@ -25,8 +25,8 @@ self.isDebugEnabled = false;
         // OLD SW MIGHT BE STILL ACTIVE HERE
         event.waitUntil(
             caches.open(CACHE_NAME)
-                .then((cache) =>cache.addAll(urlsToCache))
-                .catch((err)=> {
+                .then((cache) => cache.addAll(urlsToCache))
+                .catch((err) => {
                     logError(`Error opening the cache "${CACHE_NAME}"`, err);
                 })
         );
@@ -77,13 +77,13 @@ self.isDebugEnabled = false;
                                         // response.clone - because response can be consumed only once
                                         cache.put(event.request, response.clone());
                                     })
-                                    .catch((err)=> {
+                                    .catch((err) => {
                                         logError(`Error opening the cache "${CACHE_NAME}"`, err);
                                     });
 
                                 return response;
                             })
-                            .catch((err)=> {
+                            .catch((err) => {
                                 if (responseFromCache) {
                                     log(`Serving cached response for "${event.request.url}" because of fetching error`, err);
                                     sendMessageToPage('Some content was served from browser cache because of connection problems');
@@ -94,14 +94,14 @@ self.isDebugEnabled = false;
                             });
                     }
                 )
-                .catch((err)=> {
+                .catch((err) => {
                     logError(`Error matching cache for the request "${event.request}"`, err);
                 })
         );
     });
 
     /*--- MESSAGING ---*/
-    self.addEventListener('message', (event)=> {
+    self.addEventListener('message', (event) => {
         //log('Handling a message', event);
         if (event.data['---isDebugEnabled---'] !== undefined) {
             isDebugEnabled = event.data['---isDebugEnabled---'];
@@ -109,6 +109,8 @@ self.isDebugEnabled = false;
     });
 
     function sendMessageToPage(message) {
+        if (!isDebugEnabled) return;
+
         return self.clients.matchAll()
             .then(function (clients) {
                 clients.forEach(function (client) {
@@ -122,6 +124,7 @@ self.isDebugEnabled = false;
     /*--- LOGGING ---*/
     function log() {
         if (!isDebugEnabled) return;
+
         console.log.apply(console, addMessagePrefix('SW:', arguments));
     }
 
