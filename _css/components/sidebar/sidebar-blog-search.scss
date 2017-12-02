@@ -1,14 +1,13 @@
-/*------------------------------------ */
+/* ------------------------------------ */
+
 /*    Google Search */
-/*------------------------------------ */
+
+/* ------------------------------------ */
 
 // Google search placeholder
-
-.google-custom-search {
-}
-
 .google-custom-search-original {
   @include absolute-hidden;
+
   /* hide original google search */
 }
 
@@ -55,9 +54,11 @@
 // Google search reset
 
 .google-custom-search-original {
-  /*------------------------------------ */
+  /* ------------------------------------ */
+
   /*    RESET BLOG STYLES FOR GOOGLE CUSTOM SEARCH */
-  /*------------------------------------ */
+
+  /* ------------------------------------ */
   box-sizing: content-box;
   text-align: left;
 

@@ -91,6 +91,7 @@
 .page-speaking__events-list.previous-only {
   li {
     @include white-tile;
+
     overflow: hidden;
     margin-bottom: var(--event-gap);
 

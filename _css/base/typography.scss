@@ -1,6 +1,8 @@
-/*------------------------------------ */
+/* ------------------------------------ */
+
 /*    FONT-FAMILIES    */
-/*------------------------------------ */
+
+/* ------------------------------------ */
 body { // global
   /* not in shorthand because of http://codepen.io/malyw/pen/mEKKqY?editors=1100 */
   font-family: var(--main-font-family);
@@ -25,9 +27,11 @@ code:not([class]) {
   font-family: var(--main-code-font-family);
 }
 
-/*------------------------------------ */
+/* ------------------------------------ */
+
 /*    FONT-SIZE, LINE_HEIGHT    */
-/*------------------------------------ */
+
+/* ------------------------------------ */
 // GLOBAL
 html {
   font-size: 100%;

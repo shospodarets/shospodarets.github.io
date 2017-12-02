@@ -88,8 +88,8 @@ include:
     # lodash-es/_*.js files for native ECMAScript imports
     - _*.js
 
-# Gems
-gems:
+# Plugins (gems)
+plugins:
   - jekyll
   - jekyll-sitemap
   - jekyll-paginate

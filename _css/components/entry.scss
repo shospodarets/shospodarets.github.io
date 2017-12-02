@@ -1,6 +1,6 @@
 .entry {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     @include clearfix;
   }
 

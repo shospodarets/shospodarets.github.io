@@ -15,14 +15,15 @@
 }
 
 /* ------------------------- */
+
 /* SOCIAL LINKS */
+
 /* ------------------------- */
 .page-contact__links {
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
-
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-gap: var(--main-horizontal-indent);
@@ -30,6 +31,7 @@
 
   li {
     @include white-tile;
+
     margin-bottom: var(--main-horizontal-indent);
 
     a {
@@ -44,10 +46,8 @@
 
     width: var(--size);
     height: var(--size);
-
     display: inline-block;
     margin-bottom: calc(3 * var(--spacer));
-
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -74,7 +74,9 @@
 }
 
 /* ------------------------- */
+
 /* CONTACT FORM */
+
 /* ------------------------- */
 
 //
@@ -83,7 +85,6 @@
 .page-contact__form-wrapper {
   display: grid;
   grid-gap: 0;
-
   grid-template-columns: repeat(2, 1fr);
 
   @include mobile {
@@ -104,7 +105,7 @@
 
     .page-contact__form-label {
       display: block;
-      margin-bottom: calc(.5 * var(--spacer));
+      margin-bottom: calc(0.5 * var(--spacer));
     }
   }
 }
@@ -137,6 +138,7 @@
 // Form icons
 .page-contact__form-icon-wrapper {
   --size: calc(2 * var(--spacer));
+
   width: var(--size);
   margin-left: var(--spacer);
   font-size: 2px; // for the loading state
@@ -178,7 +180,8 @@
     margin-top: 5px;
   }
 
-  .page-contact__form-reject, .page-contact__form-success {
+  .page-contact__form-reject,
+  .page-contact__form-success {
     width: var(--size);
     height: var(--size);
     background-repeat: no-repeat;

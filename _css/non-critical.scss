@@ -1,13 +1,16 @@
 /* variables/mixins */
 @import "common/mixins";
+
 /* libraries */
 @import "libs/caniuse";
 @import "libs/humane-libnotify";
 @import "libs/highlight.pack";
+
 /* layout */
 @import "components/comments";
 @import "components/pagination";
 @import "components/footer";
+
 /* layouts */
 @import "layouts/demo";
 @import "layouts/header-one-column";

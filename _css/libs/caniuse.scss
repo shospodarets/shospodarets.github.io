@@ -103,18 +103,18 @@
 }
 
 .caniuse .agents li:hover,
-.caniuse .agents li:hover:before {
+.caniuse .agents li:hover::before {
   color: #fff;
   text-shadow: 0 1px 0 #aaa;
 }
 
-.caniuse .agents li:before {
+.caniuse .agents li::before {
   color: #555;
   font-size: 2em;
 }
 
-.caniuse .agents li[class^="icon-"]:before,
-.caniuse .agents li [class*=" icon-"]:before {
+.caniuse .agents li[class^="icon-"]::before,
+.caniuse .agents li [class*=" icon-"]::before {
   font-family: 'agents', sans-serif;
   font-style: normal;
   speak: none;
@@ -122,38 +122,38 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.caniuse .agents li.icon-android:before {
+.caniuse .agents li.icon-android::before {
   content: "\e006";
 }
 
-.caniuse .agents li.icon-chrome:before,
-.caniuse .agents li.icon-and_chr:before {
+.caniuse .agents li.icon-chrome::before,
+.caniuse .agents li.icon-and_chr::before {
   content: "\e004";
 }
 
-.caniuse .agents li.icon-firefox:before,
-.caniuse .agents li.icon-and_ff:before {
+.caniuse .agents li.icon-firefox::before,
+.caniuse .agents li.icon-and_ff::before {
   content: "\e000";
 }
 
-.caniuse .agents li.icon-ie:before,
-.caniuse .agents li.icon-windows:before {
+.caniuse .agents li.icon-ie::before,
+.caniuse .agents li.icon-windows::before {
   content: "\e001";
-  /* alternate windows icon: content: "\e007" */
 
+  /* alternate windows icon: content: "\e007" */
 }
 
-.caniuse .agents li.icon-ios_saf:before {
+.caniuse .agents li.icon-ios_saf::before {
   content: "\e005";
 }
 
-.caniuse .agents li.icon-opera:before,
-.caniuse .agents li.icon-op_mini:before,
-.caniuse .agents li.icon-op_mob:before {
+.caniuse .agents li.icon-opera::before,
+.caniuse .agents li.icon-op_mini::before,
+.caniuse .agents li.icon-op_mob::before {
   content: "\e002";
 }
 
-.caniuse .agents li.icon-safari:before {
+.caniuse .agents li.icon-safari::before {
   content: "\e003";
 }
 

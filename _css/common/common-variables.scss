@@ -12,12 +12,14 @@ $headings: ".post-title, .page-title, .sidebar-title, .sub-header-common__text, 
   --main-vertical-indent: 15px;
   --main-horizontal-indent: 15px;
   --header-height: calc(15 * var(--spacer));
+
   /* Icon links */
   --social-link-size: 48px;
   --social-links-indent: 12px;
 
   /* Layout */
   --blockquote-padding: calc(#{var(--main-vertical-indent)} / 2);
+
   /* other */
   --main-border-radius: 2px;
   --text-border-radius: 1px;

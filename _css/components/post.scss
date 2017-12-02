@@ -7,14 +7,14 @@
 
 // COMMON (list of posts and post itself)
 .post { /* class present in both short and full posts */
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     @include clearfix;
   }
 
   & .post__meta {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       @include clearfix;
     }
   }
@@ -43,14 +43,17 @@
 
   // HEADINGS INDENTS
   // h4-h6 are not supposed to be used
-  h1, h2 {
+  h1,
+  h2 {
     --padding-top: calc(1.5 * var(--main-vertical-indent)); // for hover link position
+
     padding-top: var(--padding-top);
     margin-bottom: calc(1.5 * var(--main-vertical-indent));
   }
 
   h3 {
     --padding-top: calc(1 * var(--main-vertical-indent)); // for hover link position
+
     padding-top: var(--padding-top);
     margin-bottom: calc(1 * var(--main-vertical-indent));
   }
@@ -62,19 +65,22 @@
   }
 
   // HEADINGS HOVER LINK SHOW
-  h1, h2, h3 {
-    transition: background-color .3s;
+  h1,
+  h2,
+  h3 {
+    transition: background-color 0.3s;
     position: relative;
 
     // show the link icon for heading with ID
     &[id]:hover {
       --top-indent: var(--padding-top, 0); // if any top indent is needed
+
       cursor: pointer;
-      &:after {
+
+      &::after {
         position: absolute;
         top: calc(50% + var(--top-indent) / 2);
         right: var(--spacer);
-
         transform: translateY(-50%);
         background: url(/images/icons/link.svg) no-repeat 0 0;
         content: '';
@@ -97,7 +103,7 @@
 }
 
 .post__date {
-  color: var(--warm-grey)
+  color: var(--warm-grey);
 }
 
 .post-title {

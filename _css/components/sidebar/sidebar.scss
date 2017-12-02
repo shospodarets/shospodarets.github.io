@@ -1,7 +1,6 @@
 @mixin sidebar-hr {
   padding-bottom: calc(3 * var(--spacer));
   margin-bottom: calc(3 * var(--spacer));
-
   border-bottom: 1px solid var(--light-gray-color);
 }
 
@@ -15,6 +14,7 @@
 .main-sidebar {
   .sidebar-box {
     --sidebar-box-padding: calc(3 * var(--spacer));
+
     padding: var(--sidebar-box-padding);
     margin-bottom: var(--sidebar-box-margin);
 

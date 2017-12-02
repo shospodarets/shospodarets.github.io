@@ -168,6 +168,16 @@ module.exports = function (grunt) {
             dist: {
                 path: 'http://localhost:4000/'
             }
+        },
+
+        stylelint: {
+            options: {
+                configFile: './.stylelintrc',
+                syntax: 'scss',
+            },
+            src: [
+                './_css/**/*.scss',
+            ]
         }
     });
 
@@ -198,6 +208,7 @@ module.exports = function (grunt) {
     grunt.registerTask("build", [
         "generateJs",
 
+        "stylelint",
         "generateCss",
         "generateDemosCss",
 

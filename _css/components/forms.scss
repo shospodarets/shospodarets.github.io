@@ -6,18 +6,22 @@ input[type=search] {
   &::-webkit-input-placeholder {
     font-style: italic;
   }
+
   &:-moz-placeholder {
     font-style: italic;
   }
+
   &::-moz-placeholder {
     font-style: italic;
   }
+
   &:-ms-input-placeholder {
     font-style: italic;
   }
 }
 
-.input, textarea {
+.input,
+textarea {
   border: 1px solid var(--input-border-color);
 }
 
@@ -42,7 +46,6 @@ textarea {
 .sh-btn {
   border: none;
   min-width: 96px;
-
   color: var(--white-color);
   background-color: var(--nice-blue);
   transition: background-color var(--transition-main);

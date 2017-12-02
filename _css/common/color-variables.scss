@@ -1,18 +1,21 @@
 :root {
   /* COLORS */
-  --link-color: #4183C4;
+  --link-color: #4183c4;
   --main-color: #323232;
   --header-footer-color: #fff;
+
   /* Gray colors */
   --darker-gray-color: #222;
   --gray-color: #666;
   --light-gray-color: #ebebeb;
+
   /* BACKGROUNDS */
   --main-content-bg: #f8f8f8;
   --white-color: #fff;
   --black-color: #000;
   --code-bg: #eee;
   --inline-code-bg: #f0f0f0;
+
   /* ELEMENT COLORS */
   --link-hover-color: #0c819d;
   --title-hover-color: var(--link-color);
@@ -24,18 +27,18 @@
   --input-border-color: #d7d7d7;
   --white-tile-box-shadow-color: rgba(0, 0, 0, 0.1);
   --loader-color: var(--black-color);
+
   /* Pagination COLORS */
   --pagination-inactive-bg: #dedede;
   --pagination-inactive-border: #dedede;
   --pagination-inactive-color: #bebebe;
-
   --pagination-active-bg: #1399b9;
   --pagination-active-border: #1399b9;
   --pagination-active-color: #fff;
-
   --pagination-normal-bg: #fff;
   --pagination-normal-border: #1399b9;
   --pagination-normal-color: #1399b9;
+
   /* Tags */
   --active-tag-bg: #ffb100;
   --active-tag-color: var(--white-color);

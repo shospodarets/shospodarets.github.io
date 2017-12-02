@@ -1,7 +1,10 @@
-/*------------------------------------ */
+/* ------------------------------------ */
+
 /*    BASE RULES */
-/*------------------------------------ */
-html, body {
+
+/* ------------------------------------ */
+html,
+body {
   /* stretch to get minimum the full height */
   height: 100%;
   min-height: 100%;
@@ -39,7 +42,9 @@ a {
   }
 }
 
-h1, h2, h3 { // h4-h6 are not supposed to be used
+h1,
+h2,
+h3 { // h4-h6 are not supposed to be used
   margin: 0;
   padding: 0;
 }
@@ -63,7 +68,8 @@ p {
   margin: 0 0 var(--main-vertical-indent);
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0 0 var(--main-vertical-indent);
   padding-left: 30px;
 }
@@ -76,11 +82,15 @@ ol {
   list-style-type: decimal;
 }
 
-ol ul, ul ol, ul ul, ol ol {
+ol ul,
+ul ol,
+ul ul,
+ol ol {
   margin: 0;
 }
 
-ul ul, ol ul {
+ul ul,
+ol ul {
   list-style-type: circle;
 }
 

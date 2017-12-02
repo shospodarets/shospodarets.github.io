@@ -2,38 +2,46 @@
 @import "common/common-variables";
 @import "common/color-variables";
 @import "common/typography-variables";
+
 /* mixins */
 @import "common/mixins";
+
 /* fonts */
 @import "common/fonts";
+
 /* reset, common layout and defaults classes */
 @import "common/reset";
 @import "base/default";
 @import "base/common";
 @import "base/typography";
 @import "common/code-highlighting";
+
 /* atoms */
 @import "atoms/social-links";
 @import "atoms/nav-links";
 @import "atoms/share-buttons";
 @import "atoms/widgets";
 @import "atoms/loader";
+
 /* molecules */
 @import "molecules/open-close";
 @import "molecules/talks-data";
+
 /* header */
 @import "components/header/header";
 @import "components/forms";
+
 /* main */
 @import "components/main";
 @import "components/sidebar/sidebar";
+
 /* layout */
 @import "components/post-short";
 @import "components/post";
 @import "components/entry";
 @import "components/container-common";
+
 /* pages */
-@import "pages/about";
 @import "pages/404";
 @import "pages/code-review";
 @import "pages/speaking";

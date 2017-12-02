@@ -1,6 +1,6 @@
 .container-wrapper__demo {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     @include clearfix;
   }
 

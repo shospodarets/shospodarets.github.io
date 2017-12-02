@@ -1,6 +1,8 @@
-/*------------------------------------ */
+/* ------------------------------------ */
+
 /*    OPEN-CLOSE block */
-/*------------------------------------ */
+
+/* ------------------------------------ */
 .open-close-wrapper {
   position: relative;
 
@@ -16,9 +18,10 @@
   & .icon {
     cursor: pointer;
     display: inline-block;
-    transition: transform .3s;
+    transition: transform 0.3s;
 
     @include triangle-preset;
+
     border-width: 5px;
     border-color: var(--black-color) transparent transparent;
     border-bottom: none;

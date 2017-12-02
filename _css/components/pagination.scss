@@ -13,8 +13,8 @@
   text-align: center;
   margin-bottom: var(--pagination-outer-indent);
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     @include clearfix;
   }
 
@@ -23,11 +23,9 @@
     border-radius: 3px;
     transition: 0.5s all;
     text-decoration: none;
-
     width: var(--pagination-btn-size);
     height: var(--pagination-btn-size);
     line-height: var(--pagination-btn-size);
-
     color: var(--pagination-normal-color);
     background-color: var(--pagination-normal-bg);
     border: 1px solid var(--pagination-normal-border);
@@ -66,7 +64,6 @@
       flex: 0 0 var(--pagination-btn-size);
       margin-right: var(--pagination-btn-indent);
       margin-left: var(--pagination-btn-indent);
-
       min-height: 1px; /* fix for 0 height if there is no content (because of float:left;) */
     }
   }
