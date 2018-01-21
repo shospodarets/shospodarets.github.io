@@ -71,14 +71,6 @@ ConditionalLoader.prototype.loadScripts = function () {
             `${httpProtocol}//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10`
         );
     }
-
-    /* NETGURU */
-    if (location.search.indexOf('neguru=enabled') !== -1) { // ?neguru=enabled in the URL
-        const newtgureuWrapperEl = document.querySelector('.main-sidebar .scroller-area');
-        if (newtgureuWrapperEl) {
-            loadScript(`${this.options.SITE_BASE_URL}/js/libs/netguru.js`);
-        }
-    }
 };
 
 export default ConditionalLoader;
