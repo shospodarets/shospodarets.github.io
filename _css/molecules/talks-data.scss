@@ -16,4 +16,32 @@
       display: none;
     }
   }
+
+  .for-each-talk-image {
+    display: none; // hidden gallery, used only to pass the list of images
+  }
+
+  // icon when images are populated
+  .event-image-gallery.js-with-images {
+    .ignoreClass {
+      display: inline-block;
+      position: relative;
+
+      &::after {
+        --size: 30px;
+        --indent: 5px;
+
+        display: block;
+        content: '';
+        position: absolute;
+        right: var(--indent);
+        bottom: var(--indent);
+        width: var(--size);
+        height: var(--size);
+        background: url(/images/icons/photo-gallery.png) no-repeat 0 0;
+        background-size: contain;
+        border-radius: 10%;
+      }
+    }
+  }
 }

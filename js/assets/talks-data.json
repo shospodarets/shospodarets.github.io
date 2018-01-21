@@ -8,7 +8,33 @@
     "month": "11",
     "type": "Talk",
     "eventImage": "2017-11-voxxedday-thessaloniki-event.png",
-    "speakingImage": "2017-11-voxxedday-thessaloniki-speaking.jpg"
+    "speakingImage": "2017-11-voxxedday-thessaloniki-speaking.jpg",
+    "talkImages": {
+      "folderName": "2017.11-voxxed-days",
+      "imageNames": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+        "6.jpg",
+        "7.jpg",
+        "8.jpg",
+        "9.jpg",
+        "10.jpg",
+        "11.jpg",
+        "12.jpg",
+        "13.jpg",
+        "14.jpg",
+        "15.jpg",
+        "16.jpg",
+        "17.jpg",
+        "18.jpg",
+        "19.jpg",
+        "20.jpg",
+        "21.jpg"
+      ]
+    }
   },
   {
     "name": "CSS-Minsk-JS",
@@ -19,7 +45,18 @@
     "month": "09",
     "type": "Talk",
     "eventImage": "2017-09-cssminskjs-minsk-event.jpg",
-    "speakingImage": "2017-09-cssminskjs-minsk-speaking.jpg"
+    "speakingImage": "2017-09-cssminskjs-minsk-speaking.jpg",
+    "talkImages": {
+      "folderName": "2017.09-css-minsk-js",
+      "imageNames": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+        "6.jpg"
+      ]
+    }
   },
   {
     "name": "Refresh",
@@ -30,7 +67,16 @@
     "month": "09",
     "type": "Talk",
     "eventImage": "2017-09-refresh-tallinn-event.png",
-    "speakingImage": "2017-09-refresh-tallinn-speaking.jpg"
+    "speakingImage": "2017-09-refresh-tallinn-speaking.jpg",
+    "talkImages": {
+      "folderName": "2017.09-refresh",
+      "imageNames": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg"
+      ]
+    }
   },
   {
     "name": "DublinJS",
@@ -63,7 +109,16 @@
     "month": "05",
     "type": "Talk",
     "eventImage": "2017-05-frontendunited-athens-event.jpg",
-    "speakingImage": "2017-05-frontendunited-athens-speaking.jpg"
+    "speakingImage": "2017-05-frontendunited-athens-speaking.jpg",
+    "talkImages": {
+      "folderName": "2017.05-frontend-united",
+      "imageNames": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg"
+      ]
+    }
   },
   {
     "name": "Codemotion Amsterdam",
@@ -74,7 +129,19 @@
     "month": "05",
     "type": "Talk",
     "eventImage": "2017-05-codemotion-amsterdam-event.jpg",
-    "speakingImage": "2017-05-codemotion-amsterdam-speaking.jpg"
+    "speakingImage": "2017-05-codemotion-amsterdam-speaking.jpg",
+    "talkImages": {
+      "folderName": "2017.05-codemotion-amsterdam",
+      "imageNames": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+        "6.jpg",
+        "7.jpg"
+      ]
+    }
   },
   {
     "name": "DublinCSS",
@@ -85,7 +152,16 @@
     "month": "12",
     "type": "Talk",
     "eventImage": "2016-12-dublincss-dublin-event.png",
-    "speakingImage": "2016-12-dublincss-dublin-speaking.jpg"
+    "speakingImage": "2016-12-dublincss-dublin-speaking.jpg",
+    "talkImages": {
+      "folderName": "2016.12-dublin-css",
+      "imageNames": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg"
+      ]
+    }
   },
   {
     "name": "TopConf",
@@ -96,7 +172,14 @@
     "month": "11",
     "type": "Talk",
     "eventImage": "2016-11-topconf-tallinn-event.jpg",
-    "speakingImage": "2016-11-topconf-tallinn-speaking.jpg"
+    "speakingImage": "2016-11-topconf-tallinn-speaking.jpg",
+    "talkImages": {
+      "folderName": "2016.11-topconf-tallinn",
+      "imageNames": [
+        "1.jpg",
+        "2.jpg"
+      ]
+    }
   },
   {
     "name": "DevDay",
@@ -107,7 +190,17 @@
     "month": "09",
     "type": "Talk",
     "eventImage": "2016-09-devday-krakow-event.gif",
-    "speakingImage": "2016-09-devday-krakow-speaking.jpg"
+    "speakingImage": "2016-09-devday-krakow-speaking.jpg",
+    "talkImages": {
+      "folderName": "2016.09-dev-day",
+      "imageNames": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
+      ]
+    }
   },
   {
     "name": "DublinJS",

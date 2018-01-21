@@ -5,10 +5,12 @@
 @import "libs/caniuse";
 @import "libs/humane-libnotify";
 @import "libs/highlight.pack";
+@import "libs/baguetteBox";
 
 /* layout */
 @import "components/comments";
 @import "components/pagination";
+@import "components/image-gallery";
 @import "components/footer";
 
 /* layouts */

@@ -2,8 +2,12 @@
 // parse it
 // and populate to the element using templating
 
+import {loadScript} from '../utils/utils.js';
+
 class TalksData {
-    constructor(talksDataEl) {
+    constructor(talksDataEl, options) {
+        this.options = options;
+
         TalksData.loadTalksData()
             .then((talksJson) => {
                 this.initComponent({talksDataEl, talksJson});
@@ -38,8 +42,10 @@ class TalksData {
         // INIT
         this.forEachTalkEl = this.talksDataEl.querySelector('.for-each-talk');
         this.forEachTalkEl.parentNode.removeChild(this.forEachTalkEl);// remove from the output
+        this.isGalleryIncluded = false;
 
         this.populateData();
+        this.onLoad();
 
         this.talksDataEl.classList.add('loaded');
     }
@@ -97,6 +103,40 @@ class TalksData {
         this.talksJson.forEach(this.populateTalkData.bind(this));
     }
 
+    populateTalkImages(talkEl, talkJSON) {
+        const eventImageGallery = talkEl.querySelector('.event-image-gallery');
+        if (!eventImageGallery || !talkJSON.talkImages) {
+            return;
+        }
+
+        eventImageGallery.classList.add('js-with-images'); // notify UI
+        this.isGalleryIncluded = true; // update the common flag
+
+        const fragment = document.createDocumentFragment();
+        const folderName = talkJSON.talkImages.folderName;
+
+        let firstLink = null;
+
+        talkJSON.talkImages.imageNames.forEach((imageName) => {
+            const link = document.createElement('a');
+            link.href = `${this.options.STATIC_RESOURCES_URL}/blog/conferences/${folderName}/${imageName}`;
+
+            fragment.appendChild(link);
+            if (!firstLink) {
+                firstLink = link;
+            }
+        });
+
+        // open gallery on image click
+        const galleryOpener = eventImageGallery.querySelector('.ignoreClass');
+        galleryOpener.addEventListener('click', (e) => {
+            e.preventDefault();
+            firstLink.click();
+        });
+
+        eventImageGallery.appendChild(fragment);
+    }
+
     populateTalkData(talkJSON) {
         const talkEl = this.forEachTalkEl.cloneNode(true);
 
@@ -123,8 +163,23 @@ class TalksData {
             preSrcEl.removeAttribute('pre-src');
         });
 
+        // populate images
+        this.populateTalkImages(talkEl, talkJSON);
+
         // append the result
         this.talksDataEl.appendChild(talkEl);
+    }
+
+    /* EVENTS */
+    onLoad() {
+        if (this.isGalleryIncluded) {
+            loadScript(`${this.options.SITE_BASE_URL}/js/libs/baguetteBox.min.js`)
+                .then(() => {
+                    window.baguetteBox.run('.event-image-gallery', {
+                        ignoreClass: 'ignoreClass'
+                    });
+                });
+        }
     }
 }
 

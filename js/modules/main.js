@@ -41,7 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // talks data
     Array.from(document.querySelectorAll('.talks-data')).forEach((talksDataEl) => {
         // eslint-disable-next-line no-new
-        new TalksData(talksDataEl);// populate talks data
+        new TalksData(talksDataEl, {
+            SITE_BASE_URL: APP.SITE_BASE_URL,
+            STATIC_RESOURCES_URL: APP.STATIC_RESOURCES_URL
+        });// populate talks data
     });
 
     // contact form

@@ -71,6 +71,14 @@ ConditionalLoader.prototype.loadScripts = function () {
             `${httpProtocol}//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10`
         );
     }
+
+    /* IMAGE GALLERY */
+    if (document.querySelectorAll('.image-gallery').length) {
+        loadScript(`${this.options.SITE_BASE_URL}/js/libs/baguetteBox.min.js`)
+            .then(() => {
+                window.baguetteBox.run('.image-gallery');
+            });
+    }
 };
 
 export default ConditionalLoader;
