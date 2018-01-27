@@ -10,14 +10,15 @@
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
 
-    <meta name="author" content="{{ site.author }}"/>
-    <meta name="description" content="{% if page.share_description %}{{ page.share_description }}{% elsif page.path contains '_posts' %}{{ page.content | strip_html | xml_escape | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="keywords" content="{{ site.keywords }}">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+    {% include head/social-networks/common-html.html %}
 
-    <meta itemprop="image" content="{{ site.url }}/logo.png">
-    <link rel="image_src" href="{{ site.url }}/images/logo.png">
+    <meta name="robots" content="index,follow">
+
+    {% include head/social-networks/search-engine-tags.html %}
+
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+    <link rel="image_src" href="{% if page.share_image %}{{ page.share_image }}{% else %}{{ site.url }}/images/share-image.jpg{% endif %}">
+
     {% include head/favicons.html %}
 
     {% include head/social-networks/twitter.html %}

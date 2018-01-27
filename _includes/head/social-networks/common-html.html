@@ -1,0 +1,3 @@
+<meta name="author" content="{{ site.author }}"/>
+<meta name="description" content="{% if page.share_description %}{{ page.share_description }}{% elsif page.path contains '_posts' %}{{ page.content | strip_html | xml_escape | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
+<meta name="keywords" content="{{ site.keywords }}">

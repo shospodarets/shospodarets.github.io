@@ -1,0 +1,3 @@
+<meta itemprop="name" content="{{ site.name }}">
+<meta itemprop="image" content="{% if page.share_image %}{{ page.share_image }}{% else %}{{ site.url }}/images/share-image.jpg{% endif %}">
+<meta property="description" content="{% if page.share_description %}{{ page.share_description }}{% elsif page.path contains '_posts' %}{{ page.content | strip_html | xml_escape | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
