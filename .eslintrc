@@ -1,10 +1,5 @@
 {
   "extends": "airbnb/base",
-  "filesToTest": [
-    "*.js",
-    "'_other/**/*.js'",
-    "'js/**/*.js'"
-  ],
   "env": {
     "browser": true,
     "node": true,

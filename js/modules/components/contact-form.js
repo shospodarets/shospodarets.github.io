@@ -26,15 +26,11 @@ export default class ContactForm {
         };
 
         this.addClassName = (state) => {
-            this.contactFormEl.classList.add(
-                this.classNames[state]
-            );
+            this.contactFormEl.classList.add(this.classNames[state]);
         };
 
         this.removeClassName = (state) => {
-            this.contactFormEl.classList.remove(
-                this.classNames[state]
-            );
+            this.contactFormEl.classList.remove(this.classNames[state]);
         };
 
         // Disable form

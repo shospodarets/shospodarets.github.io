@@ -1,8 +1,7 @@
 /**
  * Provides utils methods for Node.js
  */
-const spawn = require('child_process').spawn;
-const exec = require('child_process').exec;
+const {spawn, exec} = require('child_process');
 const path = require('path');
 
 // VARS
@@ -88,7 +87,8 @@ function runExec(cmd, args, callback) {
                 }
                 callback(0, stdout);
             }
-        });
+        }
+    );
 }
 
 /**
@@ -106,7 +106,8 @@ function runExecCommand(cmd, args, callback) {
             } else {
                 callback(0, stdout);
             }
-        });
+        }
+    );
 }
 
 /**

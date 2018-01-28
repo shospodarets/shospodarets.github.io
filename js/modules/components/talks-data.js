@@ -113,7 +113,7 @@ class TalksData {
         this.isGalleryIncluded = true; // update the common flag
 
         const fragment = document.createDocumentFragment();
-        const folderName = talkJSON.talkImages.folderName;
+        const {folderName} = talkJSON.talkImages;
 
         let firstLink = null;
 

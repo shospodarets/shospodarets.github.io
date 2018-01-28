@@ -55,7 +55,7 @@ module.exports = function (grunt) {
                                             'modules': false
                                         }
                                     ],
-                                    'stage-2'
+                                    'stage-0'
                                 ],
                                 compact: false
                             }

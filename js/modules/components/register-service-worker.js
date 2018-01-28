@@ -2,7 +2,7 @@
 import humane from '../libs/humane.js';// http://wavded.github.io/humane-js/
 
 // enables debug logging in the browser script and Service Worker
-const isDebugEnabled = localStorage.debug || location.search.indexOf('debug') !== -1;
+const isDebugEnabled = localStorage.debug || window.location.search.indexOf('debug') !== -1;
 
 /* LOGGING */
 function log() {
@@ -24,9 +24,7 @@ function addMessagePrefix(prefix, args) {
 /* REGISTER WORKER */
 if ('serviceWorker' in navigator) {
     const swPath = '/service-worker.js';
-    navigator.serviceWorker.register(
-        swPath
-    ).then((registration) => {
+    navigator.serviceWorker.register(swPath).then((registration) => {
         sendMessageToWorker({'---isDebugEnabled---': isDebugEnabled});// send debug state info
         log(`Service Worker "${swPath}" registration successful with scope: ${registration.scope}`);
     }).catch((error) => {

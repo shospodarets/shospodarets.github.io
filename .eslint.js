@@ -1,10 +1,17 @@
 // Vars
+
+/**
+ * Application specific files to be tested via ESLint
+ * (use the glob pattern)
+ */
+const filesToTest = [
+    "*.js",
+    "'_other/**/*.js'",
+    "'js/**/*.js'"
+];
+
 const eslintBinPath = `./node_modules/.bin/eslint`;
 const platformBinExtension = process.platform === 'win32' ? '.cmd' : '';
-
-// Config data
-const eslintConfig = JSON.parse(require('fs').readFileSync('./.eslintrc', 'utf8'));
-const filesToTest = eslintConfig.filesToTest;
 
 // RUN
 function runExec(cmd, args) {
@@ -18,4 +25,13 @@ function runExec(cmd, args) {
         });
 }
 
-runExec(eslintBinPath, filesToTest.join(' '));
+// Behavior depends on how the module is loaded
+if (!module.parent) {
+    // RUN- if module is not required by an another one (e.g. called by node.js)
+    runExec(eslintBinPath, filesToTest.join(' '));
+} else {
+    // EXPORT- if module is required by an another one
+    module.exports = {
+        filesToTest
+    };
+}

@@ -20,10 +20,8 @@ Analytics.prototype.prepare = function () {
 };
 
 Analytics.prototype.load = function () {
-    loadScript(
-        `${document.location.protocol === 'https:' ? 'https://ssl' : 'http://www' 
-        }.google-analytics.com/ga.js`
-    );
+    loadScript(`${document.location.protocol === 'https:' ? 'https://ssl' : 'http://www' 
+    }.google-analytics.com/ga.js`);
 };
 
 Analytics.prototype.addJsErrorsTracking = function () {

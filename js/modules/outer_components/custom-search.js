@@ -43,9 +43,7 @@ CustomSearch.prototype.runSearch = function (value) {
 };
 
 CustomSearch.prototype.loadSearch = function () {
-    return loadScript(
-        `${httpProtocol}//www.google.com/cse/cse.js?cx=${this.options.GOOGLE_SEARCH_ID}`
-    );
+    return loadScript(`${httpProtocol}//www.google.com/cse/cse.js?cx=${this.options.GOOGLE_SEARCH_ID}`);
 };
 
 CustomSearch.prototype.onFocus = function () {

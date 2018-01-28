@@ -39,9 +39,7 @@ ConditionalLoader.prototype.loadScripts = function () {
             // noinspection JSPotentiallyInvalidUsageOfThis
             this.page.identifier = this.options.PAGE_IDENTIFIER;
         };
-        loadScript(
-            `${httpProtocol}//${this.options.DISCUSS_ID}.disqus.com/embed.js`
-        );
+        loadScript(`${httpProtocol}//${this.options.DISCUSS_ID}.disqus.com/embed.js`);
     }
 
     /* DISCUSS COMMENTS COUNTERS */
@@ -56,9 +54,7 @@ ConditionalLoader.prototype.loadScripts = function () {
 
     /* TWITTER BUTTONS */
     if (document.querySelectorAll('.twitter-widget').length) {
-        loadScript(
-            `${httpProtocol}//platform.twitter.com/widgets.js`
-        );
+        loadScript(`${httpProtocol}//platform.twitter.com/widgets.js`);
     }
 
     /* TWITTER BUTTONS */
@@ -67,9 +63,7 @@ ConditionalLoader.prototype.loadScripts = function () {
         fbRoot.setAttribute('id', 'fb-root');
         document.body.appendChild(fbRoot);
 
-        loadScript(
-            `${httpProtocol}//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10`
-        );
+        loadScript(`${httpProtocol}//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10`);
     }
 
     /* IMAGE GALLERY */
