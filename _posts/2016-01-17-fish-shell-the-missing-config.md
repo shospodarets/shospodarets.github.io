@@ -240,7 +240,7 @@ end
 
 And the result will be:
 
-![alt](https://static.hospodarets.com/img/blog/1517910522N.png)
+![alt](https://static.hospodarets.com/img/blog/1517911342527.png)
 
 # Сonclusions
 
