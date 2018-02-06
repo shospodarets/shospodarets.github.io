@@ -223,6 +223,25 @@ set fish_greeting ""
 
 to your `~/.config/fish/config.fish`.
 
+### The prompt
+
+fish comes with a default prompt that shows your username, hostname, and working directory.
+
+If you'd like to set it to be short, edit the `~/.config/fish/functions/fish_prompt.fish` file, adding the following:
+
+```bash
+function fish_prompt
+    set_color $fish_color_cwd
+    echo -n (prompt_pwd)
+    set_color normal
+    echo -n '>'
+end
+```
+
+And the result will be:
+
+![alt](https://static.hospodarets.com/img/blog/1517910522N.png)
+
 # Сonclusions
 
 After that I started using Fish without even noticing I fully switched to it.
