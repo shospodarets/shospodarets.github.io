@@ -28,7 +28,7 @@ CustomSearch.prototype.defineOriginalElements = function () {
         this.originalInput = document.querySelector('.gsc-input input[type="text"]');
     }
     if (!this.googleOriginalSubmit) {
-        this.googleOriginalSubmit = document.querySelector('.gsc-search-button input');
+        this.googleOriginalSubmit = document.querySelector('.gsc-search-button button');
     }
 };
 
