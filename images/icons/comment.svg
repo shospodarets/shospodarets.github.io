@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs></defs>
-    <g id="Mockups-v5-Sizes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-—-1920" transform="translate(-1060.000000, -884.000000)" fill-rule="nonzero" fill="#BEBEBE">
-            <g id="Group-3" transform="translate(876.000000, 881.000000)">
-                <g id="Group-20" transform="translate(182.000000, 0.000000)">
-                    <g id="ic_comment_black_24px" transform="translate(0.000000, 1.000000)">
-                        <g id="Group">
-                            <path d="M21.99,4 C21.99,2.9 21.1,2 20,2 L4,2 C2.9,2 2,2.9 2,4 L2,16 C2,17.1 2.9,18 4,18 L18,18 L22,22 L21.99,4 Z M18,14 L6,14 L6,12 L18,12 L18,14 Z M18,11 L6,11 L6,9 L18,9 L18,11 Z M18,8 L6,8 L6,6 L18,6 L18,8 Z" id="Shape"></path>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="m21.99 4c0-1.1-.89-2-1.99-2h-16c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4zm-3.99 10h-12v-2h12zm0-3h-12v-2h12zm0-3h-12v-2h12z" fill="#bebebe" transform="translate(-2 -2)"/></svg>

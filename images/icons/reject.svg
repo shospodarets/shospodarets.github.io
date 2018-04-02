@@ -1,10 +1,1 @@
-<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
-<svg viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g>
-        <g>
-            <g><circle cx="16" cy="16" r="16" style="fill:#D72828;"/>
-                 <path d="M14.5,25h3v-3h-3V25z M14.5,6v13h3V6H14.5z" style="fill:#E6E6E6;"/>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" fill="#d72828" r="16"/><path d="m14.5 25h3v-3h-3zm0-19v13h3v-13z" fill="#e6e6e6"/></svg>

@@ -1,5 +1,16 @@
 [
   {
+    "name": "WeAreDevelopers",
+    "location": "Vienna (Austria)",
+    "flag": "🇦🇹",
+    "link": "https://www.wearedevelopers.com/",
+    "year": "2018",
+    "month": "03",
+    "type": "Talk",
+    "eventImage": "2018-05-wearedevelopers-event.png",
+    "speakingImage": "2018-05-wearedevelopers-speaking.jpg"
+  },
+  {
     "name": "Voxxed Days Thessaloniki",
     "location": "Thessaloniki (Greece)",
     "flag": "🇬🇷",
