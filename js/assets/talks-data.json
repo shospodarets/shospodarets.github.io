@@ -1,5 +1,16 @@
 [
   {
+    "name": "Front-Trends",
+    "location": "Warsaw (Poland)",
+    "flag": "🇵🇱",
+    "link": "https://front-trends.com/",
+    "year": "2018",
+    "month": "05",
+    "type": "Talk",
+    "eventImage": "2018-05-fronttrends-warsaw-event.svg",
+    "speakingImage": "2018-05-fronttrends-warsaw-speaking.jpg"
+  },
+  {
     "name": "WeAreDevelopers",
     "location": "Vienna (Austria)",
     "flag": "🇦🇹",
@@ -7,8 +18,8 @@
     "year": "2018",
     "month": "05",
     "type": "Talk",
-    "eventImage": "2018-05-wearedevelopers-event.png",
-    "speakingImage": "2018-05-wearedevelopers-speaking.jpg"
+    "eventImage": "2018-05-wearedevelopers-vienna-event.png",
+    "speakingImage": "2018-05-wearedevelopers-vienna-speaking.jpg"
   },
   {
     "name": "Voxxed Days Thessaloniki",
