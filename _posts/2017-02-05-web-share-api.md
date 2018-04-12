@@ -168,30 +168,11 @@ if(!navigator.share){
 
 Currently, the Web share API is available in the stable Chrome on Android.
 
-But, first of all, it requires HTTPS and secondary is enabled under the [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
 
-In short, the Origin Trial makes a way for developers to enable the API for a fixed period of time.
-This will give the feedback for a vendor and the API authors/implementors.
-You can interpret that like a flag for the browser you can enable for your site.
-You can find the list of the available trials [here](https://github.com/jpchase/OriginTrials/blob/gh-pages/available-trials.md).
-
-To enable the Web Share API you need:
-
-1. [Sign up to get the trial token](https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform)
-2. During the next 24 hours, you are sent an email with the Trial Token and details how to include it to the Web App
-3. You include the token via header or directly into the page HTML, globally or everywhere where you want to use the API:
-
-```html
-<meta http-equiv="origin-trial" data-feature="Web Share" content="TOKEN_FROM_THE_EMAIL">
-```
-
-Web Share trial was introduced in Chrome 55 and may end in April 2017, after which may be enabled by default in the browser.
-
-Let's summarize the steps to make the Web Share API work:
+Here are the steps to make sure the Web Share API work:
 
 1. The site is served via HTTPS
-2. The origin trial header/meta is provided till the API enabled by default
-3. `navigator.share()` is called via user action (click, tap..)
+2. `navigator.share()` is called via user action (click, tap..)
 
 # Conclusion
 
