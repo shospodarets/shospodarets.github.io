@@ -36,7 +36,8 @@ module.exports = function (grunt) {
             dist: {
                 entry: `${rootPath}/js/modules/main.js`,
                 output: {
-                    filename: 'js/main.bundled.js'
+                    path: `${rootPath}/js`,
+                    filename: 'main.bundled.js'
                 },
                 module: {
                     rules: [
@@ -73,7 +74,8 @@ module.exports = function (grunt) {
                     new BabiliPlugin()
                 ],
                 // https://webpack.js.org/configuration/devtool/
-                devtool: 'source-map'
+                devtool: 'source-map',
+                mode: 'none'
             }
         },
 
