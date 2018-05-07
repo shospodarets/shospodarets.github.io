@@ -1,0 +1,11 @@
+{
+  "name": "circular-dependency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "day.js",
+  "scripts": {
+    "start": "node --experimental-modules ./js/application.mjs"
+  },
+  "author": "",
+  "license": "ISC"
+}
