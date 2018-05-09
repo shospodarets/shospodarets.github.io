@@ -6,24 +6,16 @@ share_image: https://static.hospodarets.com/img/blog/1482849729640077000.png
 share_description: The first overview of the native ECMAScript modules, how to make them work, differences with the bundled modules, tips and tricks.
 ---
 
-The 2016 year was incredible in terms of the browser and Node.js applying the [ECMAScript 2015 specification](http://www.ecma-international.org/ecma-262/6.0/).
-Now we are facing the situation when [the support amongst them is close to 100%](https://kangax.github.io/compat-table/es6/):
-
+All the major browsers shipped the native JavaScript modules support out of the box:
 
 <span class="smaller-img">
-    <img src="https://static.hospodarets.com/img/blog/1482783056455362000.png" />
+    <img src="https://static.hospodarets.com/img/blog/1525874674833.png" />
 </span>
 
-
-But the standard actually introduced also [ECMAScript modules](http://www.ecma-international.org/ecma-262/6.0/#sec-modules) (today also often named ES or ES6 modules).
-It's the only part which took (and still taking) the most time to implement as none browser published it yet in the stable version.
-
-Safari and Chrome shipped the native implementation out of the box,
-Firefox and Edge have it behind a flag, so the time we can
-use this without module bundlers is coming.
+which means, the time we can use them without module bundlers/transpilers has come.
 
 To understand better how we come to this point let's start from the JS modules history and
-then take a look at the current Native ES modules features and implementations.
+then take a look at the current Native ES modules features.
 
 <div class="more"></div>
 
@@ -274,53 +266,6 @@ In that case typically the index.html file contains the following:
 
 And you app is using the bundled/transpiled JS code.
 That the common approach with bundlers, let's take a look how to make it work in the browser without any bundlers.
-
-# How to make JavaScript modules work in the browser
-
-## Browsers support
-
-For today each of the main browsers is working on shipping the ES6 modules:
-
-- Chrome- [available by default in Chrome 61+](https://developers.google.com/web/updates/2017/09/nic61#modules)
-- Safari- [shipped OOB in Safari 10.1+](https://webkit.org/status/#feature-modules)
-- Firefox- [implemented, available under the flag in Firefox 54+](https://bugzilla.mozilla.org/show_bug.cgi?id=568953)
-- EDGE- [implemented, available under the flag in EDGE 15+](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/moduleses6/?q=module)
-- Node.js- is expected early 2018
-
-<div class="caniuse" data-feature="es6-module"></div>
-
-## Getting the environment to test
-
-As we saw, currently you can test native JS modules out of the box in Chrome and Safari.
-Additional tweeks needed in other browsers.
-
-### Enabling ES modules in Firefox
-
-To enable the ES modules:
-
-* open the `about:config` page
-* press "I accept the risk!"
-* search for a `dom.moduleScripts.enabled` boolean flag
-* double click to change its value to "true"
-
-That's it, now you can test how the module scripts work in FF.
-
-### Getting the EDGE 15 with ES modules enabled
-
-You can download the [free Virtual Machine from Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
-
-Just select the Virtual Machine (VM) "Microsoft EDGE on Win 10 Preview (15.XXXXX)"
-and e.g. "Virtual Box" (also free) as a platform.
-
-Install both and run the VM, where open the EDGE browser.
-
-Open `about:flags` page in it and check the "Enable experimental JavaScript features" checkbox.
-
-<span class="smaller-img">
-    <img src="https://static.hospodarets.com/img/blog/1482850342363998000.png" />
-</span>
-
-That's it, now you have 2 environments where you can play with the native implementation of ECMAScript modules.
 
 
 # Native and bundled modules differences
