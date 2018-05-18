@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/console-log-output.css">
+    <title>Experiment</title>
+</head>
+<body>
+
+<h1>DevConsole output:</h1>
+
+<div class="demo-wrapper">
+    <pre id="log-box"></pre>
+</div>
+
+<script src="js/console-log-output.js"></script>
+
+<script>
+    console.time('Executing of 1 bundled JS file:');
+    console.time('Executing of lodash-es (640 native JS modules):');
+</script>
+
+
+<script type="module" src="js/main-native.js"></script>
+<script src="dist/app.bundle.js"></script>
+
+</body>
+</html>
