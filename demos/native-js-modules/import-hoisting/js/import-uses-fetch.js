@@ -1,0 +1,1 @@
+console.log('import-uses-fetch: fetch=', fetch);

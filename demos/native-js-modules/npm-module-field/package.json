@@ -1,0 +1,7 @@
+{
+  "name": "multiplatform-package-example",
+  "version": "1.0.0",
+  "main": "dist/bundled.js",
+  "browser": "dist/bundled-browser.js",
+  "module": "index-source.js"
+}
