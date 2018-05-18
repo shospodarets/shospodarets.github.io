@@ -4,7 +4,7 @@ forEach(['for', 'each'],
     (val) => console.log(val));
 
 import forEach
-    from './node_modules/lodash-es/forEach.js';
+    from '../loading-lodash-es/dist_node_modules/lodash-es/forEach.js';
 
 import './js/console.log("second-import").js';
 
