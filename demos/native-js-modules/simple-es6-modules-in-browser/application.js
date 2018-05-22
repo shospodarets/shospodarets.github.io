@@ -2,6 +2,7 @@
 import dropdown from './components/dropdown.js';
 
 console.log('dropdown', dropdown);
+debugger; // let's debug
 
 
 async function loadModal() { // ES6-ES8 features without transpiling
