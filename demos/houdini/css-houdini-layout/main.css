@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+}
+
+.page {
+    display: layout(block-like);
+    background-color: red;
+}
