@@ -30,6 +30,9 @@ layout: post-layout
 
     <div class="post__meta">
         <span class="post__date">
+            {% if page.updated %}
+                Updated:
+            {% endif %}
             <span
                     itemprop="datePublished"
                     content='{{ page.date | date: "%Y-%m-%d" }}'>
