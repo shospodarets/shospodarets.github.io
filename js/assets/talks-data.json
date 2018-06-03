@@ -1,5 +1,16 @@
 [
   {
+    "name": "Full Stack Fest",
+    "location": "Barcelona (Spain)",
+    "flag": "🇪🇸",
+    "link": "https://2018.fullstackfest.com/",
+    "year": "2018",
+    "month": "09",
+    "type": "Talk",
+    "eventImage": "2018-09-fullstackfest-barcelona-event.svg",
+    "speakingImage": "2018-09-fullstackfest-barcelona-speaking.jpg"
+  },
+  {
     "name": "Front-Trends",
     "location": "Warsaw (Poland)",
     "flag": "🇵🇱",
