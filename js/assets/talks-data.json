@@ -1,5 +1,16 @@
 [
   {
+    "name": "International JavaScript Conference",
+    "location": "Munich (Germany)",
+    "flag": "🇩🇪",
+    "link": "https://javascript-conference.com/",
+    "year": "2018",
+    "month": "10",
+    "type": "Talk",
+    "eventImage": "2018-10-javascript-conference-munich-event.png",
+    "speakingImage": "2018-10-javascript-conference-munich-speaking.jpg"
+  },
+  {
     "name": "Full Stack Fest",
     "location": "Barcelona (Spain)",
     "flag": "🇪🇸",

@@ -10,6 +10,8 @@
   }
 
   .event-img {
+    text-align: center;
+
     img {
       max-height: calc(5 * var(--spacer));
       margin-bottom: calc(3 * var(--spacer));
