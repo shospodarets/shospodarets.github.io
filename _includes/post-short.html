@@ -15,6 +15,9 @@
 
     <div class="post__short_meta">
         <span class="post__date post__short_date">
+            {% if post.updated %}
+                Updated:
+            {% endif %}
             <span
                     itemprop="datePublished"
                     content='{{ post.date | date: "%Y-%m-%d" }}'>

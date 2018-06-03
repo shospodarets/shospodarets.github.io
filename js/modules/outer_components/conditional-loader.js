@@ -33,11 +33,12 @@ ConditionalLoader.prototype.loadScripts = function () {
     }
     /* DISCUSS COMMENTS */
     if (document.querySelectorAll('#disqus_thread').length) {
+        const _this = this;
         window.disqus_config = function () {
             // noinspection JSPotentiallyInvalidUsageOfThis
-            this.page.url = this.options.PAGE_URL;
+            this.page.url = _this.options.PAGE_URL;
             // noinspection JSPotentiallyInvalidUsageOfThis
-            this.page.identifier = this.options.PAGE_IDENTIFIER;
+            this.page.identifier = _this.options.PAGE_IDENTIFIER;
         };
         loadScript(`${httpProtocol}//${this.options.DISCUSS_ID}.disqus.com/embed.js`);
     }
