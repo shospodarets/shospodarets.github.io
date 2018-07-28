@@ -1,0 +1,31 @@
+.pie-char-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 50px;
+  align-items: center;
+}
+
+/* PIE CHART */
+.pie-chart-common {
+  --size: 200px;
+
+  width: var(--size);
+  height: var(--size);
+}
+
+.legend {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.legend dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 30px;
+}
+
+.legend dd {
+  margin: 0;
+}

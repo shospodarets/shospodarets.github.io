@@ -1,0 +1,28 @@
+.triangle-char-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 50px;
+  align-items: center;
+}
+
+.triangle-chart-common {
+  width: 440px;
+  height: 290px;
+}
+
+.legend {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.legend dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 30px;
+}
+
+.legend dd {
+  margin: 0;
+}

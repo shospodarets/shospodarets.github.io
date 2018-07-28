@@ -1,0 +1,13 @@
+/* PAINT API */
+.triangle-chart {
+    background-image: paint(triangle-chart);
+
+    --triangle-values: 15654, 4064, 1987, 976, 846;
+    --triangle-colors: #80b7e8, #5c5c60, #adfb9e, #f3a268, #8189e3;
+    --triangle-stroke-color: #ffffff;
+    --triangle-stroke-opacity: 1;
+}
+
+/*.pie-chart-from-inputs {*/
+/*background-image: paint(pie-chart);*/
+/*}*/

@@ -4,8 +4,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Houdini Triangle Chart</title>
 
-    <link href="css/vendor/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="css/main.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../common/bootstrap-light.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./css/layout.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./css/paint.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <script>
+        if (!window.CSS || !window.CSS.paintWorklet || !window.CSS.paintWorklet.addModule) {
+            document.write('<scr' + 'ipt type="text/javascript" src="../common/css-paint-polyfill/css-paint-polyfill.js"></sc' + 'ript>');
+        }
+    </script>
 </head>
 <body>
 
@@ -23,31 +30,31 @@
 
     <ul class="legend">
         <li>
-            <dl style="color: #8189E3">
+            <dl style="color: #8189e3;">
                 <dt>Finalized</dt>
                 <dd>846</dd>
             </dl>
         </li>
         <li>
-            <dl style="color: #F3A268">
+            <dl style="color: #f3a268;">
                 <dt>Invoice sent</dt>
                 <dd>976</dd>
             </dl>
         </li>
         <li>
-            <dl style="color: #ADFB9E">
+            <dl style="color: #adfb9e;">
                 <dt>Requested price list</dt>
                 <dd>1987</dd>
             </dl>
         </li>
         <li>
-            <dl style="color: #5C5C60">
+            <dl style="color: #5c5c60;">
                 <dt>Downloads</dt>
                 <dd>4064</dd>
             </dl>
         </li>
         <li>
-            <dl style="color: #80B7E8">
+            <dl style="color: #80b7e8;">
                 <dt>Website visits</dt>
                 <dd>15654</dd>
             </dl>
@@ -57,60 +64,60 @@
 
 <!--<h4>From user inputs</h4>-->
 <!--<div>-->
-    <!--<div class="pie-chart-common pie-chart-from-inputs"></div>-->
-    <!--<form>-->
-        <!--<h5>Common settings:</h5>-->
-        <!--<div>-->
-            <!--<div>-->
-                <!--<label>Donut chart radius</label>-->
-                <!--<input type="range" name="pie-donut-radius" value="75" min="0" max="100">-->
-            <!--</div>-->
+<!--<div class="pie-chart-common pie-chart-from-inputs"></div>-->
+<!--<form>-->
+<!--<h5>Common settings:</h5>-->
+<!--<div>-->
+<!--<div>-->
+<!--<label>Donut chart radius</label>-->
+<!--<input type="range" name="pie-donut-radius" value="75" min="0" max="100">-->
+<!--</div>-->
 
-            <!--<div>-->
-                <!--<label>Rotate chart angle</label>-->
-                <!--<input type="range" name="pie-rotate-angle" value="0" min="-180" max="180">-->
-            <!--</div>-->
+<!--<div>-->
+<!--<label>Rotate chart angle</label>-->
+<!--<input type="range" name="pie-rotate-angle" value="0" min="-180" max="180">-->
+<!--</div>-->
 
-            <!--<div>-->
-                <!--<label>Chart separators color</label>-->
-                <!--<input type="color" name="pie-stroke-color" value="#ffffff">-->
-            <!--</div>-->
+<!--<div>-->
+<!--<label>Chart separators color</label>-->
+<!--<input type="color" name="pie-stroke-color" value="#ffffff">-->
+<!--</div>-->
 
-            <!--<div>-->
-                <!--<label>Chart separators opacity</label>-->
-                <!--<input type="range" name="pie-stroke-opacity" value="1" step="0.01" min="0" max="1">-->
-            <!--</div>-->
-        <!--</div>-->
+<!--<div>-->
+<!--<label>Chart separators opacity</label>-->
+<!--<input type="range" name="pie-stroke-opacity" value="1" step="0.01" min="0" max="1">-->
+<!--</div>-->
+<!--</div>-->
 
-        <!--<h5>Chart sections:</h5>-->
-        <!--<div class="chart-sections">-->
-            <!--<span class="btn btn-info btn-add-section">Add a section</span>-->
-            <!--<span class="btn btn-dark btn-remove-section">Remove last section</span>-->
-            <!--<script type="text/template" class="chart-section-template">-->
-                <!--<div class="chart-section">-->
-                    <!--<label>Section %NUMBER%:</label>-->
-                    <!--<input type="range" name="pie-value-%NUMBER%" value="30" min="0" max="100">-->
-                    <!--<input type="color" name="pie-color-%NUMBER%" value="%COLOR%">-->
-                <!--</div>-->
-            <!--</script>-->
+<!--<h5>Chart sections:</h5>-->
+<!--<div class="chart-sections">-->
+<!--<span class="btn btn-info btn-add-section">Add a section</span>-->
+<!--<span class="btn btn-dark btn-remove-section">Remove last section</span>-->
+<!--<script type="text/template" class="chart-section-template">-->
+<!--<div class="chart-section">-->
+<!--<label>Section %NUMBER%:</label>-->
+<!--<input type="range" name="pie-value-%NUMBER%" value="30" min="0" max="100">-->
+<!--<input type="color" name="pie-color-%NUMBER%" value="%COLOR%">-->
+<!--</div>-->
+<!--</script>-->
 
-            <!--<div class="chart-section">-->
-                <!--<label>Section 1:</label>-->
-                <!--<input type="range" name="pie-value-1" value="20" min="0" max="100">-->
-                <!--<input type="color" name="pie-color-1" value="#89BC8A">-->
-            <!--</div>-->
-            <!--<div class="chart-section">-->
-                <!--<label>Section 2:</label>-->
-                <!--<input type="range" name="pie-value-2" value="100" min="0" max="100">-->
-                <!--<input type="color" name="pie-color-2" value="#EFB467">-->
-            <!--</div>-->
-            <!--<div class="chart-section">-->
-                <!--<label>Section 3:</label>-->
-                <!--<input type="range" name="pie-value-3" value="50" min="0" max="100">-->
-                <!--<input type="color" name="pie-color-3" value="#50ADE0">-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</form>-->
+<!--<div class="chart-section">-->
+<!--<label>Section 1:</label>-->
+<!--<input type="range" name="pie-value-1" value="20" min="0" max="100">-->
+<!--<input type="color" name="pie-color-1" value="#89BC8A">-->
+<!--</div>-->
+<!--<div class="chart-section">-->
+<!--<label>Section 2:</label>-->
+<!--<input type="range" name="pie-value-2" value="100" min="0" max="100">-->
+<!--<input type="color" name="pie-color-2" value="#EFB467">-->
+<!--</div>-->
+<!--<div class="chart-section">-->
+<!--<label>Section 3:</label>-->
+<!--<input type="range" name="pie-value-3" value="50" min="0" max="100">-->
+<!--<input type="color" name="pie-color-3" value="#50ADE0">-->
+<!--</div>-->
+<!--</div>-->
+<!--</form>-->
 <!--</div>-->
 
 

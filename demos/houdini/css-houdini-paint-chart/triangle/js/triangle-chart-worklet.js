@@ -76,8 +76,6 @@ registerPaint('triangle-chart', class TriangleChartWorklet {
             currenPieceLeftBottomX = currentPieceLeftTopX;
         });
 
-        console.log('piecesData', piecesData);
-
         // DRAW
         triangleValues.forEach((pieValue, i) => {
             const pieceData = piecesData[i];

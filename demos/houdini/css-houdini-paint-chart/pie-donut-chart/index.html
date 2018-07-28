@@ -4,8 +4,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Houdini Pie Chart</title>
 
-    <link href="css/vendor/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="css/main.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../common/bootstrap-light.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./css/layout.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./css/paint.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <script>
+        if (!window.CSS || !window.CSS.paintWorklet || !window.CSS.paintWorklet.addModule) {
+            document.write('<scr' + 'ipt type="text/javascript" src="../common/css-paint-polyfill/css-paint-polyfill.js"></sc' + 'ript>');
+        }
+    </script>
 </head>
 <body>
 
@@ -19,35 +26,35 @@
 </h4>
 
 <div class="pie-char-wrapper">
-    <div class="pie-chart-common pie-chart"></div>
+    <div class="pie-chart-common pie-chart-static"></div>
 
     <ul class="legend">
         <li>
-            <dl style="color: #2ABC30">
+            <dl style="color: #2abc30;">
                 <dt>Chrome</dt>
                 <dd>47.7%</dd>
             </dl>
         </li>
         <li>
-            <dl style="color: #AC7FD1">
+            <dl style="color: #ac7fd1;">
                 <dt>Safari</dt>
                 <dd>21.8%</dd>
             </dl>
         </li>
         <li>
-            <dl style="color: #175AD2">
+            <dl style="color: #175ad2;">
                 <dt>IE</dt>
                 <dd>8.1%</dd>
             </dl>
         </li>
         <li>
-            <dl style="color: #E06E30">
+            <dl style="color: #e06e30;">
                 <dt>Firefox</dt>
                 <dd>6.5%</dd>
             </dl>
         </li>
         <li>
-            <dl style="color: #6D6E6E">
+            <dl style="color: #6d6e6e;">
                 <dt>Others</dt>
                 <dd>15.9%</dd>
             </dl>
@@ -62,23 +69,27 @@
         <h5>Common settings:</h5>
         <div>
             <div>
-                <label>Donut chart radius</label>
-                <input type="range" name="pie-donut-radius" value="75" min="0" max="100">
+                <label>Donut chart radius
+                    <input type="range" name="pie-donut-radius" value="75" min="0" max="100">
+                </label>
             </div>
 
             <div>
-                <label>Rotate chart angle</label>
-                <input type="range" name="pie-rotate-angle" value="0" min="-180" max="180">
+                <label>Rotate chart angle
+                    <input type="range" name="pie-rotate-angle" value="0" min="-180" max="180">
+                </label>
             </div>
 
             <div>
-                <label>Chart separators color</label>
-                <input type="color" name="pie-stroke-color" value="#ffffff">
+                <label>Chart separators color
+                    <input type="color" name="pie-stroke-color" value="#ffffff">
+                </label>
             </div>
 
             <div>
-                <label>Chart separators opacity</label>
-                <input type="range" name="pie-stroke-opacity" value="1" step="0.01" min="0" max="1">
+                <label>Chart separators opacity
+                    <input type="range" name="pie-stroke-opacity" value="1" step="0.01" min="0" max="1">
+                </label>
             </div>
         </div>
 
@@ -88,26 +99,30 @@
             <span class="btn btn-dark btn-remove-section">Remove last section</span>
             <script type="text/template" class="chart-section-template">
                 <div class="chart-section">
-                    <label>Section %NUMBER%:</label>
-                    <input type="range" name="pie-value-%NUMBER%" value="30" min="0" max="100">
-                    <input type="color" name="pie-color-%NUMBER%" value="%COLOR%">
+                    <label>Section %NUMBER%:
+                        <input type="range" name="pie-value-%NUMBER%" value="30" min="0" max="100">
+                        <input type="color" name="pie-color-%NUMBER%" value="%COLOR%">
+                    </label>
                 </div>
             </script>
 
             <div class="chart-section">
-                <label>Section 1:</label>
-                <input type="range" name="pie-value-1" value="20" min="0" max="100">
-                <input type="color" name="pie-color-1" value="#89BC8A">
+                <label>Section 1:
+                    <input type="range" name="pie-value-1" value="20" min="0" max="100">
+                    <input type="color" name="pie-color-1" value="#89BC8A">
+                </label>
             </div>
             <div class="chart-section">
-                <label>Section 2:</label>
-                <input type="range" name="pie-value-2" value="100" min="0" max="100">
-                <input type="color" name="pie-color-2" value="#EFB467">
+                <label>Section 2:
+                    <input type="range" name="pie-value-2" value="100" min="0" max="100">
+                    <input type="color" name="pie-color-2" value="#EFB467">
+                </label>
             </div>
             <div class="chart-section">
-                <label>Section 3:</label>
-                <input type="range" name="pie-value-3" value="50" min="0" max="100">
-                <input type="color" name="pie-color-3" value="#50ADE0">
+                <label>Section 3:
+                    <input type="range" name="pie-value-3" value="50" min="0" max="100">
+                    <input type="color" name="pie-color-3" value="#50ADE0">
+                </label>
             </div>
         </div>
     </form>
