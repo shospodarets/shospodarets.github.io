@@ -4,20 +4,24 @@
 }
 
 .pie-chart-static {
-  --pie-values: 47.7, 21.8, 8.1, 6.5, 15.9;
-  --pie-colors: #2abc30, #ac7fd1, #175ad2, #e06e30, #6d6e6e;
+  --pie-values: var(--pie-value-1) var(--pie-value-2) var(--pie-value-3) var(--pie-value-4) var(--pie-value-5);
+  --pie-colors: var(--pie-color-1) var(--pie-color-2) var(--pie-color-3) var(--pie-color-4) var(--pie-color-5);
+  --pie-donut-radius: 0;
   --pie-rotate-angle: -90;
+
+  /* stroke */
   --pie-stroke-color: #fff;
   --pie-stroke-opacity: 1;
-  --pie-value-1: 20;
-  --pie-color-1: #89bc8a;
-  --pie-value-2: 100;
-  --pie-color-2: #efb467;
-  --pie-value-3: 50;
-  --pie-color-3: #50ade0;
-}
 
-.pie-chart-from-inputs {
-  --pie-values: var(--pie-value-1), var(--pie-value-2), var(--pie-value-3);
-  --pie-colors: var(--pie-color-1), var(--pie-color-2), var(--pie-color-3);
+  /* charts values and colors */
+  --pie-value-1: 47.7;
+  --pie-color-1: #2abc30;
+  --pie-value-2: 21.8;
+  --pie-color-2: #ac7fd1;
+  --pie-value-3: 8.1;
+  --pie-color-3: #175ad2;
+  --pie-value-4: 6.5;
+  --pie-color-4: #e06e30;
+  --pie-value-5: 15.9;
+  --pie-color-5: #6d6e6e;
 }

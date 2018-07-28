@@ -45,8 +45,8 @@ registerPaint('pie-chart', class PieChartWorklet {
 
     paint(ctx, geom, styleMap) {
         const radius = Math.min(geom.width / 2, geom.height / 2);
-        const pieValues = styleMap.get('--pie-values').toString().trim().split(',').map(Number);
-        const pieColors = styleMap.get('--pie-colors').toString().trim().split(',');
+        const pieValues = styleMap.get('--pie-values').toString().trim().split(' ').map(Number);
+        const pieColors = styleMap.get('--pie-colors').toString().trim().split(' ');
         const pieStrokeColor = styleMap.get('--pie-stroke-color').toString().trim();
         const pieStrokeOpacity = styleMap.get('--pie-stroke-opacity').toString().trim();
         const pieDonutRadius = (styleMap.get('--pie-donut-radius') && styleMap.get('--pie-donut-radius').toString().trim()) || 0;

@@ -28,7 +28,7 @@ function setPieChartValuesFromInputs() {
 function getChartCssPropertyValue(chartSections, valueType) {
     return chartSections.reduce(
         (accumulator, currentValue, i) => {
-            return accumulator + (i ? `, ` : '') + `var(--pie-${valueType}-${i + 1})`;
+            return accumulator + (i ? `  ` : '') + `var(--pie-${valueType}-${i + 1})`;
         }, '')
 }
 
@@ -40,9 +40,9 @@ function applyCurrentSections() {
     const chartSections = getCurrentSections();
 
     // Populate CSS Props to transfer info to the Worklet about the pieces
-    // E.g. --pie-values: var(--pie-value-1), var(--pie-value-2), ...;
+    // E.g. --pie-values: var(--pie-value-1) var(--pie-value-2) ...;
     pieChartFromInputsEl.style.setProperty(`--pie-values`, getChartCssPropertyValue(chartSections, 'value'));
-    // E.g. --pie-colors: var(--pie-color-1), var(--pie-color-2), ...;
+    // E.g. --pie-colors: var(--pie-color-1) var(--pie-color-2) ...;
     pieChartFromInputsEl.style.setProperty(`--pie-colors`, getChartCssPropertyValue(chartSections, 'color'));
 
     // hide the remove button if there is only one section left

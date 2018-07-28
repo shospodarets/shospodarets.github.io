@@ -26,8 +26,8 @@ registerPaint('triangle-chart', class TriangleChartWorklet {
         const triangleHeight = geom.height;
         const baseAngle = Math.atan(triangleHeight / (triangleWidth / 2)); // as triangle is an isosceles
 
-        const triangleValues = styleMap.get('--triangle-values').toString().trim().split(',').map(Number);
-        const triangleColors = styleMap.get('--triangle-colors').toString().trim().split(',');
+        const triangleValues = styleMap.get('--triangle-values').toString().trim().split(' ').map(Number);
+        const triangleColors = styleMap.get('--triangle-colors').toString().trim().split(' ');
         const triangleStrokeColor = styleMap.get('--triangle-stroke-color').toString().trim();
         const triangleStrokeOpacity = styleMap.get('--triangle-stroke-opacity').toString().trim();
 
