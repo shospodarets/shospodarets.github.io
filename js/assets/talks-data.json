@@ -22,6 +22,17 @@
     "speakingImage": "2018-09-fullstackfest-barcelona-speaking.jpg"
   },
   {
+    "name": "DublinJS",
+    "location": "Dublin (Ireland)",
+    "flag": "🇮🇪",
+    "link": "https://www.meetup.com/DublinJS/",
+    "year": "2018",
+    "month": "08",
+    "type": "Talk",
+    "eventImage": "2018-08-dublinjs-dublin-event.gif",
+    "speakingImage": "2018-08-dublinjs-dublin-speaking.jpg"
+  },
+  {
     "name": "Front-Trends",
     "location": "Warsaw (Poland)",
     "flag": "🇵🇱",
