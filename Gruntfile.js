@@ -6,7 +6,7 @@ const rootPath = path.resolve();
 
 // const DEBUG_IS_ENABLED = Boolean(process.env.BLOG_DEBUG);// environment variable
 
-const supportedBrowsersList = {
+const supportedBrowsersList = { // also present in .babelrc
     // https://github.com/ai/browserslist
     'browsers': [
         'last 1 Chrome version',
@@ -45,22 +45,7 @@ module.exports = function (grunt) {
                         {
                             test: /\.js$/,
                             exclude: [/node_modules/],
-                            loader: 'babel-loader',
-                            options: {
-                                // https://github.com/babel/babel-loader#options
-                                cacheDirectory: true,
-                                presets: [
-                                    [
-                                        'env', // https://github.com/babel/babel-preset-env
-                                        {
-                                            'targets': supportedBrowsersList,
-                                            'modules': false
-                                        }
-                                    ],
-                                    'stage-0'
-                                ],
-                                compact: false
-                            }
+                            loader: 'babel-loader'
                         }
                     ]
                 },
