@@ -1,5 +1,6 @@
 const path = require('path');
 const BabiliPlugin = require('babili-webpack-plugin');
+const sass = require('node-sass');
 
 const rootPath = path.resolve();
 
@@ -108,7 +109,10 @@ module.exports = function (grunt) {
                     dest: 'demos',
                     ext: '.css'
                 }]
-            }
+            },
+            options: {
+                implementation: sass,
+            },
         },
 
         postcss: {
