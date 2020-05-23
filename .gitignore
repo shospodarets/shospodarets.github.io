@@ -2,6 +2,7 @@
 .sass-cache
 _site
 .jekyll-metadata
+.jekyll-cache
 
 npm-debug.log
 npm-debug.log.*
