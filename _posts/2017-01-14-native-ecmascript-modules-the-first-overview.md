@@ -2,14 +2,14 @@
 layout: post
 title: "Native ECMAScript modules - the first overview"
 tags: [JavaScript, Browsers]
-share_image: https://static.hospodarets.com/img/blog/1482849729640077000.png
+share_image: https://hospodarets.com/images/img/blog/1482849729640077000.png
 share_description: The first overview of the native ECMAScript modules, how to make them work, differences with the bundled modules, tips and tricks.
 ---
 
 All the major browsers shipped the native JavaScript modules support out of the box:
 
 <span class="smaller-img">
-    <img src="https://static.hospodarets.com/img/blog/1525874674833.png" />
+    <img src="{{ site.static-resources-url }}/blog/1525874674833.png" />
 </span>
 
 which means, the time we can use them without module bundlers/transpilers has come.
@@ -451,7 +451,7 @@ To understand it, you can imagine each `<script type="module">` has a hidden `de
 
 Here is an image from the spec to [explain this behavior](https://html.spec.whatwg.org/multipage/scripting.html#attr-script-defer):
 
-![alt](https://static.hospodarets.com/img/blog/1482858323861214000.png)
+![alt]({{ site.static-resources-url }}/blog/1482858323861214000.png)
 
 It means, by default module scripts are not blocking, are loaded in parallel and are executed when the page has finished parsing.
 

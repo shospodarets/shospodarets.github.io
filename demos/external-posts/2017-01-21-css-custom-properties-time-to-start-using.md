@@ -2,7 +2,7 @@
 layout: post
 title: "CSS custom properties- time to start using"
 tags: [CSS, Sass]
-share_image: https://static.hospodarets.com/img/blog/1487437673839038000.png
+share_image: https://hospodarets.com/images/img/blog/1487437673839038000.png
 share_description: How to start using CSS custom properties and prepare a path to switch/use in parallel with a CSS preprocessor
 draft: true
 ---
