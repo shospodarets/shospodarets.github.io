@@ -5,7 +5,7 @@ personal-site-url: https://hospodarets.com
 name: Serg Hospodarets Blog
 email: shospodarets@gmail.com
 CONTACT_EMAIL: shospodarets
-static-resources-url: https://hospodarets.com/images/img
+static-resources-url: ./images/img
 
 # Short bio or description (displayed in the header)
 description: Front-end web development blog with tutorials and ideas about JavaScript, CSS, HTML and other Web technologies
