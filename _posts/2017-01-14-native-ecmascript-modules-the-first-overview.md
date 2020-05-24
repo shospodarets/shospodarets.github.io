@@ -9,7 +9,7 @@ share_description: The first overview of the native ECMAScript modules, how to m
 All the major browsers shipped the native JavaScript modules support out of the box:
 
 <span class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1525874674833.png" />
+    <img src="{{ site.static-resources-url }}/blog/1525874674833.png" alt="" />
 </span>
 
 which means, the time we can use them without module bundlers/transpilers has come.

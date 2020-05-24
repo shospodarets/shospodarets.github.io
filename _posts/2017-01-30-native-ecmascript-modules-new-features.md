@@ -41,7 +41,7 @@ import 'non-existing.js';
 ```
 
 <span class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1482933580648149000.png" />
+    <img src="{{ site.static-resources-url }}/blog/1482933580648149000.png" alt="" />
 </span>
 
 Cool, and what about spaces?
@@ -128,7 +128,7 @@ For instance, in the previous example, we loaded a script from
 It can be easily detected looking into its response headers:
 
 <span class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1485004883973260000.png" />
+    <img src="{{ site.static-resources-url }}/blog/1485004883973260000.png" alt="" />
 </span>
 
 We can observe the `access-control-allow-origin: *` header. <br/>
@@ -149,7 +149,7 @@ import utils from "http://hospodarets.com/demos/native-javascript-modules/js/uti
 ```
 
 <span class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1485004669339151000.png" />
+    <img src="{{ site.static-resources-url }}/blog/1485004669339151000.png" alt="" />
 </span>
 
 **Takeaways:**
@@ -204,7 +204,7 @@ where intentionally missed the `.js` extension for the imported file,
 which is required (notice an error in the DevTools console):
 
 <span class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1482926258289304000.png" />
+    <img src="{{ site.static-resources-url }}/blog/1482926258289304000.png" alt="" />
 </span>
 
 
@@ -298,7 +298,7 @@ alert('I\'m executed');
 In that case, we have an error in the console:
 
 <span class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1482933580648149000.png" />
+    <img src="{{ site.static-resources-url }}/blog/1482933580648149000.png" alt="" />
 </span>
 
 And our reject callback is executed.
@@ -308,7 +308,7 @@ And our reject callback is executed.
 You also will have an error if you try to use `import` \ `export` outside of module scripts ([demo](https://plnkr.co/edit/PqfS09?p=preview)):
 
 <span class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1482934496002073000.png" />
+    <img src="{{ site.static-resources-url }}/blog/1482934496002073000.png" alt="" />
 </span>
 
 So now we have a way to include scripts from our code and being
@@ -625,7 +625,7 @@ we can continue to porting the code.
 Here is the common structure of our app (which we will port):
 
 <span class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1485613338392978000.png" />
+    <img src="{{ site.static-resources-url }}/blog/1485613338392978000.png" alt="" />
 </span>
 
 I intentionally put `lodash-es` in the `dist_node_modules` instead of `node_modules`.
@@ -711,7 +711,7 @@ In our case, browser loads all the `lodash` modules dependencies,
 which results in about 600 files imported:
 
 <span class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1485799103543987000.png" />
+    <img src="{{ site.static-resources-url }}/blog/1485799103543987000.png" alt="" />
 </span>
 
 As you may guess, it's a very bad idea to load

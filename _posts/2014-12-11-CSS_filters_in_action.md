@@ -125,7 +125,7 @@ html{
 - Enjoy the result:
 
 <div>
-    <img src="https://i.imgur.com/2RFO8fL.gif?1" />
+    <img src="https://i.imgur.com/2RFO8fL.gif?1" alt="" />
 </div>
 
 

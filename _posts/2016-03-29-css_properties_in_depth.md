@@ -553,7 +553,7 @@ The last idea and demo is close to theme switching based on custom properties, s
 sounds good in this case:
     <div>
         <a href="http://codepen.io/malyw/pen/KzZXRq?editors=1100">
-            <img src="https://i.imgur.com/E0FTuI1.jpg" />
+            <img src="https://i.imgur.com/E0FTuI1.jpg" alt="" />
         </a>
     </div>
 

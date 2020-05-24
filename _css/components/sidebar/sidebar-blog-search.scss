@@ -33,6 +33,10 @@
     flex: 1 1 auto;
     overflow: hidden;
 
+    & label {
+      @include absolute-hidden;
+    }
+
     & input[type=search] {
       border: none;
       width: 100%;

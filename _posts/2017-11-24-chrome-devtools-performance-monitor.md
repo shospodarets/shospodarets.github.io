@@ -13,7 +13,7 @@ For this and other performance-measuring techniques, Chrome DevTools added the
 "Performance Monitor" tab which represents the real-time app performance metrics:
 
 <span class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1511527599607549000.png" />
+    <img src="{{ site.static-resources-url }}/blog/1511527599607549000.png" alt="" />
 </span>
 
 <div class="more"></div>
@@ -34,7 +34,7 @@ This is available in Chrome stable and to get the "Performance Monitor":
 12. Enjoy the "Performance Monitor" if you get here 😀
 
 <span class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1511540400748823000.gif" />
+    <img src="{{ site.static-resources-url }}/blog/1511540400748823000.gif" alt="" />
 </span>
 
 This gives you many different metrics,
@@ -67,7 +67,7 @@ a proper way to measure the CSS performance in the real-time
 
 <p>
     <a href="https://codepen.io/malyw/pen/QOQvyz">
-        <img src="{{ site.static-resources-url }}/blog/1511532158184634000.gif" />
+        <img src="{{ site.static-resources-url }}/blog/1511532158184634000.gif" alt="" />
     </a>
 </p>
 

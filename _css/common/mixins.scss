@@ -48,3 +48,9 @@ $breakpoints: (mobile: 680px);
   background-color: var(--white-color);
   box-shadow: 0 2px 4px 0 var(--white-tile-box-shadow-color);
 }
+
+@mixin hide-text {
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+}

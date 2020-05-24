@@ -130,7 +130,7 @@ Here is the video how it works <br/>
 (tap the share button ➡️ &nbsp;tweet ➡️ &nbsp;check the tweet is added on Twitter):
 
 <span class="even-smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1485720302108099000.gif" />
+    <img src="{{ site.static-resources-url }}/blog/1485720302108099000.gif" alt="" />
 </span>
 
 In the most common case, if you want to add an ability to share the data

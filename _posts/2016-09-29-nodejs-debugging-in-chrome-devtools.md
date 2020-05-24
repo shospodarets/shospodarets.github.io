@@ -46,7 +46,7 @@ To enable it, you have to do the following:
 * Open/close DevTools
 
 <div class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1475144414462210000.png" />
+    <img src="{{ site.static-resources-url }}/blog/1475144414462210000.png" alt="" />
 </div>
 
 # Debug
@@ -76,7 +76,7 @@ If you have any console.log or similar output in your Node.js application (outli
 , you can notice, that it already appeared in Chrome DevTools console:
 
 <div class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1475142370725761000.png" />
+    <img src="{{ site.static-resources-url }}/blog/1475142370725761000.png" alt="" />
 </div>
 
 After that, you can e.g. put breakpoints in both browser and Node JavaScript files and debug them.
@@ -101,7 +101,7 @@ Just download the demo code from Github and run `node --inspect node.js` in its 
 After that open `http://localhost:8033/` in Chrome and so you can debug both `browser.js` and `node.js` the same time:
 
 <div class="smaller-img">
-    <img src="{{ site.static-resources-url }}/blog/1475140897143840000.gif" />
+    <img src="{{ site.static-resources-url }}/blog/1475140897143840000.gif" alt="" />
 </div>
 
 # Other
