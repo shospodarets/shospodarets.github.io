@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // eslint-disable-next-line no-new
         new ContactForm({
             contactFormEl,
-            CONTACT_EMAIL: APP.CONTACT_EMAIL
+            FORMSPREE_ACTION: APP.FORMSPREE_ACTION
         });
     });
 });

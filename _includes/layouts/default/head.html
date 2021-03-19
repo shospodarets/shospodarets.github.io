@@ -42,7 +42,7 @@
             PAGE_URL: "{{ site.url }}{{ page.url | replace:'index.html',''}}",
             PAGE_IDENTIFIER: "{{ page.url | replace:'index.html',''}}",
             GOOGLE_SEARCH_ID: "{{ site.google_search }}",
-            CONTACT_EMAIL: "{{ site.CONTACT_EMAIL }}",
+            FORMSPREE_ACTION: "{{ site.FORMSPREE_ACTION }}",
             STATIC_RESOURCES_URL: "{{ site.static-resources-url }}",
             isDefaultCssEnabled: {% if page.disable_default_css %}false{% else %}true{% endif %}
         }

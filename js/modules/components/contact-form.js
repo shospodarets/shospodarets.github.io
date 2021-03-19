@@ -3,7 +3,7 @@ export default class ContactForm {
         /** * PROPERTIES ***/
         // data
         this.contactFormEl = data.contactFormEl;
-        this.CONTACT_EMAIL = `${data.CONTACT_EMAIL}@gmail.com`;
+        this.FORMSPREE_ACTION = data.FORMSPREE_ACTION;
 
         // DOM
         this.contactFormSubmitEl = this.contactFormEl.querySelector('[type="submit"]');
@@ -86,7 +86,7 @@ export default class ContactForm {
             this.onBeforeSend();
 
             // https://formspree.io/
-            fetch(`https://formspree.io/${this.CONTACT_EMAIL}`, {
+            fetch(this.FORMSPREE_ACTION, {
                 method: 'post',
                 headers: new Headers({
                     'Accept': 'application/json'
@@ -95,7 +95,7 @@ export default class ContactForm {
             })
                 .then((res) => res.json())
                 .then((_data) => {
-                    if (_data.success) {
+                    if (_data.ok) {
                         this.onSuccess();
                     } else {
                         this.onReject();

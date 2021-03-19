@@ -4,7 +4,7 @@ personal-site-url: https://hospodarets.com
 # Name of site (displayed in the header)
 name: Serg Hospodarets Blog
 email: shospodarets@gmail.com
-CONTACT_EMAIL: shospodarets
+FORMSPREE_ACTION: https://formspree.io/f/mbjpnnbr
 static-resources-url: ./images/img
 
 # Short bio or description (displayed in the header)
