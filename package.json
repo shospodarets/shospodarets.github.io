@@ -39,8 +39,7 @@
   },
   "private": true,
   "scripts": {
-    "gem-install": "gem install jekyll jekyll-sitemap rouge jekyll-paginate jekyll-feed",
-    "gem-update": "gem update jekyll jekyll-sitemap rouge jekyll-paginate jekyll-feed",
+    "gem-install": "gem install jekyll jekyll-sitemap rouge jekyll-paginate jekyll-feed webrick",
     "start": "grunt serve & grunt",
     "stop": "node ./_other/scripts/killProcessByPort.js 4000",
     "build": "grunt build",
