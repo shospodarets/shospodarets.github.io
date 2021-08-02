@@ -19,6 +19,7 @@
   padding-right: calc(6 * var(--spacer));
 
   .slogan__text {
+    display: none; // temporary hide
     width: 224px;
     height: 128px;
     background: url(/images/icons/slogan.svg) no-repeat 0 0;
