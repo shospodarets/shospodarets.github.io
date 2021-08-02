@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Presentation- Front-End Micro apps
+title: Conference Talk- Front-End Micro apps
 tags: [Architecture, JavaScript]
 share_image: https://i.imgur.com/vqXUxwL.png
-share_description: Presentation on Front-End Micro apps
+share_description: Conference Talk on Front-End Micro apps
 external-url: https://slides.com/malyw/front-end-micro-apps
 external_site: Slides.com
 ---

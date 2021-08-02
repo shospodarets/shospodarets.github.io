@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Presentation- CSS Houdini: From CSS Custom Properties to JavaScript Worklets and back"
+title: "Conference Talk- CSS Houdini: From CSS Custom Properties to JavaScript Worklets and back"
 tags: [CSS, JavaScript, Browsers]
 share_image: https://hospodarets.com/images/img/blog/1527028170356.png
-share_description: Slide on CSS Houdini task force
+share_description: Slides on CSS Houdini task force
 external-url: https://slides.com/malyw/houdini#/
 external_site: Slides.com
 ---
