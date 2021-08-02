@@ -1,6 +1,6 @@
 ---
 layout: post
-title: It’s Time To Start Using CSS Custom Properties
+title: Magazine Article: It’s Time To Start Using CSS Custom Properties
 tags: [CSS, Sass]
 share_image: https://hospodarets.com/images/img/blog/1492636730969905000.png
 share_description: It’s Time To Start Using CSS Custom Properties (they are cross-browser)
