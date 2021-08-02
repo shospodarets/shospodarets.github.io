@@ -22,6 +22,10 @@ how they scale, how teams and work can be organized.
 In this talk, the above areas will be discussed, and together with the live demos,
 you’ll learn about the current state of the art.
 
+<a href="https://www.youtube.com/watch?v=CBgN-jcO4OU&t=10757">Talk recording is here</a>
+
+<a href="https://slides.com/malyw/front-end-micro-apps">Here is the presentation deck</a>
+
 <span class="smaller-img">
     <img src="https://i.imgur.com/vqXUxwL.png" alt="" />
 </span>

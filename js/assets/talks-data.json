@@ -1,5 +1,16 @@
 [
   {
+    "name": "We Are Developers",
+    "location": "Vienna (Austria), online",
+    "flag": "🇦🇹",
+    "link": "https://www.youtube.com/watch?v=CBgN-jcO4OU&t=10757",
+    "year": "2021",
+    "month": "03",
+    "type": "Talk",
+    "eventImage": "2018-05-wearedevelopers-vienna-event.png",
+    "speakingImage": "2021-03-wearedevelopers-vienna-speaking.jpeg"
+  },
+  {
     "name": "International JavaScript Conference",
     "location": "Munich (Germany)",
     "flag": "🇩🇪",
