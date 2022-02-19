@@ -73,14 +73,14 @@ var getJSON = function (params) {
 
 // INVOKE
 getJSON({
-    url: 'https://api.github.com/users/malyw',
+    url: 'https://api.github.com/users/shospodarets',
     success: onSuccess,
     error: onError,
     complete: onComplete
 });
 ```
 
-<span data-height="250" data-theme-id="178" data-slug-hash="rayEBR" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="250" data-theme-id="178" data-slug-hash="rayEBR" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 So, previously we usually sent callbacks as params.<br>
 Let's figure out how to do the same using Fetch API.
@@ -94,7 +94,7 @@ Let's figure out how to do the same using Fetch API.
 First, we fetch a resource:
 
 ```javascript
-var url = 'https://api.github.com/users/malyw';
+var url = 'https://api.github.com/users/shospodarets';
 fetch(url);
 ```
 
@@ -246,7 +246,7 @@ var getJSON = function (params) {
 };
 
 /*--- TEST  --*/
-var url = 'https://api.github.com/users/malyw';
+var url = 'https://api.github.com/users/shospodarets';
 var onComplete = function () {
     console.log('I\'m invoked in any case after success/error');
 };
@@ -265,7 +265,7 @@ getJSON({
 });
 ```
 
-<span data-height="250" data-theme-id="178" data-slug-hash="zxZVxV" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="250" data-theme-id="178" data-slug-hash="zxZVxV" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 There is NOT `.always()` or `.complete()` for Native JavaScript promises,<br>
 that's why you have to add  `onComplete()` callback to the end of success and reject callbacks.<br>
@@ -389,7 +389,7 @@ require(jqueryUrl, d3Url)
     });
 ```
 
-<span data-height="250" data-theme-id="178" data-slug-hash="ogZrLx" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="250" data-theme-id="178" data-slug-hash="ogZrLx" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 
 <h3 id="commonjs-modules-loader">Fetch API-based asynchronous CommonJS modules loader</h3>
@@ -420,7 +420,7 @@ require('https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js').then
 });
 ```
 
-<span data-height="250" data-theme-id="178" data-slug-hash="wBJLWy" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="250" data-theme-id="178" data-slug-hash="wBJLWy" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 
 
@@ -470,7 +470,7 @@ validateJSON(jsonTestUrl, '{');// not valid JSON- the closing "}" is missed
 validateJSON(jsonTestUrl, {hello: 'world'});// JS object-> valid JSON is generated
 ```
 
-<span data-height="250" data-theme-id="178" data-slug-hash="jEmNjx" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="250" data-theme-id="178" data-slug-hash="jEmNjx" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 <h3 id="methods">Methods</h3>
 
@@ -518,7 +518,7 @@ downloadFile(sourceImageUrl)// download file from one resource
     });
 ```
 
-<span data-height="200" data-theme-id="178" data-slug-hash="emWmBz" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="200" data-theme-id="178" data-slug-hash="emWmBz" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 In getting JSON example `headers` option was set before fetching resource to show JSON is expected as answer.<br>
 But we also can work with response headers. Let's check that server answers with JSON as expected:<br>
@@ -543,10 +543,10 @@ function loadJSON(url) {
 }
 
 loadJSON('https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js');// throws a TypeError
-loadJSON('https://api.github.com/users/malyw');// is parsed normally
+loadJSON('https://api.github.com/users/shospodarets');// is parsed normally
 ```
 
-<span data-height="250" data-theme-id="178" data-slug-hash="XJRrNY" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="250" data-theme-id="178" data-slug-hash="XJRrNY" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 
 

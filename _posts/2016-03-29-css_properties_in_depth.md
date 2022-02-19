@@ -77,7 +77,7 @@ div {
 }
 ```
 
-border color [would be black](http://codepen.io/malyw/pen/yObLEX)
+border color [would be black](http://codepen.io/shospodarets/pen/yObLEX)
 
 # CSS variables syntax
 
@@ -130,7 +130,7 @@ To provide a global variable use the [:root scope](https://developer.mozilla.org
 }
 ```
 
-If you want to make a variable [visible only for some element/component](http://codepen.io/malyw/pen/QNvwRV)
+If you want to make a variable [visible only for some element/component](http://codepen.io/shospodarets/pen/QNvwRV)
 [re]define it for that specific element:
 
 ```html
@@ -152,7 +152,7 @@ If you want to make a variable [visible only for some element/component](http://
 }
 ```
 
-Media queries also [provide "scopes" for you](http://codepen.io/malyw/pen/grgJJJ):
+Media queries also [provide "scopes" for you](http://codepen.io/shospodarets/pen/grgJJJ):
 
 ```css
 @media screen and (min-width: 1025px) {
@@ -177,7 +177,7 @@ body:hover {
 }
 ```
 
-<span data-height="80" data-theme-id="178" data-slug-hash="ZWygyv" data-user="malyw" data-default-tab="result" class="codepen"></span> 
+<span data-height="80" data-theme-id="178" data-slug-hash="ZWygyv" data-user="shospodarets" data-default-tab="result" class="codepen"></span> 
 
 
 As custom properties are global, to avoid conflicts
@@ -205,7 +205,7 @@ body {
 
 ## Reassign vars from others
 
-It's possible to [use variables assigning another ones](http://codepen.io/malyw/pen/NNjqWB)
+It's possible to [use variables assigning another ones](http://codepen.io/shospodarets/pen/NNjqWB)
 `--variable-name: var(--another-variable-name);`:
 
 ```css
@@ -225,7 +225,7 @@ It's possible to [use variables assigning another ones](http://codepen.io/malyw/
 
 There is a problem here- you cannot easily calculate new variables using defined ones. But we have
 [CSS calc()](https://developer.mozilla.org/en/docs/Web/CSS/calc)
-so [we can use it instead](http://codepen.io/malyw/pen/GZmJgO):
+so [we can use it instead](http://codepen.io/shospodarets/pen/GZmJgO):
 
 ```css
 .block {
@@ -253,7 +253,7 @@ As it was already mentioned, you cannot simply use variables like:
 ```
 
 But you can use `calc()` for that and calculations. Let's make
-[a simple example of vertical rhythm](http://codepen.io/malyw/pen/MymmNK):
+[a simple example of vertical rhythm](http://codepen.io/shospodarets/pen/MymmNK):
 
 ```css
     margin: 0 0 calc(var(--base-line-height, 0) * 1rem);
@@ -263,7 +263,7 @@ But you can use `calc()` for that and calculations. Let's make
 
 By default CSS custom properties inherit.
 In the case when you want to minimise any side effects for your blocks/components you can
-[simply reset custom properties](http://codepen.io/malyw/pen/qZReZB):
+[simply reset custom properties](http://codepen.io/shospodarets/pen/qZReZB):
 
 ```css
 .with-reset {
@@ -294,7 +294,7 @@ document.documentElement.style.setProperty('--screen-category', value);
 Here is a demo of using the Custom Property `--screen-category`
 which represents the current screen type and is allowed to be assigned from the UI:
  
-<span data-height="200" data-theme-id="178" data-slug-hash="grgJJJ" data-user="malyw" data-default-tab="result" class="codepen"></span> 
+<span data-height="200" data-theme-id="178" data-slug-hash="grgJJJ" data-user="shospodarets" data-default-tab="result" class="codepen"></span> 
 
 In that demo is shown an easy way to debug custom properties. In JS:
 
@@ -316,7 +316,7 @@ document.documentElement.style.setProperty(
 Ability to assign anything as a CSS variable value and an easy interface to read/write that from JS,
 allows to skip the old hacky ways of
 [passing data from CSS/Sass to JS]({{ site.baseurl }}/passing_data_from_sass_to_js)
-(e.g. [list of media queries breakpoints](http://codepen.io/malyw/pen/zGxodr)).
+(e.g. [list of media queries breakpoints](http://codepen.io/shospodarets/pen/zGxodr)).
 
 For debug you can just output the value of a variable on your page in the `content` rule:
 
@@ -346,7 +346,7 @@ There are some limitations and bugs:
 - no way to use as media queries values <strike><code>@media screen and (min-width: var(--desktop-breakpoint) {</code></strike>
 - Images url like <strike><code>url(var(--image-url))</code></strike> don't work
 
-[Here are ways to TEST if CSS custom properties are supported in the browser](http://codepen.io/malyw/pen/GZmzPG).
+[Here are ways to TEST if CSS custom properties are supported in the browser](http://codepen.io/shospodarets/pen/GZmzPG).
 CSS:
   
 ```scss
@@ -398,7 +398,7 @@ much of the new CSS syntax work today.
 ## Same variable names
 
 Other small suggestion to start using CSS custom properties now with preprocessors is usage of
-[a mixed syntax checking the browser support](http://codepen.io/malyw/pen/grRQeq):
+[a mixed syntax checking the browser support](http://codepen.io/shospodarets/pen/grRQeq):
 
 ```scss
 @supports ( (--a: 0)) {
@@ -425,7 +425,7 @@ body {
 In such case both CSS and Sass variables are created but the Sass variable
 is used only if custom properties are not supported in the browser.
 
-Or you can move such logic and [hide it under the Sass mixin](http://codepen.io/malyw/pen/aNwKKv):
+Or you can move such logic and [hide it under the Sass mixin](http://codepen.io/shospodarets/pen/aNwKKv):
 
 ```scss
 @mixin setVar($varName, $value){
@@ -519,7 +519,7 @@ Custom properties provide a huge area of interesting ideas:
 * now you have a clear native way to make your CSS talk to JS without
 [hacks we used to use](https://css-tricks.com/making-sass-talk-to-javascript-with-json/)
  
-* Another example is [using custom properties for internationalization](http://codepen.io/malyw/pen/grgVGx)
+* Another example is [using custom properties for internationalization](http://codepen.io/shospodarets/pen/grgVGx)
 where `external link` text and colors are changed depending on the selected language
 
 * A curious Jake Archibald's proposal to control elements visibility using CSS variables
@@ -549,10 +549,10 @@ The last idea and demo is close to theme switching based on custom properties, s
     <img src="https://i.imgur.com/DwLCfC0.gif" alt=""/>
 </a>
 
-* and, of course, [usage as an emulation of missed separate CSS properties](http://codepen.io/malyw/pen/KzZXRq?editors=1100)- once again the name "custom properties"
+* and, of course, [usage as an emulation of missed separate CSS properties](http://codepen.io/shospodarets/pen/KzZXRq?editors=1100)- once again the name "custom properties"
 sounds good in this case:
     <div>
-        <a href="http://codepen.io/malyw/pen/KzZXRq?editors=1100">
+        <a href="http://codepen.io/shospodarets/pen/KzZXRq?editors=1100">
             <img src="https://i.imgur.com/E0FTuI1.jpg" alt="" />
         </a>
     </div>

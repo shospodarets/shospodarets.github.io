@@ -123,7 +123,7 @@ Here is a simple demo with inline scripts, which you can run in your browser:
     </a>
 </p>
 
-You can also consider the [es-modules-utils](https://github.com/malyw/es-modules-utils)
+You can also consider the [es-modules-utils](https://github.com/shospodarets/es-modules-utils)
 way, which also adds a couple additions on top of that:
 
 ```html
@@ -149,7 +149,7 @@ and provides two additional abilities, covered by the boolean attributes:
 For example, if your module graph is quite extensive and is loaded for the first time,
 it may take some time until the files and graph are loaded and executed.
 To show the loader and hide it after the JS is executed you can use
- [es-modules-utils](https://github.com/malyw/es-modules-utils) and the following approach:
+ [es-modules-utils](https://github.com/shospodarets/es-modules-utils) and the following approach:
 
 ```html
 <style>

@@ -43,7 +43,7 @@ It's the simplest- JSON, which is JS-based and can be parsed without any problem
 
 ## Sass to JSON in CSS
 
-I'm big fan of Sass. When I started to implement [sass-to-js](https://github.com/malyw/sass-to-js) converter
+I'm big fan of Sass. When I started to implement [sass-to-js](https://github.com/shospodarets/sass-to-js) converter
 I didn't expect it would be possible to implement using only Sass and JavaScript.
 I expected the need to use some Grunt/Gulp build additions to convert Sass to JSON in CSS.
 
@@ -153,7 +153,7 @@ The last one- just parse the obtained value as JSON:
 var resultObj = JSON.parse(normalizedCssValue);
 ```
 
-To do all this work I implemented [sass-to-js JavaScript module](https://github.com/malyw/sass-to-js/blob/master/js/src/sass-to-js.js)
+To do all this work I implemented [sass-to-js JavaScript module](https://github.com/shospodarets/sass-to-js/blob/master/js/src/sass-to-js.js)
 which provides `sassToJs()` function to do the above work using simple API:
 
 ```js
@@ -191,11 +191,11 @@ $(htmlEl)
 Usually to make quick demos or for code testing I use the wonderful [Codepen](https://codepen.io/).
 It has easy way to reuse your Pens as [External Resources](http://blog.codepen.io/2013/05/28/new-feature-use-pens-as-external-resources/).
 
-[sass-to-js](https://github.com/malyw/sass-to-js) code was just added as basis in [sass-to-js Pen](https://codepen.io/malyw/pen/zGxodr)
+[sass-to-js](https://github.com/shospodarets/sass-to-js) code was just added as basis in [sass-to-js Pen](https://codepen.io/shospodarets/pen/zGxodr)
 
-and can be reused in any other Pen as in [Sass-to-js demo](https://codepen.io/malyw/pen/zGxodr):
+and can be reused in any other Pen as in [Sass-to-js demo](https://codepen.io/shospodarets/pen/zGxodr):
 
-<span data-height="340" data-theme-id="178" data-slug-hash="zGxodr" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="340" data-theme-id="178" data-slug-hash="zGxodr" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 # Tests
 
@@ -237,7 +237,7 @@ this.maxZoomStep = sassToJs(this.zoom).maxZoomStep;
 If instead of Sass you use other CSS preprocessors or just pure CSS-
 you still can use **sass-to-js** JavaScript module to read JSON from CSS as demonstrated in:
 
-<span data-height="210" data-theme-id="178" data-slug-hash="PqZOBd" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="210" data-theme-id="178" data-slug-hash="PqZOBd" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 # Results
 
@@ -247,6 +247,6 @@ sass-to-js **doesn't have any dependencies** and has been **tested tested and wo
 
 ## Links
 
-* [Github sass-to-js library](https://github.com/malyw/sass-to-js)
+* [Github sass-to-js library](https://github.com/shospodarets/sass-to-js)
 * [SASSYJSON: TALK TO THE BROWSER!](http://hugogiraudel.com/2014/01/20/json-in-sass/) by [Hugo Giraudel](https://twitter.com/HugoGiraudel)
 * [Making Sass talk to JavaScript with JSON](https://css-tricks.com/making-sass-talk-to-javascript-with-json/)

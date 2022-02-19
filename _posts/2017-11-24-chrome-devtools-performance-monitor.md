@@ -66,14 +66,14 @@ a proper way to measure the CSS performance in the real-time
 (I forked his demo to represent the animation props switching):
 
 <p>
-    <a href="https://codepen.io/malyw/pen/QOQvyz">
+    <a href="https://codepen.io/shospodarets/pen/QOQvyz">
         <img src="{{ site.static-resources-url }}/blog/1511532158184634000.gif" alt="" />
     </a>
 </p>
 
 <p>
     <a class="sh-btn" flavor="text-width"
-       href="https://codepen.io/malyw/pen/QOQvyz"
+       href="https://codepen.io/shospodarets/pen/QOQvyz"
        target="_blank">
         Demo
     </a>

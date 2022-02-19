@@ -4,7 +4,7 @@ title: "Conference Talk- CSS Houdini: From CSS Custom Properties to JavaScript W
 tags: [CSS, JavaScript, Browsers]
 share_image: https://hospodarets.com/images/img/blog/1527028170356.png
 share_description: Slides on CSS Houdini task force
-external-url: https://slides.com/malyw/houdini#/
+external-url: https://slides.com/shospodarets/houdini#/
 external_site: Slides.com
 ---
 

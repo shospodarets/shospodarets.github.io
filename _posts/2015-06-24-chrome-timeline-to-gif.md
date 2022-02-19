@@ -6,7 +6,7 @@ share_image: https://i.imgur.com/ezQWlBV.gif
 share_description: Convert a Chrome Timeline data to an animated GIF (video)
 ---
 
-Recently the [ability to record a Filmstrip was added to Chrome](https://twitter.com/malyw/status/594137242655821826).
+Recently the [ability to record a Filmstrip was added to Chrome](https://twitter.com/shospodarets/status/594137242655821826).
 
 Now it's available in Canary and Dev Channel versions of the Chrome Browser as DevTools experiment and is supposed to be enabled by default in one of the next versions of Chrome.
 
@@ -52,6 +52,6 @@ So I created a project where anyone can convert a saved Chrome Timeline Data to 
     <img src="https://i.imgur.com/ezQWlBV.gif" alt="" />
 </a>
 
-## [Check the code on Github](https://github.com/malyw/chrome-timeline-to-gif-demo)
+## [Check the code on Github](https://github.com/shospodarets/chrome-timeline-to-gif-demo)
 
 

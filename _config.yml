@@ -5,7 +5,7 @@ personal-site-url: https://hospodarets.com
 name: Serg Hospodarets Blog
 email: shospodarets@gmail.com
 FORMSPREE_ACTION: https://formspree.io/f/mbjpnnbr
-static-resources-url: ./images/img
+static-resources-url: /images/img
 
 # Short bio or description (displayed in the header)
 description: Front-end web development blog with tutorials and ideas about JavaScript, CSS, HTML and other Web technologies
@@ -23,13 +23,13 @@ web-master-verifications:
 
 # Includes an icon in the footer for each username
 social-links:
-  linkedin: malyw
-  github: malyw
+  linkedin: shospodarets
+  github: shospodarets
   rss: hospodarets.com # make sure the "url" above is set!
   feedburner: https://feeds.feedburner.com/hospodarets # RSS alternative subscription
   feedburner_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=hospodarets
-  twitter: malyw
-  codepen: malyw
+  twitter: shospodarets
+  codepen: shospodarets
 #  facebook: sergeygospodaretsblog
 
 # https://jekyllrb.com/docs/pagination/
@@ -53,8 +53,8 @@ urls:
   code-review: /code-review
   about: /about
   contact: /contact
-code_base_url: https://github.com/malyw/malyw.github.io
-demos_code_base_url: https://github.com/malyw/malyw.github.io/tree/master/demos
+code_base_url: https://github.com/shospodarets/malyw.github.io
+demos_code_base_url: https://github.com/shospodarets/malyw.github.io/tree/master/demos
 full_base_url: https://hospodarets.com
 
 # If hosting site at a Project repository on GitHub pages

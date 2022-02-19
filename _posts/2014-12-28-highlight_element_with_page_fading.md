@@ -109,4 +109,4 @@ Finally wrapping all together:
 
 1. Disabling highlighting on click out of highlighted area
 
-<span data-height="330" data-theme-id="178" data-slug-hash="zxKJQQ" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="330" data-theme-id="178" data-slug-hash="zxKJQQ" data-user="shospodarets" data-default-tab="result" class="codepen"></span>

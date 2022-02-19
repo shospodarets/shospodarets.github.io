@@ -236,7 +236,7 @@ and CSS:
 }
 ```
 
-<span data-height="150" data-theme-id="178" data-slug-hash="MJmebz" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="150" data-theme-id="178" data-slug-hash="MJmebz" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 ## Change of the Custom Property immediately is applied to all its usages
 
@@ -252,7 +252,7 @@ It has no effect in the Sass case:
 }
 ```
 
-<span data-height="150" data-theme-id="178" data-slug-hash="bgWerv" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="150" data-theme-id="178" data-slug-hash="bgWerv" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 But in CSS, the calculated value is changed, as the `font-size` value is recalculated from the changed `--closureVar` value:
 
@@ -266,7 +266,7 @@ But in CSS, the calculated value is changed, as the `font-size` value is recalcu
 }
 ```
 
-<span data-height="170" data-theme-id="178" data-slug-hash="WRjxOy" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="170" data-theme-id="178" data-slug-hash="WRjxOy" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 That's the first huge difference-
 **if you reassign a Custom Property value, the browser recalculates all the variables/calc() expression etc. where it's applied**
@@ -310,7 +310,7 @@ which in turn makes `font-size` property being assign using the `--highlighted-s
 
 Everything is straightforward and works:
 
-<span data-height="100" data-theme-id="178" data-slug-hash="ggWMvG" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="100" data-theme-id="178" data-slug-hash="ggWMvG" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 And now we'll try to achieve the same using Sass:
 
@@ -334,7 +334,7 @@ And now we'll try to achieve the same using Sass:
 
 And the result shows that the default size is applied to both:
 
-<span data-height="100" data-theme-id="178" data-slug-hash="PWmzQO" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="100" data-theme-id="178" data-slug-hash="PWmzQO" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 It happens because all the Sass calculations and processing happen during the compilation time,
  and, of course, it doesn't now anything regarding the DOM structure and fully relies on the code structure.
@@ -425,7 +425,7 @@ Custom Properties to the rescue:
 }
 ```
 
-<span data-height="140" data-theme-id="178" data-slug-hash="KzZXRq" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="140" data-theme-id="178" data-slug-hash="KzZXRq" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 ## Color themes
 
@@ -433,7 +433,7 @@ One of the most common cases for Custom Properties is the color themes for the a
 They were created to solve this kind of problems, so let's provide a simple color theme for a component
 (the same steps can be used for an application).
 
-Here is our [button-component code](https://codepen.io/malyw/pen/XpRjNK):
+Here is our [button-component code](https://codepen.io/shospodarets/pen/XpRjNK):
 
 ```css
 .btn {
@@ -449,7 +449,7 @@ Here is our [button-component code](https://codepen.io/malyw/pen/XpRjNK):
 Let's assume we want to create an inverted color theme.
 
 The first step will be to extend all the color variables to the CSS Custom Properties and rewrite our component,
-so the [result is the same](https://codepen.io/malyw/pen/EZmgmZ):
+so the [result is the same](https://codepen.io/shospodarets/pen/EZmgmZ):
 
 ```css
 .btn {
@@ -481,7 +481,7 @@ body.inverted .btn{
 
 And here is the demo where you can click a button to add/remove a global class and see the demo in action:
 
-<span data-height="150" data-theme-id="178" data-slug-hash="dNWpRd" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="150" data-theme-id="178" data-slug-hash="dNWpRd" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 This behavior cannot be achieved without the code duplication overhead using CSS preprocessors.
  With preprocessors, you always need to override the actual values and rules
@@ -598,7 +598,7 @@ updateView() {
 After that on user mouse activities the demo changes it's view.
 You can check it moving the mouse and using mouse wheel to zoom in/out:
 
-<span data-height="500" data-theme-id="178" data-slug-hash="xgdEQp" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="500" data-theme-id="178" data-slug-hash="xgdEQp" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 Essentially we just change the CSS Custom Properties values, everything else (rotating, zoom in/out) is done by CSS.
 
@@ -613,7 +613,7 @@ body:after {
 }
 ```
 
-You can check it [in the plain CSS demo (no HTML/JS)](https://codepen.io/malyw/pen/oBWMOY)
+You can check it [in the plain CSS demo (no HTML/JS)](https://codepen.io/shospodarets/pen/oBWMOY)
 (resize a browser window to see the browser reflects the changed CSS Custom Property value automatically)
 
 # Browsers support
@@ -753,7 +753,7 @@ As result having that experience I started looking for a solution which would sa
 - a way to have the debug info about edge cases in variables usage
 
 As result, I created the `css-vars` Sass
-mixin which you can find on Github: [https://github.com/malyw/css-vars](https://github.com/malyw/css-vars) <br>
+mixin which you can find on Github: [https://github.com/shospodarets/css-vars](https://github.com/shospodarets/css-vars) <br>
 with which you can start using CSS Custom Properties -ish syntax.
 
 ### Mixin usage

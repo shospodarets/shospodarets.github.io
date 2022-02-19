@@ -158,7 +158,7 @@ Other example of using CSS filters- to show user status- show color avatar when 
 - Codepen demo:
 
 <div>
-    <span data-height="300" data-theme-id="178" data-slug-hash="MYKmNE" data-user="malyw" data-default-tab="result" class="codepen"></span>
+    <span data-height="300" data-theme-id="178" data-slug-hash="MYKmNE" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 </div>
 
 

@@ -240,11 +240,11 @@ You can generate errors and check in "Network" tab that for each error GA sends 
 
 ## Classic `ga.js`
 
-<span data-height="270" data-theme-id="178" data-slug-hash="myLPeJ" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="270" data-theme-id="178" data-slug-hash="myLPeJ" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 ## Modern `analytics.js`
 
-<span data-height="270" data-theme-id="178" data-slug-hash="MYGwzz" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="270" data-theme-id="178" data-slug-hash="MYGwzz" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 
 # Checking analytics data in GA

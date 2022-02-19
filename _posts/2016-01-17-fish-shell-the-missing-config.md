@@ -251,6 +251,6 @@ exactly solves problems it was supposed to and so far I'm happy with it.
 
 # Useful links
 
-* [Fish Shell: the missing config at Github](https://github.com/malyw/fish-shell-the-missing-config)
+* [Fish Shell: the missing config at Github](https://github.com/shospodarets/fish-shell-the-missing-config)
 * [Fish themes and additional packages](https://github.com/oh-my-fish/oh-my-fish)
 * [Fish shell at Github](https://github.com/fish-shell/fish-shell)

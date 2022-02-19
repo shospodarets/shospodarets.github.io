@@ -4,7 +4,7 @@ title: Conference Talk- Native JavaScript modules
 tags: [JavaScript, Browsers, Node.js]
 share_image: https://hospodarets.com/images/img/blog/1527028170389.png
 share_description: Slides on Native JavaScript modules (aka ES Modules or ESM)
-external-url: https://slides.com/malyw/native-js-modules#/
+external-url: https://slides.com/shospodarets/native-js-modules#/
 external_site: Slides.com
 ---
 

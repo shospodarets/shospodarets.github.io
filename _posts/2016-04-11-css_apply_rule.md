@@ -63,7 +63,7 @@ body{
 }
 ```
 
-<span data-height="150" data-theme-id="178" data-slug-hash="yOXWdm" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="150" data-theme-id="178" data-slug-hash="yOXWdm" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 That's how we easily created and used our first CSS mixin as it's really
 very close to [the Sass mixins idea](http://sass-lang.com/guide#topic-6).
@@ -116,7 +116,7 @@ implementations of clearfix but let's just use the simple one:
 }
 ```
 
-<span data-height="150" data-theme-id="178" data-slug-hash="grRNRQ" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="150" data-theme-id="178" data-slug-hash="grRNRQ" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 As you might check without the clearfix the browser would just "collapse" the red background.
 
@@ -147,7 +147,7 @@ what a nice candidate for a mixin!
 }
 ```
 
-<span data-height="150" data-theme-id="178" data-slug-hash="mVqPwz" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="150" data-theme-id="178" data-slug-hash="mVqPwz" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 ## CSS triangle mixin
 
@@ -194,7 +194,7 @@ Other good idea might be to make a separate mixin for zero width/height and reus
 }
 ```
 
-<span data-height="150" data-theme-id="178" data-slug-hash="grRNZy" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="150" data-theme-id="178" data-slug-hash="grRNZy" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 # Passing variables to mixins
 
@@ -236,7 +236,7 @@ which also processes CSS Custom Properties.
 
 # Test browser support
 
-Here is a [copy-paste example](https://gist.github.com/malyw/477cd45bd0ed501a1c3ce0870ae16dd1)
+Here is a [copy-paste example](https://gist.github.com/shospodarets/477cd45bd0ed501a1c3ce0870ae16dd1)
 of detecting `@apply` rule support in the browser:
 
 ```js
@@ -282,7 +282,7 @@ if(testCSSApply()){
 };
 ```
 
-<span data-height="150" data-theme-id="178" data-slug-hash="yOoMRp" data-user="malyw" data-default-tab="result" class="codepen"></span>
+<span data-height="150" data-theme-id="178" data-slug-hash="yOoMRp" data-user="shospodarets" data-default-tab="result" class="codepen"></span>
 
 # In the end
 

@@ -4,7 +4,7 @@ title: Conference Talk- Front-End Micro apps
 tags: [Architecture, JavaScript]
 share_image: https://i.imgur.com/vqXUxwL.png
 share_description: Conference Talk on Front-End Micro apps
-external-url: https://slides.com/malyw/front-end-micro-apps
+external-url: https://slides.com/shospodarets/front-end-micro-apps
 external_site: Slides.com
 ---
 
@@ -24,7 +24,7 @@ you’ll learn about the current state of the art.
 
 <a href="https://www.youtube.com/watch?v=CBgN-jcO4OU&t=10757">Talk recording is here</a>
 
-<a href="https://slides.com/malyw/front-end-micro-apps">Here is the presentation deck</a>
+<a href="https://slides.com/shospodarets/front-end-micro-apps">Here is the presentation deck</a>
 
 <span class="smaller-img">
     <img src="https://i.imgur.com/vqXUxwL.png" alt="" />

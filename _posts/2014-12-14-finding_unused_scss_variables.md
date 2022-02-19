@@ -29,7 +29,7 @@ The ways they appear is usual:
 
 <h1>Solution</h1>
 So was decided just to create simple shell script to find SCSS-syntax variables which appear in the code only one time.
-[Here it is](https://gist.github.com/malyw/fade28c8d398a3a86334#file-find-unused-scss-variables):
+[Here it is](https://gist.github.com/shospodarets/fade28c8d398a3a86334#file-find-unused-scss-variables):
 
 
 > Script finds all SCSS variables (e.g. $some_variable-NAME1)

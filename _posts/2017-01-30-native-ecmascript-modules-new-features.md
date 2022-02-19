@@ -778,7 +778,7 @@ checkJsModulesSupport().then(
 );
 ```
 
-I posted this script to the [`es-modules-utils` on Github](https://github.com/malyw/es-modules-utils).
+I posted this script to the [`es-modules-utils` on Github](https://github.com/shospodarets/es-modules-utils).
 
 Currently there is a [discussion to add the native `nomodule` or `nosupport`
 attributes to the `script`](https://github.com/whatwg/html/pull/2261)
@@ -791,7 +791,7 @@ We took a look into the practical differences between the ES modules and classic
 Learned how to detect if the module script is loaded or the error occurred.
 Now we know how to use ES modules and check simple 3rd party libraries examples.
 
-Also, we have a useful [`es-modules-utils` on Github](https://github.com/malyw/es-modules-utils)
+Also, we have a useful [`es-modules-utils` on Github](https://github.com/shospodarets/es-modules-utils)
 which can be used to conditionally include ES modules or classic script
 (depending on the browser support) and give a feedback to the UI for the user.
 
