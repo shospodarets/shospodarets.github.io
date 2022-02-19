@@ -28,7 +28,7 @@
     "include-media": "^1.4.9",
     "jit-grunt": "^0.10.0",
     "json-loader": "^0.5.4",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "postcss": "^7.0.14",
     "postcss-reporter": "^6.0.1",
     "postcss-sass": "^0.3.5",
