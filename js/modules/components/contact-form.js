@@ -15,7 +15,6 @@ export default class ContactForm {
             success: 'contact-form-success'
         };
 
-
         /** * METHODS ***/
         // EVENTS
         // Classes
@@ -103,7 +102,6 @@ export default class ContactForm {
                 })
                 .catch(this.onReject);
         };
-
 
         /** * INIT ***/
         // events

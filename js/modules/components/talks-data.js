@@ -38,7 +38,6 @@ class TalksData {
             this.talksJson = this.leavePreviousOnly();
         }
 
-
         // INIT
         this.forEachTalkEl = this.talksDataEl.querySelector('.for-each-talk');
         this.forEachTalkEl.parentNode.removeChild(this.forEachTalkEl);// remove from the output
