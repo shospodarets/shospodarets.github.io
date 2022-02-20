@@ -1,6 +1,6 @@
 const path = require('path');
-const BabiliPlugin = require('babili-webpack-plugin');
 const sass = require('node-sass');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const rootPath = path.resolve();
 
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
                 },
                 plugins: [
                     // https://github.com/webpack-contrib/babili-webpack-plugin
-                    new BabiliPlugin()
+                    new TerserPlugin()
                 ],
                 // https://webpack.js.org/configuration/devtool/
                 devtool: 'source-map',
