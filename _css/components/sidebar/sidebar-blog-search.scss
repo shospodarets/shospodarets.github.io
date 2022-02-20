@@ -23,7 +23,7 @@
     outline: none;
   }
 
-  & input[type=search] {
+  & input[type="search"] {
     font-family: inherit;
     font-size: inherit;
   }
@@ -37,13 +37,13 @@
       @include absolute-hidden;
     }
 
-    & input[type=search] {
+    & input[type="search"] {
       border: none;
       width: 100%;
     }
   }
 
-  & input[type=submit] {
+  & input[type="submit"] {
     --size: calc(var(--main-font-size) * var(--main-line-height));
 
     flex: 0 0 auto;
@@ -56,7 +56,6 @@
 }
 
 // Google search reset
-
 .google-custom-search-original {
   /* ------------------------------------ */
 

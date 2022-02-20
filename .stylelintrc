@@ -1,6 +1,16 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
+    "custom-property-pattern": null,
+    "selector-class-pattern": null,
+    "no-invalid-position-at-import-rule": null,
+    "font-family-name-quotes": null,
+    "string-quotes": null,
+    "selector-attribute-quotes": null,
+    "function-url-quotes": null,
+    "alpha-value-notation": null,
+    "color-function-notation": null,
+
     "at-rule-no-unknown": null,
     "selector-pseudo-class-no-unknown": [
       true,

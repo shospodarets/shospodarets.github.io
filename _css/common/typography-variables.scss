@@ -1,7 +1,7 @@
 :root {
   // font-families
-  --main-font-family: 'Roboto', Arial, sans-serif;
-  --main-headings-font-family: 'Roboto-Light', Arial, sans-serif;
+  --main-font-family: 'Roboto', 'Arial', sans-serif;
+  --main-headings-font-family: 'Roboto-Light', 'Arial', sans-serif;
   --main-code-font-family: 'Roboto-Mono', 'Courier New', monospace;
 
   /* Typography */
@@ -25,5 +25,6 @@
   --speaking-main-line-height: 27px;
   --additional-heading-font-size: var(--main-heading-font-size);
   --additional-heading-line-height: 36px;
-  --external-link-size: calc(#{var(--main-heading-font-size)} * 1.7);
+  // N.B.: css var inside of calc- when updating SCSS build npm dependencies- check properly processed to CSS
+  --external-link-size: calc(var(--main-heading-font-size) * 1.7);
 }

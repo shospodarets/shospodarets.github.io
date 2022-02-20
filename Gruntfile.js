@@ -8,7 +8,7 @@ const rootPath = path.resolve();
 
 const supportedBrowsersList = { // also present in .babelrc
     // https://github.com/ai/browserslist
-    'browsers': [
+    'browsersList': [
         'last 1 Chrome version',
         'last 1 ChromeAndroid version',
         'last 1 iOS version',
@@ -178,7 +178,7 @@ module.exports = function (grunt) {
         stylelint: {
             options: {
                 configFile: './.stylelintrc',
-                syntax: 'scss',
+                customSyntax: 'postcss-scss',
             },
             src: [
                 './_css/**/*.scss',
@@ -186,6 +186,8 @@ module.exports = function (grunt) {
         }
     });
 
+    // load grunt npm tasks
+    grunt.loadNpmTasks('@lodder/grunt-postcss');
     require('jit-grunt')(grunt);
 
     grunt.registerTask('generateJs', [

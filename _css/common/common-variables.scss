@@ -18,7 +18,8 @@ $headings: ".post-title, .page-title, .sidebar-title, .sub-header-common__text, 
   --social-links-indent: 12px;
 
   /* Layout */
-  --blockquote-padding: calc(#{var(--main-vertical-indent)} / 2);
+  // N.B.: css var inside of calc- when updating SCSS build npm dependencies- check properly processed to CSS
+  --blockquote-padding: calc(var(--main-vertical-indent) / 2);
 
   /* other */
   --main-border-radius: 2px;

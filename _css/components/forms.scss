@@ -3,19 +3,7 @@ input[type=text],
 input[type=email],
 input[type=search] {
   // italic placeholder
-  &::-webkit-input-placeholder {
-    font-style: italic;
-  }
-
-  &:-moz-placeholder {
-    font-style: italic;
-  }
-
-  &::-moz-placeholder {
-    font-style: italic;
-  }
-
-  &:-ms-input-placeholder {
+  &::placeholder {
     font-style: italic;
   }
 }
