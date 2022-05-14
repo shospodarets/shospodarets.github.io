@@ -14,14 +14,19 @@ const Analytics = function (options) {
 
 // METHODS
 Analytics.prototype.prepare = function () {
-    window._gaq = window._gaq || [];
-    window._gaq.push(['_setAccount', this.options.GOOGLE_ANALYTICS]);
-    window._gaq.push(['_trackPageview']);
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        window.dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', this.options.GOOGLE_ANALYTICS);
 };
 
 Analytics.prototype.load = function () {
-    loadScript(`${document.location.protocol === 'https:' ? 'https://ssl' : 'http://www' 
-    }.google-analytics.com/ga.js`);
+    loadScript(`https://www.googletagmanager.com/gtag/js?id=${this.options.GOOGLE_ANALYTICS}`);
 };
 
 Analytics.prototype.addJsErrorsTracking = function () {
