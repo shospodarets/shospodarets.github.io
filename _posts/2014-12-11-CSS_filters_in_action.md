@@ -14,7 +14,7 @@ There are many ways to use it- from providing Instagram/PhotoShop- like filters 
 
 <p>
     <a class="sh-btn" flavor="text-width"
-       href="{{ site.baseurl }}/css-filters/"
+       href="{{ site.github_pages_base_url }}/css-filters/"
        target="_blank">
         Demo
     </a>
@@ -132,7 +132,7 @@ html{
 Other example- applying inverted theme to my site <a href="https://hospodarets.com">hospodarets.com</a>:
 
 <iframe
-        src="{{ site.full_base_url }}/css-filters/?src=https://hospodarets.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&hideContentExcept=.iframe-wrapper&overflowHeight=350"
+        src="{{ site.github_pages_base_url }}/css-filters/?src=https://hospodarets.com&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&hideContentExcept=.iframe-wrapper&overflowHeight=350"
         frameborder="0"
         allowtransparency="true" allowfullscreen="true"
         style="width: 100%; overflow: hidden;"
@@ -171,7 +171,7 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Vintage:
         <iframe
-                src="{{ site.full_base_url }}/css-filters/?src={{ site.full_base_url }}/&filters=%7B%22grayscale%22:0.1,%22saturate%22:1,%22sepia%22:0.6%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="{{ site.github_pages_base_url }}/css-filters/?src={{ site.full_base_url }}/&filters=%7B%22grayscale%22:0.1,%22saturate%22:1,%22sepia%22:0.6%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
@@ -183,7 +183,7 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Acid:
         <iframe
-                src="{{ site.full_base_url }}/css-filters/?src={{ site.full_base_url }}/&filters=%7B%22hue-rotate%22:72,%22saturate%22:3,%22sepia%22:0.2%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="{{ site.github_pages_base_url }}/css-filters/?src={{ site.full_base_url }}/&filters=%7B%22hue-rotate%22:72,%22saturate%22:3,%22sepia%22:0.2%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
@@ -195,7 +195,7 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Grayscale:
         <iframe
-                src="{{ site.full_base_url }}/css-filters/?src={{ site.full_base_url }}/&filters=%7B%22grayscale%22:1%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="{{ site.github_pages_base_url }}/css-filters/?src={{ site.full_base_url }}/&filters=%7B%22grayscale%22:1%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
@@ -207,7 +207,7 @@ Also CSS filters will be good to provide some effects like instagram- filters.
     <li>
         Inverted colors:
         <iframe
-                src="{{ site.full_base_url }}/css-filters/?src={{ site.full_base_url }}/&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+                src="{{ site.github_pages_base_url }}/css-filters/?src={{ site.full_base_url }}/&filters=%7B%22brightness%22:0.9,%22hue-rotate%22:180,%22invert%22:1%7D&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
                 frameborder="0"
                 allowtransparency="true" allowfullscreen="true"
                 style="width: 100%; overflow: hidden;"
@@ -244,7 +244,7 @@ And of course it just looks awesome :wink:
 - Result:
 
 <iframe
-        src="{{ site.full_base_url }}/css-filters/?src={{ site.full_base_url }}/&filters=%7B%22blur%22:2%7D&modal=1&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
+        src="{{ site.github_pages_base_url }}/css-filters/?src={{ site.full_base_url }}/&filters=%7B%22blur%22:2%7D&modal=1&overflowHeight=200&hideContentExcept=.demo-img,.applied-filter"
         frameborder="0"
         allowtransparency="true" allowfullscreen="true"
         style="width: 100%; overflow: hidden;"

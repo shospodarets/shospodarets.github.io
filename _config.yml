@@ -56,6 +56,7 @@ urls:
 code_base_url: https://github.com/shospodarets/malyw.github.io
 demos_code_base_url: https://github.com/shospodarets/malyw.github.io/tree/master/demos
 full_base_url: https://hospodarets.com
+github_pages_base_url: https://shospodarets.github.io
 
 # If hosting site at a Project repository on GitHub pages
 # (https://username.github.io/repository-name)
