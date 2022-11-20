@@ -7,7 +7,7 @@
   "devDependencies": {
     "lodash": "^4.17.13",
     "lodash-es": "^4.17.14",
-    "webpack": "^2.2.0",
+    "webpack": "^5.75.0",
     "es-modules-utils": "^1.0.0"
   },
   "scripts": {
