@@ -50,7 +50,6 @@ url: https://hospodarets.com
 urls:
   blog: /
   speaking: /speaking
-  code-review: /code-review
   about: /about
   contact: /contact
 code_base_url: https://github.com/shospodarets/malyw.github.io
