@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import "bower_components/sass-to-js/sass/sass-to-js";
 
 $vertical-indent: 10px;
@@ -58,7 +60,7 @@ $zoomControlsSize: 30px;
   $stepsCount: $columnsCount - 1;
   $shadowsCount: $stepsCount - 1;
   $offsetX: $chunkSize + $chunkSpaceBetween;
-  $offsetY: -$maxHeight/$stepsCount;
+  $offsetY: math.div(-$maxHeight, $stepsCount);
   $width: $offsetX * $stepsCount;
 
   width: $width;
@@ -101,8 +103,8 @@ $zoomControlsSize: 30px;
       height: $thickness;
       top: 50%;
       left: 50%;
-      margin-left: -$size/2;
-      margin-top: -$thickness/2;
+      margin-left: math.div(-$size, 2);
+      margin-top: math.div(-$thickness, 2);
     }
   } @else if $type == vertical {
     &#{$elPath} {
@@ -110,8 +112,8 @@ $zoomControlsSize: 30px;
       height: $size;
       top: 50%;
       left: 50%;
-      margin-left: -$thickness/2;
-      margin-top: -$size/2;
+      margin-left: math.div(-$thickness, 2);
+      margin-top: math.div(-$size, 2);
     }
   }
 

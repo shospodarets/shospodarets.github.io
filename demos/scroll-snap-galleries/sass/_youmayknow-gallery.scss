@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /*
   YOUMAYKNOW GALLERY
 */
@@ -21,7 +23,7 @@
 
   $galleryIndent: $galleryWidth * 0.1;
   $visibleGalleryItems: 2;
-  $itemWidth: ($galleryWidth - $galleryIndent * ($visibleGalleryItems - 1)) / $visibleGalleryItems;
+  $itemWidth: math.div($galleryWidth - $galleryIndent * ($visibleGalleryItems - 1), $visibleGalleryItems);
 
   .item {
     // VIEW
