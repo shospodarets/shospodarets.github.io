@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Speaking
+title: Speaking 📣
 sub-header: true
-sub-header-title: Speaking
+sub-header-title: Speaking 📣
 active-page: speaking
 ---
 
