@@ -5,12 +5,6 @@ import {loadScript, httpProtocol, triggerEvent} from '../utils/utils.js';
  * @constructor
  */
 
-const queryParams = new URLSearchParams(document.location.search);
-const isTriggerJsErrorEnabled = queryParams.get('triggerJsError') === 'true';
-if (isTriggerJsErrorEnabled) {
-    callUndefinedFunctionToTriggerSentry();
-}
-
 const CustomSearch = function (options) {
     this.options = options;
 
