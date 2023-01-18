@@ -52,6 +52,6 @@ So I created a project where anyone can convert a saved Chrome Timeline Data to 
     <img src="https://i.imgur.com/ezQWlBV.gif" alt="" />
 </a>
 
-## [Check the code on Github](https://github.com/shospodarets/chrome-timeline-to-gif-demo)
+## [Check the code on Github](https://github.com/shospodarets/chrome-timeline-to-gif)
 
 
