@@ -34,6 +34,11 @@
     <style type="text/css">{% include generated/critical.css %}</style>
     {% endif %}
 
+    <script
+            src="https://js.sentry-cdn.com/{{ site.sentry_id }}.min.js"
+            crossorigin="anonymous"
+    ></script>
+
     <script>
         window.jekyllVariables = {
             SITE_BASE_URL: "{{ site.baseurl }}",

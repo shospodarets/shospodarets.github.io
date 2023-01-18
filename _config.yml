@@ -44,6 +44,9 @@ google_analytics: G-0EKTHCEJ98
 # Google custom search ID
 google_search: 012363491708652379866:741arfehybe
 
+# Sentry error monitoring
+sentry_id: 3a22cdf48c1a4080b8431b4f27960277
+
 # Website URL
 # Used for Sitemap.xml and your RSS feed
 url: https://hospodarets.com
