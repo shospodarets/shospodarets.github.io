@@ -55,8 +55,8 @@ urls:
   speaking: /speaking
   about: /about
   contact: /contact
-code_base_url: https://github.com/shospodarets/malyw.github.io
-demos_code_base_url: https://github.com/shospodarets/malyw.github.io/tree/master/demos
+code_base_url: https://github.com/shospodarets/hospodarets.com
+demos_code_base_url: https://github.com/shospodarets/hospodarets.com/tree/master/demos
 full_base_url: https://hospodarets.com
 github_pages_base_url: https://shospodarets.github.io
 
