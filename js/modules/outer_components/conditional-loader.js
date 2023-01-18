@@ -74,14 +74,6 @@ ConditionalLoader.prototype.loadScripts = function () {
                 window.baguetteBox.run('.image-gallery');
             });
     }
-
-    /* TIDIO_CHAT */
-    const queryParams = new URLSearchParams(document.location.search);
-    const isTidioChatEnabled = queryParams.get('tidio-chat') === 'enabled';
-
-    if (isTidioChatEnabled) {
-        loadScript(`${httpProtocol}//code.tidio.co/${this.options.TIDIO_CHAT_ID}.js`);
-    }
 };
 
 export default ConditionalLoader;
