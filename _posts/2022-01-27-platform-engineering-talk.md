@@ -18,7 +18,7 @@ Preparing a business use-case, building a team, picking the right tooling, foste
 
 <a href="https://slides.com/shospodarets/platform-engineering/">Presentation slides</a>
 
-<a href="https://github.com/shospodarets/awesome-platform-engineering">Curated list of practical Platform Engineering solutions, tools, and resources</a>
+<a href="https://github.com/shospodarets/awesome-platform-engineering">Curated list of solutions, tools and resources for Platform Engineering</a>
 
 <span class="smaller-img">
     <img src="https://i.imgur.com/YvVZykR.png" alt="" />
