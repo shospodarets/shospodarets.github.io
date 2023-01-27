@@ -3,7 +3,7 @@
     "name": "Conf42: DevOps 2023",
     "location": "London (UK), online",
     "flag": "🇬🇧",
-    "link": "https://www.conf42.com/DevOps_2023_Serg_Hospodarets_platform_engineering",
+    "link": "./platform-engineering-talk",
     "year": "2023",
     "month": "01",
     "type": "Talk",
