@@ -20,14 +20,13 @@ web-master-verifications:
   google: K72aDcuBi_K3YZuq5ukJUg4n-m5CRXFrHiwKeoW-AaA
   bing: F619F8324622C7FE081AE7C74E79EC63
   yandex: 73e26d3db8066c7f
+  followit: xvnPJEcgZyLR1e3qH4Tp
 
 # Includes an icon in the footer for each username
 social-links:
   linkedin: shospodarets
   github: shospodarets
-  rss: hospodarets.com # make sure the "url" above is set!
-  feedburner: https://feeds.feedburner.com/hospodarets # RSS alternative subscription
-  feedburner_email_subscription: https://feedburner.google.com/fb/a/mailverify?uri=hospodarets
+  rss: https://hospodarets.com/feed.xml
   twitter: shospodarets
   codepen: shospodarets
 #  facebook: sergeygospodaretsblog
@@ -47,6 +46,12 @@ google_search: 012363491708652379866:741arfehybe
 # Sentry error monitoring
 sentry_id: 3a22cdf48c1a4080b8431b4f27960277
 
+# Email newsletter
+subscribe:
+  follow_remote_url: https://follow.it/serg-hospodarets-blog?leanpub
+  form_action: https://api.follow.it/subscription-form/ZmhzQkFGTkVxNUVNMDFUWC9HcHoyU2NjejhwNWsrQ1k3azlISmpPMEFwRjlvdDFTUDJsVEdJVEdYSXlPWmNxQjJlUTVWVlhMS2JyRHRRc0ZXUzcyOUs2M1BITUtjMGIxa1V2UnJCeWhtWDhDOGtSMHJpNnZjMGpVRkg0MC9xeXJ8akRCM2N2a2JBbjBXYTdJcGNaMjJYYWRncTdMNUUvM3pydFBNSkM4ZjNRQT0=/8
+  archive_url: https://follow.it/serg-hospodarets-blog?pub
+
 # Website URL
 # Used for Sitemap.xml and your RSS feed
 url: https://hospodarets.com
@@ -55,6 +60,7 @@ urls:
   speaking: /speaking
   about: /about
   contact: /contact
+  subscribe: /subscribe
 code_base_url: https://github.com/shospodarets/hospodarets.com
 demos_code_base_url: https://github.com/shospodarets/hospodarets.com/tree/master/demos
 full_base_url: https://hospodarets.com
