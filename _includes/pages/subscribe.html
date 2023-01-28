@@ -5,17 +5,18 @@
                 <div class="page-subscribe">
                     <div class="page-subscribe__block">
                         <!--                        <a href="{{ site.subscribe.follow_remote_url }}">Follow this blog</a>-->
+
                         <form
-                                class="page-contact__form js-subscribe-form"
+                                class="component__form"
                                 action="{{ site.subscribe.form_action }}"
                                 method="post"
                         >
-                            <label class="page-contact__form-block">
-                                <span class="page-contact__form-label">Email</span>
+                            <label class="component__form-block">
+                                <span class="component__form-label">Email</span>
                                 <input placeholder="your@email.com" class="input" type="email" name="email" required
                                        autocomplete='email'/>
                             </label>
-                            <div class="page-contact__form-block">
+                            <div class="component__form-block">
                                 <button class="sh-btn" type="submit">
                                     Subscribe
                                 </button>
