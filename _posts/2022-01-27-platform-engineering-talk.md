@@ -4,8 +4,6 @@ title: Platform Engineering- Why and How to start
 tags: [DevOps, Culture]
 share_image: https://i.imgur.com/YvVZykR.png
 share_description: Platform Engineering- Why and How to start
-external-url: https://slides.com/shospodarets/platform-engineering/
-external_site: Slides.com
 ---
 
 The tech industry went from IT to DevOps, and now we are in the era of Platform Engineering teams. They are to enable the business, and create a company-specific platform to develop and deliver their products.
