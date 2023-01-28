@@ -2,7 +2,11 @@
  * The Component Form element adds JS processing to the HTML forms.
  * USAGE EXAMPLE:
  * ---
- * <form class="component__form js-component-form">
+ * <form
+ *         class="component__form js-component-form"
+ *         action="{{ site.subscribe.form_action }}"
+ *         method="post"
+ * >
  *     <label class="component__form-block">
  *         <span class="component__form-label">Name</span>
  *         <input placeholder="Your Name" class="input" type="text" name="name" required autocomplete='name'/>
@@ -10,7 +14,6 @@
  *     <div class="component__form-block">
  *         <button class="sh-btn" type="submit">
  *             Send
- *         </span>
  *         </button>
  *     </div>
  * </form>

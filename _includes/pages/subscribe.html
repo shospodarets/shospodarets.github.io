@@ -1,0 +1,34 @@
+<div class="sh-container-wrapper container-wrapper__one-column">
+    <div class="sh-container">
+        <div class="one-column">
+            <div class="sh-container-common">
+                <div class="page-subscribe">
+                    <div class="page-subscribe__block">
+                        <!--                        <a href="{{ site.subscribe.follow_remote_url }}">Follow this blog</a>-->
+
+                        <form
+                                class="component__form"
+                                action="{{ site.subscribe.form_action }}"
+                                method="post"
+                        >
+                            <label class="component__form-block">
+                                <span class="component__form-label">Email</span>
+                                <input placeholder="your@email.com" class="input" type="email" name="email" required
+                                       autocomplete='email'/>
+                            </label>
+                            <div class="component__form-block">
+                                <button class="sh-btn" type="submit">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </form>
+
+                        <a href="{{ site.subscribe.archive_url }}"
+                           target="_blank" rel="noopener noreferrer"
+                        >See past issues (archive)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
