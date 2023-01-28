@@ -26,5 +26,10 @@
   & img {
     border-radius: 5px;
     margin-top: -10px;
+    transition: transform .7s ease-in-out;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
   }
 }
