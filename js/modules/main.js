@@ -2,7 +2,7 @@
 // components
 import Events from './components/events-binding.js';
 import TalksData from './components/talks-data.js';
-import ContactForm from './components/contact-form.js';
+import ComponentForm from './components/component-form.js';
 import './components/register-service-worker.js';// execute file without imports
 
 // outer components
@@ -48,11 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // contact form
-    Array.from(document.querySelectorAll('.js-contact-form')).forEach((contactFormEl) => {
+    Array.from(document.querySelectorAll('.js-component-form')).forEach((componentFormEl) => {
         // eslint-disable-next-line no-new
-        new ContactForm({
-            contactFormEl,
-            FORMSPREE_ACTION: APP.FORMSPREE_ACTION
+        new ComponentForm({
+            componentFormEl
         });
     });
 });

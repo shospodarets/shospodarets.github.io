@@ -1,0 +1,105 @@
+/* ------------------------- */
+
+/* COMPONENT FORM */
+
+/* ------------------------- */
+
+//
+// VIEW
+//
+.component__form-text {
+  @include desktop {
+    padding-right: calc(11 * var(--spacer));
+  }
+}
+
+.component__form {
+  .component__form-block {
+    margin-bottom: calc(3 * var(--spacer));
+    display: block;
+
+    .component__form-label {
+      display: block;
+      margin-bottom: calc(0.5 * var(--spacer));
+    }
+  }
+}
+
+//
+// FORM LOGIC
+//
+.component__form {
+  // disabled
+  [type="submit"] {
+    cursor: pointer;
+
+    &[disabled] {
+      cursor: not-allowed;
+    }
+  }
+
+  // STATES
+  // success
+  &.component-form-success {
+    pointer-events: none;
+
+    & input,
+    & textarea {
+      opacity: 0.5;
+    }
+  }
+}
+
+// Form icons
+.component__form-icon-wrapper {
+  --size: calc(2 * var(--spacer));
+
+  width: var(--size);
+  margin-left: var(--spacer);
+  font-size: 2px; // for the loading state
+  display: inline-block;
+  overflow: hidden;
+}
+
+.component__form-success {
+  background-image: url(/images/icons/success.svg);
+}
+
+.component__form-reject {
+  background-image: url(/images/icons/reject.svg);
+}
+
+// FORM ICONS SHOW/HIDE LOGIC
+@mixin show-form-icon($state) {
+  .component-form-#{$state} & {
+    &.component-form-#{$state} {
+      display: inline-block;
+    }
+  }
+}
+
+.component__form-icon {
+  display: none; // hidden by default
+
+  // is shown when the form class is added
+  @include show-form-icon('loading');
+  @include show-form-icon('reject');
+  @include show-form-icon('success');
+
+  // icon styles
+  & > * {
+    display: inline-block;
+  }
+
+  .component__form-loading {
+    margin-top: 5px;
+  }
+
+  .component__form-reject,
+  .component__form-success {
+    width: var(--size);
+    height: var(--size);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
