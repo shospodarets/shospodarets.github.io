@@ -43,7 +43,7 @@
                         </ul>
                     </div>
 
-                    <div class="page-contact__block page-contact__form-wrapper">
+                    <div class="page-contact__block page-contact__layout">
                         <div class="page-contact__form-text">
                             <h2 class="page-contact__title">
                                 Contact Me
@@ -58,33 +58,26 @@
                             </p>
                         </div>
 
-                        <form class="page-contact__form js-contact-form">
-                            <label class="page-contact__form-block">
-                                <span class="page-contact__form-label">Name</span>
+                        <form
+                                class="component__form js-component-form"
+                                action="{{ site.FORMSPREE_ACTION }}"
+                                method="post"
+                        >
+                            <label class="component__form-block">
+                                <span class="component__form-label">Name</span>
                                 <input placeholder="Your Name" class="input" type="text" name="name" required autocomplete='name'/>
                             </label>
-                            <label class="page-contact__form-block">
-                                <span class="page-contact__form-label">Email</span>
+                            <label class="component__form-block">
+                                <span class="component__form-label">Email</span>
                                 <input placeholder="your@email.com" class="input" type="email" name="_replyto" required autocomplete='email'/>
                             </label>
-                            <label class="page-contact__form-block">
-                                <span class="page-contact__form-label">Message</span>
+                            <label class="component__form-block">
+                                <span class="component__form-label">Message</span>
                                 <textarea placeholder="your message" class="textarea" name="message" cols="30" rows="5" required></textarea>
                             </label>
-                            <div class="page-contact__form-block">
+                            <div class="component__form-block">
                                 <button class="sh-btn" type="submit">
                                     Send
-                                    <span class="page-contact__form-icon-wrapper">
-                                    <span class="page-contact__form-icon contact-form-loading">
-                                        <span class="loader page-contact__form-loading"></span>
-                                    </span>
-                                    <span class="page-contact__form-icon contact-form-reject">
-                                        <span class="page-contact__form-reject"></span>
-                                    </span>
-                                    <span class="page-contact__form-icon contact-form-success">
-                                        <span class="page-contact__form-success"></span>
-                                    </span>
-                                </span>
                                 </button>
                             </div>
                         </form>
