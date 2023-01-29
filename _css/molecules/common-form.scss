@@ -22,6 +22,11 @@
       display: block;
       margin-bottom: calc(0.5 * var(--spacer));
     }
+
+    .component__form-label-inline {
+      display: inline-block;
+      margin-bottom: calc(0.5 * var(--spacer));
+    }
   }
 }
 

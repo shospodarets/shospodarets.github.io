@@ -51,7 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
     Array.from(document.querySelectorAll('.js-component-form')).forEach((componentFormEl) => {
         // eslint-disable-next-line no-new
         new ComponentForm({
-            componentFormEl
+            componentFormEl,
+            SITE_BASE_URL: APP.SITE_BASE_URL
         });
     });
 });
