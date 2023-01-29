@@ -2,12 +2,8 @@
   "name": "hospodarets.com",
   "version": "1.0.0",
   "devDependencies": {
-    "@babel/core": "^7.3.3",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/register": "^7.0.0",
+    "@lodder/grunt-postcss": "^3.1.1",
     "autoprefixer": "^10.4.2",
-    "babel-loader": "^9.1.0",
-    "bower": "^1.8.8",
     "css-vars": "^2.2.0",
     "cssnano": "^5.0.17",
     "eslint": "^8.9.0",
@@ -22,7 +18,6 @@
     "grunt-sass": "^3.0.2",
     "grunt-shell": "^4.0.0",
     "grunt-stylelint": "^0.18.0",
-    "grunt-webpack": "^5.0.0",
     "include-media": "^1.4.9",
     "jit-grunt": "^0.10.0",
     "json-loader": "^0.5.4",
@@ -32,10 +27,7 @@
     "postcss-scss": "^4.0.3",
     "sass": "^1.56.1",
     "stylelint": "^14.5.1",
-    "stylelint-config-standard": "^29.0.0",
-    "terser-webpack-plugin": "^5.3.1",
-    "webpack": "^5.69.1",
-    "webpack-dev-server": "^4.7.4"
+    "stylelint-config-standard": "^29.0.0"
   },
   "private": true,
   "scripts": {
@@ -46,8 +38,5 @@
     "grunt": "grunt",
     "fix-css": "stylelint './_css/**/*.scss' --fix",
     "lint-js": "node ./.eslint.js"
-  },
-  "dependencies": {
-    "@lodder/grunt-postcss": "^3.1.1"
   }
 }

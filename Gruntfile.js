@@ -1,12 +1,8 @@
-const path = require('path');
 const sass = require('sass');
-const TerserPlugin = require('terser-webpack-plugin');
-
-const rootPath = path.resolve();
 
 // const DEBUG_IS_ENABLED = Boolean(process.env.BLOG_DEBUG);// environment variable
 
-const supportedBrowsersList = { // also present in .babelrc
+const supportedBrowsersList = {
     // https://github.com/ai/browserslist
     'browsersList': [
         'last 1 Chrome version',
@@ -33,38 +29,6 @@ module.exports = function (grunt) {
     });
 
     grunt.initConfig({
-        webpack: {
-            dist: {
-                entry: `${rootPath}/js/modules/main.js`,
-                output: {
-                    path: `${rootPath}/js`,
-                    filename: 'main.bundled.js'
-                },
-                module: {
-                    rules: [
-                        {
-                            test: /\.js$/,
-                            exclude: [/node_modules/],
-                            loader: 'babel-loader'
-                        }
-                    ]
-                },
-                resolveLoader: {
-                    modules: [
-                        path.join(__dirname, './node_modules'),
-                        'node_modules'
-                    ]
-                },
-                plugins: [
-                    // https://github.com/webpack-contrib/babili-webpack-plugin
-                    new TerserPlugin()
-                ],
-                // https://webpack.js.org/configuration/devtool/
-                devtool: 'source-map',
-                mode: 'none'
-            }
-        },
-
         sass: {
             critical: {
                 files: [{
@@ -157,7 +121,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['js/modules/**'],
-                tasks: ['generateJs', 'jekyllBuild']
+                tasks: ['jekyllBuild']
             },
             css: {
                 files: ['_css/**/*.scss'],
@@ -190,10 +154,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('@lodder/grunt-postcss');
     require('jit-grunt')(grunt);
 
-    grunt.registerTask('generateJs', [
-        'webpack'
-    ]);
-
     grunt.registerTask('generateCss', [
         'sass:critical',
         'sass:nonCritical',
@@ -214,7 +174,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'eslint',
-        'generateJs',
 
         'stylelint',
         'generateCss',
