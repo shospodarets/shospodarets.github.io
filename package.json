@@ -19,7 +19,7 @@
     "grunt-sass": "^3.0.2",
     "grunt-shell": "^4.0.0",
     "grunt-stylelint": "^0.18.0",
-    "include-media": "^1.4.9",
+    "include-media": "^2.0.0",
     "jit-grunt": "^0.10.0",
     "json-loader": "^0.5.4",
     "postcss": "^8.4.6",
