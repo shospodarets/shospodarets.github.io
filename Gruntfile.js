@@ -121,7 +121,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['js/modules/**'],
-                tasks: ['jekyllBuild']
+                tasks: ['copy:js']
             },
             css: {
                 files: ['_css/**/*.scss'],
@@ -147,7 +147,19 @@ module.exports = function (grunt) {
             src: [
                 './_css/**/*.scss',
             ]
-        }
+        },
+
+        copy: {
+            js: {
+                files: [
+                    {
+                        expand: true,
+                        src: ['js/modules/**'],
+                        dest: '_site/js/modules/'
+                    },
+                ],
+            },
+        },
     });
 
     // load grunt npm tasks
