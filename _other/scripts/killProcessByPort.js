@@ -70,7 +70,7 @@ if (process.platform === 'win32') { // WINDOWS
         getPIDByPortCommand: `lsof -P | grep ':'${port} | awk '{print $2}'`,
         getKillCommandFromOutput: (output) => {
             // noinspection UnnecessaryLocalVariableJS
-            const PID = output;// output is the PID actually
+            const PID = output.trim().replaceAll('\n', ' ');// output is the PID(s) actually
             return `kill -9 ${PID}`;
         }
     });
