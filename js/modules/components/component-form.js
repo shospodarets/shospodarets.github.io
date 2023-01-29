@@ -1,5 +1,5 @@
 /**
- * The Component Form element adds JS processing to the HTML forms.
+ * The Component Form element adds JS processing to the HTML forms, and includes captcha before the submit button.
  * USAGE EXAMPLE:
  * ---
  * <form
