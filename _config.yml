@@ -46,7 +46,10 @@ google_search: 012363491708652379866:741arfehybe
 # Sentry error monitoring
 sentry_id: 3a22cdf48c1a4080b8431b4f27960277
 
-# Email newsletter
+# Email Subscribe popup https://mypopups.com/
+mypopup_sub_id: b045d09e-9f61-11ed-b09a-005056008dab-hrjrlrimnp
+
+# Email newsletter https://follow.it/
 subscribe:
   follow_remote_url: https://follow.it/serg-hospodarets-blog?leanpub
   form_action: https://api.follow.it/subscription-form/ZmhzQkFGTkVxNUVNMDFUWC9HcHoyU2NjejhwNWsrQ1k3azlISmpPMEFwRjlvdDFTUDJsVEdJVEdYSXlPWmNxQjJlUTVWVlhMS2JyRHRRc0ZXUzcyOUs2M1BITUtjMGIxa1V2UnJCeWhtWDhDOGtSMHJpNnZjMGpVRkg0MC9xeXJ8akRCM2N2a2JBbjBXYTdJcGNaMjJYYWRncTdMNUUvM3pydFBNSkM4ZjNRQT0=/8
