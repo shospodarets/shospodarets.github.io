@@ -37,7 +37,7 @@
     "stop": "node ./_other/scripts/killProcessByPort.js 4000",
     "build": "grunt build",
     "grunt": "grunt",
-    "fix-css": "stylelint './_css/**/*.scss' --fix",
+    "lint-css": "stylelint './_css/**/*.scss' --config='./.stylelintrc' --custom-syntax='postcss-scss'",
     "lint-js": "node ./.eslint.js"
   }
 }

@@ -23,7 +23,8 @@
       margin-bottom: calc(0.5 * var(--spacer));
     }
 
-    .component__form-label-inline, .jCaptchaCanvas {
+    .component__form-label-inline,
+    .jCaptchaCanvas {
       display: inline-block;
       margin-bottom: calc(0.5 * var(--spacer));
     }
