@@ -3,9 +3,12 @@ keywords: javascript,js,html,html5,css,css3,git,shell,node.js,frontend
 personal-site-url: https://hospodarets.com
 # Name of site (displayed in the header)
 name: Serg Hospodarets Blog
-email: shospodarets@gmail.com
-FORMSPREE_ACTION: https://formspree.io/f/mbjpnnbr
+# https://www.browserling.com/tools/text-to-html-entities
+email_html_escaped: "&#x73;&#x68;&#x6f;&#x73;&#x70;&#x6f;&#x64;&#x61;&#x72;&#x65;&#x74;&#x73;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;"
+
 static-resources-url: /images/img
+
+FORMSPREE_ACTION: https://formspree.io/f/mbjpnnbr
 
 # Short bio or description (displayed in the header)
 description: Web development and engineering technology leadership blog
