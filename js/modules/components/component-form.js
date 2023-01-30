@@ -143,7 +143,7 @@ export default class ComponentForm {
                             textBaseline: 'top',
                             font: 'bold 20px Roboto, Arial, sans-serif',
                             textAlign: 'left',
-                            fillStyle: '#368129'
+                            fillStyle: '#4183c4'
                         },
                         // validate() call triggers "callback" function below
                         callback: (response /*, $captchaInputElement, numberOfTries*/) => {
