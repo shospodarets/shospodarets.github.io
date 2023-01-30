@@ -139,9 +139,9 @@ export default class ComponentForm {
                         canvasStyle: {
                             // properties for captcha stylings
                             width: 100,
-                            height: 16,
+                            height: 24,
                             textBaseline: 'top',
-                            font: 'bold 20px Roboto, Arial, sans-serif',
+                            font: 'bold 20px/24px Roboto, Arial, sans-serif',
                             textAlign: 'left',
                             fillStyle: '#4183c4'
                         },
