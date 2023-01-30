@@ -9,15 +9,12 @@ self.isDebugEnabled = false; // eslint-disable-line no-restricted-globals
 
     /* CACHE REQUIRED ITEMS */
     const urlsToCache = [
-        // html
-        '/',
-        '/index.html',
-
-        // css
-        '/css/non-critical.css',
-
-        // js
-        '/js/main.bundled.js'
+        // // html
+        // '/',
+        // '/index.html',
+        //
+        // // css
+        // '/css/non-critical.css',
     ];
 
     self.addEventListener('install', (event) => { // eslint-disable-line no-restricted-globals
