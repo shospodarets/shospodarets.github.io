@@ -121,15 +121,15 @@ export default class ComponentForm {
 
         const loadAndApplyCaptcha = () => {
             this.componentFormSubmitEl.disabled = true;
-            const captchaEl = document.createElement('label');
 
+            const captchaEl = document.createElement('label');
             captchaEl.classList.add('component__form-block');
             captchaEl.innerHTML = `
-            <span class="component__form-label-inline">Captcha:</span>
-            <input placeholder="enter captcha 👆 answer" class="input jCaptcha" type="number" autocomplete='number' name="captchaAnswer" required/>
-        `;
-            this.componentFormSubmitEl.before(captchaEl);
+                <span class="component__form-label-inline">Captcha:</span>
+                <input placeholder="enter captcha 👆 answer" class="input jCaptcha" type="number" autocomplete='number' name="captchaAnswer" required/>
+            `;
 
+            this.componentFormSubmitEl.before(captchaEl);
             loadScript(`${this.options.SITE_BASE_URL}/js/libs/js-captcha.min.js`)
                 .then(() => {
                     // eslint-disable-next-line new-cap
