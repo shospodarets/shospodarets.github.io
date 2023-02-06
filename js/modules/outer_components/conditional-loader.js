@@ -74,7 +74,7 @@ ConditionalLoader.prototype.loadScripts = function () {
         loadScript(`${httpProtocol}//platform.twitter.com/widgets.js`);
     }
 
-    /* TWITTER BUTTONS */
+    /* FACEBOOK BUTTONS */
     if (document.querySelectorAll('.fb-widget').length) {
         const fbRoot = document.createElement('div');
         fbRoot.setAttribute('id', 'fb-root');

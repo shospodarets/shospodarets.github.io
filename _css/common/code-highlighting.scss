@@ -1,5 +1,5 @@
 /* block code */
-//pre code {
+// pre code {
 pre.highlight code {
   -webkit-overflow-scrolling: touch;
   border-bottom: 1px solid var(--code-block-border-color);
@@ -13,7 +13,7 @@ pre.highlight code {
 }
 
 /* inline code */
-//code:not([class]) {
+// code:not([class]) {
 code.highlighter-rouge {
   background: var(--inline-code-bg);
   border-radius: var(--text-border-radius);

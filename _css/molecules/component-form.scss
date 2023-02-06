@@ -4,9 +4,9 @@
 
 /* ------------------------- */
 
-//
+/*
 // VIEW
-//
+*/
 .component__form-text {
   @include desktop {
     padding-right: calc(11 * var(--spacer));
@@ -35,9 +35,9 @@
   }
 }
 
-//
+/*
 // FORM LOGIC
-//
+*/
 .component__form {
   // disabled
   [type="submit"] {

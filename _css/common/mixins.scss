@@ -27,8 +27,11 @@
   border-style: solid;
 }
 
+/* stylelint-disable */
 // https://github.com/eduardoboucas/include-media
 @import "../../node_modules/include-media/dist/_include-media";
+/* stylelint-enable */
+
 $breakpoints: (mobile: 680px);
 
 @mixin mobile {
