@@ -3,7 +3,6 @@
 import Events from './components/events-binding.js';
 import TalksData from './components/talks-data.js';
 import ComponentForm from './components/component-form.js';
-import './components/register-service-worker.js';// execute file without imports
 
 // outer components
 import Analytics from './outer_components/analytics.js';
