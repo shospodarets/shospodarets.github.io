@@ -4,7 +4,7 @@
 // in global scope to simplify debugging
 self.isDebugEnabled = false; // eslint-disable-line no-restricted-globals
 
-(() => { // incapsulate funcs, vars from global scope
+(() => { // encapsulate funcs, vars from global scope
     const CACHE_NAME = 'offline1';
 
     /* CACHE REQUIRED ITEMS */

@@ -5,7 +5,37 @@
     "node": true,
     "es6": true
   },
+  "plugins": [
+    "spellcheck"
+  ],
   "rules": {
+    "spellcheck/spell-checker": ["error",
+      {
+        "comments": true,
+        "strings": false,
+        "identifiers": false,
+        "templates": false,
+        "lang": "en_US",
+        "skipWords": [
+          "globals",
+          "cmd",
+          "usr",
+          "subprocess",
+          "dom",
+          "captcha",
+          "templating",
+          "urls",
+          "href",
+          "funcs"
+        ],
+        "skipIfMatch": [
+          "noinspection*"
+        ],
+        "skipWordIfMatch": [
+          "std*"
+        ],
+        "minLength": 3
+      }],
     "indent": [
       2,
       4,
