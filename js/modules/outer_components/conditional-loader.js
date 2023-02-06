@@ -33,14 +33,30 @@ ConditionalLoader.prototype.loadScripts = function () {
     }
     /* DISCUSS COMMENTS */
     if (document.querySelectorAll('#disqus_thread').length) {
-        const _this = this;
-        window.disqus_config = function () {
-            // noinspection JSPotentiallyInvalidUsageOfThis
-            this.page.url = _this.options.PAGE_URL;
-            // noinspection JSPotentiallyInvalidUsageOfThis
-            this.page.identifier = _this.options.PAGE_IDENTIFIER;
-        };
-        loadScript(`${httpProtocol}//${this.options.DISCUSS_ID}.disqus.com/embed.js`);
+        const _this = this; // due to the Disqus specifics
+
+        // Load Disqus comments only when the user scrolls into the area Disqus is placed
+        const observer = new IntersectionObserver((entries, _observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // embed Disqus
+                    window.disqus_config = function () {
+                        // noinspection JSPotentiallyInvalidUsageOfThis
+                        this.page.url = _this.options.PAGE_URL;
+                        // noinspection JSPotentiallyInvalidUsageOfThis
+                        this.page.identifier = _this.options.PAGE_IDENTIFIER;
+                    };
+                    loadScript(`${httpProtocol}//${this.options.DISCUSS_ID}.disqus.com/embed.js`);
+
+                    // Stop observing to prevent reinitializing Disqus.
+                    _observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        // Start an intersection observer
+        const mountNode = document.querySelector('#disqus_thread');
+        observer.observe(mountNode);
     }
 
     /* DISCUSS COMMENTS COUNTERS */
