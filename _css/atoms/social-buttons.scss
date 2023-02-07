@@ -7,6 +7,7 @@
   background-color: var(--social-button-bg);
 
   &:hover {
+    color: var(--white-color);
     background-color: var(--social-button-bg-hover);
     text-decoration: none;
   }
@@ -16,16 +17,15 @@
     width: 20px;
     margin-right: 3px;
     background-size: 100%;
+    vertical-align: -2px;
 
     &.social-linkedin {
       height: 19px;
-      vertical-align: -1px;
       background-image: url(/images/icons/social/linkedin.svg);
     }
 
     &.social-twitter {
       height: 16px;
-      vertical-align: -2px;
       background-image: url(/images/icons/social/twitter.svg);
     }
   }

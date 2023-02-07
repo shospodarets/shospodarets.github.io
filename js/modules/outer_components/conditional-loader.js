@@ -69,20 +69,6 @@ ConditionalLoader.prototype.loadScripts = function () {
         );
     }
 
-    /* TWITTER BUTTONS */
-    if (document.querySelectorAll('.twitter-widget').length) {
-        loadScript(`${httpProtocol}//platform.twitter.com/widgets.js`);
-    }
-
-    /* FACEBOOK BUTTONS */
-    if (document.querySelectorAll('.fb-widget').length) {
-        const fbRoot = document.createElement('div');
-        fbRoot.setAttribute('id', 'fb-root');
-        document.body.appendChild(fbRoot);
-
-        loadScript(`${httpProtocol}//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10`);
-    }
-
     /* IMAGE GALLERY */
     if (document.querySelectorAll('.image-gallery').length) {
         loadScript(`${this.options.SITE_BASE_URL}/js/libs/baguetteBox.min.js`)

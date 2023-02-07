@@ -1,17 +1,20 @@
 <span class="share-buttons">
-    <a href="https://twitter.com/share"
-       class="twitter-widget twitter-share-button"
-       data-text="{{ page.title }}"
-       data-related="{{ site.social-links.twitter }}"
-       data-size="large"
-    >
-        Tweet
-    </a>
+    <a class="social-button"
+       href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url | replace:'index.html',''}}&via={{ site.social-links.twitter }}&text={{ page.title }}"
 
-    <a class="fb-widget fb-share-button"
-       data-href="{{ site.url }}{{ page.url | replace:'index.html',''}}"
-       data-layout="button"
-       data-size="large"
-       data-mobile-iframe="true">
-    </a>
+       title="Tweet on Twitter"
+       target="_blank" rel="noopener noreferrer"
+    >
+            <span class="social-icon social-twitter"></span>
+            Tweet
+        </a>
+
+    <a class="social-button" href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url | replace:'index.html',''}}"
+
+       title="Share on LinkedIn"
+       target="_blank" rel="noopener noreferrer"
+    >
+            <span class="social-icon social-linkedin"></span>
+            Share
+        </a>
 </span>
