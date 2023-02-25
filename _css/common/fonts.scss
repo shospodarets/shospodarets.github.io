@@ -10,9 +10,20 @@
 }
 
 @font-face {
+  font-family: roboto-fallback;
+  src: local("Arial");
+}
+
+@font-face {
   font-family: 'Roboto-Light';
   src: url('/fonts/roboto/Roboto-Light.ttf') format('truetype'); /* fallback */
   font-display: swap; // fallback text is shown immediately until the custom font loads
+}
+
+@font-face {
+  font-family: roboto-light-fallback;
+  src: local("Arial");
+  font-weight: normal;
 }
 
 @font-face {

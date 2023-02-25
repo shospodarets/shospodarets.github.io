@@ -1,7 +1,7 @@
 :root {
   // font-families
-  --main-font-family: 'Roboto', 'Arial', sans-serif;
-  --main-headings-font-family: 'Roboto-Light', 'Arial', sans-serif;
+  --main-font-family: 'Roboto', roboto-fallback, 'Arial', sans-serif;
+  --main-headings-font-family: 'Roboto-Light', roboto-light-fallback, 'Arial', sans-serif;
   --main-code-font-family: 'Roboto-Mono', 'Courier New', monospace;
 
   /* Typography */
