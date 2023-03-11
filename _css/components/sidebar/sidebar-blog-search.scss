@@ -51,6 +51,7 @@
     width: var(--size);
     height: var(--size);
     border: none;
+    font-size: 0; // hide the value text
     cursor: pointer;
   }
 }
