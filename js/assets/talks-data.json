@@ -11,6 +11,17 @@
     "speakingImage": "2023-09-jsdayie-speaking.jpg"
   },
   {
+    "name": "PlatformCon",
+    "location": "Online",
+    "flag": "🌎",
+    "link": "https://platformcon.com/",
+    "year": "2023",
+    "month": "06",
+    "type": "Talk",
+    "eventImage": "2023-06-platformcon-event.svg",
+    "speakingImage": "2023-06-platformcon-speaking.png"
+  },
+  {
     "name": "Web Directions Code",
     "location": "Sydney (Australia)",
     "flag": "🇦🇺",
@@ -23,7 +34,7 @@
   },
   {
     "name": "DevOps fwdays",
-    "location": "Kyiv (Ukraine)",
+    "location": "Kyiv (Ukraine), online",
     "flag": "🇺🇦",
     "link": "https://fwdays.com/en/event/devops-fwdays-2023",
     "year": "2023",
