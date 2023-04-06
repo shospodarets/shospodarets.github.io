@@ -1,4 +1,4 @@
-// Modules to load the the talks data,
+// Modules to load the talks data,
 // parse it
 // and populate to the element using templating
 
@@ -76,8 +76,9 @@ class TalksData {
 
         talksJson.forEach((talkJson) => {
             const monthName = months[Number(talkJson.month) - 1];// "- 1" as in JS months start from 0
+            const dates = talkJson.dates ? `${talkJson.dates}` : '';
 
-            talkJson.date = `${monthName} ${talkJson.year}`;
+            talkJson.date = `${dates} ${monthName} ${talkJson.year}`;
         });
         return talksJson;
     }

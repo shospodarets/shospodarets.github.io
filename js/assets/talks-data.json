@@ -6,6 +6,7 @@
     "link": "https://www.jsday.ie/",
     "year": "2023",
     "month": "09",
+    "dates": "26",
     "type": "Talk",
     "eventImage": "2023-09-jsdayie-event.png",
     "speakingImage": "2023-09-jsdayie-speaking.jpg"
@@ -17,6 +18,7 @@
     "link": "https://platformcon.com/",
     "year": "2023",
     "month": "06",
+    "dates": "8-9",
     "type": "Talk",
     "eventImage": "2023-06-platformcon-event.svg",
     "speakingImage": "2023-06-platformcon-speaking.png"
@@ -28,6 +30,7 @@
     "link": "https://webdirections.org/code/",
     "year": "2023",
     "month": "06",
+    "dates": "8-9",
     "type": "Talk",
     "eventImage": "2023-06-webdirections-event.png",
     "speakingImage": "2023-06-webdirections-speaking.jpg"
