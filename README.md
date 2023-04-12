@@ -2,4 +2,4 @@
 
 1. $ npm install
 1. $ npm run gem-install
-1. $ npm start 
+1. $ npm start
