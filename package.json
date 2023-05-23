@@ -35,6 +35,7 @@
   "private": true,
   "scripts": {
     "gem-install": "gem install bundler && bundler install",
+    "rvm": "rvm use ruby-3.2.2",
     "start": "grunt serve & grunt",
     "stop": "node ./_other/scripts/killProcessByPort.js 4000",
     "build": "grunt build",
